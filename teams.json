@@ -1,1030 +1,409 @@
 {
-  "lastUpdate": "2026-06-06T12:21:12.914Z",
+  "lastUpdate": "2026-07-30T21:02:54.592Z",
   "duos": {
-    "Svalmel": [
+    "Juan De Fuca Strait": [
       {
         "players": [
           {
-            "username": "NEVAD",
-            "clientID": "SY18XwL7",
-            "clanTag": "BAGNO"
+            "username": "Azathoth",
+            "clientID": "FWj7ik1d",
+            "clanTag": "UON"
           },
           {
-            "username": "Juan Pablo II",
-            "clientID": "UJCPX93v",
-            "clanTag": "BAGNO"
+            "username": "uxxtu",
+            "clientID": "kNv7MP86",
+            "clanTag": "UON"
           }
         ],
-        "duration_s": 703,
-        "date": 1780642402619,
-        "gameId": "M3pqZopM",
+        "team": "Team 2",
+        "duration_s": 588,
+        "date": 1785057666467,
+        "gameId": "zoppXuKS",
         "difficulty": "Medium",
-        "numPlayers": 38
-      }
-    ],
-    "Gulf of St. Lawrence": [
-      {
-        "players": [
-          {
-            "username": "imperium romanum",
-            "clientID": "u937XxkU",
-            "clanTag": "NU"
-          },
-          {
-            "username": "A Y O U B",
-            "clientID": "SX2chMrQ",
-            "clanTag": "NU"
-          }
-        ],
-        "duration_s": 720,
-        "date": 1780670918455,
-        "gameId": "kExvqPnd",
-        "difficulty": "Medium",
-        "numPlayers": 38
-      }
-    ],
-    "Mars": [
-      {
-        "players": [
-          {
-            "username": "totoww",
-            "clientID": "x4GQjnwD",
-            "clanTag": "ZIZI"
-          },
-          {
-            "username": "Huetra",
-            "clientID": "75eMGCMu",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 738,
-        "date": 1780670820859,
-        "gameId": "e1Rp6X6U",
-        "difficulty": "Medium",
-        "numPlayers": 52
-      }
-    ],
-    "Black Sea": [
-      {
-        "players": [
-          {
-            "username": "Peak",
-            "clientID": "y1XCLGqj",
-            "clanTag": "EL"
-          },
-          {
-            "username": "mugabes muff",
-            "clientID": "tsetBqcc",
-            "clanTag": "EL"
-          }
-        ],
-        "duration_s": 739,
-        "date": 1780671479485,
-        "gameId": "Q9Pimtz2",
-        "difficulty": "Medium",
-        "numPlayers": 60
-      }
-    ],
-    "MilkyWay": [
-      {
-        "players": [
-          {
-            "username": "Anon513",
-            "clientID": "nmhNWssv",
-            "clanTag": "FR"
-          },
-          {
-            "username": "Yuirick",
-            "clientID": "cKJwZRGD",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 742,
-        "date": 1780667761829,
-        "gameId": "SE7fyuWS",
-        "difficulty": "Medium",
-        "numPlayers": 14
-      },
-      {
-        "players": [
-          {
-            "username": "Ladron",
-            "clientID": "NwrTkVZy",
-            "clanTag": "KANCL"
-          },
-          {
-            "username": "Anon017",
-            "clientID": "gE6KMXpT",
-            "clanTag": "KANCL"
-          }
-        ],
-        "duration_s": 821,
-        "date": 1780653873189,
-        "gameId": "LS4jXUEM",
-        "difficulty": "Medium",
-        "numPlayers": 14
-      }
-    ],
-    "World": [
-      {
-        "players": [
-          {
-            "username": "Glorfindel",
-            "clientID": "kKaMkQQP",
-            "clanTag": null
-          },
-          {
-            "username": "Anon122",
-            "clientID": "f1Zs4ajy",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 766,
-        "date": 1780701626160,
-        "gameId": "8TotDqNv",
-        "difficulty": "Medium",
-        "numPlayers": 34
-      },
-      {
-        "players": [
-          {
-            "username": "looloo",
-            "clientID": "1sm8sR3G",
-            "clanTag": "MUK"
-          },
-          {
-            "username": "Zone 1",
-            "clientID": "nmFe9SvZ",
-            "clanTag": "MUK"
-          }
-        ],
-        "duration_s": 787,
-        "date": 1780665425524,
-        "gameId": "5h2JQLp1",
-        "difficulty": "Medium",
-        "numPlayers": 30
-      },
-      {
-        "players": [
-          {
-            "username": "Schokoellsen",
-            "clientID": "1HtmWhTm",
-            "clanTag": "GER"
-          },
-          {
-            "username": "OUTER HEAVEN",
-            "clientID": "tyzRfDwT",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 873,
-        "date": 1780617890801,
-        "gameId": "KFSpWk7m",
-        "difficulty": "Medium",
-        "numPlayers": 30
-      },
-      {
-        "players": [
-          {
-            "username": "Glorfindel",
-            "clientID": "RSgDgCQj",
-            "clanTag": null
-          },
-          {
-            "username": "Anon607",
-            "clientID": "jST7oefD",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 889,
-        "date": 1780665680778,
-        "gameId": "6vDaCFov",
-        "difficulty": "Medium",
-        "numPlayers": 34
-      }
-    ],
-    "Strait of Gibraltar": [
-      {
-        "players": [
-          {
-            "username": "Turq",
-            "clientID": "D3kYiNAn",
-            "clanTag": "TR"
-          },
-          {
-            "username": "P_CZ",
-            "clientID": "327Vqw94",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 769,
-        "date": 1780640697438,
-        "gameId": "vCZLxmnp",
-        "difficulty": "Medium",
-        "numPlayers": 36
-      }
-    ],
-    "Pluto": [
-      {
-        "players": [
-          {
-            "username": "Sea",
-            "clientID": "aHeKM4jD",
-            "clanTag": "ORT"
-          },
-          {
-            "username": "Sii",
-            "clientID": "M8PG8n3r",
-            "clanTag": "ORT"
-          }
-        ],
-        "duration_s": 818,
-        "date": 1780630266229,
-        "gameId": "W1uqp1bE",
-        "difficulty": "Medium",
-        "numPlayers": 26
-      }
-    ],
-    "Hawaii": [
-      {
-        "players": [
-          {
-            "username": "Yano",
-            "clientID": "mDxXX6Ch",
-            "clanTag": "VLH"
-          },
-          {
-            "username": "x_VinK",
-            "clientID": "d8UQCnPT",
-            "clanTag": "VLH"
-          }
-        ],
-        "duration_s": 827,
-        "date": 1780664904013,
-        "gameId": "RFDRJvW5",
-        "difficulty": "Medium",
-        "numPlayers": 14
-      }
-    ],
-    "Pangaea": [
-      {
-        "players": [
-          {
-            "username": "Growing Blob",
-            "clientID": "FBaKbZFz",
-            "clanTag": null
-          },
-          {
-            "username": "buffalo soulja",
-            "clientID": "PswbCovt",
-            "clanTag": "NL"
-          }
-        ],
-        "duration_s": 831,
-        "date": 1780694851488,
-        "gameId": "auJXLo1D",
-        "difficulty": "Medium",
-        "numPlayers": 87
-      }
-    ],
-    "Surrounded": [
-      {
-        "players": [
-          {
-            "username": "AUTOJOIN",
-            "clientID": "RzJiCCoT",
-            "clanTag": "JOIN"
-          },
-          {
-            "username": "Anon746",
-            "clientID": "bU9HJx2N",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 844,
-        "date": 1780641956165,
-        "gameId": "wygccATt",
-        "difficulty": "Medium",
-        "numPlayers": 40
-      }
-    ],
-    "Faroe Islands": [
-      {
-        "players": [
-          {
-            "username": "DesaturatedFrog",
-            "clientID": "7NPP74F8",
-            "clanTag": null
-          },
-          {
-            "username": "nosu2929",
-            "clientID": "b9VSFFnE",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 848,
-        "date": 1780637408259,
-        "gameId": "juY6NV78",
-        "difficulty": "Medium",
-        "numPlayers": 14
-      }
-    ],
-    "Australia": [
-      {
-        "players": [
-          {
-            "username": "blob",
-            "clientID": "4Ff5UESS",
-            "clanTag": "HALLA"
-          },
-          {
-            "username": "Anon592",
-            "clientID": "xjnKjvXd",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 877,
-        "date": 1780702113621,
-        "gameId": "5P2ot6E5",
-        "difficulty": "Medium",
-        "numPlayers": 64
-      }
-    ]
-  },
-  "trios": {
-    "Bosphorus Straits": [
-      {
-        "players": [
-          {
-            "username": "Chat perche",
-            "clientID": "6UmBdyfi",
-            "clanTag": "UN"
-          },
-          {
-            "username": "LANDB0I",
-            "clientID": "dj7CAZMD",
-            "clanTag": null
-          },
-          {
-            "username": "Anon248",
-            "clientID": "CZ2Q3Ghh",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 482,
-        "date": 1780650188648,
-        "gameId": "VUwkYKo8",
-        "difficulty": "Medium",
-        "numPlayers": 15
-      },
-      {
-        "players": [
-          {
-            "username": "Snavemot",
-            "clientID": "773Fy79S",
-            "clanTag": null
-          },
-          {
-            "username": "Anon114",
-            "clientID": "Scj7Ucae",
-            "clanTag": null
-          },
-          {
-            "username": "Anon486",
-            "clientID": "neQFMpC1",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 649,
-        "date": 1780650558528,
-        "gameId": "QEfKP7AZ",
-        "difficulty": "Medium",
-        "numPlayers": 15
-      },
-      {
-        "players": [
-          {
-            "username": "Joker252630",
-            "clientID": "1u96bKaS",
-            "clanTag": null
-          },
-          {
-            "username": "DavaSiLiKoN",
-            "clientID": "y5FySskr",
-            "clanTag": null
-          },
-          {
-            "username": "THE DOT",
-            "clientID": "vpcDP9He",
-            "clanTag": "MARS"
-          }
-        ],
-        "duration_s": 748,
-        "date": 1780677894781,
-        "gameId": "vdwUzkpz",
-        "difficulty": "Medium",
-        "numPlayers": 18
+        "numPlayers": 35
       }
     ],
     "Japan": [
       {
         "players": [
           {
-            "username": "Flubba",
-            "clientID": "rKmWiKfp",
-            "clanTag": "NL"
+            "username": "IL Duce",
+            "clientID": "4CF4iAQb",
+            "clanTag": "EU"
           },
           {
-            "username": "Kruiden",
-            "clientID": "EedpYRYi",
-            "clanTag": "NL"
-          },
-          {
-            "username": "BLAUWTOOTH",
-            "clientID": "UTVoFg4V",
-            "clanTag": "NL"
+            "username": "BunnyKisses67",
+            "clientID": "fvmb7bXJ",
+            "clanTag": null
           }
         ],
-        "duration_s": 522,
-        "date": 1780666833906,
-        "gameId": "wSFBbKJq",
+        "team": "Team 1",
+        "duration_s": 595,
+        "date": 1785250110581,
+        "gameId": "ir1BJ5GV",
+        "difficulty": "Medium",
+        "numPlayers": 22
+      },
+      {
+        "players": [
+          {
+            "username": "PreciousBubbles",
+            "clientID": "oFEu4tFo",
+            "clanTag": null
+          },
+          {
+            "username": "Peace is the only option",
+            "clientID": "LNJj43VW",
+            "clanTag": "MAYBE"
+          }
+        ],
+        "team": "Team 6",
+        "duration_s": 676,
+        "date": 1785319718339,
+        "gameId": "PrQPMbVx",
+        "difficulty": "Medium",
+        "numPlayers": 22
+      },
+      {
+        "players": [
+          {
+            "username": "Generalbustanut",
+            "clientID": "miq3ecgp",
+            "clanTag": "GBN"
+          },
+          {
+            "username": "Orschlecker",
+            "clientID": "nFxCRxQH",
+            "clanTag": "GBN"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 690,
+        "date": 1784932778094,
+        "gameId": "WrQmVkDt",
+        "difficulty": "Medium",
+        "numPlayers": 22
+      },
+      {
+        "players": [
+          {
+            "username": "Alqaven",
+            "clientID": "scrRC3yE",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 11",
+        "duration_s": 694,
+        "date": 1785170582041,
+        "gameId": "RZu6xJWE",
         "difficulty": "Medium",
         "numPlayers": 24
       },
       {
         "players": [
           {
-            "username": "Julien",
-            "clientID": "8x7HgCaF",
-            "clanTag": null
+            "username": "Menace",
+            "clientID": "t7kZ3BZW",
+            "clanTag": "MARS"
           },
           {
-            "username": "Bublik",
-            "clientID": "tYBK3bLj",
-            "clanTag": "TUNG"
-          },
-          {
-            "username": "Prison Mike",
-            "clientID": "YxHjYiUi",
-            "clanTag": null
+            "username": "bunny19",
+            "clientID": "aoHJxZ91",
+            "clanTag": "MARS"
           }
         ],
-        "duration_s": 567,
-        "date": 1780672945422,
-        "gameId": "fjQWqELa",
+        "team": "Team 2",
+        "duration_s": 718,
+        "date": 1784944336859,
+        "gameId": "RgE1ADgD",
         "difficulty": "Medium",
-        "numPlayers": 24
+        "numPlayers": 22
       },
       {
         "players": [
           {
-            "username": "JustFullTrade",
-            "clientID": "z33pfA9C",
+            "username": "Rabbitt",
+            "clientID": "LeJsGGZJ",
+            "clanTag": null
+          },
+          {
+            "username": "Basrein",
+            "clientID": "Hbv9JbeQ",
             "clanTag": null
           }
         ],
-        "duration_s": 621,
-        "date": 1780669915967,
-        "gameId": "ye5FzQSu",
+        "team": "Team 4",
+        "duration_s": 738,
+        "date": 1785375469863,
+        "gameId": "1i99kfNu",
         "difficulty": "Medium",
         "numPlayers": 24
-      }
-    ],
-    "MilkyWay": [
-      {
-        "players": [
-          {
-            "username": "CORBAX",
-            "clientID": "Wz7a692z",
-            "clanTag": "UN"
-          },
-          {
-            "username": "theMugHals",
-            "clientID": "SJpLFZB5",
-            "clanTag": null
-          },
-          {
-            "username": "Etris",
-            "clientID": "knNrBjvk",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 577,
-        "date": 1780671008035,
-        "gameId": "KUFLiK6E",
-        "difficulty": "Medium",
-        "numPlayers": 15
-      },
-      {
-        "players": [
-          {
-            "username": "BIG DADDY",
-            "clientID": "1bBYpVcH",
-            "clanTag": "31ER"
-          },
-          {
-            "username": "Loco",
-            "clientID": "uMq7upsA",
-            "clanTag": "31ER"
-          },
-          {
-            "username": "Trader Free",
-            "clientID": "GHyuJBe1",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 745,
-        "date": 1780691575179,
-        "gameId": "Kf233QBf",
-        "difficulty": "Medium",
-        "numPlayers": 15
       }
     ],
     "Lemnos": [
       {
         "players": [
           {
-            "username": "Bunnysek",
-            "clientID": "WfEKmuZz",
-            "clanTag": "CYN"
+            "username": "Azathoth",
+            "clientID": "erxbNd8D",
+            "clanTag": "UON"
           },
           {
-            "username": "imperium romanum",
-            "clientID": "48LPUGXQ",
-            "clanTag": "CYN"
+            "username": "uxxtu",
+            "clientID": "aEqzsFTQ",
+            "clanTag": "UON"
           }
         ],
-        "duration_s": 606,
-        "date": 1780669079622,
-        "gameId": "YTsadLai",
+        "team": "Team 1",
+        "duration_s": 599,
+        "date": 1785054870787,
+        "gameId": "Lb3pZPX3",
         "difficulty": "Medium",
-        "numPlayers": 45
-      }
-    ],
-    "Bering Strait": [
-      {
-        "players": [
-          {
-            "username": "smsfun",
-            "clientID": "PJAdpy4t",
-            "clanTag": "NUB"
-          },
-          {
-            "username": "Train Me",
-            "clientID": "jaSu9EqR",
-            "clanTag": "NUB"
-          },
-          {
-            "username": "Anon337",
-            "clientID": "CEzXzk3H",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 615,
-        "date": 1780621983736,
-        "gameId": "X2FcCRm7",
-        "difficulty": "Medium",
-        "numPlayers": 30
-      }
-    ],
-    "Nile Delta": [
-      {
-        "players": [
-          {
-            "username": "Pluc",
-            "clientID": "iusjdtRF",
-            "clanTag": "SJH"
-          },
-          {
-            "username": "SOPHIA",
-            "clientID": "FaARVK59",
-            "clanTag": "SJH"
-          },
-          {
-            "username": "axe",
-            "clientID": "HyUbYBcY",
-            "clanTag": "SJH"
-          }
-        ],
-        "duration_s": 677,
-        "date": 1780622428690,
-        "gameId": "UkBEMCWS",
-        "difficulty": "Medium",
-        "numPlayers": 69
-      }
-    ],
-    "World": [
-      {
-        "players": [
-          {
-            "username": "Calos",
-            "clientID": "a9fkfqik",
-            "clanTag": "GER"
-          },
-          {
-            "username": "Tim21",
-            "clientID": "8jSsvT4u",
-            "clanTag": "GER"
-          },
-          {
-            "username": "Chuma",
-            "clientID": "26KfxBzk",
-            "clanTag": "GER"
-          }
-        ],
-        "duration_s": 678,
-        "date": 1780693179824,
-        "gameId": "jMKQaRqx",
-        "difficulty": "Medium",
-        "numPlayers": 30
-      }
-    ],
-    "Asia": [
-      {
-        "players": [
-          {
-            "username": "Zwiper",
-            "clientID": "ny9D6XhR",
-            "clanTag": "LBU"
-          },
-          {
-            "username": "Revenflok",
-            "clientID": "n2cE419E",
-            "clanTag": "LBU"
-          }
-        ],
-        "duration_s": 703,
-        "date": 1780690749850,
-        "gameId": "W3Eqb8SQ",
-        "difficulty": "Medium",
-        "numPlayers": 45
+        "numPlayers": 44
       },
       {
         "players": [
           {
-            "username": "abublis",
-            "clientID": "R1UVouF7",
-            "clanTag": null
+            "username": "Bismarck",
+            "clientID": "Kd61Hqn5",
+            "clanTag": "CABO"
           },
           {
-            "username": "StrikingEcho68",
-            "clientID": "E4pyvcVE",
-            "clanTag": null
+            "username": "ponto",
+            "clientID": "XyYFTkWj",
+            "clanTag": "CABO"
           }
         ],
-        "duration_s": 715,
-        "date": 1780622580340,
-        "gameId": "5kAUySUy",
+        "team": "Team 5",
+        "duration_s": 754,
+        "date": 1784860867746,
+        "gameId": "azSoTm94",
         "difficulty": "Medium",
-        "numPlayers": 45
+        "numPlayers": 44
       }
     ],
-    "Two Lakes": [
+    "Faroe Islands": [
       {
         "players": [
           {
-            "username": "Juportqua",
-            "clientID": "Y7xJ3SAX",
-            "clanTag": "POG"
+            "username": "NeedHugs",
+            "clientID": "Y4MHq8Gt",
+            "clanTag": null
           },
           {
-            "username": "BigUps",
-            "clientID": "qRGLNTXM",
-            "clanTag": "POG"
-          },
-          {
-            "username": "QUINTAL",
-            "clientID": "QpYoUink",
-            "clanTag": "POG"
+            "username": "DIMDUM",
+            "clientID": "zrnfNKw6",
+            "clanTag": "HALLA"
           }
         ],
-        "duration_s": 735,
-        "date": 1780630586556,
-        "gameId": "JkAr8ZpP",
+        "team": "Blue",
+        "duration_s": 684,
+        "date": 1785344588698,
+        "gameId": "ixaT93mo",
         "difficulty": "Medium",
-        "numPlayers": 54
+        "numPlayers": 14
       },
       {
         "players": [
           {
-            "username": "LuX",
-            "clientID": "nwzprTAG",
+            "username": "AnonWhale5",
+            "clientID": "jTDsxzeF",
             "clanTag": null
           },
           {
-            "username": "tentama",
-            "clientID": "bJnmpSKg",
-            "clanTag": null
-          },
-          {
-            "username": "Anon627",
-            "clientID": "6om6cpUQ",
+            "username": "kaesekuchen",
+            "clientID": "eaEoKgir",
             "clanTag": null
           }
         ],
-        "duration_s": 747,
-        "date": 1780640395171,
-        "gameId": "Pw2u97gn",
+        "team": "Teal",
+        "duration_s": 727,
+        "date": 1785164780438,
+        "gameId": "gyAAph4u",
         "difficulty": "Medium",
-        "numPlayers": 58
-      }
-    ],
-    "Manicouagan": [
-      {
-        "players": [
-          {
-            "username": "Nabuchodonosor",
-            "clientID": "xVL43B46",
-            "clanTag": null
-          },
-          {
-            "username": "Anon466",
-            "clientID": "2AjKcb3j",
-            "clanTag": null
-          },
-          {
-            "username": "China 2.0",
-            "clientID": "EGxuGKf3",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 742,
-        "date": 1780680634464,
-        "gameId": "6hXyUTHJ",
-        "difficulty": "Medium",
-        "numPlayers": 99
-      }
-    ],
-    "Traders Dream": [
-      {
-        "players": [
-          {
-            "username": "axe",
-            "clientID": "poh4eYWx",
-            "clanTag": "SJH"
-          },
-          {
-            "username": "Pluc",
-            "clientID": "6q4PzbYv",
-            "clanTag": "SJH"
-          },
-          {
-            "username": "SOPHIA",
-            "clientID": "2qQ6TxER",
-            "clanTag": "SJH"
-          }
-        ],
-        "duration_s": 744,
-        "date": 1780626346516,
-        "gameId": "odZiFa3f",
-        "difficulty": "Medium",
-        "numPlayers": 48
-      }
-    ],
-    "Caucasus": [
-      {
-        "players": [
-          {
-            "username": "HippoGlyph",
-            "clientID": "pzK5HPkP",
-            "clanTag": "FUNK"
-          },
-          {
-            "username": "Nico2loco",
-            "clientID": "ScftdV2T",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 744,
-        "date": 1780620433737,
-        "gameId": "XdxWJLYo",
-        "difficulty": "Medium",
-        "numPlayers": 30
-      }
-    ]
-  },
-  "quads": {
-    "Bosphorus Straits": [
-      {
-        "players": [
-          {
-            "username": "Anon065",
-            "clientID": "5hWNsnT3",
-            "clanTag": null
-          },
-          {
-            "username": "Peace And Love",
-            "clientID": "DBfcAZei",
-            "clanTag": "UN"
-          },
-          {
-            "username": "Sturmling",
-            "clientID": "qnuDZkne",
-            "clanTag": null
-          },
-          {
-            "username": "PFF IDK",
-            "clientID": "xRf77Gcy",
-            "clanTag": null
-          }
-        ],
-        "duration_s": 440,
-        "date": 1780685393613,
-        "gameId": "3znVoWGT",
-        "difficulty": "Medium",
-        "numPlayers": 12
+        "numPlayers": 14
       },
       {
         "players": [
           {
-            "username": "Trader",
-            "clientID": "kEUuAdD8",
-            "clanTag": "UN"
-          },
-          {
-            "username": "harsh432",
-            "clientID": "1bWqffqf",
+            "username": "Anon231",
+            "clientID": "f46bpzLF",
             "clanTag": null
           },
           {
-            "username": "Elliot",
-            "clientID": "UNotAYT9",
-            "clanTag": "BALD"
-          }
-        ],
-        "duration_s": 540,
-        "date": 1780700543083,
-        "gameId": "xFMZC3Kj",
-        "difficulty": "Medium",
-        "numPlayers": 12
-      }
-    ],
-    "Japan": [
-      {
-        "players": [
-          {
-            "username": "Laharos",
-            "clientID": "J4gz1Sgn",
-            "clanTag": "UN"
-          },
-          {
-            "username": "Aero15",
-            "clientID": "coPZLhQM",
-            "clanTag": null
-          },
-          {
-            "username": "oruspu cocugu",
-            "clientID": "JDKx4jmx",
-            "clanTag": "UN"
-          },
-          {
-            "username": "GGman",
-            "clientID": "PmuuKKwP",
+            "username": "Mitochonria",
+            "clientID": "Tpz6GCgh",
             "clanTag": null
           }
         ],
-        "duration_s": 490,
-        "date": 1780689708824,
-        "gameId": "cH1pZ4sT",
+        "team": "Team 8",
+        "duration_s": 751,
+        "date": 1784919663957,
+        "gameId": "iqw5FLSK",
         "difficulty": "Medium",
-        "numPlayers": 24
+        "numPlayers": 20
       },
       {
         "players": [
           {
-            "username": "Qarze",
-            "clientID": "AHqbUNTH",
-            "clanTag": "UN"
-          },
-          {
-            "username": "COMMUNIST_1",
-            "clientID": "62Vfj9VR",
+            "username": "love",
+            "clientID": "4KKKhp1k",
             "clanTag": null
           },
           {
-            "username": "jeaneudes",
-            "clientID": "Eqe4sofm",
-            "clanTag": "UN"
-          },
-          {
-            "username": "Anon695",
-            "clientID": "gYF2VQb8",
+            "username": "Mito",
+            "clientID": "ym1yCqp4",
             "clanTag": null
           }
         ],
-        "duration_s": 614,
-        "date": 1780667810878,
-        "gameId": "CpfKxoee",
+        "team": "Teal",
+        "duration_s": 886,
+        "date": 1785087146556,
+        "gameId": "VvADQzdk",
         "difficulty": "Medium",
-        "numPlayers": 24
+        "numPlayers": 14
       }
     ],
     "MilkyWay": [
       {
         "players": [
           {
-            "username": "RESTORE EUROPE",
-            "clientID": "UtAMXcJx",
-            "clanTag": "BE"
+            "username": "Simonian",
+            "clientID": "pvfKyYHY",
+            "clanTag": "MOL"
           },
           {
-            "username": "Tanaka",
-            "clientID": "smZxkEwd",
+            "username": "AnonLadybug6",
+            "clientID": "WY18Pw1C",
             "clanTag": null
-          },
-          {
-            "username": "Banger",
-            "clientID": "tuk2t8n2",
-            "clanTag": "ICE"
           }
         ],
-        "duration_s": 508,
-        "date": 1780654699009,
-        "gameId": "ypkEvsMv",
+        "team": "Yellow",
+        "duration_s": 686,
+        "date": 1784896780925,
+        "gameId": "PFdmiwpq",
         "difficulty": "Medium",
-        "numPlayers": 20
+        "numPlayers": 14
       },
       {
         "players": [
           {
-            "username": "Kaeling",
-            "clientID": "YVweKTna",
-            "clanTag": "DAG"
+            "username": "cortec",
+            "clientID": "CVVrHN8Y",
+            "clanTag": "NKTN"
           },
           {
-            "username": "Frontal Defense Network FDN",
-            "clientID": "8nXcG9TB",
+            "username": "NUK3",
+            "clientID": "SKFu6S25",
+            "clanTag": "NKTN"
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 728,
+        "date": 1785210683735,
+        "gameId": "QBAL2v6q",
+        "difficulty": "Medium",
+        "numPlayers": 14
+      },
+      {
+        "players": [
+          {
+            "username": "Nor",
+            "clientID": "h3dLVzHg",
+            "clanTag": "UN"
+          },
+          {
+            "username": "ASA.milkyway688",
+            "clientID": "ypq9BEA8",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 758,
+        "date": 1785325206178,
+        "gameId": "c6mv4Hnk",
+        "difficulty": "Medium",
+        "numPlayers": 14
+      },
+      {
+        "players": [
+          {
+            "username": "Troody",
+            "clientID": "BoemvADT",
             "clanTag": null
           },
           {
-            "username": "AAAAAAAA",
-            "clientID": "NY4CPGo7",
-            "clanTag": "DAG"
-          },
-          {
-            "username": "choomaBOY42",
-            "clientID": "Bwx4krai",
-            "clanTag": "DAG"
+            "username": "Lode_runner",
+            "clientID": "GJAAy3NF",
+            "clanTag": "LOD"
           }
         ],
-        "duration_s": 628,
-        "date": 1780662076728,
-        "gameId": "URzNpc1Z",
+        "team": "Yellow",
+        "duration_s": 857,
+        "date": 1785185723924,
+        "gameId": "sv386qoD",
         "difficulty": "Medium",
-        "numPlayers": 20
+        "numPlayers": 14
       }
     ],
-    "Pangaea": [
+    "World": [
       {
         "players": [
           {
-            "username": "KingCNMMD",
-            "clientID": "2qfwBzyS",
-            "clanTag": "UN"
+            "username": "SPoS",
+            "clientID": "GD2YP9wZ",
+            "clanTag": "AST"
           },
           {
-            "username": "GORLUM",
-            "clientID": "dcCL2nsm",
-            "clanTag": null
-          },
-          {
-            "username": "Cortx",
-            "clientID": "9V4u3wwf",
-            "clanTag": null
-          },
-          {
-            "username": "CIA",
-            "clientID": "7u2rvBLR",
-            "clanTag": "BUG"
+            "username": "Patanek",
+            "clientID": "rjFt9pwn",
+            "clanTag": "AST"
           }
         ],
-        "duration_s": 518,
-        "date": 1780639685473,
-        "gameId": "UzdDBV4i",
+        "team": "Team 1",
+        "duration_s": 695,
+        "date": 1785173453905,
+        "gameId": "5LxbZmPx",
         "difficulty": "Medium",
-        "numPlayers": 12
+        "numPlayers": 34
       },
       {
         "players": [
           {
-            "username": "wuhuo1",
-            "clientID": "VZnts8QV",
-            "clanTag": "UN"
+            "username": "Silly trading",
+            "clientID": "HNsZSQee",
+            "clanTag": "AST"
           },
           {
-            "username": "warship",
-            "clientID": "qPsf6ohq",
-            "clanTag": "UN"
-          },
-          {
-            "username": "BLAH BLAH BLAH BLAH I WIN",
-            "clientID": "mLXdY8bW",
-            "clanTag": "UN"
+            "username": "DioxFrost",
+            "clientID": "NGf8gHsq",
+            "clanTag": "AST"
           }
         ],
-        "duration_s": 635,
-        "date": 1780633455418,
-        "gameId": "twJsq8mR",
+        "team": "Team 1",
+        "duration_s": 765,
+        "date": 1785295771358,
+        "gameId": "tDbRgAv8",
+        "difficulty": "Medium",
+        "numPlayers": 30
+      },
+      {
+        "players": [
+          {
+            "username": "patience is a virtue",
+            "clientID": "t2Q3xU8Z",
+            "clanTag": "STUD"
+          },
+          {
+            "username": "Tama",
+            "clientID": "iXs7YH39",
+            "clanTag": "STUD"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 847,
+        "date": 1785173229683,
+        "gameId": "wsoMeajJ",
         "difficulty": "Medium",
         "numPlayers": 30
       }
@@ -1033,250 +412,2916 @@
       {
         "players": [
           {
-            "username": "Anon881",
-            "clientID": "t43aBYcb",
-            "clanTag": null
+            "username": "froxy",
+            "clientID": "JzhAib1f",
+            "clanTag": "LAB"
           },
           {
-            "username": "FAT_KING",
-            "clientID": "jrRiSWHe",
-            "clanTag": null
-          },
-          {
-            "username": "VieTNAM424",
-            "clientID": "CwCciPpH",
-            "clanTag": "88"
+            "username": "MrTumor",
+            "clientID": "A3kDcQjC",
+            "clanTag": "LAB"
           }
         ],
-        "duration_s": 592,
-        "date": 1780632873337,
-        "gameId": "1FzpHTuU",
+        "team": "Team 1",
+        "duration_s": 698,
+        "date": 1784950424216,
+        "gameId": "jDhVZoZg",
         "difficulty": "Medium",
-        "numPlayers": 28
+        "numPlayers": 30
       }
     ],
-    "Mars": [
+    "Halkidiki": [
       {
         "players": [
           {
-            "username": "Larry",
-            "clientID": "cjHje72m",
-            "clanTag": "AST"
+            "username": "Tiziguezmer",
+            "clientID": "gDPPaN9e",
+            "clanTag": "WEG"
           },
           {
-            "username": "Yohan",
-            "clientID": "F9TAj7Qa",
-            "clanTag": "AST"
-          },
-          {
-            "username": "Hamza",
-            "clientID": "kZdxYEHR",
-            "clanTag": "AST"
-          },
-          {
-            "username": "France",
-            "clientID": "8DJurNXq",
-            "clanTag": "AST"
+            "username": "tizi",
+            "clientID": "hYsjDxR1",
+            "clanTag": "WEG"
           }
         ],
-        "duration_s": 595,
-        "date": 1780639669964,
-        "gameId": "Qy1t6NTX",
+        "team": "Team 1",
+        "duration_s": 708,
+        "date": 1785145679604,
+        "gameId": "RbxNx7ca",
         "difficulty": "Medium",
-        "numPlayers": 52
-      }
-    ],
-    "Hawaii": [
+        "numPlayers": 48
+      },
       {
         "players": [
           {
-            "username": "Anon0934",
-            "clientID": "yXLuBkUJ",
+            "username": "AnonOctopus3",
+            "clientID": "FCf5jSA8",
             "clanTag": null
           },
           {
-            "username": "A White Whale",
-            "clientID": "pBahDi7v",
-            "clanTag": "UN"
-          },
-          {
-            "username": "ya_eby_sobak",
-            "clientID": "1XhyCEWY",
-            "clanTag": "UN"
+            "username": "funny cat",
+            "clientID": "DgXK6JCb",
+            "clanTag": null
           }
         ],
-        "duration_s": 637,
-        "date": 1780695340490,
-        "gameId": "qRUYrxrZ",
+        "team": "Team 30",
+        "duration_s": 855,
+        "date": 1785336693520,
+        "gameId": "9bhik6G1",
         "difficulty": "Medium",
-        "numPlayers": 12
+        "numPlayers": 68
+      }
+    ],
+    "Gateway to the Atlantic": [
+      {
+        "players": [
+          {
+            "username": "Big Girly",
+            "clientID": "7JrChF2z",
+            "clanTag": "WW"
+          },
+          {
+            "username": "Paleontologist",
+            "clientID": "fC3A15JF",
+            "clanTag": "WW"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 733,
+        "date": 1784942580112,
+        "gameId": "21fjZpnG",
+        "difficulty": "Medium",
+        "numPlayers": 17
+      },
+      {
+        "players": [
+          {
+            "username": "RANAUT",
+            "clientID": "WndnYiov",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Kopli",
+            "clientID": "jt7nBGiz",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 869,
+        "date": 1785407532179,
+        "gameId": "1Ui8Yi5w",
+        "difficulty": "Medium",
+        "numPlayers": 55
+      }
+    ],
+    "Baikal": [
+      {
+        "players": [
+          {
+            "username": "SUSPECT",
+            "clientID": "8N1ZJ9DS",
+            "clanTag": "NUB"
+          },
+          {
+            "username": "FrederikIA",
+            "clientID": "qaMaKUMP",
+            "clanTag": "NUB"
+          }
+        ],
+        "team": "Team 4",
+        "duration_s": 770,
+        "date": 1785101599207,
+        "gameId": "JcoTmyRD",
+        "difficulty": "Medium",
+        "numPlayers": 65
       }
     ],
     "Caucasus": [
       {
         "players": [
           {
-            "username": "palito locutor",
-            "clientID": "acPmMDjW",
-            "clanTag": "SPQR"
+            "username": "barba rossa",
+            "clientID": "zzuHrrix",
+            "clanTag": "BT"
           },
           {
-            "username": "DaddysLilTater",
-            "clientID": "ehkgmFPR",
-            "clanTag": null
-          },
-          {
-            "username": "IJUSTWANTTRADE",
-            "clientID": "bf3utDxv",
-            "clanTag": "SMILE"
+            "username": "BeyazTahta",
+            "clientID": "qxDvr5Nf",
+            "clanTag": "BT"
           }
         ],
-        "duration_s": 653,
-        "date": 1780620686481,
-        "gameId": "tAfb7fp9",
+        "team": "Team 3",
+        "duration_s": 770,
+        "date": 1785408745339,
+        "gameId": "VuRiyaSL",
         "difficulty": "Medium",
-        "numPlayers": 28
+        "numPlayers": 30
       }
     ],
-    "World": [
+    "Pangaea": [
       {
         "players": [
           {
-            "username": "Quan",
-            "clientID": "ZePCTL1g",
-            "clanTag": "CC"
+            "username": "Faber",
+            "clientID": "5RXzACvy",
+            "clanTag": "ITA"
           },
           {
-            "username": "Anon289",
-            "clientID": "SskZ4XDP",
-            "clanTag": null
-          },
-          {
-            "username": "ahmed kingdom",
-            "clientID": "u9TfcKvB",
-            "clanTag": "HM"
-          },
-          {
-            "username": "RaulPaul",
-            "clientID": "JjTb4ngU",
+            "username": "Zone",
+            "clientID": "r8Fswkiw",
             "clanTag": null
           }
         ],
-        "duration_s": 675,
-        "date": 1780660555753,
-        "gameId": "ok4x2Q5L",
+        "team": "Blue",
+        "duration_s": 784,
+        "date": 1784890484797,
+        "gameId": "GjZVQky4",
         "difficulty": "Medium",
-        "numPlayers": 28
+        "numPlayers": 14
       },
       {
         "players": [
           {
-            "username": "DaddysLilChamp",
-            "clientID": "mo6xD3Ct",
-            "clanTag": "TMF"
-          },
-          {
-            "username": "National Socialist",
-            "clientID": "TPPwKYiZ",
+            "username": "JESUS777",
+            "clientID": "JxfmWujk",
             "clanTag": null
           },
           {
-            "username": "ArashFaLo",
-            "clientID": "ybWrUNj9",
+            "username": "Imperro",
+            "clientID": "XcATkUMa",
             "clanTag": null
           }
         ],
-        "duration_s": 678,
-        "date": 1780619142002,
-        "gameId": "FGYddoFr",
+        "team": "Green",
+        "duration_s": 799,
+        "date": 1785071547359,
+        "gameId": "uMnGP6R7",
         "difficulty": "Medium",
-        "numPlayers": 32
+        "numPlayers": 14
       },
       {
         "players": [
           {
-            "username": "BNice",
-            "clientID": "fdpaf2uM",
-            "clanTag": null
-          },
-          {
-            "username": "Butterblume3000",
-            "clientID": "VXfor7G8",
-            "clanTag": "UWU"
-          },
-          {
-            "username": "Anon865",
-            "clientID": "kn5bwn42",
-            "clanTag": null
-          },
-          {
-            "username": "Mat",
-            "clientID": "QMgz6b8M",
-            "clanTag": "NL"
-          }
-        ],
-        "duration_s": 721,
-        "date": 1780663493634,
-        "gameId": "iAqtdejr",
-        "difficulty": "Medium",
-        "numPlayers": 32
-      }
-    ],
-    "Bering Strait": [
-      {
-        "players": [
-          {
-            "username": "BigBunz",
-            "clientID": "XuLCAy6R",
-            "clanTag": null
-          },
-          {
-            "username": "Quillss",
-            "clientID": "gxGZkbai",
-            "clanTag": "COOL"
-          },
-          {
-            "username": "Anon574",
-            "clientID": "dDAVnpag",
+            "username": "draaaaa",
+            "clientID": "taFCVP2m",
             "clanTag": null
           }
         ],
-        "duration_s": 719,
-        "date": 1780636251125,
-        "gameId": "ZMTL2PMF",
+        "team": "Team 5",
+        "duration_s": 851,
+        "date": 1784931617480,
+        "gameId": "QDePre5a",
         "difficulty": "Medium",
         "numPlayers": 20
+      },
+      {
+        "players": [
+          {
+            "username": "AnonTurkey8",
+            "clientID": "9RsdHqR2",
+            "clanTag": null
+          },
+          {
+            "username": "CircuitryCirci",
+            "clientID": "Sbw6CwXe",
+            "clanTag": "PRIDE"
+          }
+        ],
+        "team": "Green",
+        "duration_s": 852,
+        "date": 1785123150351,
+        "gameId": "twT5gR17",
+        "difficulty": "Medium",
+        "numPlayers": 14
+      }
+    ],
+    "Strait Of Malacca": [
+      {
+        "players": [
+          {
+            "username": "JSJSSJks",
+            "clientID": "tSyopvUW",
+            "clanTag": null
+          },
+          {
+            "username": "Herstal",
+            "clientID": "ogfNNCJN",
+            "clanTag": "PS"
+          }
+        ],
+        "team": "Team 10",
+        "duration_s": 786,
+        "date": 1785279644059,
+        "gameId": "QHB875SR",
+        "difficulty": "Medium",
+        "numPlayers": 44
+      },
+      {
+        "players": [
+          {
+            "username": "POO  PI  ON  MI  PEE  PEE",
+            "clientID": "99JNxVYM",
+            "clanTag": "POOP"
+          },
+          {
+            "username": "Barkruk",
+            "clientID": "7b3VHpuT",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 859,
+        "date": 1785133556710,
+        "gameId": "AKCXCkRe",
+        "difficulty": "Medium",
+        "numPlayers": 38
+      }
+    ],
+    "Yellow Sea": [
+      {
+        "players": [
+          {
+            "username": "DioxFrost",
+            "clientID": "Lt1LzTgM",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Silly trading",
+            "clientID": "pFhwFFKW",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 787,
+        "date": 1785212171762,
+        "gameId": "B3zaKyhG",
+        "difficulty": "Medium",
+        "numPlayers": 38
+      },
+      {
+        "players": [
+          {
+            "username": "mynameistomilikehavingfun",
+            "clientID": "62aYEb4o",
+            "clanTag": "MASS"
+          },
+          {
+            "username": "xx_VrilSlayer_xx",
+            "clientID": "VKpCTEeP",
+            "clanTag": "MASS"
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 856,
+        "date": 1785063960553,
+        "gameId": "TEEn64cG",
+        "difficulty": "Medium",
+        "numPlayers": 50
+      }
+    ],
+    "Svalmel": [
+      {
+        "players": [
+          {
+            "username": "leashTheBats",
+            "clientID": "cKdWS2Je",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 787,
+        "date": 1784984767901,
+        "gameId": "D8Fpqmhi",
+        "difficulty": "Medium",
+        "numPlayers": 38
+      }
+    ],
+    "Bosphorus Straits": [
+      {
+        "players": [
+          {
+            "username": "URSS",
+            "clientID": "u8Bz6PNQ",
+            "clanTag": "RS"
+          },
+          {
+            "username": "Niemand",
+            "clientID": "ajuDW2en",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 791,
+        "date": 1785265931559,
+        "gameId": "AUzF3U5y",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      }
+    ],
+    "Black Sea": [
+      {
+        "players": [
+          {
+            "username": "im kurwa batman",
+            "clientID": "Us8CH91m",
+            "clanTag": null
+          },
+          {
+            "username": "AnonTiger",
+            "clientID": "57Tt7YuM",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 13",
+        "duration_s": 798,
+        "date": 1785217332484,
+        "gameId": "vNjH43Ed",
+        "difficulty": "Medium",
+        "numPlayers": 28
+      }
+    ],
+    "Gulf of St. Lawrence": [
+      {
+        "players": [
+          {
+            "username": "slave seller",
+            "clientID": "JjwFC1J8",
+            "clanTag": "TLS"
+          },
+          {
+            "username": "Boub",
+            "clientID": "BZXL8Qng",
+            "clanTag": "TLS"
+          }
+        ],
+        "team": "Team 4",
+        "duration_s": 818,
+        "date": 1785178419809,
+        "gameId": "JydMxqAB",
+        "difficulty": "Medium",
+        "numPlayers": 43
+      }
+    ],
+    "Two Lakes": [
+      {
+        "players": [
+          {
+            "username": "BUILD FACTORIES",
+            "clientID": "uGrL92Tc",
+            "clanTag": null
+          },
+          {
+            "username": "psg2stars",
+            "clientID": "xFK9KKxf",
+            "clanTag": "PSG"
+          }
+        ],
+        "team": "Team 5",
+        "duration_s": 835,
+        "date": 1784852724996,
+        "gameId": "ZWBw1gPB",
+        "difficulty": "Medium",
+        "numPlayers": 27
+      }
+    ],
+    "Mena": [
+      {
+        "players": [
+          {
+            "username": "spaikus900",
+            "clientID": "eNnCwNq3",
+            "clanTag": "DIS"
+          },
+          {
+            "username": "SIXSEVEN",
+            "clientID": "KjRhVWzP",
+            "clanTag": "DIS"
+          }
+        ],
+        "team": "Team 6",
+        "duration_s": 837,
+        "date": 1785168076609,
+        "gameId": "8S11cxjL",
+        "difficulty": "Medium",
+        "numPlayers": 60
+      },
+      {
+        "players": [
+          {
+            "username": "Marco2702",
+            "clientID": "UdWa6Nj3",
+            "clanTag": null
+          },
+          {
+            "username": "Rockrockrobin",
+            "clientID": "ciC7K53t",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 22",
+        "duration_s": 875,
+        "date": 1784998902191,
+        "gameId": "ZbhcAewi",
+        "difficulty": "Medium",
+        "numPlayers": 60
+      }
+    ],
+    "Falkland Islands": [
+      {
+        "players": [
+          {
+            "username": "La vida es una lucha",
+            "clientID": "6nty7bCm",
+            "clanTag": "ESP"
+          },
+          {
+            "username": "Sr Quijote",
+            "clientID": "N5DbkFZZ",
+            "clanTag": "ESP"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 837,
+        "date": 1785272732274,
+        "gameId": "5rk6di8s",
+        "difficulty": "Medium",
+        "numPlayers": 34
+      }
+    ],
+    "Taiwan Strait": [
+      {
+        "players": [
+          {
+            "username": "AnonDolphin1",
+            "clientID": "1ca8vtUr",
+            "clanTag": null
+          },
+          {
+            "username": "Definitely not a LLM",
+            "clientID": "jynh3tF2",
+            "clanTag": "UA"
+          }
+        ],
+        "team": "Team 13",
+        "duration_s": 841,
+        "date": 1785230074670,
+        "gameId": "5bSYumW2",
+        "difficulty": "Medium",
+        "numPlayers": 38
+      }
+    ],
+    "Iceland": [
+      {
+        "players": [
+          {
+            "username": "Tchoupi",
+            "clientID": "2zsxAqyd",
+            "clanTag": "SR"
+          },
+          {
+            "username": "wow",
+            "clientID": "12uzGzGu",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 856,
+        "date": 1784898901499,
+        "gameId": "gvALR4Ke",
+        "difficulty": "Medium",
+        "numPlayers": 54
+      }
+    ],
+    "Hong Kong": [
+      {
+        "players": [
+          {
+            "username": "P403N1X",
+            "clientID": "vJ1G2BLG",
+            "clanTag": "LUX"
+          },
+          {
+            "username": "Wow",
+            "clientID": "eLPmcSBn",
+            "clanTag": "LUX"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 875,
+        "date": 1785018202625,
+        "gameId": "7BFQAmUW",
+        "difficulty": "Medium",
+        "numPlayers": 40
+      }
+    ],
+    "Luna": [
+      {
+        "players": [
+          {
+            "username": "ToeLicker",
+            "clientID": "izSmAQFf",
+            "clanTag": "UN"
+          },
+          {
+            "username": "AnonPufferfish8",
+            "clientID": "9j3YthnZ",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 875,
+        "date": 1785391414566,
+        "gameId": "2rFrW2Ve",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      }
+    ],
+    "Amazon River": [
+      {
+        "players": [
+          {
+            "username": "Charlie",
+            "clientID": "Yt9EJsKf",
+            "clanTag": "MOG"
+          },
+          {
+            "username": "Kirk",
+            "clientID": "21fo9yZZ",
+            "clanTag": "MOG"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 876,
+        "date": 1784873769122,
+        "gameId": "22gNxxFe",
+        "difficulty": "Medium",
+        "numPlayers": 44
+      }
+    ],
+    "Between Two Seas": [
+      {
+        "players": [
+          {
+            "username": "MrTumor",
+            "clientID": "SNm523Sc",
+            "clanTag": "LAB"
+          },
+          {
+            "username": "froxy",
+            "clientID": "YnuykBLH",
+            "clanTag": "LAB"
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 879,
+        "date": 1785013813373,
+        "gameId": "W2ZKFP1N",
+        "difficulty": "Medium",
+        "numPlayers": 60
+      }
+    ],
+    "Indian Subcontinent": [
+      {
+        "players": [
+          {
+            "username": "TreBetcha",
+            "clientID": "fvgFfpe7",
+            "clanTag": "BE"
+          },
+          {
+            "username": "MATT",
+            "clientID": "HYk51Nd2",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 5",
+        "duration_s": 881,
+        "date": 1784990531545,
+        "gameId": "BKWsQiF5",
+        "difficulty": "Medium",
+        "numPlayers": 43
+      }
+    ],
+    "Asia": [
+      {
+        "players": [
+          {
+            "username": "G1A1Y trans...shipment",
+            "clientID": "kSon5b89",
+            "clanTag": "NNN"
+          },
+          {
+            "username": "anon111",
+            "clientID": "5xctUgJt",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 884,
+        "date": 1784899811418,
+        "gameId": "M17tTiKz",
+        "difficulty": "Medium",
+        "numPlayers": 54
+      }
+    ],
+    "Baja California": [
+      {
+        "players": [
+          {
+            "username": "gateguardian",
+            "clientID": "sH2fmwFy",
+            "clanTag": null
+          },
+          {
+            "username": "Eye_Of_Ender",
+            "clientID": "pvkGYczT",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 15",
+        "duration_s": 900,
+        "date": 1785111137992,
+        "gameId": "11YWgE4Y",
+        "difficulty": "Medium",
+        "numPlayers": 40
       }
     ],
     "Alps": [
       {
         "players": [
           {
-            "username": "axe",
-            "clientID": "QkaBTPRL",
-            "clanTag": "SJH"
+            "username": "DeVeto",
+            "clientID": "LB3kidUK",
+            "clanTag": "UN"
           },
           {
-            "username": "SOPHIA",
-            "clientID": "agtuXJmQ",
-            "clanTag": "SJH"
+            "username": "PRO",
+            "clientID": "iGcNCoWk",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 900,
+        "date": 1784968186275,
+        "gameId": "SmL9yGoN",
+        "difficulty": "Medium",
+        "numPlayers": 27
+      }
+    ],
+    "Achiran": [
+      {
+        "players": [
+          {
+            "username": "pacifist",
+            "clientID": "STuJcFLG",
+            "clanTag": null
           },
           {
-            "username": "Pluc",
-            "clientID": "PGzUxuZA",
-            "clanTag": "SJH"
-          },
-          {
-            "username": "AUTOMATON DROPSHIP",
-            "clientID": "yzKZLm2W",
+            "username": "Master_Baiter",
+            "clientID": "ohbcZrMp",
             "clanTag": null
           }
         ],
-        "duration_s": 722,
-        "date": 1780623387160,
-        "gameId": "GQjpG93e",
+        "team": "Team 25",
+        "duration_s": 903,
+        "date": 1785418690925,
+        "gameId": "Ss33XZUG",
+        "difficulty": "Medium",
+        "numPlayers": 54
+      }
+    ]
+  },
+  "trios": {
+    "Bosphorus Straits": [
+      {
+        "players": [
+          {
+            "username": "Silly trading",
+            "clientID": "bvJbvvUk",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "wThVrUPS",
+            "clanTag": "AST"
+          },
+          {
+            "username": "honest guy",
+            "clientID": "jupkw6yR",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 455,
+        "date": 1785043388304,
+        "gameId": "CiDiARyC",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      }
+    ],
+    "Faroe Islands": [
+      {
+        "players": [
+          {
+            "username": "Outis",
+            "clientID": "R1Kp9LBU",
+            "clanTag": "IMPLA"
+          },
+          {
+            "username": "AminSoshi",
+            "clientID": "t9otoi1y",
+            "clanTag": "IMPLA"
+          },
+          {
+            "username": "Thin",
+            "clientID": "Q4iSzsNe",
+            "clanTag": "IMPLA"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 517,
+        "date": 1785011590255,
+        "gameId": "D53jQHW5",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "PRO",
+            "clientID": "4CLWX7oG",
+            "clanTag": "UN"
+          },
+          {
+            "username": "SAS",
+            "clientID": "Gcio2gy1",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 593,
+        "date": 1785345240359,
+        "gameId": "C5RaWEX9",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "NoAlliances",
+            "clientID": "JdLT41RA",
+            "clanTag": null
+          },
+          {
+            "username": "Robbs",
+            "clientID": "bTyqgJMQ",
+            "clanTag": "ITA"
+          },
+          {
+            "username": "Apo_TheOriginal",
+            "clientID": "JoDfMyRx",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 629,
+        "date": 1785333945765,
+        "gameId": "mt58MDGJ",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      },
+      {
+        "players": [
+          {
+            "username": "Enderlord489",
+            "clientID": "nWhbezgG",
+            "clanTag": null
+          },
+          {
+            "username": "lot of rats",
+            "clientID": "Z5kkM4bE",
+            "clanTag": null
+          },
+          {
+            "username": "Borg",
+            "clientID": "6KeyUj9Q",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 684,
+        "date": 1784921961808,
+        "gameId": "rrWvvgFh",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      },
+      {
+        "players": [
+          {
+            "username": "Buzzz",
+            "clientID": "4D3AiGB3",
+            "clanTag": null
+          },
+          {
+            "username": "SIX",
+            "clientID": "xrZtrJPX",
+            "clanTag": null
+          },
+          {
+            "username": "11111",
+            "clientID": "SrodHq9B",
+            "clanTag": null
+          }
+        ],
+        "team": "Purple",
+        "duration_s": 697,
+        "date": 1785337744039,
+        "gameId": "EjY9Gx7u",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "Silly trading",
+            "clientID": "UPGrfg2i",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "oREa6qUY",
+            "clanTag": "AST"
+          },
+          {
+            "username": "BiggieSmallz",
+            "clientID": "8YvJiLZn",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 740,
+        "date": 1785199622915,
+        "gameId": "bYyRjcSf",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      }
+    ],
+    "MilkyWay": [
+      {
+        "players": [
+          {
+            "username": "DeLoVaN",
+            "clientID": "5mRAap4h",
+            "clanTag": "UN"
+          },
+          {
+            "username": "heterosapiens",
+            "clientID": "5veoWTpG",
+            "clanTag": "UN"
+          },
+          {
+            "username": "OTTOMAN EMPIRE",
+            "clientID": "hKaPw6d2",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 535,
+        "date": 1785076520229,
+        "gameId": "yHrSecC8",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      },
+      {
+        "players": [
+          {
+            "username": "Silly trading",
+            "clientID": "ZqEHKDVY",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "7JoqGF7c",
+            "clanTag": "AST"
+          },
+          {
+            "username": "HIPOTONIA007",
+            "clientID": "LdyijNjR",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 541,
+        "date": 1785119182463,
+        "gameId": "cf3xpp4d",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      },
+      {
+        "players": [
+          {
+            "username": "Levi5555",
+            "clientID": "LqQP7eSn",
+            "clanTag": null
+          },
+          {
+            "username": "wadya",
+            "clientID": "6Bcje9bj",
+            "clanTag": null
+          },
+          {
+            "username": "Admiral",
+            "clientID": "4GYmGRty",
+            "clanTag": "ALPS"
+          }
+        ],
+        "team": "Yellow",
+        "duration_s": 607,
+        "date": 1785006182443,
+        "gameId": "ERg8mwYn",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "PRO",
+            "clientID": "WoUgndRp",
+            "clanTag": "UN"
+          },
+          {
+            "username": "Karibil Watar",
+            "clientID": "zNddKasJ",
+            "clanTag": "UN"
+          },
+          {
+            "username": "WickedWolf",
+            "clientID": "JZu9FS1t",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 621,
+        "date": 1785179114980,
+        "gameId": "ZbZMDGAb",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "LapinG0D",
+            "clientID": "C71JwD5F",
+            "clanTag": "UN"
+          },
+          {
+            "username": "MrFanc",
+            "clientID": "kRrV3AFZ",
+            "clanTag": null
+          }
+        ],
+        "team": "Purple",
+        "duration_s": 686,
+        "date": 1785168716234,
+        "gameId": "W4j8DHap",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "kaesekuchen",
+            "clientID": "iA54MN5X",
+            "clanTag": null
+          },
+          {
+            "username": "GrumpyStallion.TqC9",
+            "clientID": "ftnV7quv",
+            "clanTag": null
+          },
+          {
+            "username": "fox000",
+            "clientID": "7gQmjfxU",
+            "clanTag": null
+          }
+        ],
+        "team": "Green",
+        "duration_s": 759,
+        "date": 1785185202906,
+        "gameId": "xYPngzUE",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      }
+    ],
+    "Japan": [
+      {
+        "players": [
+          {
+            "username": "AnonLobster2",
+            "clientID": "Cbd5iguy",
+            "clanTag": null
+          },
+          {
+            "username": "mahdiyar",
+            "clientID": "eV6cMqcx",
+            "clanTag": "IRI"
+          },
+          {
+            "username": "trade company",
+            "clientID": "ZaAyDZQW",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 553,
+        "date": 1785437068895,
+        "gameId": "bZRWnd9D",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      },
+      {
+        "players": [
+          {
+            "username": "Litty",
+            "clientID": "n9C8z2Nn",
+            "clanTag": null
+          },
+          {
+            "username": "Timo",
+            "clientID": "cd6CcYcP",
+            "clanTag": null
+          },
+          {
+            "username": "DelusiveKraken.brqO",
+            "clientID": "EjkUsJRr",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 7",
+        "duration_s": 624,
+        "date": 1785207613682,
+        "gameId": "DkZS5aMU",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      },
+      {
+        "players": [
+          {
+            "username": "France",
+            "clientID": "14c3UpGy",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Sylvan",
+            "clientID": "Z23jeP1z",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Anon539",
+            "clientID": "eoPYTZbU",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 674,
+        "date": 1784903277758,
+        "gameId": "AFnGepi3",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      },
+      {
+        "players": [
+          {
+            "username": "yooo",
+            "clientID": "NE5VDnGj",
+            "clanTag": null
+          },
+          {
+            "username": "Jogi Brenner",
+            "clientID": "r5C324bc",
+            "clanTag": null
+          },
+          {
+            "username": "wave",
+            "clientID": "rBcUkFgx",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 5",
+        "duration_s": 756,
+        "date": 1785406054251,
+        "gameId": "EVFoQf3y",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      }
+    ],
+    "Yellow Sea": [
+      {
+        "players": [
+          {
+            "username": "808",
+            "clientID": "2tF2kCSX",
+            "clanTag": "LUX"
+          },
+          {
+            "username": "JOhn",
+            "clientID": "h7ddaAoj",
+            "clanTag": "LUX"
+          },
+          {
+            "username": "Tobou Cherme",
+            "clientID": "EoNQ7JTE",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 557,
+        "date": 1785258623379,
+        "gameId": "cmiALJrD",
+        "difficulty": "Medium",
+        "numPlayers": 36
+      },
+      {
+        "players": [
+          {
+            "username": "PeggythePirate",
+            "clientID": "kpsXG5EH",
+            "clanTag": "BTG"
+          },
+          {
+            "username": "trades R us",
+            "clientID": "3HZVaxek",
+            "clanTag": "BTG"
+          },
+          {
+            "username": "WHALEFall",
+            "clientID": "8Kg54bx6",
+            "clanTag": "BTG"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 688,
+        "date": 1785423890030,
+        "gameId": "mQv5ub11",
+        "difficulty": "Medium",
+        "numPlayers": 48
+      },
+      {
+        "players": [
+          {
+            "username": "mynamajeff",
+            "clientID": "sbj4QLrg",
+            "clanTag": null
+          },
+          {
+            "username": "Just Trading",
+            "clientID": "j7HE4wgi",
+            "clanTag": "HEHE"
+          },
+          {
+            "username": "A Little Laggy",
+            "clientID": "KDFnnNDx",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 7",
+        "duration_s": 764,
+        "date": 1785123712849,
+        "gameId": "SMEgLNMD",
+        "difficulty": "Medium",
+        "numPlayers": 36
+      }
+    ],
+    "Pangaea": [
+      {
+        "players": [
+          {
+            "username": "AnonRam9",
+            "clientID": "FPgSfysk",
+            "clanTag": null
+          },
+          {
+            "username": "dmr",
+            "clientID": "SscUo9Hm",
+            "clanTag": null
+          },
+          {
+            "username": "LovelyBigfoot.Fd6b",
+            "clientID": "zCPyB2Eu",
+            "clanTag": null
+          }
+        ],
+        "team": "Purple",
+        "duration_s": 638,
+        "date": 1785209215722,
+        "gameId": "1ep3yw3P",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "ugogole",
+            "clientID": "vacXcDU4",
+            "clanTag": "ZIL"
+          },
+          {
+            "username": "Islamaphobia",
+            "clientID": "NqUrEFu4",
+            "clanTag": null
+          },
+          {
+            "username": "FaBite",
+            "clientID": "gtXSfdiN",
+            "clanTag": "ZIL"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 640,
+        "date": 1785273536588,
+        "gameId": "wsPJ7eJ2",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      },
+      {
+        "players": [
+          {
+            "username": "France",
+            "clientID": "ozDWrdzC",
+            "clanTag": "UN"
+          },
+          {
+            "username": "Ferni06",
+            "clientID": "1DKQTRbq",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 666,
+        "date": 1784979970138,
+        "gameId": "CVvyvFTP",
+        "difficulty": "Medium",
+        "numPlayers": 15
+      },
+      {
+        "players": [
+          {
+            "username": "eraprontoatavola",
+            "clientID": "jeJxHB9n",
+            "clanTag": "ITA"
+          },
+          {
+            "username": "Jesus Loves You",
+            "clientID": "NWZDcwah",
+            "clanTag": null
+          },
+          {
+            "username": "Trade Corp.",
+            "clientID": "Y3XBqHz9",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 763,
+        "date": 1785429416416,
+        "gameId": "FPi5PmqG",
+        "difficulty": "Medium",
+        "numPlayers": 18
+      }
+    ],
+    "Asia": [
+      {
+        "players": [
+          {
+            "username": "Ladron",
+            "clientID": "zsaCsMQi",
+            "clanTag": "KANCL"
+          },
+          {
+            "username": "AnonPanda3",
+            "clientID": "idqSrBEv",
+            "clanTag": "KANCL"
+          },
+          {
+            "username": "ORI",
+            "clientID": "tFF6zZxu",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 672,
+        "date": 1785249532506,
+        "gameId": "9vFh5bf3",
+        "difficulty": "Medium",
+        "numPlayers": 45
+      },
+      {
+        "players": [
+          {
+            "username": "KLAUSE BARBIE",
+            "clientID": "vyMiuby1",
+            "clanTag": "LOCK"
+          },
+          {
+            "username": "MangeBaguettePorc",
+            "clientID": "pYBJ5yGA",
+            "clanTag": "LOCK"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 737,
+        "date": 1784981361002,
+        "gameId": "9ZFT9cis",
+        "difficulty": "Medium",
+        "numPlayers": 45
+      }
+    ],
+    "Danish Straits": [
+      {
+        "players": [
+          {
+            "username": "Robbs",
+            "clientID": "1yMVLJXv",
+            "clanTag": "ITA"
+          },
+          {
+            "username": "FrontItalico",
+            "clientID": "EddkXkqg",
+            "clanTag": "ITA"
+          },
+          {
+            "username": "Maorafarming",
+            "clientID": "5TZvFqP3",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 696,
+        "date": 1785251748187,
+        "gameId": "jb1kg3CD",
+        "difficulty": "Medium",
+        "numPlayers": 30
+      },
+      {
+        "players": [
+          {
+            "username": "abubles",
+            "clientID": "xfLjheYu",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Orange",
+        "duration_s": 700,
+        "date": 1785426969477,
+        "gameId": "vK1u3WvQ",
+        "difficulty": "Medium",
+        "numPlayers": 21
+      }
+    ],
+    "Achiran": [
+      {
+        "players": [
+          {
+            "username": "Asagrd",
+            "clientID": "B5JusPMS",
+            "clanTag": null
+          },
+          {
+            "username": "Dxriushh",
+            "clientID": "E4VFjmTF",
+            "clanTag": "JEFF"
+          },
+          {
+            "username": "AnonFox9",
+            "clientID": "JmYkh4Ei",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 12",
+        "duration_s": 713,
+        "date": 1785283119978,
+        "gameId": "AFMC7zAb",
+        "difficulty": "Medium",
+        "numPlayers": 54
+      }
+    ],
+    "Falkland Islands": [
+      {
+        "players": [
+          {
+            "username": "Silly trading",
+            "clientID": "Ko2iM15R",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "fbnqe5SB",
+            "clanTag": "AST"
+          },
+          {
+            "username": "PeesALittle",
+            "clientID": "H6h87J6q",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 724,
+        "date": 1784971283888,
+        "gameId": "duWriAE3",
+        "difficulty": "Medium",
+        "numPlayers": 30
+      }
+    ],
+    "Yenisei": [
+      {
+        "players": [
+          {
+            "username": "Revenflok",
+            "clientID": "GKYbMt4f",
+            "clanTag": "SR"
+          },
+          {
+            "username": "VarXard",
+            "clientID": "eJencnCc",
+            "clanTag": "SR"
+          },
+          {
+            "username": "PleaseFullSendMe",
+            "clientID": "EcTccjaY",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 4",
+        "duration_s": 737,
+        "date": 1785093532791,
+        "gameId": "PiQ7TQ76",
+        "difficulty": "Medium",
+        "numPlayers": 45
+      }
+    ],
+    "Lemnos": [
+      {
+        "players": [
+          {
+            "username": "FREE_CUBA",
+            "clientID": "ZTjVJSm3",
+            "clanTag": "MARX"
+          },
+          {
+            "username": "Anon637",
+            "clientID": "4YxGC8Gh",
+            "clanTag": null
+          },
+          {
+            "username": "AAA",
+            "clientID": "PkNQMS98",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 739,
+        "date": 1784898773354,
+        "gameId": "y8t8XHUU",
+        "difficulty": "Medium",
+        "numPlayers": 36
+      }
+    ],
+    "Svalmel": [
+      {
+        "players": [
+          {
+            "username": "Pinkman",
+            "clientID": "QkiD8o2V",
+            "clanTag": null
+          },
+          {
+            "username": "RoM",
+            "clientID": "rTuT8QrD",
+            "clanTag": "TEG"
+          },
+          {
+            "username": "BITCOINTOTHEM00N",
+            "clientID": "CG7YdAJh",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 9",
+        "duration_s": 750,
+        "date": 1785361133916,
+        "gameId": "a4VDLSme",
+        "difficulty": "Medium",
+        "numPlayers": 36
+      }
+    ],
+    "Italia": [
+      {
+        "players": [
+          {
+            "username": "Middleway",
+            "clientID": "ib8DCyF9",
+            "clanTag": null
+          },
+          {
+            "username": "boeing 737",
+            "clientID": "Lxr24uEs",
+            "clanTag": "DAWG"
+          },
+          {
+            "username": "AnonRhino3",
+            "clientID": "Z3cX9Q87",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 5",
+        "duration_s": 751,
+        "date": 1785107625544,
+        "gameId": "cChWrbeu",
+        "difficulty": "Medium",
+        "numPlayers": 30
+      },
+      {
+        "players": [
+          {
+            "username": "THE FRENCH",
+            "clientID": "3BPJ2UQk",
+            "clanTag": null
+          },
+          {
+            "username": "YOUR DEATH",
+            "clientID": "f7wW4ymY",
+            "clanTag": "IND"
+          },
+          {
+            "username": "DEATH",
+            "clientID": "u9VKwXFo",
+            "clanTag": "IND"
+          }
+        ],
+        "team": "Team 4",
+        "duration_s": 754,
+        "date": 1785169701690,
+        "gameId": "vDD9fjYa",
+        "difficulty": "Medium",
+        "numPlayers": 30
+      }
+    ],
+    "World": [
+      {
+        "players": [
+          {
+            "username": "PeesALittle",
+            "clientID": "rw43s6EL",
+            "clanTag": null
+          },
+          {
+            "username": "BenadrylAbuserNBA",
+            "clientID": "AL7g8L7q",
+            "clanTag": null
+          },
+          {
+            "username": "AnonGiraffe5",
+            "clientID": "RAREUMtT",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 9",
+        "duration_s": 757,
+        "date": 1785133809957,
+        "gameId": "n2Ljs26b",
+        "difficulty": "Medium",
+        "numPlayers": 33
+      }
+    ],
+    "Iceland": [
+      {
+        "players": [
+          {
+            "username": "sonk",
+            "clientID": "XGyCns4t",
+            "clanTag": "SONK"
+          },
+          {
+            "username": "HUNTIS",
+            "clientID": "NPbdbV4f",
+            "clanTag": "SONK"
+          },
+          {
+            "username": "Gus",
+            "clientID": "9TTTHohN",
+            "clanTag": "SONK"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 759,
+        "date": 1784959655179,
+        "gameId": "SvDQrKPY",
         "difficulty": "Medium",
         "numPlayers": 44
+      }
+    ],
+    "Mena": [
+      {
+        "players": [
+          {
+            "username": "RipperSeeker",
+            "clientID": "ewcPvSSr",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Animal",
+            "clientID": "MEVhfRDU",
+            "clanTag": "AST"
+          },
+          {
+            "username": "GEDA",
+            "clientID": "DAY7sCUf",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 760,
+        "date": 1785077656824,
+        "gameId": "3HiEPeUy",
+        "difficulty": "Medium",
+        "numPlayers": 78
+      }
+    ],
+    "Great Lakes": [
+      {
+        "players": [
+          {
+            "username": "ryy",
+            "clientID": "nbZWv4MN",
+            "clanTag": "UON"
+          },
+          {
+            "username": "smsfun",
+            "clientID": "hvnArjFW",
+            "clanTag": "UON"
+          },
+          {
+            "username": "Anon908",
+            "clientID": "BwJiMViX",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 5",
+        "duration_s": 762,
+        "date": 1785335361671,
+        "gameId": "zLLkZehw",
+        "difficulty": "Medium",
+        "numPlayers": 93
+      }
+    ]
+  },
+  "quads": {
+    "MilkyWay": [
+      {
+        "players": [
+          {
+            "username": "glusy",
+            "clientID": "ia7EWDxz",
+            "clanTag": null
+          },
+          {
+            "username": "YOUR DEATH",
+            "clientID": "ZqxJEfWa",
+            "clanTag": "IND"
+          },
+          {
+            "username": "ken",
+            "clientID": "QzUScwVc",
+            "clanTag": null
+          },
+          {
+            "username": "Rockrockrobin",
+            "clientID": "rub3qGx9",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 394,
+        "date": 1784998341143,
+        "gameId": "MEUhAAre",
+        "difficulty": "Medium",
+        "numPlayers": 11
+      },
+      {
+        "players": [
+          {
+            "username": "GentlePunk.Owvs",
+            "clientID": "XuQhnGTy",
+            "clanTag": null
+          },
+          {
+            "username": "JoeDart",
+            "clientID": "JerCSANa",
+            "clanTag": null
+          },
+          {
+            "username": "Send troops",
+            "clientID": "8Z8dKTCw",
+            "clanTag": "UN"
+          },
+          {
+            "username": "Fwiendly",
+            "clientID": "ApDt8Gx8",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 565,
+        "date": 1784889656495,
+        "gameId": "8iVhybzo",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "Anon818",
+            "clientID": "kaxqZ4ia",
+            "clanTag": null
+          },
+          {
+            "username": "peace money challenge",
+            "clientID": "T3T4Abum",
+            "clanTag": "NOWIN"
+          },
+          {
+            "username": "SupremeDoug",
+            "clientID": "kve9BRzS",
+            "clanTag": "WWRS"
+          },
+          {
+            "username": "AnonRooster6",
+            "clientID": "NTBmu2Qf",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 576,
+        "date": 1785149814063,
+        "gameId": "UeVb8EXj",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "Michigan",
+            "clientID": "8dXdRMr5",
+            "clanTag": null
+          },
+          {
+            "username": "Kaoha",
+            "clientID": "yZU6FD3V",
+            "clanTag": null
+          },
+          {
+            "username": "u tan",
+            "clientID": "UTsSSrYY",
+            "clanTag": "67"
+          },
+          {
+            "username": "Mississippi_Cheese",
+            "clientID": "Lk1NhYs9",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 710,
+        "date": 1785297997048,
+        "gameId": "ypcSQU2k",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      }
+    ],
+    "Pangaea": [
+      {
+        "players": [
+          {
+            "username": "Anon668",
+            "clientID": "a1osW4rd",
+            "clanTag": null
+          },
+          {
+            "username": "ldsf",
+            "clientID": "Ruv4StCz",
+            "clanTag": "IAM"
+          },
+          {
+            "username": "hello frens",
+            "clientID": "AuYq5WPw",
+            "clanTag": null
+          },
+          {
+            "username": "AnonSpider1",
+            "clientID": "ahYxfLzn",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 459,
+        "date": 1785428509011,
+        "gameId": "bbURJJFi",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "Ehsan",
+            "clientID": "G1DwDxhD",
+            "clanTag": "SRJ"
+          },
+          {
+            "username": "ytslayer",
+            "clientID": "X1mEm8ip",
+            "clanTag": null
+          },
+          {
+            "username": "V1RFrN",
+            "clientID": "dwoEotfX",
+            "clanTag": null
+          },
+          {
+            "username": "Brabo",
+            "clientID": "RJUJRh8q",
+            "clanTag": "BRA"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 549,
+        "date": 1784919230506,
+        "gameId": "NciEAExo",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "FrontMaXXing",
+            "clientID": "RgTRjYf2",
+            "clanTag": null
+          },
+          {
+            "username": "globoschlomo",
+            "clientID": "CJhwX5aS",
+            "clanTag": "XYZ"
+          },
+          {
+            "username": "AnonAnon3",
+            "clientID": "ZWMbeehN",
+            "clanTag": null
+          },
+          {
+            "username": "Golden Monkey",
+            "clientID": "6rJaw6WB",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 569,
+        "date": 1785280211606,
+        "gameId": "7JvzuoMT",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      },
+      {
+        "players": [
+          {
+            "username": "Moerks_emperie",
+            "clientID": "DcmMzTWP",
+            "clanTag": null
+          },
+          {
+            "username": "Brock",
+            "clientID": "U6X2irop",
+            "clanTag": "BWC"
+          },
+          {
+            "username": "Ben",
+            "clientID": "WNAh6YM6",
+            "clanTag": "BWC"
+          },
+          {
+            "username": "Dont",
+            "clientID": "7keMcHXZ",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 569,
+        "date": 1785168359375,
+        "gameId": "sQSFqpfX",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "PPJ",
+            "clientID": "YMwgSG3m",
+            "clanTag": "PPJ"
+          },
+          {
+            "username": "GUMAMOTO",
+            "clientID": "pjiRotcK",
+            "clanTag": null
+          },
+          {
+            "username": "AnonBear4",
+            "clientID": "6WVSDWNJ",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 583,
+        "date": 1785410831284,
+        "gameId": "Ve3R4Pd4",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "TICKLE_MY",
+            "clientID": "abFK1zwB",
+            "clanTag": "NIP"
+          },
+          {
+            "username": "AnonLion6",
+            "clientID": "MpfWsXnM",
+            "clanTag": null
+          },
+          {
+            "username": "Smol Bean",
+            "clientID": "7hx6Zxwr",
+            "clanTag": "TRADE"
+          },
+          {
+            "username": "Lableumou",
+            "clientID": "N7yZUb4Q",
+            "clanTag": null
+          }
+        ],
+        "team": "Yellow",
+        "duration_s": 661,
+        "date": 1784914499299,
+        "gameId": "Dewuewg9",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "AnonCamel",
+            "clientID": "DLq8VGCD",
+            "clanTag": null
+          },
+          {
+            "username": "Polar bears",
+            "clientID": "2hoGm7au",
+            "clanTag": "99"
+          },
+          {
+            "username": "ClassyBigfoot.TMvL",
+            "clientID": "eCodSi9F",
+            "clanTag": null
+          },
+          {
+            "username": "sumaria",
+            "clientID": "DvQAsNTK",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 703,
+        "date": 1784976628262,
+        "gameId": "nJBZUr5G",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      }
+    ],
+    "Japan": [
+      {
+        "players": [
+          {
+            "username": "MattSieghart",
+            "clientID": "Sr9Z3y4j",
+            "clanTag": "SVAP"
+          },
+          {
+            "username": "jklaze",
+            "clientID": "iJpb45Sz",
+            "clanTag": "SVAP"
+          },
+          {
+            "username": "Dyrhan",
+            "clientID": "sASWnLCH",
+            "clanTag": "SVAP"
+          },
+          {
+            "username": "Mavin",
+            "clientID": "bcSTC8c5",
+            "clanTag": "SVAP"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 513,
+        "date": 1785021666998,
+        "gameId": "8dZ3Smfq",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      },
+      {
+        "players": [
+          {
+            "username": "AnonBoar8",
+            "clientID": "m2hNzKKL",
+            "clanTag": "BIL"
+          },
+          {
+            "username": "NeedHugs",
+            "clientID": "QpHSDk37",
+            "clanTag": null
+          },
+          {
+            "username": "Goi228",
+            "clientID": "5KUtzkEG",
+            "clanTag": "EVREI"
+          },
+          {
+            "username": "agas",
+            "clientID": "gZt5BnwX",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 613,
+        "date": 1785333829648,
+        "gameId": "4Ekx3akS",
+        "difficulty": "Medium",
+        "numPlayers": 24
+      },
+      {
+        "players": [
+          {
+            "username": "SPILCHY",
+            "clientID": "JFZXzrLs",
+            "clanTag": "NPC"
+          },
+          {
+            "username": "Zed",
+            "clientID": "3azmBQb1",
+            "clanTag": null
+          },
+          {
+            "username": "SUN",
+            "clientID": "57dDJSWY",
+            "clanTag": null
+          },
+          {
+            "username": "IKEA",
+            "clientID": "kiCBTmeB",
+            "clanTag": null
+          }
+        ],
+        "team": "Yellow",
+        "duration_s": 656,
+        "date": 1785139996038,
+        "gameId": "fgqLAZyT",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      }
+    ],
+    "Svalmel": [
+      {
+        "players": [
+          {
+            "username": "killerhurts",
+            "clientID": "A8nsW6n2",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Silly trading",
+            "clientID": "59jeAKBu",
+            "clanTag": "AST"
+          },
+          {
+            "username": "honest guy",
+            "clientID": "UgEwjnh2",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "d7FfJL7y",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 525,
+        "date": 1785124969681,
+        "gameId": "pv1X5KwP",
+        "difficulty": "Medium",
+        "numPlayers": 48
+      },
+      {
+        "players": [
+          {
+            "username": "trotinette",
+            "clientID": "8r7MDHkU",
+            "clanTag": "GAL"
+          },
+          {
+            "username": "Okinawa",
+            "clientID": "6JK9yXFe",
+            "clanTag": "GAL"
+          },
+          {
+            "username": "judom",
+            "clientID": "kZZzbM67",
+            "clanTag": "GAL"
+          },
+          {
+            "username": "Jux",
+            "clientID": "TXcrjWdZ",
+            "clanTag": "GAL"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 617,
+        "date": 1784928176648,
+        "gameId": "d4KMTYZz",
+        "difficulty": "Medium",
+        "numPlayers": 48
+      }
+    ],
+    "Faroe Islands": [
+      {
+        "players": [
+          {
+            "username": "MattSiegward",
+            "clientID": "Dx32wp1M",
+            "clanTag": "SVAP"
+          },
+          {
+            "username": "Dyrhan",
+            "clientID": "WfkiAXJn",
+            "clanTag": "SVAP"
+          },
+          {
+            "username": "jklaze",
+            "clientID": "uNNeDSUv",
+            "clanTag": "SVAP"
+          },
+          {
+            "username": "Mouse",
+            "clientID": "bBwaUVqa",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 558,
+        "date": 1785178756636,
+        "gameId": "P5Tp1Eqm",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      },
+      {
+        "players": [
+          {
+            "username": "Mooselantis",
+            "clientID": "tb4tx2TC",
+            "clanTag": null
+          },
+          {
+            "username": "Marseille",
+            "clientID": "ikcSmmgx",
+            "clanTag": "13"
+          },
+          {
+            "username": "Jumperzzz05",
+            "clientID": "8A9DhDvQ",
+            "clanTag": null
+          },
+          {
+            "username": "Noka",
+            "clientID": "Sgv6AS5M",
+            "clanTag": null
+          }
+        ],
+        "team": "Green",
+        "duration_s": 609,
+        "date": 1785426743767,
+        "gameId": "VP7fqP4v",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      },
+      {
+        "players": [
+          {
+            "username": "Mata",
+            "clientID": "JPkBB7Hk",
+            "clanTag": "CRO"
+          },
+          {
+            "username": "XDXD",
+            "clientID": "4Wn8oVP3",
+            "clanTag": null
+          },
+          {
+            "username": "Toni",
+            "clientID": "hsrmF1pc",
+            "clanTag": "CRO"
+          },
+          {
+            "username": "AnonSkunk2",
+            "clientID": "dGATe6Bg",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 624,
+        "date": 1785164552698,
+        "gameId": "BVtUGupv",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      },
+      {
+        "players": [
+          {
+            "username": "sWMarley",
+            "clientID": "um5UpUrL",
+            "clanTag": null
+          },
+          {
+            "username": "soldier",
+            "clientID": "tUSPe533",
+            "clanTag": "ZX"
+          },
+          {
+            "username": "gig",
+            "clientID": "XKyrcig8",
+            "clanTag": null
+          },
+          {
+            "username": "Walhalla0815",
+            "clientID": "7zMqvgst",
+            "clanTag": "SOD4"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 701,
+        "date": 1785263360013,
+        "gameId": "EApy7Fmp",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      }
+    ],
+    "Bosphorus Straits": [
+      {
+        "players": [
+          {
+            "username": "SlipSlop",
+            "clientID": "vG7idfTJ",
+            "clanTag": null
+          },
+          {
+            "username": "Jakub",
+            "clientID": "5dosLMaR",
+            "clanTag": "NU"
+          },
+          {
+            "username": "AnonSquid6",
+            "clientID": "kRRo2dCv",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 570,
+        "date": 1784999698499,
+        "gameId": "WwSXjc1K",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      }
+    ],
+    "Hawaii": [
+      {
+        "players": [
+          {
+            "username": "AnonGoose9",
+            "clientID": "Gno1ErCz",
+            "clanTag": null
+          },
+          {
+            "username": "dxstyfxrt",
+            "clientID": "FLXTDSZv",
+            "clanTag": null
+          },
+          {
+            "username": "AnonOctopus4",
+            "clientID": "k8m2aQK7",
+            "clanTag": null
+          },
+          {
+            "username": "Ork Emfire",
+            "clientID": "gfJhiSDD",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 579,
+        "date": 1785399846274,
+        "gameId": "3hcsfdZJ",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "Mito",
+            "clientID": "gUJLjLMP",
+            "clanTag": null
+          },
+          {
+            "username": "BunnyKisses67",
+            "clientID": "VFxhedqT",
+            "clanTag": "DE"
+          },
+          {
+            "username": "Hope for trades and peace",
+            "clientID": "vjugMpsb",
+            "clanTag": null
+          },
+          {
+            "username": "Mirui987",
+            "clientID": "c9ReYNDM",
+            "clanTag": null
+          }
+        ],
+        "team": "Yellow",
+        "duration_s": 581,
+        "date": 1785295298913,
+        "gameId": "RoeQ3kxX",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "buggo",
+            "clientID": "Ut16rjxE",
+            "clanTag": "ITA"
+          },
+          {
+            "username": "146848",
+            "clientID": "DBdsVMFc",
+            "clanTag": null
+          },
+          {
+            "username": "korea",
+            "clientID": "JdmmXimH",
+            "clanTag": "KOREA"
+          },
+          {
+            "username": "AnonFox2",
+            "clientID": "QeinDdts",
+            "clanTag": null
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 603,
+        "date": 1785081851880,
+        "gameId": "zH7hSSuA",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      },
+      {
+        "players": [
+          {
+            "username": "rawrr",
+            "clientID": "dS4FJbYL",
+            "clanTag": null
+          },
+          {
+            "username": "johan de meij",
+            "clientID": "wgHm8Lfa",
+            "clanTag": null
+          },
+          {
+            "username": "Citizenvigilant",
+            "clientID": "f3yYGRxJ",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Blue",
+        "duration_s": 674,
+        "date": 1785065506026,
+        "gameId": "tP2ct5JR",
+        "difficulty": "Medium",
+        "numPlayers": 12
+      }
+    ],
+    "Bering Strait": [
+      {
+        "players": [
+          {
+            "username": "Friendly Pixel",
+            "clientID": "W1UQKUmY",
+            "clanTag": "NU"
+          },
+          {
+            "username": "TREXXED",
+            "clientID": "rEufmVBi",
+            "clanTag": "NU"
+          },
+          {
+            "username": "Anon555",
+            "clientID": "CDgsWGqT",
+            "clanTag": null
+          },
+          {
+            "username": "LePetitMonteur",
+            "clientID": "K1txuuAf",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 601,
+        "date": 1784989891414,
+        "gameId": "7ebW2bLG",
+        "difficulty": "Medium",
+        "numPlayers": 28
+      }
+    ],
+    "Italia": [
+      {
+        "players": [
+          {
+            "username": "ojeanpierre",
+            "clientID": "Sbv2qyAD",
+            "clanTag": "UN"
+          },
+          {
+            "username": "syo",
+            "clientID": "PNZnk2HZ",
+            "clanTag": null
+          },
+          {
+            "username": "dan",
+            "clientID": "N48xcjY6",
+            "clanTag": "UN"
+          },
+          {
+            "username": "AnonRaven3",
+            "clientID": "rQhExatc",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 617,
+        "date": 1785343042702,
+        "gameId": "PQeTfe2F",
+        "difficulty": "Medium",
+        "numPlayers": 28
+      },
+      {
+        "players": [
+          {
+            "username": "Front line send Troop",
+            "clientID": "GBYdhxsN",
+            "clanTag": null
+          },
+          {
+            "username": "ArrowniteEZ",
+            "clientID": "JHragQ8a",
+            "clanTag": null
+          },
+          {
+            "username": "Koobee",
+            "clientID": "uncsdhFi",
+            "clanTag": "SF"
+          },
+          {
+            "username": "On a plane",
+            "clientID": "QJUe2836",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 7",
+        "duration_s": 706,
+        "date": 1785368699785,
+        "gameId": "uKQExbmW",
+        "difficulty": "Medium",
+        "numPlayers": 40
+      }
+    ],
+    "Danish Straits": [
+      {
+        "players": [
+          {
+            "username": "AnonBeetle6",
+            "clientID": "mXF9y7Ri",
+            "clanTag": null
+          },
+          {
+            "username": "Admiral",
+            "clientID": "tpJy9FFA",
+            "clanTag": "ALPS"
+          },
+          {
+            "username": "152425",
+            "clientID": "sWsY7uNb",
+            "clanTag": null
+          },
+          {
+            "username": "Anon460",
+            "clientID": "WY4WDFAw",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 624,
+        "date": 1785243359979,
+        "gameId": "7AFrN2Xk",
+        "difficulty": "Medium",
+        "numPlayers": 28
+      },
+      {
+        "players": [
+          {
+            "username": "Gombanwa",
+            "clientID": "PcgKu8Qn",
+            "clanTag": null
+          },
+          {
+            "username": "rhodesia",
+            "clientID": "VXPS9jP5",
+            "clanTag": null
+          },
+          {
+            "username": "Benyamin",
+            "clientID": "hek9bjT4",
+            "clanTag": "RIP"
+          },
+          {
+            "username": "GorillaPie",
+            "clientID": "ibYu4uXk",
+            "clanTag": null
+          }
+        ],
+        "team": "Orange",
+        "duration_s": 706,
+        "date": 1785202659835,
+        "gameId": "u5FGS6Px",
+        "difficulty": "Medium",
+        "numPlayers": 28
+      }
+    ],
+    "Caucasus": [
+      {
+        "players": [
+          {
+            "username": "Hort",
+            "clientID": "gNqZutgL",
+            "clanTag": null
+          },
+          {
+            "username": "LastAndrea404",
+            "clientID": "K3bz9zsR",
+            "clanTag": "ITA"
+          },
+          {
+            "username": "MagicKing.EmVe",
+            "clientID": "KJHN2yjA",
+            "clanTag": null
+          },
+          {
+            "username": "DaddysLilTater",
+            "clientID": "yp8niYTm",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 637,
+        "date": 1785242019209,
+        "gameId": "XyybxHkP",
+        "difficulty": "Medium",
+        "numPlayers": 40
+      },
+      {
+        "players": [
+          {
+            "username": "Necro",
+            "clientID": "PKF6xtdP",
+            "clanTag": "UN"
+          },
+          {
+            "username": "poosay",
+            "clientID": "W31zmgM6",
+            "clanTag": null
+          },
+          {
+            "username": "Drachovia",
+            "clientID": "iSRmtPAL",
+            "clanTag": "MSVC"
+          }
+        ],
+        "team": "Team 5",
+        "duration_s": 645,
+        "date": 1785105397914,
+        "gameId": "awEwi5ES",
+        "difficulty": "Medium",
+        "numPlayers": 40
+      },
+      {
+        "players": [
+          {
+            "username": "Anon692",
+            "clientID": "xzzgua2n",
+            "clanTag": null
+          },
+          {
+            "username": "UPY",
+            "clientID": "QJyH7h2u",
+            "clanTag": null
+          },
+          {
+            "username": "Ur Dad",
+            "clientID": "pAXS7qK1",
+            "clanTag": null
+          },
+          {
+            "username": "raphhhh_mreee",
+            "clientID": "gUcuHPER",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 9",
+        "duration_s": 686,
+        "date": 1785054771179,
+        "gameId": "5n2i8iCs",
+        "difficulty": "Medium",
+        "numPlayers": 40
+      }
+    ],
+    "World": [
+      {
+        "players": [
+          {
+            "username": "Shun",
+            "clientID": "pcJitxSy",
+            "clanTag": "SOG"
+          },
+          {
+            "username": "Hokkaido",
+            "clientID": "z3D9aAZs",
+            "clanTag": null
+          },
+          {
+            "username": "Sim Lam",
+            "clientID": "AgCMYTrE",
+            "clanTag": "SOG"
+          },
+          {
+            "username": "87262",
+            "clientID": "sJT5cRpZ",
+            "clanTag": null
+          }
+        ],
+        "team": "Red",
+        "duration_s": 665,
+        "date": 1785036445969,
+        "gameId": "wxnxJ1Xm",
+        "difficulty": "Medium",
+        "numPlayers": 28
+      },
+      {
+        "players": [
+          {
+            "username": "Map Gamer",
+            "clientID": "iZJKAWTW",
+            "clanTag": "NU"
+          },
+          {
+            "username": "IzzaBinSeen",
+            "clientID": "TdDMNEoj",
+            "clanTag": "NU"
+          },
+          {
+            "username": "Latina Lover",
+            "clientID": "sdQ6r96x",
+            "clanTag": "NU"
+          },
+          {
+            "username": "GlassGhost",
+            "clientID": "uvCaw2kk",
+            "clanTag": "NU"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 698,
+        "date": 1785376535885,
+        "gameId": "LaVB8exy",
+        "difficulty": "Medium",
+        "numPlayers": 32
+      }
+    ],
+    "Mena": [
+      {
+        "players": [
+          {
+            "username": "Menace",
+            "clientID": "m3ZWECKy",
+            "clanTag": "MARS"
+          },
+          {
+            "username": "Perbon",
+            "clientID": "4MG5zXhQ",
+            "clanTag": "MARS"
+          },
+          {
+            "username": "OoO",
+            "clientID": "tyWBsjS9",
+            "clanTag": "MARS"
+          },
+          {
+            "username": "GVM",
+            "clientID": "Awvt64AF",
+            "clanTag": "MARS"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 674,
+        "date": 1785380452777,
+        "gameId": "QQ6ybrBP",
+        "difficulty": "Medium",
+        "numPlayers": 63
+      }
+    ],
+    "Manicouagan": [
+      {
+        "players": [
+          {
+            "username": "Silly trading",
+            "clientID": "G46m59kJ",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "NZcxxEkN",
+            "clanTag": "AST"
+          },
+          {
+            "username": "honest guy",
+            "clientID": "jG17J2QL",
+            "clanTag": "AST"
+          },
+          {
+            "username": "ZAD",
+            "clientID": "HEjYpqd7",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 677,
+        "date": 1784869896194,
+        "gameId": "YbkdV7Kx",
+        "difficulty": "Medium",
+        "numPlayers": 48
+      }
+    ],
+    "Korea": [
+      {
+        "players": [
+          {
+            "username": "Theekan",
+            "clientID": "k35jBBSN",
+            "clanTag": "UL"
+          },
+          {
+            "username": "Uni",
+            "clientID": "dznHZEiS",
+            "clanTag": "UL"
+          },
+          {
+            "username": "ramy",
+            "clientID": "a8T8ybVV",
+            "clanTag": "UL"
+          },
+          {
+            "username": "Nuka",
+            "clientID": "CaTcpYQK",
+            "clanTag": "UL"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 683,
+        "date": 1785220593765,
+        "gameId": "S77jLkzE",
+        "difficulty": "Medium",
+        "numPlayers": 44
+      }
+    ],
+    "Asia": [
+      {
+        "players": [
+          {
+            "username": "GuriGris",
+            "clientID": "jVgpHGyu",
+            "clanTag": "UNC"
+          },
+          {
+            "username": "mudlicker",
+            "clientID": "9t4DyedJ",
+            "clanTag": "UNC"
+          },
+          {
+            "username": "Train Me",
+            "clientID": "RfZjhdJf",
+            "clanTag": "UNC"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 695,
+        "date": 1785264618264,
+        "gameId": "E1QY8HJA",
+        "difficulty": "Medium",
+        "numPlayers": 52
+      }
+    ],
+    "Great Lakes": [
+      {
+        "players": [
+          {
+            "username": "France",
+            "clientID": "ZU4xE2zX",
+            "clanTag": "AST"
+          },
+          {
+            "username": "GEDA",
+            "clientID": "rzzwr3up",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Regar",
+            "clientID": "wfgBopHi",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Lime Trader",
+            "clientID": "hp8APKsg",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 714,
+        "date": 1784956033384,
+        "gameId": "TNqUDXqP",
+        "difficulty": "Medium",
+        "numPlayers": 37
       }
     ]
   }
