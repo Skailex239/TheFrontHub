@@ -570,10 +570,14 @@ function setProgressBar(pct){const b=document.getElementById('loading-bar');if(b
 function debounce(fn,ms){let t;return function(...a){clearTimeout(t);t=setTimeout(()=>fn.apply(this,a),ms)}}
 
 function getDataFile() {
-  return currentMode === 'compact' ? 'runs_compact_public.json' : 'runs_public.json';
+  if (currentMode === 'compact') return 'runs_compact_public.json';
+  if (currentMode === 'duos' || currentMode === 'trios' || currentMode === 'quads') return 'teams_public.json';
+  return 'runs_public.json';
 }
 function getDataFileGz() {
-  return currentMode === 'compact' ? 'runs_compact_public.json.gz' : 'runs_public.json.gz';
+  if (currentMode === 'compact') return 'runs_compact_public.json.gz';
+  if (currentMode === 'duos' || currentMode === 'trios' || currentMode === 'quads') return 'teams_public.json.gz';
+  return 'runs_public.json.gz';
 }
 // Fallback to full files if public payload doesn't exist
 function getDataFileFallback() {
@@ -603,6 +607,12 @@ function updateSubtitle() {
   if (!el) return;
   if (currentMode === 'compact') {
     el.textContent = 'Leaderboard FFA · 3+ joueurs · 100 bots · Compact';
+  } else if (currentMode === 'duos') {
+    el.textContent = 'Leaderboard Team · Duos · 10+ joueurs · 400 bots · Standard';
+  } else if (currentMode === 'trios') {
+    el.textContent = 'Leaderboard Team · Trios · 10+ joueurs · 400 bots · Standard';
+  } else if (currentMode === 'quads') {
+    el.textContent = 'Leaderboard Team · Quads · 10+ joueurs · 400 bots · Standard';
   } else {
     el.textContent = 'Leaderboard FFA · 10+ joueurs · 400 bots · Standard';
   }
@@ -615,6 +625,9 @@ async function switchMode(mode) {
   // Update buttons
   document.getElementById('mode-btn-normal').classList.toggle('active', mode === 'normal');
   document.getElementById('mode-btn-compact').classList.toggle('active', mode === 'compact');
+  document.getElementById('mode-btn-duos').classList.toggle('active', mode === 'duos');
+  document.getElementById('mode-btn-trios').classList.toggle('active', mode === 'trios');
+  document.getElementById('mode-btn-quads').classList.toggle('active', mode === 'quads');
 
   // Loading state
   document.getElementById('mode-selector').classList.add('mode-loading');
@@ -680,6 +693,47 @@ localDB.init(); // Démarre en arrière-plan
 function applyPayloadData(data, isBackground = false) {
   window.apiMapTotals = {};
   let apiMapTotals = window.apiMapTotals;
+
+  // Team mode: data has { duos: {map: [...]}, trios: {...}, quads: {...} }
+  if (currentMode === 'duos' || currentMode === 'trios' || currentMode === 'quads') {
+    const teamKey = currentMode; // 'duos', 'trios', 'quads'
+    const teamData = data[teamKey] || {};
+    const runs = [];
+    const mapTotals = {};
+    for (const map in teamData) {
+      const mapRuns = teamData[map];
+      mapTotals[map] = mapRuns.length;
+      mapRuns.forEach(r => {
+        runs.push({
+          id: r.g || r.gameId,
+          player: r.t || (r.players || []).map(p => p.username).join(' + '),
+          playerId: (r.players && r.players[0] && r.players[0].clientID) || '',
+          map: map,
+          duration_s: r.d || r.duration_s,
+          difficulty: r.difficulty || 'Medium',
+          bots: 400,
+          players: r.n || r.numPlayers || 0,
+          timestamp: r.date || new Date().toISOString(),
+          url: `https://openfront.io/game/${r.g || r.gameId}`,
+        });
+      });
+    }
+    allRuns = runs;
+    _rawRuns = allRuns;
+    totalRunsCount = runs.length;
+    lastSyncTime = data.u || data.lastUpdate;
+    window.apiMapTotals = mapTotals;
+    processData();
+    renderAll();
+    updateStats();
+    if (!activeMap && allMaps.length) selectMap(allMaps[0].map);
+    if (isBackground) {
+      const badge = document.getElementById('refresh-badge');
+      if(badge) badge.style.display='inline-block';
+    }
+    return true;
+  }
+
   const compact = decodeCompactPayload(data);
   if (compact) {
     allRuns = compact.runs;
@@ -701,13 +755,13 @@ function applyPayloadData(data, isBackground = false) {
   } else {
     return false;
   }
-  
+
   processData();
   renderAll();
   updateStats();
-  
+
   if (!activeMap && allMaps.length) selectMap(allMaps[0].map);
-  
+
   if (isBackground) {
     const badge = document.getElementById('refresh-badge');
     if(badge) badge.style.display='inline-block';
