@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-07-31T07:26:28.967Z",
+  "lastUpdate": "2026-07-31T07:29:13.305Z",
   "duos": {
     "Juan De Fuca Strait": [
       {
@@ -2137,6 +2137,36 @@
       {
         "players": [
           {
+            "username": "killerhurts",
+            "clientID": "gA5syXrK",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Silly trading",
+            "clientID": "4wzzTnJj",
+            "clanTag": "AST"
+          },
+          {
+            "username": "Legan320",
+            "clientID": "BXHEEytB",
+            "clanTag": "AST"
+          },
+          {
+            "username": "DioxFrost",
+            "clientID": "mQvuU3Cg",
+            "clanTag": "AST"
+          }
+        ],
+        "team": "Red",
+        "duration_s": 428,
+        "date": 1785482520666,
+        "gameId": "a2hGBfbK",
+        "difficulty": "Medium",
+        "numPlayers": 20
+      },
+      {
+        "players": [
+          {
             "username": "Anon818",
             "clientID": "kaxqZ4ia",
             "clanTag": null
@@ -2515,36 +2545,6 @@
         "duration_s": 656,
         "date": 1785139996038,
         "gameId": "fgqLAZyT",
-        "difficulty": "Medium",
-        "numPlayers": 20
-      },
-      {
-        "players": [
-          {
-            "username": "happylittlepete",
-            "clientID": "YhtvBNni",
-            "clanTag": null
-          },
-          {
-            "username": "iSanti",
-            "clientID": "Cbfjystw",
-            "clanTag": "UN"
-          },
-          {
-            "username": "Anri",
-            "clientID": "hiGzRpu7",
-            "clanTag": null
-          },
-          {
-            "username": "Sami",
-            "clientID": "UMT93QJ9",
-            "clanTag": null
-          }
-        ],
-        "team": "Blue",
-        "duration_s": 731,
-        "date": 1785143348257,
-        "gameId": "FEiwP28h",
         "difficulty": "Medium",
         "numPlayers": 20
       }
