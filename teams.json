@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-07-31T05:12:07.022Z",
+  "lastUpdate": "2026-07-31T05:16:41.122Z",
   "duos": {
     "Juan De Fuca Strait": [
       {
@@ -893,6 +893,28 @@
         "gameId": "5bSYumW2",
         "difficulty": "Medium",
         "numPlayers": 38
+      }
+    ],
+    "Arctic": [
+      {
+        "players": [
+          {
+            "username": "HRE",
+            "clientID": "rdhQQjRm",
+            "clanTag": "UN"
+          },
+          {
+            "username": "Princess Steam Train",
+            "clientID": "p5rpfEyr",
+            "clanTag": "UN"
+          }
+        ],
+        "team": "Team 1",
+        "duration_s": 848,
+        "date": 1785474060833,
+        "gameId": "a6toNAXa",
+        "difficulty": "Medium",
+        "numPlayers": 32
       }
     ],
     "Hong Kong": [
