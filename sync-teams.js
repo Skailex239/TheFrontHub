@@ -1,53 +1,107 @@
-// sync-teams.js — Fetches team speedrun data from OpenFront API
-// 3 separate categories: Duos, Trios, Quads
-// Filters: Public, 10+ players, 400 bots, Normal map, no modifiers
+// sync-teams.js — Team speedrun sync (Duos, Trios, Quads)
+// Same accumulation logic as sync.js: loads existing runs, adds new ones, saves back.
+// Scans last 2h each run, accumulates over time.
+//
 // Usage: node sync-teams.js
+// Files: teams_runs.json (full accumulated), teams_seen.json (de-dupe),
+//        teams_checkpoint.json (last_sync_time), teams_public.json.gz (payload)
 
-const https = require('https');
-const fs = require('fs');
-const zlib = require('zlib');
+import fs from "fs";
+import zlib from "zlib";
+import {
+  API_BASE,
+  openFrontFetch,
+  hasExemption,
+} from "./openfront-api.js";
 
-const API_HOST = 'api.openfront.io';
-const TEAM_MODES = ['Duos', 'Trios', 'Quads'];
-const DAYS_BACK = 7;
-const API_LIMIT = 1000;
-const DETAIL_FETCH_CAP = 150;
-const TOP_PER_MAP = 25;
-const RATE_MS = 400;
+// ── Constants ──
+const TEAM_MODES = ["Duos", "Trios", "Quads"];
+const RECENT_MAX_MS = 2 * 60 * 60 * 1000;  // 2 hours
+const RECENT_OVERLAP_MS = 10 * 60 * 1000;   // 10 min overlap
+const WINDOW_MS = 30 * 1000;                 // 30s windows
+const WINDOW_DELAY = 0;                       // no delay (with exemption)
+const FETCH_TIMEOUT = 8000;
+const DETAIL_CONCURRENCY = 12;
+const TIME_OFFSET_SECS = 32;
+const MIN_HUMANS = 10;
+const TOP_PER_MAP = 25; // for public payload only
 
-function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+// ── File paths ──
+const RUNS_FILE = "teams_runs.json";        // { duos: [...], trios: [...], quads: [...] }
+const SEEN_FILE = "teams_seen.json";        // ["gameId1", "gameId2", ...]
+const CHECKPOINT_FILE = "teams_checkpoint.json";
 
-function apiGet(path) {
-  return new Promise((resolve, reject) => {
-    const req = https.get({ hostname: API_HOST, path, headers: { 'Accept': 'application/json', 'User-Agent': 'skailex' }, timeout: 20000 }, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        try { resolve(JSON.parse(data)); }
-        catch (e) { reject(new Error('JSON parse: ' + data.slice(0, 200))); }
-      });
-    });
-    req.on('error', reject);
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
-  });
+// ── Helpers ──
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function loadRuns() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(RUNS_FILE, "utf8"));
+    return raw || { duos: [], trios: [], quads: [] };
+  } catch { return { duos: [], trios: [], quads: [] }; }
 }
 
-async function fetchAllGames(mode, startDate, endDate) {
-  let all = [];
-  let offset = 0;
-  while (true) {
-    const path = '/public/games?start=' + encodeURIComponent(startDate) + '&end=' + encodeURIComponent(endDate) + '&type=Public&mode=Team&playerTeams=' + encodeURIComponent(mode) + '&limit=' + API_LIMIT + '&offset=' + offset;
-    const batch = await apiGet(path);
-    if (!batch || !Array.isArray(batch) || !batch.length) break;
-    all = all.concat(batch);
-    if (batch.length < API_LIMIT) break;
-    offset += API_LIMIT;
-    await delay(RATE_MS);
+function saveRuns(runs) {
+  fs.writeFileSync(RUNS_FILE, JSON.stringify(runs, null, 2));
+  fs.writeFileSync(RUNS_FILE + ".gz", zlib.gzipSync(JSON.stringify(runs)));
+}
+
+function loadSeen() {
+  try { return new Set(JSON.parse(fs.readFileSync(SEEN_FILE, "utf8"))); }
+  catch { return new Set(); }
+}
+
+function saveSeen(seen) {
+  fs.writeFileSync(SEEN_FILE, JSON.stringify([...seen]));
+}
+
+function loadCheckpoint() {
+  try { return JSON.parse(fs.readFileSync(CHECKPOINT_FILE, "utf8")); }
+  catch { return { last_sync_time: "0" }; }
+}
+
+function saveCheckpoint(cp) {
+  fs.writeFileSync(CHECKPOINT_FILE, JSON.stringify(cp, null, 2));
+}
+
+async function fetchWithRetry(url, retries = 3) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT);
+    try {
+      const res = await openFrontFetch(url, { signal: controller.signal });
+      clearTimeout(timer);
+      if (res.status === 429) {
+        const wait = 2000 * (attempt + 1);
+        console.log(`[teams] 429 — attente ${wait}ms (tentative ${attempt + 1}/${retries})`);
+        await sleep(wait);
+        continue;
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) {
+      clearTimeout(timer);
+      if (attempt < retries) {
+        await sleep(500 * (attempt + 1));
+        continue;
+      }
+      console.warn(`[teams] fetch failed: ${url}: ${e.message}`);
+      return null;
+    }
   }
-  return all;
+  return null;
 }
 
-// Check if a game config has any modifiers (reject if yes)
+function buildWindows30s(rangeStart, rangeEnd) {
+  const windows = [];
+  for (let end = rangeEnd.getTime(); end > rangeStart.getTime(); end -= WINDOW_MS) {
+    const start = Math.max(end - WINDOW_MS, rangeStart.getTime());
+    windows.push({ start: new Date(start), end: new Date(end) });
+  }
+  return windows;
+}
+
+// ── Game filtering ──
 function hasModifiers(config) {
   const mods = config.publicGameModifiers || {};
   if (mods.isCompact || mods.isRandomSpawn || mods.isCrowded ||
@@ -61,142 +115,195 @@ function hasModifiers(config) {
   return false;
 }
 
-async function main() {
-  console.log('🔄 Team Speedrun Sync starting...');
-  console.log('Date range: last ' + DAYS_BACK + ' days');
-  console.log('Categories: Duos, Trios, Quads (separate)');
-  const result = { lastUpdate: new Date().toISOString(), duos: {}, trios: {}, quads: {} };
+function extractTeamRun(raw, mode) {
+  const info = raw?.info;
+  if (!info) return null;
+  const config = info.config || {};
+
+  if (config.gameType !== "Public") return null;
+  if (config.gameMode !== "Team") return null;
+  if (config.gameMapSize !== "Normal") return null;
+  if (config.bots !== 400) return null;
+  if (config.playerTeams !== mode) return null;
+  if (hasModifiers(config)) return null;
+
+  const players = info.players || [];
+  const humanPlayers = players.filter(p => !p.isBot);
+  if (humanPlayers.length < MIN_HUMANS) return null;
+
+  const winner = info.winner;
+  if (!Array.isArray(winner) || winner.length < 3 || winner[0] !== "team") return null;
+
+  const winnerIds = winner.slice(2);
+  const winnerPlayers = players.filter(p => winnerIds.includes(p.clientID) && p.username && !p.isBot);
+  if (winnerPlayers.length === 0) return null;
+
+  let durationSecs = info.duration;
+  if (!durationSecs || durationSecs < 60) return null;
+  durationSecs = Math.max(0, durationSecs - TIME_OFFSET_SECS);
+
+  const gameId = info.gameID || info.gameId || info.id;
+
+  return {
+    id: gameId,
+    team: winner[1],
+    players: winnerPlayers.map(p => ({ username: p.username, clientID: p.clientID, clanTag: p.clanTag || null })),
+    map: config.gameMap || "Unknown",
+    duration_s: durationSecs,
+    difficulty: config.difficulty || "Medium",
+    bots: 400,
+    players: humanPlayers.length,
+    timestamp: info.start ? new Date(info.start > 1e10 ? info.start : info.start * 1000).toISOString() : new Date().toISOString(),
+    url: `https://openfront.io/game/${gameId}`,
+  };
+}
+
+// ── Sync recent (last 2h, accumulate) ──
+async function syncRecent() {
+  console.log(`[teams] 🔄 Sync récente — ${new Date().toISOString()}`);
+  const seen = loadSeen();
+  const runs = loadRuns();
+  const cp = loadCheckpoint();
+
   const now = new Date();
+  const lastSync = cp.last_sync_time ? parseInt(cp.last_sync_time, 10) : 0;
+  const agoMs = Math.max(now.getTime() - RECENT_MAX_MS, lastSync - RECENT_OVERLAP_MS);
+  const ago = new Date(agoMs);
 
-  for (const mode of TEAM_MODES) {
-    const key = mode.toLowerCase();
-    console.log('\n📋 Syncing ' + mode + '...');
+  const windows = buildWindows30s(ago, now);
+  console.log(`[teams] ${windows.length} fenêtres de 30s (~${Math.round((now - ago) / 60000)} min, max 2h, filtre Public Team ≥10p)`);
 
-    let allQualified = [];
+  let totalNew = 0;
+  const newRunsByMode = { duos: [], trios: [], quads: [] };
+  const gameIdsToFetch = []; // { gameId, mode }
 
-    for (let d = 0; d < DAYS_BACK; d++) {
-      const dayStart = new Date(now);
-      dayStart.setUTCDate(dayStart.getUTCDate() - d);
-      dayStart.setUTCHours(0, 0, 0, 0);
-      const dayEnd = new Date(dayStart);
-      dayEnd.setUTCHours(23, 59, 59, 999);
-
-      const startStr = dayStart.toISOString().slice(0, 19) + '.000Z';
-      const endStr = dayEnd.toISOString().slice(0, 19) + '.999Z';
-
-      try {
-        const games = await fetchAllGames(mode, startStr, endStr);
-        console.log('  [' + key + '] Day -' + d + ': ' + games.length + ' games');
-
-        for (const g of games) {
-          if (g.type !== 'Public') continue;
-          if ((g.numPlayers || 0) < 10) continue;
-
-          const dur = (new Date(g.end) - new Date(g.start)) / 1000;
-          if (dur < 60 || dur > 7200) continue;
-
-          allQualified.push({ gameId: g.game, duration_s: dur, date: g.start, numPlayers: g.numPlayers });
-        }
-      } catch (e) {
-        console.error('  [' + key + '] Error -' + d + ': ' + e.message);
+  // Phase 1: fetch game lists in each window
+  for (const { start, end } of windows) {
+    for (const mode of TEAM_MODES) {
+      const url = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&playerTeams=${encodeURIComponent(mode)}&limit=1000`;
+      const data = await fetchWithRetry(url);
+      if (!data) continue;
+      const games = Array.isArray(data) ? data : (data.games || []);
+      for (const g of games) {
+        if (g.type !== "Public") continue;
+        if ((g.numPlayers || 0) < MIN_HUMANS) continue;
+        const gameId = g.game || g.gameId;
+        if (!gameId || seen.has(gameId)) continue;
+        gameIdsToFetch.push({ gameId, mode });
       }
-      await delay(RATE_MS * 2);
     }
-
-    allQualified.sort((a, b) => a.duration_s - b.duration_s);
-    const topGames = allQualified.slice(0, DETAIL_FETCH_CAP);
-    console.log('  [' + key + '] ' + allQualified.length + ' qualified, fetching top ' + topGames.length + '...');
-
-    let fetched = 0;
-    for (const g of topGames) {
-      try {
-        const detail = await apiGet('/public/game/' + g.gameId + '?turns=false');
-        const info = detail.info;
-        if (!info) continue;
-        const c = info.config;
-        if (!c) continue;
-
-        // Strict filters
-        if (c.gameType !== 'Public') continue;
-        if (c.gameMode !== 'Team') continue;
-        if (c.playerTeams !== mode) continue;
-        if (c.bots !== 400) continue;
-        if (c.gameMapSize && c.gameMapSize !== 'Normal') continue;
-        if (hasModifiers(c)) continue;
-
-        const winner = info.winner;
-        if (!winner || !Array.isArray(winner) || winner[0] !== 'team' || winner.length < 3) continue;
-
-        const winnerIds = winner.slice(2);
-        const winnerPlayers = info.players.filter(p => winnerIds.includes(p.clientID) && p.username && !p.isBot);
-        if (!winnerPlayers.length) continue;
-
-        const map = c.gameMap || 'Unknown';
-        if (!result[key][map]) result[key][map] = [];
-
-        result[key][map].push({
-          players: winnerPlayers.map(p => ({
-            username: p.username,
-            clientID: p.clientID,
-            clanTag: p.clanTag || null
-          })),
-          team: winner[1], // team name
-          duration_s: info.duration,
-          date: info.start,
-          gameId: g.gameId,
-          difficulty: c.difficulty || 'Medium',
-          numPlayers: info.players.filter(p => !p.isBot).length
-        });
-
-        fetched++;
-      } catch (e) { /* skip */ }
-      await delay(RATE_MS);
-    }
-
-    // Sort by duration and keep top 25 per map
-    let totalRuns = 0, totalMaps = 0;
-    for (const map in result[key]) {
-      result[key][map].sort((a, b) => a.duration_s - b.duration_s);
-      result[key][map] = result[key][map].slice(0, TOP_PER_MAP);
-      totalRuns += result[key][map].length;
-      totalMaps++;
-    }
-    console.log('  ✅ ' + mode + ': ' + totalMaps + ' maps, ' + totalRuns + ' runs');
+    if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
   }
 
-  // Write teams.json (full)
-  fs.writeFileSync('teams.json', JSON.stringify(result, null, 2));
-  
-  // Write teams.json.gz (compressed)
-  const jsonStr = JSON.stringify(result);
-  fs.writeFileSync('teams.json.gz', zlib.gzipSync(jsonStr));
-  
-  // Generate compact public payload (top 25/map, no full player lists)
-  const publicPayload = {
-    u: result.lastUpdate,
+  console.log(`[teams] ${gameIdsToFetch.length} games candidates à fetcher`);
+
+  // Phase 2: fetch game details in parallel chunks
+  const chunks = [];
+  for (let i = 0; i < gameIdsToFetch.length; i += DETAIL_CONCURRENCY) {
+    chunks.push(gameIdsToFetch.slice(i, i + DETAIL_CONCURRENCY));
+  }
+
+  for (const chunk of chunks) {
+    await Promise.all(chunk.map(async ({ gameId, mode }) => {
+      seen.add(gameId);
+      try {
+        const raw = await fetchWithRetry(`${API_BASE}/public/game/${encodeURIComponent(gameId)}?turns=false`);
+        const run = extractTeamRun(raw, mode);
+        if (run) {
+          const key = mode.toLowerCase();
+          newRunsByMode[key].push(run);
+          totalNew++;
+        }
+      } catch (e) {
+        console.warn(`[teams] game ${gameId}: ${e.message}`);
+      }
+    }));
+  }
+
+  // Phase 3: merge new runs into existing
+  for (const mode of TEAM_MODES) {
+    const key = mode.toLowerCase();
+    if (newRunsByMode[key].length > 0) {
+      // Deduplicate by run ID (in case of overlap)
+      const existingIds = new Set(runs[key].map(r => r.id));
+      const newOnes = newRunsByMode[key].filter(r => !existingIds.has(r.id));
+      runs[key] = [...runs[key], ...newOnes];
+      console.log(`[teams] ${mode}: +${newOnes.length} nouveaux runs (total: ${runs[key].length})`);
+    }
+  }
+
+  // Save if new runs found
+  if (totalNew > 0) {
+    saveRuns(runs);
+    console.log(`[teams] 💾 ${totalNew} nouveaux runs sauvegardés`);
+  } else {
+    console.log(`[teams] ✅ Aucun nouveau run`);
+  }
+  saveSeen(seen);
+
+  cp.last_sync_time = String(Date.now());
+  saveCheckpoint(cp);
+
+  console.log(`[teams] ✅ Sync récente terminée — ${totalNew} nouveaux runs`);
+
+  // Generate public payload
+  generatePublicPayload(runs);
+
+  return totalNew;
+}
+
+// ── Generate public payload (top 25/map, compact format) ──
+function generatePublicPayload(runs) {
+  const payload = {
+    u: new Date().toISOString(),
     duos: {},
     trios: {},
-    quads: {}
+    quads: {},
   };
-  for (const key of ['duos', 'trios', 'quads']) {
-    for (const map in result[key]) {
-      publicPayload[key][map] = result[key][map].map(r => ({
-        t: r.players.map(p => p.username).join(' + '),
+
+  for (const key of ["duos", "trios", "quads"]) {
+    // Group by map
+    const byMap = {};
+    for (const r of runs[key]) {
+      if (!byMap[r.map]) byMap[r.map] = [];
+      byMap[r.map].push(r);
+    }
+    // Sort by duration, keep top 25
+    for (const map in byMap) {
+      byMap[map].sort((a, b) => a.duration_s - b.duration_s);
+      payload[key][map] = byMap[map].slice(0, TOP_PER_MAP).map(r => ({
+        t: r.players.map(p => p.username).join(" + "),
         d: r.duration_s,
-        g: r.gameId,
-        n: r.numPlayers
+        g: r.id,
+        n: r.players,
+        ts: r.timestamp,
       }));
     }
   }
-  const publicJson = JSON.stringify(publicPayload);
-  fs.writeFileSync('teams_public.json', publicJson);
-  fs.writeFileSync('teams_public.json.gz', zlib.gzipSync(publicJson));
-  
-  const dm = Object.keys(result.duos).length;
-  const tr = Object.keys(result.trios).length;
-  const qd = Object.keys(result.quads).length;
-  console.log('\n✅ teams.json written! (' + dm + ' duo, ' + tr + ' trio, ' + qd + ' quad maps)');
-  console.log('✅ teams_public.json.gz written (' + (zlib.gzipSync(publicJson).length / 1024).toFixed(1) + ' KB)');
+
+  const json = JSON.stringify(payload);
+  fs.writeFileSync("teams_public.json", json);
+  fs.writeFileSync("teams_public.json.gz", zlib.gzipSync(json));
+
+  const totals = {
+    duos: Object.keys(payload.duos).length,
+    trios: Object.keys(payload.trios).length,
+    quads: Object.keys(payload.quads).length,
+  };
+  const totalRuns = runs.duos.length + runs.trios.length + runs.quads.length;
+  console.log(`[teams] 📦 Public payload: ${(zlib.gzipSync(json).length / 1024).toFixed(1)} KB, ${totalRuns} runs total, ${totals.duos} duo / ${totals.trios} trio / ${totals.quads} quad maps`);
 }
 
-main().catch(e => { console.error('Fatal:', e); process.exit(1); });
+// ── Main ──
+async function main() {
+  console.log("[teams] 🚀 Démarrage — Team Speedrun Sync (accumulate mode)");
+  if (hasExemption()) console.log("[teams] 🔑 Exemption Skailex active");
+  else console.log("[teams] ⚠️ Pas d'exemption — rate limits peuvent s'appliquer");
+
+  await syncRecent();
+
+  const runs = loadRuns();
+  console.log(`[teams] 🏁 Terminé: ${runs.duos.length} duos, ${runs.trios.length} trios, ${runs.quads.length} quads`);
+}
+
+main().catch(e => { console.error("[teams] Fatal:", e); process.exit(1); });

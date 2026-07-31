@@ -101,7 +101,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm init -y --silent && npm install node-fetch@2 --silent
+      - run: npm init -y --silent && npm install node-fetch@2 --silent && node -e "const p=require('./package.json');p.type='module';require('fs').writeFileSync('package.json',JSON.stringify(p,null,2))"
       - run: node sync-teams.js
         env:
           OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
@@ -113,7 +113,7 @@ jobs:
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in teams.json teams.json.gz teams_public.json teams_public.json.gz; do
+          for f in teams_runs.json teams_runs.json.gz teams_seen.json teams_checkpoint.json teams_public.json teams_public.json.gz; do
             [ -f "$f" ] && git add "$f" -f
           done
           git diff --cached --quiet && { echo "no changes teams"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
