@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-07-31T02:32:57.005Z",
+  "lastUpdate": "2026-07-31T03:54:13.128Z",
   "duos": {
     "Juan De Fuca Strait": [
       {
@@ -516,6 +516,28 @@
         "gameId": "VuRiyaSL",
         "difficulty": "Medium",
         "numPlayers": 30
+      }
+    ],
+    "Australia": [
+      {
+        "players": [
+          {
+            "username": "Legan320",
+            "clientID": "ToMCLGmi",
+            "clanTag": "OO"
+          },
+          {
+            "username": "honest guy",
+            "clientID": "NTimgHNC",
+            "clanTag": "OO"
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 784,
+        "date": 1785466345704,
+        "gameId": "H6igCXV8",
+        "difficulty": "Medium",
+        "numPlayers": 48
       }
     ],
     "Strait Of Malacca": [
@@ -1047,28 +1069,6 @@
         "gameId": "87UYkP29",
         "difficulty": "Medium",
         "numPlayers": 54
-      }
-    ],
-    "Two Lakes": [
-      {
-        "players": [
-          {
-            "username": "crabs",
-            "clientID": "B4ixLXtV",
-            "clanTag": "AAPM"
-          },
-          {
-            "username": "poifintsu",
-            "clientID": "Ms5gk5MF",
-            "clanTag": "AAPM"
-          }
-        ],
-        "team": "Team 1",
-        "duration_s": 932,
-        "date": 1785285132932,
-        "gameId": "ZTuyE7yZ",
-        "difficulty": "Medium",
-        "numPlayers": 29
       }
     ]
   },
@@ -3086,6 +3086,38 @@
         "gameId": "5n2i8iCs",
         "difficulty": "Medium",
         "numPlayers": 40
+      }
+    ],
+    "Mississippi River": [
+      {
+        "players": [
+          {
+            "username": "Technomozart",
+            "clientID": "YKdP1DBk",
+            "clanTag": "GOY"
+          },
+          {
+            "username": "Messina",
+            "clientID": "tKUhwchQ",
+            "clanTag": null
+          },
+          {
+            "username": "bbman1214",
+            "clientID": "secmZS9X",
+            "clanTag": "GOY"
+          },
+          {
+            "username": "PancyPancyPancyPancyPancy",
+            "clientID": "yg9B3vQn",
+            "clanTag": "GOY"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 664,
+        "date": 1785466467307,
+        "gameId": "c9c4Smr7",
+        "difficulty": "Medium",
+        "numPlayers": 33
       }
     ],
     "World": [
