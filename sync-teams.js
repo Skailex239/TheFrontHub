@@ -275,7 +275,7 @@ function generatePublicPayload(runs) {
         t: r.players.map(p => p.username).join(" + "),
         d: r.duration_s,
         g: r.id,
-        n: r.players,
+        n: r.players.length,
         ts: r.timestamp,
       }));
     }
