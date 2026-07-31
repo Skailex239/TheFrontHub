@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-07-31T07:21:10.169Z",
+  "lastUpdate": "2026-07-31T07:24:34.182Z",
   "duos": {
     "Juan De Fuca Strait": [
       {
@@ -140,6 +140,48 @@
         "gameId": "Lb3pZPX3",
         "difficulty": "Medium",
         "numPlayers": 44
+      }
+    ],
+    "Caucasus": [
+      {
+        "players": [
+          {
+            "username": "Edouard",
+            "clientID": "ZmiobJWo",
+            "clanTag": null
+          },
+          {
+            "username": "AnonBison7",
+            "clientID": "Xr4jevbx",
+            "clanTag": null
+          }
+        ],
+        "team": "Team 8",
+        "duration_s": 648,
+        "date": 1785481916580,
+        "gameId": "iz75eQN6",
+        "difficulty": "Medium",
+        "numPlayers": 40
+      },
+      {
+        "players": [
+          {
+            "username": "barba rossa",
+            "clientID": "zzuHrrix",
+            "clanTag": "BT"
+          },
+          {
+            "username": "BeyazTahta",
+            "clientID": "qxDvr5Nf",
+            "clanTag": "BT"
+          }
+        ],
+        "team": "Team 3",
+        "duration_s": 770,
+        "date": 1785408745339,
+        "gameId": "VuRiyaSL",
+        "difficulty": "Medium",
+        "numPlayers": 30
       }
     ],
     "Faroe Islands": [
@@ -474,28 +516,6 @@
         "gameId": "JcoTmyRD",
         "difficulty": "Medium",
         "numPlayers": 65
-      }
-    ],
-    "Caucasus": [
-      {
-        "players": [
-          {
-            "username": "barba rossa",
-            "clientID": "zzuHrrix",
-            "clanTag": "BT"
-          },
-          {
-            "username": "BeyazTahta",
-            "clientID": "qxDvr5Nf",
-            "clanTag": "BT"
-          }
-        ],
-        "team": "Team 3",
-        "duration_s": 770,
-        "date": 1785408745339,
-        "gameId": "VuRiyaSL",
-        "difficulty": "Medium",
-        "numPlayers": 30
       }
     ],
     "Australia": [
