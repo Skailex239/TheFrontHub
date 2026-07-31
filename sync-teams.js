@@ -271,13 +271,25 @@ function generatePublicPayload(runs) {
     // Sort by duration, keep top 25
     for (const map in byMap) {
       byMap[map].sort((a, b) => a.duration_s - b.duration_s);
-      payload[key][map] = byMap[map].slice(0, TOP_PER_MAP).map(r => ({
-        t: r.players.map(p => p.username).join(" + "),
-        d: r.duration_s,
-        g: r.id,
-        n: r.players.length,
-        ts: r.timestamp,
-      }));
+      payload[key][map] = byMap[map].slice(0, TOP_PER_MAP).map(r => {
+        // Robust: handle both array of objects and array of strings
+        let teamName = "Unknown";
+        let playerCount = 0;
+        if (Array.isArray(r.players)) {
+          teamName = r.players.map(p => typeof p === 'string' ? p : (p.username || p.name || '')).filter(Boolean).join(" + ");
+          playerCount = r.players.length;
+        } else if (typeof r.players === 'string') {
+          teamName = r.players;
+          playerCount = 0;
+        }
+        return {
+          t: teamName,
+          d: r.duration_s,
+          g: r.id,
+          n: playerCount,
+          ts: r.timestamp,
+        };
+      });
     }
   }
 
