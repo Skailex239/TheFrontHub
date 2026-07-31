@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-07-31T06:08:45.799Z",
+  "lastUpdate": "2026-07-31T06:14:38.443Z",
   "duos": {
     "Juan De Fuca Strait": [
       {
@@ -284,26 +284,6 @@
         "gameId": "wsoMeajJ",
         "difficulty": "Medium",
         "numPlayers": 30
-      },
-      {
-        "players": [
-          {
-            "username": "Silly trading",
-            "clientID": "bsuiWxQc",
-            "clanTag": "AST"
-          },
-          {
-            "username": "DioxFrost",
-            "clientID": "tYhNXAiE",
-            "clanTag": "AST"
-          }
-        ],
-        "team": "Team 1",
-        "duration_s": 928,
-        "date": 1785120528788,
-        "gameId": "TFVApyc6",
-        "difficulty": "Medium",
-        "numPlayers": 34
       }
     ],
     "Italia": [
@@ -1071,6 +1051,28 @@
         "gameId": "87UYkP29",
         "difficulty": "Medium",
         "numPlayers": 54
+      }
+    ],
+    "New York City": [
+      {
+        "players": [
+          {
+            "username": "Tonaru",
+            "clientID": "MNSoumKG",
+            "clanTag": "11R"
+          },
+          {
+            "username": "Shadoow",
+            "clientID": "7m9gwc78",
+            "clanTag": "11R"
+          }
+        ],
+        "team": "Team 2",
+        "duration_s": 928,
+        "date": 1785477460254,
+        "gameId": "As8euphu",
+        "difficulty": "Medium",
+        "numPlayers": 43
       }
     ]
   },
