@@ -86,7 +86,7 @@ jobs:
           echo "committed=true" >> $GITHUB_OUTPUT
 
   sync-teams:
-    needs: sync-standard
+    needs: [sync-standard, sync-compact]
     runs-on: ubuntu-latest
     permissions:
       contents: write
