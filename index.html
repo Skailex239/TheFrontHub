@@ -127,22 +127,41 @@
     <!-- Server Info -->
     <section class="server-info">
       <h3 id="header-subtitle">Leaderboard FFA · 10+ joueurs · 400 bots · Standard</h3>
-      <div class="gamemode-switch" id="mode-selector">
-        <button class="mode-btn active" id="mode-btn-normal" onclick="switchMode('normal')">
-          <span class="mode-icon">🗺️</span> Normal
-        </button>
-        <button class="mode-btn" id="mode-btn-compact" onclick="switchMode('compact')">
-          <span class="mode-icon">⚡</span> Compact
-        </button>
-        <button class="mode-btn" id="mode-btn-duos" onclick="switchMode('duos')">
-          <span class="mode-icon">👥</span> Duos
-        </button>
-        <button class="mode-btn" id="mode-btn-trios" onclick="switchMode('trios')">
-          <span class="mode-icon">👥</span> Trios
-        </button>
-        <button class="mode-btn" id="mode-btn-quads" onclick="switchMode('quads')">
-          <span class="mode-icon">👥</span> Quads
-        </button>
+      <div class="mode-selector-wrapper" id="mode-selector">
+        <!-- Map size selector -->
+        <div class="mode-group">
+          <span class="mode-group-label">Map</span>
+          <button class="mode-btn active" id="mapsize-normal" onclick="switchMapSize('normal')">
+            <span class="mode-icon">🗺️</span> Normal
+          </button>
+          <button class="mode-btn" id="mapsize-compact" onclick="switchMapSize('compact')">
+            <span class="mode-icon">⚡</span> Compact
+          </button>
+        </div>
+        <!-- Game mode selector (dropdown) -->
+        <div class="mode-group">
+          <span class="mode-group-label">Mode</span>
+          <div class="mode-dropdown" id="gamemode-dropdown">
+            <button class="mode-btn active mode-dropdown-toggle" id="gamemode-toggle" onclick="toggleGameModeDropdown(event)">
+              <span class="mode-icon">👤</span> <span id="gamemode-label">Solo</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="mode-dropdown-menu" id="gamemode-menu">
+              <button class="mode-dropdown-item active" data-mode="solo" onclick="switchGameMode('solo')">
+                <span class="mode-icon">👤</span> Solo (FFA)
+              </button>
+              <button class="mode-dropdown-item" data-mode="duos" onclick="switchGameMode('duos')">
+                <span class="mode-icon">👥</span> Duos
+              </button>
+              <button class="mode-dropdown-item" data-mode="trios" onclick="switchGameMode('trios')">
+                <span class="mode-icon">👥</span> Trios
+              </button>
+              <button class="mode-dropdown-item" data-mode="quads" onclick="switchGameMode('quads')">
+                <span class="mode-icon">👥</span> Quads
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

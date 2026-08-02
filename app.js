@@ -13,7 +13,10 @@ let _latestRun=null; // Run la plus récente
 let _mapTotalCounts={}; // Comptes totaux par map (pour chart)
 let _durationBuckets={}; // Distribution durées (pour chart)
 const TOP_PER_MAP=25;
-let currentMode = 'normal'; // 'normal' or 'compact'
+let currentMapSize = 'normal'; // 'normal' or 'compact'
+let currentGameMode = 'solo'; // 'solo', 'duos', 'trios', 'quads'
+// Compat: currentMode derived from mapSize + gameMode
+let currentMode = 'normal'; // kept for getDataFile() compatibility
 let gameCommit = null;
 let lastSyncTime = null;
 let aliasMap = {}; // Fusion temps réel via loadPublicAliases() (Firestore)
@@ -602,55 +605,82 @@ function decodeCompactPayload(data) {
   return null;
 }
 
-function updateSubtitle() {
-  const el = document.getElementById('header-subtitle');
-  if (!el) return;
-  if (currentMode === 'compact') {
-    el.textContent = 'Leaderboard FFA · 3+ joueurs · 100 bots · Compact';
-  } else if (currentMode === 'duos') {
-    el.textContent = 'Leaderboard Team · Duos · 10+ joueurs · 400 bots · Standard';
-  } else if (currentMode === 'trios') {
-    el.textContent = 'Leaderboard Team · Trios · 10+ joueurs · 400 bots · Standard';
-  } else if (currentMode === 'quads') {
-    el.textContent = 'Leaderboard Team · Quads · 10+ joueurs · 400 bots · Standard';
+function updateCurrentMode() {
+  if (currentGameMode === 'solo') {
+    currentMode = currentMapSize;
   } else {
-    el.textContent = 'Leaderboard FFA · 10+ joueurs · 400 bots · Standard';
+    currentMode = currentGameMode;
   }
 }
 
-async function switchMode(mode) {
-  if (mode === currentMode) return;
-  currentMode = mode;
+function updateSubtitle() {
+  const el = document.getElementById('header-subtitle');
+  if (!el) return;
+  const sizeLabel = currentMapSize === 'compact' ? 'Compact' : 'Standard';
+  const modeLabels = { solo: 'FFA', duos: 'Team Duos', trios: 'Team Trios', quads: 'Team Quads' };
+  const minPlayers = currentMapSize === 'compact' ? '3+' : '10+';
+  const bots = currentMapSize === 'compact' ? '100' : '400';
+  el.textContent = `Leaderboard ${modeLabels[currentGameMode] || 'FFA'} · ${minPlayers} joueurs · ${bots} bots · ${sizeLabel}`;
+}
 
-  // Update buttons
-  document.getElementById('mode-btn-normal').classList.toggle('active', mode === 'normal');
-  document.getElementById('mode-btn-compact').classList.toggle('active', mode === 'compact');
-  document.getElementById('mode-btn-duos').classList.toggle('active', mode === 'duos');
-  document.getElementById('mode-btn-trios').classList.toggle('active', mode === 'trios');
-  document.getElementById('mode-btn-quads').classList.toggle('active', mode === 'quads');
+function toggleGameModeDropdown(event) {
+  if (event) event.stopPropagation();
+  const menu = document.getElementById('gamemode-menu');
+  if (menu) menu.classList.toggle('open');
+}
 
-  // Loading state
+document.addEventListener('click', function(e) {
+  const dropdown = document.getElementById('gamemode-dropdown');
+  const menu = document.getElementById('gamemode-menu');
+  if (dropdown && menu && !dropdown.contains(e.target)) menu.classList.remove('open');
+});
+
+async function switchMapSize(size) {
+  if (size === currentMapSize) return;
+  currentMapSize = size;
+  updateCurrentMode();
+  document.getElementById('mapsize-normal').classList.toggle('active', size === 'normal');
+  document.getElementById('mapsize-compact').classList.toggle('active', size === 'compact');
   document.getElementById('mode-selector').classList.add('mode-loading');
-
-  // Update subtitle
   updateSubtitle();
-
-  // Update URL
   const p = new URLSearchParams(window.location.search);
-  if (mode === 'compact') p.set('mode', 'compact');
-  else p.delete('mode');
-  const h = window.location.pathname + (p.toString() ? '?' + p.toString() : '');
-  history.replaceState(null, '', h);
-
-  // Reset state
-  activeMap = null;
-  mapShowCount = [];
+  if (size === 'compact') p.set('mapSize', 'compact'); else p.delete('mapSize');
+  history.replaceState(null, '', window.location.pathname + (p.toString() ? '?' + p.toString() : ''));
+  activeMap = null; mapShowCount = [];
   if(refreshInterval) clearInterval(refreshInterval);
-
-  // Reload data
   await loadData();
   document.getElementById('mode-selector').classList.remove('mode-loading');
-  console.log(`[TheFrontStats] 🔄 Mode changé: ${mode}`);
+}
+
+async function switchGameMode(mode) {
+  if (mode === currentGameMode) return;
+  currentGameMode = mode;
+  updateCurrentMode();
+  const menu = document.getElementById('gamemode-menu');
+  if (menu) menu.classList.remove('open');
+  const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads' };
+  const icons = { solo: '👤', duos: '👥', trios: '👥', quads: '👥' };
+  const labelEl = document.getElementById('gamemode-label');
+  if (labelEl) labelEl.textContent = labels[mode] || 'Solo';
+  const toggleIcon = document.querySelector('#gamemode-toggle .mode-icon');
+  if (toggleIcon) toggleIcon.textContent = icons[mode] || '👤';
+  document.querySelectorAll('.mode-dropdown-item').forEach(item => {
+    item.classList.toggle('active', item.dataset.mode === mode);
+  });
+  document.getElementById('mode-selector').classList.add('mode-loading');
+  updateSubtitle();
+  const p = new URLSearchParams(window.location.search);
+  p.set('gameMode', mode);
+  history.replaceState(null, '', window.location.pathname + '?' + p.toString());
+  activeMap = null; mapShowCount = [];
+  if(refreshInterval) clearInterval(refreshInterval);
+  await loadData();
+  document.getElementById('mode-selector').classList.remove('mode-loading');
+}
+
+async function switchMode(mode) {
+  if (mode === 'normal' || mode === 'compact') await switchMapSize(mode);
+  else await switchGameMode(mode);
 }
 
 
@@ -1619,10 +1649,39 @@ const urlParams=new URLSearchParams(window.location.search);
 const mapParam=urlParams.get('map');
 const tabParam=urlParams.get('tab');
 const modeParam=urlParams.get('mode');
-if (modeParam === 'compact') {
-  currentMode = 'compact';
-  updateSubtitle();
+const mapSizeParam=urlParams.get('mapSize');
+const gameModeParam=urlParams.get('gameMode');
+// Init from URL params (new system)
+if (mapSizeParam === 'compact') {
+  currentMapSize = 'compact';
+  const btn = document.getElementById('mapsize-compact');
+  const btnN = document.getElementById('mapsize-normal');
+  if (btn) btn.classList.add('active');
+  if (btnN) btnN.classList.remove('active');
 }
+if (gameModeParam && ['solo','duos','trios','quads'].includes(gameModeParam)) {
+  currentGameMode = gameModeParam;
+  // Update dropdown UI
+  const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads' };
+  const icons = { solo: '👤', duos: '👥', trios: '👥', quads: '👥' };
+  const labelEl = document.getElementById('gamemode-label');
+  if (labelEl) labelEl.textContent = labels[gameModeParam];
+  const toggleIcon = document.querySelector('#gamemode-toggle .mode-icon');
+  if (toggleIcon) toggleIcon.textContent = icons[gameModeParam];
+  document.querySelectorAll('.mode-dropdown-item').forEach(item => {
+    item.classList.toggle('active', item.dataset.mode === gameModeParam);
+  });
+}
+// Compat: old ?mode=compact URL
+if (modeParam === 'compact' && !mapSizeParam) {
+  currentMapSize = 'compact';
+  const btn = document.getElementById('mapsize-compact');
+  const btnN = document.getElementById('mapsize-normal');
+  if (btn) btn.classList.add('active');
+  if (btnN) btnN.classList.remove('active');
+}
+updateCurrentMode();
+updateSubtitle();
 redirectToProfileIfRequested();
 loadData().then(()=>{
   loadVipPlayers(); // Charger les joueurs VIP en parallèle
@@ -1647,6 +1706,9 @@ window.handleLogin = handleLogin;
 window.handleLogout = handleLogout;
 window.toggleUserDropdown = toggleUserDropdown;
 window.switchMode = switchMode;
+window.switchMapSize = switchMapSize;
+window.switchGameMode = switchGameMode;
+window.toggleGameModeDropdown = toggleGameModeDropdown;
 window.switchTab = switchTab;
 window.searchPlayer = searchPlayer;
 window.filterMaps = filterMaps;
