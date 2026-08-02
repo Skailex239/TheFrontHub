@@ -152,7 +152,7 @@ function extractTeamRun(raw, mode) {
     duration_s: durationSecs,
     difficulty: config.difficulty || "Medium",
     bots: 400,
-    players: humanPlayers.length,
+    numPlayers: humanPlayers.length,
     timestamp: info.start ? new Date(info.start > 1e10 ? info.start : info.start * 1000).toISOString() : new Date().toISOString(),
     url: `https://openfront.io/game/${gameId}`,
   };
