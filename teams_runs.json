@@ -63,6 +63,70 @@
       "numPlayers": 40,
       "timestamp": "2026-08-02T14:25:51.505Z",
       "url": "https://openfront.io/game/yj1A7rmU"
+    },
+    {
+      "id": "uLpwyaNP",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SPoS",
+          "clientID": "J2Rk8DU3",
+          "clanTag": "AST"
+        },
+        {
+          "username": "bananaJC",
+          "clientID": "9MDsxwTt",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 410,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-02T17:19:37.564Z",
+      "url": "https://openfront.io/game/uLpwyaNP"
+    },
+    {
+      "id": "pYZBY57s",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Jacksgo",
+          "clientID": "8rHBYtHm",
+          "clanTag": "GEFEN"
+        },
+        {
+          "username": "beforethisafternoon",
+          "clientID": "PRDgw5xG",
+          "clanTag": "GEFEN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1364,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-02T16:56:06.168Z",
+      "url": "https://openfront.io/game/pYZBY57s"
+    },
+    {
+      "id": "oeLYokJW",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Gale",
+          "clientID": "oAB9RKpz",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1424,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "timestamp": "2026-08-02T17:05:51.238Z",
+      "url": "https://openfront.io/game/oeLYokJW"
     }
   ],
   "trios": [
@@ -111,6 +175,29 @@
       "numPlayers": 67,
       "timestamp": "2026-08-02T14:20:43.166Z",
       "url": "https://openfront.io/game/D9As2b8z"
+    },
+    {
+      "id": "rMTPxJjG",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "XXXX",
+          "clientID": "YhPZzL9c",
+          "clanTag": null
+        },
+        {
+          "username": "nnn",
+          "clientID": "gzkmsRdb",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 942,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-02T16:59:30.360Z",
+      "url": "https://openfront.io/game/rMTPxJjG"
     }
   ],
   "quads": [
@@ -375,6 +462,24 @@
       "numPlayers": 20,
       "timestamp": "2026-08-02T16:48:37.753Z",
       "url": "https://openfront.io/game/6tzVR9hY"
+    },
+    {
+      "id": "odFKN5Ds",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Czech Fort",
+          "clientID": "dkQZEU5e",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1656,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "timestamp": "2026-08-02T16:53:55.043Z",
+      "url": "https://openfront.io/game/odFKN5Ds"
     }
   ]
 }
