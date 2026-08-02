@@ -541,6 +541,39 @@
       "numPlayers": 24,
       "timestamp": "2026-08-02T17:41:55.403Z",
       "url": "https://openfront.io/game/weiswh3P"
+    },
+    {
+      "id": "k7ThcS7M",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "goatis",
+          "clientID": "6CQdb75D",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "Bougainville",
+          "clientID": "nNDuoEj9",
+          "clanTag": null
+        },
+        {
+          "username": "Federation Of Moskito",
+          "clientID": "KT9vqZk5",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "NotaBum",
+          "clientID": "hXWwVEv9",
+          "clanTag": "KMFDM"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-02T21:51:41.462Z",
+      "url": "https://openfront.io/game/k7ThcS7M"
     }
   ]
 }
