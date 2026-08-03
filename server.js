@@ -332,8 +332,6 @@ const server = http.createServer(async (req, res) => {
     "/i18n.js": ["i18n.js", "text/javascript; charset=utf-8"],
     "/auth.js": ["auth.js", "text/javascript; charset=utf-8"],
     "/app.js": ["app.js", "text/javascript; charset=utf-8"],
-    "/player_aliases.json": ["player_aliases.json", "application/json; charset=utf-8"],
-    "/player_aliases.json.gz": ["player_aliases.json.gz", "application/gzip"],
     "/maps_list.json": ["maps_list.json", "application/json; charset=utf-8"],
     "/ranked.json": ["ranked.json", "application/json; charset=utf-8"],
     "/ranked.json.gz": ["ranked.json.gz", "application/gzip"],

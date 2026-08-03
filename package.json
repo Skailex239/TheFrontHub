@@ -1,0 +1,22 @@
+{
+  "name": "thefrontstats",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenFront speedrun / ranked stats site + sync pipeline",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "sync": "node sync.js",
+    "sync:compact": "node sync.js --mode=compact",
+    "sync:ranked": "node sync-ranked.js",
+    "sync:teams": "node sync-teams.js",
+    "status": "node sync.js status",
+    "diagnose": "node sync.js diagnose",
+    "enrich": "node sync.js enrich",
+    "benchmark": "node sync.js benchmark"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

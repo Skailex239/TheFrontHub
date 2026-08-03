@@ -1,4 +1,5 @@
 import { MAP_NORMALIZATION } from "./shared/maps.js";
+import { icon } from "./icons.js";
 
 function getMapDisplayName(mapName) {
   const key = "map." + mapName;
@@ -21,7 +22,7 @@ let gameCommit = null;
 let lastSyncTime = null;
 let aliasMap = {}; // Fusion temps réel via loadPublicAliases() (Firestore)
 // Color picker removed — orange/yellow gradient theme is now default
-const RANKS=[{name:'Champion',min:100,icon:'👑',color:'#f0c060'},{name:'Diamond',min:50,icon:'💎',color:'#b9f2ff'},{name:'Gold',min:25,icon:'🥇',color:'#f0c060'},{name:'Silver',min:10,icon:'🥈',color:'#a0b0c4'},{name:'Bronze',min:3,icon:'🥉',color:'#c08840'},{name:'Unranked',min:0,icon:'⬜',color:'#555568'}];
+const RANKS=[{name:'Champion',min:100,icon:'crown',color:'#f0c060'},{name:'Diamond',min:50,icon:'diamond',color:'#b9f2ff'},{name:'Gold',min:25,icon:'medal',color:'#f0c060'},{name:'Silver',min:10,icon:'medal',color:'#a0b0c4'},{name:'Bronze',min:3,icon:'medal',color:'#c08840'},{name:'Unranked',min:0,icon:'square',color:'#555568'}];
 function getRank(pts){return RANKS.find(r=>pts>=r.min)||RANKS[RANKS.length-1]}
 // Theme functions removed — orange/yellow gradient is the fixed theme
 
@@ -48,7 +49,7 @@ function getRunUrl(r){return r.url||("https://openfront.io/game/"+r.id)}
 // Échappement XSS-safe : convertit les caractères dangereux en entités HTML
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function playSound(){}
-function notifyNewRecord(msg){if(Notification.permission==='granted'){new Notification('TheFrontStats',{body:msg,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><text y="32" font-size="32">🏆</text></svg>'});playSound()}}
+function notifyNewRecord(msg){if(Notification.permission==='granted'){new Notification('TheFrontStats',{body:msg,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f0c060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 01-8 0V4z"/><path d="M5 4H3v3a3 3 0 003 3M19 4h2v3a3 3 0 01-3 3M9 14h6M10 14v3h4v-3M8 20h8"/></svg>'});playSound()}}
 function requestNotifs(){if('Notification' in window)Notification.requestPermission()}
 
 /* ====== AUTH LOGIC ====== */
@@ -659,11 +660,11 @@ async function switchGameMode(mode) {
   const menu = document.getElementById('gamemode-menu');
   if (menu) menu.classList.remove('open');
   const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads' };
-  const icons = { solo: '👤', duos: '👥', trios: '👥', quads: '👥' };
+  const icons = { solo: 'user', duos: 'users', trios: 'users', quads: 'users' };
   const labelEl = document.getElementById('gamemode-label');
   if (labelEl) labelEl.textContent = labels[mode] || 'Solo';
   const toggleIcon = document.querySelector('#gamemode-toggle .mode-icon');
-  if (toggleIcon) toggleIcon.textContent = icons[mode] || '👤';
+  if (toggleIcon) toggleIcon.innerHTML = icon(icons[mode] || 'user', { size: 18 });
   document.querySelectorAll('.mode-dropdown-item').forEach(item => {
     item.classList.toggle('active', item.dataset.mode === mode);
   });
@@ -1333,7 +1334,7 @@ function shareMap(){
   const url=window.location.origin+window.location.pathname+'?map='+encodeURIComponent(activeMap);
   const b=document.getElementById('share-btn');
   const origHTML=b.innerHTML;
-  navigator.clipboard.writeText(url).then(()=>{b.innerHTML='<span>✓ Copié !</span>';setTimeout(()=>b.innerHTML=origHTML,2000)});
+  navigator.clipboard.writeText(url).then(()=>{b.innerHTML='<span>'+icon('check',{size:14})+' Copié !</span>';setTimeout(()=>b.innerHTML=origHTML,2000)});
 }
 
 async function toggleGG(runId, event) {
@@ -1663,11 +1664,11 @@ if (gameModeParam && ['solo','duos','trios','quads'].includes(gameModeParam)) {
   currentGameMode = gameModeParam;
   // Update dropdown UI
   const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads' };
-  const icons = { solo: '👤', duos: '👥', trios: '👥', quads: '👥' };
+  const icons = { solo: 'user', duos: 'users', trios: 'users', quads: 'users' };
   const labelEl = document.getElementById('gamemode-label');
   if (labelEl) labelEl.textContent = labels[gameModeParam];
   const toggleIcon = document.querySelector('#gamemode-toggle .mode-icon');
-  if (toggleIcon) toggleIcon.textContent = icons[gameModeParam];
+  if (toggleIcon) toggleIcon.innerHTML = icon(icons[gameModeParam] || 'user', { size: 18 });
   document.querySelectorAll('.mode-dropdown-item').forEach(item => {
     item.classList.toggle('active', item.dataset.mode === gameModeParam);
   });
@@ -1848,27 +1849,27 @@ function renderRankedTable(players) {
     let moveHtml = '—';
     if (p.movement != null) {
       const m = p.movement;
-      if (m > 0) moveHtml = `<span style="color:#10b981;font-weight:700">↑${m}</span>`;
-      else if (m < 0) moveHtml = `<span style="color:#ef4444;font-weight:700">↓${Math.abs(m)}</span>`;
+      if (m > 0) moveHtml = `<span style="color:#10b981;font-weight:700">${icon('arrowUp',{size:12})}${m}</span>`;
+      else if (m < 0) moveHtml = `<span style="color:#ef4444;font-weight:700">${icon('arrowDown',{size:12})}${Math.abs(m)}</span>`;
       else moveHtml = `<span style="color:var(--muted)">—</span>`;
     }
 
     // Peak Elo with arrow if different from current
     const peakDiff = (p.peakElo || p.elo) - p.elo;
     const peakHtml = peakDiff > 0
-      ? `${p.peakElo || p.elo} <span style="color:var(--gold);font-size:11px">↑${peakDiff}</span>`
+      ? `${p.peakElo || p.elo} <span style="color:var(--gold);font-size:11px">${icon('arrowUp',{size:10})}${peakDiff}</span>`
       : `${p.peakElo || p.elo}`;
 
     // Streak badge
     let streakHtml = '—';
     if (p.streak != null && p.streak !== 0) {
-      if (p.streak > 0) streakHtml = `<span style="color:#f97316;font-weight:700">🔥${p.streak}</span>`;
-      else streakHtml = `<span style="color:#3b82f6;font-weight:700">❄️${Math.abs(p.streak)}</span>`;
+      if (p.streak > 0) streakHtml = `<span style="color:#f97316;font-weight:700">${icon('fire',{size:12})}${p.streak}</span>`;
+      else streakHtml = `<span style="color:#3b82f6;font-weight:700">${icon('snowflake',{size:12})}${Math.abs(p.streak)}</span>`;
     }
 
     // Favori (étoile cliquable)
     const isFav = isFavorite(p.public_id);
-    const favStar = isFav ? '★' : '☆';
+    const favStar = isFav ? icon('star',{size:14}) : icon('starOutline',{size:14});
     const favClass = isFav ? 'fav-star active' : 'fav-star';
     const favBtn = p.public_id
       ? `<button class="${favClass}" onclick="event.stopPropagation();toggleFavorite('${esc(p.public_id)}','${esc(p.username)}')" title="${isFav ? 'Retirer des favoris' : 'Ajouter aux favoris'}" aria-label="${isFav ? 'Retirer des favoris' : 'Ajouter aux favoris'}">${favStar}</button>`
@@ -1949,7 +1950,7 @@ function renderMyRank(players) {
   if (!currentUser || !currentUser.publicId) {
     container.innerHTML = `
       <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-        <span>👤</span>
+        <span>${icon('user',{size:18})}</span>
         <span>Connecte-toi et lie ton <b>Public ID OpenFront</b> pour voir ta position dans le classement.</span>
       </div>
     `;
@@ -1962,7 +1963,7 @@ function renderMyRank(players) {
   if (!me) {
     container.innerHTML = `
       <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-        <span>🌍</span>
+        <span>${icon('globe',{size:18})}</span>
         <span>Tu n'es pas dans le <b>Top 100</b> actuel. Continue à grind !</span>
       </div>
     `;
@@ -1971,7 +1972,7 @@ function renderMyRank(players) {
   
   const winrate = me.total > 0 ? ((me.wins / me.total) * 100).toFixed(1) : 0;
   const wrColor = getWinrateColor(parseFloat(winrate));
-  const move = me.movement != null ? (me.movement > 0 ? `↑${me.movement}` : me.movement < 0 ? `↓${Math.abs(me.movement)}` : '—') : '—';
+  const move = me.movement != null ? (me.movement > 0 ? `${icon('arrowUp',{size:10})}${me.movement}` : me.movement < 0 ? `${icon('arrowDown',{size:10})}${Math.abs(me.movement)}` : '—') : '—';
   const moveColor = me.movement > 0 ? '#10b981' : me.movement < 0 ? '#ef4444' : 'var(--muted)';
   
   container.innerHTML = `
@@ -1989,7 +1990,7 @@ function renderMyRank(players) {
         </div>
       </div>
       <button onclick="scrollToMyRank('${esc(myPid)}')" style="background:var(--accent);color:#fff;border:none;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;transition:opacity 0.2s;white-space:nowrap" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-        🎯 Me trouver
+        ${icon('target',{size:14})} Me trouver
       </button>
     </div>
   `;
@@ -2033,10 +2034,10 @@ function toggleFavorite(publicId, username) {
   const idx = list.indexOf(publicId);
   if (idx === -1) {
     list.push(publicId);
-    try { showToast('⭐ ' + (username || 'Joueur') + ' ajouté aux favoris'); } catch (e) {}
+    try { showToast(icon('star',{size:14}) + ' ' + (username || 'Joueur') + ' ajouté aux favoris'); } catch (e) {}
   } else {
     list.splice(idx, 1);
-    try { showToast('☆ ' + (username || 'Joueur') + ' retiré des favoris'); } catch (e) {}
+    try { showToast(icon('starOutline',{size:14}) + ' ' + (username || 'Joueur') + ' retiré des favoris'); } catch (e) {}
   }
   saveFavorites(list);
   updateFavCounter();
@@ -2063,11 +2064,11 @@ function toggleFavFilter() {
     if (window._rankedFilters.favOnly) {
       btn.classList.add('active');
       const star = btn.querySelector('.fav-star');
-      if (star) star.textContent = '★';
+      if (star) star.innerHTML = icon('star',{size:14});
     } else {
       btn.classList.remove('active');
       const star = btn.querySelector('.fav-star');
-      if (star) star.textContent = '☆';
+      if (star) star.innerHTML = icon('starOutline',{size:14});
     }
   }
   applyRankedFilters();
@@ -2281,7 +2282,7 @@ async function showRankedPlayerModal(publicId, username) {
         else break;
       } else break;
     }
-    const streakText = streak > 0 ? `🔥 Série: ${streak} victoires` : streak < 0 ? `❄️ Série: ${Math.abs(streak)} défaites` : '';
+    const streakText = streak > 0 ? `${icon('fire',{size:14})} Série: ${streak} victoires` : streak < 0 ? `${icon('snowflake',{size:14})} Série: ${Math.abs(streak)} défaites` : '';
     
     if (statsEl) {
       const wins = rankedGames.filter(g => g.hasWon).length;
