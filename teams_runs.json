@@ -257,513 +257,168 @@
       "url": "https://openfront.io/game/WYf8uyAN"
     },
     {
-      "id": "p9Hz9jpu",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "SPILCHY",
-          "clientID": "Kv8erwLz",
-          "clanTag": "220"
-        },
-        {
-          "username": "Shadow",
-          "clientID": "6S15RHUK",
-          "clanTag": "220"
-        }
-      ],
-      "map": "New York City",
-      "duration_s": 1822,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 43,
-      "timestamp": "2026-08-03T01:18:18.626Z",
-      "url": "https://openfront.io/game/p9Hz9jpu"
-    },
-    {
-      "id": "KaUhfi5e",
+      "id": "ry2AnbVQ",
       "team": "Team 7",
       "players": [
         {
-          "username": "Babalu",
-          "clientID": "w7nUvZpv",
-          "clanTag": "CAT"
-        },
-        {
-          "username": "Moris",
-          "clientID": "fRXo9YKr",
-          "clanTag": null
-        }
-      ],
-      "map": "Northwest Passage",
-      "duration_s": 1352,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 58,
-      "timestamp": "2026-08-02T17:25:54.937Z",
-      "url": "https://openfront.io/game/KaUhfi5e"
-    },
-    {
-      "id": "dSPXYB5F",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "claudes plan",
-          "clientID": "bAhcau7s",
-          "clanTag": "JOHN"
-        },
-        {
-          "username": "Nation",
-          "clientID": "BnE85TLr",
-          "clanTag": "JOHN"
-        }
-      ],
-      "map": "Los Angeles",
-      "duration_s": 1515,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 34,
-      "timestamp": "2026-08-02T11:17:14.507Z",
-      "url": "https://openfront.io/game/dSPXYB5F"
-    },
-    {
-      "id": "UEAQLj7e",
-      "team": "Team 24",
-      "players": [
-        {
-          "username": "Russian Empire",
-          "clientID": "S4raqsTU",
-          "clanTag": null
-        }
-      ],
-      "map": "Lisbon",
-      "duration_s": 951,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-01T14:15:34.325Z",
-      "url": "https://openfront.io/game/UEAQLj7e"
-    },
-    {
-      "id": "TDMZW11u",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "Jordan",
-          "clientID": "vExSgoW1",
-          "clanTag": "ADA"
-        },
-        {
-          "username": "Ada",
-          "clientID": "G7z42bNs",
-          "clanTag": "ADA"
-        }
-      ],
-      "map": "Baja California",
-      "duration_s": 1629,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 64,
-      "timestamp": "2026-07-31T12:23:23.664Z",
-      "url": "https://openfront.io/game/TDMZW11u"
-    },
-    {
-      "id": "oWwk4vS9",
-      "team": "Team 9",
-      "players": [
-        {
-          "username": "Tater",
-          "clientID": "c8QW42Fd",
-          "clanTag": null
-        }
-      ],
-      "map": "San Francisco",
-      "duration_s": 1211,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 18,
-      "timestamp": "2026-07-30T03:08:11.198Z",
-      "url": "https://openfront.io/game/oWwk4vS9"
-    },
-    {
-      "id": "hxnq7xEQ",
-      "team": "Team 23",
-      "players": [
-        {
-          "username": "Niv",
-          "clientID": "sHLnBQd5",
-          "clanTag": null
-        },
-        {
-          "username": "AGAMEMNON",
-          "clientID": "6s24BDGf",
-          "clanTag": null
-        }
-      ],
-      "map": "Halkidiki",
-      "duration_s": 1076,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 46,
-      "timestamp": "2026-07-29T02:18:40.690Z",
-      "url": "https://openfront.io/game/hxnq7xEQ"
-    },
-    {
-      "id": "NDGM9xh1",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "Bokack",
-          "clientID": "GK891Lea",
-          "clanTag": "GOLD"
-        },
-        {
-          "username": "medium h",
-          "clientID": "bdfmujeQ",
-          "clanTag": "GOLD"
-        }
-      ],
-      "map": "Hong Kong",
-      "duration_s": 1036,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 87,
-      "timestamp": "2026-07-27T19:34:00.127Z",
-      "url": "https://openfront.io/game/NDGM9xh1"
-    },
-    {
-      "id": "KpqtEGpf",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Watermelon",
-          "clientID": "5gEEEeAV",
-          "clanTag": "MR"
-        },
-        {
-          "username": "Melon",
-          "clientID": "Abh24LRK",
-          "clanTag": "MR"
-        }
-      ],
-      "map": "Bosphorus Straits",
-      "duration_s": 1563,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 20,
-      "timestamp": "2026-07-24T20:03:32.293Z",
-      "url": "https://openfront.io/game/KpqtEGpf"
-    },
-    {
-      "id": "1iRporzx",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Albania",
-          "clientID": "HEQfdWNJ",
-          "clanTag": "AST"
-        },
-        {
-          "username": "Caesarheim",
-          "clientID": "KnS87uVZ",
-          "clanTag": "AST"
-        }
-      ],
-      "map": "Middle East",
-      "duration_s": 1242,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 58,
-      "timestamp": "2026-06-27T09:45:36.880Z",
-      "url": "https://openfront.io/game/1iRporzx"
-    },
-    {
-      "id": "rFzXKRRz",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "ORDERFLOW GOAT",
-          "clientID": "RgHa1h2r",
-          "clanTag": "WNTD"
-        },
-        {
-          "username": "Gamma levels",
-          "clientID": "z7LeyaLW",
-          "clanTag": "WNTD"
+          "username": "EleBull",
+          "clientID": "CNjyPugY",
+          "clanTag": "SWMG"
         }
       ],
       "map": "Giant World Map",
-      "duration_s": 2810,
+      "duration_s": 5355,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 90,
-      "timestamp": "2026-06-25T22:49:00.152Z",
-      "url": "https://openfront.io/game/rFzXKRRz"
+      "numPlayers": 69,
+      "timestamp": "2026-08-03T06:25:06.888Z",
+      "url": "https://openfront.io/game/ry2AnbVQ"
     },
     {
-      "id": "piD9nUz2",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "tpchance",
-          "clientID": "kqFE9Va7",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Asia",
-      "duration_s": 1996,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 54,
-      "timestamp": "2026-06-20T12:02:04.699Z",
-      "url": "https://openfront.io/game/piD9nUz2"
-    },
-    {
-      "id": "mUBFQ7qm",
-      "team": "Team 20",
-      "players": [
-        {
-          "username": "Hephthalite",
-          "clientID": "tdyiR88v",
-          "clanTag": null
-        }
-      ],
-      "map": "Bering Sea",
-      "duration_s": 1532,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 48,
-      "timestamp": "2026-06-20T05:40:56.549Z",
-      "url": "https://openfront.io/game/mUBFQ7qm"
-    },
-    {
-      "id": "YaMx2Mot",
-      "team": "Team 8",
-      "players": [
-        {
-          "username": "Tchoupi se fait oqtf",
-          "clientID": "vksukKRz",
-          "clanTag": "XDL"
-        },
-        {
-          "username": "XAVIER",
-          "clientID": "mrViaqZ1",
-          "clanTag": "XDL"
-        }
-      ],
-      "map": "South America",
-      "duration_s": 1217,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 61,
-      "timestamp": "2026-06-19T22:55:41.191Z",
-      "url": "https://openfront.io/game/YaMx2Mot"
-    },
-    {
-      "id": "oNJERmmE",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Ronathy",
-          "clientID": "NkZZaA4u",
-          "clanTag": "SEK"
-        },
-        {
-          "username": "Ri929ch",
-          "clientID": "25EmMpEW",
-          "clanTag": "SEK"
-        }
-      ],
-      "map": "Iceland",
-      "duration_s": 870,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-06-18T22:10:58.221Z",
-      "url": "https://openfront.io/game/oNJERmmE"
-    },
-    {
-      "id": "aRsUbK6r",
+      "id": "9gs1Mx5L",
       "team": "Team 2",
       "players": [
         {
-          "username": "ITO",
-          "clientID": "7uFbVYWm",
-          "clanTag": "VT"
+          "username": "Menace",
+          "clientID": "ZoqMBUYJ",
+          "clanTag": "MARS"
         },
         {
-          "username": "RICK",
-          "clientID": "ernSSQM4",
-          "clanTag": "VT"
-        }
-      ],
-      "map": "Passage",
-      "duration_s": 1566,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 30,
-      "timestamp": "2026-06-18T06:54:48.536Z",
-      "url": "https://openfront.io/game/aRsUbK6r"
-    },
-    {
-      "id": "xaL4FhSm",
-      "team": "Team 22",
-      "players": [
-        {
-          "username": "Anon928",
-          "clientID": "hxfy48gz",
-          "clanTag": null
-        },
-        {
-          "username": "Trade Monster",
-          "clientID": "wysu13YS",
-          "clanTag": null
-        }
-      ],
-      "map": "Aegean",
-      "duration_s": 2513,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-06-15T23:08:06.821Z",
-      "url": "https://openfront.io/game/xaL4FhSm"
-    },
-    {
-      "id": "Bnk844Qz",
-      "team": "Team 26",
-      "players": [
-        {
-          "username": "ESTONIA",
-          "clientID": "aeFMbc5S",
-          "clanTag": null
-        },
-        {
-          "username": "Anonymous",
-          "clientID": "4cCLkdT8",
-          "clanTag": null
+          "username": "GVM",
+          "clientID": "rmDh8AjT",
+          "clanTag": "MARS"
         }
       ],
       "map": "Europe",
-      "duration_s": 1058,
+      "duration_s": 1026,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 114,
-      "timestamp": "2026-06-15T11:38:21.291Z",
-      "url": "https://openfront.io/game/Bnk844Qz"
+      "numPlayers": 53,
+      "timestamp": "2026-08-02T00:42:23.790Z",
+      "url": "https://openfront.io/game/9gs1Mx5L"
     },
     {
-      "id": "yMBPibqV",
-      "team": "Team 24",
+      "id": "A55xhy68",
+      "team": "Team 3",
       "players": [
         {
-          "username": "Bobby Fisher",
-          "clientID": "7cdjS6Pm",
-          "clanTag": null
+          "username": "ItsMuffin",
+          "clientID": "iT7GaUKn",
+          "clanTag": "30ME"
         },
         {
-          "username": "Antartica",
-          "clientID": "zK1q9pmP",
-          "clanTag": "EU"
+          "username": "Dex",
+          "clientID": "M3riGHP1",
+          "clanTag": "30ME"
         }
       ],
-      "map": "Mare Nostrum",
-      "duration_s": 1615,
+      "map": "Mena",
+      "duration_s": 908,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 89,
-      "timestamp": "2026-06-14T12:38:27.464Z",
-      "url": "https://openfront.io/game/yMBPibqV"
+      "numPlayers": 80,
+      "timestamp": "2026-07-31T15:42:50.322Z",
+      "url": "https://openfront.io/game/A55xhy68"
     },
     {
-      "id": "3ozmpLu6",
+      "id": "xEHd8x5b",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "SPILCHY",
+          "clientID": "eK1xDnCa",
+          "clanTag": "220"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 3141,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-07-31T01:24:52.153Z",
+      "url": "https://openfront.io/game/xEHd8x5b"
+    },
+    {
+      "id": "yaFENL9S",
       "team": "Team 25",
       "players": [
         {
-          "username": "robinho",
-          "clientID": "d64s8RdD",
-          "clanTag": null
-        },
-        {
-          "username": "france",
-          "clientID": "xHwWaevQ",
+          "username": "Dumbass",
+          "clientID": "M3iP4Rb8",
           "clanTag": null
         }
       ],
-      "map": "Nile Delta",
+      "map": "Korea",
+      "duration_s": 1274,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-07-29T17:57:29.413Z",
+      "url": "https://openfront.io/game/yaFENL9S"
+    },
+    {
+      "id": "R9T8AWj7",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Tchoupi",
+          "clientID": "Ncq3ZJc1",
+          "clanTag": "SR"
+        },
+        {
+          "username": "Revenflok",
+          "clientID": "B9J9FTp4",
+          "clanTag": "SR"
+        }
+      ],
+      "map": "New York City",
       "duration_s": 1354,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 67,
-      "timestamp": "2026-06-10T22:26:10.262Z",
-      "url": "https://openfront.io/game/3ozmpLu6"
+      "numPlayers": 60,
+      "timestamp": "2026-07-24T14:18:56.227Z",
+      "url": "https://openfront.io/game/R9T8AWj7"
     },
     {
-      "id": "K3JtPVLd",
-      "team": "Team 1",
+      "id": "aTgeETrs",
+      "team": "Team 8",
       "players": [
         {
-          "username": "zelpie",
-          "clientID": "xPhTyxbz",
-          "clanTag": "CAF"
-        },
-        {
-          "username": "Canadian Shield",
-          "clientID": "Q7CbiLcX",
-          "clanTag": "CAF"
+          "username": "tillanz",
+          "clientID": "Yp2scJxg",
+          "clanTag": "NU"
         }
       ],
-      "map": "Arctic",
-      "duration_s": 952,
+      "map": "Korea",
+      "duration_s": 882,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 39,
-      "timestamp": "2026-05-26T02:13:41.716Z",
-      "url": "https://openfront.io/game/K3JtPVLd"
+      "numPlayers": 49,
+      "timestamp": "2026-07-24T06:19:51.344Z",
+      "url": "https://openfront.io/game/aTgeETrs"
     },
     {
-      "id": "antUyvbd",
-      "team": "Team 1",
+      "id": "b6cFRSdb",
+      "team": "Team 2",
       "players": [
         {
-          "username": "ryy",
-          "clientID": "vi3jViou",
-          "clanTag": "BGS"
+          "username": "onurreyiz",
+          "clientID": "XQtfuFzU",
+          "clanTag": "IMP"
         },
         {
-          "username": "DRE",
-          "clientID": "Hc5XkLMy",
-          "clanTag": "BGS"
+          "username": "AegeanLight",
+          "clientID": "vdybxEXd",
+          "clanTag": "IMP"
         }
       ],
-      "map": "North America",
-      "duration_s": 895,
+      "map": "Yellow Sea",
+      "duration_s": 1478,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 35,
-      "timestamp": "2026-05-11T23:26:23.313Z",
-      "url": "https://openfront.io/game/antUyvbd"
-    },
-    {
-      "id": "LdjHW5uC",
-      "team": "Team 18",
-      "players": [
-        {
-          "username": "peace",
-          "clientID": "T7HDjtgG",
-          "clanTag": null
-        },
-        {
-          "username": "Anon538",
-          "clientID": "upTLACPu",
-          "clanTag": null
-        }
-      ],
-      "map": "Falkland Islands",
-      "duration_s": 752,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-05-11T19:26:11.935Z",
-      "url": "https://openfront.io/game/LdjHW5uC"
+      "numPlayers": 38,
+      "timestamp": "2026-06-25T15:06:44.158Z",
+      "url": "https://openfront.io/game/b6cFRSdb"
     }
   ],
   "trios": [
@@ -995,345 +650,6 @@
       "url": "https://openfront.io/game/UKnXpiJK"
     },
     {
-      "id": "rM6oyL67",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "NSKevin",
-          "clientID": "WwpsoZfT",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Jangz",
-          "clientID": "Lg1s1vV4",
-          "clanTag": "UN"
-        },
-        {
-          "username": "BaekKB",
-          "clientID": "Y6mgYK3o",
-          "clanTag": null
-        }
-      ],
-      "map": "Mars",
-      "duration_s": 779,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 33,
-      "timestamp": "2026-08-03T05:33:40.811Z",
-      "url": "https://openfront.io/game/rM6oyL67"
-    },
-    {
-      "id": "uG5b3kjP",
-      "team": "Team 10",
-      "players": [
-        {
-          "username": "Crocodile7",
-          "clientID": "Uj3v2wLN",
-          "clanTag": null
-        },
-        {
-          "username": "hihihi",
-          "clientID": "LQUgJP1b",
-          "clanTag": null
-        },
-        {
-          "username": "MyTeammatesAreAwful",
-          "clientID": "VwH7ZgFF",
-          "clanTag": null
-        }
-      ],
-      "map": "Caribbean",
-      "duration_s": 3287,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 30,
-      "timestamp": "2026-08-03T00:33:52.008Z",
-      "url": "https://openfront.io/game/uG5b3kjP"
-    },
-    {
-      "id": "cFBpR1Qa",
-      "team": "Team 16",
-      "players": [
-        {
-          "username": "UnhuggedToday",
-          "clientID": "NZiFiRBu",
-          "clanTag": null
-        },
-        {
-          "username": "Boot",
-          "clientID": "SNHT2y2r",
-          "clanTag": "USMC"
-        }
-      ],
-      "map": "Mare Nostrum",
-      "duration_s": 1467,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 98,
-      "timestamp": "2026-08-02T18:26:24.503Z",
-      "url": "https://openfront.io/game/cFBpR1Qa"
-    },
-    {
-      "id": "q58G5FYx",
-      "team": "Team 8",
-      "players": [
-        {
-          "username": "RAW541K",
-          "clientID": "9EiU6Zoy",
-          "clanTag": null
-        },
-        {
-          "username": "11111",
-          "clientID": "FYhkHN7r",
-          "clanTag": null
-        }
-      ],
-      "map": "Gateway to the Atlantic",
-      "duration_s": 1390,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 81,
-      "timestamp": "2026-07-31T10:13:55.095Z",
-      "url": "https://openfront.io/game/q58G5FYx"
-    },
-    {
-      "id": "dCPGm4xG",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "Ehsan",
-          "clientID": "knBL2LdE",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Rawr",
-          "clientID": "U2izPkTt",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Dersian Empire",
-          "clientID": "JfXstn5z",
-          "clanTag": null
-        }
-      ],
-      "map": "Mare Nostrum",
-      "duration_s": 1254,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 81,
-      "timestamp": "2026-07-28T23:23:16.377Z",
-      "url": "https://openfront.io/game/dCPGm4xG"
-    },
-    {
-      "id": "Raw37bKT",
-      "team": "Team 11",
-      "players": [
-        {
-          "username": "FULLSEND",
-          "clientID": "QKCJYSJU",
-          "clanTag": null
-        },
-        {
-          "username": "Trading Co.",
-          "clientID": "jVWxokhT",
-          "clanTag": "STEVO"
-        },
-        {
-          "username": "la peste",
-          "clientID": "aE576FJf",
-          "clanTag": null
-        }
-      ],
-      "map": "Achiran",
-      "duration_s": 1026,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 54,
-      "timestamp": "2026-07-25T20:45:32.446Z",
-      "url": "https://openfront.io/game/Raw37bKT"
-    },
-    {
-      "id": "LSyS4Mjj",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "TGD",
-          "clientID": "tRtCyerm",
-          "clanTag": "JUICE"
-        },
-        {
-          "username": "regreg",
-          "clientID": "qXpsywVs",
-          "clanTag": "JUICE"
-        }
-      ],
-      "map": "Giant World Map",
-      "duration_s": 3339,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 114,
-      "timestamp": "2026-07-23T17:57:20.126Z",
-      "url": "https://openfront.io/game/LSyS4Mjj"
-    },
-    {
-      "id": "UWQDFSTy",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "Peace And Love",
-          "clientID": "RRHXEMdz",
-          "clanTag": "BSA"
-        },
-        {
-          "username": "gland",
-          "clientID": "Ts6yo4FS",
-          "clanTag": "BSA"
-        },
-        {
-          "username": "GUS",
-          "clientID": "1pA6gNbV",
-          "clanTag": "BSA"
-        }
-      ],
-      "map": "Giant World Map",
-      "duration_s": 1397,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 90,
-      "timestamp": "2026-07-22T20:54:57.580Z",
-      "url": "https://openfront.io/game/UWQDFSTy"
-    },
-    {
-      "id": "TfCdYdLm",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "Anon466",
-          "clientID": "ijgCsH8r",
-          "clanTag": null
-        },
-        {
-          "username": "lablabi",
-          "clientID": "cce1PmFk",
-          "clanTag": "DRM"
-        },
-        {
-          "username": "DaddysLilTater",
-          "clientID": "A7wdrcec",
-          "clanTag": null
-        }
-      ],
-      "map": "Titan",
-      "duration_s": 1284,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-07-11T10:38:14.681Z",
-      "url": "https://openfront.io/game/TfCdYdLm"
-    },
-    {
-      "id": "rVgybfcA",
-      "team": "Team 18",
-      "players": [
-        {
-          "username": "The Crusaders",
-          "clientID": "hzB6cQxz",
-          "clanTag": null
-        },
-        {
-          "username": "BaCkStAbBeR67",
-          "clientID": "YfNsQNbU",
-          "clanTag": null
-        },
-        {
-          "username": "SEND TROOPS",
-          "clientID": "Ji5yB4yE",
-          "clanTag": null
-        }
-      ],
-      "map": "Juan De Fuca Strait",
-      "duration_s": 1886,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 83,
-      "timestamp": "2026-07-08T10:45:51.821Z",
-      "url": "https://openfront.io/game/rVgybfcA"
-    },
-    {
-      "id": "2zPBCcxD",
-      "team": "Team 26",
-      "players": [
-        {
-          "username": "Qing Dynasty",
-          "clientID": "kj3BaN5n",
-          "clanTag": null
-        }
-      ],
-      "map": "Indian Subcontinent",
-      "duration_s": 902,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 100,
-      "timestamp": "2026-07-04T16:45:49.925Z",
-      "url": "https://openfront.io/game/2zPBCcxD"
-    },
-    {
-      "id": "ALSBu5BF",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "Gasem637",
-          "clientID": "TxStd81V",
-          "clanTag": "JOR"
-        },
-        {
-          "username": "Malekoev",
-          "clientID": "FHKTv5jk",
-          "clanTag": "JOR"
-        },
-        {
-          "username": "Trade Center",
-          "clientID": "PcYXS2hz",
-          "clanTag": null
-        }
-      ],
-      "map": "Mare Nostrum",
-      "duration_s": 1405,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 123,
-      "timestamp": "2026-06-29T18:30:50.383Z",
-      "url": "https://openfront.io/game/ALSBu5BF"
-    },
-    {
-      "id": "iJQP1mPM",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "KOTLET",
-          "clientID": "N8QWwUmd",
-          "clanTag": "PL"
-        },
-        {
-          "username": "Magdos",
-          "clientID": "hdp3XjFF",
-          "clanTag": "PL"
-        },
-        {
-          "username": "HUSARIA",
-          "clientID": "ngVW712t",
-          "clanTag": "PL"
-        }
-      ],
-      "map": "Great Lakes",
-      "duration_s": 1460,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 93,
-      "timestamp": "2026-06-21T18:11:20.550Z",
-      "url": "https://openfront.io/game/iJQP1mPM"
-    },
-    {
       "id": "T7pqPPb3",
       "team": "Team 3",
       "players": [
@@ -1357,445 +673,269 @@
       "url": "https://openfront.io/game/T7pqPPb3"
     },
     {
-      "id": "QfDbcEx1",
-      "team": "Team 6",
+      "id": "jvtaJLyr",
+      "team": "Team 2",
       "players": [
         {
-          "username": "Euskal",
-          "clientID": "kZ6Cyo81",
+          "username": "Monte",
+          "clientID": "g25UZ7o2",
+          "clanTag": "TGD"
+        },
+        {
+          "username": "bosh",
+          "clientID": "cqmxgmf8",
           "clanTag": null
         },
         {
-          "username": "jay",
-          "clientID": "cSeVdnr7",
+          "username": "AnonSkunk9",
+          "clientID": "MvMB4cNY",
           "clanTag": null
-        },
-        {
-          "username": "MFB",
-          "clientID": "FrfLpvcm",
-          "clanTag": "TR"
         }
       ],
-      "map": "Japan",
-      "duration_s": 653,
+      "map": "World",
+      "duration_s": 1269,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 24,
-      "timestamp": "2026-06-20T21:12:00.989Z",
-      "url": "https://openfront.io/game/QfDbcEx1"
+      "numPlayers": 33,
+      "timestamp": "2026-08-01T19:20:23.055Z",
+      "url": "https://openfront.io/game/jvtaJLyr"
     },
     {
-      "id": "6oWrVmku",
+      "id": "YNcJRWsy",
       "team": "Team 1",
       "players": [
         {
-          "username": "MineMageMinion",
-          "clientID": "Nkhus3oL",
-          "clanTag": "JILIJ"
+          "username": "Kellx",
+          "clientID": "CpfZaHYv",
+          "clanTag": "NHAND"
         },
         {
-          "username": "BaldAlphaMale",
-          "clientID": "bgwxtrBA",
-          "clanTag": "JILIJ"
+          "username": "Mex",
+          "clientID": "SSvTj6M9",
+          "clanTag": "NHAND"
+        },
+        {
+          "username": "ezclap",
+          "clientID": "HcjcuxRY",
+          "clanTag": "NHAND"
         }
       ],
-      "map": "Venice",
-      "duration_s": 1234,
+      "map": "SoutheastAsia",
+      "duration_s": 1089,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 39,
-      "timestamp": "2026-06-19T13:32:27.907Z",
-      "url": "https://openfront.io/game/6oWrVmku"
+      "numPlayers": 48,
+      "timestamp": "2026-07-29T19:18:53.703Z",
+      "url": "https://openfront.io/game/YNcJRWsy"
     },
     {
-      "id": "gA7MPrKq",
-      "team": "Team 31",
-      "players": [
-        {
-          "username": "Aesthetic",
-          "clientID": "eR3aESMs",
-          "clanTag": null
-        }
-      ],
-      "map": "Indian Subcontinent",
-      "duration_s": 1151,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 98,
-      "timestamp": "2026-06-18T23:03:36.868Z",
-      "url": "https://openfront.io/game/gA7MPrKq"
-    },
-    {
-      "id": "NCuMz49d",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "HELLO",
-          "clientID": "3oFdKwfi",
-          "clanTag": null
-        },
-        {
-          "username": "Anon608",
-          "clientID": "BKNtR2im",
-          "clanTag": null
-        },
-        {
-          "username": "emar",
-          "clientID": "6CbjrsAM",
-          "clanTag": "CARDS"
-        }
-      ],
-      "map": "Strait Of Malacca",
-      "duration_s": 904,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-06-16T04:41:07.840Z",
-      "url": "https://openfront.io/game/NCuMz49d"
-    },
-    {
-      "id": "up9UMaQk",
-      "team": "Yellow",
-      "players": [
-        {
-          "username": "Gxre",
-          "clientID": "Z56fjCHL",
-          "clanTag": null
-        },
-        {
-          "username": "THEBOOTYSNIFFERS",
-          "clientID": "zdLtmm26",
-          "clanTag": "NOT"
-        },
-        {
-          "username": "Jersey Giant",
-          "clientID": "fEQz1iM2",
-          "clanTag": null
-        }
-      ],
-      "map": "MilkyWay",
-      "duration_s": 571,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 15,
-      "timestamp": "2026-06-15T23:08:19.832Z",
-      "url": "https://openfront.io/game/up9UMaQk"
-    },
-    {
-      "id": "MAvTniM9",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "BLAUWTOOTH",
-          "clientID": "4XkiSqPN",
-          "clanTag": "KURK"
-        },
-        {
-          "username": "Kruiden",
-          "clientID": "yV21a9HT",
-          "clanTag": "KURK"
-        },
-        {
-          "username": "Flubba",
-          "clientID": "V6cb68FJ",
-          "clanTag": "KURK"
-        }
-      ],
-      "map": "Mena",
-      "duration_s": 1646,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-06-15T20:18:58.306Z",
-      "url": "https://openfront.io/game/MAvTniM9"
-    },
-    {
-      "id": "V2vFg5E7",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "Grand Kadhafi",
-          "clientID": "japiTjJE",
-          "clanTag": "PUTE"
-        },
-        {
-          "username": "President Mbiberon",
-          "clientID": "FvPw29ry",
-          "clanTag": "PUTE"
-        },
-        {
-          "username": "Napoleon",
-          "clientID": "9fQRsVNV",
-          "clanTag": "PUTE"
-        }
-      ],
-      "map": "Strait Of Malacca",
-      "duration_s": 724,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-06-15T08:40:42.353Z",
-      "url": "https://openfront.io/game/V2vFg5E7"
-    },
-    {
-      "id": "XaHeJyuq",
+      "id": "EYUWsHeK",
       "team": "Team 12",
       "players": [
         {
-          "username": "Anon330",
-          "clientID": "2rcrXZcV",
-          "clanTag": null
-        },
-        {
-          "username": "BaldingGuy",
-          "clientID": "JX2X4fMR",
-          "clanTag": "DK"
+          "username": "Let it burn",
+          "clientID": "UTDpetny",
+          "clanTag": "HELL"
         }
       ],
-      "map": "Nile Delta",
-      "duration_s": 1004,
+      "map": "Pluto",
+      "duration_s": 2005,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 54,
-      "timestamp": "2026-06-14T09:25:53.480Z",
-      "url": "https://openfront.io/game/XaHeJyuq"
+      "numPlayers": 73,
+      "timestamp": "2026-07-26T18:28:02.829Z",
+      "url": "https://openfront.io/game/EYUWsHeK"
     },
     {
-      "id": "uLiD5pxN",
+      "id": "kAdJ9bV5",
       "team": "Team 2",
       "players": [
         {
-          "username": "Riplers smelly armpits",
-          "clientID": "i37z9BPF",
-          "clanTag": "FEM"
+          "username": "Big Girly",
+          "clientID": "bGD37Nep",
+          "clanTag": "WW"
         },
         {
-          "username": "Princess Peach",
-          "clientID": "Xt8AsgMd",
-          "clanTag": "FEM"
-        },
-        {
-          "username": "Riplers sweaty balls",
-          "clientID": "q1uEE6jJ",
-          "clanTag": "FEM"
+          "username": "Paleontologist",
+          "clientID": "MbvCbgFq",
+          "clanTag": "WW"
         }
       ],
-      "map": "Mars",
-      "duration_s": 1014,
+      "map": "Svalmel",
+      "duration_s": 933,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 51,
-      "timestamp": "2026-06-13T21:56:09.927Z",
-      "url": "https://openfront.io/game/uLiD5pxN"
+      "numPlayers": 36,
+      "timestamp": "2026-07-25T19:04:09.492Z",
+      "url": "https://openfront.io/game/kAdJ9bV5"
     },
     {
-      "id": "XqsXrKDL",
-      "team": "Team 4",
+      "id": "Yx8jo3eB",
+      "team": "Team 2",
       "players": [
         {
-          "username": "EZkiel",
-          "clientID": "r1TANNJj",
-          "clanTag": "IDF"
+          "username": "barwelito",
+          "clientID": "KM7pyd7a",
+          "clanTag": "FLEX"
         },
         {
-          "username": "Human shield",
-          "clientID": "LdaSLzDz",
-          "clanTag": "IDF"
+          "username": "SKIBIDI SIGMA",
+          "clientID": "DEMx4XA4",
+          "clanTag": "FLEX"
         },
         {
-          "username": "Anon035",
-          "clientID": "A2Yy6JQu",
-          "clanTag": null
+          "username": "Mikoszkot",
+          "clientID": "YPTuoREs",
+          "clanTag": "FLEX"
         }
       ],
-      "map": "Deglaciated Antarctica",
-      "duration_s": 1417,
+      "map": "Baja California",
+      "duration_s": 911,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-06-13T15:11:12.259Z",
-      "url": "https://openfront.io/game/XqsXrKDL"
+      "numPlayers": 63,
+      "timestamp": "2026-07-22T12:25:16.819Z",
+      "url": "https://openfront.io/game/Yx8jo3eB"
     },
     {
-      "id": "fJyqMe45",
-      "team": "Team 13",
+      "id": "HGeCbFdJ",
+      "team": "Team 7",
       "players": [
         {
-          "username": "Butterlord",
-          "clientID": "z7rfjgmn",
+          "username": "top of the hourglass",
+          "clientID": "mMR5oafF",
+          "clanTag": "FB"
+        },
+        {
+          "username": "pffffftgoodboyyodiplomat",
+          "clientID": "r1hDGLFY",
           "clanTag": null
         },
         {
-          "username": "Chip",
-          "clientID": "AFf4A7TP",
+          "username": "I smoke fish",
+          "clientID": "GVYTqsbM",
+          "clanTag": "FB"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1422,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-07-17T23:21:30.024Z",
+      "url": "https://openfront.io/game/HGeCbFdJ"
+    },
+    {
+      "id": "cdDa67h2",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Paleontologist",
+          "clientID": "XHzWjrFa",
+          "clanTag": "WW"
+        },
+        {
+          "username": "Anon986",
+          "clientID": "9hHU7653",
+          "clanTag": "WW"
+        },
+        {
+          "username": "Vanderpump",
+          "clientID": "aNFKmHLU",
           "clanTag": null
         }
       ],
       "map": "Montreal",
-      "duration_s": 1339,
+      "duration_s": 1047,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 75,
-      "timestamp": "2026-06-11T12:12:22.334Z",
-      "url": "https://openfront.io/game/fJyqMe45"
+      "numPlayers": 61,
+      "timestamp": "2026-07-06T22:59:19.356Z",
+      "url": "https://openfront.io/game/cdDa67h2"
     },
     {
-      "id": "HNBpdaWE",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "Train Me",
-          "clientID": "fYZKJVAq",
-          "clanTag": "NUB"
-        },
-        {
-          "username": "Temujin",
-          "clientID": "CY2rTcvH",
-          "clanTag": "NUB"
-        },
-        {
-          "username": "LeVi",
-          "clientID": "47hcnwZw",
-          "clanTag": "NUB"
-        }
-      ],
-      "map": "Europe",
-      "duration_s": 1169,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 90,
-      "timestamp": "2026-06-10T20:26:23.051Z",
-      "url": "https://openfront.io/game/HNBpdaWE"
-    },
-    {
-      "id": "hxNsW15g",
-      "team": "Team 13",
-      "players": [
-        {
-          "username": "Maoist China",
-          "clientID": "PLAMttVh",
-          "clanTag": null
-        },
-        {
-          "username": "Germany",
-          "clientID": "4An9w8fi",
-          "clanTag": null
-        }
-      ],
-      "map": "Two Lakes",
-      "duration_s": 870,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 92,
-      "timestamp": "2026-06-08T13:30:37.657Z",
-      "url": "https://openfront.io/game/hxNsW15g"
-    },
-    {
-      "id": "RMKhXRQT",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "Shichousei",
-          "clientID": "VBYUUYaQ",
-          "clanTag": null
-        },
-        {
-          "username": "IRQ",
-          "clientID": "u1bZCkna",
-          "clanTag": "IRAQ"
-        },
-        {
-          "username": "daffy101",
-          "clientID": "8XvduVwA",
-          "clanTag": null
-        }
-      ],
-      "map": "Between Two Seas",
-      "duration_s": 842,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 29,
-      "timestamp": "2026-06-01T00:00:37.023Z",
-      "url": "https://openfront.io/game/RMKhXRQT"
-    },
-    {
-      "id": "pAx1EaAR",
-      "team": "Red",
-      "players": [
-        {
-          "username": "Epstego",
-          "clientID": "X6F1fEQF",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Smynay",
-          "clientID": "KwPufi7B",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Bushidze",
-          "clientID": "TdyqokFY",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Hawaii",
-      "duration_s": 814,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 15,
-      "timestamp": "2026-05-30T13:33:54.578Z",
-      "url": "https://openfront.io/game/pAx1EaAR"
-    },
-    {
-      "id": "tiAhj6L4",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "Linkor",
-          "clientID": "jyx7iTHq",
-          "clanTag": "OO"
-        },
-        {
-          "username": "Nonex",
-          "clientID": "HwMKGyaD",
-          "clanTag": "OO"
-        },
-        {
-          "username": "LET ME SNOWBALL",
-          "clientID": "iez8DxUf",
-          "clanTag": "OO"
-        }
-      ],
-      "map": "Pluto",
-      "duration_s": 957,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 75,
-      "timestamp": "2026-05-25T19:47:12.234Z",
-      "url": "https://openfront.io/game/tiAhj6L4"
-    },
-    {
-      "id": "QmMQpTkD",
+      "id": "G6ZBr8GL",
       "team": "Team 1",
       "players": [
         {
-          "username": "Nerg",
-          "clientID": "J9pDsUNM",
+          "username": "Joshavatar",
+          "clientID": "7iSJmy6R",
           "clanTag": "UN"
         },
         {
-          "username": "SUPPORT",
-          "clientID": "YYvcwhBu",
+          "username": "Anon594",
+          "clientID": "eWvk4yMW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "yub",
+          "clientID": "b9cyXdjW",
           "clanTag": "UN"
         }
       ],
       "map": "Nile Delta",
-      "duration_s": 1147,
+      "duration_s": 1528,
       "difficulty": "Medium",
       "bots": 400,
       "numPlayers": 51,
-      "timestamp": "2026-05-08T13:51:26.891Z",
-      "url": "https://openfront.io/game/QmMQpTkD"
+      "timestamp": "2026-06-26T14:35:01.540Z",
+      "url": "https://openfront.io/game/G6ZBr8GL"
+    },
+    {
+      "id": "b4ifsVSs",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Funnee",
+          "clientID": "AXQAbNGD",
+          "clanTag": "SHDS"
+        },
+        {
+          "username": "busterfoo",
+          "clientID": "qUecHJkZ",
+          "clanTag": "SHDS"
+        },
+        {
+          "username": "Anon624",
+          "clientID": "pnsdqDq5",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1703,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-06-22T02:34:55.628Z",
+      "url": "https://openfront.io/game/b4ifsVSs"
+    },
+    {
+      "id": "6USi7xxu",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "GVM",
+          "clientID": "JTLuTF7W",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Albania",
+          "clientID": "FyYTmuCf",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Zesty",
+          "clientID": "sJE1oxvt",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 763,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-06-21T10:03:54.081Z",
+      "url": "https://openfront.io/game/6USi7xxu"
     }
   ],
   "quads": [
@@ -2235,897 +1375,414 @@
       "url": "https://openfront.io/game/uqNmpQCo"
     },
     {
-      "id": "imWNdnss",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "BORT",
-          "clientID": "shckGvnR",
-          "clanTag": null
-        },
-        {
-          "username": "Geopolitik",
-          "clientID": "KN9cv4dH",
-          "clanTag": null
-        },
-        {
-          "username": "Dudes",
-          "clientID": "7urZmC3g",
-          "clanTag": "EUW"
-        },
-        {
-          "username": "Wanderhure",
-          "clientID": "QXfx66US",
-          "clanTag": "EUW"
-        }
-      ],
-      "map": "Dyslexdria",
-      "duration_s": 1173,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 56,
-      "timestamp": "2026-08-02T12:28:49.713Z",
-      "url": "https://openfront.io/game/imWNdnss"
-    },
-    {
-      "id": "qxTKyVb6",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "dummypoopoo",
-          "clientID": "ESbbu13e",
-          "clanTag": null
-        },
-        {
-          "username": "TreBetcha",
-          "clientID": "UFG51Tru",
-          "clanTag": "BE"
-        },
-        {
-          "username": "Soviet union",
-          "clientID": "4wtjp2zZ",
-          "clanTag": null
-        },
-        {
-          "username": "Aariz",
-          "clientID": "uTtHP8nc",
-          "clanTag": null
-        }
-      ],
-      "map": "Mississippi River",
-      "duration_s": 891,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-01T19:11:05.983Z",
-      "url": "https://openfront.io/game/qxTKyVb6"
-    },
-    {
-      "id": "gu1Jynf8",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "hey",
-          "clientID": "9DDeFNTz",
-          "clanTag": null
-        },
-        {
-          "username": "KARA",
-          "clientID": "Jw3cRmno",
-          "clanTag": "POPO"
-        },
-        {
-          "username": "red",
-          "clientID": "AqRdj9Ej",
-          "clanTag": null
-        },
-        {
-          "username": "StrangerWithin",
-          "clientID": "HoY1HCDH",
-          "clanTag": "POPO"
-        }
-      ],
-      "map": "Between Two Seas",
-      "duration_s": 1574,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 51,
-      "timestamp": "2026-08-01T06:18:47.997Z",
-      "url": "https://openfront.io/game/gu1Jynf8"
-    },
-    {
-      "id": "BwuHZXHL",
+      "id": "qg4rwsxK",
       "team": "Team 6",
       "players": [
         {
-          "username": "koko",
-          "clientID": "zTF1jgk9",
+          "username": "DaddysLittlePrincess",
+          "clientID": "1y28D7sL",
           "clanTag": null
         },
         {
-          "username": "Dev Corp.",
-          "clientID": "8Xk8AD5w",
-          "clanTag": "AKUI"
-        }
-      ],
-      "map": "Mars",
-      "duration_s": 944,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 67,
-      "timestamp": "2026-07-27T08:00:38.812Z",
-      "url": "https://openfront.io/game/BwuHZXHL"
-    },
-    {
-      "id": "m9zf3gBw",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "GoySL",
-          "clientID": "Nv2veNEp",
-          "clanTag": "GUNK"
+          "username": "DigitalGold",
+          "clientID": "5f9yJ7em",
+          "clanTag": "BTC"
         },
         {
-          "username": "sigh",
-          "clientID": "mLFv9dCc",
-          "clanTag": "GUNK"
+          "username": "Anon679",
+          "clientID": "DAfQr9Pa",
+          "clanTag": null
         },
         {
-          "username": "Luftwaffle",
-          "clientID": "n8ocEQRJ",
-          "clanTag": "GUNK"
-        },
-        {
-          "username": "AnonBison6",
-          "clientID": "6oWb4rhU",
+          "username": "KOR",
+          "clientID": "UFYYVDyH",
           "clanTag": null
         }
       ],
-      "map": "Aegean",
-      "duration_s": 1132,
+      "map": "South America",
+      "duration_s": 908,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-07-27T02:56:17.711Z",
-      "url": "https://openfront.io/game/m9zf3gBw"
+      "numPlayers": 68,
+      "timestamp": "2026-08-02T17:34:52.482Z",
+      "url": "https://openfront.io/game/qg4rwsxK"
     },
     {
-      "id": "XLBGr4Qg",
+      "id": "f2gaHbUt",
       "team": "Team 2",
       "players": [
         {
-          "username": "Anon67",
-          "clientID": "omA9GdUt",
+          "username": "Your mom",
+          "clientID": "gMi4mRw4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "REZAAGHABGARD",
+          "clientID": "iCPaDsgB",
           "clanTag": null
         },
         {
-          "username": "Timbo",
-          "clientID": "Qzvk9fx7",
-          "clanTag": "BUTT"
+          "username": "DeineMutter",
+          "clientID": "Z9vbRCnN",
+          "clanTag": "UN"
         },
         {
-          "username": "Bombidaro",
-          "clientID": "EzqUabxh",
-          "clanTag": "BUTT"
+          "username": "AnonHamster1",
+          "clientID": "hY7rNzAY",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 852,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-02T10:50:17.924Z",
+      "url": "https://openfront.io/game/f2gaHbUt"
+    },
+    {
+      "id": "5dSyxFRK",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TOHID THE GREAT",
+          "clientID": "RwRxwf9d",
+          "clanTag": "RIP"
         },
         {
-          "username": "AnonLadybug6",
-          "clientID": "6aeoirsX",
+          "username": "fromage",
+          "clientID": "aQTwa5qv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonKoala3",
+          "clientID": "asg6Utdk",
+          "clanTag": null
+        },
+        {
+          "username": "LeChat",
+          "clientID": "pw7aBtJF",
+          "clanTag": "26"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1644,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-01T23:58:01.144Z",
+      "url": "https://openfront.io/game/5dSyxFRK"
+    },
+    {
+      "id": "XcQU5fRq",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Erteschio",
+          "clientID": "Jmaeh39h",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "roman republic",
+          "clientID": "u2vpzaY3",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "Uncle Sam",
+          "clientID": "pbBdCuVv",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1090,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-07-30T13:27:45.308Z",
+      "url": "https://openfront.io/game/XcQU5fRq"
+    },
+    {
+      "id": "tt57aBEx",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "SIX",
+          "clientID": "hYyQuNdK",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1401,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-07-29T13:49:50.800Z",
+      "url": "https://openfront.io/game/tt57aBEx"
+    },
+    {
+      "id": "vN3qkweu",
+      "team": "Green",
+      "players": [
+        {
+          "username": "LenaSSzi",
+          "clientID": "jeV1piSc",
+          "clanTag": null
+        },
+        {
+          "username": "obamka",
+          "clientID": "JJFtA4X7",
+          "clanTag": "NUSSY"
+        },
+        {
+          "username": "Anon827",
+          "clientID": "vSxnJFma",
+          "clanTag": null
+        },
+        {
+          "username": "Ayven",
+          "clientID": "cRxoWwRw",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1802,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-07-28T13:02:22.848Z",
+      "url": "https://openfront.io/game/vN3qkweu"
+    },
+    {
+      "id": "pfhpneLe",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "soarzv",
+          "clientID": "g3junGrA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "rivaled",
+          "clientID": "rwLxrTHQ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 981,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-07-26T02:24:52.748Z",
+      "url": "https://openfront.io/game/pfhpneLe"
+    },
+    {
+      "id": "tCJGPUuP",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Lettuce",
+          "clientID": "KSmYVL8j",
+          "clanTag": "UN"
+        },
+        {
+          "username": "JonaMdz",
+          "clientID": "LXPmnYUq",
+          "clanTag": null
+        },
+        {
+          "username": "piggy",
+          "clientID": "rhih8WQb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ESPANYA",
+          "clientID": "2LpUcruS",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 979,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-07-22T01:25:17.124Z",
+      "url": "https://openfront.io/game/tCJGPUuP"
+    },
+    {
+      "id": "rTvchKvX",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Error404",
+          "clientID": "Z4zYMuxb",
+          "clanTag": null
+        },
+        {
+          "username": "Botas",
+          "clientID": "xHyA5aw3",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Anon953",
+          "clientID": "Y8CxrxEP",
           "clanTag": null
         }
       ],
       "map": "Svalmel",
-      "duration_s": 1053,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 48,
-      "timestamp": "2026-07-19T22:23:27.752Z",
-      "url": "https://openfront.io/game/XLBGr4Qg"
-    },
-    {
-      "id": "JFAvgaFD",
-      "team": "Green",
-      "players": [
-        {
-          "username": "VOC",
-          "clientID": "kpw3fFHb",
-          "clanTag": "TRADE"
-        },
-        {
-          "username": "Anon751",
-          "clientID": "QGAKueNp",
-          "clanTag": null
-        }
-      ],
-      "map": "Four Islands",
-      "duration_s": 1376,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 20,
-      "timestamp": "2026-07-04T16:45:57.926Z",
-      "url": "https://openfront.io/game/JFAvgaFD"
-    },
-    {
-      "id": "PKmGib7p",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "Wren",
-          "clientID": "GHwqeJUz",
-          "clanTag": "UN"
-        },
-        {
-          "username": "John",
-          "clientID": "F9E4ZAas",
-          "clanTag": null
-        },
-        {
-          "username": "CatKid",
-          "clientID": "2i4d6sou",
-          "clanTag": "UN"
-        },
-        {
-          "username": "selahaddin eyyubi",
-          "clientID": "tAy8LL3w",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Lemnos",
-      "duration_s": 1731,
+      "duration_s": 1116,
       "difficulty": "Medium",
       "bots": 400,
       "numPlayers": 36,
-      "timestamp": "2026-07-03T19:56:17.926Z",
-      "url": "https://openfront.io/game/PKmGib7p"
+      "timestamp": "2026-07-14T17:32:27.275Z",
+      "url": "https://openfront.io/game/rTvchKvX"
     },
     {
-      "id": "L3bszDAa",
-      "team": "Green",
+      "id": "qbfZUP4Z",
+      "team": "Team 12",
       "players": [
         {
-          "username": "peacefulish",
-          "clientID": "Wh3yibkD",
-          "clanTag": "BAGEL"
-        },
-        {
-          "username": "BRETAGNE",
-          "clientID": "QkTFCjcV",
-          "clanTag": "BZH"
-        }
-      ],
-      "map": "Pangaea",
-      "duration_s": 1018,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 20,
-      "timestamp": "2026-07-01T14:33:40.391Z",
-      "url": "https://openfront.io/game/L3bszDAa"
-    },
-    {
-      "id": "2ewHEfL9",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Noducor",
-          "clientID": "kjpXMjTH",
-          "clanTag": "GRG"
-        },
-        {
-          "username": "TheGOAT",
-          "clientID": "fRJhHvvC",
-          "clanTag": "GRG"
-        },
-        {
-          "username": "circulus",
-          "clientID": "97zJD1gW",
-          "clanTag": "GRG"
-        },
-        {
-          "username": "Yerp",
-          "clientID": "wHBjgSgk",
-          "clanTag": null
-        }
-      ],
-      "map": "Warship Warship",
-      "duration_s": 1348,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 52,
-      "timestamp": "2026-07-01T00:00:54.567Z",
-      "url": "https://openfront.io/game/2ewHEfL9"
-    },
-    {
-      "id": "NMKX5L2s",
-      "team": "Team 11",
-      "players": [
-        {
-          "username": "Anon047",
-          "clientID": "4fyQmQpJ",
+          "username": "Pr26",
+          "clientID": "mcFtqhth",
           "clanTag": null
         },
         {
-          "username": "Ismael",
-          "clientID": "QcTfDxBG",
-          "clanTag": null
-        },
-        {
-          "username": "frend",
-          "clientID": "JG4TyX5n",
-          "clanTag": null
+          "username": "Brennero",
+          "clientID": "F7Qfif3R",
+          "clanTag": "WP"
         }
       ],
       "map": "SoutheastAsia",
-      "duration_s": 1030,
+      "duration_s": 1654,
       "difficulty": "Medium",
       "bots": 400,
       "numPlayers": 48,
-      "timestamp": "2026-06-28T20:02:26.603Z",
-      "url": "https://openfront.io/game/NMKX5L2s"
+      "timestamp": "2026-07-11T10:47:49.237Z",
+      "url": "https://openfront.io/game/qbfZUP4Z"
     },
     {
-      "id": "YgY12aq1",
+      "id": "doEcYKzh",
       "team": "Team 2",
       "players": [
         {
-          "username": "NonozGastoni",
-          "clientID": "3Taanx7V",
-          "clanTag": "LU"
+          "username": "whereisesphosassat",
+          "clientID": "E46wc433",
+          "clanTag": "SWE"
         },
         {
-          "username": "mopitorou",
-          "clientID": "bH5uscoB",
-          "clanTag": "LU"
+          "username": "AnoAwoo",
+          "clientID": "4PXQ3Xpd",
+          "clanTag": "SWE"
         },
         {
-          "username": "Gabriel Eckert",
-          "clientID": "HGfLNbVF",
-          "clanTag": "LU"
-        },
-        {
-          "username": "HRH Grand Duke Henri",
-          "clientID": "c9vohmLm",
-          "clanTag": "LU"
+          "username": "Fluppe",
+          "clientID": "NA3iMYSx",
+          "clanTag": null
         }
       ],
-      "map": "South America",
-      "duration_s": 1622,
+      "map": "World Inverted",
+      "duration_s": 992,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 52,
-      "timestamp": "2026-06-23T23:09:35.675Z",
-      "url": "https://openfront.io/game/YgY12aq1"
+      "numPlayers": 80,
+      "timestamp": "2026-07-02T12:17:28.917Z",
+      "url": "https://openfront.io/game/doEcYKzh"
     },
     {
-      "id": "G16jS1FH",
-      "team": "Team 1",
+      "id": "uRGt5mbR",
+      "team": "Team 2",
       "players": [
         {
-          "username": "Train Depot",
-          "clientID": "GpMFz7wK",
+          "username": "JiggleDiggle101",
+          "clientID": "YNVCzaKn",
+          "clanTag": "111"
+        },
+        {
+          "username": "Georgedroyd67",
+          "clientID": "pdgrJQ77",
+          "clanTag": "111"
+        },
+        {
+          "username": "fullofliam",
+          "clientID": "DMkKG8Qb",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 1124,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-06-30T20:30:24.266Z",
+      "url": "https://openfront.io/game/uRGt5mbR"
+    },
+    {
+      "id": "cEoBvfQ9",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "Trade Only",
+          "clientID": "1bQ9b6GL",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1171,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 89,
+      "timestamp": "2026-06-26T10:41:24.883Z",
+      "url": "https://openfront.io/game/cEoBvfQ9"
+    },
+    {
+      "id": "kwyyx4gn",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Anon699",
+          "clientID": "MDE3Rt4K",
           "clanTag": null
         },
         {
-          "username": "johnmuddy",
-          "clientID": "b6UfG1HV",
-          "clanTag": "ITA"
+          "username": "Lechuga",
+          "clientID": "be3hStAF",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 818,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-06-22T14:52:58.432Z",
+      "url": "https://openfront.io/game/kwyyx4gn"
+    },
+    {
+      "id": "3eWvR6vm",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "nultien",
+          "clientID": "jqvtMqYM",
+          "clanTag": null
         },
         {
-          "username": "Toja",
-          "clientID": "5SGbZy9X",
+          "username": "hlbwlt",
+          "clientID": "ChCzB6pw",
+          "clanTag": null
+        },
+        {
+          "username": "jojo",
+          "clientID": "mMNMeWTz",
           "clanTag": null
         }
       ],
       "map": "Mena",
-      "duration_s": 1351,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 80,
-      "timestamp": "2026-06-20T17:48:51.552Z",
-      "url": "https://openfront.io/game/G16jS1FH"
-    },
-    {
-      "id": "YAuwL6vG",
-      "team": "Team 8",
-      "players": [
-        {
-          "username": "yoo",
-          "clientID": "sLu5ZzLc",
-          "clanTag": null
-        }
-      ],
-      "map": "Giant World Map",
-      "duration_s": 3402,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 112,
-      "timestamp": "2026-06-19T17:04:32.968Z",
-      "url": "https://openfront.io/game/YAuwL6vG"
-    },
-    {
-      "id": "bTY1YFoV",
-      "team": "Orange",
-      "players": [
-        {
-          "username": "Dr Frazir",
-          "clientID": "QNG72yje",
-          "clanTag": "BZH"
-        },
-        {
-          "username": "dont bomb me please",
-          "clientID": "HopYc1Jd",
-          "clanTag": null
-        },
-        {
-          "username": "Marty",
-          "clientID": "hnoeGTBV",
-          "clanTag": "GPT"
-        },
-        {
-          "username": "Tsu",
-          "clientID": "c3c5yoCc",
-          "clanTag": null
-        }
-      ],
-      "map": "Japan",
-      "duration_s": 635,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 24,
-      "timestamp": "2026-06-18T23:03:53.380Z",
-      "url": "https://openfront.io/game/bTY1YFoV"
-    },
-    {
-      "id": "9u2UhB5i",
-      "team": "Yellow",
-      "players": [
-        {
-          "username": "anti",
-          "clientID": "jryiR62b",
-          "clanTag": "1111"
-        },
-        {
-          "username": "Mouse",
-          "clientID": "rVDzR7M8",
-          "clanTag": null
-        },
-        {
-          "username": "China_Town",
-          "clientID": "Sa9UUqFu",
-          "clanTag": "CHINA"
-        },
-        {
-          "username": "Anon561",
-          "clientID": "h9u2CneT",
-          "clanTag": null
-        }
-      ],
-      "map": "Caucasus",
-      "duration_s": 1069,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 28,
-      "timestamp": "2026-06-17T21:23:28.348Z",
-      "url": "https://openfront.io/game/9u2UhB5i"
-    },
-    {
-      "id": "ui9SVVcy",
-      "team": "Team 9",
-      "players": [
-        {
-          "username": "HellRaiser",
-          "clientID": "Fa1XHrYn",
-          "clanTag": null
-        },
-        {
-          "username": "Anon537",
-          "clientID": "EaiATJyt",
-          "clanTag": null
-        }
-      ],
-      "map": "Africa",
-      "duration_s": 1465,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 108,
-      "timestamp": "2026-06-15T18:53:01.248Z",
-      "url": "https://openfront.io/game/ui9SVVcy"
-    },
-    {
-      "id": "YdNNhsMe",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "VeryAntiseptic",
-          "clientID": "KPfFsAEw",
-          "clanTag": null
-        },
-        {
-          "username": "IRAN TAHA",
-          "clientID": "AoVRXoEy",
-          "clanTag": "RIP"
-        },
-        {
-          "username": "POOFY",
-          "clientID": "BwjsgHf4",
-          "clanTag": null
-        },
-        {
-          "username": "SmellyMedusa.mG9R",
-          "clientID": "1ptxL9yJ",
-          "clanTag": null
-        }
-      ],
-      "map": "World",
-      "duration_s": 819,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 32,
-      "timestamp": "2026-06-15T13:06:04.483Z",
-      "url": "https://openfront.io/game/YdNNhsMe"
-    },
-    {
-      "id": "qTQLftiH",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "Anon854",
-          "clientID": "4xxm1SQi",
-          "clanTag": null
-        },
-        {
-          "username": "WWWWWW",
-          "clientID": "AEiNL5zs",
-          "clanTag": null
-        },
-        {
-          "username": "Marcosr54",
-          "clientID": "HXUYsu9A",
-          "clanTag": null
-        }
-      ],
-      "map": "World",
-      "duration_s": 971,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 32,
-      "timestamp": "2026-06-14T17:23:08.673Z",
-      "url": "https://openfront.io/game/qTQLftiH"
-    },
-    {
-      "id": "S7aMnH1L",
-      "team": "Team 6",
-      "players": [
-        {
-          "username": "syrup trader",
-          "clientID": "5apeVeSQ",
-          "clanTag": "MAPLE"
-        },
-        {
-          "username": "Anon008",
-          "clientID": "e2gysESF",
-          "clanTag": null
-        },
-        {
-          "username": "Laaa_cez",
-          "clientID": "LgbpM9tN",
-          "clanTag": null
-        }
-      ],
-      "map": "Europe",
-      "duration_s": 1325,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 82,
-      "timestamp": "2026-06-11T02:24:42.331Z",
-      "url": "https://openfront.io/game/S7aMnH1L"
-    },
-    {
-      "id": "gqzpFGGj",
-      "team": "Team 23",
-      "players": [
-        {
-          "username": "Bretagne Rouge",
-          "clientID": "nieAKfpi",
-          "clanTag": null
-        },
-        {
-          "username": "frie",
-          "clientID": "ByeAMFyC",
-          "clanTag": null
-        },
-        {
-          "username": "Ukraine",
-          "clientID": "Z54APb1u",
-          "clanTag": "UA"
-        }
-      ],
-      "map": "Los Angeles",
-      "duration_s": 2083,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 104,
-      "timestamp": "2026-06-10T14:23:11.099Z",
-      "url": "https://openfront.io/game/gqzpFGGj"
-    },
-    {
-      "id": "LVwSh9uA",
-      "team": "Team 15",
-      "players": [
-        {
-          "username": "YOURSELF FRIEND",
-          "clientID": "BvtFQYWQ",
-          "clanTag": "LOVE"
-        },
-        {
-          "username": "Pig",
-          "clientID": "jKevtQGb",
-          "clanTag": null
-        }
-      ],
-      "map": "Europe",
-      "duration_s": 1917,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 81,
-      "timestamp": "2026-06-07T07:56:01.032Z",
-      "url": "https://openfront.io/game/LVwSh9uA"
-    },
-    {
-      "id": "hfP5FLMf",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Le_Chevre",
-          "clientID": "M1a6t3ek",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Player 123",
-          "clientID": "kywoTys4",
-          "clanTag": "UN"
-        },
-        {
-          "username": "gender dysphoria",
-          "clientID": "Rn94XrUV",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "World",
-      "duration_s": 790,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 32,
-      "timestamp": "2026-06-05T00:09:44.577Z",
-      "url": "https://openfront.io/game/hfP5FLMf"
-    },
-    {
-      "id": "LE6ToDvL",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "baptou",
-          "clientID": "m5CYrREw",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Submit to Christ",
-          "clientID": "TnE9utRv",
-          "clanTag": "UN"
-        },
-        {
-          "username": "No Name",
-          "clientID": "MRFAitMp",
-          "clanTag": "UN"
-        },
-        {
-          "username": "emoji1_1",
-          "clientID": "24fMrUfk",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "World",
-      "duration_s": 584,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 32,
-      "timestamp": "2026-06-01T11:13:50.349Z",
-      "url": "https://openfront.io/game/LE6ToDvL"
-    },
-    {
-      "id": "L3bKmeJ8",
-      "team": "Team 17",
-      "players": [
-        {
-          "username": "Termina",
-          "clientID": "WwBaGrwL",
-          "clanTag": null
-        },
-        {
-          "username": "Yann",
-          "clientID": "7tCALQNA",
-          "clanTag": "NOOB"
-        }
-      ],
-      "map": "Europe",
-      "duration_s": 3411,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 98,
-      "timestamp": "2026-05-28T07:38:09.015Z",
-      "url": "https://openfront.io/game/L3bKmeJ8"
-    },
-    {
-      "id": "Ng1DBS6t",
-      "team": "Team 12",
-      "players": [
-        {
-          "username": "Herbert",
-          "clientID": "kXVZuxfi",
-          "clanTag": null
-        },
-        {
-          "username": "Czech Empire",
-          "clientID": "3rFopeBt",
-          "clanTag": "CZ"
-        },
-        {
-          "username": "Anon346",
-          "clientID": "WYo1e6xm",
-          "clanTag": null
-        },
-        {
-          "username": "elmbachel",
-          "clientID": "KtpySuRT",
-          "clanTag": null
-        }
-      ],
-      "map": "Europe",
-      "duration_s": 1372,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 112,
-      "timestamp": "2026-05-26T18:11:12.811Z",
-      "url": "https://openfront.io/game/Ng1DBS6t"
-    },
-    {
-      "id": "azbfkZ9k",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Nut",
-          "clientID": "XXXDhX6i",
-          "clanTag": "UN"
-        },
-        {
-          "username": "GhengisDong",
-          "clientID": "ZkKN7eSB",
-          "clanTag": "UN"
-        },
-        {
-          "username": "161",
-          "clientID": "smR5xz3Z",
-          "clanTag": "UN"
-        },
-        {
-          "username": "EagleEye",
-          "clientID": "sNXQwmGp",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Amazon River",
-      "duration_s": 981,
+      "duration_s": 1676,
       "difficulty": "Medium",
       "bots": 400,
       "numPlayers": 60,
-      "timestamp": "2026-05-21T15:09:42.100Z",
-      "url": "https://openfront.io/game/azbfkZ9k"
-    },
-    {
-      "id": "wigVQGCu",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "Borderlands",
-          "clientID": "mtJd3K7u",
-          "clanTag": "IND"
-        }
-      ],
-      "map": "Britannia",
-      "duration_s": 1578,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-05-15T17:08:02.948Z",
-      "url": "https://openfront.io/game/wigVQGCu"
-    },
-    {
-      "id": "kv5BqRWs",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "theZeroAlchemist",
-          "clientID": "6H3YDG13",
-          "clanTag": "EU"
-        },
-        {
-          "username": "Anon888",
-          "clientID": "gY7HTy7R",
-          "clanTag": null
-        },
-        {
-          "username": "bibi",
-          "clientID": "sE8uxQ9K",
-          "clanTag": null
-        },
-        {
-          "username": "mom",
-          "clientID": "GuzSj9Sz",
-          "clanTag": null
-        }
-      ],
-      "map": "North America",
-      "duration_s": 1018,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 53,
-      "timestamp": "2026-05-15T01:51:15.139Z",
-      "url": "https://openfront.io/game/kv5BqRWs"
-    },
-    {
-      "id": "a2RvwtVq",
-      "team": "Green",
-      "players": [
-        {
-          "username": "palestine",
-          "clientID": "18TgSjef",
-          "clanTag": null
-        },
-        {
-          "username": "licker",
-          "clientID": "uiEpqCay",
-          "clanTag": "BOOTY"
-        },
-        {
-          "username": "slap",
-          "clientID": "YA9bngPk",
-          "clanTag": "BOOTY"
-        },
-        {
-          "username": "mitenai",
-          "clientID": "ZM28skCE",
-          "clanTag": null
-        }
-      ],
-      "map": "MilkyWay",
-      "duration_s": 509,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 20,
-      "timestamp": "2026-05-12T19:18:31.953Z",
-      "url": "https://openfront.io/game/a2RvwtVq"
-    },
-    {
-      "id": "yuDKwKvB",
-      "team": "Team 8",
-      "players": [
-        {
-          "username": "Peaceful AF",
-          "clientID": "fLUMeTzr",
-          "clanTag": null
-        },
-        {
-          "username": "Belgicae",
-          "clientID": "tMg6VhB3",
-          "clanTag": null
-        }
-      ],
-      "map": "Baja California",
-      "duration_s": 1231,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 64,
-      "timestamp": "2026-05-08T18:00:48.392Z",
-      "url": "https://openfront.io/game/yuDKwKvB"
+      "timestamp": "2026-06-21T18:20:22.018Z",
+      "url": "https://openfront.io/game/3eWvR6vm"
     }
   ]
 }
