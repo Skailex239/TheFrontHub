@@ -7222,6 +7222,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-03T16:36:33.101Z",
       "url": "https://openfront.io/game/QM1yWB2z"
+    },
+    {
+      "id": "qhDmXVP9",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "RememberMe",
+          "clientID": "6Jwz4ruU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHedgehog5",
+          "clientID": "dYbThitv",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1158,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-03T16:53:51.107Z",
+      "url": "https://openfront.io/game/qhDmXVP9"
     }
   ]
 }
