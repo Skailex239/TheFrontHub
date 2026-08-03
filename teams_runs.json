@@ -1192,6 +1192,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-03T09:39:42.432Z",
       "url": "https://openfront.io/game/na2D8g6W"
+    },
+    {
+      "id": "1B82nuVe",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Miami Baby",
+          "clientID": "RkS4A8s3",
+          "clanTag": null
+        },
+        {
+          "username": "laik atak",
+          "clientID": "62PMT1as",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 641,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-03T09:59:02.601Z",
+      "url": "https://openfront.io/game/1B82nuVe"
     }
   ],
   "trios": [
@@ -5315,6 +5338,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-03T09:37:59.343Z",
       "url": "https://openfront.io/game/Wc2Jut8X"
+    },
+    {
+      "id": "qCZZvaJy",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Guadalajara",
+          "clientID": "DsAYiw4b",
+          "clanTag": null
+        },
+        {
+          "username": "germany",
+          "clientID": "JC58NFqu",
+          "clanTag": null
+        },
+        {
+          "username": "calam",
+          "clientID": "d9rzLqtQ",
+          "clanTag": "CAT"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1095,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-03T09:47:22.911Z",
+      "url": "https://openfront.io/game/qCZZvaJy"
     }
   ]
 }
