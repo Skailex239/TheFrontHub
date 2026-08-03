@@ -6439,6 +6439,34 @@
       "numPlayers": 36,
       "timestamp": "2026-08-03T14:13:57.594Z",
       "url": "https://openfront.io/game/fQCRaNrP"
+    },
+    {
+      "id": "KgPpfGUp",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Support",
+          "clientID": "yKkY8k2C",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Grunge",
+          "clientID": "VN85bviC",
+          "clanTag": "AST"
+        },
+        {
+          "username": "dheer",
+          "clientID": "ENW4at18",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1480,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-03T14:05:14.091Z",
+      "url": "https://openfront.io/game/KgPpfGUp"
     }
   ]
 }
