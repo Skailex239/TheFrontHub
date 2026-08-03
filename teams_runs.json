@@ -1543,6 +1543,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-03T15:28:07.028Z",
       "url": "https://openfront.io/game/2cDwBVnB"
+    },
+    {
+      "id": "iHW19fei",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "jah",
+          "clientID": "c5EM624q",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mamdani",
+          "clientID": "S5MdhnZE",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 979,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "timestamp": "2026-08-03T15:44:31.528Z",
+      "url": "https://openfront.io/game/iHW19fei"
     }
   ],
   "trios": [
@@ -4070,6 +4093,47 @@
       "numPlayers": 90,
       "timestamp": "2026-08-03T15:15:41.290Z",
       "url": "https://openfront.io/game/jsS7Thyf"
+    },
+    {
+      "id": "bjCZLZ9h",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "Cactus Invictus",
+          "clientID": "YLvSSgU2",
+          "clanTag": null
+        },
+        {
+          "username": "Anon145",
+          "clientID": "3NggJ5av",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1111,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-03T15:41:07.832Z",
+      "url": "https://openfront.io/game/bjCZLZ9h"
+    },
+    {
+      "id": "CgEso3GQ",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "zen",
+          "clientID": "mbPgyNz1",
+          "clanTag": null
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 1978,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-03T15:31:03.210Z",
+      "url": "https://openfront.io/game/CgEso3GQ"
     }
   ],
   "quads": [
