@@ -4893,6 +4893,34 @@
       "numPlayers": 81,
       "timestamp": "2026-08-03T20:13:49.540Z",
       "url": "https://openfront.io/game/GzKbsi91"
+    },
+    {
+      "id": "7h2cE7qB",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "NeedHugs",
+          "clientID": "Ru6QxCfQ",
+          "clanTag": "JUICE"
+        },
+        {
+          "username": "TGD",
+          "clientID": "bpx4KzQj",
+          "clanTag": "JUICE"
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "hQvndZTn",
+          "clanTag": "JUICE"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1007,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-03T22:34:47.180Z",
+      "url": "https://openfront.io/game/7h2cE7qB"
     }
   ],
   "quads": [
@@ -8487,6 +8515,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-03T22:08:31.677Z",
       "url": "https://openfront.io/game/b8mZmWS1"
+    },
+    {
+      "id": "GpnT3ZL2",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "steve",
+          "clientID": "Za7HTyjz",
+          "clanTag": null
+        },
+        {
+          "username": "GVM",
+          "clientID": "BfXyocVs",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "KiraThePoop",
+          "clientID": "1VxXeBzL",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "TIOONICHAN",
+          "clientID": "6t1doK2m",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 810,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-03T22:40:40.288Z",
+      "url": "https://openfront.io/game/GpnT3ZL2"
     }
   ]
 }
