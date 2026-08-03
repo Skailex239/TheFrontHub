@@ -8571,6 +8571,39 @@
       "numPlayers": 80,
       "timestamp": "2026-08-03T22:40:40.288Z",
       "url": "https://openfront.io/game/GpnT3ZL2"
+    },
+    {
+      "id": "8Fa94eex",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Rawr",
+          "clientID": "faya25cs",
+          "clanTag": "UN"
+        },
+        {
+          "username": "hello there",
+          "clientID": "XcDzWDSQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CrimsonXuluz",
+          "clientID": "5qB9ux4B",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SendTroopsToFront",
+          "clientID": "wreUjnpN",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 861,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-03T23:18:33.240Z",
+      "url": "https://openfront.io/game/8Fa94eex"
     }
   ]
 }
