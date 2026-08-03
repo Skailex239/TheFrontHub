@@ -15,7 +15,7 @@ try {
   // .env optionnel
 }
 
-import fetch from "node-fetch";
+// On utilise le fetch global (Node 18+), pas node-fetch (voir openfront-api.js).
 import zlib from "zlib";
 import {
   API_BASE,
