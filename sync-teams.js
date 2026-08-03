@@ -25,6 +25,8 @@ const DETAIL_CONCURRENCY = 12;
 const TIME_OFFSET_SECS = 32;
 const MIN_HUMANS = 10;
 const TOP_PER_MAP = 25; // for public payload only
+const TARGET_DATE = new Date("2025-11-01").getTime(); // backfill jusqu'à nov 2025
+const DEFAULT_HISTORY_WINDOWS = 500; // fenêtres par cycle de backfill
 
 // ── File paths ──
 const RUNS_FILE = "teams_runs.json";        // { duos: [...], trios: [...], quads: [...] }
@@ -306,16 +308,119 @@ function generatePublicPayload(runs) {
   console.log(`[teams] 📦 Public payload: ${(zlib.gzipSync(json).length / 1024).toFixed(1)} KB, ${totalRuns} runs total, ${totals.duos} duo / ${totals.trios} trio / ${totals.quads} quad maps`);
 }
 
+// ── History backfill (remonte dans le temps, comme sync.js) ──
+async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
+  const seen = loadSeen();
+  const runs = loadRuns();
+  const cp = loadCheckpoint();
+
+  const now = Date.now();
+  const oldest = TARGET_DATE;
+  const saved = cp.history_oldest_reached ? parseInt(cp.history_oldest_reached, 10) : now;
+
+  if (saved <= oldest + WINDOW_MS * 2) {
+    console.log("[teams-history] ✅ Historique complet jusqu'au " + new Date(oldest).toISOString().slice(0, 10));
+    return 0;
+  }
+
+  // Scan backwards from saved towards oldest
+  let oldestReached = saved;
+  let totalNew = 0;
+  const newRunsByMode = { duos: [], trios: [], quads: [] };
+
+  for (let i = 0; i < maxWindows; i++) {
+    const windowEnd = oldestReached - i * WINDOW_MS;
+    const windowStart = Math.max(windowEnd - WINDOW_MS, oldest);
+
+    if (windowEnd <= oldest) {
+      console.log("[teams-history] ✅ Atteint la date cible: " + new Date(oldest).toISOString().slice(0, 10));
+      break;
+    }
+
+    for (const mode of TEAM_MODES) {
+      const url = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&playerTeams=${encodeURIComponent(mode)}&limit=1000`;
+      const data = await fetchWithRetry(url);
+      if (!data) continue;
+      const games = Array.isArray(data) ? data : (data.games || []);
+      for (const g of games) {
+        if (g.type !== "Public") continue;
+        if ((g.numPlayers || 0) < MIN_HUMANS) continue;
+        const gameId = g.game || g.gameId;
+        if (!gameId || seen.has(gameId)) continue;
+
+        // Fetch detail
+        seen.add(gameId);
+        try {
+          const raw = await fetchWithRetry(`${API_BASE}/public/game/${encodeURIComponent(gameId)}?turns=false`);
+          const run = extractTeamRun(raw, mode);
+          if (run) {
+            newRunsByMode[mode.toLowerCase()].push(run);
+            totalNew++;
+          }
+        } catch (e) { /* skip */ }
+      }
+    }
+
+    oldestReached = windowStart;
+
+    // Checkpoint every 50 windows
+    if (i > 0 && i % 50 === 0) {
+      cp.history_oldest_reached = String(oldestReached);
+      saveCheckpoint(cp);
+      if (totalNew > 0) {
+        // Merge + save
+        for (const mode of TEAM_MODES) {
+          const key = mode.toLowerCase();
+          if (newRunsByMode[key].length > 0) {
+            const existingIds = new Set(runs[key].map(r => r.id));
+            const newOnes = newRunsByMode[key].filter(r => !existingIds.has(r.id));
+            runs[key] = [...runs[key], ...newOnes];
+          }
+        }
+        saveRuns(runs);
+        saveSeen(seen);
+      }
+      const pct = Math.round(((now - oldestReached) / (now - oldest)) * 100);
+      console.log(`[teams-history] ${i}/${maxWindows} fenêtres — ${pct}% — ${totalNew} nouveaux runs`);
+    }
+  }
+
+  // Final merge + save
+  for (const mode of TEAM_MODES) {
+    const key = mode.toLowerCase();
+    if (newRunsByMode[key].length > 0) {
+      const existingIds = new Set(runs[key].map(r => r.id));
+      const newOnes = newRunsByMode[key].filter(r => !existingIds.has(r.id));
+      runs[key] = [...runs[key], ...newOnes];
+      console.log(`[teams-history] ${mode}: +${newOnes.length} (total: ${runs[key].length})`);
+    }
+  }
+  if (totalNew > 0) saveRuns(runs);
+  saveSeen(seen);
+
+  cp.history_oldest_reached = String(oldestReached);
+  saveCheckpoint(cp);
+
+  if (totalNew > 0) generatePublicPayload(runs);
+
+  console.log(`[teams-history] 🏁 ${totalNew} nouveaux runs historiques (oldest: ${new Date(oldestReached).toISOString().slice(0, 10)})`);
+  return totalNew;
+}
+
 // ── Main ──
 async function main() {
-  console.log("[teams] 🚀 Démarrage — Team Speedrun Sync (accumulate mode)");
+  console.log("[teams] 🚀 Démarrage — Team Speedrun Sync (accumulate + history)");
   if (hasExemption()) console.log("[teams] 🔑 Exemption Skailex active");
   else console.log("[teams] ⚠️ Pas d'exemption — rate limits peuvent s'appliquer");
 
+  // 1. Sync recent (last 2h)
   await syncRecent();
 
+  // 2. History backfill (remonte dans le temps)
+  const histNew = await syncHistory(DEFAULT_HISTORY_WINDOWS);
+
   const runs = loadRuns();
-  console.log(`[teams] 🏁 Terminé: ${runs.duos.length} duos, ${runs.trios.length} trios, ${runs.quads.length} quads`);
+  console.log(`[teams] 🏁 Terminé: ${runs.duos.length} duos, ${runs.trios.length} trios, ${runs.quads.length} quads (${histNew} historiques)`);
 }
 
 main().catch(e => { console.error("[teams] Fatal:", e); process.exit(1); });
