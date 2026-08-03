@@ -1320,6 +1320,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-03T11:32:57.130Z",
       "url": "https://openfront.io/game/MjcCNVLA"
+    },
+    {
+      "id": "x3zZsc7Q",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SPoS",
+          "clientID": "Q5Z8b4g6",
+          "clanTag": "AST"
+        },
+        {
+          "username": "cacazizi",
+          "clientID": "SPQx53sp",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 641,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-03T12:55:00.944Z",
+      "url": "https://openfront.io/game/x3zZsc7Q"
     }
   ],
   "trios": [
@@ -3620,6 +3643,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-03T12:35:39.814Z",
       "url": "https://openfront.io/game/pwsVwwoV"
+    },
+    {
+      "id": "n9PoSFxb",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "likepolux",
+          "clientID": "SjBAen6r",
+          "clanTag": "PTK"
+        },
+        {
+          "username": "Ahmed",
+          "clientID": "9nJe3Qpw",
+          "clanTag": null
+        },
+        {
+          "username": "TelKXaim",
+          "clientID": "6kdJNs3d",
+          "clanTag": "PTK"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-03T12:57:18.075Z",
+      "url": "https://openfront.io/game/n9PoSFxb"
     }
   ],
   "quads": [
@@ -6031,6 +6082,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-03T12:27:51.832Z",
       "url": "https://openfront.io/game/UhvjbPwb"
+    },
+    {
+      "id": "kB7zP6Bv",
+      "team": "Red",
+      "players": [
+        {
+          "username": "verchthappen",
+          "clientID": "MPVed8Eh",
+          "clanTag": "F1"
+        },
+        {
+          "username": "ChArlles Lecleeerccck",
+          "clientID": "GMMJHQwv",
+          "clanTag": "F1"
+        },
+        {
+          "username": "Pierrrre gasllllllly",
+          "clientID": "4U5BofMi",
+          "clanTag": "F1"
+        },
+        {
+          "username": "StickyCyclop.n12C",
+          "clientID": "sMditRrQ",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 782,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-03T12:56:39.537Z",
+      "url": "https://openfront.io/game/kB7zP6Bv"
     }
   ]
 }
