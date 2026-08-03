@@ -1,5 +1,8 @@
 import fs from "fs";
 
+// Note: on utilise le fetch global (Node 18+), pas node-fetch,
+// pour éviter une dépendance et rendre `node server.js` lançable sans install.
+
 // Charger .env manuellement AVANT tout autre import
 try {
   const envContent = fs.readFileSync(".env", "utf8");
@@ -15,8 +18,6 @@ try {
 } catch (e) {
   // .env optionnel
 }
-
-import fetch from "node-fetch";
 
 export const API_BASE = "https://api.openfront.io";
 
