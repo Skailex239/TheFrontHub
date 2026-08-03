@@ -7049,6 +7049,62 @@
       "numPlayers": 44,
       "timestamp": "2026-08-03T16:10:53.586Z",
       "url": "https://openfront.io/game/CgKfnEBo"
+    },
+    {
+      "id": "Frn1yp8K",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "jiggle",
+          "clientID": "spB6aBYT",
+          "clanTag": null
+        },
+        {
+          "username": "matadowns",
+          "clientID": "L8a1yv8D",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1093,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-03T16:20:39.150Z",
+      "url": "https://openfront.io/game/Frn1yp8K"
+    },
+    {
+      "id": "4sfP2zfU",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Kingjay",
+          "clientID": "wtmfKiCc",
+          "clanTag": "NU"
+        },
+        {
+          "username": "BruvRosion",
+          "clientID": "qcr42HoZ",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonBeetle9",
+          "clientID": "3UfFg1AT",
+          "clanTag": null
+        },
+        {
+          "username": "Nuke Party",
+          "clientID": "MdeBJzSS",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 993,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-03T16:22:39.290Z",
+      "url": "https://openfront.io/game/4sfP2zfU"
     }
   ]
 }
