@@ -7189,6 +7189,39 @@
       "numPlayers": 101,
       "timestamp": "2026-08-03T16:35:25.046Z",
       "url": "https://openfront.io/game/nR76eTVA"
+    },
+    {
+      "id": "QM1yWB2z",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "polan",
+          "clientID": "pFeQwRLn",
+          "clanTag": null
+        },
+        {
+          "username": "SUPER_NOOB",
+          "clientID": "HLBiPDvx",
+          "clanTag": null
+        },
+        {
+          "username": "Kokito Empire",
+          "clientID": "M74ewQtw",
+          "clanTag": "EUR"
+        },
+        {
+          "username": "AnonSquid",
+          "clientID": "d3ATiznU",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1370,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-03T16:36:33.101Z",
+      "url": "https://openfront.io/game/QM1yWB2z"
     }
   ]
 }
