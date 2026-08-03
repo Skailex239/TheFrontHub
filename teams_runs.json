@@ -3424,6 +3424,34 @@
       "numPlayers": 52,
       "timestamp": "2026-08-03T11:02:55.315Z",
       "url": "https://openfront.io/game/Bgw6Dsw7"
+    },
+    {
+      "id": "vSFRuQ2E",
+      "team": "Red",
+      "players": [
+        {
+          "username": "OkusPokus",
+          "clientID": "wMknqD2k",
+          "clanTag": "BRB"
+        },
+        {
+          "username": "Chichonos",
+          "clientID": "9aCE6Dcq",
+          "clanTag": "BRB"
+        },
+        {
+          "username": "crong",
+          "clientID": "8iH3qrcr",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1013,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-03T11:54:59.888Z",
+      "url": "https://openfront.io/game/vSFRuQ2E"
     }
   ],
   "quads": [
@@ -5713,6 +5741,34 @@
       "numPlayers": 52,
       "timestamp": "2026-08-03T11:38:58.469Z",
       "url": "https://openfront.io/game/3oTDJjmp"
+    },
+    {
+      "id": "rPqG5D9a",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Anon232",
+          "clientID": "unR8sU8y",
+          "clanTag": null
+        },
+        {
+          "username": "Captan",
+          "clientID": "Qxa29xqS",
+          "clanTag": null
+        },
+        {
+          "username": "Luigi",
+          "clientID": "kp5oLB5i",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1110,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-03T11:50:17.123Z",
+      "url": "https://openfront.io/game/rPqG5D9a"
     }
   ]
 }
