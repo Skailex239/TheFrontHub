@@ -6988,6 +6988,67 @@
       "numPlayers": 92,
       "timestamp": "2026-08-03T15:33:32.400Z",
       "url": "https://openfront.io/game/FqQTUwYH"
+    },
+    {
+      "id": "irBKSvpw",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Front Line",
+          "clientID": "16avMnSv",
+          "clanTag": "TR"
+        },
+        {
+          "username": "TryingTooHard67",
+          "clientID": "ueE7yTVM",
+          "clanTag": null
+        },
+        {
+          "username": "Raylium",
+          "clientID": "onEn6sC3",
+          "clanTag": "GOY"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 510,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-03T16:27:15.543Z",
+      "url": "https://openfront.io/game/irBKSvpw"
+    },
+    {
+      "id": "CgKfnEBo",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Samaeldes",
+          "clientID": "qKy77hP5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "Exff53fL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LUBBYDUBBY",
+          "clientID": "FuqtYVCX",
+          "clanTag": "UN"
+        },
+        {
+          "username": "OxO",
+          "clientID": "jNMia3Rr",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1529,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T16:10:53.586Z",
+      "url": "https://openfront.io/game/CgKfnEBo"
     }
   ]
 }
