@@ -167,7 +167,7 @@ async function syncRecent() {
 
   const now = new Date();
   const lastSync = cp.last_sync_time ? parseInt(cp.last_sync_time, 10) : 0;
-  const agoMs = Math.max(now.getTime() - RECENT_MAX_MS, lastSync - RECENT_OVERLAP_MS);
+  const agoMs = now.getTime() - RECENT_MAX_MS; // TOUJOURS 2h
   const ago = new Date(agoMs);
 
   const windows = buildWindows30s(ago, now);
