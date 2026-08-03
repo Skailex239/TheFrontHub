@@ -1366,6 +1366,24 @@
       "numPlayers": 71,
       "timestamp": "2026-08-03T12:43:34.279Z",
       "url": "https://openfront.io/game/WJrCHnvy"
+    },
+    {
+      "id": "T7GL7XKM",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Jerusalem",
+          "clientID": "iZZgqzG2",
+          "clanTag": "14"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1237,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-03T13:09:21.806Z",
+      "url": "https://openfront.io/game/T7GL7XKM"
     }
   ],
   "trios": [
@@ -3694,6 +3712,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-03T12:57:18.075Z",
       "url": "https://openfront.io/game/n9PoSFxb"
+    },
+    {
+      "id": "DPT4kPRz",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Andy Fischgeiger",
+          "clientID": "8YhuzmPk",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "Clayz",
+          "clientID": "QJVZVgLN",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "hehehe",
+          "clientID": "NGyMHxdo",
+          "clanTag": "31ER"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 1009,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T13:13:09.026Z",
+      "url": "https://openfront.io/game/DPT4kPRz"
     }
   ],
   "quads": [
@@ -6138,6 +6184,24 @@
       "numPlayers": 20,
       "timestamp": "2026-08-03T12:56:39.537Z",
       "url": "https://openfront.io/game/kB7zP6Bv"
+    },
+    {
+      "id": "9TXi78ns",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "OQTF colonisateur blanc",
+          "clientID": "kSn3v99j",
+          "clanTag": "NEG"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1556,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-03T13:07:21.691Z",
+      "url": "https://openfront.io/game/9TXi78ns"
     }
   ]
 }
