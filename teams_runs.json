@@ -3268,6 +3268,47 @@
       "numPlayers": 55,
       "timestamp": "2026-08-03T09:53:47.290Z",
       "url": "https://openfront.io/game/nxqYrqGA"
+    },
+    {
+      "id": "mAnq4PNk",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "DiZi",
+          "clientID": "4zPvkRAx",
+          "clanTag": "RO"
+        },
+        {
+          "username": "Rust",
+          "clientID": "dUWLbuP6",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1285,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-03T10:25:28.148Z",
+      "url": "https://openfront.io/game/mAnq4PNk"
+    },
+    {
+      "id": "6YRRYpE4",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "NeedHugs",
+          "clientID": "DeduRwjv",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 1255,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-03T10:26:47.228Z",
+      "url": "https://openfront.io/game/6YRRYpE4"
     }
   ],
   "quads": [
@@ -5458,6 +5499,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-03T10:05:24.981Z",
       "url": "https://openfront.io/game/SeokU5ZE"
+    },
+    {
+      "id": "it2xz7df",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BossRatt",
+          "clientID": "2DYiM4sT",
+          "clanTag": "AHOJ"
+        },
+        {
+          "username": "Miks",
+          "clientID": "CdwX3kbo",
+          "clanTag": "AHOJ"
+        },
+        {
+          "username": "raiku67",
+          "clientID": "zg31RkH1",
+          "clanTag": null
+        },
+        {
+          "username": "betterthan01and668",
+          "clientID": "Z2WjNYGz",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1118,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-03T10:28:47.334Z",
+      "url": "https://openfront.io/game/it2xz7df"
     }
   ]
 }
