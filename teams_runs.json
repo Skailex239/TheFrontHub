@@ -6684,6 +6684,34 @@
       "numPlayers": 64,
       "timestamp": "2026-08-03T15:05:50.682Z",
       "url": "https://openfront.io/game/QSbKWyNT"
+    },
+    {
+      "id": "YGZF4tCx",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "WorldPeace",
+          "clientID": "54takChz",
+          "clanTag": null
+        },
+        {
+          "username": "Samoa",
+          "clientID": "JArvw1u4",
+          "clanTag": null
+        },
+        {
+          "username": "Stalin_The_Best",
+          "clientID": "8txycfdH",
+          "clanTag": "CCCP"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1058,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-03T15:07:45.793Z",
+      "url": "https://openfront.io/game/YGZF4tCx"
     }
   ]
 }
