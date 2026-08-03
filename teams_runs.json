@@ -1520,6 +1520,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-03T14:48:42.163Z",
       "url": "https://openfront.io/game/oytu1Pnv"
+    },
+    {
+      "id": "2cDwBVnB",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "313",
+          "clientID": "naWpJ4gQ",
+          "clanTag": null
+        },
+        {
+          "username": "Firenze",
+          "clientID": "n8byuZTA",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1054,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-03T15:28:07.028Z",
+      "url": "https://openfront.io/game/2cDwBVnB"
     }
   ],
   "trios": [
@@ -6753,6 +6776,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-03T15:07:45.793Z",
       "url": "https://openfront.io/game/YGZF4tCx"
+    },
+    {
+      "id": "CwA3uW72",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "DeineMutter",
+          "clientID": "x8Dx17yt",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Toast",
+          "clientID": "W26CPumN",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Citizenvigilant",
+          "clientID": "5oqbwzdN",
+          "clanTag": "UN"
+        },
+        {
+          "username": "arsenal",
+          "clientID": "VpVAK4A9",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 965,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-03T15:26:52.954Z",
+      "url": "https://openfront.io/game/CwA3uW72"
     }
   ]
 }
