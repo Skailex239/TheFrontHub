@@ -6243,6 +6243,57 @@
       "numPlayers": 80,
       "timestamp": "2026-08-03T13:07:21.691Z",
       "url": "https://openfront.io/game/9TXi78ns"
+    },
+    {
+      "id": "ku7tPc2x",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SEND TROOPS TO FRONT",
+          "clientID": "TKgwxsNx",
+          "clanTag": "UN"
+        },
+        {
+          "username": "World_Peace",
+          "clientID": "hBc52wEM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "FjuhrerNorsk",
+          "clientID": "7LV1jwVk",
+          "clanTag": "UN"
+        },
+        {
+          "username": "klon",
+          "clientID": "xeUasV6z",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 704,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T13:49:58.192Z",
+      "url": "https://openfront.io/game/ku7tPc2x"
+    },
+    {
+      "id": "nPtjsvbP",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "faith",
+          "clientID": "5bauRBQa",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1366,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-03T13:35:18.324Z",
+      "url": "https://openfront.io/game/nPtjsvbP"
     }
   ]
 }
