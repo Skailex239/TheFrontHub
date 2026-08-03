@@ -4737,6 +4737,34 @@
       "numPlayers": 51,
       "timestamp": "2026-08-03T20:15:49.976Z",
       "url": "https://openfront.io/game/AV3GqvCq"
+    },
+    {
+      "id": "GzKbsi91",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "zitzitoun",
+          "clientID": "uxiTVq6M",
+          "clanTag": "HSD7"
+        },
+        {
+          "username": "DAWLA YOUNASAWIYA",
+          "clientID": "D6o5o31i",
+          "clanTag": "HSD7"
+        },
+        {
+          "username": "KINGDOM OF NUMIDIA.",
+          "clientID": "8USYYPjS",
+          "clanTag": "HSD7"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1683,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-03T20:13:49.540Z",
+      "url": "https://openfront.io/game/GzKbsi91"
     }
   ],
   "quads": [
@@ -8064,6 +8092,57 @@
       "numPlayers": 60,
       "timestamp": "2026-08-03T20:06:14.079Z",
       "url": "https://openfront.io/game/ittg3Eqx"
+    },
+    {
+      "id": "itHhWAEh",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "MEIN TAPIS VOLANT",
+          "clientID": "1873G3FQ",
+          "clanTag": "ZZ"
+        },
+        {
+          "username": "SAINT GEORGE",
+          "clientID": "8aQwHPwf",
+          "clanTag": "ZZ"
+        },
+        {
+          "username": "Frisia",
+          "clientID": "ZGTLe3Bv",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1042,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-03T20:23:03.012Z",
+      "url": "https://openfront.io/game/itHhWAEh"
+    },
+    {
+      "id": "b5VeBVDn",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "abubles",
+          "clientID": "Ph7fkRYF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NCR",
+          "clientID": "WYDWNrKR",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1137,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T20:23:56.003Z",
+      "url": "https://openfront.io/game/b5VeBVDn"
     }
   ]
 }
