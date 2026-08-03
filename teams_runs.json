@@ -1901,6 +1901,70 @@
       "numPlayers": 20,
       "timestamp": "2026-08-03T19:52:04.166Z",
       "url": "https://openfront.io/game/5mGVWtfm"
+    },
+    {
+      "id": "aC5pCxbQ",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "dynomight.net",
+          "clientID": "7EQoKZP8",
+          "clanTag": null
+        },
+        {
+          "username": "KICKFLOWERS",
+          "clientID": "1s6ZWqQH",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 2841,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T20:07:35.226Z",
+      "url": "https://openfront.io/game/aC5pCxbQ"
+    },
+    {
+      "id": "tHTMLo3t",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Imperator Spaghetti",
+          "clientID": "LdckQRna",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1590,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-03T20:42:42.301Z",
+      "url": "https://openfront.io/game/tHTMLo3t"
+    },
+    {
+      "id": "nVrtiGPu",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "ENBO",
+          "clientID": "AG7HMpd5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rawr",
+          "clientID": "arSB337o",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1875,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-03T20:27:00.183Z",
+      "url": "https://openfront.io/game/nVrtiGPu"
     }
   ],
   "trios": [
@@ -8143,6 +8207,123 @@
       "numPlayers": 96,
       "timestamp": "2026-08-03T20:23:03.012Z",
       "url": "https://openfront.io/game/itHhWAEh"
+    },
+    {
+      "id": "D2rKxeQi",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "diRdTAGv",
+          "clanTag": "SWE"
+        },
+        {
+          "username": "Chow",
+          "clientID": "aJCAtjor",
+          "clanTag": null
+        },
+        {
+          "username": "Baer",
+          "clientID": "ct1aK2Mb",
+          "clanTag": "TED"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1037,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-03T20:49:47.881Z",
+      "url": "https://openfront.io/game/D2rKxeQi"
+    },
+    {
+      "id": "my9iEzyr",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Muroj Trade Company",
+          "clientID": "rQgRT3uk",
+          "clanTag": "ORTO"
+        },
+        {
+          "username": "gokoj trade company",
+          "clientID": "vTEjQ28G",
+          "clanTag": "ORTO"
+        },
+        {
+          "username": "Frankagun",
+          "clientID": "mVnq6d2u",
+          "clanTag": "ORTO"
+        },
+        {
+          "username": "AnonTurkey9",
+          "clientID": "h2BUamhV",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 973,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "timestamp": "2026-08-03T20:44:50.507Z",
+      "url": "https://openfront.io/game/my9iEzyr"
+    },
+    {
+      "id": "MtAMq2t1",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "zeta",
+          "clientID": "W64Q2dCM",
+          "clanTag": null
+        },
+        {
+          "username": "BET ON KASH.BOT",
+          "clientID": "VTCEg8s5",
+          "clanTag": "KASH"
+        },
+        {
+          "username": "Voyageur",
+          "clientID": "gDg4ERzG",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1289,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-03T20:59:16.446Z",
+      "url": "https://openfront.io/game/MtAMq2t1"
+    },
+    {
+      "id": "hQyYrzAo",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Noducor",
+          "clientID": "s7g4mYhz",
+          "clanTag": "GRG"
+        },
+        {
+          "username": "circulus",
+          "clientID": "zqCaTFJF",
+          "clanTag": "GRG"
+        },
+        {
+          "username": "neco",
+          "clientID": "rata4Xtn",
+          "clanTag": "GRG"
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 1851,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-03T20:47:10.739Z",
+      "url": "https://openfront.io/game/hQyYrzAo"
     }
   ]
 }
