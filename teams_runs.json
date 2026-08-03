@@ -1215,6 +1215,24 @@
       "numPlayers": 22,
       "timestamp": "2026-08-03T09:59:02.601Z",
       "url": "https://openfront.io/game/1B82nuVe"
+    },
+    {
+      "id": "eMKWSK8M",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "AnonAnonAnon",
+          "clientID": "sQAztFaW",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 5506,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-03T08:50:41.571Z",
+      "url": "https://openfront.io/game/eMKWSK8M"
     }
   ],
   "trios": [
@@ -5366,6 +5384,39 @@
       "numPlayers": 81,
       "timestamp": "2026-08-03T09:47:22.911Z",
       "url": "https://openfront.io/game/qCZZvaJy"
+    },
+    {
+      "id": "SeokU5ZE",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "URUGUAY",
+          "clientID": "ik8YwwNr",
+          "clanTag": "AKE"
+        },
+        {
+          "username": "Te Rae o Papamoa",
+          "clientID": "yQ2goumX",
+          "clanTag": "AKE"
+        },
+        {
+          "username": "AnonOtter4",
+          "clientID": "6zfJT1qF",
+          "clanTag": null
+        },
+        {
+          "username": "SmokingSalviaRNFrFrTrustMe",
+          "clientID": "ydiJj6pz",
+          "clanTag": "AKE"
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1162,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-03T10:05:24.981Z",
+      "url": "https://openfront.io/game/SeokU5ZE"
     }
   ]
 }
