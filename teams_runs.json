@@ -8094,6 +8094,29 @@
       "url": "https://openfront.io/game/ittg3Eqx"
     },
     {
+      "id": "b5VeBVDn",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "abubles",
+          "clientID": "Ph7fkRYF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NCR",
+          "clientID": "WYDWNrKR",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1137,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T20:23:56.003Z",
+      "url": "https://openfront.io/game/b5VeBVDn"
+    },
+    {
       "id": "itHhWAEh",
       "team": "Team 4",
       "players": [
@@ -8120,29 +8143,6 @@
       "numPlayers": 96,
       "timestamp": "2026-08-03T20:23:03.012Z",
       "url": "https://openfront.io/game/itHhWAEh"
-    },
-    {
-      "id": "b5VeBVDn",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "abubles",
-          "clientID": "Ph7fkRYF",
-          "clanTag": "UN"
-        },
-        {
-          "username": "NCR",
-          "clientID": "WYDWNrKR",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "East Asia",
-      "duration_s": 1137,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-08-03T20:23:56.003Z",
-      "url": "https://openfront.io/game/b5VeBVDn"
     }
   ]
 }
