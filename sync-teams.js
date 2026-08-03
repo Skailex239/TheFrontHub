@@ -26,7 +26,7 @@ const TIME_OFFSET_SECS = 32;
 const MIN_HUMANS = 10;
 const TOP_PER_MAP = 25; // for public payload only
 const TARGET_DATE = new Date("2025-11-01").getTime(); // backfill jusqu'à nov 2025
-const DEFAULT_HISTORY_WINDOWS = 500; // fenêtres par cycle de backfill
+const DEFAULT_HISTORY_WINDOWS = 10000; // fenêtres par cycle de backfill
 
 // ── File paths ──
 const RUNS_FILE = "teams_runs.json";        // { duos: [...], trios: [...], quads: [...] }
