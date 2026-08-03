@@ -1233,6 +1233,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-03T08:50:41.571Z",
       "url": "https://openfront.io/game/eMKWSK8M"
+    },
+    {
+      "id": "DYoQBS9y",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "Petrov",
+          "clientID": "LJY6JMQi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSkunk6",
+          "clientID": "bbNv4eZ8",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1111,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "timestamp": "2026-08-03T10:10:45.808Z",
+      "url": "https://openfront.io/game/DYoQBS9y"
     }
   ],
   "trios": [
@@ -3227,6 +3250,24 @@
       "numPlayers": 60,
       "timestamp": "2026-08-03T09:28:28.772Z",
       "url": "https://openfront.io/game/9TjPEP25"
+    },
+    {
+      "id": "nxqYrqGA",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Typhus",
+          "clientID": "kPupcTRm",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 2081,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "timestamp": "2026-08-03T09:53:47.290Z",
+      "url": "https://openfront.io/game/nxqYrqGA"
     }
   ],
   "quads": [
