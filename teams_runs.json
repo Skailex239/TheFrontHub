@@ -8398,6 +8398,72 @@
       "numPlayers": 47,
       "timestamp": "2026-08-03T21:59:31.418Z",
       "url": "https://openfront.io/game/gCDQvUpC"
+    },
+    {
+      "id": "rjuARU1q",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "KiraThePoop",
+          "clientID": "kEyFufNu",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "GVM",
+          "clientID": "FNLRKq4x",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Anon755",
+          "clientID": "yqYAcbqM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonkey2",
+          "clientID": "VNipjMzn",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-03T22:12:00.710Z",
+      "url": "https://openfront.io/game/rjuARU1q"
+    },
+    {
+      "id": "b8mZmWS1",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "AnonBee4",
+          "clientID": "cWmufWEu",
+          "clanTag": null
+        },
+        {
+          "username": "Garfield",
+          "clientID": "ewJmMSDz",
+          "clanTag": "URAN"
+        },
+        {
+          "username": "Daddy",
+          "clientID": "zeR1KhKL",
+          "clanTag": "URAN"
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "3DRGRgYV",
+          "clanTag": "URAN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1246,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-03T22:08:31.677Z",
+      "url": "https://openfront.io/game/b8mZmWS1"
     }
   ]
 }
