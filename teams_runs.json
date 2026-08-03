@@ -7051,29 +7051,6 @@
       "url": "https://openfront.io/game/CgKfnEBo"
     },
     {
-      "id": "Frn1yp8K",
-      "team": "Team 16",
-      "players": [
-        {
-          "username": "jiggle",
-          "clientID": "spB6aBYT",
-          "clanTag": null
-        },
-        {
-          "username": "matadowns",
-          "clientID": "L8a1yv8D",
-          "clanTag": null
-        }
-      ],
-      "map": "South America",
-      "duration_s": 1093,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 68,
-      "timestamp": "2026-08-03T16:20:39.150Z",
-      "url": "https://openfront.io/game/Frn1yp8K"
-    },
-    {
       "id": "4sfP2zfU",
       "team": "Team 1",
       "players": [
@@ -7105,6 +7082,29 @@
       "numPlayers": 88,
       "timestamp": "2026-08-03T16:22:39.290Z",
       "url": "https://openfront.io/game/4sfP2zfU"
+    },
+    {
+      "id": "Frn1yp8K",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "jiggle",
+          "clientID": "spB6aBYT",
+          "clanTag": null
+        },
+        {
+          "username": "matadowns",
+          "clientID": "L8a1yv8D",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1093,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-03T16:20:39.150Z",
+      "url": "https://openfront.io/game/Frn1yp8K"
     }
   ]
 }
