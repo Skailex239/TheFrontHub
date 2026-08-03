@@ -1632,29 +1632,6 @@
       "url": "https://openfront.io/game/HLgbMujM"
     },
     {
-      "id": "FiUKftB1",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "FNAF",
-          "clientID": "jZubcCWm",
-          "clanTag": "FNAF"
-        },
-        {
-          "username": "trade friend",
-          "clientID": "ybjCsHhi",
-          "clanTag": "FNAF"
-        }
-      ],
-      "map": "Taiwan Strait",
-      "duration_s": 1983,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-08-03T16:50:02.891Z",
-      "url": "https://openfront.io/game/FiUKftB1"
-    },
-    {
       "id": "3WXcWP5L",
       "team": "Team 6",
       "players": [
@@ -1676,6 +1653,29 @@
       "numPlayers": 76,
       "timestamp": "2026-08-03T16:56:38.262Z",
       "url": "https://openfront.io/game/3WXcWP5L"
+    },
+    {
+      "id": "FiUKftB1",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "FNAF",
+          "clientID": "jZubcCWm",
+          "clanTag": "FNAF"
+        },
+        {
+          "username": "trade friend",
+          "clientID": "ybjCsHhi",
+          "clanTag": "FNAF"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1983,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-03T16:50:02.891Z",
+      "url": "https://openfront.io/game/FiUKftB1"
     }
   ],
   "trios": [
