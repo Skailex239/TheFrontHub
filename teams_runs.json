@@ -4353,29 +4353,6 @@
       "url": "https://openfront.io/game/frvU9di1"
     },
     {
-      "id": "Th6DA6c8",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "BruvRosion",
-          "clientID": "acguXuHm",
-          "clanTag": "NU"
-        },
-        {
-          "username": "Kingjay",
-          "clientID": "5kCs4efX",
-          "clanTag": "NU"
-        }
-      ],
-      "map": "Two Lakes",
-      "duration_s": 1426,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 102,
-      "timestamp": "2026-08-03T17:21:51.729Z",
-      "url": "https://openfront.io/game/Th6DA6c8"
-    },
-    {
       "id": "XQUZp6qe",
       "team": "Team 2",
       "players": [
@@ -4397,6 +4374,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-03T17:12:27.181Z",
       "url": "https://openfront.io/game/XQUZp6qe"
+    },
+    {
+      "id": "Th6DA6c8",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "BruvRosion",
+          "clientID": "acguXuHm",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Kingjay",
+          "clientID": "5kCs4efX",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1426,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "timestamp": "2026-08-03T17:21:51.729Z",
+      "url": "https://openfront.io/game/Th6DA6c8"
     }
   ],
   "quads": [
