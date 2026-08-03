@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="animations.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="animations.css"></noscript>
 <link rel="stylesheet" href="toast.css">
+  <script type="module" src="icons.js"></script>
 </head>
 <body>
 <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
@@ -51,16 +52,16 @@
 
     <nav>
       <a class="nav-item tab-btn active" id="tab-btn-maps" onclick="switchTab('maps',this);document.getElementById('topbar-title').textContent='Speedruns'">
-        🏆 Speedruns
+        <i data-icon="trophy"></i> Speedruns
       </a>
       <a class="nav-item tab-btn" id="tab-btn-ranked" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé (1v1)'">
-        ⚔️ Classé (1v1)
+        <i data-icon="swords"></i> Classé (1v1)
       </a>
       <a class="nav-item tab-btn" id="tab-btn-stats" onclick="switchTab('stats',this);document.getElementById('topbar-title').textContent='Statistiques'">
-        📊 Statistiques
+        <i data-icon="chart"></i> Statistiques
       </a>
       <a class="nav-item tab-btn" id="tab-btn-profile" href="profile.html">
-        👤 Mon Profil
+        <i data-icon="user"></i> Mon Profil
       </a>
     </nav>
 
@@ -132,10 +133,10 @@
         <div class="mode-group">
           <span class="mode-group-label">Map</span>
           <button class="mode-btn active" id="mapsize-normal" onclick="switchMapSize('normal')">
-            <span class="mode-icon">🗺️</span> Normal
+            <span class="mode-icon"><i data-icon="map"></i></span> Normal
           </button>
           <button class="mode-btn" id="mapsize-compact" onclick="switchMapSize('compact')">
-            <span class="mode-icon">⚡</span> Compact
+            <span class="mode-icon"><i data-icon="bolt"></i></span> Compact
           </button>
         </div>
         <!-- Game mode selector (dropdown) -->
@@ -143,21 +144,21 @@
           <span class="mode-group-label">Mode</span>
           <div class="mode-dropdown" id="gamemode-dropdown">
             <button class="mode-btn active mode-dropdown-toggle" id="gamemode-toggle" onclick="toggleGameModeDropdown(event)">
-              <span class="mode-icon">👤</span> <span id="gamemode-label">Solo</span>
+              <span class="mode-icon"><i data-icon="user"></i></span> <span id="gamemode-label">Solo</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="mode-dropdown-menu" id="gamemode-menu">
               <button class="mode-dropdown-item active" data-mode="solo" onclick="switchGameMode('solo')">
-                <span class="mode-icon">👤</span> Solo (FFA)
+                <span class="mode-icon"><i data-icon="user"></i></span> Solo (FFA)
               </button>
               <button class="mode-dropdown-item" data-mode="duos" onclick="switchGameMode('duos')">
-                <span class="mode-icon">👥</span> Duos
+                <span class="mode-icon"><i data-icon="users"></i></span> Duos
               </button>
               <button class="mode-dropdown-item" data-mode="trios" onclick="switchGameMode('trios')">
-                <span class="mode-icon">👥</span> Trios
+                <span class="mode-icon"><i data-icon="users"></i></span> Trios
               </button>
               <button class="mode-dropdown-item" data-mode="quads" onclick="switchGameMode('quads')">
-                <span class="mode-icon">👥</span> Quads
+                <span class="mode-icon"><i data-icon="users"></i></span> Quads
               </button>
             </div>
           </div>
@@ -170,22 +171,22 @@
       <div class="card">
         <h2 id="stat-runs">—</h2>
         <p>Parties</p>
-        <div class="stat-icon">🏆</div>
+        <div class="stat-icon"><i data-icon="trophy"></i></div>
       </div>
       <div class="card">
         <h2 id="stat-maps">—</h2>
         <p>Cartes</p>
-        <div class="stat-icon">🗺️</div>
+        <div class="stat-icon"><i data-icon="map"></i></div>
       </div>
       <div class="card">
         <h2 id="stat-players">—</h2>
         <p>Joueurs</p>
-        <div class="stat-icon">👥</div>
+        <div class="stat-icon"><i data-icon="users"></i></div>
       </div>
       <div class="card">
         <h2 id="stat-best">—</h2>
         <p>Meilleur temps</p>
-        <div class="stat-icon">⚡</div>
+        <div class="stat-icon"><i data-icon="bolt"></i></div>
       </div>
     </section>
 
@@ -231,17 +232,17 @@
 
       <div class="chart-grid" style="margin-bottom:20px">
         <div class="feed-card">
-          <div class="feed-header">🌍 Classement mondial — 1er = 3pts · 2e = 2pts · 3e = 1pt</div>
+          <div class="feed-header"><i data-icon="globe"></i> Classement mondial — 1er = 3pts · 2e = 2pts · 3e = 1pt</div>
           <div id="global-list" style="max-height: 500px; overflow-y: auto;"><div class="loading">Chargement...</div></div>
         </div>
         <div class="feed-card">
-          <div class="feed-header">⚡ Dernières victoires</div>
+          <div class="feed-header"><i data-icon="bolt"></i> Dernières victoires</div>
           <div id="feed-list" style="max-height: 500px; overflow-y: auto;"><div class="loading">Chargement...</div></div>
         </div>
       </div>
 
       <div class="feed-card">
-        <div class="feed-header">⚔️ Comparer deux joueurs</div>
+        <div class="feed-header"><i data-icon="swords"></i> Comparer deux joueurs</div>
         <div style="padding:16px 20px">
           <div class="cmp-row">
             <div class="cmp-input">
@@ -269,22 +270,22 @@
         <div class="card">
           <h2 id="ranked-stat-players">—</h2>
           <p>Joueurs classés</p>
-          <div class="stat-icon">👥</div>
+          <div class="stat-icon"><i data-icon="users"></i></div>
         </div>
         <div class="card">
           <h2 id="ranked-stat-avgelo">—</h2>
           <p>Elo moyen</p>
-          <div class="stat-icon">📊</div>
+          <div class="stat-icon"><i data-icon="chart"></i></div>
         </div>
         <div class="card">
           <h2 id="ranked-stat-peakelo">—</h2>
           <p>Peak Elo</p>
-          <div class="stat-icon">🔥</div>
+          <div class="stat-icon"><i data-icon="fire"></i></div>
         </div>
         <div class="card">
           <h2 id="ranked-stat-games">—</h2>
           <p>Parties</p>
-          <div class="stat-icon">⚔️</div>
+          <div class="stat-icon"><i data-icon="swords"></i></div>
         </div>
       </section>
 
@@ -300,18 +301,18 @@
           <button class="filter-btn active" data-top="all" onclick="setTopFilter('all')">Tous</button>
         </div>
         <button class="filter-btn fav-toggle" id="fav-toggle" onclick="toggleFavFilter()" title="Afficher uniquement mes favoris">
-          <span class="fav-star">☆</span> <span class="fav-label">Favoris</span> <span class="fav-count" id="fav-count" style="display:none">0</span>
+          <span class="fav-star"><i data-icon="starOutline"></i></span> <span class="fav-label">Favoris</span> <span class="fav-count" id="fav-count" style="display:none">0</span>
         </button>
       </div>
 
       <!-- Newcomers / Dropouts -->
       <div class="chart-grid" id="ranked-movers-grid" style="margin-bottom:12px">
         <div class="chart-card" style="display:none" id="newcomers-card">
-          <div class="chart-head">🆕 Nouveaux dans le top 100</div>
+          <div class="chart-head"><i data-icon="sparkle"></i> Nouveaux dans le top 100</div>
           <div class="chart-body" id="ranked-newcomers"></div>
         </div>
         <div class="chart-card" style="display:none" id="dropouts-card">
-          <div class="chart-head">📉 Sortis du top 100</div>
+          <div class="chart-head"><i data-icon="chartDown"></i> Sortis du top 100</div>
           <div class="chart-body" id="ranked-dropouts"></div>
         </div>
       </div>
@@ -322,7 +323,7 @@
       <!-- Tableau Ranked -->
       <div class="feed-card" style="margin-bottom:20px">
         <div class="feed-header" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>⚔️ Classement Classé (1v1) — Top 100 Officiel</span>
+          <span><i data-icon="swords"></i> Classement Classé (1v1) — Top 100 Officiel</span>
           <div style="display:flex;align-items:center;gap:10px">
             <span id="ranked-last-update" style="font-size:12px;color:var(--muted)"></span>
             <button onclick="loadRankedLeaderboard(true)" style="background: var(--bg2); border: 1px solid var(--border); color: var(--text2); padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;">Actualiser</button>
@@ -353,11 +354,11 @@
       <!-- Distribution Elo + Clans -->
       <div class="chart-grid" style="margin-bottom:20px">
         <div class="chart-card">
-          <div class="chart-head">📊 Distribution des Elo</div>
+          <div class="chart-head"><i data-icon="chart"></i> Distribution des Elo</div>
           <div class="chart-body" id="ranked-elo-dist"></div>
         </div>
         <div class="chart-card">
-          <div class="chart-head">🏰 Classement des Clans</div>
+          <div class="chart-head"><i data-icon="castle"></i> Classement des Clans</div>
           <div class="chart-body" id="ranked-clan-list">
             <div class="loading">Chargement...</div>
           </div>
@@ -368,11 +369,11 @@
     <div class="tab-content" id="tab-stats">
       <div class="chart-grid">
         <div class="chart-card">
-          <div class="chart-head">🗺️ Maps les plus populaires</div>
+          <div class="chart-head"><i data-icon="map"></i> Maps les plus populaires</div>
           <div class="chart-body" id="popular-maps"></div>
         </div>
         <div class="chart-card">
-          <div class="chart-head">⏱️ Distribution des temps</div>
+          <div class="chart-head"><i data-icon="stopwatch"></i> Distribution des temps</div>
           <div class="chart-body" id="dist-chart"></div>
         </div>
       </div>
@@ -470,7 +471,7 @@
       <!-- Step 2: ownership challenge -->
       <div id="profile-setup-step2" style="display:none">
         <div style="background:var(--orange-pale);border:1px solid var(--orange);border-radius:8px;padding:14px;margin-bottom:14px">
-          <div style="font-weight:600;color:var(--orange);margin-bottom:6px">🔑 Code de vérification : <span id="ownership-code" style="font-family:var(--mono);font-size:16px"></span></div>
+          <div style="font-weight:600;color:var(--orange);margin-bottom:6px"><i data-icon="key"></i> Code de vérification : <span id="ownership-code" style="font-family:var(--mono);font-size:16px"></span></div>
           <div style="font-size:13px;color:var(--text)">
             Pour prouver que vous êtes bien ce joueur :
           </div>

@@ -11,10 +11,10 @@
       document.body.appendChild(container);
     }
 
-    var icons = { success: '✓', error: '✕', warning: '⚠', info: 'ℹ' };
+    var icons = { success: 'check', error: 'cross', warning: 'warning', info: 'info' };
     var toast = document.createElement('div');
     toast.className = 'toast toast-' + type;
-    toast.innerHTML = '<span class="toast-icon">' + (icons[type] || icons.info) + '</span><span class="toast-msg">' + message + '</span><button class="toast-close" onclick="this.parentElement.remove()">×</button>';
+    toast.innerHTML = '<span class="toast-icon">' + (window.icon(icons[type] || icons.info, { size: 16 }) || (icons[type] || icons.info)) + '</span><span class="toast-msg">' + message + '</span><button class="toast-close" onclick="this.parentElement.remove()">×</button>';
     container.appendChild(toast);
 
     // Trigger animation
