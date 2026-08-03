@@ -321,6 +321,7 @@
       .pf-player-name { font-size: 20px; }
     }
   </style>
+  <script type="module" src="icons.js"></script>
 </head>
 <body>
 <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
@@ -336,16 +337,16 @@
 
     <nav>
       <a class="nav-item tab-btn" id="tab-btn-maps" href="index.html">
-        🏠 Tableau de bord
+        <i data-icon="home"></i> Tableau de bord
       </a>
       <a class="nav-item tab-btn" id="tab-btn-global" href="index.html?tab=global">
-        🏆 Classements
+        <i data-icon="trophy"></i> Classements
       </a>
       <a class="nav-item tab-btn" id="tab-btn-stats" href="index.html?tab=stats">
-        📊 Statistiques
+        <i data-icon="chart"></i> Statistiques
       </a>
       <a class="nav-item tab-btn active" id="tab-btn-profile">
-        👤 Mon Profil
+        <i data-icon="user"></i> Mon Profil
       </a>
     </nav>
 
@@ -419,7 +420,7 @@
     <!-- ─── View: Gate (not logged in) ─── -->
     <div id="profile-gate" class="pf-view">
       <div class="pf-gate-card">
-        <div class="pf-gate-icon">👤</div>
+        <div class="pf-gate-icon"><i data-icon="user"></i></div>
         <h2>Connectez-vous</h2>
         <p>Connectez-vous pour accéder à votre profil et suivre vos statistiques OpenFront.</p>
         <button class="pf-primary-btn" onclick="toggleAuthModal()">
@@ -454,7 +455,7 @@
         <div id="profile-setup-step2" style="display:none">
           <div class="pf-challenge-box">
             <div style="font-weight:600;color:var(--orange);margin-bottom:6px">
-              🔑 Code de vérification : <span id="ownership-code" class="pf-challenge-code"></span>
+              <i data-icon="key"></i> Code de vérification : <span id="ownership-code" class="pf-challenge-code"></span>
             </div>
             <div style="font-size:13px;color:var(--text)">Pour prouver que vous êtes bien ce joueur :</div>
             <ol>
