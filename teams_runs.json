@@ -3926,29 +3926,6 @@
       "url": "https://openfront.io/game/79TLqA4T"
     },
     {
-      "id": "aYzhFLjT",
-      "team": "Team 15",
-      "players": [
-        {
-          "username": "PreciousBubbles",
-          "clientID": "Nhh8kAt3",
-          "clanTag": null
-        },
-        {
-          "username": "NoisyChicken.0wL9",
-          "clientID": "eCWaX76Q",
-          "clanTag": null
-        }
-      ],
-      "map": "Achiran",
-      "duration_s": 1270,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-03T14:37:07.995Z",
-      "url": "https://openfront.io/game/aYzhFLjT"
-    },
-    {
       "id": "6aJoUVBM",
       "team": "Team 1",
       "players": [
@@ -3970,6 +3947,29 @@
       "numPlayers": 45,
       "timestamp": "2026-08-03T14:39:33.632Z",
       "url": "https://openfront.io/game/6aJoUVBM"
+    },
+    {
+      "id": "aYzhFLjT",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "PreciousBubbles",
+          "clientID": "Nhh8kAt3",
+          "clanTag": null
+        },
+        {
+          "username": "NoisyChicken.0wL9",
+          "clientID": "eCWaX76Q",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1270,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-03T14:37:07.995Z",
+      "url": "https://openfront.io/game/aYzhFLjT"
     }
   ],
   "quads": [
