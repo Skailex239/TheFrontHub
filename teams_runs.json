@@ -1630,6 +1630,29 @@
       "numPlayers": 34,
       "timestamp": "2026-08-03T16:16:02.876Z",
       "url": "https://openfront.io/game/HLgbMujM"
+    },
+    {
+      "id": "3WXcWP5L",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "MacaMango",
+          "clientID": "ew2GsuEW",
+          "clanTag": "TOPO"
+        },
+        {
+          "username": "ARG bautista corte",
+          "clientID": "RQUdiThZ",
+          "clanTag": "TOPO"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1390,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "timestamp": "2026-08-03T16:56:38.262Z",
+      "url": "https://openfront.io/game/3WXcWP5L"
     }
   ],
   "trios": [
@@ -7245,6 +7268,39 @@
       "numPlayers": 48,
       "timestamp": "2026-08-03T16:53:51.107Z",
       "url": "https://openfront.io/game/qhDmXVP9"
+    },
+    {
+      "id": "bhHcBCg3",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "The Grandma Gary",
+          "clientID": "yP7NhdBV",
+          "clanTag": "AST"
+        },
+        {
+          "username": "GEDA",
+          "clientID": "zP4RVNpY",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonLlama5",
+          "clientID": "pcD47g8v",
+          "clanTag": null
+        },
+        {
+          "username": "Taya",
+          "clientID": "QDE6xE5K",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 675,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-03T17:05:55.303Z",
+      "url": "https://openfront.io/game/bhHcBCg3"
     }
   ]
 }
