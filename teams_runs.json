@@ -11591,29 +11591,6 @@
       "url": "https://openfront.io/game/Ap1zy9cn"
     },
     {
-      "id": "yJEAi5Kh",
-      "team": "Team 24",
-      "players": [
-        {
-          "username": "SnugglePuppy",
-          "clientID": "ixgLCMYf",
-          "clanTag": null
-        },
-        {
-          "username": "JohnCZ",
-          "clientID": "qpph2VJS",
-          "clanTag": null
-        }
-      ],
-      "map": "Hong Kong",
-      "duration_s": 1671,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 94,
-      "timestamp": "2026-08-04T13:37:10.455Z",
-      "url": "https://openfront.io/game/yJEAi5Kh"
-    },
-    {
       "id": "rtui3qtz",
       "team": "Blue",
       "players": [
@@ -11645,6 +11622,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-04T13:49:49.460Z",
       "url": "https://openfront.io/game/rtui3qtz"
+    },
+    {
+      "id": "yJEAi5Kh",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "SnugglePuppy",
+          "clientID": "ixgLCMYf",
+          "clanTag": null
+        },
+        {
+          "username": "JohnCZ",
+          "clientID": "qpph2VJS",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1671,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "timestamp": "2026-08-04T13:37:10.455Z",
+      "url": "https://openfront.io/game/yJEAi5Kh"
     }
   ]
 }
