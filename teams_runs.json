@@ -2871,6 +2871,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-04T16:21:50.597Z",
       "url": "https://openfront.io/game/Zcvrjpw2"
+    },
+    {
+      "id": "G9WRnQag",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Nosilec",
+          "clientID": "tua2YDoR",
+          "clanTag": "BB"
+        },
+        {
+          "username": "gej",
+          "clientID": "wXj57n3t",
+          "clanTag": "BB"
+        }
+      ],
+      "map": "France",
+      "duration_s": 935,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-04T16:51:08.266Z",
+      "url": "https://openfront.io/game/G9WRnQag"
     }
   ],
   "trios": [
@@ -12172,6 +12195,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-04T16:33:22.261Z",
       "url": "https://openfront.io/game/gtuzMRDt"
+    },
+    {
+      "id": "SaNdVKUN",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "bunny19",
+          "clientID": "YWgt6cBv",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "broslicer",
+          "clientID": "AjW7agju",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Menace",
+          "clientID": "cxoFp3fS",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "DontHugMeImScared",
+          "clientID": "Kmwar8ej",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 960,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-04T16:48:55.153Z",
+      "url": "https://openfront.io/game/SaNdVKUN"
     }
   ]
 }
