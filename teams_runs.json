@@ -6569,6 +6569,24 @@
       "numPlayers": 82,
       "timestamp": "2026-08-04T12:50:12.158Z",
       "url": "https://openfront.io/game/nkhPSY4X"
+    },
+    {
+      "id": "q3DV4CtB",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "no war just trade",
+          "clientID": "QrfzJ89y",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 2281,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-04T12:29:41.961Z",
+      "url": "https://openfront.io/game/q3DV4CtB"
     }
   ],
   "quads": [
@@ -11357,6 +11375,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-04T12:31:41.066Z",
       "url": "https://openfront.io/game/QWnAoBBE"
+    },
+    {
+      "id": "9dkW8nn5",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "WorldEnder",
+          "clientID": "FXf5UNqQ",
+          "clanTag": null
+        },
+        {
+          "username": "Gedeon",
+          "clientID": "iHCScXBC",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "Zymmy",
+          "clientID": "XRhvzk6d",
+          "clanTag": null
+        },
+        {
+          "username": "Gilberto is not okay",
+          "clientID": "Z1SJtDdw",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 997,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-04T12:50:52.187Z",
+      "url": "https://openfront.io/game/9dkW8nn5"
     }
   ]
 }
