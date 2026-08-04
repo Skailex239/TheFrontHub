@@ -11874,39 +11874,6 @@
       "url": "https://openfront.io/game/iT59snwA"
     },
     {
-      "id": "nzJQkRt9",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "baden",
-          "clientID": "13Mz3Sv4",
-          "clanTag": "GER"
-        },
-        {
-          "username": "KeX",
-          "clientID": "xnCEHtN9",
-          "clanTag": null
-        },
-        {
-          "username": "22 YILMA",
-          "clientID": "Mb9bhDYA",
-          "clanTag": null
-        },
-        {
-          "username": "Eynemy",
-          "clientID": "dKDBHA3D",
-          "clanTag": "TAG"
-        }
-      ],
-      "map": "Middle East",
-      "duration_s": 1255,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 98,
-      "timestamp": "2026-08-04T15:29:28.600Z",
-      "url": "https://openfront.io/game/nzJQkRt9"
-    },
-    {
       "id": "oCew47oZ",
       "team": "Team 2",
       "players": [
@@ -11938,6 +11905,39 @@
       "numPlayers": 68,
       "timestamp": "2026-08-04T15:27:27.988Z",
       "url": "https://openfront.io/game/oCew47oZ"
+    },
+    {
+      "id": "nzJQkRt9",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "baden",
+          "clientID": "13Mz3Sv4",
+          "clanTag": "GER"
+        },
+        {
+          "username": "KeX",
+          "clientID": "xnCEHtN9",
+          "clanTag": null
+        },
+        {
+          "username": "22 YILMA",
+          "clientID": "Mb9bhDYA",
+          "clanTag": null
+        },
+        {
+          "username": "Eynemy",
+          "clientID": "dKDBHA3D",
+          "clanTag": "TAG"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1255,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-04T15:29:28.600Z",
+      "url": "https://openfront.io/game/nzJQkRt9"
     }
   ]
 }
