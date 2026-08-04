@@ -7179,6 +7179,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-04T17:20:06.865Z",
       "url": "https://openfront.io/game/N7DCi4BQ"
+    },
+    {
+      "id": "4xk3wfv8",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Luke",
+          "clientID": "rE5Fw8Nr",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BackupOne",
+          "clientID": "jUxmncyz",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1300,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-04T17:40:10.946Z",
+      "url": "https://openfront.io/game/4xk3wfv8"
     }
   ],
   "quads": [
