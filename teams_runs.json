@@ -2359,6 +2359,29 @@
       "numPlayers": 42,
       "timestamp": "2026-08-04T08:10:52.442Z",
       "url": "https://openfront.io/game/T3KNRLMv"
+    },
+    {
+      "id": "w6tSEodZ",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "DK Im",
+          "clientID": "Kgm8kMM3",
+          "clanTag": null
+        },
+        {
+          "username": "bangladesh",
+          "clientID": "BsrCUxJw",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1175,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-04T08:28:51.857Z",
+      "url": "https://openfront.io/game/w6tSEodZ"
     }
   ],
   "trios": [
@@ -10127,6 +10150,34 @@
       "numPlayers": 43,
       "timestamp": "2026-08-04T06:46:29.023Z",
       "url": "https://openfront.io/game/pXBX5WcP"
+    },
+    {
+      "id": "24zyLnpx",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "hehehe",
+          "clientID": "RUYwCFtk",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "Clayz",
+          "clientID": "QVntMrwG",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "AnonBison4",
+          "clientID": "Qp8vkjLM",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1151,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-04T08:31:21.481Z",
+      "url": "https://openfront.io/game/24zyLnpx"
     }
   ]
 }
