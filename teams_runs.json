@@ -7567,24 +7567,6 @@
       "url": "https://openfront.io/game/QGAFKvyG"
     },
     {
-      "id": "4MFTw1A6",
-      "team": "Team 24",
-      "players": [
-        {
-          "username": "CHIBRAX",
-          "clientID": "d4Y2Rgd4",
-          "clanTag": "ZBOUB"
-        }
-      ],
-      "map": "United States",
-      "duration_s": 1664,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 93,
-      "timestamp": "2026-08-04T20:24:31.702Z",
-      "url": "https://openfront.io/game/4MFTw1A6"
-    },
-    {
       "id": "gzagxQF4",
       "team": "Team 2",
       "players": [
@@ -7611,6 +7593,24 @@
       "numPlayers": 80,
       "timestamp": "2026-08-04T20:29:23.472Z",
       "url": "https://openfront.io/game/gzagxQF4"
+    },
+    {
+      "id": "4MFTw1A6",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "CHIBRAX",
+          "clientID": "d4Y2Rgd4",
+          "clanTag": "ZBOUB"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1664,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-04T20:24:31.702Z",
+      "url": "https://openfront.io/game/4MFTw1A6"
     }
   ],
   "quads": [
@@ -13243,34 +13243,6 @@
       "numPlayers": 32,
       "timestamp": "2026-08-04T20:14:23.618Z",
       "url": "https://openfront.io/game/jcPMRmL7"
-    },
-    {
-      "id": "ptYVkEqF",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "CrimsonXuluz",
-          "clientID": "tyHF9QAj",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Deva",
-          "clientID": "Aa3SqokR",
-          "clanTag": "UN"
-        },
-        {
-          "username": "USA 1776",
-          "clientID": "RmQFhnWH",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "More Than Luck",
-      "duration_s": 1090,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-08-04T20:37:25.445Z",
-      "url": "https://openfront.io/game/ptYVkEqF"
     }
   ]
 }
