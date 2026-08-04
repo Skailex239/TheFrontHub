@@ -5350,6 +5350,34 @@
       "numPlayers": 26,
       "timestamp": "2026-08-04T03:31:45.739Z",
       "url": "https://openfront.io/game/cFoamXhd"
+    },
+    {
+      "id": "HswDdynm",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "big zub",
+          "clientID": "q3Tw613o",
+          "clanTag": "ZUB"
+        },
+        {
+          "username": "twingo",
+          "clientID": "p4Ggt3dx",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark",
+          "clientID": "RbiRe3Gj",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1583,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-04T03:21:32.446Z",
+      "url": "https://openfront.io/game/HswDdynm"
     }
   ],
   "quads": [
@@ -9290,6 +9318,34 @@
       "numPlayers": 12,
       "timestamp": "2026-08-04T03:11:28.913Z",
       "url": "https://openfront.io/game/B9iJgqk4"
+    },
+    {
+      "id": "sTkgY9fJ",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Boop",
+          "clientID": "b4rM9X9t",
+          "clanTag": null
+        },
+        {
+          "username": "ball",
+          "clientID": "1WC47Esj",
+          "clanTag": null
+        },
+        {
+          "username": "peanut",
+          "clientID": "nrwtHaX2",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-04T03:32:21.492Z",
+      "url": "https://openfront.io/game/sTkgY9fJ"
     }
   ]
 }
