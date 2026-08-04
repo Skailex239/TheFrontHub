@@ -2981,6 +2981,24 @@
       "numPlayers": 20,
       "timestamp": "2026-08-04T17:27:43.252Z",
       "url": "https://openfront.io/game/5GYsQXMd"
+    },
+    {
+      "id": "sRj99McT",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "SnugglePuppy",
+          "clientID": "6mdyiNhz",
+          "clanTag": "SFRJ"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 1556,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-04T17:49:13.438Z",
+      "url": "https://openfront.io/game/sRj99McT"
     }
   ],
   "trios": [
@@ -12567,6 +12585,39 @@
       "numPlayers": 64,
       "timestamp": "2026-08-04T17:21:35.946Z",
       "url": "https://openfront.io/game/w5oJhkE6"
+    },
+    {
+      "id": "cSZcvvB9",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Anno1998",
+          "clientID": "4st4XyxP",
+          "clanTag": "LIG"
+        },
+        {
+          "username": "Anon916",
+          "clientID": "ovPW9r4b",
+          "clanTag": "LIG"
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "yrEA7TcB",
+          "clanTag": null
+        },
+        {
+          "username": "Claudy",
+          "clientID": "TJkss4ZX",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1011,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-04T17:56:42.858Z",
+      "url": "https://openfront.io/game/cSZcvvB9"
     }
   ]
 }
