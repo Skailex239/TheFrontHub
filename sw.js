@@ -1,4 +1,4 @@
-// sw.js — Service Worker for TheFrontStats offline support
+// sw.js — Service Worker for TheFrontHub offline support
 const CACHE_NAME = 'thefrontstats-v5';
 const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
 

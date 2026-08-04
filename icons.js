@@ -1,6 +1,6 @@
 /**
  * icons.js — Jeu d'icônes SVG originals, monochrome (currentColor),
- * pour remplacer tous les émojis affichés du site TheFrontStats.
+ * pour remplacer tous les émojis affichés du site TheFrontHub.
  *
  * Utilisation :
  *   - En JS (module)  : import { icon, hydrateIcons } from './icons.js'; icon('trophy')

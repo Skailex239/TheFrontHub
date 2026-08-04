@@ -56,7 +56,7 @@ function handlePlayerClick(name) {
   if (connectedUsernames.has(name)) {
     window.location.href = 'profile.html?player=' + encodeURIComponent(name);
   } else {
-    showToast("Ce joueur n'est pas encore connecté à un compte TheFrontStats.", "warning");
+    showToast("Ce joueur n'est pas encore connecté à un compte TheFrontHub.", "warning");
   }
 }
 window.handlePlayerClick = handlePlayerClick;

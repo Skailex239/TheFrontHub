@@ -49,7 +49,7 @@ function getRunUrl(r){return r.url||("https://openfront.io/game/"+r.id)}
 // Échappement XSS-safe : convertit les caractères dangereux en entités HTML
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function playSound(){}
-function notifyNewRecord(msg){if(Notification.permission==='granted'){new Notification('TheFrontStats',{body:msg,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f0c060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 01-8 0V4z"/><path d="M5 4H3v3a3 3 0 003 3M19 4h2v3a3 3 0 01-3 3M9 14h6M10 14v3h4v-3M8 20h8"/></svg>'});playSound()}}
+function notifyNewRecord(msg){if(Notification.permission==='granted'){new Notification('TheFrontHub',{body:msg,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f0c060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 01-8 0V4z"/><path d="M5 4H3v3a3 3 0 003 3M19 4h2v3a3 3 0 01-3 3M9 14h6M10 14v3h4v-3M8 20h8"/></svg>'});playSound()}}
 function requestNotifs(){if('Notification' in window)Notification.requestPermission()}
 
 /* ====== AUTH LOGIC ====== */
@@ -59,7 +59,7 @@ let playerAliases = new Set(); // Anciens pseudonymes trouvés via l'API OpenFro
 let playerGameIds = new Set(); // gameIds vérifiés via le public ID (match exact)
 let playerSessionMap = new Map(); // gameId → session (pour vérifier hasWon/mode)
 let vipPlayers = new Map(); // username → reward type (pour le style VIP sur le leaderboard)
-let connectedUsernames = new Set(); // usernames having a registered TheFrontStats account
+let connectedUsernames = new Set(); // usernames having a registered TheFrontHub account
 
 // Enregistrer les fonctions de navigation IMMÉDIATEMENT pour qu'elles
 // soient disponibles même si le reste du module a des erreurs
@@ -594,7 +594,7 @@ function getDataFileGzFallback() {
 /** Decode compact array-of-arrays format into standard object format */
 function decodeCompactPayload(data) {
   if (data.k && data.r && Array.isArray(data.r) && Array.isArray(data.r[0])) {
-    console.log('[TheFrontStats] 📦 Décompactage du format optimisé...');
+    console.log('[TheFrontHub] 📦 Décompactage du format optimisé...');
     const keys = data.k;
     const runs = data.r.map(row => {
       const obj = {};
@@ -809,7 +809,7 @@ async function loadData(){
   const fallbackPlain = getDataFileFallback();
   const modeKey = 'cache_data_' + currentMode;
   
-  console.log(`[TheFrontStats] ⏳ Chargement des données (${currentMode})...`);
+  console.log(`[TheFrontHub] ⏳ Chargement des données (${currentMode})...`);
   showProgressBar();
   setProgressBar(10);
   
@@ -817,7 +817,7 @@ async function loadData(){
     // 1. Essayer de charger depuis IndexedDB (Instantané)
     const cachedData = await localDB.get(modeKey);
     if (cachedData) {
-      console.log('[TheFrontStats] ⚡ Données affichées depuis le cache local !');
+      console.log('[TheFrontHub] ⚡ Données affichées depuis le cache local !');
       applyPayloadData(cachedData, false);
       setProgressBar(50);
       hideProgressBar();
@@ -842,11 +842,11 @@ async function loadData(){
     const isNew = !cachedData || (data.u && data.u !== cachedData.u) || (data.lastUpdate && data.lastUpdate !== cachedData.lastUpdate);
                   
     if (isNew) {
-      console.log('[TheFrontStats] 🔄 Nouvelles données récupérées depuis le serveur.');
+      console.log('[TheFrontHub] 🔄 Nouvelles données récupérées depuis le serveur.');
       await localDB.set(modeKey, data);
       applyPayloadData(data, !!cachedData); // Affiche le badge si mis à jour en background
     } else {
-      console.log('[TheFrontStats] ✅ Données déjà à jour.');
+      console.log('[TheFrontHub] ✅ Données déjà à jour.');
     }
 
     if(refreshInterval) clearInterval(refreshInterval);
@@ -854,7 +854,7 @@ async function loadData(){
     
     hideProgressBar();
     const elapsed=((performance.now()-t0)/1000).toFixed(1);
-    console.log(`[TheFrontStats] ✅ Processus terminé en ${elapsed}s`);
+    console.log(`[TheFrontHub] ✅ Processus terminé en ${elapsed}s`);
     console.timeEnd('loadData');
 
   } catch(e) {
@@ -934,7 +934,7 @@ async function autoRefresh(){
         setTimeout(()=>badge.style.display='none',5000);
       }
       
-      console.log(`[TheFrontStats] ✅ Sync: ${newRuns > 0 ? '+'+newRuns+' nouveaux runs' : 'données mises à jour'} (total: ${totalRunsCount})`);
+      console.log(`[TheFrontHub] ✅ Sync: ${newRuns > 0 ? '+'+newRuns+' nouveaux runs' : 'données mises à jour'} (total: ${totalRunsCount})`);
       
       if(newRuns > 0){
         const latest = _latestRun || allRuns[0];
@@ -952,7 +952,7 @@ async function autoRefresh(){
       // même nombre de runs — silent
     }
   }catch(e){
-    console.error("[TheFrontStats] ❌ Erreur auto-refresh:", e);
+    console.error("[TheFrontHub] ❌ Erreur auto-refresh:", e);
     showToast("Erreur de synchronisation automatique", "warning", 3000);
   }
 }
@@ -1586,7 +1586,7 @@ function showPlayer(name){
     const notice = document.createElement("div");
     notice.id = "modal-not-connected";
     notice.style.cssText = "text-align:center;padding:12px;margin-top:8px;border-radius:8px;background:var(--bg2);color:var(--text3);font-size:13px";
-    notice.textContent = "Ce joueur n'est pas encore connecté à un compte TheFrontStats.";
+    notice.textContent = "Ce joueur n'est pas encore connecté à un compte TheFrontHub.";
     document.querySelector("#player-modal .modal-section").appendChild(notice);
   }
 

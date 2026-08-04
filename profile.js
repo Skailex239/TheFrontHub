@@ -1,5 +1,5 @@
 /**
- * profile.js — Profile page logic for TheFrontStats.
+ * profile.js — Profile page logic for TheFrontHub.
  *
  * Flow:
  *   onAuthStateChanged →
