@@ -3068,6 +3068,29 @@
       "numPlayers": 79,
       "timestamp": "2026-08-04T20:01:21.886Z",
       "url": "https://openfront.io/game/d8moEUYJ"
+    },
+    {
+      "id": "Sirxm9JF",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Wob5117",
+          "clientID": "2gUxVxqh",
+          "clanTag": "OO"
+        },
+        {
+          "username": "Flex",
+          "clientID": "eb6kxgpo",
+          "clanTag": "OO"
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-04T20:10:15.401Z",
+      "url": "https://openfront.io/game/Sirxm9JF"
     }
   ],
   "trios": [
@@ -13026,6 +13049,39 @@
       "numPlayers": 80,
       "timestamp": "2026-08-04T19:39:52.668Z",
       "url": "https://openfront.io/game/1sMTJYRe"
+    },
+    {
+      "id": "UD2SSCyV",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "Uv98wQZh",
+          "clanTag": "PO"
+        },
+        {
+          "username": "Dutnik",
+          "clientID": "3YWSAr2b",
+          "clanTag": "PO"
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "EnDwWewx",
+          "clanTag": "PO"
+        },
+        {
+          "username": "AnonOtter2",
+          "clientID": "5p8updQ9",
+          "clanTag": "PO"
+        }
+      ],
+      "map": "World",
+      "duration_s": 884,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-04T20:10:56.435Z",
+      "url": "https://openfront.io/game/UD2SSCyV"
     }
   ]
 }
