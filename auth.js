@@ -1,5 +1,5 @@
 /**
- * auth.js — Firebase Auth + Firestore wrapper for TheFrontStats.
+ * auth.js — Firebase Auth + Firestore wrapper for TheFrontHub.
  *
  * - signInWithPopup (Google / Discord OIDC) with signInWithRedirect fallback
  * - getRedirectResult handled on page load

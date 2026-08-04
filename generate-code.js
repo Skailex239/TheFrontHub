@@ -1,5 +1,5 @@
 /**
- * Admin script pour générer des codes récompense TheFrontStats.
+ * Admin script pour générer des codes récompense TheFrontHub.
  * 
  * Usage :
  *   node generate-code.js              → Génère 1 code VIP

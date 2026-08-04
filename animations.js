@@ -1,5 +1,5 @@
 /* ============================================
-   TheFrontStats — Animation Engine (OPTIMIZED)
+   TheFrontHub — Animation Engine (OPTIMIZED)
    Particles reduced, tilt throttled, no re-init
    ============================================ */
 
