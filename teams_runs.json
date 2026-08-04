@@ -6880,34 +6880,6 @@
       "url": "https://openfront.io/game/T9KFJMeB"
     },
     {
-      "id": "LzfxEC3t",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "OTTOMAN EMP.",
-          "clientID": "AsWwkSrn",
-          "clanTag": "1010"
-        },
-        {
-          "username": "Türkiye",
-          "clientID": "mrdJvT4o",
-          "clanTag": "1010"
-        },
-        {
-          "username": "terios",
-          "clientID": "AGxcdhm3",
-          "clanTag": "1010"
-        }
-      ],
-      "map": "Crimea",
-      "duration_s": 1064,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 48,
-      "timestamp": "2026-08-04T16:09:40.888Z",
-      "url": "https://openfront.io/game/LzfxEC3t"
-    },
-    {
       "id": "qBcQjcfF",
       "team": "Team 4",
       "players": [
@@ -6934,6 +6906,34 @@
       "numPlayers": 75,
       "timestamp": "2026-08-04T15:54:22.997Z",
       "url": "https://openfront.io/game/qBcQjcfF"
+    },
+    {
+      "id": "LzfxEC3t",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "OTTOMAN EMP.",
+          "clientID": "AsWwkSrn",
+          "clanTag": "1010"
+        },
+        {
+          "username": "Türkiye",
+          "clientID": "mrdJvT4o",
+          "clanTag": "1010"
+        },
+        {
+          "username": "terios",
+          "clientID": "AGxcdhm3",
+          "clanTag": "1010"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 1064,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-04T16:09:40.888Z",
+      "url": "https://openfront.io/game/LzfxEC3t"
     }
   ],
   "quads": [
