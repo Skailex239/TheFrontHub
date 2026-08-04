@@ -11828,39 +11828,6 @@
       "url": "https://openfront.io/game/iT59snwA"
     },
     {
-      "id": "oCew47oZ",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "PastaSzaadba",
-          "clientID": "8ZqNj68D",
-          "clanTag": "UN"
-        },
-        {
-          "username": "henroikol",
-          "clientID": "vKoMwTCe",
-          "clanTag": "UN"
-        },
-        {
-          "username": "CuddleMonster67",
-          "clientID": "JyRRBotV",
-          "clanTag": "UN"
-        },
-        {
-          "username": "casmen90",
-          "clientID": "KEYTDRu5",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "South America",
-      "duration_s": 1278,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 68,
-      "timestamp": "2026-08-04T15:27:27.988Z",
-      "url": "https://openfront.io/game/oCew47oZ"
-    },
-    {
       "id": "nzJQkRt9",
       "team": "Team 5",
       "players": [
@@ -11892,6 +11859,39 @@
       "numPlayers": 98,
       "timestamp": "2026-08-04T15:29:28.600Z",
       "url": "https://openfront.io/game/nzJQkRt9"
+    },
+    {
+      "id": "oCew47oZ",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "PastaSzaadba",
+          "clientID": "8ZqNj68D",
+          "clanTag": "UN"
+        },
+        {
+          "username": "henroikol",
+          "clientID": "vKoMwTCe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "JyRRBotV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "casmen90",
+          "clientID": "KEYTDRu5",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1278,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-04T15:27:27.988Z",
+      "url": "https://openfront.io/game/oCew47oZ"
     }
   ]
 }
