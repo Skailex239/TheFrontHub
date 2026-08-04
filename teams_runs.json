@@ -3180,29 +3180,6 @@
       "url": "https://openfront.io/game/4XR5d8vG"
     },
     {
-      "id": "nCbLadCe",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "KOTLET",
-          "clientID": "u7jhCrBS",
-          "clanTag": "PL"
-        },
-        {
-          "username": "HUSARIA",
-          "clientID": "qKgNguww",
-          "clanTag": "PL"
-        }
-      ],
-      "map": "Britannia",
-      "duration_s": 966,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-04T21:13:09.482Z",
-      "url": "https://openfront.io/game/nCbLadCe"
-    },
-    {
       "id": "KfmaUEVK",
       "team": "Team 13",
       "players": [
@@ -3224,6 +3201,29 @@
       "numPlayers": 54,
       "timestamp": "2026-08-04T21:14:28.041Z",
       "url": "https://openfront.io/game/KfmaUEVK"
+    },
+    {
+      "id": "nCbLadCe",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "KOTLET",
+          "clientID": "u7jhCrBS",
+          "clanTag": "PL"
+        },
+        {
+          "username": "HUSARIA",
+          "clientID": "qKgNguww",
+          "clanTag": "PL"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 966,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-04T21:13:09.482Z",
+      "url": "https://openfront.io/game/nCbLadCe"
     }
   ],
   "trios": [
@@ -7782,6 +7782,34 @@
       "numPlayers": 33,
       "timestamp": "2026-08-04T21:03:31.924Z",
       "url": "https://openfront.io/game/MAiB4XFV"
+    },
+    {
+      "id": "4LHbKFjM",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "BunnyKisses67",
+          "clientID": "Qdt6k8F8",
+          "clanTag": null
+        },
+        {
+          "username": "Mouse",
+          "clientID": "VbLeEhHz",
+          "clanTag": null
+        },
+        {
+          "username": "Ithaca",
+          "clientID": "APXQWuH6",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 2058,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-04T20:57:46.605Z",
+      "url": "https://openfront.io/game/4LHbKFjM"
     }
   ],
   "quads": [
