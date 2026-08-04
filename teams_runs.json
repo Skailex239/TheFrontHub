@@ -2407,29 +2407,6 @@
       "url": "https://openfront.io/game/TVWxHxTL"
     },
     {
-      "id": "TMBxiNu1",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "JAYKWARLIN",
-          "clientID": "zXrzfnW2",
-          "clanTag": "SPAT"
-        },
-        {
-          "username": "MommysLilStinker",
-          "clientID": "vgcFwdTr",
-          "clanTag": "SPAT"
-        }
-      ],
-      "map": "Gateway to the Atlantic",
-      "duration_s": 1099,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 48,
-      "timestamp": "2026-08-04T08:37:13.784Z",
-      "url": "https://openfront.io/game/TMBxiNu1"
-    },
-    {
       "id": "TSZjSW51",
       "team": "Team 2",
       "players": [
@@ -2451,6 +2428,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-04T08:41:48.997Z",
       "url": "https://openfront.io/game/TSZjSW51"
+    },
+    {
+      "id": "TMBxiNu1",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "JAYKWARLIN",
+          "clientID": "zXrzfnW2",
+          "clanTag": "SPAT"
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "vgcFwdTr",
+          "clanTag": "SPAT"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1099,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-04T08:37:13.784Z",
+      "url": "https://openfront.io/game/TMBxiNu1"
     }
   ],
   "trios": [
