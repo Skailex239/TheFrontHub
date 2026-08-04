@@ -10658,6 +10658,39 @@
       "numPlayers": 40,
       "timestamp": "2026-08-04T09:50:51.618Z",
       "url": "https://openfront.io/game/S97WDKno"
+    },
+    {
+      "id": "hLZSMG79",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Stratocaster",
+          "clientID": "pxdyDRf8",
+          "clanTag": "TUF"
+        },
+        {
+          "username": "manlymanataur",
+          "clientID": "BBirEnPr",
+          "clanTag": "TUF"
+        },
+        {
+          "username": "dantheman",
+          "clientID": "LBWRRCDY",
+          "clanTag": "TUF"
+        },
+        {
+          "username": "AnonBear",
+          "clientID": "G9pv6xyf",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-04T10:44:36.690Z",
+      "url": "https://openfront.io/game/hLZSMG79"
     }
   ]
 }
