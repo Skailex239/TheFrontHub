@@ -2674,6 +2674,24 @@
       "numPlayers": 60,
       "timestamp": "2026-08-04T11:52:32.960Z",
       "url": "https://openfront.io/game/zAFaxq9J"
+    },
+    {
+      "id": "F2UVYjXf",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "RoM",
+          "clientID": "SfXnYSXt",
+          "clanTag": "TEG"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "timestamp": "2026-08-04T12:08:17.807Z",
+      "url": "https://openfront.io/game/F2UVYjXf"
     }
   ],
   "trios": [
@@ -6436,6 +6454,29 @@
       "numPlayers": 39,
       "timestamp": "2026-08-04T11:15:58.104Z",
       "url": "https://openfront.io/game/E82tH3PL"
+    },
+    {
+      "id": "f26iG7AW",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "AnoniMoose",
+          "clientID": "bA9e9PT2",
+          "clanTag": null
+        },
+        {
+          "username": "124",
+          "clientID": "gCT8cHCw",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-04T12:10:55.930Z",
+      "url": "https://openfront.io/game/f26iG7AW"
     }
   ],
   "quads": [
@@ -11140,6 +11181,39 @@
       "numPlayers": 52,
       "timestamp": "2026-08-04T12:16:28.264Z",
       "url": "https://openfront.io/game/k7hLvh4i"
+    },
+    {
+      "id": "uJT5c4fo",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Newzin",
+          "clientID": "U69CGPdx",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hyde",
+          "clientID": "L3E5bUmN",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mary Beard",
+          "clientID": "Znaoo13a",
+          "clanTag": "UN"
+        },
+        {
+          "username": "nwar",
+          "clientID": "haBi1Y1W",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-04T12:09:35.869Z",
+      "url": "https://openfront.io/game/uJT5c4fo"
     }
   ]
 }
