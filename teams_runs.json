@@ -2564,6 +2564,24 @@
       "numPlayers": 40,
       "timestamp": "2026-08-04T10:30:08.649Z",
       "url": "https://openfront.io/game/QynatmV6"
+    },
+    {
+      "id": "92HiE2YU",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "asd",
+          "clientID": "uShi2fHT",
+          "clanTag": "HUN"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1881,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-04T10:47:45.713Z",
+      "url": "https://openfront.io/game/92HiE2YU"
     }
   ],
   "trios": [
@@ -6270,6 +6288,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-04T10:49:23.229Z",
       "url": "https://openfront.io/game/u84Ed4fJ"
+    },
+    {
+      "id": "ddrKW7Ae",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonGoat2",
+          "clientID": "ripm2djU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBear9",
+          "clientID": "j4jrErTq",
+          "clanTag": "TED"
+        },
+        {
+          "username": "AnonBeeBee",
+          "clientID": "QEXZJAWf",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1332,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-04T10:56:45.068Z",
+      "url": "https://openfront.io/game/ddrKW7Ae"
     }
   ],
   "quads": [
