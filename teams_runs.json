@@ -6880,34 +6880,6 @@
       "url": "https://openfront.io/game/T9KFJMeB"
     },
     {
-      "id": "qBcQjcfF",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "3 za srbijo",
-          "clientID": "WdRXsmWV",
-          "clanTag": "SIO"
-        },
-        {
-          "username": "Slovenianarmy",
-          "clientID": "xvz146JU",
-          "clanTag": "SIO"
-        },
-        {
-          "username": "AnonGiraffe6",
-          "clientID": "s5dhPPo4",
-          "clanTag": null
-        }
-      ],
-      "map": "Montreal",
-      "duration_s": 1861,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 75,
-      "timestamp": "2026-08-04T15:54:22.997Z",
-      "url": "https://openfront.io/game/qBcQjcfF"
-    },
-    {
       "id": "LzfxEC3t",
       "team": "Team 1",
       "players": [
@@ -6934,6 +6906,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-04T16:09:40.888Z",
       "url": "https://openfront.io/game/LzfxEC3t"
+    },
+    {
+      "id": "qBcQjcfF",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "3 za srbijo",
+          "clientID": "WdRXsmWV",
+          "clanTag": "SIO"
+        },
+        {
+          "username": "Slovenianarmy",
+          "clientID": "xvz146JU",
+          "clanTag": "SIO"
+        },
+        {
+          "username": "AnonGiraffe6",
+          "clientID": "s5dhPPo4",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1861,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-04T15:54:22.997Z",
+      "url": "https://openfront.io/game/qBcQjcfF"
     }
   ],
   "quads": [
