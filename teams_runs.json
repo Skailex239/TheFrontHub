@@ -9650,6 +9650,39 @@
       "numPlayers": 42,
       "timestamp": "2026-08-04T05:18:21.966Z",
       "url": "https://openfront.io/game/QB56Bf3F"
+    },
+    {
+      "id": "VUR3m4Xd",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Banking Clan",
+          "clientID": "F4K5qFnt",
+          "clanTag": "THE"
+        },
+        {
+          "username": "SlowDown",
+          "clientID": "1C2Jiimm",
+          "clanTag": null
+        },
+        {
+          "username": "Lethe",
+          "clientID": "xXrhcTpj",
+          "clanTag": null
+        },
+        {
+          "username": "oob",
+          "clientID": "DgXqVmA4",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 866,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-04T05:49:10.039Z",
+      "url": "https://openfront.io/game/VUR3m4Xd"
     }
   ]
 }
