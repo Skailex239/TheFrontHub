@@ -9739,6 +9739,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-04T05:48:12.898Z",
       "url": "https://openfront.io/game/HG66vpy1"
+    },
+    {
+      "id": "1N8K362z",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "AnonSquirrel1",
+          "clientID": "d4u9EqS7",
+          "clanTag": null
+        },
+        {
+          "username": "Give Me Troop",
+          "clientID": "7ULj5Svd",
+          "clanTag": "CS"
+        },
+        {
+          "username": "Empire",
+          "clientID": "SGoJ3qgp",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1054,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-04T06:00:47.095Z",
+      "url": "https://openfront.io/game/1N8K362z"
     }
   ]
 }
