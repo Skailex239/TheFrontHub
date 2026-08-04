@@ -4944,6 +4944,34 @@
       "numPlayers": 49,
       "timestamp": "2026-08-03T22:45:24.358Z",
       "url": "https://openfront.io/game/PmDtoAfJ"
+    },
+    {
+      "id": "S11WdawA",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SendTroopsToFront",
+          "clientID": "5iNbC8qT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "FroozyGM",
+          "clientID": "SR7WLjGe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Geeksesi",
+          "clientID": "EeVEizxZ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "timestamp": "2026-08-03T23:56:39.356Z",
+      "url": "https://openfront.io/game/S11WdawA"
     }
   ],
   "quads": [
@@ -8688,6 +8716,39 @@
       "numPlayers": 39,
       "timestamp": "2026-08-03T23:33:04.093Z",
       "url": "https://openfront.io/game/w39cBnfx"
+    },
+    {
+      "id": "t2bYyjRw",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "FUA",
+          "clientID": "d5R3Pjbo",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Cassidy Wharf",
+          "clientID": "cUgVoHtM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "FV4Xcq7y",
+          "clanTag": "UN"
+        },
+        {
+          "username": "island boy",
+          "clientID": "img4J6Sq",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 1351,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-03T23:45:38.793Z",
+      "url": "https://openfront.io/game/t2bYyjRw"
     }
   ]
 }
