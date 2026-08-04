@@ -2756,6 +2756,29 @@
       "numPlayers": 72,
       "timestamp": "2026-08-04T13:32:05.930Z",
       "url": "https://openfront.io/game/UUJuSZ5a"
+    },
+    {
+      "id": "e661scqE",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Kohout",
+          "clientID": "MVMkaSSQ",
+          "clanTag": "TRISO"
+        },
+        {
+          "username": "Arialis",
+          "clientID": "KeP5Cz2g",
+          "clanTag": "TRISO"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 795,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-04T13:53:54.711Z",
+      "url": "https://openfront.io/game/e661scqE"
     }
   ],
   "trios": [
@@ -11561,6 +11584,39 @@
       "numPlayers": 94,
       "timestamp": "2026-08-04T13:37:10.455Z",
       "url": "https://openfront.io/game/yJEAi5Kh"
+    },
+    {
+      "id": "rtui3qtz",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "q.q",
+          "clientID": "d1RDfhYC",
+          "clanTag": null
+        },
+        {
+          "username": "ANON2",
+          "clientID": "Z7kwhDY4",
+          "clanTag": null
+        },
+        {
+          "username": "Fish",
+          "clientID": "nvYHQi5G",
+          "clanTag": "KR"
+        },
+        {
+          "username": "AnonGorilla5",
+          "clientID": "QRndfV1G",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1042,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-04T13:49:49.460Z",
+      "url": "https://openfront.io/game/rtui3qtz"
     }
   ]
 }
