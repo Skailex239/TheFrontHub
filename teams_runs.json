@@ -2802,6 +2802,29 @@
       "numPlayers": 64,
       "timestamp": "2026-08-04T14:14:34.382Z",
       "url": "https://openfront.io/game/iCwqvRdY"
+    },
+    {
+      "id": "hRhsEtmz",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "NeedHugs",
+          "clientID": "igVHiHjW",
+          "clanTag": "NEG"
+        },
+        {
+          "username": "okx",
+          "clientID": "XFKBbeBc",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1180,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-04T14:19:09.640Z",
+      "url": "https://openfront.io/game/hRhsEtmz"
     }
   ],
   "trios": [
@@ -11686,6 +11709,39 @@
       "numPlayers": 94,
       "timestamp": "2026-08-04T13:37:10.455Z",
       "url": "https://openfront.io/game/yJEAi5Kh"
+    },
+    {
+      "id": "bNFaNAfC",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "twilitdawn",
+          "clientID": "A2e3cs2i",
+          "clanTag": null
+        },
+        {
+          "username": "IndustryMaxxer",
+          "clientID": "XUzdpXxd",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Airakaz",
+          "clientID": "qTDg5UZa",
+          "clanTag": null
+        },
+        {
+          "username": "Hudson trade company",
+          "clientID": "NjetSqgf",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-04T14:10:12.138Z",
+      "url": "https://openfront.io/game/bNFaNAfC"
     }
   ]
 }
