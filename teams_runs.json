@@ -13755,34 +13755,6 @@
       "url": "https://openfront.io/game/VjdtnLGa"
     },
     {
-      "id": "CFJRxqU2",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "Hansi",
-          "clientID": "wYZgi7sz",
-          "clanTag": "GREG"
-        },
-        {
-          "username": "Markus",
-          "clientID": "5YXgn6rv",
-          "clanTag": "GREG"
-        },
-        {
-          "username": "Cbear",
-          "clientID": "fWLxwNpH",
-          "clanTag": null
-        }
-      ],
-      "map": "Deglaciated Antarctica",
-      "duration_s": 2001,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-08-04T22:37:44.273Z",
-      "url": "https://openfront.io/game/CFJRxqU2"
-    },
-    {
       "id": "DtP9C8kj",
       "team": "Team 3",
       "players": [
@@ -13814,6 +13786,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-04T22:43:49.580Z",
       "url": "https://openfront.io/game/DtP9C8kj"
+    },
+    {
+      "id": "CFJRxqU2",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Hansi",
+          "clientID": "wYZgi7sz",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Markus",
+          "clientID": "5YXgn6rv",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Cbear",
+          "clientID": "fWLxwNpH",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 2001,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-04T22:37:44.273Z",
+      "url": "https://openfront.io/game/CFJRxqU2"
     }
   ]
 }
