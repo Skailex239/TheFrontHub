@@ -6957,6 +6957,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-04T16:09:40.888Z",
       "url": "https://openfront.io/game/LzfxEC3t"
+    },
+    {
+      "id": "2YsL6Vz5",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Tony Troops",
+          "clientID": "TLQH9vPL",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "judom",
+          "clientID": "M4CuWp1W",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nonex",
+          "clientID": "bptZBYro",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 613,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "timestamp": "2026-08-04T16:45:51.278Z",
+      "url": "https://openfront.io/game/2YsL6Vz5"
     }
   ],
   "quads": [
@@ -12111,6 +12139,39 @@
       "numPlayers": 32,
       "timestamp": "2026-08-04T16:27:48.949Z",
       "url": "https://openfront.io/game/WwGEkRrm"
+    },
+    {
+      "id": "gtuzMRDt",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonLobster",
+          "clientID": "BfKsCUwX",
+          "clanTag": null
+        },
+        {
+          "username": "Kitadzo",
+          "clientID": "QpBgtdGT",
+          "clanTag": "UA"
+        },
+        {
+          "username": "AnonBison9",
+          "clientID": "amxuR1aq",
+          "clanTag": null
+        },
+        {
+          "username": "Adlos",
+          "clientID": "mg8SpeZv",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1408,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-04T16:33:22.261Z",
+      "url": "https://openfront.io/game/gtuzMRDt"
     }
   ]
 }
