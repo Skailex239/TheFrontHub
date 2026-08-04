@@ -12898,6 +12898,29 @@
       "url": "https://openfront.io/game/qCmK8sgb"
     },
     {
+      "id": "RVACURwU",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Whitby",
+          "clientID": "CmmwxbTq",
+          "clanTag": null
+        },
+        {
+          "username": "L3 EMPIRE",
+          "clientID": "qCfBTbZ5",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1749,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-04T19:25:29.840Z",
+      "url": "https://openfront.io/game/RVACURwU"
+    },
+    {
       "id": "1sMTJYRe",
       "team": "Team 6",
       "players": [
@@ -12924,29 +12947,6 @@
       "numPlayers": 80,
       "timestamp": "2026-08-04T19:39:52.668Z",
       "url": "https://openfront.io/game/1sMTJYRe"
-    },
-    {
-      "id": "RVACURwU",
-      "team": "Team 13",
-      "players": [
-        {
-          "username": "Whitby",
-          "clientID": "CmmwxbTq",
-          "clanTag": null
-        },
-        {
-          "username": "L3 EMPIRE",
-          "clientID": "qCfBTbZ5",
-          "clanTag": null
-        }
-      ],
-      "map": "Great Lakes",
-      "duration_s": 1749,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 92,
-      "timestamp": "2026-08-04T19:25:29.840Z",
-      "url": "https://openfront.io/game/RVACURwU"
     }
   ]
 }
