@@ -2873,24 +2873,6 @@
       "url": "https://openfront.io/game/Zcvrjpw2"
     },
     {
-      "id": "NCvp77pN",
-      "team": "Team 25",
-      "players": [
-        {
-          "username": "Bender",
-          "clientID": "4eVZeExV",
-          "clanTag": "MILF"
-        }
-      ],
-      "map": "Europe",
-      "duration_s": 1332,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 90,
-      "timestamp": "2026-08-04T16:45:35.472Z",
-      "url": "https://openfront.io/game/NCvp77pN"
-    },
-    {
       "id": "G9WRnQag",
       "team": "Team 2",
       "players": [
@@ -2912,6 +2894,47 @@
       "numPlayers": 67,
       "timestamp": "2026-08-04T16:51:08.266Z",
       "url": "https://openfront.io/game/G9WRnQag"
+    },
+    {
+      "id": "NCvp77pN",
+      "team": "Team 25",
+      "players": [
+        {
+          "username": "Bender",
+          "clientID": "4eVZeExV",
+          "clanTag": "MILF"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1332,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-04T16:45:35.472Z",
+      "url": "https://openfront.io/game/NCvp77pN"
+    },
+    {
+      "id": "rEQfzqR9",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Tiger Cub",
+          "clientID": "66jWu7Qz",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "AnonHippo4",
+          "clientID": "pbWonLAV",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 1152,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-04T16:52:45.338Z",
+      "url": "https://openfront.io/game/rEQfzqR9"
     }
   ],
   "trios": [
