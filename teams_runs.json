@@ -6906,6 +6906,34 @@
       "numPlayers": 75,
       "timestamp": "2026-08-04T15:54:22.997Z",
       "url": "https://openfront.io/game/qBcQjcfF"
+    },
+    {
+      "id": "LzfxEC3t",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "OTTOMAN EMP.",
+          "clientID": "AsWwkSrn",
+          "clanTag": "1010"
+        },
+        {
+          "username": "Türkiye",
+          "clientID": "mrdJvT4o",
+          "clanTag": "1010"
+        },
+        {
+          "username": "terios",
+          "clientID": "AGxcdhm3",
+          "clanTag": "1010"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 1064,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-04T16:09:40.888Z",
+      "url": "https://openfront.io/game/LzfxEC3t"
     }
   ],
   "quads": [
@@ -11968,34 +11996,6 @@
       "url": "https://openfront.io/game/oCew47oZ"
     },
     {
-      "id": "3CiJ9qrc",
-      "team": "Team 9",
-      "players": [
-        {
-          "username": "Turtleneck",
-          "clientID": "mZz6hieM",
-          "clanTag": "BUB"
-        },
-        {
-          "username": "TRADER",
-          "clientID": "NNmttGEK",
-          "clanTag": null
-        },
-        {
-          "username": "NerdyWarrior.QrRJ",
-          "clientID": "kT744iVy",
-          "clanTag": null
-        }
-      ],
-      "map": "Titan",
-      "duration_s": 1600,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-04T15:58:21.737Z",
-      "url": "https://openfront.io/game/3CiJ9qrc"
-    },
-    {
       "id": "RFYsPDoE",
       "team": "Team 10",
       "players": [
@@ -12027,6 +12027,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-04T15:45:45.500Z",
       "url": "https://openfront.io/game/RFYsPDoE"
+    },
+    {
+      "id": "3CiJ9qrc",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Turtleneck",
+          "clientID": "mZz6hieM",
+          "clanTag": "BUB"
+        },
+        {
+          "username": "TRADER",
+          "clientID": "NNmttGEK",
+          "clanTag": null
+        },
+        {
+          "username": "NerdyWarrior.QrRJ",
+          "clientID": "kT744iVy",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-04T15:58:21.737Z",
+      "url": "https://openfront.io/game/3CiJ9qrc"
     }
   ]
 }
