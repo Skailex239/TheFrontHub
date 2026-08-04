@@ -6832,29 +6832,6 @@
       "numPlayers": 30,
       "timestamp": "2026-08-04T14:53:18.470Z",
       "url": "https://openfront.io/game/tFwrW6sZ"
-    },
-    {
-      "id": "T9KFJMeB",
-      "team": "Team 13",
-      "players": [
-        {
-          "username": "Udarna",
-          "clientID": "6zEvqPBG",
-          "clanTag": null
-        },
-        {
-          "username": "orukansaiko",
-          "clientID": "hV7NR8Hm",
-          "clanTag": null
-        }
-      ],
-      "map": "Sol",
-      "duration_s": 2240,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-04T15:16:47.867Z",
-      "url": "https://openfront.io/game/T9KFJMeB"
     }
   ],
   "quads": [
@@ -11851,39 +11828,6 @@
       "url": "https://openfront.io/game/iT59snwA"
     },
     {
-      "id": "oCew47oZ",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "PastaSzaadba",
-          "clientID": "8ZqNj68D",
-          "clanTag": "UN"
-        },
-        {
-          "username": "henroikol",
-          "clientID": "vKoMwTCe",
-          "clanTag": "UN"
-        },
-        {
-          "username": "CuddleMonster67",
-          "clientID": "JyRRBotV",
-          "clanTag": "UN"
-        },
-        {
-          "username": "casmen90",
-          "clientID": "KEYTDRu5",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "South America",
-      "duration_s": 1278,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 68,
-      "timestamp": "2026-08-04T15:27:27.988Z",
-      "url": "https://openfront.io/game/oCew47oZ"
-    },
-    {
       "id": "nzJQkRt9",
       "team": "Team 5",
       "players": [
@@ -11915,6 +11859,39 @@
       "numPlayers": 98,
       "timestamp": "2026-08-04T15:29:28.600Z",
       "url": "https://openfront.io/game/nzJQkRt9"
+    },
+    {
+      "id": "oCew47oZ",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "PastaSzaadba",
+          "clientID": "8ZqNj68D",
+          "clanTag": "UN"
+        },
+        {
+          "username": "henroikol",
+          "clientID": "vKoMwTCe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "JyRRBotV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "casmen90",
+          "clientID": "KEYTDRu5",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1278,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-04T15:27:27.988Z",
+      "url": "https://openfront.io/game/oCew47oZ"
     }
   ]
 }
