@@ -2451,6 +2451,47 @@
       "numPlayers": 48,
       "timestamp": "2026-08-04T08:37:13.784Z",
       "url": "https://openfront.io/game/TMBxiNu1"
+    },
+    {
+      "id": "bPYSjbuA",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "floetus",
+          "clientID": "zZoXHxoP",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1378,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-04T09:11:10.067Z",
+      "url": "https://openfront.io/game/bPYSjbuA"
+    },
+    {
+      "id": "sqSdidUy",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Miks",
+          "clientID": "TZZdXXyi",
+          "clanTag": "AHOJ"
+        },
+        {
+          "username": "BossRatt",
+          "clientID": "4WTe6aa9",
+          "clanTag": "AHOJ"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 999,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "timestamp": "2026-08-04T09:17:48.919Z",
+      "url": "https://openfront.io/game/sqSdidUy"
     }
   ],
   "trios": [
