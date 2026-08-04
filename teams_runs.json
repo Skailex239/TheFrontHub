@@ -3157,29 +3157,6 @@
       "url": "https://openfront.io/game/4c6etTRU"
     },
     {
-      "id": "KfmaUEVK",
-      "team": "Team 13",
-      "players": [
-        {
-          "username": "Sbang",
-          "clientID": "7Wb4ousN",
-          "clanTag": "STM"
-        },
-        {
-          "username": "Joker",
-          "clientID": "q3eWddBD",
-          "clanTag": null
-        }
-      ],
-      "map": "Achiran",
-      "duration_s": 877,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 54,
-      "timestamp": "2026-08-04T21:14:28.041Z",
-      "url": "https://openfront.io/game/KfmaUEVK"
-    },
-    {
       "id": "4XR5d8vG",
       "team": "Team 2",
       "players": [
@@ -3224,6 +3201,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-04T21:13:09.482Z",
       "url": "https://openfront.io/game/nCbLadCe"
+    },
+    {
+      "id": "KfmaUEVK",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Sbang",
+          "clientID": "7Wb4ousN",
+          "clanTag": "STM"
+        },
+        {
+          "username": "Joker",
+          "clientID": "q3eWddBD",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 877,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-04T21:14:28.041Z",
+      "url": "https://openfront.io/game/KfmaUEVK"
     }
   ],
   "trios": [
