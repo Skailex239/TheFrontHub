@@ -2494,24 +2494,6 @@
       "url": "https://openfront.io/game/bPYSjbuA"
     },
     {
-      "id": "BQbyjc5e",
-      "team": "Team 13",
-      "players": [
-        {
-          "username": "akuguma234",
-          "clientID": "dD7jUasX",
-          "clanTag": null
-        }
-      ],
-      "map": "China",
-      "duration_s": 1114,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 74,
-      "timestamp": "2026-08-04T09:27:03.891Z",
-      "url": "https://openfront.io/game/BQbyjc5e"
-    },
-    {
       "id": "RNu8DyCx",
       "team": "Team 19",
       "players": [
@@ -2528,6 +2510,24 @@
       "numPlayers": 65,
       "timestamp": "2026-08-04T09:15:40.316Z",
       "url": "https://openfront.io/game/RNu8DyCx"
+    },
+    {
+      "id": "BQbyjc5e",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "akuguma234",
+          "clientID": "dD7jUasX",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1114,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-04T09:27:03.891Z",
+      "url": "https://openfront.io/game/BQbyjc5e"
     }
   ],
   "trios": [
