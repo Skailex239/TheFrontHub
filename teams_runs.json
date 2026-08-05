@@ -16203,6 +16203,39 @@
       "numPlayers": 104,
       "timestamp": "2026-08-05T12:42:57.207Z",
       "url": "https://openfront.io/game/jVXvUs4h"
+    },
+    {
+      "id": "bb6VmQJ3",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Faber",
+          "clientID": "r4kLYTfK",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Logan",
+          "clientID": "dVwc6Qb1",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "WLF",
+          "clientID": "mxvxrK8F",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Shah",
+          "clientID": "8gVdWh4U",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1170,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-05T12:49:18.563Z",
+      "url": "https://openfront.io/game/bb6VmQJ3"
     }
   ]
 }
