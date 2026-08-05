@@ -3439,6 +3439,24 @@
       "numPlayers": 37,
       "timestamp": "2026-08-05T02:41:04.467Z",
       "url": "https://openfront.io/game/88jbma7M"
+    },
+    {
+      "id": "9Pct24FJ",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Gale",
+          "clientID": "QmX5vcSM",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 848,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-05T02:49:49.933Z",
+      "url": "https://openfront.io/game/9Pct24FJ"
     }
   ],
   "trios": [
@@ -14393,6 +14411,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-05T02:32:28.971Z",
       "url": "https://openfront.io/game/QVwxCBmT"
+    },
+    {
+      "id": "GMUBLt9z",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "STOP IT",
+          "clientID": "MUomD2ZZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWhale7",
+          "clientID": "6mTQcDQG",
+          "clanTag": null
+        },
+        {
+          "username": "Klingon Empire",
+          "clientID": "ZJRxv4qr",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2410,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-05T02:24:12.027Z",
+      "url": "https://openfront.io/game/GMUBLt9z"
     }
   ]
 }
