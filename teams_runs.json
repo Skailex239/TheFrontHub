@@ -4178,29 +4178,6 @@
       "url": "https://openfront.io/game/JFnxzmoQ"
     },
     {
-      "id": "eLdewxqU",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "KOTLET",
-          "clientID": "KABwLieY",
-          "clanTag": "PL"
-        },
-        {
-          "username": "HUSARIA",
-          "clientID": "7JzigVVC",
-          "clanTag": "PL"
-        }
-      ],
-      "map": "Levant",
-      "duration_s": 1047,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 82,
-      "timestamp": "2026-08-05T17:24:16.503Z",
-      "url": "https://openfront.io/game/eLdewxqU"
-    },
-    {
       "id": "54wcawPN",
       "team": "Team 1",
       "players": [
@@ -4222,6 +4199,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-05T17:30:31.324Z",
       "url": "https://openfront.io/game/54wcawPN"
+    },
+    {
+      "id": "eLdewxqU",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "KOTLET",
+          "clientID": "KABwLieY",
+          "clanTag": "PL"
+        },
+        {
+          "username": "HUSARIA",
+          "clientID": "7JzigVVC",
+          "clanTag": "PL"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1047,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-05T17:24:16.503Z",
+      "url": "https://openfront.io/game/eLdewxqU"
     }
   ],
   "trios": [
