@@ -17383,39 +17383,6 @@
       "url": "https://openfront.io/game/oSZxMG6B"
     },
     {
-      "id": "xWPE5jFc",
-      "team": "Green",
-      "players": [
-        {
-          "username": "ya hussain",
-          "clientID": "yigVj4fo",
-          "clanTag": "SHIA"
-        },
-        {
-          "username": "AnonShark6",
-          "clientID": "8JxuSmsb",
-          "clanTag": null
-        },
-        {
-          "username": "DaddysLilTater",
-          "clientID": "QWLdx6KZ",
-          "clanTag": null
-        },
-        {
-          "username": "IndustryMaxxer",
-          "clientID": "zMGevTYp",
-          "clanTag": "EU"
-        }
-      ],
-      "map": "Danish Straits",
-      "duration_s": 723,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 20,
-      "timestamp": "2026-08-05T18:24:56.381Z",
-      "url": "https://openfront.io/game/xWPE5jFc"
-    },
-    {
       "id": "cWAJvi5h",
       "team": "Team 17",
       "players": [
@@ -17447,6 +17414,39 @@
       "numPlayers": 84,
       "timestamp": "2026-08-05T18:12:09.162Z",
       "url": "https://openfront.io/game/cWAJvi5h"
+    },
+    {
+      "id": "xWPE5jFc",
+      "team": "Green",
+      "players": [
+        {
+          "username": "ya hussain",
+          "clientID": "yigVj4fo",
+          "clanTag": "SHIA"
+        },
+        {
+          "username": "AnonShark6",
+          "clientID": "8JxuSmsb",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilTater",
+          "clientID": "QWLdx6KZ",
+          "clanTag": null
+        },
+        {
+          "username": "IndustryMaxxer",
+          "clientID": "zMGevTYp",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 723,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-05T18:24:56.381Z",
+      "url": "https://openfront.io/game/xWPE5jFc"
     }
   ]
 }
