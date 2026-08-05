@@ -14347,6 +14347,29 @@
       "numPlayers": 57,
       "timestamp": "2026-08-05T02:09:08.226Z",
       "url": "https://openfront.io/game/W7Uwdfy7"
+    },
+    {
+      "id": "QVwxCBmT",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "The Darkest Realm",
+          "clientID": "PRZdsHd1",
+          "clanTag": null
+        },
+        {
+          "username": "cover",
+          "clientID": "Wkr5RUNN",
+          "clanTag": "ZG"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1303,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-05T02:32:28.971Z",
+      "url": "https://openfront.io/game/QVwxCBmT"
     }
   ]
 }
