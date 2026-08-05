@@ -15321,6 +15321,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-05T08:21:35.823Z",
       "url": "https://openfront.io/game/SKUMsK5N"
+    },
+    {
+      "id": "e3cnuvtV",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonZebra4",
+          "clientID": "aRR1kCfe",
+          "clanTag": null
+        },
+        {
+          "username": "Ramster",
+          "clientID": "y4DF5Dtz",
+          "clanTag": "HELLO"
+        },
+        {
+          "username": "Thr",
+          "clientID": "Mq1LMqtY",
+          "clanTag": null
+        },
+        {
+          "username": "Gengis Calm",
+          "clientID": "CqUa12vo",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1433,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-05T08:25:49.045Z",
+      "url": "https://openfront.io/game/e3cnuvtV"
     }
   ]
 }
