@@ -8205,34 +8205,6 @@
       "url": "https://openfront.io/game/v2hKyyuo"
     },
     {
-      "id": "qQDk2yfN",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "BEE",
-          "clientID": "xxnrZA42",
-          "clanTag": "UN"
-        },
-        {
-          "username": "willerhide",
-          "clientID": "MqfacLhF",
-          "clanTag": null
-        },
-        {
-          "username": "Starland",
-          "clientID": "tT8RfnYM",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Lisbon",
-      "duration_s": 1073,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 49,
-      "timestamp": "2026-08-05T00:42:31.076Z",
-      "url": "https://openfront.io/game/qQDk2yfN"
-    },
-    {
       "id": "Uvc1k6bV",
       "team": "Team 11",
       "players": [
@@ -8259,6 +8231,34 @@
       "numPlayers": 33,
       "timestamp": "2026-08-05T00:40:29.959Z",
       "url": "https://openfront.io/game/Uvc1k6bV"
+    },
+    {
+      "id": "qQDk2yfN",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "BEE",
+          "clientID": "xxnrZA42",
+          "clanTag": "UN"
+        },
+        {
+          "username": "willerhide",
+          "clientID": "MqfacLhF",
+          "clanTag": null
+        },
+        {
+          "username": "Starland",
+          "clientID": "tT8RfnYM",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 1073,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "timestamp": "2026-08-05T00:42:31.076Z",
+      "url": "https://openfront.io/game/qQDk2yfN"
     }
   ],
   "quads": [
