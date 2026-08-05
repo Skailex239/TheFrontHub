@@ -3480,6 +3480,24 @@
       "numPlayers": 44,
       "timestamp": "2026-08-05T04:33:47.043Z",
       "url": "https://openfront.io/game/aZdemKLj"
+    },
+    {
+      "id": "nkZrsMuJ",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Peace And Love",
+          "clientID": "Ry8TEN7Q",
+          "clanTag": "SG"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1219,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-05T05:08:25.446Z",
+      "url": "https://openfront.io/game/nkZrsMuJ"
     }
   ],
   "trios": [
@@ -14732,6 +14750,39 @@
       "numPlayers": 42,
       "timestamp": "2026-08-05T04:40:54.440Z",
       "url": "https://openfront.io/game/JFs9S3Wc"
+    },
+    {
+      "id": "y2bbZD12",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Norous",
+          "clientID": "mKi2QXBK",
+          "clanTag": "CHRON"
+        },
+        {
+          "username": "freshmancracker",
+          "clientID": "xjKYtq2j",
+          "clanTag": "CHRON"
+        },
+        {
+          "username": "nacho gurt fingle",
+          "clientID": "QYw97Kms",
+          "clanTag": "CHRON"
+        },
+        {
+          "username": "DTX",
+          "clientID": "RLH4mdD3",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1866,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-05T04:57:41.865Z",
+      "url": "https://openfront.io/game/y2bbZD12"
     }
   ]
 }
