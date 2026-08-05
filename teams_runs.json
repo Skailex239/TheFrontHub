@@ -8755,6 +8755,34 @@
       "numPlayers": 58,
       "timestamp": "2026-08-05T07:58:19.525Z",
       "url": "https://openfront.io/game/mgDoFuHJ"
+    },
+    {
+      "id": "otRkYrk7",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Tsaiqo",
+          "clientID": "y8diyyqn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Dexx",
+          "clientID": "Zc3N1toJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Lallu",
+          "clientID": "9uYKtvsv",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1412,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "timestamp": "2026-08-05T08:17:04.086Z",
+      "url": "https://openfront.io/game/otRkYrk7"
     }
   ],
   "quads": [
@@ -15237,6 +15265,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-05T08:05:32.417Z",
       "url": "https://openfront.io/game/sV2q9PqP"
+    },
+    {
+      "id": "SKUMsK5N",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Firenze",
+          "clientID": "ygfZh5JJ",
+          "clanTag": null
+        },
+        {
+          "username": "MoonColossus.chWE",
+          "clientID": "ZCEKUUFc",
+          "clanTag": null
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "Q9Acn29u",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "AnonRam7",
+          "clientID": "TgCYgeyY",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1149,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-05T08:21:35.823Z",
+      "url": "https://openfront.io/game/SKUMsK5N"
     }
   ]
 }
