@@ -4132,29 +4132,6 @@
       "url": "https://openfront.io/game/RPJJPWBD"
     },
     {
-      "id": "Fh7uTbHc",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "xWallbangx",
-          "clientID": "6Vh3FoWb",
-          "clanTag": null
-        },
-        {
-          "username": "Nea",
-          "clientID": "Mgdj9XK4",
-          "clanTag": "ITA"
-        }
-      ],
-      "map": "Sierpinski",
-      "duration_s": 1112,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 22,
-      "timestamp": "2026-08-05T16:32:09.042Z",
-      "url": "https://openfront.io/game/Fh7uTbHc"
-    },
-    {
       "id": "JFnxzmoQ",
       "team": "Team 4",
       "players": [
@@ -4176,6 +4153,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-05T16:27:58.804Z",
       "url": "https://openfront.io/game/JFnxzmoQ"
+    },
+    {
+      "id": "Fh7uTbHc",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "xWallbangx",
+          "clientID": "6Vh3FoWb",
+          "clanTag": null
+        },
+        {
+          "username": "Nea",
+          "clientID": "Mgdj9XK4",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1112,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-05T16:32:09.042Z",
+      "url": "https://openfront.io/game/Fh7uTbHc"
     }
   ],
   "trios": [
