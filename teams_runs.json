@@ -9298,29 +9298,6 @@
       "url": "https://openfront.io/game/w9TAehH5"
     },
     {
-      "id": "pvXaw6Zn",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "guy",
-          "clientID": "bnyopTJF",
-          "clanTag": "UN"
-        },
-        {
-          "username": "You can trust me bro",
-          "clientID": "T6NGapeL",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Giant World Map",
-      "duration_s": 2285,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 90,
-      "timestamp": "2026-08-05T12:18:00.755Z",
-      "url": "https://openfront.io/game/pvXaw6Zn"
-    },
-    {
       "id": "eiATNLy7",
       "team": "Team 6",
       "players": [
@@ -9347,6 +9324,29 @@
       "numPlayers": 39,
       "timestamp": "2026-08-05T12:39:30.502Z",
       "url": "https://openfront.io/game/eiATNLy7"
+    },
+    {
+      "id": "pvXaw6Zn",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "guy",
+          "clientID": "bnyopTJF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "You can trust me bro",
+          "clientID": "T6NGapeL",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2285,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-05T12:18:00.755Z",
+      "url": "https://openfront.io/game/pvXaw6Zn"
     }
   ],
   "quads": [
