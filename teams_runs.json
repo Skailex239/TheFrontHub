@@ -8520,6 +8520,34 @@
       "numPlayers": 42,
       "timestamp": "2026-08-05T04:14:51.508Z",
       "url": "https://openfront.io/game/yfyLAfVz"
+    },
+    {
+      "id": "9uBYedpt",
+      "team": "Red",
+      "players": [
+        {
+          "username": "258",
+          "clientID": "AEVBcjrU",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Le_Chevre",
+          "clientID": "KXVztKP6",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Reapxr",
+          "clientID": "eUBF4FBa",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1513,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-05T05:18:46.510Z",
+      "url": "https://openfront.io/game/9uBYedpt"
     }
   ],
   "quads": [
@@ -14801,6 +14829,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-05T04:57:41.865Z",
       "url": "https://openfront.io/game/y2bbZD12"
+    },
+    {
+      "id": "7w2VgvRW",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "agarthan diversity",
+          "clientID": "HSusfQPH",
+          "clanTag": "SWMG"
+        },
+        {
+          "username": "fartkitty",
+          "clientID": "pTM1W8Js",
+          "clanTag": "SWMG"
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "pU9PnBWW",
+          "clanTag": "SWMG"
+        },
+        {
+          "username": "datnga",
+          "clientID": "jXUB557r",
+          "clanTag": "SWMG"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1268,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "timestamp": "2026-08-05T05:22:33.216Z",
+      "url": "https://openfront.io/game/7w2VgvRW"
     }
   ]
 }
