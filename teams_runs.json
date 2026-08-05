@@ -4534,6 +4534,29 @@
       "numPlayers": 14,
       "timestamp": "2026-08-05T22:55:11.576Z",
       "url": "https://openfront.io/game/J4Jo3y7G"
+    },
+    {
+      "id": "Bkc4divD",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Austria",
+          "clientID": "ZQCCgZP5",
+          "clanTag": null
+        },
+        {
+          "username": "RAGEROSO",
+          "clientID": "gvDEauZW",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3734,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-05T22:33:11.294Z",
+      "url": "https://openfront.io/game/Bkc4divD"
     }
   ],
   "trios": [
@@ -10640,6 +10663,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-05T22:56:54.659Z",
       "url": "https://openfront.io/game/1gY1n1r9"
+    },
+    {
+      "id": "EQa8x8op",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ApesFindShapes",
+          "clientID": "gS4ampGc",
+          "clanTag": "GOY"
+        },
+        {
+          "username": "BlackWolF",
+          "clientID": "bGyvjEx2",
+          "clanTag": "GOY"
+        },
+        {
+          "username": "VVV",
+          "clientID": "JkBDLkn6",
+          "clanTag": "GOY"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 995,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-05T23:17:40.295Z",
+      "url": "https://openfront.io/game/EQa8x8op"
     }
   ],
   "quads": [
