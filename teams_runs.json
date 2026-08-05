@@ -15695,6 +15695,29 @@
       "url": "https://openfront.io/game/WKxHkzEL"
     },
     {
+      "id": "qY91aghe",
+      "team": "Red",
+      "players": [
+        {
+          "username": "CDG",
+          "clientID": "m3nQyjUw",
+          "clanTag": null
+        },
+        {
+          "username": "Putin is evil",
+          "clientID": "MB9PfvDL",
+          "clanTag": "ABS"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 4525,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-05T09:43:36.759Z",
+      "url": "https://openfront.io/game/qY91aghe"
+    },
+    {
       "id": "afDHvUfm",
       "team": "Team 1",
       "players": [
@@ -15726,29 +15749,6 @@
       "numPlayers": 60,
       "timestamp": "2026-08-05T10:39:15.716Z",
       "url": "https://openfront.io/game/afDHvUfm"
-    },
-    {
-      "id": "qY91aghe",
-      "team": "Red",
-      "players": [
-        {
-          "username": "CDG",
-          "clientID": "m3nQyjUw",
-          "clanTag": null
-        },
-        {
-          "username": "Putin is evil",
-          "clientID": "MB9PfvDL",
-          "clanTag": "ABS"
-        }
-      ],
-      "map": "Caribbean",
-      "duration_s": 4525,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 20,
-      "timestamp": "2026-08-05T09:43:36.759Z",
-      "url": "https://openfront.io/game/qY91aghe"
     }
   ]
 }
