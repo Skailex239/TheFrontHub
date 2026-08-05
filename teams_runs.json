@@ -8704,34 +8704,6 @@
       "numPlayers": 53,
       "timestamp": "2026-08-05T06:46:34.313Z",
       "url": "https://openfront.io/game/KKhHUAjc"
-    },
-    {
-      "id": "KzRCPkY2",
-      "team": "Team 11",
-      "players": [
-        {
-          "username": "free palestein",
-          "clientID": "rP5KcXme",
-          "clanTag": null
-        },
-        {
-          "username": "Ekmek_mekmek",
-          "clientID": "bVvUy2Lb",
-          "clanTag": null
-        },
-        {
-          "username": "tho",
-          "clientID": "zsxiCinF",
-          "clanTag": null
-        }
-      ],
-      "map": "Tierra Del Fuego",
-      "duration_s": 993,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 39,
-      "timestamp": "2026-08-05T08:14:54.949Z",
-      "url": "https://openfront.io/game/KzRCPkY2"
     }
   ],
   "quads": [
@@ -15165,6 +15137,29 @@
       "url": "https://openfront.io/game/bVpPFogw"
     },
     {
+      "id": "BAWBVvnr",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "RoliTheGOAT",
+          "clientID": "7SBTF9Ky",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Bruh",
+          "clientID": "Mm5d22p9",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 1789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-05T07:55:06.347Z",
+      "url": "https://openfront.io/game/BAWBVvnr"
+    },
+    {
       "id": "sV2q9PqP",
       "team": "Team 10",
       "players": [
@@ -15191,29 +15186,6 @@
       "numPlayers": 44,
       "timestamp": "2026-08-05T08:05:32.417Z",
       "url": "https://openfront.io/game/sV2q9PqP"
-    },
-    {
-      "id": "BAWBVvnr",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "RoliTheGOAT",
-          "clientID": "7SBTF9Ky",
-          "clanTag": "AST"
-        },
-        {
-          "username": "Bruh",
-          "clientID": "Mm5d22p9",
-          "clanTag": null
-        }
-      ],
-      "map": "Alps",
-      "duration_s": 1789,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-05T07:55:06.347Z",
-      "url": "https://openfront.io/game/BAWBVvnr"
     }
   ]
 }
