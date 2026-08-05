@@ -15137,29 +15137,6 @@
       "url": "https://openfront.io/game/bVpPFogw"
     },
     {
-      "id": "BAWBVvnr",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "RoliTheGOAT",
-          "clientID": "7SBTF9Ky",
-          "clanTag": "AST"
-        },
-        {
-          "username": "Bruh",
-          "clientID": "Mm5d22p9",
-          "clanTag": null
-        }
-      ],
-      "map": "Alps",
-      "duration_s": 1789,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-05T07:55:06.347Z",
-      "url": "https://openfront.io/game/BAWBVvnr"
-    },
-    {
       "id": "sV2q9PqP",
       "team": "Team 10",
       "players": [
@@ -15186,6 +15163,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-05T08:05:32.417Z",
       "url": "https://openfront.io/game/sV2q9PqP"
+    },
+    {
+      "id": "BAWBVvnr",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "RoliTheGOAT",
+          "clientID": "7SBTF9Ky",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Bruh",
+          "clientID": "Mm5d22p9",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 1789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-05T07:55:06.347Z",
+      "url": "https://openfront.io/game/BAWBVvnr"
     }
   ]
 }
