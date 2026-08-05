@@ -3418,24 +3418,6 @@
       "url": "https://openfront.io/game/1fXsjUoE"
     },
     {
-      "id": "9Pct24FJ",
-      "team": "Team 17",
-      "players": [
-        {
-          "username": "Gale",
-          "clientID": "QmX5vcSM",
-          "clanTag": null
-        }
-      ],
-      "map": "Iceland",
-      "duration_s": 848,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-08-05T02:49:49.933Z",
-      "url": "https://openfront.io/game/9Pct24FJ"
-    },
-    {
       "id": "88jbma7M",
       "team": "Team 6",
       "players": [
@@ -3457,6 +3439,24 @@
       "numPlayers": 37,
       "timestamp": "2026-08-05T02:41:04.467Z",
       "url": "https://openfront.io/game/88jbma7M"
+    },
+    {
+      "id": "9Pct24FJ",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Gale",
+          "clientID": "QmX5vcSM",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 848,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-05T02:49:49.933Z",
+      "url": "https://openfront.io/game/9Pct24FJ"
     }
   ],
   "trios": [
