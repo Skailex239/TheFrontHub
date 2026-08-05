@@ -17546,39 +17546,6 @@
       "url": "https://openfront.io/game/ysXcLVpW"
     },
     {
-      "id": "wKq2z6Mv",
-      "team": "Team 16",
-      "players": [
-        {
-          "username": "Anon190",
-          "clientID": "x9jtmW3u",
-          "clanTag": null
-        },
-        {
-          "username": "Leave me alone",
-          "clientID": "1mDfnyxV",
-          "clanTag": "XYZ"
-        },
-        {
-          "username": "ConquestOfGarlicBread",
-          "clientID": "HZ1936ia",
-          "clanTag": null
-        },
-        {
-          "username": "Peace",
-          "clientID": "c3GD8hTx",
-          "clanTag": null
-        }
-      ],
-      "map": "Giant World Map",
-      "duration_s": 2662,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 111,
-      "timestamp": "2026-08-05T18:42:12.899Z",
-      "url": "https://openfront.io/game/wKq2z6Mv"
-    },
-    {
       "id": "FLULNZMB",
       "team": "Team 8",
       "players": [
@@ -17610,6 +17577,39 @@
       "numPlayers": 80,
       "timestamp": "2026-08-05T19:00:20.472Z",
       "url": "https://openfront.io/game/FLULNZMB"
+    },
+    {
+      "id": "wKq2z6Mv",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Anon190",
+          "clientID": "x9jtmW3u",
+          "clanTag": null
+        },
+        {
+          "username": "Leave me alone",
+          "clientID": "1mDfnyxV",
+          "clanTag": "XYZ"
+        },
+        {
+          "username": "ConquestOfGarlicBread",
+          "clientID": "HZ1936ia",
+          "clanTag": null
+        },
+        {
+          "username": "Peace",
+          "clientID": "c3GD8hTx",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2662,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 111,
+      "timestamp": "2026-08-05T18:42:12.899Z",
+      "url": "https://openfront.io/game/wKq2z6Mv"
     }
   ]
 }
