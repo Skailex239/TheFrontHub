@@ -3910,6 +3910,24 @@
       "numPlayers": 38,
       "timestamp": "2026-08-05T13:28:04.279Z",
       "url": "https://openfront.io/game/8QYFgHp1"
+    },
+    {
+      "id": "iovHqvCJ",
+      "team": "Team 26",
+      "players": [
+        {
+          "username": "Republic of Venice",
+          "clientID": "Nmunvf1R",
+          "clanTag": "FFA"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1286,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 85,
+      "timestamp": "2026-08-05T13:45:26.802Z",
+      "url": "https://openfront.io/game/iovHqvCJ"
     }
   ],
   "trios": [
@@ -16468,6 +16486,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-05T13:37:30.331Z",
       "url": "https://openfront.io/game/WVmNHZXj"
+    },
+    {
+      "id": "K4ZhEMmc",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Ring",
+          "clientID": "U1FcieAf",
+          "clanTag": "UNO"
+        },
+        {
+          "username": "AnonDove2",
+          "clientID": "Ni8BWH7W",
+          "clanTag": null
+        },
+        {
+          "username": "WIZMELY",
+          "clientID": "dAqJ2KxD",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 2488,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-05T13:25:18.627Z",
+      "url": "https://openfront.io/game/K4ZhEMmc"
     }
   ]
 }
