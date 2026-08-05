@@ -9585,6 +9585,34 @@
       "numPlayers": 89,
       "timestamp": "2026-08-05T13:23:19.511Z",
       "url": "https://openfront.io/game/zwUNqExY"
+    },
+    {
+      "id": "2LXCUeMv",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Igore",
+          "clientID": "3p21dAFz",
+          "clanTag": "CYP"
+        },
+        {
+          "username": "USSR",
+          "clientID": "9citSVLm",
+          "clanTag": "CYP"
+        },
+        {
+          "username": "Wojownik290",
+          "clientID": "N93dD9Ee",
+          "clanTag": "CYP"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1816,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-05T14:43:28.195Z",
+      "url": "https://openfront.io/game/2LXCUeMv"
     }
   ],
   "quads": [
@@ -16733,6 +16761,39 @@
       "numPlayers": 112,
       "timestamp": "2026-08-05T14:30:33.941Z",
       "url": "https://openfront.io/game/T1Np6Fp6"
+    },
+    {
+      "id": "W7rwvRU1",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Broby",
+          "clientID": "p8P4Qu9C",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Nuke Party",
+          "clientID": "eFBWWNwR",
+          "clanTag": "NU"
+        },
+        {
+          "username": "BelgianWafflez",
+          "clientID": "ohKg5SHm",
+          "clanTag": "NU"
+        },
+        {
+          "username": "RSSR",
+          "clientID": "jmzKK7Jd",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 959,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-05T14:58:58.640Z",
+      "url": "https://openfront.io/game/W7rwvRU1"
     }
   ]
 }
