@@ -3736,6 +3736,24 @@
       "numPlayers": 54,
       "timestamp": "2026-08-05T10:49:01.232Z",
       "url": "https://openfront.io/game/JhkmGiVm"
+    },
+    {
+      "id": "ormMufbr",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "BOB",
+          "clientID": "QF9io7mV",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1603,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-05T11:07:57.785Z",
+      "url": "https://openfront.io/game/ormMufbr"
     }
   ],
   "trios": [
@@ -15790,6 +15808,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-05T10:39:15.716Z",
       "url": "https://openfront.io/game/afDHvUfm"
+    },
+    {
+      "id": "8foHyWMQ",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Dex",
+          "clientID": "ZN3Ygg6R",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "DefNotEddie",
+          "clientID": "qnQGatF2",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "breaded",
+          "clientID": "KyqBTU79",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "the kingdom of venice",
+          "clientID": "AC78qVEy",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 894,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-05T11:18:23.341Z",
+      "url": "https://openfront.io/game/8foHyWMQ"
     }
   ]
 }
