@@ -19527,6 +19527,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-06T06:16:56.695Z",
       "url": "https://openfront.io/game/Mb3oHp1h"
+    },
+    {
+      "id": "47VB4ZAa",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "The Alignment",
+          "clientID": "dtCAi6ry",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Daineus",
+          "clientID": "CsSZb5AW",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 893,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "timestamp": "2026-08-06T07:06:16.975Z",
+      "url": "https://openfront.io/game/47VB4ZAa"
     }
   ]
 }
