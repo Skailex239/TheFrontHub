@@ -12206,34 +12206,6 @@
       "url": "https://openfront.io/game/h2HGKmGm"
     },
     {
-      "id": "eqhEEjvM",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "BahramNJ",
-          "clientID": "XrQvMPLF",
-          "clanTag": "IRN"
-        },
-        {
-          "username": "AnonLeopard4",
-          "clientID": "8f86GRBC",
-          "clanTag": null
-        },
-        {
-          "username": "P371",
-          "clientID": "ub6iyM9H",
-          "clanTag": null
-        }
-      ],
-      "map": "Sierpinski",
-      "duration_s": 1233,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 30,
-      "timestamp": "2026-08-06T14:47:15.354Z",
-      "url": "https://openfront.io/game/eqhEEjvM"
-    },
-    {
       "id": "VpTv4AUz",
       "team": "Team 6",
       "players": [
@@ -12260,6 +12232,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-06T14:50:12.532Z",
       "url": "https://openfront.io/game/VpTv4AUz"
+    },
+    {
+      "id": "eqhEEjvM",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "BahramNJ",
+          "clientID": "XrQvMPLF",
+          "clanTag": "IRN"
+        },
+        {
+          "username": "AnonLeopard4",
+          "clientID": "8f86GRBC",
+          "clanTag": null
+        },
+        {
+          "username": "P371",
+          "clientID": "ub6iyM9H",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1233,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-06T14:47:15.354Z",
+      "url": "https://openfront.io/game/eqhEEjvM"
     }
   ],
   "quads": [
