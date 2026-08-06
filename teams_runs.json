@@ -4951,6 +4951,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-06T11:48:42.051Z",
       "url": "https://openfront.io/game/Xe5bytvh"
+    },
+    {
+      "id": "HuMCpJhL",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "AnonSkunk8",
+          "clientID": "E6J7ix9q",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHamster7",
+          "clientID": "PMu2pq5q",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2670,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-06T11:51:00.176Z",
+      "url": "https://openfront.io/game/HuMCpJhL"
     }
   ],
   "trios": [
@@ -20513,6 +20536,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-06T12:14:10.973Z",
       "url": "https://openfront.io/game/yRs4q5rs"
+    },
+    {
+      "id": "hJVkcDqM",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Anon199",
+          "clientID": "pvxP2SVt",
+          "clanTag": null
+        },
+        {
+          "username": "Coffeeland",
+          "clientID": "c3dHNzQW",
+          "clanTag": null
+        },
+        {
+          "username": "KOREA KIMCHI",
+          "clientID": "2mAvSjeU",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSquid7",
+          "clientID": "wciFfiCf",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 794,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-06T12:22:03.924Z",
+      "url": "https://openfront.io/game/hJVkcDqM"
     }
   ]
 }
