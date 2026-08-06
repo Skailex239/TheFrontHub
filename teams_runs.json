@@ -5020,6 +5020,24 @@
       "numPlayers": 52,
       "timestamp": "2026-08-06T13:54:39.267Z",
       "url": "https://openfront.io/game/KhJRDz45"
+    },
+    {
+      "id": "NvyFjixs",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "ch1min",
+          "clientID": "sy6R3PTu",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 2422,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-06T13:31:17.449Z",
+      "url": "https://openfront.io/game/NvyFjixs"
     }
   ],
   "trios": [
@@ -11979,34 +11997,6 @@
       "url": "https://openfront.io/game/oz6Djvmb"
     },
     {
-      "id": "ePh9GKUn",
-      "team": "Yellow",
-      "players": [
-        {
-          "username": "Plz be human",
-          "clientID": "S3HmVpW5",
-          "clanTag": null
-        },
-        {
-          "username": "French Louis",
-          "clientID": "rRwQQ3QV",
-          "clanTag": "EU"
-        },
-        {
-          "username": "Mamut",
-          "clientID": "g1KjmhDK",
-          "clanTag": null
-        }
-      ],
-      "map": "Hawaii",
-      "duration_s": 1141,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 18,
-      "timestamp": "2026-08-06T13:43:06.082Z",
-      "url": "https://openfront.io/game/ePh9GKUn"
-    },
-    {
       "id": "mqh1vieZ",
       "team": "Team 5",
       "players": [
@@ -12033,6 +12023,34 @@
       "numPlayers": 36,
       "timestamp": "2026-08-06T13:42:01.036Z",
       "url": "https://openfront.io/game/mqh1vieZ"
+    },
+    {
+      "id": "ePh9GKUn",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Plz be human",
+          "clientID": "S3HmVpW5",
+          "clanTag": null
+        },
+        {
+          "username": "French Louis",
+          "clientID": "rRwQQ3QV",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Mamut",
+          "clientID": "g1KjmhDK",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1141,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-06T13:43:06.082Z",
+      "url": "https://openfront.io/game/ePh9GKUn"
     }
   ],
   "quads": [
