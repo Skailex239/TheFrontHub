@@ -4626,6 +4626,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-06T01:13:54.327Z",
       "url": "https://openfront.io/game/NM45dZ62"
+    },
+    {
+      "id": "bQL1PrWi",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Crusader",
+          "clientID": "oo3Fahzc",
+          "clanTag": "HOLY"
+        },
+        {
+          "username": "Sparta",
+          "clientID": "2VMV2fbu",
+          "clanTag": "HOLY"
+        }
+      ],
+      "map": "World",
+      "duration_s": 848,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-06T03:13:36.416Z",
+      "url": "https://openfront.io/game/bQL1PrWi"
     }
   ],
   "trios": [
@@ -11007,6 +11030,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-06T02:51:20.136Z",
       "url": "https://openfront.io/game/VztUF2MK"
+    },
+    {
+      "id": "cgLdSW9y",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Jay Hardar Tolkien",
+          "clientID": "xJquZ5ho",
+          "clanTag": "BIGPP"
+        },
+        {
+          "username": "George Hardar Martin",
+          "clientID": "PUSrcV7d",
+          "clanTag": "BIGPP"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1549,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-06T03:03:38.854Z",
+      "url": "https://openfront.io/game/cgLdSW9y"
     }
   ],
   "quads": [
@@ -19004,6 +19050,34 @@
       "numPlayers": 74,
       "timestamp": "2026-08-06T02:53:21.243Z",
       "url": "https://openfront.io/game/3tUje3vT"
+    },
+    {
+      "id": "iCqufhiq",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "ABE_SHINZO",
+          "clientID": "oPD9vo99",
+          "clanTag": null
+        },
+        {
+          "username": "Messina",
+          "clientID": "iNyY1yWA",
+          "clanTag": null
+        },
+        {
+          "username": "asdasd",
+          "clientID": "N4B5gJna",
+          "clanTag": "BALL"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1424,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-06T03:05:40.466Z",
+      "url": "https://openfront.io/game/iCqufhiq"
     }
   ]
 }
