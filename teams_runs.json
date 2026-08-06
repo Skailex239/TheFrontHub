@@ -19262,6 +19262,34 @@
       "numPlayers": 22,
       "timestamp": "2026-08-06T04:15:18.332Z",
       "url": "https://openfront.io/game/oqos8UFX"
+    },
+    {
+      "id": "gAec4yxt",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "xxx",
+          "clientID": "F8N45WeR",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLadybug2",
+          "clientID": "49ymiPQz",
+          "clanTag": null
+        },
+        {
+          "username": "seoul",
+          "clientID": "YQmMeVyA",
+          "clanTag": "KOR"
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 916,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-06T05:05:00.602Z",
+      "url": "https://openfront.io/game/gAec4yxt"
     }
   ]
 }
