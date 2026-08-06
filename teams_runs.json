@@ -21338,6 +21338,39 @@
       "numPlayers": 111,
       "timestamp": "2026-08-06T14:11:22.233Z",
       "url": "https://openfront.io/game/fhotpV2m"
+    },
+    {
+      "id": "D8qipBHq",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "MEV",
+          "clientID": "UdjNuaMM",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "DUDU",
+          "clientID": "6W1WhNyJ",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Meven le baiseur",
+          "clientID": "Rki719VC",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Salut",
+          "clientID": "JeoE6cVm",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 936,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-06T14:42:33.612Z",
+      "url": "https://openfront.io/game/D8qipBHq"
     }
   ]
 }
