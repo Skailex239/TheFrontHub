@@ -20739,32 +20739,37 @@
       "url": "https://openfront.io/game/yDWMAkuw"
     },
     {
-      "id": "y1w8ZzH2",
-      "team": "Team 3",
+      "id": "rXenYk2J",
+      "team": "Team 10",
       "players": [
         {
-          "username": "NATO",
-          "clientID": "WkJphQSb",
-          "clanTag": "VEIL"
-        },
-        {
-          "username": "Otto von Habsburg",
-          "clientID": "EQ2xJaoE",
+          "username": "Podgyman",
+          "clientID": "tVuqq5Vg",
           "clanTag": null
         },
         {
-          "username": "NanasLilMan",
-          "clientID": "4dAtwsuW",
+          "username": "Rotterdam",
+          "clientID": "TKeK48pY",
+          "clanTag": null
+        },
+        {
+          "username": "Holland",
+          "clientID": "dKqm1jE6",
+          "clanTag": "010"
+        },
+        {
+          "username": "Anon893",
+          "clientID": "BeifELiu",
           "clanTag": null
         }
       ],
-      "map": "East Asia",
-      "duration_s": 692,
+      "map": "United States",
+      "duration_s": 1959,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-08-06T13:03:05.804Z",
-      "url": "https://openfront.io/game/y1w8ZzH2"
+      "numPlayers": 72,
+      "timestamp": "2026-08-06T12:41:47.569Z",
+      "url": "https://openfront.io/game/rXenYk2J"
     },
     {
       "id": "4wbSVoZG",
@@ -20800,39 +20805,6 @@
       "url": "https://openfront.io/game/4wbSVoZG"
     },
     {
-      "id": "rXenYk2J",
-      "team": "Team 10",
-      "players": [
-        {
-          "username": "Podgyman",
-          "clientID": "tVuqq5Vg",
-          "clanTag": null
-        },
-        {
-          "username": "Rotterdam",
-          "clientID": "TKeK48pY",
-          "clanTag": null
-        },
-        {
-          "username": "Holland",
-          "clientID": "dKqm1jE6",
-          "clanTag": "010"
-        },
-        {
-          "username": "Anon893",
-          "clientID": "BeifELiu",
-          "clanTag": null
-        }
-      ],
-      "map": "United States",
-      "duration_s": 1959,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 72,
-      "timestamp": "2026-08-06T12:41:47.569Z",
-      "url": "https://openfront.io/game/rXenYk2J"
-    },
-    {
       "id": "2Tz2C9SN",
       "team": "Team 13",
       "players": [
@@ -20859,6 +20831,34 @@
       "numPlayers": 71,
       "timestamp": "2026-08-06T13:02:17.770Z",
       "url": "https://openfront.io/game/2Tz2C9SN"
+    },
+    {
+      "id": "y1w8ZzH2",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "NATO",
+          "clientID": "WkJphQSb",
+          "clanTag": "VEIL"
+        },
+        {
+          "username": "Otto von Habsburg",
+          "clientID": "EQ2xJaoE",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "4dAtwsuW",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 692,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-06T13:03:05.804Z",
+      "url": "https://openfront.io/game/y1w8ZzH2"
     },
     {
       "id": "AaPXZWtT",
