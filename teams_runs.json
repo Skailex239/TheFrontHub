@@ -20602,6 +20602,39 @@
       "numPlayers": 108,
       "timestamp": "2026-08-06T12:21:38.912Z",
       "url": "https://openfront.io/game/HREK1wmx"
+    },
+    {
+      "id": "zYS8VESh",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Floyde",
+          "clientID": "zCq89UW1",
+          "clanTag": "DUCK"
+        },
+        {
+          "username": "AnonLeopard8",
+          "clientID": "i5XT5zMN",
+          "clanTag": "DUCK"
+        },
+        {
+          "username": "Goldturtle",
+          "clientID": "nn2tAR3Q",
+          "clanTag": null
+        },
+        {
+          "username": "A Throng of Peasants",
+          "clientID": "CHwL6Bbn",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 1317,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-06T12:28:56.312Z",
+      "url": "https://openfront.io/game/zYS8VESh"
     }
   ]
 }
