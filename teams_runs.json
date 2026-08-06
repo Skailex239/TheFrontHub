@@ -11852,6 +11852,34 @@
       "numPlayers": 69,
       "timestamp": "2026-08-06T11:59:31.678Z",
       "url": "https://openfront.io/game/y6AUa26D"
+    },
+    {
+      "id": "Nw6MLrCT",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Kyrox",
+          "clientID": "xxpG5CLz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "House Ivergar",
+          "clientID": "1WiHSo7B",
+          "clanTag": null
+        },
+        {
+          "username": "COW",
+          "clientID": "zKjpDaNy",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1263,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-06T12:38:35.909Z",
+      "url": "https://openfront.io/game/Nw6MLrCT"
     }
   ],
   "quads": [
@@ -20663,6 +20691,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-06T12:33:51.123Z",
       "url": "https://openfront.io/game/biTui4vq"
+    },
+    {
+      "id": "yDWMAkuw",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonSquirrel5",
+          "clientID": "sakv8VPn",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSeal9",
+          "clientID": "Ywjx9gFW",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1432,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-06T12:35:44.725Z",
+      "url": "https://openfront.io/game/yDWMAkuw"
     }
   ]
 }
