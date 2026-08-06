@@ -4580,6 +4580,29 @@
       "numPlayers": 22,
       "timestamp": "2026-08-05T23:26:04.271Z",
       "url": "https://openfront.io/game/5Vv5Kggm"
+    },
+    {
+      "id": "3xDsJpxP",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "psychpomp",
+          "clientID": "6bu3EKcm",
+          "clanTag": "AST"
+        },
+        {
+          "username": "bananaJC",
+          "clientID": "Mt7Vg8mp",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1012,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-06T00:11:13.783Z",
+      "url": "https://openfront.io/game/3xDsJpxP"
     }
   ],
   "trios": [
@@ -10770,6 +10793,34 @@
       "numPlayers": 15,
       "timestamp": "2026-08-05T23:54:52.374Z",
       "url": "https://openfront.io/game/83opdbqL"
+    },
+    {
+      "id": "dPg3o8bq",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Codigga",
+          "clientID": "Tp7Tt9Xm",
+          "clanTag": "ASDOH"
+        },
+        {
+          "username": "P Diddler",
+          "clientID": "oLA5dfr8",
+          "clanTag": "ASDOH"
+        },
+        {
+          "username": "MRONJ",
+          "clientID": "NhAezSaw",
+          "clanTag": "ASDOH"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 758,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-06T00:15:10.985Z",
+      "url": "https://openfront.io/game/dPg3o8bq"
     }
   ],
   "quads": [
