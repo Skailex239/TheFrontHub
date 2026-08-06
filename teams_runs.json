@@ -20139,6 +20139,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-06T10:54:00.440Z",
       "url": "https://openfront.io/game/nHRmXbA9"
+    },
+    {
+      "id": "oecy4LY4",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "GUS",
+          "clientID": "97UUZMS9",
+          "clanTag": "BSA"
+        },
+        {
+          "username": "PEVINHO",
+          "clientID": "q8gH8yWt",
+          "clanTag": "BSA"
+        },
+        {
+          "username": "wardonico",
+          "clientID": "fWNq9fWd",
+          "clanTag": "BSA"
+        },
+        {
+          "username": "lebano",
+          "clientID": "q7jX41r8",
+          "clanTag": "BSA"
+        }
+      ],
+      "map": "France",
+      "duration_s": 875,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "timestamp": "2026-08-06T11:16:18.696Z",
+      "url": "https://openfront.io/game/oecy4LY4"
     }
   ]
 }
