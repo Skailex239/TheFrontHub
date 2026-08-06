@@ -5086,29 +5086,6 @@
       "url": "https://openfront.io/game/Pdt3MaEB"
     },
     {
-      "id": "TQrepSpN",
-      "team": "Team 35",
-      "players": [
-        {
-          "username": "Odysseus",
-          "clientID": "DzExyALi",
-          "clanTag": null
-        },
-        {
-          "username": "AnonWizard07",
-          "clientID": "kF8tMCVB",
-          "clanTag": null
-        }
-      ],
-      "map": "Levant",
-      "duration_s": 1072,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 82,
-      "timestamp": "2026-08-06T15:03:11.803Z",
-      "url": "https://openfront.io/game/TQrepSpN"
-    },
-    {
       "id": "yHhqfCPb",
       "team": "Team 17",
       "players": [
@@ -5130,6 +5107,29 @@
       "numPlayers": 69,
       "timestamp": "2026-08-06T14:57:16.465Z",
       "url": "https://openfront.io/game/yHhqfCPb"
+    },
+    {
+      "id": "TQrepSpN",
+      "team": "Team 35",
+      "players": [
+        {
+          "username": "Odysseus",
+          "clientID": "DzExyALi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWizard07",
+          "clientID": "kF8tMCVB",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1072,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-06T15:03:11.803Z",
+      "url": "https://openfront.io/game/TQrepSpN"
     }
   ],
   "trios": [
