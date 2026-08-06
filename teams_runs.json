@@ -20457,6 +20457,62 @@
       "numPlayers": 36,
       "timestamp": "2026-08-06T12:12:25.360Z",
       "url": "https://openfront.io/game/ywcR623D"
+    },
+    {
+      "id": "exH1mF5F",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Luke",
+          "clientID": "4wuzDJgQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "VVD",
+          "clientID": "QSWsnGRs",
+          "clanTag": "UN"
+        },
+        {
+          "username": "REX",
+          "clientID": "XL98PxFn",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 675,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-06T12:18:49.243Z",
+      "url": "https://openfront.io/game/exH1mF5F"
+    },
+    {
+      "id": "yRs4q5rs",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Loyal Puppy",
+          "clientID": "8GZSDSZ4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Trade Conglomerate",
+          "clientID": "kSjoHZyh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Yamibfb",
+          "clientID": "Fg1gt52v",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1022,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-06T12:14:10.973Z",
+      "url": "https://openfront.io/game/yRs4q5rs"
     }
   ]
 }
