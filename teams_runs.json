@@ -14785,6 +14785,29 @@
       "numPlayers": 96,
       "timestamp": "2026-08-07T17:57:47.762Z",
       "url": "https://openfront.io/game/HoE7qHGQ"
+    },
+    {
+      "id": "rAozQ8wy",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "C4RP3T",
+          "clientID": "MbA12q1Z",
+          "clanTag": null
+        },
+        {
+          "username": "Sepehr",
+          "clientID": "QcHPDYUx",
+          "clanTag": "MIGA"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-07T18:24:39.843Z",
+      "url": "https://openfront.io/game/rAozQ8wy"
     }
   ],
   "quads": [
@@ -26015,6 +26038,34 @@
       "numPlayers": 28,
       "timestamp": "2026-08-07T18:25:19.387Z",
       "url": "https://openfront.io/game/ytwEymBE"
+    },
+    {
+      "id": "Kpa7qSpK",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "Jan Mayen",
+          "clientID": "iH1YhzrF",
+          "clanTag": null
+        },
+        {
+          "username": "nnn",
+          "clientID": "zVpG8QQj",
+          "clanTag": null
+        },
+        {
+          "username": "LIQUOR TAINT",
+          "clientID": "2cjAaj9p",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 1193,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "timestamp": "2026-08-07T18:33:09.829Z",
+      "url": "https://openfront.io/game/Kpa7qSpK"
     }
   ]
 }
