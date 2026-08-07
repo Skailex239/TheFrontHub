@@ -1726,20 +1726,115 @@ window.renderAll = renderAll;
 window.closeUserDropdown = closeUserDropdown;
 
 
-// ====== RANKED LEADERBOARD ======
+// ====== RANKED LEADERBOARD (1v1 + 2v2) ======
+window._rankedMode = window._rankedMode || localStorage.getItem('thefrontstats:rankedMode') || '1v1';
+window._rankedData = window._rankedData || null;
+window._rankedLoaded = window._rankedLoaded || false;
+
+function getRankedMode() {
+  return window._rankedMode === '2v2' ? '2v2' : '1v1';
+}
+function getRankedRaw(mode) {
+  const m = mode || getRankedMode();
+  if (!window._rankedData) return [];
+  // nouveau format: { "1v1": [...], "2v2": [...] }
+  // ancien format fallback: data["1v1"] only
+  const arr = window._rankedData[m];
+  if (Array.isArray(arr)) return arr;
+  return [];
+}
+function updateRankedModeUI() {
+  const mode = getRankedMode();
+  // Boutons
+  document.querySelectorAll('#ranked-mode-switch .filter-btn[data-ranked-mode]').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-ranked-mode') === mode);
+  });
+  // Titre tableau
+  const titleEl = document.getElementById('ranked-table-title');
+  if (titleEl) {
+    const iconPart = '<i data-icon="swords"></i> ';
+    const label = mode === '2v2' ? '2v2 Duos' : '1v1 Solo';
+    titleEl.innerHTML = iconPart + `Classement Classé (${label}) — Top ${getRankedRaw(mode).length || 100} Officiel`;
+    if (typeof window.hydrateIcons === 'function') try { window.hydrateIcons(titleEl); } catch {}
+  }
+  // Topbar si onglet ranked actif
+  const topbar = document.getElementById('topbar-title');
+  const isRankedActive = document.getElementById('tab-ranked')?.classList.contains('active');
+  if (topbar && isRankedActive) {
+    topbar.textContent = mode === '2v2' ? 'Classé (2v2)' : 'Classé (1v1)';
+  }
+  // Compteur
+  const countEl = document.getElementById('ranked-mode-count');
+  if (countEl) {
+    const c1 = (window._rankedData?.['1v1']?.length ?? 0);
+    const c2 = (window._rankedData?.['2v2']?.length ?? 0);
+    countEl.textContent = c1 || c2 ? `${c1} joueurs 1v1 · ${c2} joueurs 2v2` : '';
+  }
+  // Placeholder recherche
+  const searchEl = document.getElementById('ranked-search');
+  if (searchEl) searchEl.placeholder = mode === '2v2' ? 'Rechercher un duo classé...' : 'Rechercher un joueur classé...';
+  // Titre modal historique
+  const histTitle = document.getElementById('ranked-modal-history-title');
+  if (histTitle) histTitle.textContent = mode === '2v2' ? 'Historique 2v2 récent' : 'Historique 1v1 récent';
+}
+
+function switchRankedMode(mode, opts = {}) {
+  const m = mode === '2v2' ? '2v2' : '1v1';
+  if (window._rankedMode === m && !opts.force) {
+    // même mode — juste s'assurer que l'UI est à jour
+    updateRankedModeUI();
+    return;
+  }
+  window._rankedMode = m;
+  try { localStorage.setItem('thefrontstats:rankedMode', m); } catch {}
+  // URL param
+  try {
+    const p = new URLSearchParams(window.location.search);
+    p.set('rankedMode', m);
+    history.replaceState(null, '', window.location.pathname + (p.toString() ? '?' + p.toString() : ''));
+  } catch {}
+  updateRankedModeUI();
+  // Réinitialise les filtres de pagination Top (garde query/fav)
+  // On ne reset pas favOnly/query pour garder la recherche
+
+  // Si données déjà chargées, on re-render immédiatement
+  if (window._rankedData) {
+    const playersRaw = getRankedRaw(m);
+    window._rankedPlayers = playersRaw;
+    renderRankedStatsCards(playersRaw);
+    renderEloDistribution(playersRaw);
+    renderClanLeaderboard(playersRaw);
+    renderMyRank(playersRaw);
+    renderNewcomersDropouts(window._rankedData);
+    // Applique les filtres actuels (top/fav/search) sur ce nouveau ladder
+    applyRankedFilters();
+    updateFavCounter();
+  } else {
+    // pas encore chargé → charge
+    loadRankedLeaderboard(true);
+  }
+}
+
 async function loadRankedLeaderboard(force = false) {
   const container = document.getElementById('ranked-list');
   if (!container) {
     console.warn('[Ranked] Container #ranked-list introuvable');
     return;
   }
-  if (!force && window._rankedLoaded) return;
-  
-  container.innerHTML = '<tr><td colspan="8" style="padding: 20px; text-align: center; color: var(--text3);">Chargement du classement...</td></tr>';
-  
+  // Si on n'est pas en force et que les données sont déjà là, on ne recharge pas
+  // sauf si le mode a changé (géré par switchRankedMode)
+  if (!force && window._rankedLoaded && window._rankedData) {
+    // si on rapelle sans force, on s'assure juste que l'affichage est correct pour le mode actuel
+    updateRankedModeUI();
+    applyRankedFilters();
+    return;
+  }
+
+  container.innerHTML = '<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--text3);">Chargement du classement...</td></tr>';
+
   try {
-    console.log('[Ranked] Loading leaderboard...');
-    
+    console.log('[Ranked] Loading leaderboard (1v1 + 2v2)...');
+
     let data;
     try {
       const gzRes = await fetch('ranked.json.gz', { cache: 'no-store' });
@@ -1755,50 +1850,75 @@ async function loadRankedLeaderboard(force = false) {
       if (!plainRes.ok) throw new Error('Impossible de charger le classement');
       data = await plainRes.json();
     }
-    
-    let players = [];
-    if (data['1v1']) players.push(...data['1v1']);
-    
-    console.log('[Ranked] Players loaded:', players.length);
-    
-    if (players.length === 0) {
-      container.innerHTML = '<tr><td colspan="8" style="padding: 20px; text-align: center; color: var(--text3);">Aucun joueur classé pour le moment.</td></tr>';
+
+    // Compat: si vieux fichier sans 2v2, on l'ajoute vide
+    if (!Array.isArray(data['2v2'])) data['2v2'] = [];
+    if (!Array.isArray(data['1v1'])) data['1v1'] = [];
+    // Compat: legacy newcomers/dropouts pour 1v1 déjà présents
+    // Nouvelles clés 2v2
+    if (!Array.isArray(data.newcomers2v2)) data.newcomers2v2 = data.newcomers2v2 || [];
+    if (!Array.isArray(data.dropouts2v2)) data.dropouts2v2 = data.dropouts2v2 || [];
+
+    window._rankedData = data;
+    window._rankedLoaded = true;
+
+    // Init mode depuis URL ou localStorage
+    try {
+      const urlMode = new URLSearchParams(window.location.search).get('rankedMode');
+      if (urlMode === '2v2' || urlMode === '1v1') window._rankedMode = urlMode;
+    } catch {}
+
+    updateRankedModeUI();
+
+    const mode = getRankedMode();
+    const players = getRankedRaw(mode);
+
+    console.log(`[Ranked] Players loaded: 1v1=${data['1v1'].length}, 2v2=${data['2v2'].length} (mode actif: ${mode} → ${players.length})`);
+
+    if ((data['1v1'].length === 0 && data['2v2'].length === 0)) {
+      container.innerHTML = '<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--text3);">Aucun joueur classé pour le moment.</td></tr>';
+      renderRankedStatsCards([]);
       return;
     }
-    
-    // Store for filtering
+
+    if (players.length === 0) {
+      // Ladder vide mais l'autre a des données → message spécifique
+      container.innerHTML = `<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--text3);">Aucun joueur classé en ${mode} pour le moment.<br><small>Le ladder 2v2 est tout neuf — les premières parties arrivent bientôt.</small></td></tr>`;
+      renderRankedStatsCards(players);
+      renderEloDistribution(players);
+      renderClanLeaderboard(players);
+      renderMyRank(players);
+      renderNewcomersDropouts(data);
+      updateFavCounter();
+      return;
+    }
+
+    // Store for filtering (mode courant)
     window._rankedPlayers = players;
-    
-    // Stats cards
-    renderRankedStatsCards(players);
-    
+
     // Timestamp
     const updateEl = document.getElementById('ranked-last-update');
     if (updateEl && data.updatedAt) {
       const d = new Date(data.updatedAt);
       updateEl.textContent = 'Màj : ' + d.toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
     }
-    
-    // Elo distribution
+
+    // Stats cards / charts / my rank / newcomers
+    renderRankedStatsCards(players);
     renderEloDistribution(players);
-    
-    // Clan leaderboard
     renderClanLeaderboard(players);
-    
-    // Render table
-    renderRankedTable(players);
     renderMyRank(players);
     renderNewcomersDropouts(data);
-
-    // Initialise le compteur de favoris
     updateFavCounter();
 
-    window._rankedLoaded = true;
-    console.log('[Ranked] Tableau rendu avec succès');
-    
+    // Applique les filtres initiaux (top/fav/search)
+    applyRankedFilters();
+
+    console.log('[Ranked] Tableau rendu avec succès (mode ' + mode + ')');
+
   } catch (err) {
     console.error("[Ranked] Erreur complète:", err);
-    container.innerHTML = `<tr><td colspan="8" style="padding: 20px; text-align: center; color: #ef4444;">Erreur lors du chargement du classement.</td></tr>`;
+    container.innerHTML = `<tr><td colspan="9" style="padding: 20px; text-align: center; color: #ef4444;">Erreur lors du chargement du classement.</td></tr>`;
   }
 }
 
@@ -1812,18 +1932,18 @@ function getWinrateColor(wr) {
 
 function renderRankedStatsCards(players) {
   const totalPlayers = players.length;
-  const avgElo = Math.round(players.reduce((a, p) => a + p.elo, 0) / totalPlayers);
-  const maxElo = Math.max(...players.map(p => p.peakElo || p.elo));
+  const avgElo = totalPlayers ? Math.round(players.reduce((a, p) => a + p.elo, 0) / totalPlayers) : 0;
+  const maxElo = totalPlayers ? Math.max(...players.map(p => p.peakElo || p.elo)) : 0;
   const totalGames = players.reduce((a, p) => a + p.total, 0);
-  
+
   const el = document.getElementById('ranked-stat-players');
-  if (el) el.textContent = totalPlayers.toLocaleString('fr');
+  if (el) el.textContent = totalPlayers ? totalPlayers.toLocaleString('fr') : '—';
   const el2 = document.getElementById('ranked-stat-avgelo');
-  if (el2) el2.textContent = avgElo.toLocaleString('fr');
+  if (el2) el2.textContent = avgElo ? avgElo.toLocaleString('fr') : '—';
   const el3 = document.getElementById('ranked-stat-peakelo');
-  if (el3) el3.textContent = maxElo.toLocaleString('fr');
+  if (el3) el3.textContent = maxElo ? maxElo.toLocaleString('fr') : '—';
   const el4 = document.getElementById('ranked-stat-games');
-  if (el4) el4.textContent = totalGames.toLocaleString('fr');
+  if (el4) el4.textContent = totalGames ? totalGames.toLocaleString('fr') : '—';
 }
 
 function renderRankedTable(players) {
@@ -1832,20 +1952,18 @@ function renderRankedTable(players) {
 
   let html = '';
   if (!players || players.length === 0) {
-    container.innerHTML = '<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--text3);">Aucun joueur ne correspond aux filtres.</td></tr>';
+    const mode = getRankedMode();
+    container.innerHTML = `<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--text3);">Aucun joueur ne correspond aux filtres.<br><small style="color:var(--muted)">Mode ${mode}</small></td></tr>`;
     return;
   }
 
-  // Affiche un indicateur si on est en mode "favoris seulement"
   const favOnly = window._rankedFilters && window._rankedFilters.favOnly;
 
   players.forEach(p => {
     const winrate = p.total > 0 ? ((p.wins / p.total) * 100) : 0;
     const winrateStr = winrate.toFixed(1);
     const wrColor = getWinrateColor(winrate);
-    const publicIdParam = p.public_id ? `&publicId=${p.public_id}` : '';
 
-    // Movement arrow
     let moveHtml = '—';
     if (p.movement != null) {
       const m = p.movement;
@@ -1854,20 +1972,17 @@ function renderRankedTable(players) {
       else moveHtml = `<span style="color:var(--muted)">—</span>`;
     }
 
-    // Peak Elo with arrow if different from current
     const peakDiff = (p.peakElo || p.elo) - p.elo;
     const peakHtml = peakDiff > 0
       ? `${p.peakElo || p.elo} <span style="color:var(--gold);font-size:11px">${icon('arrowUp',{size:10})}${peakDiff}</span>`
       : `${p.peakElo || p.elo}`;
 
-    // Streak badge
     let streakHtml = '—';
     if (p.streak != null && p.streak !== 0) {
       if (p.streak > 0) streakHtml = `<span style="color:#f97316;font-weight:700">${icon('fire',{size:12})}${p.streak}</span>`;
       else streakHtml = `<span style="color:#3b82f6;font-weight:700">${icon('snowflake',{size:12})}${Math.abs(p.streak)}</span>`;
     }
 
-    // Favori (étoile cliquable)
     const isFav = isFavorite(p.public_id);
     const favStar = isFav ? icon('star',{size:14}) : icon('starOutline',{size:14});
     const favClass = isFav ? 'fav-star active' : 'fav-star';
@@ -1904,17 +2019,18 @@ function renderRankedTable(players) {
 }
 
 function renderNewcomersDropouts(data) {
-  const newcomers = data.newcomers || [];
-  const dropouts = data.dropouts || [];
-  
+  const mode = getRankedMode();
+  const newcomers = mode === '2v2' ? (data.newcomers2v2 || data['2v2_newcomers'] || []) : (data.newcomers || []);
+  const dropouts = mode === '2v2' ? (data.dropouts2v2 || data['2v2_dropouts'] || []) : (data.dropouts || []);
+
   const newCard = document.getElementById('newcomers-card');
   const dropCard = document.getElementById('dropouts-card');
   const newEl = document.getElementById('ranked-newcomers');
   const dropEl = document.getElementById('ranked-dropouts');
-  
+
   if (newCard) newCard.style.display = newcomers.length ? '' : 'none';
   if (dropCard) dropCard.style.display = dropouts.length ? '' : 'none';
-  
+
   if (newEl) {
     if (newcomers.length === 0) newEl.innerHTML = '<div class="empty-state" style="padding:12px"><p style="font-size:12px;color:var(--muted)">Aucun nouveau cette fois</p></div>';
     else {
@@ -1927,7 +2043,7 @@ function renderNewcomersDropouts(data) {
       `).join('');
     }
   }
-  
+
   if (dropEl) {
     if (dropouts.length === 0) dropEl.innerHTML = '<div class="empty-state" style="padding:12px"><p style="font-size:12px;color:var(--muted)">Aucun sortant cette fois</p></div>';
     else {
@@ -1945,46 +2061,46 @@ function renderNewcomersDropouts(data) {
 function renderMyRank(players) {
   const container = document.getElementById('my-ranked-position');
   if (!container) return;
-  
-  // Check if user is logged in and has a publicId
+
   if (!currentUser || !currentUser.publicId) {
     container.innerHTML = `
       <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
         <span>${icon('user',{size:18})}</span>
-        <span>Connecte-toi et lie ton <b>Public ID OpenFront</b> pour voir ta position dans le classement.</span>
+        <span>Connecte-toi et lie ton <b>Public ID OpenFront</b> pour voir ta position en ${getRankedMode()}.</span>
       </div>
     `;
     return;
   }
-  
+
   const myPid = currentUser.publicId;
   const me = players.find(p => p.public_id === myPid);
-  
+
   if (!me) {
+    const modeLabel = getRankedMode();
     container.innerHTML = `
       <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
         <span>${icon('globe',{size:18})}</span>
-        <span>Tu n'es pas dans le <b>Top 100</b> actuel. Continue à grind !</span>
+        <span>Tu n'es pas dans le <b>Top ${players.length || 100}</b> ${modeLabel} actuel. Continue à grind !</span>
       </div>
     `;
     return;
   }
-  
+
   const winrate = me.total > 0 ? ((me.wins / me.total) * 100).toFixed(1) : 0;
   const wrColor = getWinrateColor(parseFloat(winrate));
   const move = me.movement != null ? (me.movement > 0 ? `${icon('arrowUp',{size:10})}${me.movement}` : me.movement < 0 ? `${icon('arrowDown',{size:10})}${Math.abs(me.movement)}` : '—') : '—';
   const moveColor = me.movement > 0 ? '#10b981' : me.movement < 0 ? '#ef4444' : 'var(--muted)';
-  
+
   container.innerHTML = `
     <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
         <div style="width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0">${me.rank}</div>
         <div style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
-          <div style="font-weight:700;font-size:14px;color:var(--text)">${esc(currentUser.name || me.username)}</div>
+          <div style="font-weight:700;font-size:14px;color:var(--text)">${esc(currentUser.name || me.username)} <span style="font-size:11px;color:var(--muted);font-weight:400">· ${getRankedMode()}</span></div>
           <div style="font-size:12px;color:var(--muted)">
-            <b style="color:var(--accent)">${me.elo}</b> Elo · 
-            <b style="color:${wrColor}">${winrate}%</b> WR · 
-            <b style="color:${moveColor}">${move}</b> MV · 
+            <b style="color:var(--accent)">${me.elo}</b> Elo ·
+            <b style="color:${wrColor}">${winrate}%</b> WR ·
+            <b style="color:${moveColor}">${move}</b> MV ·
             ${me.wins}V - ${me.losses}D
           </div>
         </div>
@@ -2041,7 +2157,6 @@ function toggleFavorite(publicId, username) {
   }
   saveFavorites(list);
   updateFavCounter();
-  // Re-render pour mettre à jour les étoiles (et filtrer si mode favoris actif)
   applyRankedFilters();
 }
 
@@ -2082,24 +2197,18 @@ function setTopFilter(n) {
   applyRankedFilters();
 }
 
-// Normalisation : minuscules + suppression diacritiques (é→e, ñ→n...)
 function normalizeStr(s) {
   if (!s) return '';
   return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-// Recherche floue par sous-séquence : les lettres de q doivent apparaître
-// dans l'ordre dans target. Score = proximité (compactness).
-// Retourne -1 si pas de match, sinon un score (plus petit = meilleur).
 function fuzzyScore(query, target) {
   if (!query) return 0;
   if (!target) return -1;
   const q = normalizeStr(query);
   const t = normalizeStr(target);
   if (!q) return 0;
-  // Match exact (includes) = priorité
   if (t.indexOf(q) !== -1) return 0;
-  // Sous-séquence : parcourir target en cherchant chaque char de query dans l'ordre
   let ti = 0, lastMatch = -1, totalGap = 0;
   for (let qi = 0; qi < q.length; qi++) {
     const c = q[qi];
@@ -2107,35 +2216,33 @@ function fuzzyScore(query, target) {
     for (; ti < t.length; ti++) {
       if (t[ti] === c) { found = ti; ti++; break; }
     }
-    if (found === -1) return -1; // char non trouvé → pas de match
+    if (found === -1) return -1;
     if (lastMatch !== -1) totalGap += (found - lastMatch - 1);
     lastMatch = found;
   }
-  // Score = gap total (plus c'est compact, meilleur est le match)
   return 1 + totalGap;
 }
 
 function applyRankedFilters() {
-  if (!window._rankedPlayers) return;
+  const mode = getRankedMode();
+  const rawPlayers = getRankedRaw(mode);
+  // Garde la référence brute pour les filtres Top/Fav/Search
+  // window._rankedPlayers sera la liste filtrée affichée
+  let players = rawPlayers.slice();
   const f = window._rankedFilters;
-  let players = window._rankedPlayers.slice();
 
-  // 1. Filtre Top N
   if (f.top !== 'all') {
     const n = parseInt(f.top, 10);
     if (!isNaN(n)) players = players.slice(0, n);
   }
 
-  // 2. Filtre favoris
   if (f.favOnly) {
     const favs = new Set(getFavorites());
     players = players.filter(p => favs.has(p.public_id));
   }
 
-  // 3. Recherche floue
   const q = (f.query || '').trim();
   if (q) {
-    // Garde les matchs dont le score fuzzy est >= 0 (0 = match exact, >0 = fuzzy)
     const scored = players
       .map(p => {
         const usernameScore = fuzzyScore(q, p.username);
@@ -2151,6 +2258,8 @@ function applyRankedFilters() {
     players = scored.map(x => x.p);
   }
 
+  // Met à jour la réf pour d'autres fonctions si besoin
+  window._rankedPlayers = players;
   renderRankedTable(players);
 }
 
@@ -2173,10 +2282,10 @@ function renderEloDistribution(players) {
     else if (e >= 2000) buckets['2000-2099']++;
     else buckets['<2000']++;
   });
-  
+
   const max = Math.max(1, ...Object.values(buckets));
   const labels = { '2400+': '2400+', '2300-2399': '2300-2399', '2200-2299': '2200-2299', '2100-2199': '2100-2199', '2000-2099': '2000-2099', '<2000': '<2000' };
-  
+
   let html = '';
   Object.entries(buckets).forEach(([k, v]) => {
     const pct = Math.max(4, (v / max) * 200);
@@ -2188,7 +2297,7 @@ function renderEloDistribution(players) {
       </div>
     `;
   });
-  
+
   const el = document.getElementById('ranked-elo-dist');
   if (el) el.innerHTML = html || '<div class="empty-state">Aucune donnée</div>';
 }
@@ -2202,19 +2311,19 @@ function renderClanLeaderboard(players) {
     clans[p.clanTag].totalElo += p.elo;
     clans[p.clanTag].totalGames += p.total;
   });
-  
+
   const sorted = Object.values(clans)
     .map(c => ({ ...c, avgElo: Math.round(c.totalElo / c.members) }))
     .filter(c => c.members >= 2)
     .sort((a, b) => b.avgElo - a.avgElo || b.members - a.members)
     .slice(0, 10);
-  
+
   if (sorted.length === 0) {
     const el = document.getElementById('ranked-clan-list');
     if (el) el.innerHTML = '<div class="empty-state" style="padding:20px">Aucun clan représenté</div>';
     return;
   }
-  
+
   let html = '<table style="width:100%;border-collapse:collapse;text-align:left;font-size:14px"><thead><tr style="border-bottom:1px solid var(--border);color:var(--text3)"><th style="padding:10px 8px">#</th><th style="padding:10px 8px">Clan</th><th style="padding:10px 8px">Membres</th><th style="padding:10px 8px">Elo moyen</th><th style="padding:10px 8px">Parties</th></tr></thead><tbody>';
   sorted.forEach((c, i) => {
     html += `
@@ -2228,49 +2337,51 @@ function renderClanLeaderboard(players) {
     `;
   });
   html += '</tbody></table>';
-  
+
   const el = document.getElementById('ranked-clan-list');
   if (el) el.innerHTML = html;
 }
 
 async function showRankedPlayerModal(publicId, username) {
+  const mode = getRankedMode();
   const modal = document.getElementById('ranked-player-modal');
   const nameEl = document.getElementById('ranked-modal-player-name');
   const statsEl = document.getElementById('ranked-modal-player-stats');
   const gamesEl = document.getElementById('ranked-modal-games');
-  
+  const histTitle = document.getElementById('ranked-modal-history-title');
+  if (histTitle) histTitle.textContent = mode === '2v2' ? 'Historique 2v2 récent' : 'Historique 1v1 récent';
+
   if (nameEl) nameEl.textContent = username;
   if (statsEl) statsEl.textContent = 'Chargement...';
   if (gamesEl) gamesEl.innerHTML = '<div class="loading" style="padding:20px">Chargement...</div>';
   if (modal) modal.classList.add('active');
-  
+
   try {
-    // Try to fetch via openfront-client if available, otherwise direct
     let pData;
     try {
       const { fetchOpenFront } = await import('./openfront-client.js');
       pData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
     } catch (e) {
-      // Fallback direct fetch (will likely fail on GH Pages due to CORS)
       const res = await fetch(`https://api.openfront.io/public/player/${encodeURIComponent(publicId)}`);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       pData = await res.json();
     }
-    
+
     if (!pData || !pData.games) {
       if (statsEl) statsEl.textContent = 'Aucune donnée disponible';
       if (gamesEl) gamesEl.innerHTML = '<div class="empty-state" style="padding:20px"><p>Aucun historique trouvé</p></div>';
       return;
     }
-    
+
+    const isTargetMode = (g) => g.rankedType === mode || g.mode === mode || (mode === '1v1' && g.type === 'Ranked');
+
     const rankedGames = (pData.games || [])
-      .filter(g => g.rankedType === '1v1' || g.mode === '1v1' || g.type === 'Ranked')
+      .filter(isTargetMode)
       .reverse()
       .slice(0, 10);
 
-    // Compute streak from all ranked games (not just last 10)
     const allRankedGames = (pData.games || [])
-      .filter(g => g.rankedType === '1v1' || g.mode === '1v1' || g.type === 'Ranked')
+      .filter(isTargetMode)
       .sort((a, b) => new Date(b.start || b.end || 0) - new Date(a.start || a.end || 0));
     let streak = 0;
     for (const g of allRankedGames) {
@@ -2283,18 +2394,18 @@ async function showRankedPlayerModal(publicId, username) {
       } else break;
     }
     const streakText = streak > 0 ? `${icon('fire',{size:14})} Série: ${streak} victoires` : streak < 0 ? `${icon('snowflake',{size:14})} Série: ${Math.abs(streak)} défaites` : '';
-    
+
     if (statsEl) {
       const wins = rankedGames.filter(g => g.hasWon).length;
       const losses = rankedGames.filter(g => g.hasWon === false).length;
-      statsEl.textContent = `${rankedGames.length} parties 1v1 · ${wins}V - ${losses}D${streakText ? ' · ' + streakText : ''}`;
+      statsEl.textContent = `${rankedGames.length} parties ${mode} · ${wins}V - ${losses}D${streakText ? ' · ' + streakText : ''}`;
     }
-    
+
     if (rankedGames.length === 0) {
-      if (gamesEl) gamesEl.innerHTML = '<div class="empty-state" style="padding:20px"><p>Aucune partie classée 1v1 trouvée</p></div>';
+      if (gamesEl) gamesEl.innerHTML = `<div class="empty-state" style="padding:20px"><p>Aucune partie classée ${mode} trouvée</p></div>`;
       return;
     }
-    
+
     let html = '';
     for (const g of rankedGames) {
       try {
@@ -2309,17 +2420,25 @@ async function showRankedPlayerModal(publicId, username) {
           const gRaw = await res.json();
           gInfo = gRaw.info || gRaw;
         }
-        
+
         const players = gInfo.players || [];
         const me = players.find(pl => pl.clientID === g.clientId);
         const opponent = players.find(pl => pl.clientID !== g.clientId);
         const won = gInfo.winner && Array.isArray(gInfo.winner) && gInfo.winner[1] === g.clientId;
-        
+
+        // Pour 2v2, afficher les deux coéquipiers/adversaires
+        let vsLabel = `vs ${esc(opponent?.username || opponent?.displayName || 'Inconnu')}`;
+        if (mode === '2v2' && players.length > 2) {
+          // Tente de grouper par team si info disponible
+          const teamMates = players.filter(pl => pl.clientID !== g.clientId && pl.isBot === false).slice(0,3);
+          if (teamMates.length) vsLabel = `vs ${teamMates.map(t=>esc(t.username||'?')).join(' + ')}`;
+        }
+
         html += `
           <div style="display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--border-light);transition:background 0.2s" onmouseover="this.style.background='var(--card-hover)'" onmouseout="this.style.background='transparent'">
             <div style="width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#fff;background:${won ? '#10b981' : '#ef4444'}">${won ? 'W' : 'L'}</div>
             <div style="flex:1;min-width:0">
-              <div style="font-weight:600;font-size:14px;color:var(--text)">vs ${esc(opponent?.username || opponent?.displayName || 'Inconnu')}</div>
+              <div style="font-weight:600;font-size:14px;color:var(--text)">${vsLabel}</div>
               <div style="font-size:12px;color:var(--muted)">${esc(g.map || '—')} · ${g.start ? new Date(g.start).toLocaleDateString('fr-FR') : '—'}</div>
             </div>
             <a href="https://openfront.io/game/${g.gameId}" target="_blank" style="width:28px;height:28px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:10px;transition:all 0.25s" onmouseover="this.style.background='var(--orange)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--muted)'">▶</a>
@@ -2329,9 +2448,9 @@ async function showRankedPlayerModal(publicId, username) {
         console.warn('[Ranked] Erreur fetch game detail:', e);
       }
     }
-    
+
     if (gamesEl) gamesEl.innerHTML = html || '<div class="empty-state" style="padding:20px"><p>Impossible de charger les détails</p></div>';
-    
+
   } catch (err) {
     console.error('[Ranked] Erreur historique:', err);
     if (statsEl) statsEl.textContent = 'Erreur de chargement';
@@ -2356,3 +2475,5 @@ window.setTopFilter = setTopFilter;
 window.toggleFavFilter = toggleFavFilter;
 window.toggleFavorite = toggleFavorite;
 window.isFavorite = isFavorite;
+window.switchRankedMode = switchRankedMode;
+window.getRankedMode = getRankedMode;
