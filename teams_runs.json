@@ -5327,6 +5327,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-07T01:59:15.283Z",
       "url": "https://openfront.io/game/eURkkzGw"
+    },
+    {
+      "id": "rgqPdBqP",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "spectre27wr",
+          "clientID": "4fGq95Dc",
+          "clanTag": "KING"
+        },
+        {
+          "username": "Charge",
+          "clientID": "E6zcrvRc",
+          "clanTag": "KING"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1222,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-07T02:19:31.981Z",
+      "url": "https://openfront.io/game/rgqPdBqP"
     }
   ],
   "trios": [
@@ -12791,6 +12814,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-07T01:49:05.711Z",
       "url": "https://openfront.io/game/J7Grh7wy"
+    },
+    {
+      "id": "9coNrGRA",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "TradingEmpire",
+          "clientID": "WQ7gWJVS",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "bananaJC",
+          "clientID": "2SJ41t8J",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "DioxFrost",
+          "clientID": "gqGjf3Qb",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Didier France",
+      "duration_s": 643,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-07T02:25:50.868Z",
+      "url": "https://openfront.io/game/9coNrGRA"
     }
   ],
   "quads": [
