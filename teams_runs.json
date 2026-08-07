@@ -15177,29 +15177,6 @@
       "url": "https://openfront.io/game/gquPs9sE"
     },
     {
-      "id": "uUFmUmf7",
-      "team": "Team 16",
-      "players": [
-        {
-          "username": "PolyBear",
-          "clientID": "StYKXfam",
-          "clanTag": "80085"
-        },
-        {
-          "username": "Orbit34",
-          "clientID": "e5tJ223K",
-          "clanTag": null
-        }
-      ],
-      "map": "Hecate Strait",
-      "duration_s": 3192,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 79,
-      "timestamp": "2026-08-07T20:30:29.920Z",
-      "url": "https://openfront.io/game/uUFmUmf7"
-    },
-    {
       "id": "rACHMD7v",
       "team": "Team 6",
       "players": [
@@ -15221,6 +15198,29 @@
       "numPlayers": 99,
       "timestamp": "2026-08-07T20:57:27.742Z",
       "url": "https://openfront.io/game/rACHMD7v"
+    },
+    {
+      "id": "uUFmUmf7",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "PolyBear",
+          "clientID": "StYKXfam",
+          "clanTag": "80085"
+        },
+        {
+          "username": "Orbit34",
+          "clientID": "e5tJ223K",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 3192,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-07T20:30:29.920Z",
+      "url": "https://openfront.io/game/uUFmUmf7"
     }
   ],
   "quads": [
