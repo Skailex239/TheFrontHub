@@ -5739,6 +5739,29 @@
       "numPlayers": 67,
       "timestamp": "2026-08-07T12:45:55.046Z",
       "url": "https://openfront.io/game/L3SCc76m"
+    },
+    {
+      "id": "MnETmHTS",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "AnonOrangutan2",
+          "clientID": "CubZNHtW",
+          "clanTag": null
+        },
+        {
+          "username": "Riget",
+          "clientID": "Ro6JSBMw",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1924,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-07T13:02:27.447Z",
+      "url": "https://openfront.io/game/MnETmHTS"
     }
   ],
   "trios": [
@@ -24623,6 +24646,39 @@
       "numPlayers": 71,
       "timestamp": "2026-08-07T12:34:45.426Z",
       "url": "https://openfront.io/game/MzYEbrYK"
+    },
+    {
+      "id": "RDxXxqz9",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "BRUHburnice",
+          "clientID": "c9P5H8E5",
+          "clanTag": null
+        },
+        {
+          "username": "Geopolitik",
+          "clientID": "pRVp8Mfa",
+          "clanTag": null
+        },
+        {
+          "username": "Mann",
+          "clientID": "GnC7tcsd",
+          "clanTag": "OATH"
+        },
+        {
+          "username": "Druzia",
+          "clientID": "BtB1NuAS",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1420,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "timestamp": "2026-08-07T13:10:49.898Z",
+      "url": "https://openfront.io/game/RDxXxqz9"
     }
   ]
 }
