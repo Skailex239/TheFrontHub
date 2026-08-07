@@ -13917,6 +13917,52 @@
       "numPlayers": 32,
       "timestamp": "2026-08-07T11:45:32.600Z",
       "url": "https://openfront.io/game/PDbanpKN"
+    },
+    {
+      "id": "FgAUBtC2",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "HOCK",
+          "clientID": "bf26ctTj",
+          "clanTag": "CLIFF"
+        },
+        {
+          "username": "Ciaran",
+          "clientID": "ay9PVMwr",
+          "clanTag": "CLIFF"
+        },
+        {
+          "username": "AnonGoat2",
+          "clientID": "NF2cyPCC",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1183,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-07T11:58:10.790Z",
+      "url": "https://openfront.io/game/FgAUBtC2"
+    },
+    {
+      "id": "MTpiMYyq",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "CYMRU",
+          "clientID": "JAXPXHmo",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 2607,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-07T11:33:21.928Z",
+      "url": "https://openfront.io/game/MTpiMYyq"
     }
   ],
   "quads": [
