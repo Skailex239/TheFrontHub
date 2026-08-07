@@ -5874,29 +5874,6 @@
       "url": "https://openfront.io/game/rCC5srRq"
     },
     {
-      "id": "n2fu6ATy",
-      "team": "Team 23",
-      "players": [
-        {
-          "username": "AnonSwan2",
-          "clientID": "gr9it5z8",
-          "clanTag": null
-        },
-        {
-          "username": "novalpz",
-          "clientID": "piR46gSd",
-          "clanTag": null
-        }
-      ],
-      "map": "Gateway to the Atlantic",
-      "duration_s": 1133,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 82,
-      "timestamp": "2026-08-07T16:16:25.622Z",
-      "url": "https://openfront.io/game/n2fu6ATy"
-    },
-    {
       "id": "Fx8qLnTt",
       "team": "Team 1",
       "players": [
@@ -5918,6 +5895,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-07T16:02:22.351Z",
       "url": "https://openfront.io/game/Fx8qLnTt"
+    },
+    {
+      "id": "n2fu6ATy",
+      "team": "Team 23",
+      "players": [
+        {
+          "username": "AnonSwan2",
+          "clientID": "gr9it5z8",
+          "clanTag": null
+        },
+        {
+          "username": "novalpz",
+          "clientID": "piR46gSd",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1133,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-07T16:16:25.622Z",
+      "url": "https://openfront.io/game/n2fu6ATy"
     }
   ],
   "trios": [
