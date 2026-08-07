@@ -14629,6 +14629,24 @@
       "numPlayers": 88,
       "timestamp": "2026-08-07T16:46:03.784Z",
       "url": "https://openfront.io/game/hAvJGEsC"
+    },
+    {
+      "id": "3G5dy1yY",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "Max",
+          "clientID": "EgV2Crb5",
+          "clanTag": null
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1145,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "timestamp": "2026-08-07T17:02:53.247Z",
+      "url": "https://openfront.io/game/3G5dy1yY"
     }
   ],
   "quads": [
@@ -25668,6 +25686,34 @@
       "numPlayers": 71,
       "timestamp": "2026-08-07T16:50:05.002Z",
       "url": "https://openfront.io/game/N9Rjv1Td"
+    },
+    {
+      "id": "sgT4Zc1D",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "IronHippo.ZIIN",
+          "clientID": "tRr62m18",
+          "clanTag": null
+        },
+        {
+          "username": "Chill Guy",
+          "clientID": "XVENwdfz",
+          "clanTag": null
+        },
+        {
+          "username": "IMPERIUM OF MAN",
+          "clientID": "1v47g7mS",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 1046,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-07T17:03:20.766Z",
+      "url": "https://openfront.io/game/sgT4Zc1D"
     }
   ]
 }
