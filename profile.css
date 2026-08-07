@@ -27,14 +27,14 @@
 
 #profile-loading .loading {
   padding: 24px;
-  color: var(--text2);
+  color: var(--muted);
 }
 
 .profile-back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--text2);
+  color: var(--muted);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -42,7 +42,7 @@
   border-radius: 8px;
   border: 1px solid var(--rim);
   background: var(--card);
-  transition: all 0.2s ease;
+  transition: all var(--duration) var(--ease-out) ease;
 }
 
 .profile-back-link:hover {
@@ -56,13 +56,13 @@
 
 .profile-locked-field input {
   cursor: not-allowed;
-  background: var(--bg2);
-  color: var(--text2);
+  background: var(--bg);
+  color: var(--muted);
 }
 
 .profile-locked-hint {
   font-size: 11px;
-  color: var(--text3);
+  color: var(--dim);
   margin-top: 6px;
 }
 
@@ -70,14 +70,14 @@
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  background: var(--bg2);
+  background: var(--bg);
   border: 1px solid var(--rim);
   color: var(--text);
   font-family: var(--f);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration) var(--ease-out) ease;
 }
 
 .profile-edit-btn:hover {
@@ -102,17 +102,17 @@
   padding: 24px 28px;
   margin-bottom: 20px;
   position: relative;
-  transition: border-color 0.2s ease;
+  transition: border-color var(--duration) var(--ease-out);
 }
 .pf-hero:hover {
-  border-color: var(--rim2);
+  border-color: var(--border);
 }
 
 .pf-avatar {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accentL));
+  background: var(--avatar-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,8 +140,8 @@
   display: inline-block;
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--text2);
-  background: var(--bg2);
+  color: var(--muted);
+  background: var(--bg);
   border: 1px solid var(--rim);
   padding: 3px 10px;
   border-radius: 16px;
@@ -154,11 +154,11 @@
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: var(--bg2);
+  background: var(--bg);
   border: 1px solid var(--rim);
-  color: var(--text2);
+  color: var(--muted);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration) var(--ease-out) ease;
   flex-shrink: 0;
 }
 .pf-edit-btn:hover {
@@ -212,7 +212,7 @@
   justify-content: space-between;
   gap: 12px;
   font-size: 13px;
-  color: var(--text2);
+  color: var(--muted);
   padding: 10px 14px;
   background: rgba(231, 76, 60, 0.08);
   border: 1px solid rgba(231, 76, 60, 0.2);
@@ -227,7 +227,7 @@
 
 .pf-reward-desc {
   font-size: 11px;
-  color: var(--text3);
+  color: var(--dim);
 }
 
 .pf-reward-toggle {
@@ -240,32 +240,32 @@
 .pf-toggle-label {
   font-size: 11px;
   font-weight: 600;
-  color: #2ecc71;
+  color: var(--green);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 .pf-toggle-label.off {
-  color: var(--text3);
+  color: var(--dim);
 }
 
 /* Toggle switch dans le profil */
 .pf-reward-toggle .toggle-switch {
   width: 40px;
   height: 22px;
-  background: var(--bg2);
+  background: var(--bg);
   border: 1px solid var(--rim);
-  border-radius: 11px;
+  border-radius: var(--radius);
   cursor: pointer;
   position: relative;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background var(--duration) var(--ease-out), border-color var(--duration) var(--ease-out);
 }
 .pf-reward-toggle .toggle-switch.on {
-  background: #e74c3c;
-  border-color: #e74c3c;
+  background: var(--red);
+  border-color: var(--red);
 }
 .pf-reward-toggle .toggle-switch.is-flame.on {
-  background: #f39c12;
-  border-color: #f39c12;
+  background: var(--orange);
+  border-color: var(--orange);
 }
 .pf-reward-toggle .toggle-switch.is-rainbow.on {
   background: linear-gradient(90deg, #ff0000, #ff8800, #00ff00, #00aaff, #8800ff);
@@ -319,7 +319,7 @@
   height: 16px;
   background: #fff;
   border-radius: 50%;
-  transition: transform 0.2s;
+  transition: transform var(--duration) var(--ease-out);
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 .pf-reward-toggle .toggle-switch.on .toggle-knob {
@@ -329,13 +329,13 @@
 .pf-reward-btn {
   padding: 8px 16px;
   border-radius: 8px;
-  background: var(--bg2);
+  background: var(--bg);
   border: 1px solid var(--rim);
   color: var(--text);
   font-weight: 600;
   font-size: 13px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--duration) var(--ease-out) ease;
   white-space: nowrap;
   font-family: var(--f);
 }
@@ -350,8 +350,8 @@
   margin-top: 8px;
   min-height: 16px;
 }
-.pf-reward-msg.success { color: #2ecc71; }
-.pf-reward-msg.error { color: #e74c3c; }
+.pf-reward-msg.success { color: var(--green); }
+.pf-reward-msg.error { color: var(--red); }
 
 /* Cosmetic cards grid */
 .pf-cosmetics-grid {
@@ -362,12 +362,12 @@
 }
 .pf-cosmetic-card {
   position: relative;
-  background: var(--bg2);
+  background: var(--bg);
   border: 2px solid var(--rim);
   border-radius: 10px;
   padding: 14px 12px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all var(--duration-slow) cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -402,7 +402,7 @@
 .pf-cosmetic-name {
   font-size: 12px;
   font-weight: 700;
-  color: var(--text2);
+  color: var(--muted);
   letter-spacing: 0.5px;
 }
 .pf-cosmetic-preview {
@@ -413,7 +413,7 @@
 }
 .pf-cosmetic-desc {
   font-size: 10px;
-  color: var(--text3);
+  color: var(--dim);
   line-height: 1.3;
 }
 .pf-cosmetic-check {
@@ -436,19 +436,19 @@
 .pf-cosmetic-card.none.selected {
   opacity: 1;
   border-style: solid;
-  border-color: var(--rim2);
-  background: var(--bg2);
+  border-color: var(--border);
+  background: var(--bg);
   box-shadow: none;
   transform: scale(1.02);
 }
 .pf-none-icon {
   font-size: 22px;
-  color: var(--text3);
+  color: var(--dim);
   line-height: 1;
 }
 .pf-reward-form-label {
   font-size: 12px;
-  color: var(--text2);
+  color: var(--muted);
   margin-bottom: 6px;
   font-weight: 600;
 }
@@ -473,7 +473,7 @@
   16% { color: #ffab00; }
   33% { color: #ffd600; }
   50% { color: #ff8c00; }
-  66% { color: #e74c3c; }
+  66% { color: var(--red); }
   83% { color: #ff4500; }
 }
 
@@ -640,10 +640,10 @@
   border-radius: var(--r);
   padding: 18px 16px;
   text-align: center;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color var(--duration) var(--ease-out), transform 0.2s ease;
 }
 .pf-stat:hover {
-  border-color: var(--rim2);
+  border-color: var(--border);
   transform: translateY(-2px);
 }
 
@@ -657,7 +657,7 @@
 
 .pf-stat-lbl {
   font-size: 11px;
-  color: var(--text3);
+  color: var(--dim);
   text-transform: uppercase;
   letter-spacing: 0.6px;
   margin-top: 4px;
@@ -695,7 +695,7 @@
 .pf-chart-label {
   width: 56px;
   font-size: 12px;
-  color: var(--text2);
+  color: var(--muted);
   text-align: right;
   flex-shrink: 0;
   font-family: var(--mono);
@@ -704,15 +704,15 @@
 .pf-chart-track {
   flex: 1;
   height: 22px;
-  background: var(--bg2);
-  border-radius: 6px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   position: relative;
 }
 
 .pf-chart-fill {
   height: 100%;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: linear-gradient(90deg, #FF5500, #FF8900, #FFCC00);
   transition: width 0.5s cubic-bezier(0.22, 0.68, 0.36, 1.05);
   min-width: 0;
@@ -744,7 +744,7 @@
   padding: 14px 18px;
   text-decoration: none;
   color: var(--text);
-  transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  transition: border-color var(--duration) var(--ease-out), transform 0.15s ease, box-shadow 0.2s ease;
 }
 .pf-game:hover {
   border-color: var(--accent);
@@ -766,13 +766,13 @@
 
 .pf-game-icon.won {
   background: rgba(46, 204, 113, 0.15);
-  color: #2ecc71;
+  color: var(--green);
   border: 1px solid rgba(46, 204, 113, 0.3);
 }
 
 .pf-game-icon.lost {
   background: rgba(231, 76, 60, 0.12);
-  color: #e74c3c;
+  color: var(--red);
   border: 1px solid rgba(231, 76, 60, 0.25);
 }
 
@@ -792,7 +792,7 @@
 
 .pf-game-meta {
   font-size: 11px;
-  color: var(--text3);
+  color: var(--dim);
   margin-top: 2px;
 }
 
@@ -802,13 +802,13 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  border-radius: 6px;
-  background: var(--bg2);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
   border: 1px solid var(--rim);
-  color: var(--text3);
+  color: var(--dim);
   font-size: 12px;
   flex-shrink: 0;
-  transition: all 0.15s ease;
+  transition: all var(--duration) var(--ease-out);
 }
 .pf-game:hover .pf-game-link {
   background: var(--accent);
@@ -819,7 +819,7 @@
 .pf-empty {
   text-align: center;
   padding: 24px;
-  color: var(--text2);
+  color: var(--muted);
   font-size: 13px;
   background: var(--card);
   border: 1px solid var(--rim);
@@ -953,14 +953,14 @@
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 12px;
   font-weight: 600;
   background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15));
   border: 1px solid rgba(99,102,241,0.3);
-  color: var(--accent, #6366f1);
+  color: var(--accent);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all var(--duration) var(--ease-out);
 }
 .pf-clan-tag:hover {
   background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(168,85,247,0.25));
@@ -995,15 +995,15 @@
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.18s;
+  transition: all var(--duration) var(--ease-out);
 }
 .pf-period-btn:hover {
-  border-color: var(--accent, #6366f1);
+  border-color: var(--accent);
   color: var(--text, #fff);
 }
 .pf-period-btn.active {
-  background: var(--accent, #6366f1);
-  border-color: var(--accent, #6366f1);
+  background: var(--accent);
+  border-color: var(--accent);
   color: #fff;
 }
 
@@ -1027,7 +1027,7 @@
 .pf-aliases-toggle {
   background: none;
   border: none;
-  color: var(--accent, #6366f1);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -1058,13 +1058,13 @@
   white-space: nowrap;
 }
 .pf-alias-count {
-  color: var(--accent, #6366f1);
+  color: var(--accent);
   font-weight: 500;
   font-size: 12px;
   white-space: nowrap;
 }
 .pf-alias-dates {
-  color: var(--text3, #666);
+  color: var(--dim);
   font-size: 11px;
   text-align: right;
 }
@@ -1074,7 +1074,7 @@
   display: block;
   font-size: 10px;
   font-weight: 400;
-  color: var(--text3, #666);
+  color: var(--dim);
   margin-top: 2px;
   line-height: 1;
 }
@@ -1088,7 +1088,7 @@
 .pf-section-hint {
   font-size: 12px;
   font-weight: 400;
-  color: var(--text3, #666);
+  color: var(--dim);
 }
 
 /* BigInt stats grid (Feature 6) */
@@ -1109,11 +1109,11 @@
   background: var(--bg2, rgba(255,255,255,0.03));
   border: 1px solid var(--border, rgba(255,255,255,0.08));
   text-align: center;
-  transition: transform 0.18s, border-color 0.18s;
+  transition: transform var(--duration) var(--ease-out), border-color var(--duration) var(--ease-out);
 }
 .pf-bigint-card:hover {
   transform: translateY(-2px);
-  border-color: var(--accent, #6366f1);
+  border-color: var(--accent);
 }
 .pf-bigint-icon {
   font-size: 22px;
@@ -1128,7 +1128,7 @@
 }
 .pf-bigint-lbl {
   font-size: 11px;
-  color: var(--text3, #888);
+  color: var(--dim);
   line-height: 1.2;
 }
 
