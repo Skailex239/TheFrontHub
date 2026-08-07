@@ -13756,6 +13756,34 @@
       "numPlayers": 96,
       "timestamp": "2026-08-07T11:04:27.727Z",
       "url": "https://openfront.io/game/xZojUfnE"
+    },
+    {
+      "id": "tqPH7aty",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Tanaka",
+          "clientID": "WfYTiLCs",
+          "clanTag": null
+        },
+        {
+          "username": "Luke",
+          "clientID": "wb2unymi",
+          "clanTag": null
+        },
+        {
+          "username": "lebano",
+          "clientID": "Ryebkyrj",
+          "clanTag": "OG"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 844,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-07T11:15:56.841Z",
+      "url": "https://openfront.io/game/tqPH7aty"
     }
   ],
   "quads": [
@@ -24070,6 +24098,39 @@
       "numPlayers": 32,
       "timestamp": "2026-08-07T10:47:52.805Z",
       "url": "https://openfront.io/game/m9V8rHCi"
+    },
+    {
+      "id": "Yq3i9sw7",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ISLE OF MEN A LOT",
+          "clientID": "n6WB7XrW",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "anonkeemal",
+          "clientID": "gwimmxQa",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "OpenFront Marketing Dept",
+          "clientID": "DAYhWH78",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "MrGemini",
+          "clientID": "6UMGmFhh",
+          "clanTag": "BOGOR"
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 1045,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-07T11:12:42.667Z",
+      "url": "https://openfront.io/game/Yq3i9sw7"
     }
   ]
 }
