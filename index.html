@@ -51,17 +51,14 @@
     </div>
 
     <nav>
-      <a class="nav-item tab-btn active" id="tab-btn-maps" href="speedruns.html">
+      <a class="nav-item tab-btn active" id="tab-btn-maps" onclick="switchTab('maps',this);document.getElementById('topbar-title').textContent='Speedruns'">
         <i data-icon="trophy"></i> Speedruns
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-ranked" href="ranked.html">
+      <a class="nav-item tab-btn" id="tab-btn-ranked" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé (1v1)'">
         <i data-icon="swords"></i> Classé (1v1)
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-stats" href="stats.html">
+      <a class="nav-item tab-btn" id="tab-btn-stats" onclick="switchTab('stats',this);document.getElementById('topbar-title').textContent='Statistiques'">
         <i data-icon="chart"></i> Statistiques
-      </a>
-      <a class="nav-item tab-btn" href="tournaments.html">
-        <i data-icon="trophy"></i> Tournois
       </a>
       <a class="nav-item tab-btn" id="tab-btn-profile" href="profile.html">
         <i data-icon="user"></i> Mon Profil
@@ -320,23 +317,13 @@
         </div>
       </div>
 
-      <!-- Ranked Mode Sub-Selector -->
-      <div class="ranked-mode-selector" style="display:flex;gap:4px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:3px;margin-bottom:16px;width:fit-content">
-        <button class="ranked-mode-btn active" data-ranked-mode="1v1" onclick="switchRankedMode('1v1')">
-          <i data-icon="swords"></i> 1v1
-        </button>
-        <button class="ranked-mode-btn" data-ranked-mode="2v2" onclick="switchRankedMode('2v2')">
-          <i data-icon="users"></i> 2v2 <span style="font-size:9px;opacity:.6;font-weight:500">ALPHA</span>
-        </button>
-      </div>
-
       <!-- My Position -->
       <div id="my-ranked-position" style="margin-bottom:12px"></div>
 
       <!-- Tableau Ranked -->
       <div class="feed-card" style="margin-bottom:20px">
         <div class="feed-header" style="display: flex; justify-content: space-between; align-items: center;">
-          <span><i data-icon="swords"></i> Classement Classé — <span id="ranked-mode-label">1v1</span></span>
+          <span><i data-icon="swords"></i> Classement Classé (1v1) — Top 100 Officiel</span>
           <div style="display:flex;align-items:center;gap:10px">
             <span id="ranked-last-update" style="font-size:12px;color:var(--muted)"></span>
             <button onclick="loadRankedLeaderboard(true)" style="background: var(--bg2); border: 1px solid var(--border); color: var(--text2); padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;">Actualiser</button>
