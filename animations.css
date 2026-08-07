@@ -10,8 +10,8 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(255,122,0,.06) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(255,177,93,.03) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(255,122,0,.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(255,177,93,.04) 0%, transparent 60%),
     radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,122,0,.02) 0%, transparent 60%);
   animation: bgShift 30s ease-in-out infinite alternate;
   pointer-events: none;
@@ -220,7 +220,7 @@ body::before {
 .shimmer {
   position: relative;
   overflow: hidden;
-  background: var(--bg) !important;
+  background: var(--bg2) !important;
   color: transparent !important;
 }
 .shimmer::after {
@@ -351,8 +351,8 @@ body::before {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 20px;
-  background: var(--card-hover);
-  border: 1px solid var(--border);
+  background: var(--card2);
+  border: 1px solid var(--rim);
   transition: all .2s ease;
 }
 .game-version:hover {
