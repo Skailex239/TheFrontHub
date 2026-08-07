@@ -13074,6 +13074,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T04:14:40.017Z",
       "url": "https://openfront.io/game/gG7cKWJW"
+    },
+    {
+      "id": "2Q3GpjRj",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "col Ibrahim Traore",
+          "clientID": "ZeQbFyRh",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1452,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-07T04:55:07.797Z",
+      "url": "https://openfront.io/game/2Q3GpjRj"
     }
   ],
   "quads": [
@@ -22752,6 +22770,39 @@
       "numPlayers": 62,
       "timestamp": "2026-08-07T02:58:48.189Z",
       "url": "https://openfront.io/game/e7Vr2wY9"
+    },
+    {
+      "id": "8LWkoRNe",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "huu",
+          "clientID": "26VVFGZZ",
+          "clanTag": null
+        },
+        {
+          "username": "lemoncello",
+          "clientID": "Ptzo9ikM",
+          "clanTag": null
+        },
+        {
+          "username": "cover",
+          "clientID": "QRsVuNLD",
+          "clanTag": "ZG"
+        },
+        {
+          "username": "Anon450",
+          "clientID": "QA6pXnES",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 673,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-07T05:09:43.114Z",
+      "url": "https://openfront.io/game/8LWkoRNe"
     }
   ]
 }
