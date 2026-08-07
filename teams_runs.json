@@ -23017,6 +23017,47 @@
       "numPlayers": 35,
       "timestamp": "2026-08-07T06:08:46.000Z",
       "url": "https://openfront.io/game/f8t2QKh4"
+    },
+    {
+      "id": "U5nD3Aao",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Moon",
+          "clientID": "2XxsAZm5",
+          "clanTag": null
+        },
+        {
+          "username": "HendrikSchlieter",
+          "clientID": "JWXwjUyo",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1296,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-07T06:28:07.595Z",
+      "url": "https://openfront.io/game/U5nD3Aao"
+    },
+    {
+      "id": "eRAhAayc",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Banking Clan",
+          "clientID": "cf5Y3DzF",
+          "clanTag": "THE"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 2347,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-07T06:13:35.258Z",
+      "url": "https://openfront.io/game/eRAhAayc"
     }
   ]
 }
