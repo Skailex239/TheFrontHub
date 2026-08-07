@@ -5263,6 +5263,24 @@
       "numPlayers": 44,
       "timestamp": "2026-08-06T22:59:33.048Z",
       "url": "https://openfront.io/game/rXiax5mv"
+    },
+    {
+      "id": "ar7Pqtti",
+      "team": "Team 26",
+      "players": [
+        {
+          "username": "KINGRiver",
+          "clientID": "pXpp8d1q",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 2132,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-07T00:22:37.750Z",
+      "url": "https://openfront.io/game/ar7Pqtti"
     }
   ],
   "trios": [
@@ -22051,6 +22069,34 @@
       "numPlayers": 80,
       "timestamp": "2026-08-06T23:13:13.802Z",
       "url": "https://openfront.io/game/YNTnh7wn"
+    },
+    {
+      "id": "wnhXixyy",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Te Rae o Papamoa",
+          "clientID": "H1QnDUba",
+          "clanTag": "AKE"
+        },
+        {
+          "username": "AnonLizard7",
+          "clientID": "cB2Dhjbu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOrca5",
+          "clientID": "p3ibp6rg",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1399,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-07T00:32:58.347Z",
+      "url": "https://openfront.io/game/wnhXixyy"
     }
   ]
 }
