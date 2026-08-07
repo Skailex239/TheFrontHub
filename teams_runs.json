@@ -5613,29 +5613,6 @@
       "url": "https://openfront.io/game/uHShFTnM"
     },
     {
-      "id": "xGm1he8m",
-      "team": "Team 13",
-      "players": [
-        {
-          "username": "no war Mt FUJI",
-          "clientID": "zjUAk8XN",
-          "clanTag": null
-        },
-        {
-          "username": "Belgium",
-          "clientID": "NUKAofvc",
-          "clanTag": "BEL"
-        }
-      ],
-      "map": "World Inverted",
-      "duration_s": 1989,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-07T10:19:47.246Z",
-      "url": "https://openfront.io/game/xGm1he8m"
-    },
-    {
       "id": "M8irfPHq",
       "team": "Team 10",
       "players": [
@@ -5657,6 +5634,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T10:32:34.983Z",
       "url": "https://openfront.io/game/M8irfPHq"
+    },
+    {
+      "id": "xGm1he8m",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "no war Mt FUJI",
+          "clientID": "zjUAk8XN",
+          "clanTag": null
+        },
+        {
+          "username": "Belgium",
+          "clientID": "NUKAofvc",
+          "clanTag": "BEL"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1989,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-07T10:19:47.246Z",
+      "url": "https://openfront.io/game/xGm1he8m"
     }
   ],
   "trios": [
