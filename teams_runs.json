@@ -25135,6 +25135,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-07T14:47:50.525Z",
       "url": "https://openfront.io/game/1L4ibPnG"
+    },
+    {
+      "id": "dxaFveJw",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Gedeon",
+          "clientID": "erikrWva",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "rand",
+          "clientID": "Y11YtM3f",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1790,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-07T14:43:09.252Z",
+      "url": "https://openfront.io/game/dxaFveJw"
     }
   ]
 }
