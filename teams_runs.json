@@ -15017,6 +15017,34 @@
       "numPlayers": 80,
       "timestamp": "2026-08-07T19:41:08.495Z",
       "url": "https://openfront.io/game/MyFRu4nA"
+    },
+    {
+      "id": "8oFkcSDx",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Makafaka",
+          "clientID": "ZCSpJ7dF",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "lil p1sun",
+          "clientID": "FCHTfbrd",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "Spider man lost mj",
+          "clientID": "Tisc4ka6",
+          "clanTag": "P1SUN"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 746,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-07T20:01:00.131Z",
+      "url": "https://openfront.io/game/8oFkcSDx"
     }
   ],
   "quads": [
@@ -26440,6 +26468,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-07T19:48:46.462Z",
       "url": "https://openfront.io/game/gjQuMmgR"
+    },
+    {
+      "id": "tkjmjAst",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonTorch",
+          "clientID": "9UcKNDz2",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark4",
+          "clientID": "KcM7fjrM",
+          "clanTag": "SUS"
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "6zr4B5pN",
+          "clanTag": null
+        },
+        {
+          "username": "peace",
+          "clientID": "xcVqKnWA",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 982,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-07T19:57:24.301Z",
+      "url": "https://openfront.io/game/tkjmjAst"
     }
   ]
 }
