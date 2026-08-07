@@ -14810,34 +14810,6 @@
       "url": "https://openfront.io/game/rAozQ8wy"
     },
     {
-      "id": "CtTfTPpU",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "What",
-          "clientID": "cg7NvsQW",
-          "clanTag": "GUNK"
-        },
-        {
-          "username": "sigh",
-          "clientID": "5vGfVSLC",
-          "clanTag": "GUNK"
-        },
-        {
-          "username": "Troops",
-          "clientID": "yQRKTpgB",
-          "clanTag": null
-        }
-      ],
-      "map": "Hong Kong",
-      "duration_s": 1286,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 67,
-      "timestamp": "2026-08-07T19:08:04.883Z",
-      "url": "https://openfront.io/game/CtTfTPpU"
-    },
-    {
       "id": "Kpkp5Fuy",
       "team": "Team 2",
       "players": [
@@ -14864,6 +14836,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-07T18:45:38.562Z",
       "url": "https://openfront.io/game/Kpkp5Fuy"
+    },
+    {
+      "id": "CtTfTPpU",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "What",
+          "clientID": "cg7NvsQW",
+          "clanTag": "GUNK"
+        },
+        {
+          "username": "sigh",
+          "clientID": "5vGfVSLC",
+          "clanTag": "GUNK"
+        },
+        {
+          "username": "Troops",
+          "clientID": "yQRKTpgB",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1286,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-07T19:08:04.883Z",
+      "url": "https://openfront.io/game/CtTfTPpU"
     }
   ],
   "quads": [
@@ -26188,39 +26188,6 @@
       "numPlayers": 60,
       "timestamp": "2026-08-07T18:55:13.119Z",
       "url": "https://openfront.io/game/2uvrq1Nr"
-    },
-    {
-      "id": "6GaRdMeT",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "NoAlliances",
-          "clientID": "rdGjW7hi",
-          "clanTag": null
-        },
-        {
-          "username": "Ray",
-          "clientID": "AqSVvzBW",
-          "clanTag": null
-        },
-        {
-          "username": "ABOLFAZL",
-          "clientID": "Xa2MZ6Z6",
-          "clanTag": "LONE"
-        },
-        {
-          "username": "Anon248",
-          "clientID": "LTc3CCER",
-          "clanTag": null
-        }
-      ],
-      "map": "North America",
-      "duration_s": 2531,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 44,
-      "timestamp": "2026-08-07T18:48:29.235Z",
-      "url": "https://openfront.io/game/6GaRdMeT"
     }
   ]
 }
