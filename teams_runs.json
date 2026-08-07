@@ -26066,6 +26066,39 @@
       "numPlayers": 100,
       "timestamp": "2026-08-07T18:33:09.829Z",
       "url": "https://openfront.io/game/Kpa7qSpK"
+    },
+    {
+      "id": "4EByV6Ga",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Ladron",
+          "clientID": "wmCr6ubj",
+          "clanTag": "KANCL"
+        },
+        {
+          "username": "Test",
+          "clientID": "ryXFrZEr",
+          "clanTag": "KANCL"
+        },
+        {
+          "username": "Vladimir_Holan",
+          "clientID": "1Ekm8gvf",
+          "clanTag": "KANCL"
+        },
+        {
+          "username": "Furtado8",
+          "clientID": "xCBcVWs2",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 800,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-07T19:03:11.105Z",
+      "url": "https://openfront.io/game/4EByV6Ga"
     }
   ]
 }
