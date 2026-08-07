@@ -216,15 +216,35 @@ async function loadStats(publicId) {
   setText("stat-week-score", `This week score: ${weekWins}`);
   setText("stat-alltime", `All-time score: ${allTimeScore} (${stats.wins} wins${detailStr})`);
 
-  // ELO from ranked.json
-  const ranked = await eloPromise;
+  // ELO from ranked.json — 1v1 + 2v2
+  const ranked = await eloPromise; // { "1v1": entry|null, "2v2": entry|null }
   const eloLine = document.getElementById("stat-elo-line");
+  const eloLine2 = document.getElementById("stat-elo-line-2v2");
   if (eloLine) {
-    if (ranked && ranked.elo != null) {
-      eloLine.textContent = `ELO: ${ranked.elo} (Peak: ${ranked.peakElo ?? '—'})`;
+    const e1 = ranked?.["1v1"];
+    if (e1 && e1.elo != null) {
+      eloLine.textContent = `ELO 1v1: ${e1.elo} (Peak: ${e1.peakElo ?? '—'}) #${e1.rank}`;
       eloLine.style.display = "list-item";
     } else {
-      eloLine.style.display = "none";
+      eloLine.textContent = "ELO 1v1: — (unranked)";
+      eloLine.style.display = "list-item";
+      eloLine.classList.add("muted");
+    }
+  }
+  if (eloLine2) {
+    const e2 = ranked?.["2v2"];
+    if (e2 && e2.elo != null) {
+      eloLine2.textContent = `ELO 2v2: ${e2.elo} (Peak: ${e2.peakElo ?? '—'}) #${e2.rank}`;
+      eloLine2.style.display = "list-item";
+    } else {
+      eloLine2.style.display = "none";
+    }
+  }
+  // fallback si un seul élément elo-line existe (ancien HTML)
+  if (!eloLine2 && ranked) {
+    const single = ranked["1v1"] || ranked["2v2"];
+    if (single && eloLine) {
+      // déjà géré ci-dessus
     }
   }
 
@@ -314,16 +334,40 @@ function computeStats(games, statsTree) {
 async function getRankedEntry(publicId) {
   if (_rankedCache === null) {
     try {
-      const res = await fetch("ranked.json", { cache: "no-store" });
-      if (res.ok) _rankedCache = await res.json();
-      else _rankedCache = {};
+      // Try gz first (mirrors app.js)
+      let data = null;
+      try {
+        const gzRes = await fetch("ranked.json.gz", { cache: "no-store" });
+        if (gzRes.ok) {
+          const ds = new DecompressionStream("gzip");
+          const decompressed = gzRes.body.pipeThrough(ds);
+          data = await new Response(decompressed).json();
+        }
+      } catch {}
+      if (!data) {
+        const res = await fetch("ranked.json", { cache: "no-store" });
+        if (res.ok) data = await res.json();
+      }
+      _rankedCache = data || {};
     } catch (e) {
       console.warn("[profile] ranked.json load failed:", e);
       _rankedCache = {};
     }
   }
-  const list = (_rankedCache && Array.isArray(_rankedCache["1v1"])) ? _rankedCache["1v1"] : [];
-  return list.find((p) => p && p.public_id === publicId) || null;
+  const out = { "1v1": null, "2v2": null };
+  for (const mode of ["1v1", "2v2"]) {
+    const list = (_rankedCache && Array.isArray(_rankedCache[mode])) ? _rankedCache[mode] : [];
+    out[mode] = list.find((p) => p && p.public_id === publicId) || null;
+  }
+  // Compat: ancien appel attendait une seule entrée → retourne l'objet double mais garde .elo pour compat 1v1
+  // On attache les deux modes tout en gardant les props de 1v1 au top-level
+  const primary = out["1v1"];
+  if (primary) {
+    Object.assign(out, primary);
+  } else if (out["2v2"]) {
+    Object.assign(out, out["2v2"]);
+  }
+  return out;
 }
 
 function showError(msg) {

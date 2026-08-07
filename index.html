@@ -54,8 +54,8 @@
       <a class="nav-item tab-btn active" id="tab-btn-maps" onclick="switchTab('maps',this);document.getElementById('topbar-title').textContent='Speedruns'">
         <i data-icon="trophy"></i> Speedruns
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-ranked" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé (1v1)'">
-        <i data-icon="swords"></i> Classé (1v1)
+      <a class="nav-item tab-btn" id="tab-btn-ranked" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé'">
+        <i data-icon="swords"></i> Classé
       </a>
       <a class="nav-item tab-btn" id="tab-btn-stats" onclick="switchTab('stats',this);document.getElementById('topbar-title').textContent='Statistiques'">
         <i data-icon="chart"></i> Statistiques
@@ -289,6 +289,12 @@
         </div>
       </section>
 
+      <!-- 1v1 / 2v2 Switch -->
+      <div class="ranked-mode-switch" id="ranked-mode-switch" style="display:flex;gap:8px;justify-content:center;margin: 6px 0 12px">
+        <button class="filter-btn active" data-ranked-mode="1v1" onclick="switchRankedMode('1v1')">⚔️ 1v1 Solo</button>
+        <button class="filter-btn" data-ranked-mode="2v2" onclick="switchRankedMode('2v2')">🤝 2v2 Duos</button>
+        <span id="ranked-mode-count" style="margin-left:8px;align-self:center;font-size:12px;color:var(--muted)"></span>
+      </div>
       <!-- Search + Filters -->
       <div class="search-bar">
         <input type="text" id="ranked-search" class="search-input" placeholder="Rechercher un joueur classé..." oninput="filterRanked(this.value)">
@@ -323,7 +329,7 @@
       <!-- Tableau Ranked -->
       <div class="feed-card" style="margin-bottom:20px">
         <div class="feed-header" style="display: flex; justify-content: space-between; align-items: center;">
-          <span><i data-icon="swords"></i> Classement Classé (1v1) — Top 100 Officiel</span>
+          <span id="ranked-table-title"><i data-icon="swords"></i> Classement Classé (1v1) — Top 100 Officiel</span>
           <div style="display:flex;align-items:center;gap:10px">
             <span id="ranked-last-update" style="font-size:12px;color:var(--muted)"></span>
             <button onclick="loadRankedLeaderboard(true)" style="background: var(--bg2); border: 1px solid var(--border); color: var(--text2); padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px;">Actualiser</button>
@@ -416,7 +422,7 @@
       <div class="modal-subtitle" id="ranked-modal-player-stats">Elo: — · 0 wins · 0 losses</div>
     </div>
     <div class="modal-section">
-      <div class="modal-section-title">Historique 1v1 récent</div>
+      <div class="modal-section-title" id="ranked-modal-history-title">Historique 1v1 récent</div>
       <div id="ranked-modal-games" style="max-height:400px;overflow-y:auto"></div>
     </div>
   </div>
@@ -492,10 +498,7 @@
 <script src="i18n.js"></script>
 <script src="toast.js" defer></script>
 <script src="animations.js" defer></script>
-<script src="app.js?v=27" type="module"></script>
+<script src="app.js?v=28" type="module"></script>
 
-
-  }
-</script>
 </body>
 </html>
