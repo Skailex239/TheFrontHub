@@ -15177,29 +15177,6 @@
       "url": "https://openfront.io/game/gquPs9sE"
     },
     {
-      "id": "uUFmUmf7",
-      "team": "Team 16",
-      "players": [
-        {
-          "username": "PolyBear",
-          "clientID": "StYKXfam",
-          "clanTag": "80085"
-        },
-        {
-          "username": "Orbit34",
-          "clientID": "e5tJ223K",
-          "clanTag": null
-        }
-      ],
-      "map": "Hecate Strait",
-      "duration_s": 3192,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 79,
-      "timestamp": "2026-08-07T20:30:29.920Z",
-      "url": "https://openfront.io/game/uUFmUmf7"
-    },
-    {
       "id": "rACHMD7v",
       "team": "Team 6",
       "players": [
@@ -15221,6 +15198,29 @@
       "numPlayers": 99,
       "timestamp": "2026-08-07T20:57:27.742Z",
       "url": "https://openfront.io/game/rACHMD7v"
+    },
+    {
+      "id": "uUFmUmf7",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "PolyBear",
+          "clientID": "StYKXfam",
+          "clanTag": "80085"
+        },
+        {
+          "username": "Orbit34",
+          "clientID": "e5tJ223K",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 3192,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-07T20:30:29.920Z",
+      "url": "https://openfront.io/game/uUFmUmf7"
     }
   ],
   "quads": [
@@ -26799,6 +26799,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-07T21:16:39.664Z",
       "url": "https://openfront.io/game/UPYnrgRf"
+    },
+    {
+      "id": "iLPjdeqn",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Martell",
+          "clientID": "fhJVZNsC",
+          "clanTag": null
+        },
+        {
+          "username": "RoM",
+          "clientID": "q4i8ggTh",
+          "clanTag": "TEG"
+        },
+        {
+          "username": "JunMkt",
+          "clientID": "7Mfu68ih",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1154,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-07T21:11:11.213Z",
+      "url": "https://openfront.io/game/iLPjdeqn"
     }
   ]
 }
