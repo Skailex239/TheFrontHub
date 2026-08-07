@@ -14085,6 +14085,29 @@
       "url": "https://openfront.io/game/J3QfmV46"
     },
     {
+      "id": "D56LWPmJ",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "SKYNET SECRUITY",
+          "clientID": "kvXYMLKB",
+          "clanTag": "AST"
+        },
+        {
+          "username": "King",
+          "clientID": "wmQSTABt",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1485,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-07T13:36:05.390Z",
+      "url": "https://openfront.io/game/D56LWPmJ"
+    },
+    {
       "id": "Mj5KoUnt",
       "team": "Team 2",
       "players": [
@@ -14113,27 +14136,32 @@
       "url": "https://openfront.io/game/Mj5KoUnt"
     },
     {
-      "id": "D56LWPmJ",
-      "team": "Team 3",
+      "id": "SUoUWHf5",
+      "team": "Team 2",
       "players": [
         {
-          "username": "SKYNET SECRUITY",
-          "clientID": "kvXYMLKB",
-          "clanTag": "AST"
+          "username": "Barkruk",
+          "clientID": "VZ1rqVFz",
+          "clanTag": null
         },
         {
-          "username": "King",
-          "clientID": "wmQSTABt",
-          "clanTag": null
+          "username": "Just trading",
+          "clientID": "EAVLeasi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Philadelphia",
+          "clientID": "M6q5dz7q",
+          "clanTag": "UN"
         }
       ],
-      "map": "Labyrinth",
-      "duration_s": 1485,
+      "map": "North America",
+      "duration_s": 1550,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 54,
-      "timestamp": "2026-08-07T13:36:05.390Z",
-      "url": "https://openfront.io/game/D56LWPmJ"
+      "numPlayers": 60,
+      "timestamp": "2026-08-07T13:39:13.051Z",
+      "url": "https://openfront.io/game/SUoUWHf5"
     }
   ],
   "quads": [
