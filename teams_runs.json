@@ -13786,6 +13786,29 @@
       "url": "https://openfront.io/game/tqPH7aty"
     },
     {
+      "id": "SqvF5F3K",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Aevon",
+          "clientID": "62NMXZcd",
+          "clanTag": null
+        },
+        {
+          "username": "La Castagne",
+          "clientID": "ZufsocFa",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1611,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-07T11:08:02.919Z",
+      "url": "https://openfront.io/game/SqvF5F3K"
+    },
+    {
       "id": "b26Pe2u2",
       "team": "Team 1",
       "players": [
@@ -13812,29 +13835,6 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T11:00:51.013Z",
       "url": "https://openfront.io/game/b26Pe2u2"
-    },
-    {
-      "id": "SqvF5F3K",
-      "team": "Team 11",
-      "players": [
-        {
-          "username": "Aevon",
-          "clientID": "62NMXZcd",
-          "clanTag": null
-        },
-        {
-          "username": "La Castagne",
-          "clientID": "ZufsocFa",
-          "clanTag": null
-        }
-      ],
-      "map": "Chopping Block",
-      "duration_s": 1611,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-07T11:08:02.919Z",
-      "url": "https://openfront.io/game/SqvF5F3K"
     }
   ],
   "quads": [
