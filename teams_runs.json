@@ -22984,6 +22984,39 @@
       "numPlayers": 54,
       "timestamp": "2026-08-07T06:00:38.012Z",
       "url": "https://openfront.io/game/z6MAnsCb"
+    },
+    {
+      "id": "f8t2QKh4",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Elin",
+          "clientID": "2HmEnDun",
+          "clanTag": "CN"
+        },
+        {
+          "username": "moncius",
+          "clientID": "Rp27rQXq",
+          "clanTag": "CN"
+        },
+        {
+          "username": "zhaogou",
+          "clientID": "5BtKSPaP",
+          "clanTag": "CN"
+        },
+        {
+          "username": "Los Wochos",
+          "clientID": "UeWBDrkt",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1076,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "timestamp": "2026-08-07T06:08:46.000Z",
+      "url": "https://openfront.io/game/f8t2QKh4"
     }
   ]
 }
