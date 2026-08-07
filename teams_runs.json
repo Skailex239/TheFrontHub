@@ -22849,6 +22849,67 @@
       "numPlayers": 52,
       "timestamp": "2026-08-07T05:09:43.114Z",
       "url": "https://openfront.io/game/8LWkoRNe"
+    },
+    {
+      "id": "KVThSPjv",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Envolt",
+          "clientID": "9yFJoWjX",
+          "clanTag": null
+        },
+        {
+          "username": "Valde",
+          "clientID": "Z96iKKRH",
+          "clanTag": "GMM"
+        },
+        {
+          "username": "Gudtmann",
+          "clientID": "H44dwBJx",
+          "clanTag": "GMM"
+        },
+        {
+          "username": "AnonFalcon2",
+          "clientID": "qWNvTZ5D",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-07T05:51:37.448Z",
+      "url": "https://openfront.io/game/KVThSPjv"
+    },
+    {
+      "id": "iRkzE8PK",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "the plague",
+          "clientID": "AHXHTkzR",
+          "clanTag": null
+        },
+        {
+          "username": "Ivern",
+          "clientID": "zvKw6vmK",
+          "clanTag": "ROK"
+        },
+        {
+          "username": "AnonElephant9",
+          "clientID": "MNUqQVih",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1302,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-07T05:41:23.872Z",
+      "url": "https://openfront.io/game/iRkzE8PK"
     }
   ]
 }
