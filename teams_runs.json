@@ -12648,6 +12648,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-07T01:18:47.056Z",
       "url": "https://openfront.io/game/KutBP6UQ"
+    },
+    {
+      "id": "bV5vF2MW",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Mewwon",
+          "clientID": "qTfqCLut",
+          "clanTag": null
+        },
+        {
+          "username": "Bobby",
+          "clientID": "HzkYZNV1",
+          "clanTag": "MC"
+        },
+        {
+          "username": "Toddy",
+          "clientID": "eGa9fCGt",
+          "clanTag": "MC"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 835,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-07T01:25:26.943Z",
+      "url": "https://openfront.io/game/bV5vF2MW"
     }
   ],
   "quads": [
@@ -22125,6 +22153,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-07T00:32:58.347Z",
       "url": "https://openfront.io/game/wnhXixyy"
+    },
+    {
+      "id": "6G9dMoFi",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Everyone Is Boring",
+          "clientID": "bw4weiEx",
+          "clanTag": null
+        },
+        {
+          "username": "cCOM POSI",
+          "clientID": "3qMg8uLZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1135,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 27,
+      "timestamp": "2026-08-07T01:22:57.788Z",
+      "url": "https://openfront.io/game/6G9dMoFi"
     }
   ]
 }
