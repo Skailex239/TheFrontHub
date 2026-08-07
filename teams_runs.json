@@ -5693,6 +5693,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T10:55:59.759Z",
       "url": "https://openfront.io/game/5PdoVHzh"
+    },
+    {
+      "id": "ETvHcEJJ",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "bingo",
+          "clientID": "t4RgMKsP",
+          "clanTag": "HYDE"
+        },
+        {
+          "username": "KirkCharles",
+          "clientID": "j1R46Z9u",
+          "clanTag": "HYDE"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1954,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-07T11:59:31.361Z",
+      "url": "https://openfront.io/game/ETvHcEJJ"
     }
   ],
   "trios": [
@@ -24399,6 +24422,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-07T11:55:21.634Z",
       "url": "https://openfront.io/game/HFVi8KJX"
+    },
+    {
+      "id": "1crZcxpB",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "meowwww",
+          "clientID": "XBFev884",
+          "clanTag": "UN"
+        },
+        {
+          "username": "zhaoxiuya",
+          "clientID": "sdjwYN8C",
+          "clanTag": null
+        },
+        {
+          "username": "Republic of Korea",
+          "clientID": "u5vDq4uE",
+          "clanTag": null
+        },
+        {
+          "username": "KanNieDood",
+          "clientID": "KAeYErsE",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 756,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-07T12:19:07.991Z",
+      "url": "https://openfront.io/game/1crZcxpB"
     }
   ]
 }
