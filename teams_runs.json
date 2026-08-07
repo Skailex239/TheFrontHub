@@ -24600,6 +24600,29 @@
       "numPlayers": 96,
       "timestamp": "2026-08-07T12:53:55.495Z",
       "url": "https://openfront.io/game/bJ6rdyRm"
+    },
+    {
+      "id": "MzYEbrYK",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "omelya",
+          "clientID": "uMULeuTX",
+          "clanTag": "EZ"
+        },
+        {
+          "username": "culennic",
+          "clientID": "HzsrppdC",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 2547,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-07T12:34:45.426Z",
+      "url": "https://openfront.io/game/MzYEbrYK"
     }
   ]
 }
