@@ -5826,6 +5826,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-07T15:03:15.438Z",
       "url": "https://openfront.io/game/xs8w1BPx"
+    },
+    {
+      "id": "Qb3ojJYD",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "AnonDuck8",
+          "clientID": "rYy5uBPp",
+          "clanTag": null
+        },
+        {
+          "username": "totow",
+          "clientID": "RH4Q2w3L",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1769,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-07T14:50:15.166Z",
+      "url": "https://openfront.io/game/Qb3ojJYD"
     }
   ],
   "trios": [
@@ -14353,29 +14376,6 @@
       "url": "https://openfront.io/game/cmLSijTH"
     },
     {
-      "id": "2tRg8SaK",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "Dont play solo",
-          "clientID": "Uujthagy",
-          "clanTag": null
-        },
-        {
-          "username": "YARRRR",
-          "clientID": "EvJFRqRg",
-          "clanTag": "FRIEN"
-        }
-      ],
-      "map": "Sol",
-      "duration_s": 2414,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-08-07T14:37:23.438Z",
-      "url": "https://openfront.io/game/2tRg8SaK"
-    },
-    {
       "id": "7mxsHD5C",
       "team": "Team 9",
       "players": [
@@ -14402,6 +14402,29 @@
       "numPlayers": 33,
       "timestamp": "2026-08-07T15:02:54.422Z",
       "url": "https://openfront.io/game/7mxsHD5C"
+    },
+    {
+      "id": "2tRg8SaK",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Dont play solo",
+          "clientID": "Uujthagy",
+          "clanTag": null
+        },
+        {
+          "username": "YARRRR",
+          "clientID": "EvJFRqRg",
+          "clanTag": "FRIEN"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2414,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-07T14:37:23.438Z",
+      "url": "https://openfront.io/game/2tRg8SaK"
     }
   ],
   "quads": [
