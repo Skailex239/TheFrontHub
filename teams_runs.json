@@ -5716,6 +5716,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-07T11:59:31.361Z",
       "url": "https://openfront.io/game/ETvHcEJJ"
+    },
+    {
+      "id": "L3SCc76m",
+      "team": "Team 32",
+      "players": [
+        {
+          "username": "yeetdapro250",
+          "clientID": "YSkabJU1",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSnail8",
+          "clientID": "RBQf1MzK",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1479,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-07T12:45:55.046Z",
+      "url": "https://openfront.io/game/L3SCc76m"
     }
   ],
   "trios": [
@@ -24544,6 +24567,39 @@
       "numPlayers": 40,
       "timestamp": "2026-08-07T12:32:48.801Z",
       "url": "https://openfront.io/game/JYW5o7Kg"
+    },
+    {
+      "id": "bJ6rdyRm",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "DonkeyStu",
+          "clientID": "kEPrJVbC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "512K",
+          "clientID": "rKHuEzeT",
+          "clanTag": null
+        },
+        {
+          "username": "swashles",
+          "clientID": "RaFnMPjG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Atilla My Hut",
+          "clientID": "sjbYoUL3",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 918,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-07T12:53:55.495Z",
+      "url": "https://openfront.io/game/bJ6rdyRm"
     }
   ]
 }
