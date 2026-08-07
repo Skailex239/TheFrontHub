@@ -23797,6 +23797,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-07T10:07:33.061Z",
       "url": "https://openfront.io/game/nYeMVUpb"
+    },
+    {
+      "id": "GvukXLSM",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Korea No.1",
+          "clientID": "mU16TomC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Smitter",
+          "clientID": "qyEXCnCc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "DeLoVaN",
+          "clientID": "pD3gZZ14",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Classic",
+          "clientID": "RdFPCiNk",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 1029,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-07T10:30:48.890Z",
+      "url": "https://openfront.io/game/GvukXLSM"
     }
   ]
 }
