@@ -25844,6 +25844,34 @@
       "numPlayers": 20,
       "timestamp": "2026-08-07T17:17:31.058Z",
       "url": "https://openfront.io/game/DzM5zG62"
+    },
+    {
+      "id": "SUErySip",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Comando Vermelho",
+          "clientID": "hB9B2m57",
+          "clanTag": null
+        },
+        {
+          "username": "Friend",
+          "clientID": "Vx7Aqppj",
+          "clanTag": "AST"
+        },
+        {
+          "username": "The",
+          "clientID": "yxDEwSik",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1465,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-07T17:20:16.702Z",
+      "url": "https://openfront.io/game/SUErySip"
     }
   ]
 }
