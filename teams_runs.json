@@ -14328,6 +14328,57 @@
       "numPlayers": 15,
       "timestamp": "2026-08-07T14:55:57.023Z",
       "url": "https://openfront.io/game/cmLSijTH"
+    },
+    {
+      "id": "7mxsHD5C",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "liad198",
+          "clientID": "8kgxbHRT",
+          "clanTag": null
+        },
+        {
+          "username": "o_O",
+          "clientID": "K1C6Mrk3",
+          "clanTag": null
+        },
+        {
+          "username": "SAm sam",
+          "clientID": "8TN7rGJ7",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 805,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-07T15:02:54.422Z",
+      "url": "https://openfront.io/game/7mxsHD5C"
+    },
+    {
+      "id": "2tRg8SaK",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Dont play solo",
+          "clientID": "Uujthagy",
+          "clanTag": null
+        },
+        {
+          "username": "YARRRR",
+          "clientID": "EvJFRqRg",
+          "clanTag": "FRIEN"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2414,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-07T14:37:23.438Z",
+      "url": "https://openfront.io/game/2tRg8SaK"
     }
   ],
   "quads": [
@@ -25076,34 +25127,6 @@
       "url": "https://openfront.io/game/ApwwTQCd"
     },
     {
-      "id": "1L4ibPnG",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "ehmaksu",
-          "clientID": "3uVFbhGs",
-          "clanTag": null
-        },
-        {
-          "username": "Antiac",
-          "clientID": "4ugh3LNr",
-          "clanTag": "ROKA"
-        },
-        {
-          "username": "Poppy",
-          "clientID": "6x2Wpgxm",
-          "clanTag": "ROKA"
-        }
-      ],
-      "map": "Svalmel",
-      "duration_s": 874,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-08-07T14:47:50.525Z",
-      "url": "https://openfront.io/game/1L4ibPnG"
-    },
-    {
       "id": "mhjptzJh",
       "team": "Team 1",
       "players": [
@@ -25135,6 +25158,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-07T14:51:02.712Z",
       "url": "https://openfront.io/game/mhjptzJh"
+    },
+    {
+      "id": "1L4ibPnG",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "ehmaksu",
+          "clientID": "3uVFbhGs",
+          "clanTag": null
+        },
+        {
+          "username": "Antiac",
+          "clientID": "4ugh3LNr",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Poppy",
+          "clientID": "6x2Wpgxm",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-07T14:47:50.525Z",
+      "url": "https://openfront.io/game/1L4ibPnG"
     },
     {
       "id": "dxaFveJw",
