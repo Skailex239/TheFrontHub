@@ -25048,34 +25048,6 @@
       "url": "https://openfront.io/game/ApwwTQCd"
     },
     {
-      "id": "1L4ibPnG",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "ehmaksu",
-          "clientID": "3uVFbhGs",
-          "clanTag": null
-        },
-        {
-          "username": "Antiac",
-          "clientID": "4ugh3LNr",
-          "clanTag": "ROKA"
-        },
-        {
-          "username": "Poppy",
-          "clientID": "6x2Wpgxm",
-          "clanTag": "ROKA"
-        }
-      ],
-      "map": "Svalmel",
-      "duration_s": 874,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-08-07T14:47:50.525Z",
-      "url": "https://openfront.io/game/1L4ibPnG"
-    },
-    {
       "id": "mhjptzJh",
       "team": "Team 1",
       "players": [
@@ -25107,6 +25079,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-07T14:51:02.712Z",
       "url": "https://openfront.io/game/mhjptzJh"
+    },
+    {
+      "id": "1L4ibPnG",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "ehmaksu",
+          "clientID": "3uVFbhGs",
+          "clanTag": null
+        },
+        {
+          "username": "Antiac",
+          "clientID": "4ugh3LNr",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Poppy",
+          "clientID": "6x2Wpgxm",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-07T14:47:50.525Z",
+      "url": "https://openfront.io/game/1L4ibPnG"
     }
   ]
 }
