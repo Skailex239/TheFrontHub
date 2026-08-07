@@ -14478,34 +14478,6 @@
       "url": "https://openfront.io/game/jb8zUnNL"
     },
     {
-      "id": "qKWzQKa7",
-      "team": "Team 2",
-      "players": [
-        {
-          "username": "PatStef",
-          "clientID": "JWcfWbCj",
-          "clanTag": "42"
-        },
-        {
-          "username": "Hilgrim",
-          "clientID": "wqUNUtAg",
-          "clanTag": null
-        },
-        {
-          "username": "Anon073",
-          "clientID": "qpEXZL2P",
-          "clanTag": null
-        }
-      ],
-      "map": "Yenisei",
-      "duration_s": 1162,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-07T15:25:06.679Z",
-      "url": "https://openfront.io/game/qKWzQKa7"
-    },
-    {
       "id": "ZAhrzZyh",
       "team": "Team 2",
       "players": [
@@ -14532,6 +14504,34 @@
       "numPlayers": 62,
       "timestamp": "2026-08-07T15:27:22.288Z",
       "url": "https://openfront.io/game/ZAhrzZyh"
+    },
+    {
+      "id": "qKWzQKa7",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "PatStef",
+          "clientID": "JWcfWbCj",
+          "clanTag": "42"
+        },
+        {
+          "username": "Hilgrim",
+          "clientID": "wqUNUtAg",
+          "clanTag": null
+        },
+        {
+          "username": "Anon073",
+          "clientID": "qpEXZL2P",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1162,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-07T15:25:06.679Z",
+      "url": "https://openfront.io/game/qKWzQKa7"
     }
   ],
   "quads": [
