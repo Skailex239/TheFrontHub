@@ -22772,34 +22772,6 @@
       "url": "https://openfront.io/game/e7Vr2wY9"
     },
     {
-      "id": "RLh8dneT",
-      "team": "Team 3",
-      "players": [
-        {
-          "username": "Capt K",
-          "clientID": "ZayNwYYX",
-          "clanTag": "BROS"
-        },
-        {
-          "username": "Jonads",
-          "clientID": "hXLYPCFx",
-          "clanTag": "BROS"
-        },
-        {
-          "username": "earth",
-          "clientID": "TEW2ryKS",
-          "clanTag": null
-        }
-      ],
-      "map": "Giant World Map",
-      "duration_s": 2738,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 71,
-      "timestamp": "2026-08-07T04:37:49.867Z",
-      "url": "https://openfront.io/game/RLh8dneT"
-    },
-    {
       "id": "8LWkoRNe",
       "team": "Team 8",
       "players": [
@@ -22831,6 +22803,34 @@
       "numPlayers": 52,
       "timestamp": "2026-08-07T05:09:43.114Z",
       "url": "https://openfront.io/game/8LWkoRNe"
+    },
+    {
+      "id": "RLh8dneT",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Capt K",
+          "clientID": "ZayNwYYX",
+          "clanTag": "BROS"
+        },
+        {
+          "username": "Jonads",
+          "clientID": "hXLYPCFx",
+          "clanTag": "BROS"
+        },
+        {
+          "username": "earth",
+          "clientID": "TEW2ryKS",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2738,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-07T04:37:49.867Z",
+      "url": "https://openfront.io/game/RLh8dneT"
     }
   ]
 }
