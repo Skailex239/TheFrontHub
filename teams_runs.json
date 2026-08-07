@@ -14476,6 +14476,62 @@
       "numPlayers": 75,
       "timestamp": "2026-08-07T15:22:57.057Z",
       "url": "https://openfront.io/game/jb8zUnNL"
+    },
+    {
+      "id": "qKWzQKa7",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "PatStef",
+          "clientID": "JWcfWbCj",
+          "clanTag": "42"
+        },
+        {
+          "username": "Hilgrim",
+          "clientID": "wqUNUtAg",
+          "clanTag": null
+        },
+        {
+          "username": "Anon073",
+          "clientID": "qpEXZL2P",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1162,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-07T15:25:06.679Z",
+      "url": "https://openfront.io/game/qKWzQKa7"
+    },
+    {
+      "id": "ZAhrzZyh",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Pudru",
+          "clientID": "k7rV4utT",
+          "clanTag": "EST"
+        },
+        {
+          "username": "Purvik",
+          "clientID": "xLkBakTo",
+          "clanTag": "EST"
+        },
+        {
+          "username": "United",
+          "clientID": "t96dFQGC",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1076,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "timestamp": "2026-08-07T15:27:22.288Z",
+      "url": "https://openfront.io/game/ZAhrzZyh"
     }
   ],
   "quads": [
@@ -25372,6 +25428,34 @@
       "numPlayers": 28,
       "timestamp": "2026-08-07T15:20:28.931Z",
       "url": "https://openfront.io/game/8QzDzCAe"
+    },
+    {
+      "id": "ysy5abvR",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BAGU.IO",
+          "clientID": "1pep7h85",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Cont",
+          "clientID": "wp4Kh68t",
+          "clanTag": "UN"
+        },
+        {
+          "username": "oloolo",
+          "clientID": "ckyF2Bb5",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 1382,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-07T15:24:17.639Z",
+      "url": "https://openfront.io/game/ysy5abvR"
     }
   ]
 }
