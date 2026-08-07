@@ -13919,24 +13919,6 @@
       "url": "https://openfront.io/game/PDbanpKN"
     },
     {
-      "id": "MTpiMYyq",
-      "team": "Team 22",
-      "players": [
-        {
-          "username": "CYMRU",
-          "clientID": "JAXPXHmo",
-          "clanTag": null
-        }
-      ],
-      "map": "Bering Sea",
-      "duration_s": 2607,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 78,
-      "timestamp": "2026-08-07T11:33:21.928Z",
-      "url": "https://openfront.io/game/MTpiMYyq"
-    },
-    {
       "id": "FgAUBtC2",
       "team": "Team 3",
       "players": [
@@ -13963,6 +13945,24 @@
       "numPlayers": 33,
       "timestamp": "2026-08-07T11:58:10.790Z",
       "url": "https://openfront.io/game/FgAUBtC2"
+    },
+    {
+      "id": "MTpiMYyq",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "CYMRU",
+          "clientID": "JAXPXHmo",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 2607,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-07T11:33:21.928Z",
+      "url": "https://openfront.io/game/MTpiMYyq"
     }
   ],
   "quads": [
