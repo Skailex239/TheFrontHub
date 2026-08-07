@@ -26799,6 +26799,62 @@
       "numPlayers": 44,
       "timestamp": "2026-08-07T21:16:39.664Z",
       "url": "https://openfront.io/game/UPYnrgRf"
+    },
+    {
+      "id": "iLPjdeqn",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Martell",
+          "clientID": "fhJVZNsC",
+          "clanTag": null
+        },
+        {
+          "username": "RoM",
+          "clientID": "q4i8ggTh",
+          "clanTag": "TEG"
+        },
+        {
+          "username": "JunMkt",
+          "clientID": "7Mfu68ih",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1154,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-07T21:11:11.213Z",
+      "url": "https://openfront.io/game/iLPjdeqn"
+    },
+    {
+      "id": "La3bkHCu",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Aggamemnon",
+          "clientID": "Ur3yziT9",
+          "clanTag": "MAX"
+        },
+        {
+          "username": "Canyon",
+          "clientID": "Kytd3Dhy",
+          "clanTag": "MAX"
+        },
+        {
+          "username": "Wu Tang Clan",
+          "clientID": "eDXippHi",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 1385,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-07T21:09:01.096Z",
+      "url": "https://openfront.io/game/La3bkHCu"
     }
   ]
 }
