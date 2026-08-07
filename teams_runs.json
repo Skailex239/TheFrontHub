@@ -15119,6 +15119,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-07T20:16:28.447Z",
       "url": "https://openfront.io/game/aXE3TMrM"
+    },
+    {
+      "id": "FAs9s7F9",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Ecope",
+          "clientID": "d6Wk32Z9",
+          "clanTag": null
+        },
+        {
+          "username": "Manuela Naddeo",
+          "clientID": "zid7PWFF",
+          "clanTag": null
+        },
+        {
+          "username": "MJRPRBLM",
+          "clientID": "NhV9KCCW",
+          "clanTag": "CSHT"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 968,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-07T20:41:58.740Z",
+      "url": "https://openfront.io/game/FAs9s7F9"
     }
   ],
   "quads": [
@@ -26603,6 +26631,39 @@
       "numPlayers": 48,
       "timestamp": "2026-08-07T19:53:36.418Z",
       "url": "https://openfront.io/game/WQrCZS8x"
+    },
+    {
+      "id": "nygXZUAq",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Hegel",
+          "clientID": "jR4GJVrx",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Chungus",
+          "clientID": "nxtkFWD1",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Giant Paul",
+          "clientID": "9D5VaKUy",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Spizwiz",
+          "clientID": "Cp9GcKwg",
+          "clanTag": "FDBZ"
+        }
+      ],
+      "map": "World",
+      "duration_s": 770,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-07T20:44:22.905Z",
+      "url": "https://openfront.io/game/nygXZUAq"
     }
   ]
 }
