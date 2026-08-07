@@ -22933,6 +22933,57 @@
       "numPlayers": 71,
       "timestamp": "2026-08-07T05:41:23.872Z",
       "url": "https://openfront.io/game/iRkzE8PK"
+    },
+    {
+      "id": "KXhx9RDN",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "nend",
+          "clientID": "4e9kuhMW",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1860,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-07T05:42:32.924Z",
+      "url": "https://openfront.io/game/KXhx9RDN"
+    },
+    {
+      "id": "z6MAnsCb",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "SendTroopsToFront",
+          "clientID": "jZwhtuBn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SouthernWolf",
+          "clientID": "ULqYbauA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "John McClane",
+          "clientID": "4MpE9DQP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Jantscha",
+          "clientID": "caV9UbG1",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 828,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-07T06:00:38.012Z",
+      "url": "https://openfront.io/game/z6MAnsCb"
     }
   ]
 }
