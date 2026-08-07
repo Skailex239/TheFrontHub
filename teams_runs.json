@@ -14228,34 +14228,6 @@
       "url": "https://openfront.io/game/kL7h3eNS"
     },
     {
-      "id": "csQ8L6CD",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "Jordan",
-          "clientID": "YiXQfZm2",
-          "clanTag": "BEA"
-        },
-        {
-          "username": "Thom09",
-          "clientID": "KKfbJTua",
-          "clanTag": "BEA"
-        },
-        {
-          "username": "Zoubidouf",
-          "clientID": "5eC2WY1b",
-          "clanTag": "BEA"
-        }
-      ],
-      "map": "Aegean",
-      "duration_s": 2757,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 60,
-      "timestamp": "2026-08-07T14:06:13.612Z",
-      "url": "https://openfront.io/game/csQ8L6CD"
-    },
-    {
       "id": "tgEu5mMn",
       "team": "Team 1",
       "players": [
@@ -14282,6 +14254,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T14:34:44.258Z",
       "url": "https://openfront.io/game/tgEu5mMn"
+    },
+    {
+      "id": "csQ8L6CD",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Jordan",
+          "clientID": "YiXQfZm2",
+          "clanTag": "BEA"
+        },
+        {
+          "username": "Thom09",
+          "clientID": "KKfbJTua",
+          "clanTag": "BEA"
+        },
+        {
+          "username": "Zoubidouf",
+          "clientID": "5eC2WY1b",
+          "clanTag": "BEA"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 2757,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-07T14:06:13.612Z",
+      "url": "https://openfront.io/game/csQ8L6CD"
     }
   ],
   "quads": [
