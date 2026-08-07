@@ -5657,6 +5657,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T10:32:34.983Z",
       "url": "https://openfront.io/game/M8irfPHq"
+    },
+    {
+      "id": "8tQJhbup",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "ape",
+          "clientID": "ep7Mn2HM",
+          "clanTag": "AKA"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 2433,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-07T10:57:05.312Z",
+      "url": "https://openfront.io/game/8tQJhbup"
     }
   ],
   "trios": [
@@ -13786,29 +13804,6 @@
       "url": "https://openfront.io/game/tqPH7aty"
     },
     {
-      "id": "SqvF5F3K",
-      "team": "Team 11",
-      "players": [
-        {
-          "username": "Aevon",
-          "clientID": "62NMXZcd",
-          "clanTag": null
-        },
-        {
-          "username": "La Castagne",
-          "clientID": "ZufsocFa",
-          "clanTag": null
-        }
-      ],
-      "map": "Chopping Block",
-      "duration_s": 1611,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-07T11:08:02.919Z",
-      "url": "https://openfront.io/game/SqvF5F3K"
-    },
-    {
       "id": "b26Pe2u2",
       "team": "Team 1",
       "players": [
@@ -13835,6 +13830,52 @@
       "numPlayers": 30,
       "timestamp": "2026-08-07T11:00:51.013Z",
       "url": "https://openfront.io/game/b26Pe2u2"
+    },
+    {
+      "id": "SqvF5F3K",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Aevon",
+          "clientID": "62NMXZcd",
+          "clanTag": null
+        },
+        {
+          "username": "La Castagne",
+          "clientID": "ZufsocFa",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1611,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-07T11:08:02.919Z",
+      "url": "https://openfront.io/game/SqvF5F3K"
+    },
+    {
+      "id": "WjjNNjz7",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "KirkCharles",
+          "clientID": "Eju3mCL1",
+          "clanTag": "HYDE"
+        },
+        {
+          "username": "bingo",
+          "clientID": "YKHCejxG",
+          "clanTag": "HYDE"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1469,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-07T11:11:44.599Z",
+      "url": "https://openfront.io/game/WjjNNjz7"
     }
   ],
   "quads": [
@@ -24182,6 +24223,39 @@
       "numPlayers": 52,
       "timestamp": "2026-08-07T11:12:42.667Z",
       "url": "https://openfront.io/game/Yq3i9sw7"
+    },
+    {
+      "id": "fMVBHTyZ",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "AnonLizard9",
+          "clientID": "PwGacdtH",
+          "clanTag": null
+        },
+        {
+          "username": "Lechistan",
+          "clientID": "wEkCZz6e",
+          "clanTag": "POL"
+        },
+        {
+          "username": "AnonCamel7",
+          "clientID": "zvixd7pN",
+          "clanTag": null
+        },
+        {
+          "username": "WhiteMermaid.7pYK",
+          "clientID": "6rCYjThH",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 878,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-07T11:21:18.174Z",
+      "url": "https://openfront.io/game/fMVBHTyZ"
     }
   ]
 }
