@@ -127,6 +127,8 @@ function extractTeamRun(raw, mode) {
   if (config.gameMapSize !== "Normal") return null;
   if (config.bots !== 400) return null;
   if (config.playerTeams !== mode) return null;
+  // Exclude ranked games (2v2 ranked) from team speedrun data
+  if (config.rankedType && config.rankedType !== "unranked") return null;
   if (hasModifiers(config)) return null;
 
   const players = info.players || [];

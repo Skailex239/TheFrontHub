@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title id="dynamic-title">TheFrontHub — Profil Joueur OpenFront</title>
+<meta name="description" id="dynamic-desc" content="Statistiques et performances d'un joueur OpenFront.io — Speedruns, classements, victoires.">
+<meta property="og:title" content="TheFrontHub — Profil Joueur OpenFront" id="dynamic-og-title">
+<meta property="og:description" content="Stats complètes du joueur sur TheFrontHub" id="dynamic-og-desc">
+<meta property="og:image" content="https://skailex239.github.io/TheFrontHub/logo-new.png">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="runs_public.json.gz" as="fetch" crossorigin>
+<link rel="icon" type="image/png" href="favicon-new.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-new.png">
+<link rel="stylesheet" href="styles.css?v=19">
+<link rel="stylesheet" href="auth.css?v=14">
+<link rel="stylesheet" href="animations.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="animations.css"></noscript>
+<link rel="stylesheet" href="toast.css">
+<script type="module" src="icons.js"></script>
+<style>
+  .pf-hero { background:var(--card);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:24px;margin-bottom:20px;box-shadow:var(--shadow-sm) }
+  .pf-hero-top { display:flex;align-items:center;gap:16px;margin-bottom:16px;flex-wrap:wrap }
+  .pf-avatar-big { width:72px;height:72px;border-radius:50%;background:var(--avatar-gradient);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;flex-shrink:0;box-shadow:var(--shadow-orange) }
+  .pf-name { font-size:24px;font-weight:800;color:var(--text);margin:0;letter-spacing:-.3px }
+  .pf-clan { font-size:13px;color:var(--muted);font-family:var(--mono);margin-top:2px }
+  .pf-stats { display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:12px }
+  .pf-stat { background:var(--bg);border:1px solid var(--border-light);border-radius:var(--radius);padding:12px;text-align:center }
+  .pf-stat-val { font-size:20px;font-weight:800;color:var(--orange);font-variant-numeric:tabular-nums }
+  .pf-stat-lbl { font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;font-weight:600 }
+  .pf-section { background:var(--card);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:18px 20px;margin-bottom:16px;box-shadow:var(--shadow-sm) }
+  .pf-section-title { font-size:13px;font-weight:700;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px }
+  .pf-map-row { display:grid;grid-template-columns:1fr 80px 90px 40px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--border-light);font-size:13px }
+  .pf-map-row:last-child { border-bottom:none }
+  .pf-map-row:hover { background:var(--card-hover) }
+  .pf-map-name { font-weight:500;color:var(--text) }
+  .pf-map-rank { font-family:var(--mono);color:var(--muted);text-align:center }
+  .pf-map-time { font-family:var(--mono);font-weight:600;color:var(--green);text-align:right }
+</style>
+</head>
+<body>
+<div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo"><img src="logo-new.png" alt="TheFrontHub" loading="eager"></div>
+    <nav>
+      <a class="nav-item tab-btn" href="index.html"><i data-icon="home"></i> Tableau de bord</a>
+      <a class="nav-item tab-btn" href="speedruns.html"><i data-icon="trophy"></i> Speedruns</a>
+      <a class="nav-item tab-btn" href="ranked.html"><i data-icon="swords"></i> Classé (1v1)</a>
+      <a class="nav-item tab-btn" href="stats.html"><i data-icon="chart"></i> Statistiques</a>
+      <a class="nav-item tab-btn" href="tournaments.html"><i data-icon="trophy"></i> Tournois</a>
+      <a class="nav-item tab-btn" href="profile.html"><i data-icon="user"></i> Mon Profil</a>
+    </nav>
+    <div class="sidebar-profile">
+      <div class="auth-zone"><button class="login-btn login-btn-sidebar" onclick="window.location.href='profile.html'">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Connexion</span>
+      </button></div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="topbar">
+      <div>
+        <h1 id="page-title">Profil Joueur</h1>
+        <p id="page-subtitle">Statistiques et performances</p>
+      </div>
+    </div>
+
+    <div id="player-content">
+      <div class="loading">Chargement du profil joueur...</div>
+    </div>
+  </main>
+</div>
+
+<script src="i18n.js"></script>
+<script src="toast.js" defer></script>
+<script src="animations.js" defer></script>
+<script src="app.js?v=27" type="module"></script>
+<script>
+(async () => {
+  const params = new URLSearchParams(window.location.search);
+  const playerName = params.get('name') || params.get('player');
+
+  if (!playerName) {
+    document.getElementById('player-content').innerHTML = '<div class="empty-state"><h3>Aucun joueur spécifié</h3><p>Ajoutez <code>?name=Pseudo</code> à l\'URL.</p></div>';
+    return;
+  }
+
+  // Wait for app.js to load data
+  let attempts = 0;
+  while (!window.playerStats && attempts < 50) {
+    await new Promise(r => setTimeout(r, 200));
+    attempts++;
+  }
+
+  if (!window.playerStats || !window.playerStats[playerName]) {
+    // Try case-insensitive search
+    const found = Object.keys(window.playerStats || {}).find(k => k.toLowerCase() === playerName.toLowerCase());
+    if (found) {
+      window.location.replace('player.html?name=' + encodeURIComponent(found));
+      return;
+    }
+    document.getElementById('player-content').innerHTML = `<div class="empty-state"><h3>Joueur introuvable</h3><p>Le joueur "${esc(playerName)}" n'a pas été trouvé dans les données.</p><a href="speedruns.html" style="color:var(--orange)">← Retour aux speedruns</a></div>`;
+    return;
+  }
+
+  const p = window.playerStats[playerName];
+  const globalRank = window.globalLeaderboard?.findIndex(e => e.player === playerName);
+  const rank = globalRank >= 0 ? globalRank + 1 : null;
+
+  // Update SEO meta tags
+  const title = `${playerName} — Stats OpenFront | TheFrontHub`;
+  document.title = title;
+  document.getElementById('dynamic-title').textContent = title;
+  document.getElementById('dynamic-desc').setAttribute('content', `Statistiques de ${playerName} sur OpenFront : ${p.wins} victoires, ${p.maps.size} cartes, ${p.points} points PR.`);
+  document.getElementById('page-title').textContent = playerName;
+  document.getElementById('page-subtitle').textContent = rank ? `#${rank} mondial · ${p.points} points` : `${p.points} points`;
+
+  const RANKS = [{name:'Champion',min:100,color:'#f0c060'},{name:'Diamond',min:50,color:'#b9f2ff'},{name:'Gold',min:25,color:'#f0c060'},{name:'Silver',min:10,color:'#a0b0c4'},{name:'Bronze',min:3,color:'#c08840'},{name:'Unranked',min:0,color:'#555568'}];
+  const rankInfo = RANKS.find(r => p.points >= r.min) || RANKS[RANKS.length - 1];
+  const initial = playerName.charAt(0).toUpperCase();
+
+  let html = `
+    <div class="pf-hero">
+      <div class="pf-hero-top">
+        <div class="pf-avatar-big">${esc(initial)}</div>
+        <div>
+          <h2 class="pf-name">${esc(playerName)}</h2>
+          <div class="pf-clan" style="color:${rankInfo.color}">${rankInfo.name} · ${p.points} pts</div>
+        </div>
+      </div>
+      <div class="pf-stats">
+        <div class="pf-stat"><div class="pf-stat-val">${p.wins}</div><div class="pf-stat-lbl">Victoires</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${p.maps.size}</div><div class="pf-stat-lbl">Cartes</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${p.points}</div><div class="pf-stat-lbl">Points</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${p.golds}</div><div class="pf-stat-lbl">🥇 1ers</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${p.silvers}</div><div class="pf-stat-lbl">🥈 2èmes</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${p.bronzes}</div><div class="pf-stat-lbl">🥉 3èmes</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${formatTime(Math.round(p.totalTime / p.wins))}</div><div class="pf-stat-lbl">Tps moyen</div></div>
+        <div class="pf-stat"><div class="pf-stat-val">${p.maxStreak}</div><div class="pf-stat-lbl">Max streak</div></div>
+        ${rank ? `<div class="pf-stat"><div class="pf-stat-val">#${rank}</div><div class="pf-stat-lbl">Rang mondial</div></div>` : ''}
+      </div>
+    </div>
+
+    <div class="pf-section">
+      <div class="pf-section-title"><i data-icon="map"></i> Performances par carte (${p.runs.length} cartes)</div>
+      <div style="max-height:600px;overflow-y:auto">
+  `;
+
+  const sortedRuns = [...p.runs].sort((a, b) => a.duration_s - b.duration_s);
+  for (const r of sortedRuns) {
+    const mapData = window.allMaps?.find(m => m.map === r.map);
+    const mapRank = mapData ? mapData.runs.findIndex(x => x.id === r.id) + 1 : null;
+    const isPB = r._isPB ? '<span style="font-size:9px;background:var(--green);color:#000;padding:1px 5px;border-radius:var(--radius-sm);font-weight:700;margin-left:6px">PB</span>' : '';
+
+    html += `
+      <div class="pf-map-row">
+        <div class="pf-map-name">${esc(r.map)}${isPB}</div>
+        <div class="pf-map-rank">${mapRank ? '#' + mapRank : '—'}</div>
+        <div class="pf-map-time">${formatTime(r.duration_s)}</div>
+        <a class="run-replay" href="${r.url || 'https://openfront.io/game/' + r.id}" target="_blank" title="Replay">▶</a>
+      </div>
+    `;
+  }
+
+  html += '</div></div>';
+
+  // Global leaderboard position
+  if (rank && rank <= 50) {
+    html += `
+      <div class="pf-section">
+        <div class="pf-section-title"><i data-icon="globe"></i> Position dans le classement mondial</div>
+        <div style="text-align:center;padding:12px">
+          <span style="font-size:36px;font-weight:800;color:var(--orange)">#${rank}</span>
+          <span style="color:var(--muted);margin-left:8px">sur ${window.globalLeaderboard?.length || '?'} joueurs</span>
+        </div>
+      </div>
+    `;
+  }
+
+  document.getElementById('player-content').innerHTML = html;
+  if (typeof window.refreshIcons === 'function') window.refreshIcons();
+})();
+
+function formatTime(s) { const m = Math.floor(s / 60); return m + ':' + String(s % 60).padStart(2, '0'); }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+</script>
+</body>
+</html>

@@ -305,6 +305,16 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  // Serve data files for tournaments
+  if (pathname.startsWith("/data/")) {
+    const file = pathname.slice(1);
+    const filePath = path.join(STATIC_DIR, file);
+    if (fs.existsSync(filePath)) {
+      sendFile(res, 200, filePath, "application/json; charset=utf-8");
+      return;
+    }
+  }
+
   // Serve shared modules (for browser ES module imports)
   if (pathname.startsWith("/shared/")) {
     const file = pathname.slice(1); // remove leading /
@@ -319,6 +329,13 @@ const server = http.createServer(async (req, res) => {
     "/": ["index.html", "text/html; charset=utf-8"],
     "/index.html": ["index.html", "text/html; charset=utf-8"],
     "/profile.html": ["profile.html", "text/html; charset=utf-8"],
+    "/tournaments.html": ["tournaments.html", "text/html; charset=utf-8"],
+    "/tournament-detail.html": ["tournament-detail.html", "text/html; charset=utf-8"],
+    "/speedruns.html": ["speedruns.html", "text/html; charset=utf-8"],
+    "/ranked.html": ["ranked.html", "text/html; charset=utf-8"],
+    "/stats.html": ["stats.html", "text/html; charset=utf-8"],
+    "/player.html": ["player.html", "text/html; charset=utf-8"],
+    "/map.html": ["map.html", "text/html; charset=utf-8"],
     "/runs.html": ["runs.html", "text/html; charset=utf-8"],
     "/runs.js": ["runs.js", "text/javascript; charset=utf-8"],
     "/profile.js": ["profile.js", "text/javascript; charset=utf-8"],
@@ -339,6 +356,7 @@ const server = http.createServer(async (req, res) => {
     "/ranked_history.json.gz": ["ranked_history.json.gz", "application/gzip"],
     "/toast.js": ["toast.js", "text/javascript; charset=utf-8"],
     "/toast.css": ["toast.css", "text/css; charset=utf-8"],
+    "/tournaments.js": ["tournaments.js", "text/javascript; charset=utf-8"],
     "/sw.js": ["sw.js", "text/javascript; charset=utf-8"],
     "/runs_public.json": ["runs_public.json", "application/json; charset=utf-8"],
     "/runs_public.json.gz": ["runs_public.json.gz", "application/gzip"],

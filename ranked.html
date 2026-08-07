@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>TheFrontHub — Classement Classé 1v1 OpenFront | Elo & Rankings</title>
+<meta name="description" content="Classement ranked 1v1 OpenFront.io — Top 100 joueurs par Elo, winrate, streaks, distribution Elo et classement des clans. Mise à jour automatique.">
+<meta property="og:title" content="TheFrontHub — Classement Ranked 1v1 OpenFront">
+<meta property="og:description" content="Top 100 classement 1v1 — Elo, winrate, mouvements et clans">
+<meta property="og:image" content="https://skailex239.github.io/TheFrontHub/logo-new.png">
+<meta property="og:url" content="https://skailex239.github.io/TheFrontHub/ranked.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TheFrontHub — Classement Ranked 1v1 OpenFront">
+<meta name="twitter:description" content="Top 100 classement ranked 1v1 — Elo et winrate">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon-new.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-new.png">
+<link rel="stylesheet" href="styles.css?v=19">
+<link rel="stylesheet" href="auth.css?v=14">
+<link rel="stylesheet" href="animations.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="animations.css"></noscript>
+<link rel="stylesheet" href="toast.css">
+<script type="module" src="icons.js"></script>
+</head>
+<body>
+<div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo"><img src="logo-new.png" alt="TheFrontHub" loading="eager"></div>
+    <nav>
+      <a class="nav-item tab-btn" href="index.html"><i data-icon="home"></i> Tableau de bord</a>
+      <a class="nav-item tab-btn" href="speedruns.html"><i data-icon="trophy"></i> Speedruns</a>
+      <a class="nav-item tab-btn active" href="ranked.html"><i data-icon="swords"></i> Classé (1v1)</a>
+      <a class="nav-item tab-btn" href="stats.html"><i data-icon="chart"></i> Statistiques</a>
+      <a class="nav-item tab-btn" href="tournaments.html"><i data-icon="trophy"></i> Tournois</a>
+      <a class="nav-item tab-btn" href="profile.html"><i data-icon="user"></i> Mon Profil</a>
+    </nav>
+    <div class="sidebar-profile">
+      <div class="auth-zone" id="auth-zone">
+        <button class="login-btn login-btn-sidebar" onclick="toggleAuthModal()" id="login-btn-main">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Connexion</span>
+        </button>
+      </div>
+      <div class="user-container" id="user-container" style="display:none">
+        <div class="user-badge" id="user-badge-btn" onclick="toggleUserDropdown(event)">
+          <div class="profile-avatar" id="sidebar-avatar">—</div>
+          <div class="profile-info"><h4 id="user-display-name">—</h4><span>En ligne</span></div>
+        </div>
+        <div class="user-dropdown-menu" id="user-dropdown-menu">
+          <div class="dropdown-header"><div class="dropdown-avatar" id="dropdown-avatar"></div><div class="dropdown-user-info"><div class="dropdown-username" id="dropdown-username-display">—</div></div></div>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" onclick="window.location.href='profile.html'"><i data-icon="user"></i> Mon profil</button>
+          <button class="dropdown-item logout" onclick="handleLogout(event)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Déconnexion</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="topbar">
+      <div><h1>Classé (1v1)</h1><p>Top 100 — Classement Elo officiel</p></div>
+    </div>
+
+    <section class="stats-grid" id="ranked-stats-grid" style="display:grid">
+      <div class="card"><h2 id="ranked-stat-players">—</h2><p>Joueurs classés</p><div class="stat-icon"><i data-icon="users"></i></div></div>
+      <div class="card"><h2 id="ranked-stat-avgelo">—</h2><p>Elo moyen</p><div class="stat-icon"><i data-icon="chart"></i></div></div>
+      <div class="card"><h2 id="ranked-stat-peakelo">—</h2><p>Peak Elo</p><div class="stat-icon"><i data-icon="fire"></i></div></div>
+      <div class="card"><h2 id="ranked-stat-games">—</h2><p>Parties</p><div class="stat-icon"><i data-icon="swords"></i></div></div>
+    </section>
+
+    <div class="search-bar">
+      <input type="text" id="ranked-search" class="search-input" placeholder="Rechercher un joueur classé..." oninput="filterRanked(this.value)">
+    </div>
+    <div class="ranked-toolbar" id="ranked-toolbar">
+      <div class="filter-group" role="group">
+        <button class="filter-btn" data-top="10" onclick="setTopFilter(10)">Top 10</button>
+        <button class="filter-btn" data-top="25" onclick="setTopFilter(25)">Top 25</button>
+        <button class="filter-btn" data-top="50" onclick="setTopFilter(50)">Top 50</button>
+        <button class="filter-btn active" data-top="all" onclick="setTopFilter('all')">Tous</button>
+      </div>
+      <button class="filter-btn fav-toggle" id="fav-toggle" onclick="toggleFavFilter()">
+        <span class="fav-star"><i data-icon="starOutline"></i></span> <span class="fav-label">Favoris</span> <span class="fav-count" id="fav-count" style="display:none">0</span>
+      </button>
+    </div>
+
+    <div class="chart-grid" id="ranked-movers-grid" style="margin-bottom:12px">
+      <div class="chart-card" style="display:none" id="newcomers-card">
+        <div class="chart-head"><i data-icon="sparkle"></i> Nouveaux dans le top 100</div>
+        <div class="chart-body" id="ranked-newcomers"></div>
+      </div>
+      <div class="chart-card" style="display:none" id="dropouts-card">
+        <div class="chart-head"><i data-icon="chartDown"></i> Sortis du top 100</div>
+        <div class="chart-body" id="ranked-dropouts"></div>
+      </div>
+    </div>
+
+    <div id="my-ranked-position" style="margin-bottom:12px"></div>
+
+    <div class="feed-card" style="margin-bottom:20px">
+      <div class="feed-header" style="display:flex;justify-content:space-between;align-items:center">
+        <span><i data-icon="swords"></i> Classement Classé (1v1) — Top 100</span>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span id="ranked-last-update" style="font-size:12px;color:var(--muted)"></span>
+          <button onclick="loadRankedLeaderboard(true)" style="background:var(--bg2);border:1px solid var(--border);color:var(--text2);padding:4px 12px;border-radius:4px;cursor:pointer;font-size:12px">Actualiser</button>
+        </div>
+      </div>
+      <div class="table-container" style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;text-align:left;font-size:14px;table-layout:fixed">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border);color:var(--muted)">
+              <th style="padding:12px 8px;width:6%">Rang</th>
+              <th style="padding:12px 8px;width:30%">Joueur</th>
+              <th style="padding:12px 8px;width:10%">Elo</th>
+              <th style="padding:12px 8px;width:10%">Peak</th>
+              <th style="padding:12px 8px;width:10%">Winrate</th>
+              <th style="padding:12px 8px;width:12%">V - D</th>
+              <th style="padding:12px 8px;width:8%">Total</th>
+              <th style="padding:12px 8px;width:8%">MV</th>
+              <th style="padding:12px 8px;width:8%">Streak</th>
+            </tr>
+          </thead>
+          <tbody id="ranked-list">
+            <tr><td colspan="9" style="padding:20px;text-align:center;color:var(--dim)">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="chart-grid" style="margin-bottom:20px">
+      <div class="chart-card">
+        <div class="chart-head"><i data-icon="chart"></i> Distribution des Elo</div>
+        <div class="chart-body" id="ranked-elo-dist"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head"><i data-icon="castle"></i> Classement des Clans</div>
+        <div class="chart-body" id="ranked-clan-list"><div class="loading">Chargement...</div></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Ranked Player Modal -->
+<div class="modal-overlay" id="ranked-player-modal" onclick="closeRankedModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeRankedModal()">&times;</button>
+    <div class="modal-header">
+      <div class="modal-title" id="ranked-modal-player-name">Joueur</div>
+      <div class="modal-subtitle" id="ranked-modal-player-stats">Elo: —</div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Historique 1v1 récent</div>
+      <div id="ranked-modal-games" style="max-height:400px;overflow-y:auto"></div>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="toast.js" defer></script>
+<script src="animations.js" defer></script>
+<script src="app.js?v=27" type="module"></script>
+<script>
+  // Auto-load ranked on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => { window.loadRankedLeaderboard?.(true); }, 500);
+  });
+  function toggleAuthModal() { document.getElementById('auth-modal')?.classList.toggle('active'); }
+  function handleLogout(e) { if(e) e.stopPropagation(); if(confirm('Déconnexion ?')) window.logout?.(); }
+  function toggleUserDropdown(e) { if(e) e.stopPropagation(); document.getElementById('user-container')?.classList.toggle('open'); }
+</script>
+</body>
+</html>

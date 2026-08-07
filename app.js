@@ -1598,7 +1598,7 @@ function closeModal(e){
   updateURL();
 }
 function switchTab(name,btn){
-  if (name === 'ranked') loadRankedLeaderboard(true);
+  if (name === 'ranked') loadRankedLeaderboard(false);
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   
   // Toggle FFA-specific elements visibility
@@ -1727,18 +1727,26 @@ window.closeUserDropdown = closeUserDropdown;
 
 
 // ====== RANKED LEADERBOARD ======
+let currentRankedMode = '1v1';
+let _rankedData = null; // Cached raw data
+
 async function loadRankedLeaderboard(force = false) {
   const container = document.getElementById('ranked-list');
   if (!container) {
     console.warn('[Ranked] Container #ranked-list introuvable');
     return;
   }
-  if (!force && window._rankedLoaded) return;
   
-  container.innerHTML = '<tr><td colspan="8" style="padding: 20px; text-align: center; color: var(--text3);">Chargement du classement...</td></tr>';
+  // Only force-fetch if data not cached or explicitly requested
+  if (!force && _rankedData) {
+    renderCurrentRankedMode();
+    return;
+  }
+  
+  container.innerHTML = '<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--dim);">Chargement du classement...</td></tr>';
   
   try {
-    console.log('[Ranked] Loading leaderboard...');
+    console.log('[Ranked] Loading leaderboard data...');
     
     let data;
     try {
@@ -1756,50 +1764,121 @@ async function loadRankedLeaderboard(force = false) {
       data = await plainRes.json();
     }
     
-    let players = [];
-    if (data['1v1']) players.push(...data['1v1']);
+    _rankedData = data;
     
-    console.log('[Ranked] Players loaded:', players.length);
+    // Detect available modes
+    const availableModes = [];
+    if (data['1v1'] && data['1v1'].length > 0) availableModes.push('1v1');
+    if (data['2v2'] && data['2v2'].length > 0) availableModes.push('2v2');
     
-    if (players.length === 0) {
-      container.innerHTML = '<tr><td colspan="8" style="padding: 20px; text-align: center; color: var(--text3);">Aucun joueur classé pour le moment.</td></tr>';
-      return;
+    console.log('[Ranked] Available modes:', availableModes);
+    
+    // Show/hide 2v2 button based on availability
+    const btn2v2 = document.querySelector('[data-ranked-mode="2v2"]');
+    if (btn2v2) {
+      btn2v2.style.display = availableModes.includes('2v2') ? '' : 'none';
     }
     
-    // Store for filtering
-    window._rankedPlayers = players;
-    
-    // Stats cards
-    renderRankedStatsCards(players);
-    
-    // Timestamp
-    const updateEl = document.getElementById('ranked-last-update');
-    if (updateEl && data.updatedAt) {
-      const d = new Date(data.updatedAt);
-      updateEl.textContent = 'Màj : ' + d.toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+    // If current mode not available, fallback to 1v1
+    if (!availableModes.includes(currentRankedMode)) {
+      currentRankedMode = availableModes[0] || '1v1';
     }
     
-    // Elo distribution
-    renderEloDistribution(players);
+    // Update mode buttons active state
+    document.querySelectorAll('.ranked-mode-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.rankedMode === currentRankedMode);
+    });
     
-    // Clan leaderboard
-    renderClanLeaderboard(players);
-    
-    // Render table
-    renderRankedTable(players);
-    renderMyRank(players);
-    renderNewcomersDropouts(data);
-
-    // Initialise le compteur de favoris
-    updateFavCounter();
-
+    renderCurrentRankedMode();
     window._rankedLoaded = true;
-    console.log('[Ranked] Tableau rendu avec succès');
+    console.log('[Ranked] Données chargées avec succès');
     
   } catch (err) {
     console.error("[Ranked] Erreur complète:", err);
-    container.innerHTML = `<tr><td colspan="8" style="padding: 20px; text-align: center; color: #ef4444;">Erreur lors du chargement du classement.</td></tr>`;
+    container.innerHTML = `<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--red);">Erreur lors du chargement du classement.</td></tr>`;
   }
+}
+
+function switchRankedMode(mode) {
+  if (mode === currentRankedMode) return;
+  currentRankedMode = mode;
+  
+  // Update button states
+  document.querySelectorAll('.ranked-mode-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.rankedMode === mode);
+  });
+  
+  // Update label
+  const label = document.getElementById('ranked-mode-label');
+  if (label) label.textContent = mode;
+  
+  // Reset filters for new mode
+  window._rankedFilters = { top: 'all', favOnly: false, query: '' };
+  const searchInput = document.getElementById('ranked-search');
+  if (searchInput) searchInput.value = '';
+  
+  // Re-render
+  renderCurrentRankedMode();
+  updateURL();
+}
+
+function renderCurrentRankedMode() {
+  if (!_rankedData) return;
+  
+  const container = document.getElementById('ranked-list');
+  const mode = currentRankedMode;
+  const players = _rankedData[mode] || [];
+  
+  console.log(`[Ranked] Rendering ${mode}: ${players.length} joueurs`);
+  
+  if (players.length === 0) {
+    container.innerHTML = `<tr><td colspan="9" style="padding: 20px; text-align: center; color: var(--dim);">Aucun joueur classé en ${mode} pour le moment.</td></tr>`;
+    // Hide stats
+    const statsGrid = document.getElementById('ranked-stats-grid');
+    if (statsGrid) statsGrid.style.display = 'none';
+    return;
+  }
+  
+  // Show stats grid
+  const statsGrid = document.getElementById('ranked-stats-grid');
+  if (statsGrid) statsGrid.style.display = '';
+  
+  // Update label
+  const label = document.getElementById('ranked-mode-label');
+  if (label) label.textContent = mode;
+  
+  // Store for filtering
+  window._rankedPlayers = players;
+  
+  // Stats cards
+  renderRankedStatsCards(players);
+  
+  // Timestamp
+  const updateEl = document.getElementById('ranked-last-update');
+  if (updateEl && _rankedData.updatedAt) {
+    const d = new Date(_rankedData.updatedAt);
+    updateEl.textContent = 'Màj : ' + d.toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  }
+  
+  // Elo distribution (adapt ranges for 2v2 if needed)
+  renderEloDistribution(players);
+  
+  // Clan leaderboard
+  renderClanLeaderboard(players);
+  
+  // Render table
+  renderRankedTable(players);
+  renderMyRank(players);
+  
+  // Newcomers/dropouts — use mode-specific data
+  const modeData = {
+    newcomers: (_rankedData.newcomers && _rankedData.newcomers[mode]) || _rankedData.newcomers || [],
+    dropouts: (_rankedData.dropouts && _rankedData.dropouts[mode]) || _rankedData.dropouts || [],
+  };
+  renderNewcomersDropouts(modeData);
+
+  // Initialise le compteur de favoris
+  updateFavCounter();
 }
 
 function getWinrateColor(wr) {
@@ -2347,6 +2426,7 @@ function closeRankedModal(e) {
 }
 
 window.loadRankedLeaderboard = loadRankedLeaderboard;
+window.switchRankedMode = switchRankedMode;
 window.filterRanked = filterRanked;
 window.showRankedPlayerModal = showRankedPlayerModal;
 window.renderMyRank = renderMyRank;
