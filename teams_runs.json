@@ -5590,29 +5590,6 @@
       "url": "https://openfront.io/game/2826gZBJ"
     },
     {
-      "id": "M8irfPHq",
-      "team": "Team 10",
-      "players": [
-        {
-          "username": "AnonSwan8",
-          "clientID": "GH99oHsy",
-          "clanTag": null
-        },
-        {
-          "username": "Organisation du commerce",
-          "clientID": "P3nncEVb",
-          "clanTag": null
-        }
-      ],
-      "map": "Danish Straits",
-      "duration_s": 1254,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 30,
-      "timestamp": "2026-08-07T10:32:34.983Z",
-      "url": "https://openfront.io/game/M8irfPHq"
-    },
-    {
       "id": "xGm1he8m",
       "team": "Team 13",
       "players": [
@@ -5634,6 +5611,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-07T10:19:47.246Z",
       "url": "https://openfront.io/game/xGm1he8m"
+    },
+    {
+      "id": "M8irfPHq",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "AnonSwan8",
+          "clientID": "GH99oHsy",
+          "clanTag": null
+        },
+        {
+          "username": "Organisation du commerce",
+          "clientID": "P3nncEVb",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1254,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-07T10:32:34.983Z",
+      "url": "https://openfront.io/game/M8irfPHq"
     },
     {
       "id": "uHShFTnM",
@@ -23899,6 +23899,39 @@
       "numPlayers": 52,
       "timestamp": "2026-08-07T10:30:48.890Z",
       "url": "https://openfront.io/game/GvukXLSM"
+    },
+    {
+      "id": "ipcGR6MV",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "MrGemini",
+          "clientID": "tHdQSz4W",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "ISLE OF MEN A LOT",
+          "clientID": "M47CHkFr",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "anonkeemal",
+          "clientID": "12yPQ8XE",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "AnonZ",
+          "clientID": "akVN21Ky",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1081,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-07T10:36:49.715Z",
+      "url": "https://openfront.io/game/ipcGR6MV"
     }
   ]
 }
