@@ -27495,6 +27495,39 @@
       "numPlayers": 52,
       "timestamp": "2026-08-08T01:25:05.067Z",
       "url": "https://openfront.io/game/s8SKyMVo"
+    },
+    {
+      "id": "C2PLmZAF",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Umbra",
+          "clientID": "XjGj1eeG",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Woda",
+          "clientID": "7ftvBpxj",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Map Gamer",
+          "clientID": "HkGb8Rxv",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Fleug",
+          "clientID": "CS7bBt1r",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 889,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-08T01:36:41.217Z",
+      "url": "https://openfront.io/game/C2PLmZAF"
     }
   ]
 }
