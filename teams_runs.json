@@ -6309,24 +6309,6 @@
       "url": "https://openfront.io/game/S6jnMKFd"
     },
     {
-      "id": "oNbhHQg5",
-      "team": "Team 24",
-      "players": [
-        {
-          "username": "152425",
-          "clientID": "xApNNUcQ",
-          "clanTag": null
-        }
-      ],
-      "map": "Vietnam",
-      "duration_s": 1590,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 48,
-      "timestamp": "2026-08-08T08:40:38.358Z",
-      "url": "https://openfront.io/game/oNbhHQg5"
-    },
-    {
       "id": "HFgW5ebq",
       "team": "Team 13",
       "players": [
@@ -6348,6 +6330,24 @@
       "numPlayers": 38,
       "timestamp": "2026-08-08T08:54:33.128Z",
       "url": "https://openfront.io/game/HFgW5ebq"
+    },
+    {
+      "id": "oNbhHQg5",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "152425",
+          "clientID": "xApNNUcQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1590,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-08T08:40:38.358Z",
+      "url": "https://openfront.io/game/oNbhHQg5"
     }
   ],
   "trios": [
