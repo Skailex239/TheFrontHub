@@ -15680,24 +15680,6 @@
       "url": "https://openfront.io/game/4zwCvByg"
     },
     {
-      "id": "WKNAsHY5",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "JJoJonathan",
-          "clientID": "juvxqH3d",
-          "clanTag": null
-        }
-      ],
-      "map": "Australia",
-      "duration_s": 2107,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 63,
-      "timestamp": "2026-08-08T02:06:54.458Z",
-      "url": "https://openfront.io/game/WKNAsHY5"
-    },
-    {
       "id": "mLroiArM",
       "team": "Team 3",
       "players": [
@@ -15724,6 +15706,52 @@
       "numPlayers": 30,
       "timestamp": "2026-08-08T02:30:37.821Z",
       "url": "https://openfront.io/game/mLroiArM"
+    },
+    {
+      "id": "WKNAsHY5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "JJoJonathan",
+          "clientID": "juvxqH3d",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 2107,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-08T02:06:54.458Z",
+      "url": "https://openfront.io/game/WKNAsHY5"
+    },
+    {
+      "id": "PdFL1Zcn",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Error 404",
+          "clientID": "51KmDAJr",
+          "clanTag": null
+        },
+        {
+          "username": "Nebula",
+          "clientID": "5tLwbFRG",
+          "clanTag": "421"
+        },
+        {
+          "username": "AnonCobalt4",
+          "clientID": "2ib6k9MC",
+          "clanTag": "421"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-08T02:47:10.745Z",
+      "url": "https://openfront.io/game/PdFL1Zcn"
     },
     {
       "id": "jspYMWgn",
@@ -15754,29 +15782,6 @@
       "url": "https://openfront.io/game/jspYMWgn"
     },
     {
-      "id": "9MKyFxec",
-      "team": "Team 4",
-      "players": [
-        {
-          "username": "sciad",
-          "clientID": "QxWFP5PX",
-          "clanTag": null
-        },
-        {
-          "username": "AnonRam8",
-          "clientID": "tMC82q4w",
-          "clanTag": null
-        }
-      ],
-      "map": "Baltics",
-      "duration_s": 1659,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-08-08T02:32:55.950Z",
-      "url": "https://openfront.io/game/9MKyFxec"
-    },
-    {
       "id": "JS5Ro2y6",
       "team": "Team 5",
       "players": [
@@ -15800,32 +15805,27 @@
       "url": "https://openfront.io/game/JS5Ro2y6"
     },
     {
-      "id": "PdFL1Zcn",
-      "team": "Team 2",
+      "id": "9MKyFxec",
+      "team": "Team 4",
       "players": [
         {
-          "username": "Error 404",
-          "clientID": "51KmDAJr",
+          "username": "sciad",
+          "clientID": "QxWFP5PX",
           "clanTag": null
         },
         {
-          "username": "Nebula",
-          "clientID": "5tLwbFRG",
-          "clanTag": "421"
-        },
-        {
-          "username": "AnonCobalt4",
-          "clientID": "2ib6k9MC",
-          "clanTag": "421"
+          "username": "AnonRam8",
+          "clientID": "tMC82q4w",
+          "clanTag": null
         }
       ],
-      "map": "Antarctica",
-      "duration_s": 1052,
+      "map": "Baltics",
+      "duration_s": 1659,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 43,
-      "timestamp": "2026-08-08T02:47:10.745Z",
-      "url": "https://openfront.io/game/PdFL1Zcn"
+      "numPlayers": 36,
+      "timestamp": "2026-08-08T02:32:55.950Z",
+      "url": "https://openfront.io/game/9MKyFxec"
     },
     {
       "id": "PoSmXh82",
