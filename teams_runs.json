@@ -15680,6 +15680,24 @@
       "url": "https://openfront.io/game/4zwCvByg"
     },
     {
+      "id": "WKNAsHY5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "JJoJonathan",
+          "clientID": "juvxqH3d",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 2107,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-08T02:06:54.458Z",
+      "url": "https://openfront.io/game/WKNAsHY5"
+    },
+    {
       "id": "mLroiArM",
       "team": "Team 3",
       "players": [
@@ -15706,24 +15724,6 @@
       "numPlayers": 30,
       "timestamp": "2026-08-08T02:30:37.821Z",
       "url": "https://openfront.io/game/mLroiArM"
-    },
-    {
-      "id": "WKNAsHY5",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "JJoJonathan",
-          "clientID": "juvxqH3d",
-          "clanTag": null
-        }
-      ],
-      "map": "Australia",
-      "duration_s": 2107,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 63,
-      "timestamp": "2026-08-08T02:06:54.458Z",
-      "url": "https://openfront.io/game/WKNAsHY5"
     }
   ],
   "quads": [
@@ -27615,6 +27615,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-08T01:36:41.217Z",
       "url": "https://openfront.io/game/C2PLmZAF"
+    },
+    {
+      "id": "D7SxVkRd",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Joker",
+          "clientID": "boGkbdhm",
+          "clanTag": null
+        },
+        {
+          "username": "Brasil",
+          "clientID": "ZKtXmR44",
+          "clanTag": "URSAL"
+        },
+        {
+          "username": "shaaa",
+          "clientID": "ZGDzxB5R",
+          "clanTag": null
+        },
+        {
+          "username": "Brasil",
+          "clientID": "56o2CjPY",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 878,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-08T02:37:49.760Z",
+      "url": "https://openfront.io/game/D7SxVkRd"
     }
   ]
 }
