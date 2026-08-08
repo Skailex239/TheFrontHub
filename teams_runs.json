@@ -15680,24 +15680,6 @@
       "url": "https://openfront.io/game/4zwCvByg"
     },
     {
-      "id": "WKNAsHY5",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "JJoJonathan",
-          "clientID": "juvxqH3d",
-          "clanTag": null
-        }
-      ],
-      "map": "Australia",
-      "duration_s": 2107,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 63,
-      "timestamp": "2026-08-08T02:06:54.458Z",
-      "url": "https://openfront.io/game/WKNAsHY5"
-    },
-    {
       "id": "mLroiArM",
       "team": "Team 3",
       "players": [
@@ -15752,6 +15734,47 @@
       "numPlayers": 30,
       "timestamp": "2026-08-08T02:35:09.092Z",
       "url": "https://openfront.io/game/jspYMWgn"
+    },
+    {
+      "id": "9MKyFxec",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "sciad",
+          "clientID": "QxWFP5PX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRam8",
+          "clientID": "tMC82q4w",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1659,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-08T02:32:55.950Z",
+      "url": "https://openfront.io/game/9MKyFxec"
+    },
+    {
+      "id": "WKNAsHY5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "JJoJonathan",
+          "clientID": "juvxqH3d",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 2107,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-08T02:06:54.458Z",
+      "url": "https://openfront.io/game/WKNAsHY5"
     }
   ],
   "quads": [
