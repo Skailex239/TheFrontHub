@@ -15680,6 +15680,24 @@
       "url": "https://openfront.io/game/4zwCvByg"
     },
     {
+      "id": "WKNAsHY5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "JJoJonathan",
+          "clientID": "juvxqH3d",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 2107,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-08T02:06:54.458Z",
+      "url": "https://openfront.io/game/WKNAsHY5"
+    },
+    {
       "id": "mLroiArM",
       "team": "Team 3",
       "players": [
@@ -15708,22 +15726,27 @@
       "url": "https://openfront.io/game/mLroiArM"
     },
     {
-      "id": "WKNAsHY5",
-      "team": "Team 7",
+      "id": "9MKyFxec",
+      "team": "Team 4",
       "players": [
         {
-          "username": "JJoJonathan",
-          "clientID": "juvxqH3d",
+          "username": "sciad",
+          "clientID": "QxWFP5PX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRam8",
+          "clientID": "tMC82q4w",
           "clanTag": null
         }
       ],
-      "map": "Australia",
-      "duration_s": 2107,
+      "map": "Baltics",
+      "duration_s": 1659,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 63,
-      "timestamp": "2026-08-08T02:06:54.458Z",
-      "url": "https://openfront.io/game/WKNAsHY5"
+      "numPlayers": 36,
+      "timestamp": "2026-08-08T02:32:55.950Z",
+      "url": "https://openfront.io/game/9MKyFxec"
     },
     {
       "id": "jspYMWgn",
@@ -15754,27 +15777,27 @@
       "url": "https://openfront.io/game/jspYMWgn"
     },
     {
-      "id": "9MKyFxec",
-      "team": "Team 4",
+      "id": "JS5Ro2y6",
+      "team": "Team 5",
       "players": [
         {
-          "username": "sciad",
-          "clientID": "QxWFP5PX",
-          "clanTag": null
+          "username": "Naroa",
+          "clientID": "wBzpDkJ3",
+          "clanTag": "UN"
         },
         {
-          "username": "AnonRam8",
-          "clientID": "tMC82q4w",
-          "clanTag": null
+          "username": "Delphi Scholar",
+          "clientID": "zD2Ga8b4",
+          "clanTag": "UN"
         }
       ],
-      "map": "Baltics",
-      "duration_s": 1659,
+      "map": "Black Sea",
+      "duration_s": 1113,
       "difficulty": "Medium",
       "bots": 400,
-      "numPlayers": 36,
-      "timestamp": "2026-08-08T02:32:55.950Z",
-      "url": "https://openfront.io/game/9MKyFxec"
+      "numPlayers": 45,
+      "timestamp": "2026-08-08T02:42:45.520Z",
+      "url": "https://openfront.io/game/JS5Ro2y6"
     }
   ],
   "quads": [
