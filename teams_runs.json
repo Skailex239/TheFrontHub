@@ -15726,6 +15726,57 @@
       "url": "https://openfront.io/game/mLroiArM"
     },
     {
+      "id": "PdFL1Zcn",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Error 404",
+          "clientID": "51KmDAJr",
+          "clanTag": null
+        },
+        {
+          "username": "Nebula",
+          "clientID": "5tLwbFRG",
+          "clanTag": "421"
+        },
+        {
+          "username": "AnonCobalt4",
+          "clientID": "2ib6k9MC",
+          "clanTag": "421"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-08T02:47:10.745Z",
+      "url": "https://openfront.io/game/PdFL1Zcn"
+    },
+    {
+      "id": "JS5Ro2y6",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Naroa",
+          "clientID": "wBzpDkJ3",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Delphi Scholar",
+          "clientID": "zD2Ga8b4",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1113,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-08T02:42:45.520Z",
+      "url": "https://openfront.io/game/JS5Ro2y6"
+    },
+    {
       "id": "9MKyFxec",
       "team": "Team 4",
       "players": [
@@ -15775,29 +15826,6 @@
       "numPlayers": 30,
       "timestamp": "2026-08-08T02:35:09.092Z",
       "url": "https://openfront.io/game/jspYMWgn"
-    },
-    {
-      "id": "JS5Ro2y6",
-      "team": "Team 5",
-      "players": [
-        {
-          "username": "Naroa",
-          "clientID": "wBzpDkJ3",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Delphi Scholar",
-          "clientID": "zD2Ga8b4",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "Black Sea",
-      "duration_s": 1113,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 45,
-      "timestamp": "2026-08-08T02:42:45.520Z",
-      "url": "https://openfront.io/game/JS5Ro2y6"
     }
   ],
   "quads": [
