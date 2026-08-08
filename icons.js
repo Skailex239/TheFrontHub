@@ -102,6 +102,13 @@ if (typeof document !== "undefined") {
     boot();
   }
   // Observe les ajouts dynamiques (rendus fréquents de app.js)
-  const observer = new MutationObserver(() => hydrateIcons(document));
+  let _iconDebounce = null;
+  const observer = new MutationObserver(() => {
+    if (_iconDebounce) return;
+    _iconDebounce = requestAnimationFrame(() => {
+      _iconDebounce = null;
+      hydrateIcons(document);
+    });
+  });
   observer.observe(document.documentElement, { childList: true, subtree: true });
 }

@@ -47,7 +47,7 @@ function formatTime(s){const m=Math.floor(s/60);return m+":"+String(s%60).padSta
 function formatDate(iso){return new Date(iso).toLocaleDateString("fr-FR",{day:"2-digit",month:"2-digit"})}
 function getRunUrl(r){return r.url||("https://openfront.io/game/"+r.id)}
 // Échappement XSS-safe : convertit les caractères dangereux en entités HTML
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
+function esc(s){return String(s ?? "").replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function playSound(){}
 function notifyNewRecord(msg){if(Notification.permission==='granted'){new Notification('TheFrontHub',{body:msg,icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f0c060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 01-8 0V4z"/><path d="M5 4H3v3a3 3 0 003 3M19 4h2v3a3 3 0 01-3 3M9 14h6M10 14v3h4v-3M8 20h8"/></svg>'});playSound()}}
 function requestNotifs(){if('Notification' in window)Notification.requestPermission()}
@@ -340,7 +340,8 @@ window.startOwnershipVerification = async () => {
   // L7: Generate challenge code
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   _ownershipCode = "TFS-";
-  for (let i = 0; i < 4; i++) _ownershipCode += chars[Math.floor(Math.random() * chars.length)];
+  const _randBytes = crypto.getRandomValues(new Uint8Array(4));
+  for (let i = 0; i < 4; i++) _ownershipCode += chars[_randBytes[i] % chars.length];
   _ownershipPublicId = publicId;
   _ownershipUsername = username;
 
@@ -520,11 +521,11 @@ function updateAuthUI(user) {
   }
 }
 
-function handleLogout(event) {
+async function handleLogout(event) {
   if (event) event.stopPropagation();
   closeUserDropdown();
   if (confirm("Voulez-vous vous déconnecter ?")) {
-    window.logout();
+    await window.logout();
     currentUser = null;
     updateAuthUI(null);
   }

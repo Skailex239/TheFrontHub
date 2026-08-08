@@ -465,7 +465,8 @@ window.startOwnershipVerification = async () => {
   // Generate TFS-XXXX challenge code
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   _ownershipCode = "TFS-";
-  for (let i = 0; i < 4; i++) _ownershipCode += chars[Math.floor(Math.random() * chars.length)];
+  const _randBytes = crypto.getRandomValues(new Uint8Array(4));
+  for (let i = 0; i < 4; i++) _ownershipCode += chars[_randBytes[i] % chars.length];
   _ownershipPublicId = publicId;
   _ownershipUsername = username;
 

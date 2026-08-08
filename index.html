@@ -35,9 +35,11 @@
 <link rel="stylesheet" href="animations.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="animations.css"></noscript>
 <link rel="stylesheet" href="toast.css">
+<style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
   <script type="module" src="icons.js"></script>
 </head>
 <body>
+<a href="#topbar-title" class="skip-link">Aller au contenu principal</a>
 <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
 
 <div class="app">
@@ -50,14 +52,14 @@
 
     </div>
 
-    <nav>
-      <a class="nav-item tab-btn active" id="tab-btn-maps" onclick="switchTab('maps',this);document.getElementById('topbar-title').textContent='Speedruns'">
+    <nav role="tablist">
+      <a class="nav-item tab-btn active" id="tab-btn-maps" role="tab" aria-selected="true" tabindex="0" onclick="switchTab('maps',this);document.getElementById('topbar-title').textContent='Speedruns'">
         <i data-icon="trophy"></i> Speedruns
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-ranked" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé (1v1)'">
+      <a class="nav-item tab-btn" id="tab-btn-ranked" role="tab" aria-selected="false" tabindex="0" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé (1v1)'">
         <i data-icon="swords"></i> Classé (1v1)
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-stats" onclick="switchTab('stats',this);document.getElementById('topbar-title').textContent='Statistiques'">
+      <a class="nav-item tab-btn" id="tab-btn-stats" role="tab" aria-selected="false" tabindex="0" onclick="switchTab('stats',this);document.getElementById('topbar-title').textContent='Statistiques'">
         <i data-icon="chart"></i> Statistiques
       </a>
       <a class="nav-item tab-btn" id="tab-btn-profile" href="profile.html">
@@ -78,7 +80,7 @@
 
       <!-- Logged in (hidden by default) -->
       <div class="user-container" id="user-container" style="display: none;">
-        <div class="user-badge" id="user-badge-btn" onclick="toggleUserDropdown(event)">
+        <div class="user-badge" id="user-badge-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu" onclick="toggleUserDropdown(event)">
           <div class="profile-avatar" id="sidebar-avatar">—</div>
           <div class="profile-info">
             <h4 id="user-display-name">—</h4>
@@ -143,21 +145,21 @@
         <div class="mode-group">
           <span class="mode-group-label">Mode</span>
           <div class="mode-dropdown" id="gamemode-dropdown">
-            <button class="mode-btn active mode-dropdown-toggle" id="gamemode-toggle" onclick="toggleGameModeDropdown(event)">
+            <button class="mode-btn active mode-dropdown-toggle" id="gamemode-toggle" aria-expanded="false" onclick="toggleGameModeDropdown(event)">
               <span class="mode-icon"><i data-icon="user"></i></span> <span id="gamemode-label">Solo</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin-left:4px"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="mode-dropdown-menu" id="gamemode-menu">
-              <button class="mode-dropdown-item active" data-mode="solo" onclick="switchGameMode('solo')">
+            <div class="mode-dropdown-menu" id="gamemode-menu" role="listbox">
+              <button class="mode-dropdown-item active" data-mode="solo" role="option" onclick="switchGameMode('solo')">
                 <span class="mode-icon"><i data-icon="user"></i></span> Solo (FFA)
               </button>
-              <button class="mode-dropdown-item" data-mode="duos" onclick="switchGameMode('duos')">
+              <button class="mode-dropdown-item" data-mode="duos" role="option" onclick="switchGameMode('duos')">
                 <span class="mode-icon"><i data-icon="users"></i></span> Duos
               </button>
-              <button class="mode-dropdown-item" data-mode="trios" onclick="switchGameMode('trios')">
+              <button class="mode-dropdown-item" data-mode="trios" role="option" onclick="switchGameMode('trios')">
                 <span class="mode-icon"><i data-icon="users"></i></span> Trios
               </button>
-              <button class="mode-dropdown-item" data-mode="quads" onclick="switchGameMode('quads')">
+              <button class="mode-dropdown-item" data-mode="quads" role="option" onclick="switchGameMode('quads')">
                 <span class="mode-icon"><i data-icon="users"></i></span> Quads
               </button>
             </div>
@@ -191,11 +193,11 @@
     </section>
 
     <!-- ═══ TAB: Speedruns ═══ -->
-    <div class="tab-content active" id="tab-maps">
+    <div class="tab-content active" id="tab-maps" role="tabpanel">
       <div class="hof-cards" id="hof-list"></div>
 
       <div class="search-bar">
-        <input type="text" id="player-search" class="search-input" placeholder="Rechercher un joueur..." oninput="searchPlayer()">
+        <input type="text" id="player-search" class="search-input" placeholder="Rechercher un joueur..." aria-label="Rechercher un joueur" oninput="searchPlayer()">
       </div>
       <div id="search-results"></div>
 
@@ -205,7 +207,7 @@
             Cartes
             <span id="map-count-badge">—</span>
           </div>
-          <input type="text" id="map-search" placeholder="Rechercher..." oninput="filterMaps()">
+          <input type="text" id="map-search" placeholder="Rechercher..." aria-label="Rechercher une carte" oninput="filterMaps()">
           <div class="map-list" id="map-list">
             <div class="loading">Chargement...</div>
           </div>
@@ -246,11 +248,11 @@
         <div style="padding:16px 20px">
           <div class="cmp-row">
             <div class="cmp-input">
-              <input type="text" id="cmp1" placeholder="Joueur 1..." oninput="searchCompare('cmp1')">
+              <input type="text" id="cmp1" placeholder="Joueur 1..." aria-label="Joueur 1 à comparer" oninput="searchCompare('cmp1')">
               <div class="cmp-results" id="cmp1-results"></div>
             </div>
             <div class="cmp-input">
-              <input type="text" id="cmp2" placeholder="Joueur 2..." oninput="searchCompare('cmp2')">
+              <input type="text" id="cmp2" placeholder="Joueur 2..." aria-label="Joueur 2 à comparer" oninput="searchCompare('cmp2')">
               <div class="cmp-results" id="cmp2-results"></div>
             </div>
           </div>
@@ -264,7 +266,7 @@
     </div>
 
     <!-- ═══ TAB: Ranked ═══ -->
-    <div class="tab-content" id="tab-ranked">
+    <div class="tab-content" id="tab-ranked" role="tabpanel">
       <!-- Stats Cards Ranked -->
       <section class="stats-grid" id="ranked-stats-grid">
         <div class="card">
@@ -291,7 +293,7 @@
 
       <!-- Search + Filters -->
       <div class="search-bar">
-        <input type="text" id="ranked-search" class="search-input" placeholder="Rechercher un joueur classé..." oninput="filterRanked(this.value)">
+        <input type="text" id="ranked-search" class="search-input" placeholder="Rechercher un joueur classé..." aria-label="Rechercher un joueur classé" oninput="filterRanked(this.value)">
       </div>
       <div class="ranked-toolbar" id="ranked-toolbar">
         <div class="filter-group" role="group" aria-label="Filtre nombre de joueurs">
@@ -333,15 +335,15 @@
           <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; table-layout: fixed;">
             <thead>
               <tr style="border-bottom: 1px solid var(--border); color: var(--text3);">
-                <th style="padding: 12px 8px; width: 6%;">Rang</th>
-                <th style="padding: 12px 8px; width: 30%;">Joueur</th>
-                <th style="padding: 12px 8px; width: 10%;">Elo</th>
-                <th style="padding: 12px 8px; width: 10%;">Peak</th>
-                <th style="padding: 12px 8px; width: 10%;">Winrate</th>
-                <th style="padding: 12px 8px; width: 12%;">V - D</th>
-                <th style="padding: 12px 8px; width: 8%;">Total</th>
-                <th style="padding: 12px 8px; width: 8%;">MV</th>
-                <th style="padding: 12px 8px; width: 8%;">Streak</th>
+                <th scope="col" style="padding: 12px 8px; width: 6%;">Rang</th>
+                <th scope="col" style="padding: 12px 8px; width: 30%;">Joueur</th>
+                <th scope="col" style="padding: 12px 8px; width: 10%;">Elo</th>
+                <th scope="col" style="padding: 12px 8px; width: 10%;">Peak</th>
+                <th scope="col" style="padding: 12px 8px; width: 10%;">Winrate</th>
+                <th scope="col" style="padding: 12px 8px; width: 12%;">V - D</th>
+                <th scope="col" style="padding: 12px 8px; width: 8%;">Total</th>
+                <th scope="col" style="padding: 12px 8px; width: 8%;">MV</th>
+                <th scope="col" style="padding: 12px 8px; width: 8%;">Streak</th>
               </tr>
             </thead>
             <tbody id="ranked-list">
@@ -366,7 +368,7 @@
       </div>
     </div>
 
-    <div class="tab-content" id="tab-stats">
+    <div class="tab-content" id="tab-stats" role="tabpanel">
       <div class="chart-grid">
         <div class="chart-card">
           <div class="chart-head"><i data-icon="map"></i> Maps les plus populaires</div>
@@ -389,8 +391,8 @@
 
 <!-- Player Modal -->
 <div class="modal-overlay" id="player-modal" onclick="closeModal(event)">
-  <div class="modal" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-player-name" onclick="event.stopPropagation()">
+    <button class="modal-close" aria-label="Fermer" onclick="closeModal()">&times;</button>
     <div class="modal-header">
       <div class="modal-title" id="modal-player-name">Joueur</div>
       <div class="modal-subtitle" id="modal-player-stats">0 runs · 0 cartes</div>
@@ -409,8 +411,8 @@
 
 <!-- Ranked Player Modal (Match History) -->
 <div class="modal-overlay" id="ranked-player-modal" onclick="closeRankedModal(event)">
-  <div class="modal" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeRankedModal()">&times;</button>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="ranked-modal-player-name" onclick="event.stopPropagation()">
+    <button class="modal-close" aria-label="Fermer" onclick="closeRankedModal()">&times;</button>
     <div class="modal-header">
       <div class="modal-title" id="ranked-modal-player-name">Joueur</div>
       <div class="modal-subtitle" id="ranked-modal-player-stats">Elo: — · 0 wins · 0 losses</div>
@@ -424,13 +426,13 @@
 
 <!-- Auth Modal -->
 <div class="modal-overlay" id="auth-modal" onclick="toggleAuthModal()">
-  <div class="modal auth-modal" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="toggleAuthModal()">&times;</button>
+  <div class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" onclick="event.stopPropagation()">
+    <button class="modal-close" aria-label="Fermer" onclick="toggleAuthModal()">&times;</button>
     <div class="auth-modal-logo">
       <img src="logo-new.png" alt="TheFrontHub Logo" class="auth-modal-logo-img">
     </div>
     <div class="modal-header">
-      <div class="modal-title">Connexion</div>
+      <div class="modal-title" id="auth-modal-title">Connexion</div>
       <div class="modal-subtitle">Connectez-vous pour lier votre compte OpenFront et accéder à votre profil.</div>
     </div>
     <div class="auth-options" style="padding:0 28px">
@@ -449,10 +451,10 @@
 
 <!-- Profile Modal -->
 <div class="modal-overlay" id="profile-modal" onclick="closeProfileModal()">
-  <div class="modal auth-modal" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeProfileModal()" style="position:absolute;top:12px;right:12px">&times;</button>
+  <div class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title" onclick="event.stopPropagation()">
+    <button class="modal-close" aria-label="Fermer" onclick="closeProfileModal()" style="position:absolute;top:12px;right:12px">&times;</button>
     <div class="modal-header">
-      <div class="modal-title">Finaliser votre profil</div>
+      <div class="modal-title" id="profile-modal-title">Finaliser votre profil</div>
       <div class="modal-subtitle">Liez votre compte OpenFront pour fusionner vos stats.</div>
     </div>
     <div class="auth-form">
@@ -493,9 +495,5 @@
 <script src="toast.js" defer></script>
 <script src="animations.js" defer></script>
 <script src="app.js?v=27" type="module"></script>
-
-
-  }
-</script>
 </body>
 </html>

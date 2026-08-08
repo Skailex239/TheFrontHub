@@ -14,7 +14,10 @@
     var icons = { success: 'check', error: 'cross', warning: 'warning', info: 'info' };
     var toast = document.createElement('div');
     toast.className = 'toast toast-' + type;
-    toast.innerHTML = '<span class="toast-icon">' + (window.icon(icons[type] || icons.info, { size: 16 }) || (icons[type] || icons.info)) + '</span><span class="toast-msg">' + message + '</span><button class="toast-close" onclick="this.parentElement.remove()">×</button>';
+    toast.innerHTML = '<span class="toast-icon">' + (window.icon(icons[type] || icons.info, { size: 16 }) || (icons[type] || icons.info)) + '</span><span class="toast-msg"></span><button class="toast-close" onclick="this.parentElement.remove()" aria-label="Fermer">×</button>';
+    toast.querySelector('.toast-msg').textContent = message;
+    toast.setAttribute('role', 'alert');
+    toast.setAttribute('aria-live', 'assertive');
     container.appendChild(toast);
 
     // Trigger animation

@@ -170,6 +170,8 @@
 
 .form-group input:focus {
   border-color: var(--accent);
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
 }
 
 .auth-divider {

@@ -314,6 +314,8 @@
     }
     .pf-show-all:hover { background: #d0d0d0; }
 
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}
+
     @media (max-width: 600px) {
       .pf-games-grid { grid-template-columns: 1fr; }
       .pf-header-top { flex-wrap: wrap; }
@@ -324,6 +326,7 @@
   <script type="module" src="icons.js"></script>
 </head>
 <body>
+<a href="#profile-loading" class="skip-link">Aller au contenu principal</a>
 <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
 
 <div class="app">
@@ -363,7 +366,7 @@
 
       <!-- Logged in (hidden by default) -->
       <div class="user-container" id="user-container" style="display: none;">
-        <div class="user-badge" id="user-badge-btn" onclick="toggleUserDropdown(event)">
+        <div class="user-badge" id="user-badge-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu" onclick="toggleUserDropdown(event)">
           <div class="profile-avatar" id="sidebar-avatar">—</div>
           <div class="profile-info">
             <h4 id="user-display-name">—</h4>
@@ -481,16 +484,16 @@
           <div class="pf-avatar-frame" id="profile-avatar-large">—</div>
           <div class="pf-header-info">
             <h1 class="pf-player-name" id="profile-title-name">—</h1>
-            <span class="pf-publicid" id="profile-public-badge">Public ID: —</span>
+            <span class="pf-publicid" id="profile-public-badge">ID public : —</span>
           </div>
           <button class="pf-logout-btn" onclick="handleLogout()" title="Se déconnecter">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
           </button>
         </div>
         <ul class="pf-stats-list">
-          <li id="stat-week-rank">This week rank: —</li>
-          <li id="stat-week-score">This week score: —</li>
-          <li id="stat-alltime">All-time score: —</li>
+          <li id="stat-week-rank">Rang de la semaine : —</li>
+          <li id="stat-week-score">Score de la semaine : —</li>
+          <li id="stat-alltime">Score total : —</li>
           <li id="stat-elo-line" style="display:none">ELO: — (Peak: —)</li>
         </ul>
       </div>
@@ -500,11 +503,11 @@
 
       <!-- Last Games -->
       <div class="pf-games-section">
-        <h2 class="pf-games-title">Last Games</h2>
+        <h2 class="pf-games-title">Dernières parties</h2>
         <div id="profile-recent-games" class="pf-games-grid">
           <div class="pf-empty">Chargement…</div>
         </div>
-        <button class="pf-show-all" id="show-all-games-btn" style="display:none">Show all games</button>
+        <button class="pf-show-all" id="show-all-games-btn" style="display:none">Voir toutes les parties</button>
       </div>
     </div>
 
@@ -513,13 +516,13 @@
 
 <!-- Auth Modal -->
 <div class="modal-overlay" id="auth-modal" onclick="toggleAuthModal()">
-  <div class="modal auth-modal" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="toggleAuthModal()">&times;</button>
+  <div class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" onclick="event.stopPropagation()">
+    <button class="modal-close" aria-label="Fermer" onclick="toggleAuthModal()">&times;</button>
     <div class="auth-modal-logo">
       <img src="logo-new.png" alt="TheFrontHub Logo" class="auth-modal-logo-img">
     </div>
     <div class="modal-header">
-      <div class="modal-title">Connexion</div>
+      <div class="modal-title" id="auth-modal-title">Connexion</div>
       <div class="modal-subtitle">Connectez-vous pour lier votre compte OpenFront.</div>
     </div>
     <div class="auth-options" style="padding:0 28px">
@@ -540,7 +543,6 @@
 <script src="toast.js" defer></script>
 <script src="animations.js" defer></script>
 <script src="profile.js?v=21" type="module"></script>
-  }
-</script>
+
 </body>
 </html>
