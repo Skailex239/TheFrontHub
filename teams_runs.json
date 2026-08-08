@@ -15680,24 +15680,6 @@
       "url": "https://openfront.io/game/4zwCvByg"
     },
     {
-      "id": "WKNAsHY5",
-      "team": "Team 7",
-      "players": [
-        {
-          "username": "JJoJonathan",
-          "clientID": "juvxqH3d",
-          "clanTag": null
-        }
-      ],
-      "map": "Australia",
-      "duration_s": 2107,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 63,
-      "timestamp": "2026-08-08T02:06:54.458Z",
-      "url": "https://openfront.io/game/WKNAsHY5"
-    },
-    {
       "id": "mLroiArM",
       "team": "Team 3",
       "players": [
@@ -15726,6 +15708,24 @@
       "url": "https://openfront.io/game/mLroiArM"
     },
     {
+      "id": "WKNAsHY5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "JJoJonathan",
+          "clientID": "juvxqH3d",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 2107,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-08T02:06:54.458Z",
+      "url": "https://openfront.io/game/WKNAsHY5"
+    },
+    {
       "id": "PdFL1Zcn",
       "team": "Team 2",
       "players": [
@@ -15752,6 +15752,34 @@
       "numPlayers": 43,
       "timestamp": "2026-08-08T02:47:10.745Z",
       "url": "https://openfront.io/game/PdFL1Zcn"
+    },
+    {
+      "id": "jspYMWgn",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "yeetdapro250",
+          "clientID": "up3k3UKz",
+          "clanTag": null
+        },
+        {
+          "username": "Sendtroops",
+          "clientID": "rLfZaN1N",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rome",
+          "clientID": "KJkXnmm2",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1163,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-08T02:35:09.092Z",
+      "url": "https://openfront.io/game/jspYMWgn"
     },
     {
       "id": "JS5Ro2y6",
@@ -15798,34 +15826,6 @@
       "numPlayers": 36,
       "timestamp": "2026-08-08T02:32:55.950Z",
       "url": "https://openfront.io/game/9MKyFxec"
-    },
-    {
-      "id": "jspYMWgn",
-      "team": "Team 1",
-      "players": [
-        {
-          "username": "yeetdapro250",
-          "clientID": "up3k3UKz",
-          "clanTag": null
-        },
-        {
-          "username": "Sendtroops",
-          "clientID": "rLfZaN1N",
-          "clanTag": "UN"
-        },
-        {
-          "username": "Rome",
-          "clientID": "KJkXnmm2",
-          "clanTag": "UN"
-        }
-      ],
-      "map": "World",
-      "duration_s": 1163,
-      "difficulty": "Medium",
-      "bots": 400,
-      "numPlayers": 30,
-      "timestamp": "2026-08-08T02:35:09.092Z",
-      "url": "https://openfront.io/game/jspYMWgn"
     }
   ],
   "quads": [
