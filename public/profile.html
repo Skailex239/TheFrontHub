@@ -147,6 +147,45 @@
     }
 
     /* ═══ NEW PROFILE DESIGN (Jimmy-style) ═══ */
+    .pf-public-banner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent, #f97316);
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--text2, #888);
+    }
+    .pf-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text, #eee);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .pf-back-btn:hover {
+      background: var(--bg2, #1a1a20);
+      border-color: var(--accent, #f97316);
+      color: var(--accent, #f97316);
+    }
+    .pf-public-banner-text {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
     .pf-header-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -342,11 +381,8 @@
       <a class="nav-item tab-btn" id="tab-btn-maps" href="index.html">
         <i data-icon="home"></i> Tableau de bord
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-global" href="index.html?tab=global">
+      <a class="nav-item tab-btn" id="tab-btn-ranked" href="index.html?tab=ranked">
         <i data-icon="trophy"></i> Classements
-      </a>
-      <a class="nav-item tab-btn" id="tab-btn-stats" href="index.html?tab=stats">
-        <i data-icon="chart"></i> Statistiques
       </a>
       <a class="nav-item tab-btn active" id="tab-btn-profile">
         <i data-icon="user"></i> Mon Profil
@@ -478,6 +514,14 @@
 
     <!-- ─── View: Main (logged in with publicId — stats display) ─── -->
     <div id="profile-main" class="pf-view">
+      <!-- Public profile banner (shown only when viewing someone else's profile) -->
+      <div id="public-profile-banner" class="pf-public-banner" style="display:none">
+        <button class="pf-back-btn" onclick="history.back()" title="Retour">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Retour
+        </button>
+        <span class="pf-public-banner-text">Profil public</span>
+      </div>
       <!-- Profile header (avatar on left, name center, logout right) -->
       <div class="pf-header-card">
         <div class="pf-header-top">
@@ -543,7 +587,7 @@
 <script src="i18n.js"></script>
 <script src="toast.js?v=2" defer></script>
 <script src="animations.js" defer></script>
-<script src="profile.js?v=21" type="module"></script>
+<script src="profile.js?v=22" type="module"></script>
 
 </body>
 </html>

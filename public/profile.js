@@ -54,7 +54,13 @@ function loadVipForProfile() {
         if (data.username) usernameToType.set(data.username, rewardType);
       });
       // Re-applique le skin sur le hero si on a un profil
-      if (currentProfile) applyProfileSkin(currentProfile, usernameToType);
+      // En mode visualisation publique, on utilise le profil virtuel du joueur consulté
+      // (son publicId) plutôt que le profil propre de l'utilisateur courant.
+      if (viewingPublicId) {
+        applyProfileSkin({ username: viewingUsername, publicId: viewingPublicId }, usernameToType);
+      } else if (currentProfile) {
+        applyProfileSkin(currentProfile, usernameToType);
+      }
     }, (err) => {
       console.warn("[profile] VIP listener error (non-critique):", err.message);
     });
@@ -126,7 +132,71 @@ function setStat(id, value, muted = false) {
 
 /* ── Auth state ── */
 
+// Public profile view state (set when URL contains ?publicId=XXX)
+let viewingPublicId = null;
+let viewingUsername = null;
+
+/**
+ * Détecte si l'URL demande de visualiser le profil PUBLIC d'un autre joueur.
+ * Format: profile.html?player=NAME&publicId=XXXXXXXX
+ * Si le publicId correspond à celui de l'utilisateur courant, on ignore
+ * (c'est son propre profil — flux normal).
+ */
+function getPublicProfileRequest() {
+  const params = new URLSearchParams(window.location.search);
+  const pid = (params.get("publicId") || "").trim();
+  const name = (params.get("player") || "").trim();
+  if (pid && /^[A-Za-z0-9]{8}$/.test(pid)) {
+    return { publicId: pid, username: name || pid };
+  }
+  return null;
+}
+
 onAuthStateChanged(auth, async (user) => {
+  // ── Cas 1 : visualisation du profil public d'un autre joueur ──
+  // On vérifie l'URL AVANT toute logique d'auth, car cela doit fonctionner
+  // même si l'utilisateur n'est pas connecté.
+  const pubReq = getPublicProfileRequest();
+  if (pubReq) {
+    // Lecture du propre profil de l'utilisateur courant (s'il est connecté)
+    // pour détecter s'il visualise son PROPRE profil → flux normal.
+    let ownProfile = null;
+    if (user) {
+      try {
+        const snap = await getDoc(doc(db, "users", user.uid));
+        if (snap.exists()) ownProfile = snap.data();
+      } catch (e) {
+        console.warn("[profile] Firestore read error (own, non-bloquant):", e.message);
+      }
+    }
+
+    if (ownProfile && ownProfile.publicId === pubReq.publicId) {
+      // L'utilisateur visualise son propre profil → flux normal (on nettoie l'URL)
+      history.replaceState(null, "", window.location.pathname);
+      currentUser = user;
+      currentProfile = ownProfile;
+      updateSidebarUI(user, ownProfile);
+      showView("profile-main");
+      renderHero(user, ownProfile);
+      loadVipForProfile();
+      await loadStats(ownProfile.publicId);
+      return;
+    }
+
+    // ── Profil d'un AUTRE joueur (ou visiteur non connecté) ──
+    currentUser = user; // peut être null
+    currentProfile = ownProfile; // pour la sidebar (peut être null)
+    updateSidebarUI(user, ownProfile);
+    viewingPublicId = pubReq.publicId;
+    viewingUsername = pubReq.username;
+    showView("profile-main");
+    renderPublicProfile(pubReq.username, pubReq.publicId);
+    loadVipForProfile();
+    await loadStats(pubReq.publicId);
+    return;
+  }
+
+  // ── Cas 2 : pas de ?publicId dans l'URL → flux normal ──
   if (!user) {
     currentUser = null;
     currentProfile = null;
@@ -163,6 +233,38 @@ onAuthStateChanged(auth, async (user) => {
   loadVipForProfile();
   await loadStats(profile.publicId);
 });
+
+/**
+ * Affiche le profil PUBLIC d'un autre joueur (ou le sien propre si visité via URL).
+ * Masque le bouton de déconnexion, neutralise les actions d'édition, et applique
+ * le skin VIP résolu via publicId.
+ */
+function renderPublicProfile(username, publicId) {
+  const nameEl = document.getElementById("profile-title-name");
+  if (nameEl) nameEl.textContent = username;
+
+  const badgeEl = document.getElementById("profile-public-badge");
+  if (badgeEl) badgeEl.textContent = "Public ID : " + publicId;
+
+  // Affiche la bannière "Profil public" + bouton retour
+  const banner = document.getElementById("public-profile-banner");
+  if (banner) banner.style.display = "flex";
+
+  // Masque le bouton de déconnexion (ce n'est pas notre session)
+  const logoutBtn = document.querySelector(".pf-logout-btn");
+  if (logoutBtn) logoutBtn.style.display = "none";
+
+  // Avatar : fallback PDP.png (on n'a pas l'avatar du joueur distant)
+  const avatarEl = document.getElementById("profile-avatar-large");
+  if (avatarEl) {
+    avatarEl.innerHTML = `<img src="PDP.png" alt="${esc(username)}" style="width:100%;height:100%;object-fit:cover">`;
+  }
+
+  // Construit un pseudo-profil pour que applyProfileSkin résolve le skin VIP
+  // via le publicId du joueur visualisé (et non celui de l'utilisateur courant).
+  const virtualProfile = { username, publicId };
+  applyProfileSkin(virtualProfile, null);
+}
 
 /* ── Sidebar / dropdown UI ── */
 
@@ -205,6 +307,14 @@ function renderHero(user, profile) {
 
   const badgeEl = document.getElementById("profile-public-badge");
   if (badgeEl) badgeEl.textContent = "Public ID: " + (profile.publicId || "—");
+
+  // Masque la bannière "Profil public" (flux normal = propre profil)
+  const banner = document.getElementById("public-profile-banner");
+  if (banner) banner.style.display = "none";
+
+  // Ré-affiche le bouton de déconnexion (flux normal)
+  const logoutBtn = document.querySelector(".pf-logout-btn");
+  if (logoutBtn) logoutBtn.style.display = "";
 
   const avatarEl = document.getElementById("profile-avatar-large");
   if (avatarEl) {

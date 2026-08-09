@@ -59,9 +59,6 @@
       <a class="nav-item tab-btn" id="tab-btn-ranked" role="tab" aria-selected="false" tabindex="0" onclick="switchTab('ranked',this);document.getElementById('topbar-title').textContent='Classé'">
         <i data-icon="swords"></i> Classé
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-stats" role="tab" aria-selected="false" tabindex="0" onclick="switchTab('stats',this);document.getElementById('topbar-title').textContent='Statistiques'">
-        <i data-icon="chart"></i> Statistiques
-      </a>
       <a class="nav-item tab-btn" id="tab-btn-profile" href="profile.html">
         <i data-icon="user"></i> Mon Profil
       </a>
@@ -379,19 +376,6 @@
       </div>
     </div>
 
-    <div class="tab-content" id="tab-stats" role="tabpanel">
-      <div class="chart-grid">
-        <div class="chart-card">
-          <div class="chart-head"><i data-icon="map"></i> Maps les plus populaires</div>
-          <div class="chart-body" id="popular-maps"></div>
-        </div>
-        <div class="chart-card">
-          <div class="chart-head"><i data-icon="stopwatch"></i> Distribution des temps</div>
-          <div class="chart-body" id="dist-chart"></div>
-        </div>
-      </div>
-    </div>
-
 
 
   </main>
@@ -505,6 +489,6 @@
 <script src="i18n.js"></script>
 <script src="toast.js?v=2" defer></script>
 <script src="animations.js" defer></script>
-<script src="app.js?v=28" type="module"></script>
+<script src="app.js?v=29" type="module"></script>
 </body>
 </html>

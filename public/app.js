@@ -1363,7 +1363,6 @@ function renderAll(){
   updateLastUpdate();
   renderGlobal();
   renderHof();
-  renderCharts();
   renderCompare();
 
   // Re-render active map details on language switch
@@ -1765,7 +1764,7 @@ function updateURL(){
   const p=new URLSearchParams();
   const activeTab=document.querySelector('.tab-btn.active');
   if(activeTab){
-    const tabs=['maps','ranked','stats'];
+    const tabs=['maps','ranked'];
     const idx=[...document.querySelectorAll('.tab-btn')].indexOf(activeTab);
     if(idx>=0&&tabs[idx])p.set('tab',tabs[idx]);
   }
@@ -1824,7 +1823,7 @@ loadData().then(()=>{
   }
   if (tabParam) {
     const btns = document.querySelectorAll('.tab-btn');
-    const tabs = ['maps', 'ranked', 'stats'];
+    const tabs = ['maps', 'ranked'];
     const idx = tabs.indexOf(tabParam);
     if (idx >= 0 && btns[idx]) switchTab(tabParam, btns[idx]);
   }
@@ -2047,7 +2046,7 @@ function renderRankedTable(players) {
       <tr data-pid="${esc(p.public_id)}" class="${cosmeticRowClass}" style="border-bottom: 1px solid var(--border); transition: background 0.2s; cursor:pointer;"
           onmouseover="this.style.background='var(--bg2)'"
           onmouseout="this.style.background='transparent'"
-          onclick="showRankedPlayerModal('${esc(p.public_id)}', '${esc(p.username)}')">
+          onclick="viewRankedProfile('${esc(p.public_id)}', '${esc(p.username)}')">
         <td style="padding: 12px 8px; font-weight: bold; color: ${p.rank <= 3 ? 'var(--accent)' : 'var(--text)'};">#${p.rank}</td>
         <td style="padding: 12px 8px;">
           <div style="display:flex;align-items:center;gap:6px">
@@ -2549,9 +2548,22 @@ function closeRankedModal(e) {
   }
 }
 
+/**
+ * Redirige vers la page de profil publique d'un joueur ranked.
+ * Le Public ID est passé en paramètre URL pour que profile.js affiche
+ * directement ses stats (OpenFront API + ELO ranked) sans confusion
+ * avec le profil de l'utilisateur courant.
+ */
+function viewRankedProfile(publicId, username) {
+  if (!publicId) return;
+  const safeName = username || publicId;
+  window.location.href = `profile.html?player=${encodeURIComponent(safeName)}&publicId=${encodeURIComponent(publicId)}`;
+}
+
 window.loadRankedLeaderboard = loadRankedLeaderboard;
 window.filterRanked = filterRanked;
 window.showRankedPlayerModal = showRankedPlayerModal;
+window.viewRankedProfile = viewRankedProfile;
 window.renderMyRank = renderMyRank;
 window.scrollToMyRank = scrollToMyRank;
 window.closeRankedModal = closeRankedModal;
