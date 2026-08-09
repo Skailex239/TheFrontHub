@@ -288,3 +288,36 @@ Stage Summary:
 - All mode selectors are now segmented pill controls (modern iOS/Material style).
 - Swords icon is now clean crossed swords (Lucide design).
 - Zero functionality broken: mode switching, dropdown, ranked toggle all verified working.
+
+---
+Task ID: 8
+Agent: main (Z.ai Code)
+Task: User reported bug: adding players to favorites in leaderboard creates a huge blue panel showing raw SVG code on the right side, breaking the layout.
+
+Work Log:
+- VLM analysis of user screenshot confirmed: the toast notification was displaying raw SVG source code (`<svg width="14"...>`) as literal text instead of rendering the icon. This caused the toast to balloon to an oversized rectangle obstructing the UI.
+- Root cause identified in app.js lines 2224/2227: toggleFavorite() called `showToast(icon('star',{size:14}) + ' ' + username + ' ajouté aux favoris')`. The `icon()` function returns an SVG markup STRING. But showToast() (toast.js line 18) uses `textContent` for the message (correct for XSS safety), so the SVG string was escaped and displayed as visible text.
+- Fix approach: added optional `customIconName` parameter to showToast() instead of concatenating SVG into the message.
+- toast.js changes:
+  * Added 4th param `customIconName` to showToast(message, type, duration, customIconName)
+  * Icon name resolution: `customIconName || icons[type] || icons.info`
+  * Icon still rendered via innerHTML (correct), message still via textContent (safe)
+  * Added clarifying comment explaining the textContent safety
+  * Backward compatible: existing 3-arg callers unaffected
+- app.js changes:
+  * Line 2224: `showToast(username + ' ajouté aux favoris', 'success', 4000, 'star')` (was: SVG concat, no type)
+  * Line 2227: `showToast(username + ' retiré des favoris', 'info', 4000, 'starOutline')` (was: SVG concat, no type)
+  * Now passes icon NAME (string) not SVG markup, so toast.js can render it properly via innerHTML
+- Bumped cache versions: toast.js (no version → v=2), app.js (v27 → v28) in index.html + profile.html.
+- Synced to /tmp/thefronthub/ source repo.
+- Agent Browser verification:
+  * Added "smsfun.8062" to favorites → VLM confirmed: "clean rendered star icon", text "smsfun.8062 ajouté aux favoris", "compact and small".
+  * Removed from favorites → VLM confirmed: "clean rendered icon (star outline)", text "smsfun.8062 retiré des favoris", "compact single-line notification".
+  * No console errors, no raw SVG visible.
+- Committed (6014dac) and pushed to GitHub origin/main.
+
+Stage Summary:
+- Commit 6014dac "fix: toast showing raw SVG code when adding/removing favorites" LIVE on origin/main.
+- Bug fully fixed: toast now shows a compact pill with a rendered star icon + plain text message.
+- The fix is backward-compatible (optional 4th param) and maintains XSS safety (textContent for message).
+- Also improved UX: "add" now uses success type (green), "remove" uses info type (blue).

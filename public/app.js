@@ -2221,10 +2221,10 @@ function toggleFavorite(publicId, username) {
   const idx = list.indexOf(publicId);
   if (idx === -1) {
     list.push(publicId);
-    try { showToast(icon('star',{size:14}) + ' ' + (username || 'Joueur') + ' ajouté aux favoris'); } catch (e) {}
+    try { showToast((username || 'Joueur') + ' ajouté aux favoris', 'success', 4000, 'star'); } catch (e) {}
   } else {
     list.splice(idx, 1);
-    try { showToast(icon('starOutline',{size:14}) + ' ' + (username || 'Joueur') + ' retiré des favoris'); } catch (e) {}
+    try { showToast((username || 'Joueur') + ' retiré des favoris', 'info', 4000, 'starOutline'); } catch (e) {}
   }
   saveFavorites(list);
   updateFavCounter();

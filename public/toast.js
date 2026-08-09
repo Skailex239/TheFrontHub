@@ -1,6 +1,8 @@
 // toast.js — Minimal toast notification system
 (function() {
-  function showToast(message, type, duration) {
+  // showToast(message, type, duration, customIconName)
+  // customIconName: optional icon name (e.g. 'star', 'starOutline') to override the type-based icon
+  function showToast(message, type, duration, customIconName) {
     type = type || 'info';
     if (duration === undefined) duration = 4000;
 
@@ -12,9 +14,11 @@
     }
 
     var icons = { success: 'check', error: 'cross', warning: 'warning', info: 'info' };
+    var iconName = customIconName || icons[type] || icons.info;
     var toast = document.createElement('div');
     toast.className = 'toast toast-' + type;
-    toast.innerHTML = '<span class="toast-icon">' + (window.icon(icons[type] || icons.info, { size: 16 }) || (icons[type] || icons.info)) + '</span><span class="toast-msg"></span><button class="toast-close" onclick="this.parentElement.remove()" aria-label="Fermer">×</button>';
+    toast.innerHTML = '<span class="toast-icon">' + (window.icon(iconName, { size: 16 }) || iconName) + '</span><span class="toast-msg"></span><button class="toast-close" onclick="this.parentElement.remove()" aria-label="Fermer">×</button>';
+    // Use textContent for the message — safely escapes any HTML, prevents raw SVG/code injection
     toast.querySelector('.toast-msg').textContent = message;
     toast.setAttribute('role', 'alert');
     toast.setAttribute('aria-live', 'assertive');
