@@ -38,3 +38,40 @@ Stage Summary:
 - Verified live: Skailex's "prism" skin shows on the 2v2 ranked leaderboard at rank #1, matched by public_id "UWetOwlW".
 - Files modified: /tmp/thefronthub/app.js, /tmp/thefronthub/profile.js
 - NOTE for user: the `ensurePublicIdBridge` writes publicId into public-aliases + public-rewards (merge). If Firestore rules block client writes to these collections, the writes fail silently (non-critical) — the existing public-aliases bridge (doc id=publicId) already makes matching work. No rule changes strictly required for the current data.
+
+---
+Task ID: 2
+Agent: main (Z.ai Code)
+Task: Push the verified publicId-based VIP skin feature to GitHub, set up a working preview in the Next.js sandbox, and perform final Agent Browser + VLM end-to-end verification.
+
+Work Log:
+- User provided a GitHub PAT (ghp_...) in chat to push changes. Warned user about the exposed token.
+- Reviewed uncommitted changes from Task 1 in /tmp/thefronthub: app.js (+192/-14 lines), profile.js (+85 lines).
+- Confirmed git diff display of `data[modeKey]` / `data[mode]` was corrupted by ANSI escape interpretation ([m = reset); actual file content is correct. Verified with `node --check` on both files: PASS.
+- Confirmed ranked.json already includes `public_id` for all 100 players in both 1v1 and 2v2 (Skailex 2v2 = public_id "UWetOwlW", rank #1, elo 2101). No sync-ranked.js changes needed.
+- Verified ranked skin implementation is consistent with speedrun skin: same isNewSkinType list, same cosmeticRowClass/cosmeticNameClass pattern, only difference is ranked uses getRankedRewardType(publicId-first) vs speedruns use vipPlayers.get(username).
+- Verified all 11 rgb-* CSS classes exist in styles.css with !important + #ranked-list scoping + #ranked-modal-player-name scoping.
+- Committed with descriptive message: "feat(vip): apply multicolor skin on ranked leaderboard by publicId".
+- Pushed to origin/main using one-time PAT URL (token NOT stored in git config). Commit b13144a now live on GitHub.
+- Set up Next.js preview: copied all TheFrontHub frontend files (HTML, CSS, JS, data, images, shared/) to /home/z/my-project/public/. Added `beforeFiles` rewrite in next.config.ts to serve /index.html at `/`. Dev server auto-restarted; all assets return HTTP 200.
+- Agent Browser verification:
+  - Opened http://localhost:3000/ — page loads, title "TheFrontHub — OpenFront Leaderboard", no errors.
+  - Clicked "Classé" tab → ranked leaderboard rendered (100 players, 1v1 default).
+  - Switched to 2v2 → rank #1 = Skailex.9681 (2101 elo, 95.6% WR, 108-5). ✅
+  - DOM inspection: Skailex's username span has className=" rgb-prism", tr has class=" is-prism", data-pid="UWetOwlW". ✅
+  - Computed style: webkitTextFillColor=transparent, color=transparent, backgroundImage=linear-gradient(rainbow), webkitBackgroundClip=text, animationName=prism-slide, fontWeight=900, fontFamily=Orbitron. ✅
+  - Clicked Skailex's row → ranked modal opened, #ranked-modal-player-name has className="rgb-prism". ✅
+  - Console: clean (only normal data-loading logs, "Utilisateur déconnecté" expected since not logged in, no errors).
+- VLM visual confirmation (zoomed screenshot, specific prompt):
+  - Rank #1 "Skailex.9681": "displays a distinct rainbow/multicolor gradient. The letters transition through various bright colors, including green, cyan, blue, purple, and pink."
+  - Rank #2: "solid dark gray or black"
+  - "Yes, there is a very clear and visible difference."
+- Note: VLM initially reported "standard black text" on the first (smaller) screenshot — this was a model resolution limitation, not a rendering bug. The computed style was always conclusive, and the zoomed screenshot + specific prompt confirmed the visual gradient.
+
+Stage Summary:
+- Commit b13144a "feat(vip): apply multicolor skin on ranked leaderboard by publicId" is LIVE on GitHub origin/main.
+- The VIP multicolor "prism" skin now renders on Skailex's username at rank #1 of the 2v2 ranked leaderboard, matched by public_id "UWetOwlW" (NOT by alias — the reward username "Skailex on YT" ≠ ranked username "Skailex.9681").
+- The skin also applies on: the ranked player modal, newcomers/dropouts cards, the "my rank" card, and the profile page hero name.
+- Verified at 3 levels: DOM (className), computed style (transparent fill + rainbow gradient + background-clip:text + animation), and visual (VLM confirmed rainbow gradient).
+- The Next.js sandbox at http://localhost:3000/ serves a working preview of TheFrontHub (via public/ folder + next.config.ts rewrite).
+- REMINDER: User must revoke the exposed GitHub PAT at https://github.com/settings/tokens.
