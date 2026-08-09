@@ -249,75 +249,85 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 .server-info h3{color:var(--orange);font-size:15px;font-weight:700;margin-bottom:4px}
 .server-info p{color:#777;font-size:13px}
 .gamemode-switch{margin-top:14px;display:flex;gap:8px}
+/* Compact mode selector — segmented control style */
 .mode-selector-wrapper{
-    margin-top:14px;
+    margin-top:10px;
     display:flex;
-    gap:16px;
-    align-items:flex-start;
+    gap:10px;
+    align-items:center;
     flex-wrap:wrap;
 }
 .mode-group{
-    display:flex;
+    display:inline-flex;
     align-items:center;
-    gap:6px;
+    gap:0;
+    background:var(--bg-subtle);
+    border:1px solid var(--border);
+    border-radius:var(--radius-pill);
+    padding:3px;
 }
 .mode-group-label{
-    font-size:11px;
+    font-size:10px;
     font-weight:700;
     color:var(--muted);
     text-transform:uppercase;
-    letter-spacing:1px;
-    margin-right:4px;
+    letter-spacing:.8px;
+    padding:0 10px 0 12px;
+    user-select:none;
 }
 .mode-btn{
-    display:flex;align-items:center;gap:6px;
-    border:none;padding:10px 22px;border-radius:var(--radius);
-    background:var(--card);color:var(--muted);
-    font-family:var(--f);font-size:13px;font-weight:600;
-    cursor:pointer;transition:all .25s ease;white-space:nowrap;
-    border:1px solid var(--border);
+    display:inline-flex;align-items:center;gap:5px;
+    border:none;padding:5px 12px;border-radius:var(--radius-pill);
+    background:transparent;color:var(--muted);
+    font-family:var(--f);font-size:12px;font-weight:600;
+    cursor:pointer;transition:all .2s ease;white-space:nowrap;
+    line-height:1.4;
 }
-.mode-btn:hover{color:var(--orange);border-color:var(--orange-light)}
-.mode-btn.active{background:var(--orange-gradient);color:#fff;border-color:var(--orange);box-shadow:var(--shadow-orange)}
-.mode-btn .mode-icon{font-size:14px}
+.mode-btn:hover{color:var(--orange);background:var(--card)}
+.mode-btn.active{background:var(--orange-gradient);color:#fff;box-shadow:0 2px 8px rgba(255,122,0,.25)}
+.mode-btn .mode-icon{font-size:12px;display:inline-flex}
+.mode-btn .mode-icon .icon{width:14px;height:14px}
 .mode-loading{opacity:.5;pointer-events:none}
 
-/* Game mode dropdown */
+/* Game mode dropdown — compact */
 .mode-dropdown{position:relative;display:inline-block}
 .mode-dropdown-toggle{
-    min-width:140px;
-    justify-content:flex-start;
+    min-width:auto;
+    justify-content:center;
 }
-.mode-dropdown-toggle svg{margin-left:auto}
+.mode-dropdown-toggle svg{margin-left:2px;width:10px;height:10px}
 .mode-dropdown-menu{
     display:none;
     position:absolute;
     top:calc(100% + 6px);
-    left:0;
-    min-width:180px;
+    right:0;
+    min-width:140px;
     background:var(--card);
     border:1px solid var(--border);
     border-radius:var(--radius);
-    box-shadow:var(--shadow);
+    box-shadow:var(--shadow-lg);
     z-index:100;
     overflow:hidden;
+    padding:4px;
     animation:dropdownFade .15s ease;
 }
 .mode-dropdown-menu.open{display:block}
 .mode-dropdown-item{
-    display:flex;align-items:center;gap:8px;
+    display:flex;align-items:center;gap:7px;
     width:100%;
-    padding:10px 16px;
+    padding:6px 10px;
     border:none;
     background:transparent;
     color:var(--text);
-    font-family:var(--f);font-size:13px;font-weight:500;
+    font-family:var(--f);font-size:12px;font-weight:500;
     cursor:pointer;transition:all .15s ease;
     text-align:left;
+    border-radius:var(--radius-sm);
 }
 .mode-dropdown-item:hover{background:var(--orange-pale);color:var(--orange)}
 .mode-dropdown-item.active{background:var(--orange-pale);color:var(--orange);font-weight:700}
-.mode-dropdown-item .mode-icon{font-size:14px}
+.mode-dropdown-item .mode-icon{font-size:12px;display:inline-flex}
+.mode-dropdown-item .mode-icon .icon{width:14px;height:14px}
 @keyframes dropdownFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── STATS GRID ── */
@@ -1106,48 +1116,57 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .mode-icon .icon, .stat-icon .icon{width:22px;height:22px}
 .toast-icon .icon{vertical-align:middle}
 
-/* Ranked mode toggle (1v1 / 2v2) */
+/* Ranked mode toggle (1v1 / 2v2) — compact pill segmented */
 .ranked-mode-toggle {
   display: inline-flex;
-  gap: 0;
+  gap: 2px;
+  background: var(--bg-subtle);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-left: 8px;
-  margin-bottom: 8px;
+  border-radius: var(--radius-pill);
+  padding: 3px;
+  margin-left: 0;
+  margin-bottom: 0;
   vertical-align: middle;
 }
 
 .mode-toggle-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 5px 14px;
-  font-size: 13px;
+  gap: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
   font-weight: 600;
-  color: var(--text3);
-  background: var(--bg2);
+  color: var(--muted);
+  background: transparent;
   border: none;
+  border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s var(--ease);
   white-space: nowrap;
+  line-height: 1.4;
 }
 
 .mode-toggle-btn:hover {
   color: var(--text);
-  background: var(--bg1);
+  background: var(--card);
 }
 
 .mode-toggle-btn.active {
-  color: var(--accent);
-  background: var(--card);
-  box-shadow: inset 0 -2px 0 var(--accent);
+  color: #fff;
+  background: var(--orange-gradient);
+  box-shadow: 0 2px 8px rgba(255,122,0,.25);
+  font-weight: 700;
 }
 
 .mode-toggle-btn .mode-icon {
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.mode-toggle-btn .mode-icon .icon {
+  width: 13px;
+  height: 13px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -1408,38 +1427,32 @@ body{
 }
 .share-btn:active{transform:translateY(0) scale(.97)}
 
-/* ── MODE BUTTONS: Better active state with glow ── */
+/* ── MODE BUTTONS: Compact pill segmented controls ── */
 .mode-btn{
-    border-radius:var(--radius);
-    transition:all var(--dur) var(--ease);
+    border-radius:var(--radius-pill);
+    transition:all var(--dur-fast) var(--ease);
     position:relative;
-    overflow:hidden;
 }
 .mode-btn:hover{
     color:var(--orange);
-    border-color:var(--orange-light);
-    background:var(--orange-pale);
-    transform:translateY(-1px);
+    background:var(--card);
 }
 .mode-btn.active{
     background:var(--orange-gradient);
     color:#fff;
-    border-color:var(--orange);
-    box-shadow:0 6px 20px rgba(255,122,0,.3), 0 0 0 1px rgba(255,122,0,.1);
-    transform:translateY(-1px);
+    box-shadow:0 2px 8px rgba(255,122,0,.3);
 }
-.mode-btn.active .mode-icon{transform:scale(1.1)}
-.mode-btn .mode-icon{transition:transform var(--dur) var(--ease-out)}
-.mode-btn:active{transform:translateY(0) scale(.97)}
+.mode-btn.active .mode-icon .icon{color:#fff}
+.mode-btn .mode-icon .icon{transition:all var(--dur-fast) var(--ease)}
+.mode-btn:active{transform:scale(.95)}
 
-/* Mode dropdown items — enhanced */
+/* Mode dropdown items — compact enhanced */
 .mode-dropdown-item{
     transition:all var(--dur-fast) var(--ease);
 }
 .mode-dropdown-item:hover{
     background:var(--orange-pale);
     color:var(--orange);
-    padding-left:18px;
 }
 
 /* ── GLOBAL TABLE: Enhanced header + row hover ── */
@@ -1644,28 +1657,29 @@ body{
     font-weight:700;
 }
 
-/* ── MODE TOGGLE (1v1/2v2): Enhanced ── */
+/* ── MODE TOGGLE (1v1/2v2): Compact pill segmented ── */
 .ranked-mode-toggle{
-    border-radius:var(--radius);
+    border-radius:var(--radius-pill);
     border:1px solid var(--border);
     background:var(--bg-subtle);
     padding:3px;
     gap:2px;
 }
 .mode-toggle-btn{
-    border-radius:calc(var(--radius) - 3px);
-    transition:all var(--dur) var(--ease);
+    border-radius:var(--radius-pill);
+    transition:all var(--dur-fast) var(--ease);
 }
 .mode-toggle-btn:hover{
     color:var(--text);
     background:var(--card);
 }
 .mode-toggle-btn.active{
-    color:var(--orange);
-    background:var(--card);
-    box-shadow:0 2px 8px rgba(0,0,0,.06), inset 0 -2px 0 var(--orange);
+    color:#fff;
+    background:var(--orange-gradient);
+    box-shadow:0 2px 8px rgba(255,122,0,.3);
     font-weight:700;
 }
+.mode-toggle-btn:active{transform:scale(.95)}
 
 /* ── REFRESH BADGE: Better pulse ── */
 .refresh-badge{
