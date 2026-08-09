@@ -3,7 +3,13 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 :root{
-    /* ── Orange palette with depth ── */
+    /* ════════════════════════════════════════════════════════════════════════
+       THEFRONTHUB DESIGN SYSTEM
+       Single source of truth for colors, spacing, radius, typography.
+       Legacy aliases kept at the bottom for backward compat — do NOT remove.
+       ════════════════════════════════════════════════════════════════════════ */
+
+    /* ── Brand: Orange palette with depth ── */
     --orange:#ff7a00;
     --orange-light:#ffb15d;
     --orange-hover:#e86e00;
@@ -17,44 +23,90 @@
     --orange-gradient-hero:linear-gradient(135deg, #ff7a00 0%, #ff9c33 40%, #ffb15d 100%);
     --sidebar-gradient:linear-gradient(180deg, #ffffff 0%, #fefaf5 100%);
 
-    --bg:#f8f8f8;
-    --card:#ffffff;
-    --card-hover:#fafafa;
+    /* ── Surfaces ── */
+    --bg:#f8f8f8;              /* app background */
+    --bg-subtle:#f4f4f5;       /* inputs, secondary surfaces (unified) */
+    --card:#ffffff;            /* primary cards */
+    --card-hover:#fafafa;      /* card hover state */
 
-    --text:#232323;
-    --muted:#6b6b6b;
-    --dim:#767676;
+    /* ── Text ── */
+    --text:#232323;            /* primary */
+    --muted:#6b6b6b;           /* secondary */
+    --dim:#767676;             /* tertiary */
 
-    --border:#ececec;
-    --border-light:#f5f5f5;
+    /* ── Borders ── */
+    --border:#ececec;          /* default */
+    --border-light:#f5f5f5;    /* subtle dividers */
+    --border-strong:#d4d4d4;   /* emphasis */
 
+    /* ── Semantic colors ── */
     --green:#3dd68c;
     --red:#e54d4d;
     --gold:#ffc800;
     --silver:#b0b0b0;
     --bronze:#cd7f32;
+    --warning:#f59e0b;
+    --info:#3b82f6;
 
-    --radius:14px;
-    --radius-lg:20px;
-    --shadow:0 10px 30px rgba(0,0,0,.05);
+    /* ── Radius scale (standardized) ── */
+    --radius-sm:8px;           /* badges, chips */
+    --radius:12px;             /* buttons, inputs — DEFAULT */
+    --radius-lg:16px;          /* cards, panels */
+    --radius-xl:20px;          /* modals, hero cards */
+    --radius-pill:999px;       /* pills, round badges */
+
+    /* ── Shadow scale ── */
     --shadow-sm:0 2px 8px rgba(0,0,0,.04);
+    --shadow:0 10px 30px rgba(0,0,0,.05);
+    --shadow-lg:0 24px 80px rgba(0,0,0,.15);
     --shadow-orange:0 8px 30px rgba(255,122,0,.12);
+    --shadow-focus:0 0 0 3px var(--orange-glow);  /* focus ring */
 
+    /* ── Spacing scale (8-point grid) ── */
+    --space-1:4px;
+    --space-2:8px;
+    --space-3:12px;
+    --space-4:16px;
+    --space-5:20px;
+    --space-6:24px;
+    --space-8:32px;
+    --space-10:40px;
+
+    /* ── Typography ── */
     --f:'Inter',sans-serif;
+    --f-display:'Orbitron',sans-serif;
     --mono:'JetBrains Mono',monospace;
+    --text-xs:11px;
+    --text-sm:12px;
+    --text-md:13px;
+    --text-base:14px;
+    --text-lg:15px;
+    --text-xl:18px;
+    --text-2xl:24px;
+    --text-3xl:32px;
 
-    /* Legacy aliases for auth.css / profile.css / animations.css compatibility */
-    --accent:#ff7a00;
-    --accentL:#ffb15d;
-    --accentGlow:rgba(255,122,0,.18);
-    --bg2:#f0f0f0;
-    --card2:#fafafa;
-    --rim:#ececec;
-    --rim2:#e0e0e0;
-    --text2:#6b6b6b;
-    --text3:#767676;
-    --r:12px;
-    --rl:16px;
+    /* ── Motion ── */
+    --ease:cubic-bezier(.4,0,.2,1);
+    --ease-out:cubic-bezier(.16,1,.3,1);
+    --dur-fast:.15s;
+    --dur:.25s;
+    --dur-slow:.4s;
+
+    /* ════════════════════════════════════════════════════════════════════════
+       LEGACY ALIASES — map old token names → new system.
+       Do NOT remove; auth.css / profile.css / animations.css depend on them.
+       ════════════════════════════════════════════════════════════════════════ */
+    --accent:#ff7a00;          /* = --orange */
+    --accentL:#ffb15d;         /* = --orange-light */
+    --accentGlow:rgba(255,122,0,.18);  /* = --orange-glow */
+    --bg2:var(--bg-subtle);    /* unified (was #f0f0f0) */
+    --card2:#fafafa;           /* = --card-hover */
+    --rim:var(--border);       /* = --border */
+    --rim2:var(--border-strong); /* was #e0e0e0 */
+    --text2:var(--muted);      /* = --muted */
+    --text3:var(--dim);        /* = --dim */
+    --r:12px;                  /* = --radius */
+    --rl:16px;                 /* = --radius-lg */
 }
 
 html{scroll-behavior:smooth}
@@ -295,7 +347,8 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
     color:var(--text);outline:none;transition:all .25s ease;margin-bottom:14px;
     background:var(--bg);
 }
-.maps input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,122,0,.1)}
+.maps input:focus{border-color:var(--orange);box-shadow:var(--shadow-focus)}
+.maps input:focus-visible{border-color:var(--orange);box-shadow:var(--shadow-focus);outline:none}
 .maps input::placeholder{color:var(--dim)}
 
 .map-list{flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
@@ -394,7 +447,8 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
     border:1px solid var(--border);font-family:var(--f);font-size:13px;
     color:var(--text);outline:none;background:var(--card);transition:all .25s ease;
 }
-.search-input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,122,0,.1)}
+.search-input:focus{border-color:var(--orange);box-shadow:var(--shadow-focus)}
+.search-input:focus-visible{border-color:var(--orange);box-shadow:var(--shadow-focus);outline:none}
 .search-input::placeholder{color:var(--dim)}
 
 /* ── FEED ── */
@@ -474,8 +528,9 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 /* ── COMPARE ── */
 .cmp-row{display:flex;gap:12px;margin-bottom:16px}
 .cmp-input{flex:1;position:relative}
-.cmp-input input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;color:var(--text);font-family:var(--f);font-size:13px;outline:none;transition:all .25s ease}
-.cmp-input input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,122,0,.1)}
+.cmp-input input{width:100%;background:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;color:var(--text);font-family:var(--f);font-size:13px;outline:none;transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.cmp-input input:focus{border-color:var(--orange);box-shadow:var(--shadow-focus)}
+.cmp-input input:focus-visible{border-color:var(--orange);box-shadow:var(--shadow-focus);outline:none}
 .cmp-input input::placeholder{color:var(--dim)}
 .cmp-results{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);z-index:20;overflow:hidden;margin-top:4px;box-shadow:var(--shadow)}
 .cmp-result{padding:9px 12px;cursor:pointer;font-size:13px;transition:all .15s;color:var(--text)}
@@ -533,8 +588,10 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 .auth-form{padding:0 28px 28px}
 .form-group{margin-bottom:14px}
 .form-group label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
-.form-group input{width:100%;padding:10px 14px;border-radius:var(--radius);border:1px solid var(--border);font-family:var(--f);font-size:14px;color:var(--text);outline:none;background:var(--bg);transition:all .25s ease}
-.form-group input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,122,0,.1)}
+.form-group input{width:100%;padding:10px 14px;border-radius:var(--radius);border:1px solid var(--border);font-family:var(--f);font-size:14px;color:var(--text);outline:none;background:var(--bg-subtle);transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.form-group input:focus{border-color:var(--orange);box-shadow:var(--shadow-focus)}
+.form-group input:focus-visible{border-color:var(--orange);box-shadow:var(--shadow-focus);outline:none}
+.form-group input::placeholder{color:var(--dim)}
 
 /* ── PROFILE PAGE ── */
 .profile-layout{display:grid;grid-template-columns:320px 1fr;gap:20px;align-items:start;margin-left:260px;padding:36px 40px 80px}
@@ -736,16 +793,106 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 }
 
 /* ── BUTTON EFFECTS ── */
-button,.share-btn,.gg-btn,.runs-btn,.modal-close,.login-btn,.login-btn-sidebar,.user-badge,.nav-item,.tab-btn,.mode-btn,.dropdown-item,.see-more-btn,.run-replay,.profile-edit-btn,.auth-btn{transition:all .25s cubic-bezier(.4,0,.2,1);cursor:pointer}
+button,.share-btn,.gg-btn,.runs-btn,.modal-close,.login-btn,.login-btn-sidebar,.user-badge,.nav-item,.tab-btn,.mode-btn,.dropdown-item,.see-more-btn,.run-replay,.profile-edit-btn,.auth-btn{transition:all var(--dur) var(--ease);cursor:pointer}
 button:hover,.share-btn:hover,.gg-btn:hover,.runs-btn:hover,.modal-close:hover,.login-btn:hover,.login-btn-sidebar:hover,.user-badge:hover,.tab-btn:hover,.mode-btn:hover,.dropdown-item:hover,.see-more-btn:hover,.run-replay:hover,.profile-edit-btn:hover,.auth-btn:hover{transform:translateY(-1px)}
 button:active,.share-btn:active,.gg-btn:active,.runs-btn:active,.modal-close:active,.login-btn:active,.user-badge:active,.tab-btn:active,.mode-btn:active,.dropdown-item:active,.see-more-btn:active,.run-replay:active{transform:translateY(0) scale(.97);transition-duration:.1s}
+
+/* ════════════════════════════════════════════════════════════════════════
+   BUTTON UTILITY CLASSES — Design System
+   Additive: existing button classes (.login-btn, .runs-btn, .auth-btn, etc.)
+   keep working. These 3 variants are for NEW components and for opting-in
+   to the unified look. Usage: <button class="btn-primary">…</button>
+   ════════════════════════════════════════════════════════════════════════ */
+.btn-primary{
+    display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);
+    padding:10px 16px;border-radius:var(--radius);border:none;
+    background:var(--orange-gradient-subtle);color:#fff;
+    font-family:var(--f);font-size:var(--text-base);font-weight:600;
+    cursor:pointer;white-space:nowrap;
+    box-shadow:var(--shadow-orange);
+    transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease),filter var(--dur) var(--ease);
+}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(255,122,0,.3);filter:brightness(1.05)}
+.btn-primary:active{transform:translateY(0) scale(.97);transition-duration:.1s}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none;filter:none;box-shadow:var(--shadow-sm)}
+.btn-primary:focus-visible{outline:none;box-shadow:var(--shadow-focus),var(--shadow-orange)}
+
+.btn-secondary{
+    display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);
+    padding:10px 16px;border-radius:var(--radius);
+    border:1px solid var(--border);background:var(--card);color:var(--text);
+    font-family:var(--f);font-size:var(--text-base);font-weight:500;
+    cursor:pointer;white-space:nowrap;
+    transition:border-color var(--dur) var(--ease),background var(--dur) var(--ease),transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);
+}
+.btn-secondary:hover{border-color:var(--orange);background:var(--orange-pale);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.btn-secondary:active{transform:translateY(0) scale(.97);transition-duration:.1s}
+.btn-secondary:focus-visible{outline:none;border-color:var(--orange);box-shadow:var(--shadow-focus)}
+
+.btn-ghost{
+    display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);
+    padding:8px 12px;border-radius:var(--radius);
+    border:1px solid transparent;background:transparent;color:var(--muted);
+    font-family:var(--f);font-size:var(--text-base);font-weight:500;
+    cursor:pointer;white-space:nowrap;
+    transition:background var(--dur) var(--ease),color var(--dur) var(--ease),transform var(--dur) var(--ease);
+}
+.btn-ghost:hover{background:var(--bg-subtle);color:var(--text);transform:translateY(-1px)}
+.btn-ghost:active{transform:translateY(0) scale(.97);transition-duration:.1s}
+.btn-ghost:focus-visible{outline:none;background:var(--orange-pale);color:var(--orange);box-shadow:var(--shadow-focus)}
+
+/* ════════════════════════════════════════════════════════════════════════
+   POLISH — focus-visible, scrollbars, entrance transitions, reduced motion
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* Keyboard-only focus ring (mouse clicks don't show it — cleaner UX) */
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+/* Unified custom scrollbars across all scrollable areas */
+*{scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+*::-webkit-scrollbar{width:6px;height:6px}
+*::-webkit-scrollbar-track{background:transparent}
+*::-webkit-scrollbar-thumb{background:var(--border);border-radius:var(--radius-pill)}
+*::-webkit-scrollbar-thumb:hover{background:var(--border-strong)}
+
+/* Entrance transitions — subtle fade+rise for dynamically rendered content */
+@keyframes tfh-fade-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes tfh-scale-in{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.tfh-fade-in{animation:tfh-fade-in var(--dur-slow) var(--ease-out) both}
+.tfh-scale-in{animation:tfh-scale-in var(--dur) var(--ease-out) both}
+
+/* Modal entrance — consistent open animation for all modals */
+.modal-overlay.active .modal{animation:tfh-scale-in var(--dur) var(--ease-out) both}
+
+/* Stagger helper for list items (apply .tfh-stagger to parent, items get delay) */
+.tfh-stagger>*:nth-child(1){animation-delay:0ms}
+.tfh-stagger>*:nth-child(2){animation-delay:30ms}
+.tfh-stagger>*:nth-child(3){animation-delay:60ms}
+.tfh-stagger>*:nth-child(4){animation-delay:90ms}
+.tfh-stagger>*:nth-child(5){animation-delay:120ms}
+.tfh-stagger>*:nth-child(6){animation-delay:150ms}
+.tfh-stagger>*:nth-child(n+7){animation-delay:180ms}
+
+/* Empty state polish — consistent "no data" look */
+.empty-state{padding:var(--space-10) var(--space-6);text-align:center}
+.empty-state h3{font-size:var(--text-xl);color:var(--text);margin-bottom:var(--space-2);font-weight:600}
+.empty-state p{color:var(--muted);font-size:var(--text-md)}
+
+/* Respect reduced-motion preference (accessibility) */
+@media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    .tfh-fade-in,.tfh-scale-in,.modal-overlay.active .modal{animation:none!important}
+}
 
 /* ── RUNS PAGE ── */
 .runs-controls{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}
 .runs-ctrl{display:flex;flex-direction:column;gap:8px}
 .runs-ctrl-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.3px;font-weight:600}
-.runs-controls input{width:140px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px;color:var(--text);font-family:var(--f);font-size:13px;outline:none;transition:all .25s ease}
-.runs-controls input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,122,0,.1)}
+.runs-controls input{width:140px;background:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px;color:var(--text);font-family:var(--f);font-size:13px;outline:none;transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.runs-controls input:focus{border-color:var(--orange);box-shadow:var(--shadow-focus)}
+.runs-controls input:focus-visible{border-color:var(--orange);box-shadow:var(--shadow-focus);outline:none}
 .runs-btn{padding:10px 14px;border-radius:var(--radius);background:var(--orange-gradient-subtle);color:#fff;border:none;cursor:pointer;font-family:var(--f);font-size:13px;font-weight:700;transition:all .25s ease;white-space:nowrap;box-shadow:var(--shadow-orange)}
 .runs-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,122,0,.3)}
 .runs-body{padding:10px 0}

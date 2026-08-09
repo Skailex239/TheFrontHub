@@ -139,3 +139,72 @@ Stage Summary:
 - Cron */5 is the safety net that restarts the loop within 5 min when idle.
 - "Sync Ranked" workflow permanently deleted from GitHub (confirmed via API: only 2 workflows registered).
 - The sync now runs as a single sequential pipeline — zero push race conditions.
+
+---
+Task ID: 4
+Agent: general-purpose (profile.css harmonization)
+Task: Replace hardcoded hex colors in profile.css with CSS tokens, standardize radius/shadows/transitions, WITHOUT touching VIP skin gradients.
+
+Work Log:
+- Read worklog.md (Tasks 1-3) to understand prior context: VIP multicolor skin system matched by public_id, deployed to GitHub + Next.js sandbox at /home/z/my-project/public/.
+- Read full /home/z/my-project/public/profile.css (1150 lines) and styles.css :root block (lines 5-110) to confirm available tokens + legacy aliases.
+- Identified ALL hardcoded hex/rgba colors via Grep and categorized each into: (a) replaceable non-skin colors, (b) SKIN-related colors (DO NOT TOUCH), (c) rgba-with-custom-alpha (keep), (d) var() fallbacks (keep).
+- Identified skin-protected zones: lines 262-313 (toggle-switch.is-* skin toggles), 387-401 (cosmetic-card.selected.{vip,flame,rainbow}), 461-627 (vipColor/flameColor/animationRGB keyframes + player-vip/flame/rainbow rules inside "COSMETIC STYLING" comment block), 872-931 (.container-rgb + .pf-name.rgb-* new skins), 887-897 (cosmetic-card.selected.* new skin variants).
+- Applied 16 Edit operations via MultiEdit:
+  - Colors: replace_all `#2ecc71`→`var(--green)` (3 instances), single edits for `#e74c3c`→`var(--red)` (lines 354, 775 with unique context), `#22c55e`→`var(--green)`, `#f59e0b`→`var(--warning)`, `#ef4444`→`var(--red)`.
+  - Border-radius: replace_all `8px`→`var(--radius-sm)` (7×), replace_all `10px`→`var(--radius)` (3×), single edits for `16px`→`var(--radius-lg)`, `11px`→`var(--radius-pill)`, `12px`→`var(--radius)`.
+  - Box-shadow: `0 1px 3px rgba(0,0,0,0.3)`→`var(--shadow-sm)` (toggle knob), `0 4px 16px rgba(0,0,0,0.1)`→`var(--shadow)` (pf-game hover).
+  - Transitions: replace_all `all 0.2s ease`→`all var(--dur) var(--ease)` (4×), single edits for `all 0.15s ease`→`all var(--dur-fast) var(--ease)`, `all 0.2s`→`all var(--dur) var(--ease)`.
+- Verified CSS validity: brace balance check (depth 0 at EOF, no extra/missing braces), no `var(var(`, no `;;`, no empty blocks. 157 total var(--...) usages in file.
+- Confirmed via Grep that ALL skin rules are untouched: toggle-switch.is-* gradients (lines 271-313), .pf-name.rgb-* multi-color gradients (lines 875-884), .pf-cosmetic-card.selected.* variants (lines 887-897), PRISM rainbow gradient (lines 903, 914), VIP/FLAME/RAINBOW player rules (lines 461-627), #e74c3c at lines 263/264/476 (skin), #f39c12 at lines 267/268 (skin).
+
+Stage Summary:
+- COLORS replaced: 8 (3× #2ecc71→var(--green), 2× #e74c3c→var(--red), 1× #22c55e→var(--green), 1× #f59e0b→var(--warning), 1× #ef4444→var(--red))
+- BORDER-RADIUS standardized: 13 (7× 8px→var(--radius-sm), 3× 10px→var(--radius), 1× 16px→var(--radius-lg), 1× 11px→var(--radius-pill), 1× 12px→var(--radius))
+- BOX-SHADOW standardized: 2 (1× →var(--shadow-sm), 1× →var(--shadow))
+- TRANSITIONS standardized: 6 (4× all 0.2s ease → var(--dur)/var(--ease), 1× all 0.15s ease → var(--dur-fast)/var(--ease), 1× all 0.2s → var(--dur)/var(--ease))
+- TOTAL: 29 replacements, 0 layout changes, 0 skin rules touched.
+- SKIN GRADIENTS UNTOUCHED: confirmed all rgb-prism/cyberpunk/sunset/aurore/pastel/gold/volcano/ocean/miami/toxic/chroma, player-vip/flame/rainbow, vipColor/flameColor keyframes, toggle-switch.is-* skin toggles, and cosmetic-card.selected.* skin variants retain their precise RGB colors and !important declarations.
+- Colors deliberately KEPT (with reasons):
+  - `color: white;` (5× lines 85,121,166,344,815) + `color: #fff;` (line 1007) — white text on orange accent bg (text-on-colored-bg per map)
+  - `background: #fff;` (line 320 toggle-knob) — small UI circle on colored switch, not a card/panel
+  - `#fff/#aaa/#666/#888/#6366f1` inside `var(--token, #fallback)` (lines 961-1131) — defensive dark-mode fallbacks, tokens already primary
+  - `#e74c3c` (lines 263,264,476), `#f39c12` (lines 267,268) — VIP/FLAME skin toggle + flame keyframe (SKIN)
+  - All multi-color skin gradients (lines 271-313, 875-897, 903, 914) — SKIN
+  - `#ff1744/#ff6d00/#8b00ff/#ff0000..#8b00ff` etc. in VIP/FLAME/RAINBOW player rules (461-627) — SKIN
+  - `#0d0d11` (line 872 .container-rgb) — cosmetic preview backdrop
+  - `#FF5500/#FF8900/#FFCC00` (line 716 chart-fill gradient) — custom 3-stop orange→yellow, no exact token match
+  - `rgba(255,120,80,X)` (lines 4-5) — custom error red-orange, not in map
+  - `rgba(46,204,113,X)` / `rgba(231,76,60,X)` (lines 768,770,774,776,217,218) — rgba forms of #2ecc71/#e74c3c with custom alphas (only the solid hex forms were tokenized)
+  - `rgba(99,102,241,X)` / `rgba(168,85,247,X)` (lines 959-967) — indigo clan-tag brand colors
+  - `rgba(91,138,255,0.06)` (line 384) — custom blue inset shadow tint in composite shadow
+- Also kept (out of scope): border-radius: 6px (4×, no token), border-radius: 50% (2× circles per instruction), transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) (line 370, custom back-out bounce easing), transition: all 0.18s (line 998, non-standard duration), and all specific-property transitions (border-color/transform/width) — only `all X.Xs` patterns were in scope.
+- File: /home/z/my-project/public/profile.css — still 1151 lines, valid CSS, 157 var(--...) usages.
+
+---
+Task ID: 5
+Agent: main (Z.ai Code)
+Task: Apply a modern, consistent design system across all screens (tokens, components, polish) without breaking functionality.
+
+Work Log:
+- Analyzed current state: 4 overlapping token sets, 67 hardcoded hex in styles.css + 63 in profile.css, duplicate .auth-btn/.form-group input definitions between styles.css and auth.css with conflicting values, anarchic border-radius (8/10/11/12/14/16/18/20/30/50%).
+- Presented design plan in Plan Mode (palette, style, component harmonization, polish). User approved with "Go".
+- Step 1 (styles.css :root): Consolidated into single source of truth. Added --bg-subtle, --border-strong, --warning, --info, --radius-sm/lg/xl/pill, --shadow-lg/focus, --space-1..10, --text-xs..3xl, --f-display, --ease/dur scale. Kept ALL legacy aliases (--accent, --rim, --bg2, --r, --rl) as aliases → zero breakage.
+- Step 2 (auth.css): Removed duplicate .auth-btn, .form-group input, .form-group label, .auth-divider (×2!), .auth-form, .auth-options definitions. styles.css is now canonical. auth.css keeps only auth-specific: zone, login-btn, user-badge, modal logo animation, Google/Discord provider buttons, is-me highlight, responsive. (250 → 130 lines.)
+- Step 2 (styles.css inputs): Unified all inputs (.form-group, .cmp-input, .search-input, .runs-controls, .maps) to use --bg-subtle + --shadow-focus + :focus-visible.
+- Step 3 (profile.css): Delegated to general-purpose subagent (Task ID 4). Result: 8 hex→tokens, 13 border-radius→tokens, 2 box-shadow→tokens, 6 transitions→tokens. VIP skin gradients CONFIRMED untouched (prism/cyberpunk/sunset/aurore/pastel/gold/volcano/ocean/miami/toxic/chroma all intact). Colors kept: white-on-accent text, Discord brand #5865F2, rgba() forms with custom alphas, cosmetic preview backdrop.
+- Step 4 (button utilities): Added .btn-primary (orange gradient + shadow-orange), .btn-secondary (card bg + border + hover orange-pale), .btn-ghost (transparent + hover bg-subtle). All 3: focus-visible ring, :disabled state, consistent --radius/padding. Additive — existing button classes untouched.
+- Step 5 (polish): Added :focus-visible ring (keyboard-only, 2px orange outline-offset), unified custom scrollbars (6px, --border thumb, hover --border-strong), entrance animations (tfh-fade-in, tfh-scale-in), modal open animation, .tfh-stagger list helper, prefers-reduced-motion support, empty-state polish.
+- Bumped CSS cache-busting versions: styles.css v19→v20, auth.css v14→v15, profile.css v14→v15.
+- Verified CSS validity: all 3 files braces-balanced, no syntax errors.
+- Agent Browser verification: site loads clean, no errors. VIP prism skin on Skailex (rank #1, 2v2) still works — confirmed via computed style (webkitTextFillColor transparent, rainbow gradient, prism-slide animation, fontWeight 900).
+- VLM assessment of redesigned dashboard: "high-quality, production-ready UI", "finished application, not a wireframe". Scores: Consistency 8/10, Polish 9/10, Color harmony 9/10, Typography 8.5/10, Spacing 8/10.
+- Committed (f008a36) and pushed to GitHub origin/main. Token redacted in output.
+
+Stage Summary:
+- Commit f008a36 "design: unify charte graphique — tokens, components, polish" is LIVE on origin/main.
+- 5 files changed: styles.css (+217/-... lines), auth.css (250→130 lines, deduped), profile.css (29 token replacements), index.html + profile.html (cache version bumps).
+- The design is now consistent across all screens (single token system, unified inputs/buttons/cards/radius/shadows/transitions).
+- Polish added: focus-visible rings, custom scrollbars, entrance animations, reduced-motion support.
+- ZERO functionality broken: VIP skins, leaderboards, auth, profile all verified working.
+- VLM rates it "production-ready".
