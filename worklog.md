@@ -461,3 +461,24 @@ Stage Summary:
   3. ✅ Ranked leaderboard players now link DIRECTLY to their public profile page (profile.html?player=NAME&publicId=PID) with full stats, ELO, recent games — no more modal.
 - BONUS: Added OpenFront API proxy route so profile stats actually load in dev environment.
 - NOT PUSHED to GitHub (no token). Commit 57d0a32 ready locally. Changes visible in preview.
+
+---
+Task ID: 10 (final)
+Agent: main (Z.ai Code)
+Task: Push the local commit to GitHub (user provided a GitHub token).
+
+Work Log:
+- User provided GitHub Personal Access Token (ghp_...).
+- Set remote URL with token embedded.
+- First push rejected: remote had advanced (sync workflow kept committing — ranked.json at 21:37, 21:32, 21:27 — loop still running healthy).
+- Ran `git pull --rebase origin main` → rebased commit 57d0a32 onto 1f9d76f (new remote HEAD) → became fb982f3.
+- Pushed successfully: `1f9d76f..fb982f3 main -> main`.
+- Removed token from remote URL (security hygiene).
+- Verified: `git log origin/main` shows fb982f3 "feat: remove Statistiques tab + fix public profile redirect + ranked→profile link" at HEAD.
+- Confirmed sync workflow still running: ranked.json commits at 21:27, 21:32, 21:37 (~5 min apart — loop healthy).
+
+Stage Summary:
+- Commit fb982f3 LIVE on origin/main (GitHub).
+- All 3 user requests deployed to production GitHub Pages (will be live after next Pages build, ~1-2 min).
+- Sync loop unaffected — still pushing ranked.json every ~5 min.
+- Token scrubbed from git config.
