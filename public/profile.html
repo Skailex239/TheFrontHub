@@ -287,59 +287,92 @@
       margin: 0 0 16px 0;
     }
     .pf-games-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       margin-bottom: 16px;
     }
     .pf-game-card {
-      border: 2px solid #ff6b6b;
-      border-radius: 6px;
-      padding: 12px;
-      background: var(--card);
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid #ef4444;
+      border-radius: 8px;
+      transition: background 0.18s ease, transform 0.18s ease;
     }
-    .pf-game-card.win { border-color: #4caf50; }
-    .pf-game-id {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--text);
-      margin-bottom: 4px;
+    .pf-game-card:hover {
+      background: var(--bg2);
+      transform: translateX(2px);
     }
+    .pf-game-card.win { border-left-color: #10b981; }
+    .pf-game-card.loss { border-left-color: #ef4444; }
     .pf-game-result {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 4px;
+      flex-shrink: 0;
+      min-width: 84px;
+      text-align: center;
+      padding: 6px 10px;
+      border-radius: 6px;
       color: #fff;
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      width: fit-content;
-      margin-bottom: 6px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
     }
-    .pf-game-card.loss .pf-game-result { background: #ff6b6b; }
-    .pf-game-card.win .pf-game-result { background: #4caf50; }
-    .pf-game-meta {
-      font-size: 13px;
+    .pf-game-card.win .pf-game-result { background: #10b981; }
+    .pf-game-card.loss .pf-game-result { background: #ef4444; }
+    .pf-game-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .pf-game-map {
+      font-weight: 600;
+      font-size: 14px;
       color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pf-game-ranked {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: 4px;
+      background: var(--accent, #f97316);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .pf-game-meta {
+      font-size: 12px;
+      color: var(--text3);
       line-height: 1.4;
     }
-    .pf-game-pts {
-      font-size: 13px;
-      font-weight: 700;
-      color: #4caf50;
-      margin-top: 2px;
-    }
     .pf-game-replay {
-      color: #2196f3;
-      text-decoration: underline;
-      font-size: 13px;
-      margin-top: 6px;
-      cursor: pointer;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--text3);
+      text-decoration: none;
+      transition: all 0.18s ease;
     }
-    .pf-game-replay:hover { color: #1976d2; }
+    .pf-game-replay:hover {
+      background: var(--accent, #f97316);
+      border-color: var(--accent, #f97316);
+      color: #fff;
+    }
     .pf-show-all {
       width: 100%;
       padding: 10px 16px;
@@ -587,7 +620,7 @@
 <script src="i18n.js"></script>
 <script src="toast.js?v=2" defer></script>
 <script src="animations.js" defer></script>
-<script src="profile.js?v=22" type="module"></script>
+<script src="profile.js?v=23" type="module"></script>
 
 </body>
 </html>

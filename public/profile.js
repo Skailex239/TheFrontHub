@@ -341,6 +341,12 @@ async function loadStats(publicId) {
   // Kick off ELO lookup (ranked.json) in parallel
   const eloPromise = getRankedEntry(publicId);
 
+  // Kick off recent games fetch in parallel (separate endpoint)
+  // /public/player/{id} returns aggregated stats only (no games array).
+  // /public/player/{id}/games returns the actual recent games list with
+  // result (victory/defeat) already included — no need for per-game fetch.
+  const recentGamesPromise = fetchRecentGames(publicId);
+
   let playerData;
   try {
     playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
@@ -358,7 +364,9 @@ async function loadStats(publicId) {
     return;
   }
 
-  const games = Array.isArray(playerData.games) ? playerData.games : [];
+  // NOTE: /public/player/{id} no longer returns a `games` array.
+  // Recent games come from the separate /games endpoint (recentGamesPromise).
+  const games = [];
   const stats = computeStats(games, playerData.stats || {});
 
   // Compute week stats (games in last 7 days)
@@ -412,8 +420,36 @@ async function loadStats(publicId) {
     }
   }
 
-  // Recent games (last 5) — fetch each game to determine win/loss
-  renderRecentGames(games, publicId);
+  // Recent games — fetched from /public/player/{id}/games (separate endpoint).
+  // The result field (victory/defeat) is already included, no per-game fetch needed.
+  try {
+    const recentGames = await recentGamesPromise;
+    renderRecentGames(recentGames, publicId);
+  } catch (e) {
+    console.error("[profile] recent games fetch failed:", e);
+    const c = document.getElementById("profile-recent-games");
+    if (c) c.innerHTML = `<div class="pf-empty">Impossible de charger les parties récentes.</div>`;
+  }
+}
+
+/**
+ * Fetch recent games for a player from the /public/player/{id}/games endpoint.
+ * Returns up to 10 games with result (victory/defeat) already included.
+ * Supports cursor pagination to fetch more if needed.
+ */
+async function fetchRecentGames(publicId, maxPages = 1) {
+  const all = [];
+  let cursor = null;
+  for (let page = 0; page < maxPages; page++) {
+    const url = `/public/player/${encodeURIComponent(publicId)}/games` +
+      (cursor ? `?cursor=${encodeURIComponent(cursor)}` : "");
+    const data = await fetchOpenFront(url);
+    const results = Array.isArray(data?.results) ? data.results : [];
+    all.push(...results);
+    cursor = data?.nextCursor;
+    if (!cursor || results.length === 0) break;
+  }
+  return all;
 }
 
 function setText(id, text) {
@@ -521,63 +557,78 @@ function hideError() {
   if (el) el.style.display = "none";
 }
 
-/* ── Recent games (last 5) ── */
+/* ── Recent games ── */
 
-async function renderRecentGames(games, publicId) {
+/**
+ * Render recent games from /public/player/{id}/games endpoint.
+ * Each game already includes a `result` field ("victory" | "defeat" | other)
+ * so no per-game fetch is needed.
+ *
+ * Game object structure:
+ *   { gameId, start, durationSeconds, map, mode, type, playerTeams,
+ *     rankedType, result, totalPlayers, username, clanTag }
+ */
+function renderRecentGames(games, publicId) {
   const container = document.getElementById("profile-recent-games");
   if (!container) return;
 
-  // Sort by start date desc, take last 5
+  // Sort by start date desc, take last 10 (API returns 10 per page)
   const sorted = games
     .slice()
     .sort((a, b) => new Date(b.start || 0).getTime() - new Date(a.start || 0).getTime())
-    .slice(0, 5);
+    .slice(0, 10);
 
   if (sorted.length === 0) {
     container.innerHTML = `<div class="pf-empty">Aucune partie récente.</div>`;
     return;
   }
 
-  // Initial render with loading result badges
-  container.innerHTML = sorted.map((g, i) => `
-    <div class="pf-game-card loss" data-game-idx="${i}">
-      <div class="pf-game-id">${esc(g.gameId || "—")}</div>
-      <div class="pf-game-result" data-result>…</div>
-      <div class="pf-game-meta">${formatDateTime(g.start)}</div>
-      <div class="pf-game-meta">${esc(g.map || "Carte inconnue")}</div>
-      <div class="pf-game-meta">${esc(g.mode || "—")}</div>
-      <a class="pf-game-replay" href="https://openfront.io/game/${encodeURIComponent(g.gameId)}" target="_blank" rel="noopener">Watch replay</a>
-    </div>
-  `).join("");
+  container.innerHTML = sorted.map((g) => {
+    const isWin = g.result === "victory";
+    const resultClass = isWin ? "win" : "loss";
+    const resultLabel = isWin ? "VICTOIRE" : (g.result === "defeat" ? "DÉFAITE" : (g.result || "—"));
+    const duration = g.durationSeconds ? formatDuration(g.durationSeconds) : "—";
+    const modeLabel = formatGameMode(g);
+    const mapName = g.map || "Carte inconnue";
+    const rankedBadge = g.rankedType && g.rankedType !== "unranked"
+      ? `<span class="pf-game-ranked">${esc(g.rankedType)}</span>` : "";
+    const totalPlayers = g.totalPlayers != null ? `${g.totalPlayers} joueurs` : "";
 
-  // Fetch each game's result in parallel
-  sorted.forEach(async (g, i) => {
-    const card = container.querySelector(`[data-game-idx="${i}"]`);
-    if (!card) return;
-    const resultEl = card.querySelector("[data-result]");
-    let isWin = null;
-    try {
-      isWin = await checkGameWin(g.gameId, g.clientId);
-    } catch (e) {
-      console.warn("[profile] game lookup failed:", g.gameId, e);
-    }
-    if (resultEl) {
-      if (isWin === true) {
-        resultEl.textContent = "WIN";
-        card.classList.remove("loss");
-        card.classList.add("win");
-        // Add points badge for wins
-        const ptsEl = document.createElement("div");
-        ptsEl.className = "pf-game-pts";
-        ptsEl.textContent = "+4 pts";
-        card.insertBefore(ptsEl, card.querySelector(".pf-game-replay"));
-      } else if (isWin === false) {
-        resultEl.textContent = "LOSS";
-      } else {
-        resultEl.textContent = "N/A";
-      }
-    }
-  });
+    return `
+      <div class="pf-game-card ${resultClass}">
+        <div class="pf-game-result">${resultLabel}</div>
+        <div class="pf-game-info">
+          <div class="pf-game-map">${esc(mapName)} ${rankedBadge}</div>
+          <div class="pf-game-meta">${esc(modeLabel)}${totalPlayers ? ' · ' + esc(totalPlayers) : ''} · ${duration}</div>
+          <div class="pf-game-meta">${formatDateTime(g.start)}</div>
+        </div>
+        <a class="pf-game-replay" href="https://openfront.io/game/${encodeURIComponent(g.gameId)}" target="_blank" rel="noopener" title="Voir le replay">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </a>
+      </div>
+    `;
+  }).join("");
+}
+
+/** Format duration in seconds as M:SS or H:MM:SS */
+function formatDuration(seconds) {
+  const s = Math.floor(Number(seconds) || 0);
+  if (s < 60) return `${s}s`;
+  const m = Math.floor(s / 60);
+  const rs = s % 60;
+  if (m < 60) return `${m}:${String(rs).padStart(2, "0")}`;
+  const h = Math.floor(m / 60);
+  const rm = m % 60;
+  return `${h}:${String(rm).padStart(2, "0")}:${String(rs).padStart(2, "0")}`;
+}
+
+/** Build a human-readable game mode label from the game object */
+function formatGameMode(g) {
+  const parts = [];
+  if (g.type) parts.push(g.type);
+  if (g.mode) parts.push(g.mode === "Free For All" ? "FFA" : g.mode);
+  if (g.playerTeams && g.playerTeams !== "null") parts.push(g.playerTeams);
+  return parts.join(" · ") || "—";
 }
 
 /**
