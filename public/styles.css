@@ -1149,3 +1149,588 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   align-items: center;
   font-size: 14px;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DESIGN ENHANCEMENT LAYER v2 — Visible polish & modern feel
+   Overrides existing component styles with enhanced versions.
+   Does NOT touch VIP skin rules (.rgb-*, .is-prism, player-vip, etc.)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── App background: subtle warm gradient mesh ── */
+body{
+    background:
+        radial-gradient(ellipse 800px 600px at 0% 0%, rgba(255,122,0,.04) 0%, transparent 50%),
+        radial-gradient(ellipse 600px 400px at 100% 100%, rgba(255,177,93,.03) 0%, transparent 50%),
+        var(--bg);
+    background-attachment:fixed;
+}
+
+/* ── SIDEBAR: Enhanced depth + active indicator bar ── */
+.sidebar{
+    background:linear-gradient(180deg, #ffffff 0%, #fefaf5 60%, #fdf6ee 100%);
+    border-right:1px solid var(--border);
+    box-shadow:4px 0 24px rgba(0,0,0,.04);
+    backdrop-filter:none;
+}
+.sidebar::after{
+    content:'';position:absolute;top:0;right:0;bottom:0;width:1px;
+    background:linear-gradient(180deg, transparent, var(--orange-glow), transparent);
+    pointer-events:none;
+}
+
+/* Nav items — left accent bar on active + smoother hover */
+.nav-item{
+    position:relative;
+    border-radius:var(--radius);
+    padding:12px 16px;
+    color:var(--muted);
+    transition:all var(--dur) var(--ease);
+}
+.nav-item::before{
+    content:'';position:absolute;left:0;top:50%;transform:translateY(-50%) scaleY(0);
+    width:3px;height:60%;border-radius:0 3px 3px 0;
+    background:var(--orange-gradient);
+    transition:transform var(--dur) var(--ease-out);
+}
+.nav-item:hover{
+    background:var(--orange-pale);
+    color:var(--orange);
+    transform:translateX(2px);
+}
+.nav-item:hover .icon{transform:scale(1.1)}
+.nav-item.active{
+    background:var(--orange-gradient-subtle);
+    color:#fff;
+    font-weight:600;
+    box-shadow:0 4px 16px rgba(255,122,0,.25);
+}
+.nav-item.active::before{transform:translateY(-50%) scaleY(1)}
+.nav-item.active .icon{transform:scale(1.05)}
+.nav-item .icon{transition:transform var(--dur) var(--ease-out)}
+
+/* Profile card — enhanced hover */
+.profile-card{
+    border-radius:var(--radius-lg);
+    transition:all var(--dur) var(--ease);
+}
+.profile-card:hover{
+    border-color:var(--orange);
+    box-shadow:var(--shadow-sm), 0 0 0 3px var(--orange-glow);
+    transform:translateY(-1px);
+}
+
+/* ── TOPBAR: Better title gradient + game version pill ── */
+.topbar h1{
+    background:linear-gradient(135deg, var(--text) 0%, var(--orange-deep) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+.game-version{
+    background:var(--bg-subtle);
+    padding:4px 10px;
+    border-radius:var(--radius-pill);
+    border:1px solid var(--border);
+}
+
+/* ── STAT CARDS: Gradient top accent + icon background circle ── */
+.card{
+    border:1px solid var(--border);
+    transition:all var(--dur-slow) var(--ease-out);
+    position:relative;
+}
+.card::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    background:var(--orange-gradient);
+    border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+    opacity:0;transition:opacity var(--dur) var(--ease);
+}
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 48px rgba(0,0,0,.08), 0 0 0 1px var(--orange-glow);
+    border-color:var(--orange-light);
+}
+.card:hover::before{opacity:1}
+.card .stat-icon{
+    position:absolute;right:20px;top:50%;transform:translateY(-50%);
+    width:48px;height:48px;border-radius:var(--radius);
+    background:var(--orange-pale);
+    display:flex;align-items:center;justify-content:center;
+    opacity:1;
+    transition:all var(--dur) var(--ease);
+}
+.card .stat-icon .icon{
+    width:24px;height:24px;
+    color:var(--orange);
+    opacity:.8;
+}
+.card:hover .stat-icon{
+    background:var(--orange-gradient);
+    transform:translateY(-50%) scale(1.08);
+}
+.card:hover .stat-icon .icon{
+    color:#fff;
+    opacity:1;
+}
+
+/* ── MAP LIST: Enhanced items with left accent ── */
+.map-item{
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+    position:relative;
+    border:1px solid transparent;
+}
+.map-item:hover{
+    background:var(--orange-pale);
+    transform:translateX(3px);
+    border-color:rgba(255,122,0,.15);
+}
+.map-item.active{
+    background:var(--orange-gradient-soft);
+    color:var(--orange);
+    border-left:3px solid var(--orange);
+    padding-left:11px;
+    font-weight:600;
+    box-shadow:0 2px 8px rgba(255,122,0,.08);
+}
+.map-count{
+    border-radius:var(--radius-pill);
+    transition:all var(--dur) var(--ease);
+}
+.map-item:hover .map-count{
+    background:var(--orange);
+    color:#fff;
+}
+.map-item.active .map-count{
+    background:var(--orange);
+    color:#fff;
+    font-weight:700;
+}
+
+/* Maps search input — enhanced focus */
+.maps input{
+    background:var(--bg-subtle);
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+}
+.maps input:focus{
+    border-color:var(--orange);
+    box-shadow:var(--shadow-focus), 0 1px 3px rgba(0,0,0,.03);
+    background:var(--card);
+}
+
+/* ── RUN ROWS: Enhanced hover with left accent + better top-3 ── */
+.run-row{
+    transition:all var(--dur) var(--ease);
+    position:relative;
+    border-radius:0;
+}
+.run-row::before{
+    content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--orange-gradient);
+    transform:scaleY(0);transform-origin:center;
+    transition:transform var(--dur) var(--ease-out);
+}
+.run-row:hover{
+    background:var(--orange-pale);
+}
+.run-row:hover::before{transform:scaleY(1)}
+.run-row.is-me{
+    background:#fff8f0;
+    border-left:3px solid var(--orange);
+}
+.run-row.is-me::before{transform:scaleY(1);background:var(--orange)}
+
+/* Top-3 rows — enhanced medal gradients */
+.run-row:nth-child(1){
+    background:linear-gradient(90deg, rgba(255,200,0,.12) 0%, rgba(255,122,0,.06) 50%, transparent 100%);
+}
+.run-row:nth-child(1):hover{
+    background:linear-gradient(90deg, rgba(255,200,0,.18) 0%, rgba(255,122,0,.10) 50%, transparent 100%);
+}
+.run-row:nth-child(2){
+    background:linear-gradient(90deg, rgba(180,180,180,.08) 0%, transparent 100%);
+}
+.run-row:nth-child(2):hover{
+    background:linear-gradient(90deg, rgba(180,180,180,.12) 0%, transparent 100%);
+}
+.run-row:nth-child(3){
+    background:linear-gradient(90deg, rgba(205,127,50,.08) 0%, transparent 100%);
+}
+.run-row:nth-child(3):hover{
+    background:linear-gradient(90deg, rgba(205,127,50,.12) 0%, transparent 100%);
+}
+
+/* Rank numbers — bigger and bolder for top 3 */
+.run-rank.gold{color:var(--gold);font-size:16px;text-shadow:0 0 12px rgba(255,200,0,.4)}
+.run-rank.silver{color:var(--silver);font-size:15px}
+.run-rank.bronze{color:var(--bronze);font-size:15px}
+
+/* Run replay button — better hover */
+.run-replay{
+    border-radius:var(--radius-sm);
+    transition:all var(--dur) var(--ease);
+}
+.run-replay:hover{
+    background:var(--orange-gradient);
+    color:#fff;
+    border-color:var(--orange);
+    transform:scale(1.1);
+    box-shadow:var(--shadow-orange);
+}
+
+/* GG button — better press feedback */
+.gg-btn{
+    border-radius:var(--radius-pill);
+    transition:all var(--dur) var(--ease);
+}
+.gg-btn:hover{
+    background:var(--orange-gradient);
+    color:#fff;
+    border-color:var(--orange);
+    transform:translateY(-2px) scale(1.05);
+    box-shadow:var(--shadow-orange);
+}
+.gg-btn:active{transform:translateY(0) scale(.95)}
+
+/* Share button — enhanced */
+.share-btn{
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+    border:1px solid transparent;
+}
+.share-btn:hover{
+    background:var(--orange-gradient);
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-orange);
+    border-color:var(--orange);
+}
+.share-btn:active{transform:translateY(0) scale(.97)}
+
+/* ── MODE BUTTONS: Better active state with glow ── */
+.mode-btn{
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+    position:relative;
+    overflow:hidden;
+}
+.mode-btn:hover{
+    color:var(--orange);
+    border-color:var(--orange-light);
+    background:var(--orange-pale);
+    transform:translateY(-1px);
+}
+.mode-btn.active{
+    background:var(--orange-gradient);
+    color:#fff;
+    border-color:var(--orange);
+    box-shadow:0 6px 20px rgba(255,122,0,.3), 0 0 0 1px rgba(255,122,0,.1);
+    transform:translateY(-1px);
+}
+.mode-btn.active .mode-icon{transform:scale(1.1)}
+.mode-btn .mode-icon{transition:transform var(--dur) var(--ease-out)}
+.mode-btn:active{transform:translateY(0) scale(.97)}
+
+/* Mode dropdown items — enhanced */
+.mode-dropdown-item{
+    transition:all var(--dur-fast) var(--ease);
+}
+.mode-dropdown-item:hover{
+    background:var(--orange-pale);
+    color:var(--orange);
+    padding-left:18px;
+}
+
+/* ── GLOBAL TABLE: Enhanced header + row hover ── */
+.global-table{
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+}
+.global-table th{
+    background:var(--orange-gradient);
+    color:#fff;
+    font-size:11px;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    font-weight:700;
+    padding:14px 18px;
+    border-bottom:none;
+}
+.global-table tr{
+    transition:all var(--dur) var(--ease);
+}
+.global-table tr:hover{
+    background:var(--orange-pale);
+}
+.global-table tr:hover td:first-child{
+    box-shadow:inset 3px 0 0 var(--orange);
+}
+.is-me td{
+    background:#fff8f0!important;
+}
+.is-me:hover td{
+    background:#fff4e9!important;
+}
+
+/* ── HALL OF FAME: Dramatic top-3 effects ── */
+.hof-card{
+    border-radius:var(--radius-lg);
+    transition:all var(--dur-slow) var(--ease-out);
+    position:relative;
+    overflow:hidden;
+}
+.hof-card::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:4px;
+    border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+    opacity:.8;transition:opacity var(--dur) var(--ease);
+}
+.hof-1{
+    border:2px solid rgba(255,200,0,.3);
+    background:linear-gradient(180deg, #fffdf5 0%, var(--card) 100%);
+    box-shadow:0 0 32px rgba(255,200,0,.12), var(--shadow);
+}
+.hof-1::before{background:linear-gradient(90deg, #ffd700, #ffaa00, #ffd700)}
+.hof-1:hover{
+    box-shadow:0 12px 40px rgba(255,200,0,.25), var(--shadow);
+    transform:translateY(-6px) scale(1.02);
+}
+.hof-2{
+    border:2px solid rgba(180,180,180,.25);
+    background:linear-gradient(180deg, #fafafa 0%, var(--card) 100%);
+}
+.hof-2::before{background:linear-gradient(90deg, #c0c0c0, #e0e0e0, #c0c0c0)}
+.hof-2:hover{
+    box-shadow:0 12px 40px rgba(180,180,180,.15), var(--shadow);
+    transform:translateY(-6px) scale(1.02);
+}
+.hof-3{
+    border:2px solid rgba(205,127,50,.25);
+    background:linear-gradient(180deg, #fdf8f4 0%, var(--card) 100%);
+}
+.hof-3::before{background:linear-gradient(90deg, #cd7f32, #daa06d, #cd7f32)}
+.hof-3:hover{
+    box-shadow:0 12px 40px rgba(205,127,50,.15), var(--shadow);
+    transform:translateY(-6px) scale(1.02);
+}
+.hof-card:hover::before{opacity:1;height:5px}
+
+/* ── FEED: Enhanced items with rank badge animation ── */
+.feed-item{
+    transition:all var(--dur) var(--ease);
+    border-radius:0;
+}
+.feed-item:hover{
+    background:var(--orange-pale);
+    padding-left:24px;
+}
+.feed-rank{
+    border-radius:var(--radius-sm);
+    transition:all var(--dur) var(--ease-out);
+}
+.feed-item:hover .feed-rank{
+    background:var(--orange-gradient);
+    color:#fff;
+    transform:scale(1.15) rotate(-5deg);
+    box-shadow:var(--shadow-orange);
+}
+.feed-replay{
+    border-radius:var(--radius-sm);
+    transition:all var(--dur) var(--ease);
+}
+.feed-replay:hover{
+    background:var(--orange-gradient);
+    color:#fff;
+    border-color:var(--orange);
+    transform:scale(1.15);
+    box-shadow:var(--shadow-orange);
+}
+
+/* ── CHART CARDS: Enhanced hover ── */
+.chart-card{
+    transition:all var(--dur) var(--ease);
+}
+.chart-card:hover{
+    border-color:var(--orange-light);
+    box-shadow:var(--shadow), 0 0 0 1px var(--orange-glow);
+}
+
+/* ── SEARCH INPUT: Enhanced focus glow ── */
+.search-input{
+    background:var(--bg-subtle);
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+}
+.search-input:focus{
+    border-color:var(--orange);
+    box-shadow:var(--shadow-focus), 0 1px 3px rgba(0,0,0,.03);
+    background:var(--card);
+}
+
+/* ── LOGIN BUTTON (sidebar): Enhanced ── */
+.login-btn-sidebar{
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+    border:1px solid var(--border);
+}
+.login-btn-sidebar:hover{
+    border-color:var(--orange);
+    color:var(--orange);
+    background:var(--orange-pale);
+    transform:translateY(-1px);
+    box-shadow:var(--shadow-sm);
+}
+
+/* ── USER BADGE: Enhanced hover ── */
+.user-badge{
+    border-radius:var(--radius);
+    transition:all var(--dur) var(--ease);
+}
+.user-badge:hover{
+    border-color:var(--orange);
+    box-shadow:var(--shadow-sm), 0 0 0 3px var(--orange-glow);
+    transform:translateY(-1px);
+}
+
+/* ── DROPDOWN ITEMS: Enhanced ── */
+.dropdown-item{
+    border-radius:var(--radius-sm);
+    transition:all var(--dur-fast) var(--ease);
+}
+.dropdown-item:hover{
+    background:var(--orange-pale);
+    color:var(--orange);
+    padding-left:14px;
+}
+
+/* ── RECORDS PANEL: Enhanced ── */
+.records{
+    border:1px solid var(--border);
+    transition:box-shadow var(--dur) var(--ease);
+}
+
+/* ── MAPS PANEL: Enhanced ── */
+.maps{
+    border:1px solid var(--border);
+    transition:box-shadow var(--dur) var(--ease);
+}
+
+/* ── BADGES: Better styling ── */
+.badge-new{
+    border-radius:var(--radius-sm);
+    box-shadow:0 2px 6px rgba(255,122,0,.3);
+}
+.badge-pb{
+    border-radius:var(--radius-sm);
+}
+.run-diff{
+    border-radius:var(--radius-sm);
+}
+
+/* ── SEE MORE BUTTON: Enhanced ── */
+.see-more-btn{
+    transition:all var(--dur) var(--ease);
+    border-top:1px solid var(--border-light);
+    font-weight:600;
+}
+.see-more-btn:hover{
+    background:var(--orange-pale);
+    color:var(--orange);
+}
+
+/* ── FEED RANK BADGES: Enhanced ── */
+.feed-rank-badge{
+    border-radius:var(--radius-sm);
+    font-weight:700;
+}
+
+/* ── MODE TOGGLE (1v1/2v2): Enhanced ── */
+.ranked-mode-toggle{
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    background:var(--bg-subtle);
+    padding:3px;
+    gap:2px;
+}
+.mode-toggle-btn{
+    border-radius:calc(var(--radius) - 3px);
+    transition:all var(--dur) var(--ease);
+}
+.mode-toggle-btn:hover{
+    color:var(--text);
+    background:var(--card);
+}
+.mode-toggle-btn.active{
+    color:var(--orange);
+    background:var(--card);
+    box-shadow:0 2px 8px rgba(0,0,0,.06), inset 0 -2px 0 var(--orange);
+    font-weight:700;
+}
+
+/* ── REFRESH BADGE: Better pulse ── */
+.refresh-badge{
+    border-radius:var(--radius-pill);
+    box-shadow:0 2px 6px rgba(255,122,0,.3);
+}
+
+/* ── PANEL TITLE: Enhanced ── */
+.panel-title span{
+    border-radius:var(--radius-pill);
+    font-weight:600;
+}
+
+/* ── SCROLLBARS: Custom styled (global) ── */
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{
+    background:var(--border-strong);
+    border-radius:var(--radius-pill);
+    border:2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover{background:var(--orange-light)}
+::-webkit-scrollbar-corner{background:transparent}
+
+/* ── SELECTION: Orange-tinted ── */
+::selection{background:var(--orange-glow-strong);color:var(--text)}
+
+/* ── FOCUS VISIBLE: Global ring for keyboard users ── */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible{
+    outline:2px solid var(--orange);
+    outline-offset:2px;
+    border-radius:var(--radius-sm);
+}
+
+/* ── TRANSITION DEFAULT: Smooth all interactive elements ── */
+button, a, input, select, .nav-item, .map-item, .run-row, .feed-item, .card, .hof-card, .chart-card{
+    transition-property:all;
+    transition-duration:var(--dur);
+    transition-timing-function:var(--ease);
+}
+
+/* ── CLICK FEEDBACK: Scale down on active for all buttons ── */
+button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
+.mode-btn:active, .share-btn:active, .gg-btn:active, .run-replay:active,
+.feed-replay:active, .login-btn-sidebar:active, .mode-dropdown-item:active{
+    transform:scale(.97);
+}
+
+/* ── REDUCED MOTION: Respect user preference ── */
+@media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+        scroll-behavior:auto!important;
+    }
+}
+
+/* ── MOBILE: Sidebar overlay polish ── */
+@media (max-width:1024px){
+    .sidebar{
+        box-shadow:8px 0 40px rgba(0,0,0,.15);
+    }
+}
