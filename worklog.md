@@ -321,3 +321,54 @@ Stage Summary:
 - Bug fully fixed: toast now shows a compact pill with a rendered star icon + plain text message.
 - The fix is backward-compatible (optional 4th param) and maintains XSS safety (textContent for message).
 - Also improved UX: "add" now uses success type (green), "remove" uses info type (blue).
+
+---
+Task ID: 9
+Agent: main (Z.ai Code)
+Task: User reported: ranked sync stuck (not updating), has 2131 elo and is #1 but data is frozen. Wants continuous auto-retrigger that runs 24/7 even when idle.
+
+Work Log:
+- Checked GitHub Actions API: last 5 sync runs all "success" but spaced 30-60 min apart (not every 5 min as cron */5 should). GitHub delays cron runs significantly.
+- Checked ranked.json commits: last commit was 2026-08-08T16:12 (almost 24h ago!). Sync runs "succeed" but ranked data never updates.
+- Fetched sync-ranked job logs from run #149941 (the most recent completed run):
+  * sync-ranked.js ran successfully (detected changes: 1v1: 44 mvts, 2v2: 74 mvts, 7↑, 7↓)
+  * git commit succeeded: "4 files changed, 1 insertion(+), 1 deletion(-)"
+  * git pull --rebase FAILED: "error: cannot pull with rebase: You have unstaged changes"
+  * Retried 5× — all failed with same error
+  * Fell through to "committed=false" → commit NEVER PUSHED
+  * Retrigger condition (committed == true) was false → retrigger SKIPPED → loop stalled
+- ROOT CAUSE identified: sync-ranked.js writes ranked_history.json (958KB, ungzipped) + ranked_2v2_history.json every run. But the commit step only git-adds the .gz versions. The ungzipped ranked_history.json was tracked in git (committed once on 07-18) → every sync run overwrites it → becomes unstaged change → blocks git pull --rebase.
+
+- Applied 4 fixes:
+  FIX 1 — .gitignore: Added ranked_history.json + ranked_2v2_history.json (ungzipped) to .gitignore. These are NOT needed by the site (only .gz is served).
+  
+  FIX 2 — sync.yml ranked commit step: Added 'git rm --cached ranked_history.json ranked_2v2_history.json' to untrack them. Now they won't cause "unstaged changes".
+  
+  FIX 3 — git pull --rebase --autostash (ALL 4 jobs): Changed 'git pull --rebase' → 'git pull --rebase --autostash' in standard/compact/teams/ranked commit steps. --autostash auto-stashes unstaged changes before rebase, pops after. Safety net for any future unstaged files.
+  
+  FIX 4 — Unconditional retrigger: Removed the 'if: committed == true' condition from the retrigger job. It now ALWAYS fires → workflow re-dispatches itself 24/7, even when idle. Creates a true continuous loop (user requested: "je veux que ça se déclenche automatiquement, même quand je suis pas là"). concurrency.cancel-in-progress: true prevents pile-up.
+
+- Committed (8ed5fba) and pushed to GitHub origin/main.
+- Manually dispatched workflow to test immediately (HTTP 204).
+- Monitored run #149942:
+  * sync-standard: completed/success (~4 min)
+  * sync-compact: completed/success (~3 min)
+  * sync-teams: completed/success (~3 min)
+  * sync-ranked: completed/success — KEY VERIFICATION:
+    - git rm --cached ran (untracked ungzipped files)
+    - git commit: "4 files changed, 1 insertion(+), 1 deletion(-)" ✅
+    - git pull --rebase --autostash: "Created autostash: f747640" → "Applied autostash." → NO "unstaged changes" error! ✅
+    - git push: succeeded ✅
+    - committed=true ✅
+  * retrigger: completed/cancelled — cancelled because the new run it dispatched (#149943) cancelled it via concurrency group. This is expected and correct.
+- Verified ranked.json now updated: checked GitHub raw content → Skailex.9681 is #1 in 2v2 with 2131 elo (matches user's statement exactly). Last commit: 2026-08-09T14:33:12Z (was 08/08 16:12 — almost 24h stale, now fresh).
+- Verified continuous loop: run #149943 started at 14:33:22Z (10 seconds after retrigger) — in_progress. The loop is running.
+- Verified deploy-pages also ran: #138685 at 14:33:23 (workflow_dispatch from retrigger).
+
+Stage Summary:
+- Commit 8ed5fba "fix: ranked sync stuck — untrack ungzipped history files + unconditional retrigger" LIVE on origin/main.
+- ROOT CAUSE FIXED: ranked_history.json (ungzipped, 958KB, tracked) was blocking git pull --rebase → now gitignored + untracked + --autostash safety net.
+- RANKED DATA NOW UPDATING: ranked.json committed at 14:33 today (was stuck since 08/08 16:12). Skailex.9681 confirmed #1 2v2 with 2131 elo.
+- CONTINUOUS LOOP ACTIVE: retrigger is now unconditional — workflow re-dispatches itself 24/7, even when idle. Run #149943 already in progress (dispatched by retrigger from #149942).
+- All 4 sync jobs use --autostash as safety net against future "unstaged changes" failures.
+- The sync now runs back-to-back forever: each run takes ~10 min → ~6 runs/hour → ~144 runs/day. Public repo = unlimited Actions minutes.
