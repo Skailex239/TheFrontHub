@@ -1,0 +1,712 @@
+     1→     1→import { z } from "zod";
+     2→     2→import { base64urlToUuid } from "./Base64";
+     3→     3→import { ClanTagSchema } from "./Schemas";
+     4→     4→import { BigIntStringSchema, PlayerStatsSchema } from "./StatsSchemas";
+     5→     5→import {
+     6→     6→  Difficulty,
+     7→     7→  GameMode,
+     8→     8→  GameType,
+     9→     9→  HumansVsNations,
+    10→    10→  RankedType,
+    11→    11→} from "./game/Game";
+    12→    12→
+    13→    13→const RequiredClanTagSchema = ClanTagSchema.unwrap();
+    14→    14→
+    15→    15→export const RefreshResponseSchema = z.object({
+    16→    16→  token: z.string(),
+    17→    17→});
+    18→    18→export type RefreshResponse = z.infer<typeof RefreshResponseSchema>;
+    19→    19→
+    20→    20→export const TokenPayloadSchema = z.object({
+    21→    21→  jti: z.string(),
+    22→    22→  sub: z
+    23→    23→    .string()
+    24→    24→    .refine(
+    25→    25→      (val) => {
+    26→    26→        const uuid = base64urlToUuid(val);
+    27→    27→        return !!uuid;
+    28→    28→      },
+    29→    29→      {
+    30→    30→        message: "Invalid base64-encoded UUID",
+    31→    31→      },
+    32→    32→    )
+    33→    33→    .transform((val) => {
+    34→    34→      const uuid = base64urlToUuid(val);
+    35→    35→      if (!uuid) throw new Error("Invalid base64 UUID");
+    36→    36→      return uuid;
+    37→    37→    }),
+    38→    38→  iat: z.number(),
+    39→    39→  iss: z.string(),
+    40→    40→  aud: z.string(),
+    41→    41→  exp: z.number(),
+    42→    42→  role: z
+    43→    43→    .enum(["root", "admin", "mod", "flagged", "banned"])
+    44→    44→    // In case new roles are added in the future.
+    45→    45→    .or(z.string())
+    46→    46→    .optional(),
+    47→    47→  provider: z.string().optional(),
+    48→    48→});
+    49→    49→export type TokenPayload = z.infer<typeof TokenPayloadSchema>;
+    50→    50→
+    51→    51→export const ADMIN_ROLES = ["admin", "root"] as const;
+    52→    52→export function isAdminRole(role: string | null | undefined): boolean {
+    53→    53→  return role === "admin" || role === "root";
+    54→    54→}
+    55→    55→
+    56→    56→export const DiscordUserSchema = z.object({
+    57→    57→  id: z.string(),
+    58→    58→  avatar: z.string().nullable(),
+    59→    59→  username: z.string(),
+    60→    60→  global_name: z.string().nullable(),
+    61→    61→  discriminator: z.string(),
+    62→    62→});
+    63→    63→export type DiscordUser = z.infer<typeof DiscordUserSchema>;
+    64→    64→
+    65→    65→export const GoogleUserSchema = z.object({
+    66→    66→  email: z.string(),
+    67→    67→});
+    68→    68→export type GoogleUser = z.infer<typeof GoogleUserSchema>;
+    69→    69→
+    70→    70→export const SteamUserSchema = z.object({
+    71→    71→  steamId: z.string(),
+    72→    72→  personaName: z.string().nullable(),
+    73→    73→  avatarUrl: z.string().nullable(),
+    74→    74→});
+    75→    75→export type SteamUser = z.infer<typeof SteamUserSchema>;
+    76→    76→
+    77→    77→const SingleplayerMapAchievementSchema = z.object({
+    78→    78→  mapName: z.string(),
+    79→    79→  difficulty: z.enum(Difficulty),
+    80→    80→});
+    81→    81→
+    82→    82→// An unclaimed subscription reward from GET /users/@me. `id` and `amount` are
+    83→    83→// stringified bigints — keep them as strings (amount can in principle exceed
+    84→    84→// Number.MAX_SAFE_INTEGER). `reason` is open-ended server-side; fall back to
+    85→    85→// `note` for unknown values rather than exhausting on an enum.
+    86→    86→export const RewardSchema = z.object({
+    87→    87→  id: z.string(),
+    88→    88→  currencyType: z.enum(["soft", "hard"]),
+    89→    89→  amount: z.string(),
+    90→    90→  reason: z.string(),
+    91→    91→  note: z.string().nullable(),
+    92→    92→});
+    93→    93→export type Reward = z.infer<typeof RewardSchema>;
+    94→    94→
+    95→    95→const CurrencyBalancesSchema = z.object({
+    96→    96→  soft: z.coerce.number(),
+    97→    97→  hard: z.coerce.number(),
+    98→    98→});
+    99→    99→
+   100→   100→// POST /rewards/:rewardId/claim and /rewards/claim-all both return the
+   101→   101→// post-claim balances so the UI can update without re-fetching /users/@me.
+   102→   102→export const ClaimRewardResponseSchema = z.object({
+   103→   103→  currency: CurrencyBalancesSchema,
+   104→   104→});
+   105→   105→export type ClaimRewardResponse = z.infer<typeof ClaimRewardResponseSchema>;
+   106→   106→
+   107→   107→export const ClaimAllRewardsResponseSchema = z.object({
+   108→   108→  claimed: z.array(z.object({ id: z.string() })),
+   109→   109→  currency: CurrencyBalancesSchema,
+   110→   110→});
+   111→   111→export type ClaimAllRewardsResponse = z.infer<
+   112→   112→  typeof ClaimAllRewardsResponseSchema
+   113→   113→>;
+   114→   114→
+   115→   115→// Account-username lifecycle. `unclaimed`: no bare-name reservation (default).
+   116→   116→// `claimed`: reservation held but subscription lapsed — the suffix shows again
+   117→   117→// and a grace deadline runs. `premium`: subscribed, bare display. `indefinite`:
+   118→   118→// admin-locked bare display. Statuses change server-side without client action
+   119→   119→// (Stripe webhooks, admin edits) — re-fetch /users/@me rather than caching.
+   120→   120→export const UsernameStatusSchema = z.enum([
+   121→   121→  "unclaimed",
+   122→   122→  "claimed",
+   123→   123→  "premium",
+   124→   124→  "indefinite",
+   125→   125→]);
+   126→   126→export type UsernameStatus = z.infer<typeof UsernameStatusSchema>;
+   127→   127→
+   128→   128→// When a player subscribes while someone else exclusively holds their bare
+   129→   129→// name, the server renames them to TEMPORARY#### and clears their cooldown so
+   130→   130→// the rename is free. Detect it to prompt for a real name.
+   131→   131→export function isTemporaryUsername(base: string | null | undefined): boolean {
+   132→   132→  return typeof base === "string" && /^TEMPORARY\d{4}$/.test(base);
+   133→   133→}
+   134→   134→
+   135→   135→// Whether a pre-rendered account username belongs to a verified player
+   136→   136→// (premium/indefinite bare-name claim holder). The server renders everyone
+   137→   137→// else as "base.suffix" and bases can never contain dots
+   138→   138→// (AccountUsernameSchema), so a dotless name IS the bare display — no
+   139→   139→// dedicated flag needed on list endpoints. TEMPORARY#### server renames are
+   140→   140→// bare too but aren't a chosen name, so they don't get the badge (matches
+   141→   141→// the verified-name play toggle's eligibility rule).
+   142→   142→export function isVerifiedUsername(
+   143→   143→  username: string | null | undefined,
+   144→   144→): boolean {
+   145→   145→  return (
+   146→   146→    typeof username === "string" &&
+   147→   147→    !username.includes(".") &&
+   148→   148→    !isTemporaryUsername(username)
+   149→   149→  );
+   150→   150→}
+   151→   151→
+   152→   152→export const UserMeResponseSchema = z.object({
+   153→   153→  user: z.object({
+   154→   154→    discord: DiscordUserSchema.optional(),
+   155→   155→    google: GoogleUserSchema.optional(),
+   156→   156→    email: z.string().optional(),
+   157→   157→    steam: SteamUserSchema.optional(),
+   158→   158→  }),
+   159→   159→  // The caller's active account ban, shown to them (localized client-side), or
+   160→   160→  // null. `category` is a server enum but kept as a string here so an
+   161→   161→  // unrecognised value degrades gracefully. Optional so an older API that
+   162→   162→  // predates the field is treated as "no ban".
+   163→   163→  ban: z
+   164→   164→    .object({
+   165→   165→      category: z.string(),
+   166→   166→      reason: z.string().nullable(),
+   167→   167→      expiresAt: z.iso.datetime().nullable(),
+   168→   168→    })
+   169→   169→    .nullable()
+   170→   170→    .optional(),
+   171→   171→  player: z.object({
+   172→   172→    publicId: z.string(),
+   173→   173→    adfree: z.boolean(),
+   174→   174→    // True when the player's active subscription tier exempts them from the
+   175→   175→    // free-ranked-play limits.
+   176→   176→    unlimitedRanked: z.boolean(),
+   177→   177→    // True when the player may list a custom lobby publicly. The API decides
+   178→   178→    // which subscriptions/grants confer this.
+   179→   179→    canCreatePublicLobbies: z.boolean(),
+   180→   180→    // Account username (custom-usernames). All optional so responses from an
+   181→   181→    // API without the feature still parse; absent means the same as never set.
+   182→   182→    // `username` is the server-resolved DISPLAY form — the bare base for an
+   183→   183→    // entitled claim holder, otherwise "base.suffix". Render it as-is; never
+   184→   184→    // assemble base + discriminator client-side. The discriminator is exactly
+   185→   185→    // 4 digits and may have leading zeros — keep it a string.
+   186→   186→    username: z.string().nullable().optional(),
+   187→   187→    usernameBase: z.string().nullable().optional(),
+   188→   188→    usernameDiscriminator: z.string().nullable().optional(),
+   189→   189→    usernameStatus: UsernameStatusSchema.optional(),
+   190→   190→    // Only non-null in `claimed`: when the exclusive right to the bare name
+   191→   191→    // becomes takeable by another subscriber. A past date means "at risk",
+   192→   192→    // not "lost" — it stays set until the name is actually taken.
+   193→   193→    usernameClaimExpiresAt: z.iso.datetime().nullable().optional(),
+   194→   194→    // When the player may next self-rename. May be in the past — past or
+   195→   195→    // null both mean a rename is allowed.
+   196→   196→    nextUsernameChangeAt: z.iso.datetime().nullable().optional(),
+   197→   197→    flares: z.string().array().optional(),
+   198→   198→    achievements: z.object({
+   199→   199→      singleplayerMap: z.array(SingleplayerMapAchievementSchema),
+   200→   200→    }),
+   201→   201→    leaderboard: z
+   202→   202→      .object({
+   203→   203→        oneVone: z
+   204→   204→          .object({
+   205→   205→            elo: z.number().optional(),
+   206→   206→          })
+   207→   207→          .optional(),
+   208→   208→        twoVtwo: z
+   209→   209→          .object({
+   210→   210→            elo: z.number().optional(),
+   211→   211→          })
+   212→   212→          .optional(),
+   213→   213→      })
+   214→   214→      .optional(),
+   215→   215→    currency: CurrencyBalancesSchema.optional(),
+   216→   216→    // Unclaimed rewards — NOT included in `currency` balances until claimed.
+   217→   217→    rewards: RewardSchema.array().optional(),
+   218→   218→    clans: z
+   219→   219→      .array(
+   220→   220→        z.object({
+   221→   221→          tag: RequiredClanTagSchema,
+   222→   222→          name: z.string(),
+   223→   223→          role: z.enum(["leader", "officer", "member"]),
+   224→   224→          joinedAt: z.iso.datetime(),
+   225→   225→          memberCount: z.number().int().min(1),
+   226→   226→        }),
+   227→   227→      )
+   228→   228→      .optional(),
+   229→   229→    clanRequests: z
+   230→   230→      .array(
+   231→   231→        z.object({
+   232→   232→          tag: RequiredClanTagSchema,
+   233→   233→          name: z.string(),
+   234→   234→          createdAt: z.iso.datetime(),
+   235→   235→        }),
+   236→   236→      )
+   237→   237→      .optional(),
+   238→   238→    friends: z.array(z.string()),
+   239→   239→    subscription: z
+   240→   240→      .object({
+   241→   241→        tier: z.string(),
+   242→   242→        status: z.string(),
+   243→   243→        currentPeriodEnd: z.coerce.date().nullable(),
+   244→   244→        cancelAtPeriodEnd: z.boolean(),
+   245→   245→      })
+   246→   246→      .nullable(),
+   247→   247→    // Marketing-email consent state (client-driven consent). `consented` is the
+   248→   248→    // player's current decision; `hasEmail` is whether a verified contact email
+   249→   249→    // exists to subscribe. Optional so an older API without the field is treated
+   250→   250→    // as "no consent UI".
+   251→   251→    marketingConsent: z
+   252→   252→      .object({
+   253→   253→        consented: z.enum(["approved", "denied", "no_response"]),
+   254→   254→        hasEmail: z.boolean(),
+   255→   255→      })
+   256→   256→      .optional(),
+   257→   257→  }),
+   258→   258→});
+   259→   259→export type UserMeResponse = z.infer<typeof UserMeResponseSchema>;
+   260→   260→export type UserSubscription = NonNullable<
+   261→   261→  NonNullable<UserMeResponse["player"]["subscription"]>
+   262→   262→>;
+   263→   263→
+   264→   264→// PUT /users/@me/username success payload. `username` is the resolved display
+   265→   265→// form (safe for optimistic UI). The suffix is re-rolled on every rename and
+   266→   266→// the response carries the fresh 30-day cooldown.
+   267→   267→export const PutUsernameResponseSchema = z.object({
+   268→   268→  username: z.string(),
+   269→   269→  base: z.string(),
+   270→   270→  discriminator: z.string(),
+   271→   271→  usernameStatus: UsernameStatusSchema,
+   272→   272→  nextUsernameChangeAt: z.iso.datetime().nullable(),
+   273→   273→});
+   274→   274→export type PutUsernameResponse = z.infer<typeof PutUsernameResponseSchema>;
+   275→   275→
+   276→   276→// Custom tribe names — text names a player buys with hard currency that get
+   277→   277→// assigned to bots ("tribes") in real games. Names go live right away; review
+   278→   278→// is post-hoc. Status is the backend moderation state: `pending` (bought,
+   279→   279→// not yet reviewed) or `live` (reviewed, kept), both in rotation; `rejected`
+   280→   280→// (taken down before review) or `revoked` (taken down after). The UI collapses
+   281→   281→// these to active vs. rejected. The wire serializes bigints as strings, so
+   282→   282→// `id` stays a string.
+   283→   283→export const TribeNameStatusSchema = z.enum([
+   284→   284→  "pending",
+   285→   285→  "live",
+   286→   286→  "rejected",
+   287→   287→  "revoked",
+   288→   288→]);
+   289→   289→export type TribeNameStatus = z.infer<typeof TribeNameStatusSchema>;
+   290→   290→
+   291→   291→export const TribeNameSchema = z.object({
+   292→   292→  id: z.string(),
+   293→   293→  displayName: z.string(),
+   294→   294→  status: TribeNameStatusSchema,
+   295→   295→  // Player-facing explanation, set only when a mod rejects/revokes the name.
+   296→   296→  reviewReason: z.string().nullable(),
+   297→   297→  // Count of unexpired boosts. The in-game draw weight is 1 + activeBoosts,
+   298→   298→  // so this + 1 is the multiplier to display. Optional for older responses.
+   299→   299→  activeBoosts: z.coerce.number().optional(),
+   300→   300→  // When the NEXT unexpired boost lapses (activeBoosts next drops);
+   301→   301→  // null when unboosted. Deliberately a plain string, not
+   302→   302→  // z.iso.datetime(): the API has served raw pg text here
+   303→   303→  // ("2026-08-23 18:04:11+00"), and a strict format check on a
+   304→   304→  // display-only date fails the whole list parse. The renderer guards
+   305→   305→  // unparseable values.
+   306→   306→  boostExpiresAt: z.string().nullable().optional(),
+   307→   307→});
+   308→   308→export type TribeName = z.infer<typeof TribeNameSchema>;
+   309→   309→
+   310→   310→// GET /users/@me/tribe_names. Prices live in cosmetics.json
+   311→   311→// (tribeNames.priceHard) — this endpoint only serves the player's names.
+   312→   312→export const GetMyTribeNamesResponseSchema = z.object({
+   313→   313→  names: z.array(TribeNameSchema),
+   314→   314→});
+   315→   315→export type GetMyTribeNamesResponse = z.infer<
+   316→   316→  typeof GetMyTribeNamesResponseSchema
+   317→   317→>;
+   318→   318→
+   319→   319→// POST /users/@me/tribe_names response (201). The name starts `pending`
+   320→   320→// today, but accept any status — a stricter literal would fail the parse
+   321→   321→// (and show "purchase failed") after the player was already charged.
+   322→   322→export const PostTribeNameResponseSchema = z.object({
+   323→   323→  id: z.string(),
+   324→   324→  displayName: z.string(),
+   325→   325→  status: TribeNameStatusSchema,
+   326→   326→  pricePaid: z.string(),
+   327→   327→});
+   328→   328→export type PostTribeNameResponse = z.infer<typeof PostTribeNameResponseSchema>;
+   329→   329→
+   330→   330→// POST /users/@me/tribe_names/:id/boosts response (201). Ids and pricePaid
+   331→   331→// are stringified bigints. Boost state (activeBoosts/boostExpiresAt) is
+   332→   332→// deliberately absent — re-fetch the name list after a purchase instead of
+   333→   333→// reconstructing it client-side.
+   334→   334→export const PostTribeBoostResponseSchema = z.object({
+   335→   335→  id: z.string(),
+   336→   336→  customTribeNameId: z.string(),
+   337→   337→  expiresAt: z.iso.datetime(),
+   338→   338→  pricePaid: z.string(),
+   339→   339→});
+   340→   340→export type PostTribeBoostResponse = z.infer<
+   341→   341→  typeof PostTribeBoostResponseSchema
+   342→   342→>;
+   343→   343→
+   344→   344→// GET /leaderboard/tribes?page=N — public, ranked by rolling 30-day player
+   345→   345→// reach. Pages are 1-based, 50 per page, capped at page 2 (top 100); the
+   346→   346→// response carries no total or hasMore, so a full page is the only signal
+   347→   347→// that another one may exist.
+   348→   348→export const TribeLeaderboardEntrySchema = z.object({
+   349→   349→  // Absolute across pages: page 2 starts at rank 51.
+   350→   350→  rank: z.number(),
+   351→   351→  name: z.string(),
+   352→   352→  gamesAppeared: z.number(),
+   353→   353→  // Impressions, NOT distinct players — one player who saw the name in
+   354→   354→  // three games counts three times. Never label this "people seen by".
+   355→   355→  playerReach: z.number(),
+   356→   356→  // The buyer, same pair the ranked board exposes: the public id to link a
+   357→   357→  // profile with, and the account display name (null when they've never set
+   358→   358→  // one — fall back to the public id, which is what <player-name> does).
+   359→   359→  ownerPublicId: z.string(),
+   360→   360→  ownerUsername: z.string().nullable(),
+   361→   361→  // Count of unexpired boosts — same predicate and name as the owner-facing
+   362→   362→  // field on GET /users/@me/tribe_names above, so it matches what the owner
+   363→   363→  // sees (display multiplier = this + 1). A "now" snapshot behind the board's
+   364→   364→  // 1h cache, not a window aggregate. Required, so the client must deploy
+   365→   365→  // after the API serves it (infra#486; its v2 cache key means every response
+   366→   366→  // from that deploy carries the field).
+   367→   367→  activeBoosts: z.coerce.number(),
+   368→   368→});
+   369→   369→export type TribeLeaderboardEntry = z.infer<typeof TribeLeaderboardEntrySchema>;
+   370→   370→
+   371→   371→export const TribeLeaderboardResponseSchema = z.object({
+   372→   372→  windowDays: z.number(),
+   373→   373→  // Inclusive YYYY-MM-DD bounds of the window. Plain strings rather than
+   374→   374→  // z.iso.date(): they are display-only, and a strict format check on a
+   375→   375→  // date field would fail the whole board parse if the wire format wobbles
+   376→   376→  // the way boostExpiresAt's did above. The renderer guards what it can't
+   377→   377→  // read and drops the caption.
+   378→   378→  start: z.string(),
+   379→   379→  end: z.string(),
+   380→   380→  tribes: TribeLeaderboardEntrySchema.array(),
+   381→   381→});
+   382→   382→export type TribeLeaderboardResponse = z.infer<
+   383→   383→  typeof TribeLeaderboardResponseSchema
+   384→   384→>;
+   385→   385→
+   386→   386→// GET /public/tribe/:name — the public stats page for one custom tribe name.
+   387→   387→// No auth; the name goes URL-encoded in the path and lookup is case- and
+   388→   388→// whitespace-insensitive (the response carries the canonical display form).
+   389→   389→// Responses are live, unlike the leaderboard's ~1h cache, so small
+   390→   390→// discrepancies between this and the board are expected. 404 means unknown,
+   391→   391→// rejected/revoked, or owner banned — indistinguishable on purpose. A name
+   392→   392→// with no game appearances yet is a 200 with zeroed figures, not a 404.
+   393→   393→export const TribeStatsFiguresSchema = z.object({
+   394→   394→  gamesAppeared: z.number(),
+   395→   395→  // Impressions, NOT distinct players (see TribeLeaderboardEntry.playerReach):
+   396→   396→  // display as "appeared in games with N players", never "seen by N people".
+   397→   397→  playerReach: z.number(),
+   398→   398→});
+   399→   399→
+   400→   400→export const TribeStatsResponseSchema = z.object({
+   401→   401→  // Canonical display name.
+   402→   402→  name: z.string(),
+   403→   403→  // The buyer, same pair the tribes leaderboard exposes; ownerUsername is
+   404→   404→  // null when they never set one — fall back to the public id.
+   405→   405→  ownerPublicId: z.string(),
+   406→   406→  ownerUsername: z.string().nullable(),
+   407→   407→  // Unexpired boosts; display multiplier = this + 1, same convention as
+   408→   408→  // TribeNameSchema.activeBoosts. Coerced for the same wire tolerance.
+   409→   409→  activeBoosts: z.coerce.number(),
+   410→   410→  lifetime: TribeStatsFiguresSchema,
+   411→   411→  // Same rolling window the tribes leaderboard ranks by, so these figures
+   412→   412→  // match the board. Bounds are plain strings, not z.iso.date(), for the
+   413→   413→  // same display-only tolerance as TribeLeaderboardResponse's.
+   414→   414→  window: TribeStatsFiguresSchema.extend({
+   415→   415→    days: z.number(),
+   416→   416→    start: z.string(),
+   417→   417→    end: z.string(),
+   418→   418→  }),
+   419→   419→});
+   420→   420→export type TribeStatsResponse = z.infer<typeof TribeStatsResponseSchema>;
+   421→   421→
+   422→   422→export const PlayerRecentStatsSchema = z.object({
+   423→   423→  games: z.number().int().min(0).max(100),
+   424→   424→  wins: z.number().int().min(0).max(100),
+   425→   425→});
+   426→   426→export type PlayerRecentStats = z.infer<typeof PlayerRecentStatsSchema>;
+   427→   427→
+   428→   428→export const PlayerStatsLeafSchema = z.object({
+   429→   429→  wins: BigIntStringSchema,
+   430→   430→  losses: BigIntStringSchema,
+   431→   431→  total: BigIntStringSchema,
+   432→   432→  stats: PlayerStatsSchema,
+   433→   433→  recent: PlayerRecentStatsSchema.optional(),
+   434→   434→  // Temporary client-first rollout compatibility. The replacement infra
+   435→   435→  // response exposes only aggregate counts under stats.recent.
+   436→   436→  recentGames: z
+   437→   437→    .array(
+   438→   438→      z.object({
+   439→   439→        gameId: BigIntStringSchema,
+   440→   440→        won: z.boolean(),
+   441→   441→      }),
+   442→   442→    )
+   443→   443→    .optional(),
+   444→   444→});
+   445→   445→export type PlayerStatsLeaf = z.infer<typeof PlayerStatsLeafSchema>;
+   446→   446→
+   447→   447→export const PlayerStatsGameModes = [
+   448→   448→  GameMode.FFA,
+   449→   449→  GameMode.Team,
+   450→   450→  HumansVsNations,
+   451→   451→] as const;
+   452→   452→export type PlayerStatsGameMode = (typeof PlayerStatsGameModes)[number];
+   453→   453→
+   454→   454→const RecentByDifficultySchema = z.object({
+   455→   455→  all: PlayerRecentStatsSchema,
+   456→   456→  [Difficulty.Easy]: PlayerRecentStatsSchema.optional(),
+   457→   457→  [Difficulty.Medium]: PlayerRecentStatsSchema.optional(),
+   458→   458→  [Difficulty.Hard]: PlayerRecentStatsSchema.optional(),
+   459→   459→  [Difficulty.Impossible]: PlayerRecentStatsSchema.optional(),
+   460→   460→});
+   461→   461→
+   462→   462→const RecentGameTypeStatsSchema = RecentByDifficultySchema.extend({
+   463→   463→  [GameMode.FFA]: RecentByDifficultySchema.optional(),
+   464→   464→  [GameMode.Team]: RecentByDifficultySchema.optional(),
+   465→   465→  [HumansVsNations]: RecentByDifficultySchema.optional(),
+   466→   466→});
+   467→   467→
+   468→   468→const RecentRankedStatsSchema = z.object({
+   469→   469→  all: PlayerRecentStatsSchema,
+   470→   470→  [RankedType.OneVOne]: PlayerRecentStatsSchema.optional(),
+   471→   471→  [RankedType.TwoVTwo]: PlayerRecentStatsSchema.optional(),
+   472→   472→});
+   473→   473→
+   474→   474→export const PlayerRecentStatsTreeSchema = z.object({
+   475→   475→  all: PlayerRecentStatsSchema,
+   476→   476→  [GameType.Singleplayer]: RecentGameTypeStatsSchema.optional(),
+   477→   477→  [GameType.Public]: RecentGameTypeStatsSchema.optional(),
+   478→   478→  [GameType.Private]: RecentGameTypeStatsSchema.optional(),
+   479→   479→  Ranked: RecentRankedStatsSchema.optional(),
+   480→   480→});
+   481→   481→export type PlayerRecentStatsTree = z.infer<typeof PlayerRecentStatsTreeSchema>;
+   482→   482→
+   483→   483→const GameModeStatsSchema = z.partialRecord(
+   484→   484→  z.enum(PlayerStatsGameModes),
+   485→   485→  z.partialRecord(z.enum(Difficulty), PlayerStatsLeafSchema),
+   486→   486→);
+   487→   487→
+   488→   488→export const PlayerStatsTreeSchema = z.object({
+   489→   489→  Singleplayer: GameModeStatsSchema.optional(),
+   490→   490→  Public: GameModeStatsSchema.optional(),
+   491→   491→  Private: GameModeStatsSchema.optional(),
+   492→   492→  Ranked: z.partialRecord(z.enum(RankedType), PlayerStatsLeafSchema).optional(),
+   493→   493→  recent: PlayerRecentStatsTreeSchema.optional(),
+   494→   494→});
+   495→   495→export type PlayerStatsTree = z.infer<typeof PlayerStatsTreeSchema>;
+   496→   496→
+   497→   497→export const PlayerProfileSchema = z.object({
+   498→   498→  createdAt: z.iso.datetime(),
+   499→   499→  user: DiscordUserSchema.optional(),
+   500→   500→  // Account username, pre-rendered by the server (bare base or "base.suffix").
+   501→   501→  // null = the player never set one. Render `username ?? publicId`; never
+   502→   502→  // parse it — compare players by publicId only. Optional so responses from
+   503→   503→  // an API without the field still parse.
+   504→   504→  username: z.string().nullable().optional(),
+   505→   505→  stats: PlayerStatsTreeSchema,
+   506→   506→  // Clans this player belongs to, tag-ordered. Optional so responses from an
+   507→   507→  // API without the field still parse (→ no clans shown).
+   508→   508→  clans: z
+   509→   509→    .array(
+   510→   510→      z.object({
+   511→   511→        tag: RequiredClanTagSchema,
+   512→   512→        name: z.string(),
+   513→   513→        role: z.enum(["leader", "officer", "member"]),
+   514→   514→        joinedAt: z.iso.datetime(),
+   515→   515→        memberCount: z.number().int().min(1),
+   516→   516→      }),
+   517→   517→    )
+   518→   518→    .optional(),
+   519→   519→});
+   520→   520→export type PlayerProfile = z.infer<typeof PlayerProfileSchema>;
+   521→   521→
+   522→   522→// Mode buckets for GET /public/player/:publicId/games — mirrors the clan
+   523→   523→// game-history filter (see ClanGameFilter). Resolved server-side off the
+   524→   524→// games join (mode / ranked_type / player_teams).
+   525→   525→export const PlayerGameModeFilters = ["ffa", "team", "hvn", "ranked"] as const;
+   526→   526→export const PlayerGameModeFilterSchema = z.enum(PlayerGameModeFilters);
+   527→   527→export type PlayerGameModeFilter = z.infer<typeof PlayerGameModeFilterSchema>;
+   528→   528→
+   529→   529→// Game-type split — orthogonal to the mode filter. Matches games.type.
+   530→   530→export const PlayerGameTypeFilters = [
+   531→   531→  "public",
+   532→   532→  "private",
+   533→   533→  "singleplayer",
+   534→   534→] as const;
+   535→   535→export const PlayerGameTypeFilterSchema = z.enum(PlayerGameTypeFilters);
+   536→   536→export type PlayerGameTypeFilter = z.infer<typeof PlayerGameTypeFilterSchema>;
+   537→   537→
+   538→   538→// "incomplete" covers games with no recorded winner (winnerType IS NULL).
+   539→   539→export const PlayerGameResultSchema = z.enum([
+   540→   540→  "victory",
+   541→   541→  "defeat",
+   542→   542→  "incomplete",
+   543→   543→]);
+   544→   544→export type PlayerGameResult = z.infer<typeof PlayerGameResultSchema>;
+   545→   545→
+   546→   546→export const PublicPlayerGameSchema = z.object({
+   547→   547→  gameId: z.string(),
+   548→   548→  start: z.iso.datetime(),
+   549→   549→  durationSeconds: z.number().int().nonnegative(),
+   550→   550→  map: z.string().trim(),
+   551→   551→  mode: z.string(),
+   552→   552→  type: z.string(),
+   553→   553→  playerTeams: z.string().nullable(),
+   554→   554→  rankedType: z.string(),
+   555→   555→  result: PlayerGameResultSchema,
+   556→   556→  totalPlayers: z.number().int().nonnegative().nullable(),
+   557→   557→  username: z.string(),
+   558→   558→  clanTag: z.string().nullable(),
+   559→   559→});
+   560→   560→export type PublicPlayerGame = z.infer<typeof PublicPlayerGameSchema>;
+   561→   561→
+   562→   562→export const PublicPlayerGamesResponseSchema = z.object({
+   563→   563→  results: PublicPlayerGameSchema.array(),
+   564→   564→  // Opaque continuation token. Round-trip verbatim as the `cursor` query
+   565→   565→  // parameter to fetch the next page; never construct or parse it. `null`
+   566→   566→  // means the server has no more rows to serve.
+   567→   567→  nextCursor: z.string().nullable(),
+   568→   568→});
+   569→   569→export type PublicPlayerGamesResponse = z.infer<
+   570→   570→  typeof PublicPlayerGamesResponseSchema
+   571→   571→>;
+   572→   572→
+   573→   573→export const PlayerLeaderboardEntrySchema = z.object({
+   574→   574→  rank: z.number(),
+   575→   575→  playerId: z.string(),
+   576→   576→  // Account username (null = never set). The leaderboard displays this or
+   577→   577→  // the playerId.
+   578→   578→  accountUsername: z.string().nullable(),
+   579→   579→  flag: z.string().optional(),
+   580→   580→  elo: z.number(),
+   581→   581→  games: z.number(),
+   582→   582→  wins: z.number(),
+   583→   583→  losses: z.number(),
+   584→   584→  winRate: z.number(),
+   585→   585→});
+   586→   586→export type PlayerLeaderboardEntry = z.infer<
+   587→   587→  typeof PlayerLeaderboardEntrySchema
+   588→   588→>;
+   589→   589→
+   590→   590→export const PlayerLeaderboardResponseSchema = z.object({
+   591→   591→  players: PlayerLeaderboardEntrySchema.array(),
+   592→   592→});
+   593→   593→export type PlayerLeaderboardResponse = z.infer<
+   594→   594→  typeof PlayerLeaderboardResponseSchema
+   595→   595→>;
+   596→   596→
+   597→   597→export const RankedLeaderboardEntrySchema = z.object({
+   598→   598→  rank: z.number(),
+   599→   599→  elo: z.number(),
+   600→   600→  peakElo: z.number().nullable(),
+   601→   601→  wins: z.number(),
+   602→   602→  losses: z.number(),
+   603→   603→  total: z.number(),
+   604→   604→  public_id: z.string(),
+   605→   605→  // Account username (null = never set). The client displays
+   606→   606→  // `accountUsername ?? public_id`.
+   607→   607→  accountUsername: z.string().nullable(),
+   608→   608→});
+   609→   609→export type RankedLeaderboardEntry = z.infer<
+   610→   610→  typeof RankedLeaderboardEntrySchema
+   611→   611→>;
+   612→   612→
+   613→   613→export const RankedLeaderboardResponseSchema = z.object({
+   614→   614→  [RankedType.OneVOne]: RankedLeaderboardEntrySchema.array(),
+   615→   615→  // Each ranked type is its own ladder, ranked independently: a player can
+   616→   616→  // appear on both with a different elo and rank. Defaulted because an API
+   617→   617→  // deployment that predates the 2v2 ladder omits the key entirely.
+   618→   618→  [RankedType.TwoVTwo]: RankedLeaderboardEntrySchema.array().default([]),
+   619→   619→});
+   620→   620→export type RankedLeaderboardResponse = z.infer<
+   621→   621→  typeof RankedLeaderboardResponseSchema
+   622→   622→>;
+   623→   623→
+   624→   624→export const FriendEntrySchema = z.object({
+   625→   625→  publicId: z.string(),
+   626→   626→  // Account username (null = never set), always the other party's. Render
+   627→   627→  // `username ?? publicId`; identify players by publicId only.
+   628→   628→  username: z.string().nullable().optional(),
+   629→   629→  createdAt: z.iso.datetime(),
+   630→   630→});
+   631→   631→export type FriendEntry = z.infer<typeof FriendEntrySchema>;
+   632→   632→
+   633→   633→export const FriendRequestsResponseSchema = z.object({
+   634→   634→  incoming: FriendEntrySchema.array(),
+   635→   635→  outgoing: FriendEntrySchema.array(),
+   636→   636→});
+   637→   637→export type FriendRequestsResponse = z.infer<
+   638→   638→  typeof FriendRequestsResponseSchema
+   639→   639→>;
+   640→   640→
+   641→   641→export const FriendsListResponseSchema = z.object({
+   642→   642→  results: FriendEntrySchema.array(),
+   643→   643→  total: z.number(),
+   644→   644→  page: z.number(),
+   645→   645→  limit: z.number(),
+   646→   646→});
+   647→   647→export type FriendsListResponse = z.infer<typeof FriendsListResponseSchema>;
+   648→   648→
+   649→   649→export const SendFriendRequestResponseSchema = z.object({
+   650→   650→  status: z.enum(["requested", "accepted"]),
+   651→   651→});
+   652→   652→export type SendFriendRequestResponse = z.infer<
+   653→   653→  typeof SendFriendRequestResponseSchema
+   654→   654→>;
+   655→   655→
+   656→   656→export const NewsItemSchema = z.object({
+   657→   657→  id: z.string(),
+   658→   658→  title: z.string(),
+   659→   659→  description: z.string().optional(),
+   660→   660→  descriptionTranslationKey: z.string().optional(),
+   661→   661→  url: z.string().nullable().optional(),
+   662→   662→  type: z.enum(["tournament", "tutorial", "announcement"]).or(z.string()),
+   663→   663→});
+   664→   664→export type NewsItem = z.infer<typeof NewsItemSchema>;
+   665→   665→
+   666→   666→// https-only URL: a plain URL check would accept javascript:/http: URLs, and these flow
+   667→   667→// into href/src, so restrict the scheme (the config is served, but this fails an injected
+   668→   668→// entry closed rather than rendering it).
+   669→   669→const HttpsUrlSchema = z.url({ protocol: /^https$/ });
+   670→   670→
+   671→   671→// One verified-live stream in the homepage streaming features. Produced only by the
+   672→   672→// API's cron (Twitch Helix; YouTube RSS + videos.list) and served by GET /streams.json.
+   673→   673→// `channel` is the login/handle used to derive the watch URL when `url` is absent;
+   674→   674→// image/link fields are validated so a malformed entry fails the feed closed.
+   675→   675→//
+   676→   676→// `startedAt` is required on purpose. It can only come from a live lookup, so a payload
+   677→   677→// built from static config cannot satisfy this schema — which means an API still serving
+   678→   678→// the older {enabled, channels} shape fails validation and falls back to "show nothing",
+   679→   679→// rather than being mistaken for a current one. Liveness is never decided on the client.
+   680→   680→export const LiveStreamSchema = z.object({
+   681→   681→  platform: z.enum(["twitch", "youtube"]),
+   682→   682→  // Login/handle as it appears in the watch URL (twitch.tv/<login>, youtube.com/@handle).
+   683→   683→  // One conservative charset for both platforms — no slashes, queries, or whitespace — so
+   684→   684→  // an entry can't smuggle path/query segments into the derived URL.
+   685→   685→  channel: z
+   686→   686→    .string()
+   687→   687→    .min(1)
+   688→   688→    .max(100)
+   689→   689→    .regex(/^@?[A-Za-z0-9._-]+$/, "invalid channel handle"),
+   690→   690→  displayName: z.string().min(1).max(100),
+   691→   691→  title: z.string().max(200).optional(),
+   692→   692→  viewers: z.number().int().nonnegative().default(0),
+   693→   693→  avatarUrl: HttpsUrlSchema.optional(),
+   694→   694→  url: HttpsUrlSchema.optional(),
+   695→   695→  startedAt: z.iso.datetime(),
+   696→   696→});
+   697→   697→export type LiveStream = z.infer<typeof LiveStreamSchema>;
+   698→   698→
+   699→   699→// The single served feed (GET /streams.json). `featured` is the embed candidate list in
+   700→   700→// admin priority order; `live` is the "Streaming Now" list sorted by viewers.
+   701→   701→//
+   702→   702→// There is no `enabled` flag: an empty array means "show nothing". An overloaded toggle
+   703→   703→// is exactly what made the old payload ambiguous — it meant "configured" in one API
+   704→   704→// version and "live" in the next, with an identical shape. `verifiedAt` is when the API
+   705→   705→// built the feed, so the client can refuse one the edge served long after the cron died.
+   706→   706→export const StreamsFeedSchema = z.object({
+   707→   707→  verifiedAt: z.iso.datetime(),
+   708→   708→  featured: z.array(LiveStreamSchema).default([]),
+   709→   709→  live: z.array(LiveStreamSchema).default([]),
+   710→   710→});
+   711→   711→export type StreamsFeed = z.infer<typeof StreamsFeedSchema>;
+   712→   712→

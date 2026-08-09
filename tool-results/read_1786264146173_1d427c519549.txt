@@ -1,0 +1,1140 @@
+     1→     1→import newsItemsFallback from "resources/news.json";
+     2→     2→import streamsFallback from "resources/streams.json";
+     3→     3→import { z } from "zod";
+     4→     4→import type { NewsItem, StreamsFeed } from "../core/ApiSchemas";
+     5→     5→import {
+     6→     6→  ClaimAllRewardsResponse,
+     7→     7→  ClaimAllRewardsResponseSchema,
+     8→     8→  ClaimRewardResponse,
+     9→     9→  ClaimRewardResponseSchema,
+    10→    10→  GetMyTribeNamesResponse,
+    11→    11→  GetMyTribeNamesResponseSchema,
+    12→    12→  NewsItemSchema,
+    13→    13→  PlayerGameModeFilter,
+    14→    14→  PlayerGameTypeFilter,
+    15→    15→  PlayerProfile,
+    16→    16→  PlayerProfileSchema,
+    17→    17→  PostTribeBoostResponse,
+    18→    18→  PostTribeBoostResponseSchema,
+    19→    19→  PostTribeNameResponse,
+    20→    20→  PostTribeNameResponseSchema,
+    21→    21→  PublicPlayerGamesResponse,
+    22→    22→  PublicPlayerGamesResponseSchema,
+    23→    23→  PutUsernameResponse,
+    24→    24→  PutUsernameResponseSchema,
+    25→    25→  RankedLeaderboardResponse,
+    26→    26→  RankedLeaderboardResponseSchema,
+    27→    27→  StreamsFeedSchema,
+    28→    28→  TribeLeaderboardResponse,
+    29→    29→  TribeLeaderboardResponseSchema,
+    30→    30→  TribeStatsResponse,
+    31→    31→  TribeStatsResponseSchema,
+    32→    32→  UserMeResponse,
+    33→    33→  UserMeResponseSchema,
+    34→    34→} from "../core/ApiSchemas";
+    35→    35→import {
+    36→    36→  AnalyticsRecord,
+    37→    37→  ArchivedAnalyticsRecordSchema,
+    38→    38→  GameInfo,
+    39→    39→} from "../core/Schemas";
+    40→    40→import { getAuthHeader, getPlayToken, logOut, userAuth } from "./Auth";
+    41→    41→import { ClientEnv } from "./ClientEnv";
+    42→    42→
+    43→    43→export async function fetchPlayerById(
+    44→    44→  playerId: string,
+    45→    45→): Promise<PlayerProfile | false> {
+    46→    46→  try {
+    47→    47→    const userAuthResult = await userAuth();
+    48→    48→    if (!userAuthResult) return false;
+    49→    49→    const { jwt } = userAuthResult;
+    50→    50→
+    51→    51→    const url = `${getApiBase()}/player/${encodeURIComponent(playerId)}`;
+    52→    52→
+    53→    53→    const res = await fetch(url, {
+    54→    54→      headers: {
+    55→    55→        Accept: "application/json",
+    56→    56→        Authorization: `Bearer ${jwt}`,
+    57→    57→      },
+    58→    58→    });
+    59→    59→
+    60→    60→    if (res.status !== 200) {
+    61→    61→      console.warn(
+    62→    62→        "fetchPlayerById: unexpected status",
+    63→    63→        res.status,
+    64→    64→        res.statusText,
+    65→    65→      );
+    66→    66→      return false;
+    67→    67→    }
+    68→    68→
+    69→    69→    const json = await res.json();
+    70→    70→    const parsed = PlayerProfileSchema.safeParse(json);
+    71→    71→    if (!parsed.success) {
+    72→    72→      console.warn("fetchPlayerById: Zod validation failed", parsed.error);
+    73→    73→      return false;
+    74→    74→    }
+    75→    75→
+    76→    76→    return parsed.data;
+    77→    77→  } catch (err) {
+    78→    78→    console.warn("fetchPlayerById: request failed", err);
+    79→    79→    return false;
+    80→    80→  }
+    81→    81→}
+    82→    82→
+    83→    83→// GET /public/player/:publicId — public player profile (stats tree). No auth,
+    84→    84→// so logged-out visitors can view shared profiles.
+    85→    85→export async function fetchPublicPlayerProfile(
+    86→    86→  publicId: string,
+    87→    87→): Promise<PlayerProfile | false> {
+    88→    88→  try {
+    89→    89→    const url = `${getApiBase()}/public/player/${encodeURIComponent(publicId)}`;
+    90→    90→
+    91→    91→    const res = await fetch(url, {
+    92→    92→      headers: { Accept: "application/json" },
+    93→    93→    });
+    94→    94→
+    95→    95→    if (res.status !== 200) {
+    96→    96→      console.warn(
+    97→    97→        "fetchPublicPlayerProfile: unexpected status",
+    98→    98→        res.status,
+    99→    99→        res.statusText,
+   100→   100→      );
+   101→   101→      return false;
+   102→   102→    }
+   103→   103→
+   104→   104→    const json = await res.json();
+   105→   105→    const parsed = PlayerProfileSchema.safeParse(json);
+   106→   106→    if (!parsed.success) {
+   107→   107→      console.warn(
+   108→   108→        "fetchPublicPlayerProfile: Zod validation failed",
+   109→   109→        parsed.error,
+   110→   110→      );
+   111→   111→      return false;
+   112→   112→    }
+   113→   113→
+   114→   114→    return parsed.data;
+   115→   115→  } catch (err) {
+   116→   116→    console.warn("fetchPublicPlayerProfile: request failed", err);
+   117→   117→    return false;
+   118→   118→  }
+   119→   119→}
+   120→   120→
+   121→   121→// GET /public/player/:publicId/games — keyset-paginated personal game history.
+   122→   122→// Public (no auth). `filter` (mode bucket) and `type` (game-type split) are
+   123→   123→// orthogonal; `cursor` is the opaque token from the previous response's
+   124→   124→// nextCursor — round-trip verbatim, never construct it.
+   125→   125→export async function fetchPublicPlayerGames(
+   126→   126→  publicId: string,
+   127→   127→  opts: {
+   128→   128→    filter?: PlayerGameModeFilter;
+   129→   129→    type?: PlayerGameTypeFilter;
+   130→   130→    cursor?: string;
+   131→   131→  } = {},
+   132→   132→): Promise<PublicPlayerGamesResponse | { error: "failed" }> {
+   133→   133→  try {
+   134→   134→    const url = new URL(
+   135→   135→      `${getApiBase()}/public/player/${encodeURIComponent(publicId)}/games`,
+   136→   136→    );
+   137→   137→    if (opts.filter) url.searchParams.set("filter", opts.filter);
+   138→   138→    if (opts.type) url.searchParams.set("type", opts.type);
+   139→   139→    if (opts.cursor) url.searchParams.set("cursor", opts.cursor);
+   140→   140→
+   141→   141→    const res = await fetch(url.toString(), {
+   142→   142→      headers: { Accept: "application/json" },
+   143→   143→    });
+   144→   144→    if (!res.ok) {
+   145→   145→      console.warn(
+   146→   146→        "fetchPublicPlayerGames: unexpected status",
+   147→   147→        res.status,
+   148→   148→        res.statusText,
+   149→   149→      );
+   150→   150→      return { error: "failed" };
+   151→   151→    }
+   152→   152→
+   153→   153→    const json = await res.json();
+   154→   154→    const parsed = PublicPlayerGamesResponseSchema.safeParse(json);
+   155→   155→    if (!parsed.success) {
+   156→   156→      console.warn(
+   157→   157→        "fetchPublicPlayerGames: Zod validation failed",
+   158→   158→        parsed.error,
+   159→   159→      );
+   160→   160→      return { error: "failed" };
+   161→   161→    }
+   162→   162→    return parsed.data;
+   163→   163→  } catch (err) {
+   164→   164→    console.warn("fetchPublicPlayerGames: request failed", err);
+   165→   165→    return { error: "failed" };
+   166→   166→  }
+   167→   167→}
+   168→   168→
+   169→   169→let __userMe: Promise<UserMeResponse | false> | null = null;
+   170→   170→export async function getUserMe(): Promise<UserMeResponse | false> {
+   171→   171→  if (__userMe !== null) {
+   172→   172→    return __userMe;
+   173→   173→  }
+   174→   174→  __userMe = (async () => {
+   175→   175→    try {
+   176→   176→      const userAuthResult = await userAuth();
+   177→   177→      if (!userAuthResult) return false;
+   178→   178→      const { jwt } = userAuthResult;
+   179→   179→
+   180→   180→      // Get the user object
+   181→   181→      const response = await fetch(getApiBase() + "/users/@me", {
+   182→   182→        headers: {
+   183→   183→          authorization: `Bearer ${jwt}`,
+   184→   184→        },
+   185→   185→      });
+   186→   186→      if (response.status === 401) {
+   187→   187→        await logOut();
+   188→   188→        return false;
+   189→   189→      }
+   190→   190→      if (response.status !== 200) return false;
+   191→   191→      const body = await response.json();
+   192→   192→      const result = UserMeResponseSchema.safeParse(body);
+   193→   193→      if (!result.success) {
+   194→   194→        const error = z.prettifyError(result.error);
+   195→   195→        console.error("Invalid response", error);
+   196→   196→        return false;
+   197→   197→      }
+   198→   198→      return result.data;
+   199→   199→    } catch (e) {
+   200→   200→      return false;
+   201→   201→    }
+   202→   202→  })();
+   203→   203→  return __userMe;
+   204→   204→}
+   205→   205→
+   206→   206→export function invalidateUserMe() {
+   207→   207→  __userMe = null;
+   208→   208→}
+   209→   209→
+   210→   210→// POST /marketing/consent — record the player's marketing-email choice
+   211→   211→// (client-driven consent). Called by the consent toast and account settings.
+   212→   212→// Invalidates the cached /users/@me so the new decision is reflected on the
+   213→   213→// next read. Returns true on success.
+   214→   214→export async function setMarketingConsent(
+   215→   215→  consented: boolean,
+   216→   216→): Promise<boolean> {
+   217→   217→  try {
+   218→   218→    const response = await fetch(`${getApiBase()}/marketing/consent`, {
+   219→   219→      method: "POST",
+   220→   220→      headers: {
+   221→   221→        "Content-Type": "application/json",
+   222→   222→        Authorization: await getAuthHeader(),
+   223→   223→      },
+   224→   224→      body: JSON.stringify({ consented }),
+   225→   225→    });
+   226→   226→    if (response.status === 401) {
+   227→   227→      await logOut();
+   228→   228→      return false;
+   229→   229→    }
+   230→   230→    if (!response.ok) {
+   231→   231→      console.error(
+   232→   232→        "setMarketingConsent: request failed",
+   233→   233→        response.status,
+   234→   234→        response.statusText,
+   235→   235→      );
+   236→   236→      return false;
+   237→   237→    }
+   238→   238→    invalidateUserMe();
+   239→   239→    return true;
+   240→   240→  } catch (e) {
+   241→   241→    console.error("setMarketingConsent: request failed", e);
+   242→   242→    return false;
+   243→   243→  }
+   244→   244→}
+   245→   245→
+   246→   246→export type UpdateUsernameResult =
+   247→   247→  | { ok: true; data: PutUsernameResponse }
+   248→   248→  | { ok: false; code: "invalid"; message?: string }
+   249→   249→  | { ok: false; code: "profane" }
+   250→   250→  | { ok: false; code: "taken" }
+   251→   251→  | { ok: false; code: "cooldown"; retryAfterSeconds: number | null }
+   252→   252→  | { ok: false; code: "failed" };
+   253→   253→
+   254→   254→// PUT /users/@me/username — renames the account username. Every failure is
+   255→   255→// atomic (no name change, no cooldown consumed). Both 409 bodies ("name
+   256→   256→// exclusively held" and "suffix space exhausted") map to "taken": the user
+   257→   257→// remedy is the same — pick another name. Invalidates the cached /users/@me
+   258→   258→// on success so the next read reflects the new name.
+   259→   259→export async function updateUsername(
+   260→   260→  username: string,
+   261→   261→): Promise<UpdateUsernameResult> {
+   262→   262→  try {
+   263→   263→    const response = await fetch(`${getApiBase()}/users/@me/username`, {
+   264→   264→      method: "PUT",
+   265→   265→      headers: {
+   266→   266→        "Content-Type": "application/json",
+   267→   267→        Authorization: await getAuthHeader(),
+   268→   268→      },
+   269→   269→      body: JSON.stringify({ username }),
+   270→   270→    });
+   271→   271→    if (response.status === 401) {
+   272→   272→      await logOut();
+   273→   273→      return { ok: false, code: "failed" };
+   274→   274→    }
+   275→   275→    if (response.status === 400) {
+   276→   276→      const body = await response.json().catch(() => null);
+   277→   277→      if (body?.code === "USERNAME_PROFANE") {
+   278→   278→        return { ok: false, code: "profane" };
+   279→   279→      }
+   280→   280→      return {
+   281→   281→        ok: false,
+   282→   282→        code: "invalid",
+   283→   283→        message: typeof body?.reason === "string" ? body.reason : undefined,
+   284→   284→      };
+   285→   285→    }
+   286→   286→    if (response.status === 409) {
+   287→   287→      return { ok: false, code: "taken" };
+   288→   288→    }
+   289→   289→    if (response.status === 429) {
+   290→   290→      const retryAfter = response.headers.get("Retry-After");
+   291→   291→      const seconds = retryAfter === null ? NaN : Number(retryAfter);
+   292→   292→      return {
+   293→   293→        ok: false,
+   294→   294→        code: "cooldown",
+   295→   295→        retryAfterSeconds: Number.isFinite(seconds) ? seconds : null,
+   296→   296→      };
+   297→   297→    }
+   298→   298→    if (!response.ok) {
+   299→   299→      console.error(
+   300→   300→        "updateUsername: request failed",
+   301→   301→        response.status,
+   302→   302→        response.statusText,
+   303→   303→      );
+   304→   304→      return { ok: false, code: "failed" };
+   305→   305→    }
+   306→   306→    const parsed = PutUsernameResponseSchema.safeParse(await response.json());
+   307→   307→    if (!parsed.success) {
+   308→   308→      console.error("updateUsername: Zod validation failed", parsed.error);
+   309→   309→      return { ok: false, code: "failed" };
+   310→   310→    }
+   311→   311→    invalidateUserMe();
+   312→   312→    return { ok: true, data: parsed.data };
+   313→   313→  } catch (e) {
+   314→   314→    console.error("updateUsername: request failed", e);
+   315→   315→    return { ok: false, code: "failed" };
+   316→   316→  }
+   317→   317→}
+   318→   318→
+   319→   319→// GET /users/@me/tribe_names — the player's purchased custom tribe names plus
+   320→   320→// the current purchase price. Auth required; returns false when logged out or
+   321→   321→// on any error (callers show a login/empty state rather than a hard failure).
+   322→   322→export async function getMyTribeNames(): Promise<
+   323→   323→  GetMyTribeNamesResponse | false
+   324→   324→> {
+   325→   325→  try {
+   326→   326→    const response = await fetch(`${getApiBase()}/users/@me/tribe_names`, {
+   327→   327→      headers: {
+   328→   328→        Authorization: await getAuthHeader(),
+   329→   329→      },
+   330→   330→    });
+   331→   331→    if (response.status === 401) {
+   332→   332→      await logOut();
+   333→   333→      return false;
+   334→   334→    }
+   335→   335→    if (!response.ok) {
+   336→   336→      console.error(
+   337→   337→        "getMyTribeNames: request failed",
+   338→   338→        response.status,
+   339→   339→        response.statusText,
+   340→   340→      );
+   341→   341→      return false;
+   342→   342→    }
+   343→   343→    const parsed = GetMyTribeNamesResponseSchema.safeParse(
+   344→   344→      await response.json(),
+   345→   345→    );
+   346→   346→    if (!parsed.success) {
+   347→   347→      console.error("getMyTribeNames: Zod validation failed", parsed.error);
+   348→   348→      return false;
+   349→   349→    }
+   350→   350→    return parsed.data;
+   351→   351→  } catch (e) {
+   352→   352→    console.error("getMyTribeNames: request failed", e);
+   353→   353→    return false;
+   354→   354→  }
+   355→   355→}
+   356→   356→
+   357→   357→export type PurchaseTribeNameResult =
+   358→   358→  | { ok: true; data: PostTribeNameResponse }
+   359→   359→  // 400: invalid, disallowed, or insufficient balance. `message` is the
+   360→   360→  // server's player-facing reason (already English, shown as-is).
+   361→   361→  | { ok: false; code: "invalid"; message?: string }
+   362→   362→  // 409: the name is already taken (names are globally unique).
+   363→   363→  | { ok: false; code: "duplicate" }
+   364→   364→  // 429: buying names too fast. `retryAfterSeconds` from the Retry-After
+   365→   365→  // header (null when absent/unparseable).
+   366→   366→  | { ok: false; code: "rate_limited"; retryAfterSeconds: number | null }
+   367→   367→  | { ok: false; code: "failed" };
+   368→   368→
+   369→   369→// POST /users/@me/tribe_names — buy a custom tribe name (200 plutonium). The
+   370→   370→// name is screened, charged, and goes live right away as `pending`; review is
+   371→   371→// post-hoc and only takes bad names down. Spends hard currency, so callers
+   372→   372→// should invalidate the cached /users/@me afterwards.
+   373→   373→export async function purchaseTribeName(
+   374→   374→  name: string,
+   375→   375→): Promise<PurchaseTribeNameResult> {
+   376→   376→  try {
+   377→   377→    const response = await fetch(`${getApiBase()}/users/@me/tribe_names`, {
+   378→   378→      method: "POST",
+   379→   379→      headers: {
+   380→   380→        "Content-Type": "application/json",
+   381→   381→        Authorization: await getAuthHeader(),
+   382→   382→      },
+   383→   383→      body: JSON.stringify({ name }),
+   384→   384→    });
+   385→   385→    if (response.status === 401) {
+   386→   386→      await logOut();
+   387→   387→      return { ok: false, code: "failed" };
+   388→   388→    }
+   389→   389→    if (response.status === 400) {
+   390→   390→      const body = await response.json().catch(() => null);
+   391→   391→      return {
+   392→   392→        ok: false,
+   393→   393→        code: "invalid",
+   394→   394→        message: typeof body?.reason === "string" ? body.reason : undefined,
+   395→   395→      };
+   396→   396→    }
+   397→   397→    if (response.status === 409) {
+   398→   398→      return { ok: false, code: "duplicate" };
+   399→   399→    }
+   400→   400→    if (response.status === 429) {
+   401→   401→      const retryAfter = response.headers.get("Retry-After");
+   402→   402→      const seconds = retryAfter === null ? NaN : Number(retryAfter);
+   403→   403→      return {
+   404→   404→        ok: false,
+   405→   405→        code: "rate_limited",
+   406→   406→        retryAfterSeconds: Number.isFinite(seconds) ? seconds : null,
+   407→   407→      };
+   408→   408→    }
+   409→   409→    if (!response.ok) {
+   410→   410→      console.error(
+   411→   411→        "purchaseTribeName: request failed",
+   412→   412→        response.status,
+   413→   413→        response.statusText,
+   414→   414→      );
+   415→   415→      return { ok: false, code: "failed" };
+   416→   416→    }
+   417→   417→    const parsed = PostTribeNameResponseSchema.safeParse(await response.json());
+   418→   418→    if (!parsed.success) {
+   419→   419→      console.error("purchaseTribeName: Zod validation failed", parsed.error);
+   420→   420→      return { ok: false, code: "failed" };
+   421→   421→    }
+   422→   422→    return { ok: true, data: parsed.data };
+   423→   423→  } catch (e) {
+   424→   424→    console.error("purchaseTribeName: request failed", e);
+   425→   425→    return { ok: false, code: "failed" };
+   426→   426→  }
+   427→   427→}
+   428→   428→
+   429→   429→export type BoostTribeNameResult =
+   430→   430→  | { ok: true; data: PostTribeBoostResponse }
+   431→   431→  // 400 with a player-facing reason — today that's only "Insufficient
+   432→   432→  // balance" (the balance moved since the client's pre-check).
+   433→   433→  | { ok: false; code: "insufficient_balance" }
+   434→   434→  // 404: not the caller's name, or it's no longer active (rejected/revoked).
+   435→   435→  // Deliberately indistinguishable server-side — refresh the list.
+   436→   436→  | { ok: false; code: "not_found" }
+   437→   437→  | { ok: false; code: "failed" };
+   438→   438→
+   439→   439→// POST /users/@me/tribe_names/:id/boosts — buy a 30-day boost for an active
+   440→   440→// tribe name. Boosts stack without limit and the endpoint has no rate limit,
+   441→   441→// so the Idempotency-Key is what stops a double-submit from charging twice:
+   442→   442→// callers generate a fresh UUID per user-initiated click. Nothing is charged
+   443→   443→// on any error. Spends hard currency — callers refresh /users/@me and the
+   444→   444→// name list afterwards (boost state is only served by the list endpoint).
+   445→   445→export async function boostTribeName(
+   446→   446→  id: string,
+   447→   447→  idempotencyKey: string,
+   448→   448→): Promise<BoostTribeNameResult> {
+   449→   449→  try {
+   450→   450→    const response = await fetch(
+   451→   451→      `${getApiBase()}/users/@me/tribe_names/${encodeURIComponent(id)}/boosts`,
+   452→   452→      {
+   453→   453→        method: "POST",
+   454→   454→        headers: {
+   455→   455→          Authorization: await getAuthHeader(),
+   456→   456→          "Idempotency-Key": idempotencyKey,
+   457→   457→        },
+   458→   458→      },
+   459→   459→    );
+   460→   460→    if (response.status === 401) {
+   461→   461→      await logOut();
+   462→   462→      return { ok: false, code: "failed" };
+   463→   463→    }
+   464→   464→    if (response.status === 400) {
+   465→   465→      const body = await response.json().catch(() => null);
+   466→   466→      // {"reason": "..."} is the player-facing 400 (insufficient balance);
+   467→   467→      // {"resource": "id"} means a malformed id — a client bug, not a
+   468→   468→      // player error, so it falls through to the generic failure.
+   469→   469→      if (typeof body?.reason === "string") {
+   470→   470→        return { ok: false, code: "insufficient_balance" };
+   471→   471→      }
+   472→   472→      console.error("boostTribeName: bad request", body);
+   473→   473→      return { ok: false, code: "failed" };
+   474→   474→    }
+   475→   475→    if (response.status === 404) {
+   476→   476→      return { ok: false, code: "not_found" };
+   477→   477→    }
+   478→   478→    if (!response.ok) {
+   479→   479→      console.error(
+   480→   480→        "boostTribeName: request failed",
+   481→   481→        response.status,
+   482→   482→        response.statusText,
+   483→   483→      );
+   484→   484→      return { ok: false, code: "failed" };
+   485→   485→    }
+   486→   486→    const parsed = PostTribeBoostResponseSchema.safeParse(
+   487→   487→      await response.json(),
+   488→   488→    );
+   489→   489→    if (!parsed.success) {
+   490→   490→      console.error("boostTribeName: Zod validation failed", parsed.error);
+   491→   491→      return { ok: false, code: "failed" };
+   492→   492→    }
+   493→   493→    return { ok: true, data: parsed.data };
+   494→   494→  } catch (e) {
+   495→   495→    console.error("boostTribeName: request failed", e);
+   496→   496→    return { ok: false, code: "failed" };
+   497→   497→  }
+   498→   498→}
+   499→   499→
+   500→   500→// GET /public/tribe/:name — live stats for one custom tribe name. Public
+   501→   501→// (no auth), so it works for any name, but 404s for names that are unknown,
+   502→   502→// rejected/revoked, or whose owner is banned — that folds into false along
+   503→   503→// with every other failure, since callers can't act on the difference.
+   504→   504→export async function fetchTribeStats(
+   505→   505→  name: string,
+   506→   506→): Promise<TribeStatsResponse | false> {
+   507→   507→  try {
+   508→   508→    const res = await fetch(
+   509→   509→      `${getApiBase()}/public/tribe/${encodeURIComponent(name)}`,
+   510→   510→      { headers: { Accept: "application/json" } },
+   511→   511→    );
+   512→   512→    if (res.status !== 200) {
+   513→   513→      console.warn(
+   514→   514→        "fetchTribeStats: unexpected status",
+   515→   515→        res.status,
+   516→   516→        res.statusText,
+   517→   517→      );
+   518→   518→      return false;
+   519→   519→    }
+   520→   520→    const parsed = TribeStatsResponseSchema.safeParse(await res.json());
+   521→   521→    if (!parsed.success) {
+   522→   522→      console.warn("fetchTribeStats: Zod validation failed", parsed.error);
+   523→   523→      return false;
+   524→   524→    }
+   525→   525→    return parsed.data;
+   526→   526→  } catch (err) {
+   527→   527→    console.warn("fetchTribeStats: request failed", err);
+   528→   528→    return false;
+   529→   529→  }
+   530→   530→}
+   531→   531→
+   532→   532→export async function purchaseWithCurrency(
+   533→   533→  cosmeticType: "pattern" | "skin" | "flag" | "crown" | "effect",
+   534→   534→  cosmeticName: string,
+   535→   535→  currencyType: "hard" | "soft",
+   536→   536→  colorPaletteName?: string,
+   537→   537→): Promise<boolean> {
+   538→   538→  try {
+   539→   539→    const response = await fetch(`${getApiBase()}/shop/purchase`, {
+   540→   540→      method: "POST",
+   541→   541→      headers: {
+   542→   542→        "Content-Type": "application/json",
+   543→   543→        Authorization: await getAuthHeader(),
+   544→   544→      },
+   545→   545→      body: JSON.stringify({
+   546→   546→        cosmeticType,
+   547→   547→        cosmeticName,
+   548→   548→        currencyType,
+   549→   549→        colorPaletteName,
+   550→   550→      }),
+   551→   551→    });
+   552→   552→    if (response.status === 401) {
+   553→   553→      await logOut();
+   554→   554→      return false;
+   555→   555→    }
+   556→   556→    if (!response.ok) {
+   557→   557→      console.error(
+   558→   558→        "purchaseWithCurrency: request failed",
+   559→   559→        response.status,
+   560→   560→        response.statusText,
+   561→   561→      );
+   562→   562→      return false;
+   563→   563→    }
+   564→   564→    return true;
+   565→   565→  } catch (e) {
+   566→   566→    console.error("purchaseWithCurrency: request failed", e);
+   567→   567→    return false;
+   568→   568→  }
+   569→   569→}
+   570→   570→
+   571→   571→// POST /rewards/:rewardId/claim — claims a single unclaimed reward and
+   572→   572→// credits the balance atomically. "not_found" covers unknown, already-claimed
+   573→   573→// and other players' rewards (indistinguishable by design); the usual cause is
+   574→   574→// a double-click or a second device claiming first, so callers should re-fetch
+   575→   575→// /users/@me and re-render rather than surface an error.
+   576→   576→export async function claimReward(
+   577→   577→  rewardId: string,
+   578→   578→): Promise<ClaimRewardResponse | "not_found" | false> {
+   579→   579→  try {
+   580→   580→    const response = await fetch(
+   581→   581→      `${getApiBase()}/rewards/${encodeURIComponent(rewardId)}/claim`,
+   582→   582→      {
+   583→   583→        method: "POST",
+   584→   584→        headers: {
+   585→   585→          Authorization: await getAuthHeader(),
+   586→   586→        },
+   587→   587→      },
+   588→   588→    );
+   589→   589→    if (response.status === 401) {
+   590→   590→      await logOut();
+   591→   591→      return false;
+   592→   592→    }
+   593→   593→    if (response.status === 404) return "not_found";
+   594→   594→    if (!response.ok) {
+   595→   595→      console.error(
+   596→   596→        "claimReward: request failed",
+   597→   597→        response.status,
+   598→   598→        response.statusText,
+   599→   599→      );
+   600→   600→      return false;
+   601→   601→    }
+   602→   602→    const parsed = ClaimRewardResponseSchema.safeParse(await response.json());
+   603→   603→    if (!parsed.success) {
+   604→   604→      console.error("claimReward: Zod validation failed", parsed.error);
+   605→   605→      return false;
+   606→   606→    }
+   607→   607→    return parsed.data;
+   608→   608→  } catch (e) {
+   609→   609→    console.error("claimReward: request failed", e);
+   610→   610→    return false;
+   611→   611→  }
+   612→   612→}
+   613→   613→
+   614→   614→// POST /rewards/claim-all — claims all pending rewards in one transaction.
+   615→   615→// Succeeds (with an empty `claimed`) even when nothing is pending.
+   616→   616→export async function claimAllRewards(): Promise<
+   617→   617→  ClaimAllRewardsResponse | false
+   618→   618→> {
+   619→   619→  try {
+   620→   620→    const response = await fetch(`${getApiBase()}/rewards/claim-all`, {
+   621→   621→      method: "POST",
+   622→   622→      headers: {
+   623→   623→        Authorization: await getAuthHeader(),
+   624→   624→      },
+   625→   625→    });
+   626→   626→    if (response.status === 401) {
+   627→   627→      await logOut();
+   628→   628→      return false;
+   629→   629→    }
+   630→   630→    if (!response.ok) {
+   631→   631→      console.error(
+   632→   632→        "claimAllRewards: request failed",
+   633→   633→        response.status,
+   634→   634→        response.statusText,
+   635→   635→      );
+   636→   636→      return false;
+   637→   637→    }
+   638→   638→    const parsed = ClaimAllRewardsResponseSchema.safeParse(
+   639→   639→      await response.json(),
+   640→   640→    );
+   641→   641→    if (!parsed.success) {
+   642→   642→      console.error("claimAllRewards: Zod validation failed", parsed.error);
+   643→   643→      return false;
+   644→   644→    }
+   645→   645→    return parsed.data;
+   646→   646→  } catch (e) {
+   647→   647→    console.error("claimAllRewards: request failed", e);
+   648→   648→    return false;
+   649→   649→  }
+   650→   650→}
+   651→   651→
+   652→   652→export async function createCheckoutSession(
+   653→   653→  priceId: string,
+   654→   654→  colorPaletteName?: string,
+   655→   655→): Promise<string | false> {
+   656→   656→  try {
+   657→   657→    const response = await fetch(
+   658→   658→      `${getApiBase()}/stripe/create-checkout-session`,
+   659→   659→      {
+   660→   660→        method: "POST",
+   661→   661→        headers: {
+   662→   662→          "Content-Type": "application/json",
+   663→   663→          Authorization: await getAuthHeader(),
+   664→   664→        },
+   665→   665→        body: JSON.stringify({
+   666→   666→          priceId: priceId,
+   667→   667→          hostname: window.location.origin,
+   668→   668→          colorPaletteName: colorPaletteName,
+   669→   669→        }),
+   670→   670→      },
+   671→   671→    );
+   672→   672→    if (!response.ok) {
+   673→   673→      console.error(
+   674→   674→        "createCheckoutSession: request failed",
+   675→   675→        response.status,
+   676→   676→        response.statusText,
+   677→   677→      );
+   678→   678→      return false;
+   679→   679→    }
+   680→   680→    const json = await response.json();
+   681→   681→    return json.url;
+   682→   682→  } catch (e) {
+   683→   683→    console.error("createCheckoutSession: request failed", e);
+   684→   684→    return false;
+   685→   685→  }
+   686→   686→}
+   687→   687→
+   688→   688→export async function createCustomCurrencyCheckout(
+   689→   689→  hardAmount: number,
+   690→   690→): Promise<string | false> {
+   691→   691→  try {
+   692→   692→    const response = await fetch(
+   693→   693→      `${getApiBase()}/stripe/create-custom-currency-checkout`,
+   694→   694→      {
+   695→   695→        method: "POST",
+   696→   696→        headers: {
+   697→   697→          "Content-Type": "application/json",
+   698→   698→          Authorization: await getAuthHeader(),
+   699→   699→        },
+   700→   700→        body: JSON.stringify({
+   701→   701→          hardAmount: hardAmount,
+   702→   702→          hostname: window.location.origin,
+   703→   703→        }),
+   704→   704→      },
+   705→   705→    );
+   706→   706→    if (!response.ok) {
+   707→   707→      console.error(
+   708→   708→        "createCustomCurrencyCheckout: request failed",
+   709→   709→        response.status,
+   710→   710→        response.statusText,
+   711→   711→      );
+   712→   712→      return false;
+   713→   713→    }
+   714→   714→    const json = await response.json();
+   715→   715→    return json.url;
+   716→   716→  } catch (e) {
+   717→   717→    console.error("createCustomCurrencyCheckout: request failed", e);
+   718→   718→    return false;
+   719→   719→  }
+   720→   720→}
+   721→   721→
+   722→   722→export async function cancelSubscription(): Promise<boolean> {
+   723→   723→  try {
+   724→   724→    const response = await fetch(`${getApiBase()}/subscriptions/@me/cancel`, {
+   725→   725→      method: "POST",
+   726→   726→      headers: {
+   727→   727→        Authorization: await getAuthHeader(),
+   728→   728→      },
+   729→   729→    });
+   730→   730→    if (response.status === 401) {
+   731→   731→      await logOut();
+   732→   732→      return false;
+   733→   733→    }
+   734→   734→    if (!response.ok) {
+   735→   735→      console.error(
+   736→   736→        "cancelSubscription: request failed",
+   737→   737→        response.status,
+   738→   738→        response.statusText,
+   739→   739→      );
+   740→   740→      return false;
+   741→   741→    }
+   742→   742→    return true;
+   743→   743→  } catch (e) {
+   744→   744→    console.error("cancelSubscription: request failed", e);
+   745→   745→    return false;
+   746→   746→  }
+   747→   747→}
+   748→   748→
+   749→   749→export async function changeSubscriptionTier(
+   750→   750→  tierName: string,
+   751→   751→): Promise<boolean | "rate_limited"> {
+   752→   752→  try {
+   753→   753→    const response = await fetch(
+   754→   754→      `${getApiBase()}/subscriptions/@me/change-tier`,
+   755→   755→      {
+   756→   756→        method: "POST",
+   757→   757→        headers: {
+   758→   758→          "Content-Type": "application/json",
+   759→   759→          Authorization: await getAuthHeader(),
+   760→   760→        },
+   761→   761→        body: JSON.stringify({ tierName }),
+   762→   762→      },
+   763→   763→    );
+   764→   764→    if (response.status === 401) {
+   765→   765→      await logOut();
+   766→   766→      return false;
+   767→   767→    }
+   768→   768→    // The API allows one tier change per minute per player.
+   769→   769→    if (response.status === 429) {
+   770→   770→      return "rate_limited";
+   771→   771→    }
+   772→   772→    if (!response.ok) {
+   773→   773→      console.error(
+   774→   774→        "changeSubscriptionTier: request failed",
+   775→   775→        response.status,
+   776→   776→        response.statusText,
+   777→   777→      );
+   778→   778→      return false;
+   779→   779→    }
+   780→   780→    return true;
+   781→   781→  } catch (e) {
+   782→   782→    console.error("changeSubscriptionTier: request failed", e);
+   783→   783→    return false;
+   784→   784→  }
+   785→   785→}
+   786→   786→
+   787→   787→export async function openSubscriptionPortal(): Promise<string | false> {
+   788→   788→  try {
+   789→   789→    const response = await fetch(`${getApiBase()}/subscriptions/@me/portal`, {
+   790→   790→      method: "POST",
+   791→   791→      headers: {
+   792→   792→        "Content-Type": "application/json",
+   793→   793→        Authorization: await getAuthHeader(),
+   794→   794→      },
+   795→   795→      body: JSON.stringify({
+   796→   796→        returnUrl: window.location.origin,
+   797→   797→      }),
+   798→   798→    });
+   799→   799→    if (response.status === 401) {
+   800→   800→      await logOut();
+   801→   801→      return false;
+   802→   802→    }
+   803→   803→    if (!response.ok) {
+   804→   804→      console.error(
+   805→   805→        "openSubscriptionPortal: request failed",
+   806→   806→        response.status,
+   807→   807→        response.statusText,
+   808→   808→      );
+   809→   809→      return false;
+   810→   810→    }
+   811→   811→    const json = await response.json();
+   812→   812→    return json.url;
+   813→   813→  } catch (e) {
+   814→   814→    console.error("openSubscriptionPortal: request failed", e);
+   815→   815→    return false;
+   816→   816→  }
+   817→   817→}
+   818→   818→
+   819→   819→// GET /api/game/:id on the game server (worker) — whether the game is a
+   820→   820→// publicly listed lobby. False on any failure: callers use this to hide
+   821→   821→// host powers that the server blocks in listed games anyway, so the safe
+   822→   822→// default is to change nothing.
+   823→   823→export async function fetchLobbyListed(gameID: string): Promise<boolean> {
+   824→   824→  try {
+   825→   825→    const res = await fetch(
+   826→   826→      `/${ClientEnv.workerPath(gameID)}/api/game/${gameID}`,
+   827→   827→      { headers: { Accept: "application/json" } },
+   828→   828→    );
+   829→   829→    if (!res.ok) return false;
+   830→   830→    const json = await res.json();
+   831→   831→    return json?.listed === true;
+   832→   832→  } catch (e) {
+   833→   833→    console.warn("fetchLobbyListed: request failed", e);
+   834→   834→    return false;
+   835→   835→  }
+   836→   836→}
+   837→   837→
+   838→   838→// POST /api/game/:id/listing on the game server (worker) — toggles whether a
+   839→   839→// private lobby appears in the public lobby browser. Creator-only and
+   840→   840→// server-authoritative (subscription, whitelist/cheat and quota checks).
+   841→   841→// On failure, `error` is the server's rejection code when available (e.g.
+   842→   842→// "subscription_required", "listing_limit_reached", "listing_full").
+   843→   843→export async function setLobbyListed(
+   844→   844→  gameID: string,
+   845→   845→  listed: boolean,
+   846→   846→): Promise<{ ok: true; listed: boolean } | { ok: false; error?: string }> {
+   847→   847→  try {
+   848→   848→    const token = await getPlayToken();
+   849→   849→    const response = await fetch(
+   850→   850→      `/${ClientEnv.workerPath(gameID)}/api/game/${gameID}/listing`,
+   851→   851→      {
+   852→   852→        method: "POST",
+   853→   853→        headers: {
+   854→   854→          "Content-Type": "application/json",
+   855→   855→          Authorization: `Bearer ${token}`,
+   856→   856→        },
+   857→   857→        body: JSON.stringify({ listed }),
+   858→   858→      },
+   859→   859→    );
+   860→   860→    const body = await response.json().catch(() => null);
+   861→   861→    if (!response.ok) {
+   862→   862→      return { ok: false, error: body?.error };
+   863→   863→    }
+   864→   864→    return {
+   865→   865→      ok: true,
+   866→   866→      listed: typeof body?.listed === "boolean" ? body.listed : listed,
+   867→   867→    };
+   868→   868→  } catch (e) {
+   869→   869→    console.error("setLobbyListed: request failed", e);
+   870→   870→    return { ok: false };
+   871→   871→  }
+   872→   872→}
+   873→   873→
+   874→   874→// POST /wX/api/create_game?previous=<gameID>, targeted at the worker that owns
+   875→   875→// the finished game — mints a successor private lobby (same creator, default
+   876→   876→// settings) and has the old game broadcast the new id to everyone still
+   877→   877→// connected. Returns the successor's info; the caller navigates the host there.
+   878→   878→// Idempotent server-side: repeat calls return the same successor.
+   879→   879→export async function createNextLobby(
+   880→   880→  previousGameID: string,
+   881→   881→): Promise<GameInfo> {
+   882→   882→  const token = await getPlayToken();
+   883→   883→  const response = await fetch(
+   884→   884→    `/${ClientEnv.workerPath(previousGameID)}/api/create_game?previous=${previousGameID}`,
+   885→   885→    {
+   886→   886→      method: "POST",
+   887→   887→      headers: {
+   888→   888→        "Content-Type": "application/json",
+   889→   889→        Authorization: `Bearer ${token}`,
+   890→   890→      },
+   891→   891→    },
+   892→   892→  );
+   893→   893→  if (!response.ok) {
+   894→   894→    const errorText = await response.text().catch(() => "");
+   895→   895→    console.error("createNextLobby: server error response:", errorText);
+   896→   896→    throw new Error(`create next lobby failed: HTTP ${response.status}`);
+   897→   897→  }
+   898→   898→  return (await response.json()) as GameInfo;
+   899→   899→}
+   900→   900→
+   901→   901→export function getApiBase() {
+   902→   902→  const domainname = getAudience();
+   903→   903→
+   904→   904→  if (domainname === "localhost") {
+   905→   905→    const apiDomain = process.env.API_DOMAIN;
+   906→   906→    if (apiDomain) {
+   907→   907→      return `https://${apiDomain}`;
+   908→   908→    }
+   909→   909→    return localStorage.getItem("apiHost") ?? "http://localhost:8787";
+   910→   910→  }
+   911→   911→
+   912→   912→  return `https://api.${domainname}`;
+   913→   913→}
+   914→   914→
+   915→   915→export function getAudience() {
+   916→   916→  // Sourced from BOOTSTRAP_CONFIG (server/desktop-injected) rather than
+   917→   917→  // window.location, so the desktop app (app://openfront) targets real infra.
+   918→   918→  return ClientEnv.jwtAudience();
+   919→   919→}
+   920→   920→
+   921→   921→// Check if the user's account is linked to a Discord, Google, or email account.
+   922→   922→export function hasLinkedAccount(
+   923→   923→  userMeResponse: UserMeResponse | false,
+   924→   924→): boolean {
+   925→   925→  return (
+   926→   926→    userMeResponse !== false &&
+   927→   927→    (userMeResponse.user?.discord !== undefined ||
+   928→   928→      userMeResponse.user?.google !== undefined ||
+   929→   929→      userMeResponse.user?.email !== undefined)
+   930→   930→  );
+   931→   931→}
+   932→   932→
+   933→   933→export async function fetchGameById(
+   934→   934→  gameId: string,
+   935→   935→): Promise<AnalyticsRecord | false> {
+   936→   936→  try {
+   937→   937→    const url = `${getApiBase()}/game/${encodeURIComponent(gameId)}`;
+   938→   938→    const res = await fetch(url, {
+   939→   939→      headers: {
+   940→   940→        Accept: "application/json",
+   941→   941→      },
+   942→   942→    });
+   943→   943→
+   944→   944→    if (res.status !== 200) {
+   945→   945→      console.warn(
+   946→   946→        "fetchGameById: unexpected status",
+   947→   947→        res.status,
+   948→   948→        res.statusText,
+   949→   949→      );
+   950→   950→      return false;
+   951→   951→    }
+   952→   952→
+   953→   953→    const json = await res.json();
+   954→   954→    // Lenient schema: archives written by older builds predate several
+   955→   955→    // schema changes (see ArchivedAnalyticsRecordSchema).
+   956→   956→    const parsed = ArchivedAnalyticsRecordSchema.safeParse(json);
+   957→   957→    if (!parsed.success) {
+   958→   958→      console.warn("fetchGameById: Zod validation failed", parsed.error);
+   959→   959→      return false;
+   960→   960→    }
+   961→   961→
+   962→   962→    return parsed.data;
+   963→   963→  } catch (err) {
+   964→   964→    console.warn("fetchGameById: request failed", err);
+   965→   965→    return false;
+   966→   966→  }
+   967→   967→}
+   968→   968→
+   969→   969→// The API answers a page past the end of the ranked leaderboard with a 400
+   970→   970→// instead of an empty list, so the end is only detectable from the error body.
+   971→   971→// Its wording is part of the contract; the bounds vary with the page cap.
+   972→   972→const PAGE_BOUNDS_MESSAGE = /^Page must be between \d+ and \d+$/;
+   973→   973→
+   974→   974→export function isPageBoundsMessage(body: unknown): boolean {
+   975→   975→  return (
+   976→   976→    typeof body === "object" &&
+   977→   977→    body !== null &&
+   978→   978→    "message" in body &&
+   979→   979→    typeof body.message === "string" &&
+   980→   980→    PAGE_BOUNDS_MESSAGE.test(body.message)
+   981→   981→  );
+   982→   982→}
+   983→   983→
+   984→   984→export async function fetchPlayerLeaderboard(
+   985→   985→  page: number,
+   986→   986→): Promise<RankedLeaderboardResponse | "reached_limit" | false> {
+   987→   987→  try {
+   988→   988→    const url = new URL(`${getApiBase()}/leaderboard/ranked`);
+   989→   989→    url.searchParams.set("page", String(page));
+   990→   990→    const res = await fetch(url.toString(), {
+   991→   991→      headers: { Accept: "application/json" },
+   992→   992→    });
+   993→   993→
+   994→   994→    if (!res.ok) {
+   995→   995→      if (res.status === 400) {
+   996→   996→        const body = await res.json().catch(() => null);
+   997→   997→        if (isPageBoundsMessage(body)) {
+   998→   998→          return "reached_limit";
+   999→   999→        }
+  1000→  1000→      }
+  1001→  1001→      console.warn(
+  1002→  1002→        "fetchPlayerLeaderboard: unexpected status",
+  1003→  1003→        res.status,
+  1004→  1004→        res.statusText,
+  1005→  1005→      );
+  1006→  1006→      return false;
+  1007→  1007→    }
+  1008→  1008→
+  1009→  1009→    const parsed = RankedLeaderboardResponseSchema.safeParse(await res.json());
+  1010→  1010→    if (!parsed.success) {
+  1011→  1011→      console.warn(
+  1012→  1012→        "fetchPlayerLeaderboard: Zod validation failed",
+  1013→  1013→        parsed.error.toString(),
+  1014→  1014→      );
+  1015→  1015→      return false;
+  1016→  1016→    }
+  1017→  1017→
+  1018→  1018→    return parsed.data;
+  1019→  1019→  } catch (err) {
+  1020→  1020→    console.error("fetchPlayerLeaderboard: request failed", err);
+  1021→  1021→    return false;
+  1022→  1022→  }
+  1023→  1023→}
+  1024→  1024→
+  1025→  1025→const TRIBE_LEADERBOARD_PAGE_SIZE = 50;
+  1026→  1026→
+  1027→  1027→async function fetchTribeLeaderboardPage(
+  1028→  1028→  page: number,
+  1029→  1029→): Promise<TribeLeaderboardResponse | false> {
+  1030→  1030→  try {
+  1031→  1031→    const url = new URL(`${getApiBase()}/leaderboard/tribes`);
+  1032→  1032→    url.searchParams.set("page", String(page));
+  1033→  1033→    const res = await fetch(url.toString(), {
+  1034→  1034→      headers: { Accept: "application/json" },
+  1035→  1035→    });
+  1036→  1036→
+  1037→  1037→    if (!res.ok) {
+  1038→  1038→      console.warn(
+  1039→  1039→        "fetchTribeLeaderboardPage: unexpected status",
+  1040→  1040→        res.status,
+  1041→  1041→        res.statusText,
+  1042→  1042→      );
+  1043→  1043→      return false;
+  1044→  1044→    }
+  1045→  1045→
+  1046→  1046→    const parsed = TribeLeaderboardResponseSchema.safeParse(await res.json());
+  1047→  1047→    if (!parsed.success) {
+  1048→  1048→      console.warn(
+  1049→  1049→        "fetchTribeLeaderboardPage: Zod validation failed",
+  1050→  1050→        parsed.error.toString(),
+  1051→  1051→      );
+  1052→  1052→      return false;
+  1053→  1053→    }
+  1054→  1054→
+  1055→  1055→    return parsed.data;
+  1056→  1056→  } catch (err) {
+  1057→  1057→    console.error("fetchTribeLeaderboardPage: request failed", err);
+  1058→  1058→    return false;
+  1059→  1059→  }
+  1060→  1060→}
+  1061→  1061→
+  1062→  1062→// Fetches the whole tribe-name board. It caps at two 50-entry pages and the
+  1063→  1063→// response carries no total or hasMore, so a full first page is the only
+  1064→  1064→// signal that a second one exists — and the common case early on is one
+  1065→  1065→// short page, i.e. a single request.
+  1066→  1066→export async function fetchTribeLeaderboard(): Promise<
+  1067→  1067→  TribeLeaderboardResponse | false
+  1068→  1068→> {
+  1069→  1069→  const first = await fetchTribeLeaderboardPage(1);
+  1070→  1070→  if (first === false) return false;
+  1071→  1071→  if (first.tribes.length < TRIBE_LEADERBOARD_PAGE_SIZE) return first;
+  1072→  1072→
+  1073→  1073→  // A truncated board beats an error screen, so keep page 1 if the tail fails.
+  1074→  1074→  const second = await fetchTribeLeaderboardPage(2);
+  1075→  1075→  if (second === false) return first;
+  1076→  1076→
+  1077→  1077→  return { ...first, tribes: [...first.tribes, ...second.tribes] };
+  1078→  1078→}
+  1079→  1079→
+  1080→  1080→export async function getNews(): Promise<NewsItem[]> {
+  1081→  1081→  try {
+  1082→  1082→    const res = await fetch(`${getApiBase()}/news.json`, {
+  1083→  1083→      headers: { Accept: "application/json" },
+  1084→  1084→    });
+  1085→  1085→    if (res.status !== 200) {
+  1086→  1086→      console.warn("getNews: unexpected status", res.status);
+  1087→  1087→      return newsItemsFallback as NewsItem[];
+  1088→  1088→    }
+  1089→  1089→    const json = await res.json();
+  1090→  1090→    const parsed = z.array(NewsItemSchema).safeParse(json);
+  1091→  1091→    if (!parsed.success) {
+  1092→  1092→      console.warn("getNews: Zod validation failed", parsed.error);
+  1093→  1093→      return newsItemsFallback as NewsItem[];
+  1094→  1094→    }
+  1095→  1095→    return parsed.data;
+  1096→  1096→  } catch (err) {
+  1097→  1097→    console.warn("getNews: request failed, using fallback", err);
+  1098→  1098→    return newsItemsFallback as NewsItem[];
+  1099→  1099→  }
+  1100→  1100→}
+  1101→  1101→
+  1102→  1102→// Fetch an API-served JSON config (news.json-style: served file + bundled fallback).
+  1103→  1103→// Any error, non-200, or invalid payload falls back, parsed through the same schema so
+  1104→  1104→// the fallback is validated too. The timeout guards recurring callers (StreamsFeed polls
+  1105→  1105→// every 60s) from a fetch that never settles.
+  1106→  1106→async function getServedConfig<T>(
+  1107→  1107→  name: string,
+  1108→  1108→  schema: z.ZodType<T>,
+  1109→  1109→  fallback: unknown,
+  1110→  1110→): Promise<T> {
+  1111→  1111→  try {
+  1112→  1112→    const res = await fetch(`${getApiBase()}/${name}`, {
+  1113→  1113→      headers: { Accept: "application/json" },
+  1114→  1114→      signal: AbortSignal.timeout(10_000),
+  1115→  1115→    });
+  1116→  1116→    if (res.status !== 200) {
+  1117→  1117→      console.warn(`${name}: unexpected status`, res.status);
+  1118→  1118→      return schema.parse(fallback);
+  1119→  1119→    }
+  1120→  1120→    const parsed = schema.safeParse(await res.json());
+  1121→  1121→    if (!parsed.success) {
+  1122→  1122→      console.warn(`${name}: Zod validation failed`, parsed.error);
+  1123→  1123→      return schema.parse(fallback);
+  1124→  1124→    }
+  1125→  1125→    return parsed.data;
+  1126→  1126→  } catch (err) {
+  1127→  1127→    console.warn(`${name}: request failed, using fallback`, err);
+  1128→  1128→    return schema.parse(fallback);
+  1129→  1129→  }
+  1130→  1130→}
+  1131→  1131→
+  1132→  1132→// The single verified-live feed behind both homepage streaming features (API-hosted JSON
+  1133→  1133→// + bundled fallback). Every entry has already been confirmed live server-side, so
+  1134→  1134→// callers render what this returns without probing Twitch or YouTube themselves.
+  1135→  1135→//
+  1136→  1136→// Fails closed: any error, non-200, or legacy payload lands on the bundled empty feed.
+  1137→  1137→export async function getStreams(): Promise<StreamsFeed> {
+  1138→  1138→  return getServedConfig("streams.json", StreamsFeedSchema, streamsFallback);
+  1139→  1139→}
+  1140→  1140→

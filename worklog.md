@@ -146,3 +146,224 @@ Stage Summary:
 10. **Dépendance CORS proxy fragile**: en production GitHub Pages, le site dépend de 3 proxies CORS third-party (corsproxy.io + codetabs + allorigins). Si un tombe en panne ou change de politique, l'auth ownership verification et le modal historique ranked cassent.
 11. **Re-render non optimisé**: `renderAll()` re-render tout (maps + feed + global + hof + charts + compare + active map) à chaque changement mineur. Le debounce de 300ms existe mais n'est pas appliqué partout.
 12. **Pas de lazy-load des images**: tous les logos PNG sont chargés `eager` (sauf un `loading="eager"` explicite sur le logo sidebar). Pas de `loading="lazy"` sur les avatars.
+
+---
+Task ID: 1-openfront-api
+Agent: Explore (openfront API schema)
+Task: Analyse du schéma API ranked d'OpenFront
+
+Work Log:
+- Lu le worklog précédent (Agent 2 — frontend TheFrontHub) pour contexte : `/public/player/{id}` + `/public/game/{id}` sont utilisés pour ownership verification et détermination win/loss, `ranked.json` sert le leaderboard Classé.
+- Cloné shallow le repo OpenFront : `git clone --depth 1 https://github.com/openfrontio/OpenFrontIO.git /tmp/openfront` (réussi, 3140 fichiers).
+- Lister `/tmp/openfront` : c'est le repo du JEU (client + game server Workers/Master), PAS le repo du backend API `api.openfront.io` (qui est séparé et nommé "infra" dans les commentaires). Les endpoints `/leaderboard/ranked` et `/public/player/:id` sont servis par ce backend séparé, mais le schéma Zod qu'ils retournent est défini dans CE repo (game repo) à `src/core/ApiSchemas.ts`, et le client wrapper est dans `src/client/Api.ts`.
+- Grep `leaderboard.*ranked` dans `src/` → 1 fichier : `src/client/Api.ts` (seul le client-side fetcher est ici ; pas de handler serveur).
+- Lu `src/client/Api.ts` (1140 lignes) : confirmé `fetchPlayerLeaderboard(page)` (lignes 984-1023) appelle `GET ${getApiBase()}/leaderboard/ranked?page=N` sans auth, parse avec `RankedLeaderboardResponseSchema`. `getApiBase()` retourne `https://api.openfront.io` en prod. 400 avec message `Page must be between N and M` → `"reached_limit"` (fin de pagination).
+- Lu `docs/API.md` (285 lignes) : décrit `/public/player/:playerId` (retourne PlayerProfile), `/public/player/:playerId/sessions` (jeux + client ids par session), `/public/player/:playerId/games` (keyset pagination, `filter=ffa|team|hvn|ranked`, `type=public|private|singleplayer`, retourne `username`/`clanTag` per-game). Note: "Public player IDs are stripped from game records for privacy".
+- Lu `docs/Auth.md` (25 lignes) : établit la distinction fondamentale `clientID` (éphémère, par WebSocket session) vs `persistentID` (longue durée, dans le JWT `sub`).
+- Lu `src/core/ApiSchemas.ts` (711 lignes) en entier via offset/limit + grep ciblés. Trouvé les schémas Zod clés:
+  - `RankedLeaderboardEntrySchema` (lignes 597-611): `{ rank, elo, peakElo:nullable, wins, losses, total, public_id: string, accountUsername: string|null }`
+  - `RankedLeaderboardResponseSchema` (lignes 613-622): `{ "1v1": Entry[], "2v2": Entry[] (default []) }`
+  - `PlayerProfileSchema` (lignes 497-519): `{ createdAt, user?:DiscordUser, username: string|null|optional (pré-rendu server), stats: PlayerStatsTree, clans?: array }`
+  - `PublicPlayerGameSchema` (lignes 546-560): `{ gameId, start, durationSeconds, map, mode, type, playerTeams, rankedType, result: victory|defeat|incomplete, totalPlayers, username, clanTag }` — PAS de clientID ici
+  - `PlayerLeaderboardEntrySchema` (lignes 573-588): `{ rank, playerId, accountUsername:nullable, flag?, elo, games, wins, losses, winRate }` — note: `playerId` (camelCase) ici vs `public_id` (snake_case) dans RankedLeaderboardEntry. Ce sont 2 endpoints distincts.
+  - `UserMeResponseSchema.player` (lignes 171-257): contient `publicId`, `username`, `usernameBase`, `usernameDiscriminator`, `usernameStatus`, `usernameClaimExpiresAt`, `nextUsernameChangeAt`. Confirme que `publicId` est l'ID public stable au niveau compte.
+- Lu `src/core/validations/username.ts` (126 lignes) : `AccountUsernameSchema` = regex `^[a-zA-Z0-9_-]+( [a-zA-Z0-9_-]+)*$`, 3-20 chars, no dots (dot = séparateur base.suffix). Commentaire ligne 13: "Mirrors the API's account-username rules (infra src/api/lib/Usernames.ts)" — confirme que la GÉNÉRATION du suffixe est dans le backend "infra" NON inclus dans ce repo.
+- Lu `src/client/components/ui/UsernameText.ts` (39 lignes) : pattern `^(.+)\.(\d{4})$` — confirme format suffix = exactement 4 digits, leading zeros préservés (donc `.9681`, `.0001`, etc.). "the server renders account usernames as 'base.1234'".
+- Lu `src/client/components/UsernamePanel.ts` (243 lignes) : le formulaire de rename ne montre que `usernameBase` (pas le suffix), confirme que le suffix est server-side généré.
+- Lu `src/server/Client.ts` (27 lignes) : la classe `Client` (server-side game server) stocke `{ clientID, persistentID, claims, role, flares, ip, username, clanTag, ws, cosmetics, publicId, friends }`. Confirme les 3 IDs co-existent au runtime.
+- Lu `src/server/Worker.ts` lignes 410-698 : le flow complet de join WebSocket — `verifyClientToken(token)` extrait `persistentId` du JWT, puis `getUserMe(token)` récupère `publicId`/`accountUsername`/`friends`/`flares`/etc. depuis l'API backend, puis `new Client(generateID(), persistentId, ...)` crée un client avec un `clientID` frais ET le `publicId` API-resolved.
+- Lu `src/server/GameServer.ts` lignes 1590-1624 (`buildFriendsLookup`) : friends list = tableau de `publicId`s (pas de clientIDs). Le serveur mappe `publicId → clientID` au démarrage de la game. Confirme `publicId` est la clé d'identité cross-game.
+- Lu `src/core/Schemas.ts`:
+  - Lignes 405-416: `PersistentIdSchema = z.uuid()` — persistentID est un UUID canonique (36 chars). Dans le JWT il est encodé base64url (TokenPayloadSchema.sub).
+  - Lignes 423-428: `GAME_ID_REGEX = /^[A-Za-z0-9]{8}$/`, `ID = z.string().regex(GAME_ID_REGEX)` — définit le format des `clientID` ET `gameID`.
+  - Lignes 715-726 `PlayerSchema` : `{ clientID: ID, username, clanTag, cosmetics?, isLobbyCreator?, friends?: ID[], teamIndex? }`.
+  - Lignes 739-749 `GameStartInfoSchema` : inclut `players: PlayerSchema[]` (donc avec leurs clientIDs).
+  - Lignes 751-758 `WinnerSchema` : `z.union([["player", ID, ...ID], ["team", SafeString, ...ID], ["nation", SafeString, ...ID]]).optional()`. Le winner est donc un tuple où index 0 = type ("player"/"team"/"nation"), index 1+ = clientIDs (ou team/nation name en [1] puis clientIDs en [2+] pour team/nation).
+  - Lignes 929-944 `PlayerRecordSchema` + `GameEndInfoSchema` : `GameEndInfo` = `GameStartInfo` + `{ start, end, duration, num_turns, winner, lobbyFillTime }` avec `players: PlayerRecordSchema[]` (où PlayerRecord = Player + `{ persistentID: uuid|null (PII), stats }`).
+  - Lignes 986-1000 `ArchivedAnalyticsRecordSchema` : variante tolérante pour la lecture des archives anciennes.
+- Lu `src/core/Util.ts` lignes 368-374 : `generateID()` = customAlphabet `"123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"` (exclut 0/O/l/I), 8 chars. C'est ce qui génère les `clientID` ET `gameID` côté game server. Note: le regex `ID` autorise 0/O/l/I mais la fonction ne les produit pas — les IDs réels n'ont donc pas ces chars.
+- Lu `tests/client/ApiPlayerLeaderboard.test.ts` (157 lignes) : confirme le format de payload `{ "1v1": [entry], "2v2": [] }` avec `entry.public_id = "player-N"` et `entry.accountUsername = "alpha.0001"` (le test utilise des valeurs factices mais valide la structure suffixée).
+- Vérifié `public_id` stable cross-mode : `publicId` est fetché UNE fois via `/users/@me` au join WebSocket, stocké sur `Client.publicId`, et utilisé pour `/public/player/:publicId` indépendamment du mode de game. Le `PlayerStatsTree` dans PlayerProfile ventile par mode (`Ranked.1v1`, `Ranked.2v2`, `Public.FFA`, `Public.Team`, etc.) mais tous sous le même `publicId`. Donc OUI, `public_id` est IDENTIQUE en FFA speedrun et en ranked 1v1/2v2.
+
+Stage Summary:
+
+# Sémantique des champs API ranked OpenFront
+
+## Hiérarchie des identifiants (3 niveaux)
+
+1. **`persistentID`** (UUID canonique 36 chars, base64url dans le JWT `sub`)
+   - Jamais exposé publiquement.
+   - Stocké côté game server dans `Client.persistentID` (PII).
+   - Mapping `persistentID → clientID` tenu par `GameServer.persistentIdToClientId` pour la reconnexion.
+   - Marqué `// WARNING: PII` dans `PlayerRecordSchema` (Schemas.ts:930).
+
+2. **`publicId`** / **`public_id`** (8 chars alphanumériques, regex `^[A-Za-z0-9]{8}$`)
+   - Stable par COMPTE, jamais par session.
+   - Retourné par `GET /users/@me` dans `player.publicId` (UserMeResponseSchema).
+   - Au join WebSocket, le worker fetch `/users/@me` UNE fois pour résoudre `publicId` depuis le JWT, puis stocke sur `Client.publicId`.
+   - C'est l'ID utilisé comme `:playerId` dans `/public/player/:playerId` et `/public/player/:playerId/games` et `/public/player/:playerId/sessions`.
+   - Apparaît dans `/leaderboard/ranked` sous le nom de champ `public_id` (snake_case) au sein de `RankedLeaderboardEntry`.
+   - Apparaît dans `/leaderboard/players` (autre endpoint) sous le nom `playerId` (camelCase) au sein de `PlayerLeaderboardEntry`.
+   - **STABLE CROSS-MODE** : un même compte a le même `public_id` en FFA speedrun, en ranked 1v1, et en ranked 2v2. Les modes sont ventilés dans `PlayerStatsTree` (PlayerProfile.stats), pas via des IDs distincts.
+
+3. **`clientID`** (8 chars alphanumériques, généré par `generateID()` — alphabet sans `0/O/l/I`)
+   - ÉPHÉMÈRE : nouveau clientID à chaque connexion WebSocket (page refresh, reconnect, nouvelle tab = nouveau clientID).
+   - Stocké dans `Client.clientID` côté game server.
+   - Utilisé pour le routage des intents in-game, le kick, le vote, l'attribution de team, etc.
+   - Mapping `publicId → clientID` reconstruit au démarrage de chaque game (GameServer.buildFriendsLookup) pour traduire la friends list (stockée en publicIds) vers les clientIDs live.
+   - Persisté dans les archives de games (`info.players[].clientID`), mais PAS dans `/public/player/:id/games` (la response `PublicPlayerGameSchema` n'expose QUE `username` et `clanTag` par game, pas de clientID).
+   - Pour récupérer le clientID d'un joueur dans une game donnée : `/public/player/:playerId/sessions` (retourne `{ game, clientID }[]` — voir docs/API.md).
+
+## Suffixe `.9681` des `accountUsername`
+
+- Format : `base.suffix` où `suffix` = exactement 4 digits, leading zeros préservés (ex: `Skailex.9681`, `alpha.0001`). Regex client: `^(.+)\.(\d{4})$`.
+- La base ne peut JAMAIS contenir de point (`AccountUsernameSchema` = `^[a-zA-Z0-9_-]+( [a-zA-Z0-9_-]+)*$`, 3-20 chars).
+- **Génération côté serveur** dans le backend "infra" (repo séparé non inclus ici — référence: `src/api/lib/Usernames.ts` mentionné dans `src/core/validations/username.ts:13`). Pas visible dans le game repo.
+- Le suffix est **re-rolled à chaque rename** (commentaire ApiSchemas.ts:264-265). Donc PAS dérivé du `public_id` ou `accountId` — c'est un discriminator aléatoire/unique géré serveur, probablement pour éviter les collisions entre comptes qui ont choisi le même base name.
+- Quatre `usernameStatus` possibles (ApiSchemas.ts:120-126): `unclaimed` (défaut, pas de réservation de bare name → suffix affiché), `claimed` (réservation tenue mais abonnement expiré → suffix réapparaît + grace deadline), `premium` (abonné, bare name affiché sans suffix), `indefinite` (admin-locked bare display).
+- Seuls `premium` et `indefinite` affichent le bare name sans suffix. Tous les autres → format `base.suffix`.
+- `TEMPORARY####` est un cas spécial de bare name (sans suffix) attribué serveur quand un subscriber prend le bare name d'un joueur `claimed` — pas un vrai username choisi.
+- `isVerifiedUsername(username)` (ApiSchemas.ts:142-150) = true ssi `username` est une string, ne contient pas de `.`, et n'est pas `TEMPORARY####`. C'est le critère pour le badge vérifié (blue check).
+
+## Différence `accountUsername` vs `username` vs `usernameBase`/`usernameDiscriminator`
+
+| Champ | Scope | Mutabilité | Format | Où |
+|---|---|---|---|---|
+| `accountUsername` | Compte (account-level) | Change via `PUT /users/@me/username` (cooldown 30j, re-roll suffix) | `base` (bare, premium/indefinite) OU `base.dddd` (unclaimed/claimed) | `RankedLeaderboardEntry.accountUsername`, `PlayerLeaderboardEntry.accountUsername` |
+| `username` (dans PlayerProfile/UserMeResponse) | Compte (account-level) | Idem que accountUsername | Idem (pré-rendu serveur) | `UserMeResponseSchema.player.username`, `PlayerProfileSchema.username`, `FriendEntrySchema.username` |
+| `usernameBase` | Compte | Idem | Juste la base (`Skailex`), sans suffix | `UserMeResponseSchema.player.usernameBase` (uniquement sur /users/@me, jamais dans public leaderboards) |
+| `usernameDiscriminator` | Compte | Idem | Juste les 4 digits (`9681`) ou null | `UserMeResponseSchema.player.usernameDiscriminator` (uniquement sur /users/@me) |
+| `username` (dans PublicPlayerGame) | PER-GAME (snapshot au moment de la game) | Immutable post-game | In-game display name utilisé à ce moment-là (avec ou sans clan tag intégré, etc.) | `PublicPlayerGameSchema.username` |
+
+**Convention de nommage**: dans les leaderboards PUBLICS (`RankedLeaderboardEntry`, `PlayerLeaderboardEntry`, `FriendEntry`), le champ account-level s'appelle `accountUsername` (snake_case) ou `username` (selon le contexte). Dans `/users/@me` (auth-self), il s'appelle `username` (display form pré-rendu) + `usernameBase` + `usernameDiscriminator` + `usernameStatus` (détaillé). Dans `/public/player/:id/games`, le champ per-game s'appelle `username` (mais c'est l'IDENTITÉ IN-GAME snapshot, pas l'account username).
+
+## Endpoint `/leaderboard/ranked` — schéma complet
+
+```
+GET https://api.openfront.io/leaderboard/ranked?page=N
+```
+- Pas d'auth.
+- `page` est requis (1-indexed). Au-delà de la dernière page, le serveur répond 400 avec `{"message": "Page must be between 1 and N"}` — c'est le signal de fin (pas de liste vide).
+- Response: `RankedLeaderboardResponse`
+```ts
+{
+  "1v1": [
+    {
+      "rank": number,           // 1-indexed, position dans la ladder
+      "elo": number,            // ELO courant
+      "peakElo": number | null, // max ELO historique (null si pas encore calculé/connu)
+      "wins": number,
+      "losses": number,
+      "total": number,          // wins + losses
+      "public_id": string,      // 8 chars alphanum, STABLE par compte, clé d'identité
+      "accountUsername": string | null  // null si jamais set; "base.suffix" ou "base" (premium)
+    },
+    ...
+  ],
+  "2v2": [ ... ] // default [] si l'API ne supporte pas encore 2v2
+}
+```
+
+## Endpoint `/public/player/:id` — schéma complet
+
+- `:id` = `public_id` (PAS clientID, PAS persistentID). Format `^[A-Za-z0-9]{8}$`.
+- Pas d'auth.
+- Response: `PlayerProfile`
+```ts
+{
+  "createdAt": ISO datetime,
+  "user"?: DiscordUser,   // seulement si le joueur a lié Discord
+  "username": string | null | undefined,  // account username pré-rendu (base ou base.suffix), null si jamais set
+  "stats": PlayerStatsTree,               // arbre complet: Singleplayer/Public/Private/Ranked × FFA/Team/HvN × Easy/Medium/Hard/Impossible
+  "clans"?: [{ tag, name, role: leader|officer|member, joinedAt, memberCount }]
+}
+```
+- Ne retourne PAS `games[]` directement. Pour l'historique de parties, utiliser `/public/player/:id/games` (paginated) ou `/public/player/:id/sessions` (jeux + clientIDs).
+
+## Endpoint `/public/player/:id/games`
+
+- `:id` = `public_id`. Pas d'auth.
+- Query: `filter=ffa|team|hvn|ranked`, `type=public|private|singleplayer`, `cursor=<opaque>`.
+- Response: `PublicPlayerGamesResponse`
+```ts
+{
+  "results": [
+    {
+      "gameId": string,
+      "start": ISO datetime,
+      "durationSeconds": number,
+      "map": string,
+      "mode": string,            // "Free For All" | "Team" | HumansVsNations
+      "type": string,            // "Public" | "Private" | "Singleplayer"
+      "playerTeams": string | null,  // "Duos"|"Trios"|"Quads"|null
+      "rankedType": string,      // "unranked"|"1v1"|"2v2"
+      "result": "victory" | "defeat" | "incomplete",  // incomplete = no recorded winner
+      "totalPlayers": number | null,
+      "username": string,        // PER-GAME in-game username (snapshot au moment de la game)
+      "clanTag": string | null   // PER-GAME clan tag
+    },
+    ...
+  ],
+  "nextCursor": string | null   // null = plus de pages; sinon round-trip verbatim
+}
+```
+- `username` et `clanTag` reflètent l'identité utilisée DANS CETTE GAME spécifique (commentaire docs/API.md:167).
+
+## Relation compte ↔ usernames
+
+Un compte (1 `persistentID` ↔ 1 `public_id` immuable) peut avoir :
+
+1. **0 ou 1 `accountUsername` courant** (muté via `PUT /users/@me/username`, cooldown 30j). Si null → le joueur n'a jamais set de custom name et s'affiche par son `public_id`. Si set → s'affiche en `base` (premium/indefinite) ou `base.suffix` (unclaimed/claimed). Le suffix re-roll à chaque rename.
+
+2. **N `username` per-game archivés** (1 par game jouée). Stockés dans les `AnalyticsRecord.info.players[].username` des archives de games. Reflètent l'in-game display name au moment de la game — peuvent différer entre games à cause de:
+   - Renames (le joueur a renommé son compte entre 2 games).
+   - Clan tag changes (le clan tag est per-game, pas per-account — le player peut quitter/rejoindre un clan).
+   - Anonymization (anonymizeNames flag en private/custom games).
+   - Censoring (le serveur censure les names inappropriés au join via `censorPlayer()` dans Worker.ts:458-461, puis `verifyJoin` overwrite avec le verdict API).
+
+3. **N `clientID` éphémères** (1 par session WebSocket). Non archivés publiquement dans `/public/player/:id/games` (la privacy policy strippe les IDs publics des game records), MAIS récupérables via `/public/player/:id/sessions` qui retourne explicitement la liste `{ game, clientID }[]` (voir docs/API.md:107-121).
+
+**Donc**: pour TheFrontHub, le `accountUsername` (champ `username` ou `accountUsername` selon l'endpoint) est l'identité "officielle" courante du compte à afficher dans les leaderboards. Le `public_id` est la seule clé stable à utiliser pour matcher un joueur entre endpoints différents (ranked leaderboard ↔ player profile ↔ game history). Ne JAMAIS utiliser `username` comme clé (peut changer), et ENCORE MOINS `clientID` (éphémère).
+
+## Implications pour TheFrontHub
+
+1. **Clé d'identité recommandée**: `public_id` (champ `public_id` dans `ranked.json`, `publicId` dans `/users/@me`, `:id` dans `/public/player/:id`). Déjà ce que fait TheFrontHub.
+
+2. **Affichage recommandé**: `accountUsername ?? public_id` (formule donnée dans le commentaire ApiSchemas.ts:605-607). Déjà ce que fait TheFrontHub.
+
+3. **Pour la détermination WIN/LOSS** dans le modal historique ranked:
+   - `/public/player/:publicId/games?filter=ranked` → donne les games ranked avec `result` déjà calculé côté serveur (`victory|defeat|incomplete`). Donc TheFrontHub n'a PAS besoin de fetcher `/public/game/:id` pour déterminer win/loss — le champ `result` est déjà là.
+   - MAIS si TheFrontHub veut des détails supplémentaires (par exemple qui étaient les coéquipiers/adversaires), il faut alors `/public/game/:gameId` qui retourne `info.players[]` (avec leurs clientIDs/usernames) et `info.winner` (tuple `["player"|"team"|"nation", ID, ...]`).
+   - Le match player↔clientID dans une game donnée se fait via `/public/player/:id/sessions` qui retourne explicitement les paires `{game, clientID}`.
+
+4. **Stabilité du suffixe**: `.9681` est un discriminator qui peut CHANGER si le joueur rename. Donc ne PAS utiliser `accountUsername` comme clé de cache permanent — uniquement `public_id`. TheFrontHub a déjà cette convention (compare par `publicId` uniquement, cf. commentaire ApiSchemas.ts:501-502).
+
+5. **Quand `accountUsername` est null**: le joueur n'a jamais set de custom name → afficher `public_id` à la place. Ne pas crasher si le champ est absent.
+
+---
+Task ID: 2-skin-linking
+Agent: main (Z.ai Code)
+Task: Étendre le skin multicolore VIP au leaderboard ranked + profil, en reliant l'identité ranked (accountUsername/public_id) à l'identité speedrun
+
+Work Log:
+- Analysé le système VIP existant dans app.js (loadVipPlayers, vipPlayers Map, rendu cosmétique)
+- Identifié le mismatch: pseudo speedrun "Skailex" vs pseudo ranked "Skailex.9681" + public_id "UWetOwlW"
+- Confirmé via l'API OpenFront que public_id est stable cross-mode (FFA/ranked 1v1/2v2)
+- Ajouté 3 maps globales dans app.js: vipPlayersByPublicId, aliasToCanonical, publicIdToCanonical
+- Ajouté 2 helpers: resolveVip({username, accountUsername, publicId}) + vipCosmeticClasses(rewardType)
+- Enhancé loadVipPlayers() pour indexer data.aliases + data.publicIds depuis public-rewards
+- Enhancé loadPublicAliases() pour construire aliasToCanonical + publicIdToCanonical (et ne plus skip les docs à alias unique)
+- Remplacé les 4 appels directs vipPlayers.get() par resolveVip() dans: rendu ranked table, speedrun leaderboard, global top 50, modal ranked player
+- Ajouté le skin sur Hall of Fame top 3 + comparateur de joueurs (n'en avaient pas avant)
+- Ajouté le système VIP complet dans profile.js: loadProfileVip() + resolveProfileVip() + applyProfileCosmetic()
+- Modifié renderHero() dans profile.js pour appliquer le skin sur le pseudo du profil
+- Modifié saveUserProfile() dans profile.js pour auto-écrire dans public-aliases avec lookup du accountUsername ranked (auto-linking)
+- Vérifié la syntaxe (node --check) des 2 fichiers modifiés
+- Test logique de résolution avec vraies données Skailex: ✅ "Skailex.9681" + "UWetOwlW" → rewardType "prism"
+
+Stage Summary:
+- 2 fichiers modifiés: app.js (+182/-49 lignes), profile.js (+134 lignes)
+- Le skin multicolore s'applique maintenant sur: leaderboard ranked, speedruns, global top 50, Hall of Fame, comparateur, modal joueur ranked, profil utilisateur
+- 2 mécanismes de linking: (A) manuel via champs aliases[]/publicIds[] dans public-rewards, (B) automatique via public-aliases auto-écrit à la vérification de profil
+- L'utilisateur Skailex doit soit: re-vérifier son profil (auto-link), soit ajouter aliases:["Skailex.9681"] + publicIds:["UWetOwlW"] à son doc public-rewards dans Firebase console
+- Aucune régression: les skins existants (match direct username) continuent de fonctionner
