@@ -56,27 +56,6 @@ body.tournois-page .num {
   border-bottom: 1px solid var(--prf-line);
   min-height: 56px;
 }
-.prf-topnav-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 14px;
-  color: var(--prf-text);
-  margin-right: 16px;
-  letter-spacing: -0.01em;
-}
-.prf-topnav-brand .prf-brand-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: 7px;
-  background: linear-gradient(135deg, var(--prf-accent), var(--prf-accent-strong));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  flex-shrink: 0;
-}
 .prf-topnav-links {
   display: flex;
   align-items: center;
@@ -198,6 +177,12 @@ body.tournois-page .num {
   justify-content: space-between;
   height: 60px;
   padding: 0 20px 0 24px;
+}
+.prf-drawer-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.01em;
 }
 .prf-drawer-close {
   width: 40px;
@@ -1703,8 +1688,6 @@ a.prf-link:hover,
   }
   .prf-menu-toggle {
     display: flex;
-  }
-  .prf-topnav-brand {
     margin-right: auto;
   }
 }

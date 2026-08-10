@@ -814,3 +814,43 @@ Stage Summary:
   * Gestion empty state (0 tournoi) + single point (1 tournoi, centré).
 - Cache bump : tournois.css?v=4, tournois.js?v=4.
 - Vérifié end-to-end (desktop + mobile + edge cases) avec Agent Browser + VLM. Zéro erreur.
+
+---
+Task ID: 16
+Agent: main (Z.ai Code)
+Task: Supprimer le "logo moche" (brand mark orange avec icône trophée + texte "Tournois & PR") de la top-nav horizontale et du tiroir mobile, sur les pages Tournois.
+
+Work Log:
+- Analyse de la capture d'écran envoyée par l'utilisateur (upload/pasted_image_1786392347380.png) avec VLM :
+  * Annotation rouge (flèche/gribouillis) pointait vers la zone de branding "Tournois & PR" en haut à gauche de la top-nav.
+  * Cible exacte (crop + VLM ciblé) : le bloc .prf-topnav-brand = carré orange 28px (gradient #e8781d→#c95d0c) avec icône trophée blanche + texte "Tournois & PR" en gras.
+  * Redondant avec le logo TheFrontHub déjà présent dans la sidebar → c'est ce "logo" que l'utilisateur trouvait moche.
+
+- Modifs tournois.html (v5) :
+  * Suppression du bloc <div class="prf-topnav-brand">…</div> entier de la top-nav (le carré orange + le span "Tournois & PR"). La top-nav commence maintenant directement par <nav class="prf-topnav-links">.
+  * Simplification du header du tiroir mobile : remplacé le <div> inline avec carré orange + icône trophée + texte par un simple <span class="prf-drawer-title">Tournois & PR</span> (texte blanc, sans logo).
+
+- Modifs tournois.css (v5) :
+  * Suppression des règles .prf-topnav-brand et .prf-topnav-brand .prf-brand-mark (n'a plus d'usage).
+  * Ajout de .prf-drawer-title (color #fff, font-weight 800, font-size 15px) pour le texte du header tiroir.
+  * Fix media query mobile (@media max-width:1024px) : .prf-menu-toggle reçoit margin-right:auto (au lieu de .prf-topnav-brand) pour pousser le bouton "Jouer" à droite. Sans ce fix, le hamburger et "Jouer" seraient collés à gauche sur mobile.
+
+- Bump cache : tournois.css?v=4→v5 (tournois.js inchangé v4, pas de modif JS).
+
+- Vérification Agent Browser + VLM :
+  * Desktop 1280×800 (page Calendrier) :
+    - Top-nav (à droite de la sidebar) : commence directement par "Accueil" → "Classement PR" → "Tournois" → "Calendrier" (actif, souligné orange) → bouton "Jouer" à droite ✅
+    - PLUS de carré orange avec trophée + "Tournois & PR" dans la top-nav ✅
+    - Layout propre, pas d'élément collé, pas d'espace vide bizarre ✅
+  * Mobile 390×844 :
+    - Top-nav : juste bouton hamburger (gauche) + bouton "Jouer" (droite) ✅
+    - Tiroir mobile ouvert : header avec juste texte "Tournois & PR" (gauche) + bouton X (droite), PLUS de carré orange avec trophée ✅
+  * Console : 0 erreur ✅
+  * dev.log : 0 nouvelle erreur ✅
+
+Stage Summary:
+- "Logo moche" (brand mark orange + trophée + "Tournois & PR") supprimé de la top-nav horizontale (desktop) et du header du tiroir mobile.
+- La top-nav est maintenant épurée : juste les 4 liens de navigation + bouton "Jouer".
+- Layout mobile préservé : hamburger à gauche, "Jouer" à droite (via margin-right:auto sur .prf-menu-toggle).
+- Cache bump : tournois.css?v=5.
+- Vérifié end-to-end (desktop + mobile + drawer) avec Agent Browser + VLM. Zéro erreur.

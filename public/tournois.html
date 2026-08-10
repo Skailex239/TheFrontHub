@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon-new.png">
 <link rel="stylesheet" href="styles.css?v=22">
-<link rel="stylesheet" href="tournois.css?v=4">
+<link rel="stylesheet" href="tournois.css?v=5">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange,#ef6c00);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 <script type="module" src="tournois-icons.js?v=1"></script>
@@ -51,13 +51,6 @@
 
     <!-- Top-nav horizontale PR-Front (desktop) + menu hamburger (mobile) -->
     <header class="prf-topnav">
-      <div class="prf-topnav-brand">
-        <div class="prf-brand-mark">
-          <i data-prf-icon="trophy" data-prf-icon-size="16"></i>
-        </div>
-        <span>Tournois & PR</span>
-      </div>
-
       <nav class="prf-topnav-links" id="prf-topnav-links" role="tablist">
         <button class="prf-topnav-link active" data-route="home" role="tab" aria-selected="true">
           <i data-prf-icon="home" data-prf-icon-size="18"></i> Accueil
@@ -115,12 +108,7 @@
 <div class="prf-drawer-overlay" id="prf-drawer-overlay"></div>
 <aside class="prf-drawer" id="prf-drawer" role="dialog" aria-modal="true" aria-label="Navigation Tournois">
   <div class="prf-drawer-header">
-    <div style="display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:14px">
-      <div style="width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#e8781d,#c95d0c);display:flex;align-items:center;justify-content:center">
-        <i data-prf-icon="trophy" data-prf-icon-size="16"></i>
-      </div>
-      Tournois & PR
-    </div>
+    <span class="prf-drawer-title">Tournois & PR</span>
     <button class="prf-drawer-close" id="prf-drawer-close" aria-label="Fermer le menu">
       <i data-prf-icon="close" data-prf-icon-size="22"></i>
     </button>
