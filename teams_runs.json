@@ -8198,6 +8198,29 @@
       "numPlayers": 70,
       "timestamp": "2026-08-10T20:50:23.697Z",
       "url": "https://openfront.io/game/ZUDruAmf"
+    },
+    {
+      "id": "M6gkZbdD",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Bunyip",
+          "clientID": "sn5EGBjE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "schmeet me",
+          "clientID": "CEQYcfaQ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 1534,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-10T21:16:07.698Z",
+      "url": "https://openfront.io/game/M6gkZbdD"
     }
   ],
   "trios": [
@@ -38281,6 +38304,34 @@
       "numPlayers": 80,
       "timestamp": "2026-08-10T21:06:50.154Z",
       "url": "https://openfront.io/game/q5ReCcAC"
+    },
+    {
+      "id": "g6aZQPmA",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "shayan725",
+          "clientID": "JoEHxuko",
+          "clanTag": "RTX"
+        },
+        {
+          "username": "Meti",
+          "clientID": "Y4nZSSEf",
+          "clanTag": "RTX"
+        },
+        {
+          "username": "AnonClay2",
+          "clientID": "osAJbdJz",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1778,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-10T21:11:32.441Z",
+      "url": "https://openfront.io/game/g6aZQPmA"
     }
   ]
 }
