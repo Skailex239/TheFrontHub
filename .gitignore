@@ -52,3 +52,14 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# Ranked history (ungzipped — only .gz versions are committed to repo)
+# sync-ranked.js regénère ces fichiers à chaque run ; les versions non-gzippées
+# ne sont pas nécessaires sur le site (seul le .gz est servi). Les ignorer évite
+# qu'ils bloquent git pull --rebase avec "unstaged changes".
+/ranked_history.json
+/ranked_2v2_history.json
+
+# Backups (ne jamais commit)
+*backup.json
+*full.json

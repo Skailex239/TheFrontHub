@@ -1,0 +1,204 @@
+name: Auto Sync
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Combined sync pipeline: speedruns (standard + compact) + teams + ranked.
+#
+# Runs as a CONTINUOUS LOOP via unconditional self-retrigger:
+#   - The final `retrigger` job ALWAYS fires (no condition) and re-dispatches
+#     THIS workflow → back-to-back execution 24/7, even when idle.
+#   - cancel-in-progress: true prevents pile-up if a new run starts while the
+#     previous one is still going (safe — each run does a fresh checkout).
+#   - The cron */5 is a safety net backup in case a run fails to retrigger.
+#
+# Previously this was split across sync.yml + sync-ranked.yml, which caused
+# git-push race conditions (both pushing to main concurrently). Now everything
+# is sequential in ONE workflow → only one push at a time, no races.
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+concurrency:
+  group: auto-sync
+  cancel-in-progress: true
+
+jobs:
+  sync-standard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit-standard.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm init -y --silent && npm install node-fetch@2 --silent && node -e "const p=require('./package.json');p.type='module';require('fs').writeFileSync('package.json',JSON.stringify(p,null,2))"
+      - run: node sync.js
+        env:
+          OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+          SYNC_HISTORY_WINDOWS: "500"
+      - name: Commit et push (standard)
+        id: commit-standard
+        run: |
+          rm -rf node_modules package.json package-lock.json 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in runs_public.json.gz runs.json.gz clans.json clans.json.gz news.json news.json.gz seen.json checkpoint.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git diff --cached --quiet && { echo "no changes standard"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git commit -m "[auto] sync"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "committed=false" >> $GITHUB_OUTPUT
+
+  sync-compact:
+    needs: sync-standard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit-compact.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm init -y --silent && npm install node-fetch@2 --silent && node -e "const p=require('./package.json');p.type='module';require('fs').writeFileSync('package.json',JSON.stringify(p,null,2))"
+      - run: node sync.js --mode=compact
+        env:
+          OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+          COMPACT_HISTORY_WINDOWS: "500"
+      - name: Commit et push (compact)
+        id: commit-compact
+        run: |
+          rm -rf node_modules package.json package-lock.json 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in runs_compact_public.json.gz runs_compact.json.gz seen_compact.json checkpoint_compact.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git diff --cached --quiet && { echo "no changes compact"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git commit -m "[auto] sync compact"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "committed=false" >> $GITHUB_OUTPUT
+
+  sync-teams:
+    needs: [sync-standard, sync-compact]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit-teams.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm init -y --silent && npm install node-fetch@2 --silent && node -e "const p=require('./package.json');p.type='module';require('fs').writeFileSync('package.json',JSON.stringify(p,null,2))"
+      - run: node sync-teams.js
+        env:
+          OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+      - name: Commit et push (teams)
+        id: commit-teams
+        run: |
+          rm -rf node_modules package.json package-lock.json 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in teams_runs.json teams_runs.json.gz teams_seen.json teams_checkpoint.json teams_public.json teams_public.json.gz; do
+            [ -f "$f" ] && git add "$f" -f
+          done
+          git diff --cached --quiet && { echo "no changes teams"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git commit -m "[auto] sync teams"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "committed=false" >> $GITHUB_OUTPUT
+
+  sync-ranked:
+    needs: sync-teams
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit-ranked.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm init -y --silent && npm install node-fetch@2 --silent && node -e "const p=require('./package.json');p.type='module';require('fs').writeFileSync('package.json',JSON.stringify(p,null,2))"
+      - run: node sync-ranked.js
+        env:
+          OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+      - name: Commit et push (ranked)
+        id: commit-ranked
+        run: |
+          rm -rf node_modules package.json package-lock.json 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Untrack ungzipped history files (now in .gitignore) so they don't
+          # block git pull --rebase with "unstaged changes". Only .gz versions
+          # are committed to the repo.
+          git rm --cached ranked_history.json ranked_2v2_history.json 2>/dev/null || true
+          for f in ranked.json ranked.json.gz ranked_history.json.gz ranked_2v2_history.json.gz; do [ -f "$f" ] && git add "$f" -f; done
+          git diff --cached --quiet && { echo "no changes ranked"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git commit -m "[auto] sync ranked"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "committed=false" >> $GITHUB_OUTPUT
+
+  retrigger:
+    needs: [sync-standard, sync-compact, sync-teams, sync-ranked]
+    runs-on: ubuntu-latest
+    # ── UNCONDITIONAL self-retrigger — continuous loop 24/7 ──
+    # Always re-dispatches this workflow, regardless of whether changes were
+    # committed. This ensures the sync runs back-to-back forever, even when
+    # idle. The cron */5 is just a backup in case a run crashes.
+    # (concurrency.cancel-in-progress: true prevents pile-up)
+    permissions:
+      actions: write
+    steps:
+      - name: Retrigger self (continuous loop)
+        run: |
+          echo "🔄 Re-déclenchement du workflow (boucle continue, inconditionnel)."
+          gh workflow run sync.yml \
+            --repo ${{ github.repository }} \
+            --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Retrigger deploy-pages (backup — le push le déclenche déjà automatiquement)
+        run: |
+          gh workflow run deploy-pages.yml \
+            --repo ${{ github.repository }} \
+            --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
