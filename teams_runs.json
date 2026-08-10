@@ -21472,6 +21472,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-10T20:25:13.266Z",
       "url": "https://openfront.io/game/e9NLjdbD"
+    },
+    {
+      "id": "zSGv7aMt",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Caribbean Catastrophe",
+          "clientID": "pDKUREJv",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Pacific Motion",
+          "clientID": "fmz8BFQH",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Mouse",
+          "clientID": "1AKwKgTF",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 822,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-10T20:31:43.632Z",
+      "url": "https://openfront.io/game/zSGv7aMt"
     }
   ],
   "quads": [
@@ -38021,6 +38049,67 @@
       "numPlayers": 20,
       "timestamp": "2026-08-10T19:51:11.144Z",
       "url": "https://openfront.io/game/dKYCrZdV"
+    },
+    {
+      "id": "2aqpygBn",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Iku",
+          "clientID": "wPEURQyF",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Hegel",
+          "clientID": "1K4PT9TT",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Giant Paul",
+          "clientID": "DWPfDTQf",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Spizwiz",
+          "clientID": "ZnpfSo27",
+          "clanTag": "FDBZ"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 672,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-10T20:41:38.677Z",
+      "url": "https://openfront.io/game/2aqpygBn"
+    },
+    {
+      "id": "TfLfJ1Gb",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "missouri",
+          "clientID": "NzQzUKG7",
+          "clanTag": "UON"
+        },
+        {
+          "username": "UNDAgrounds",
+          "clientID": "fBrTtXCM",
+          "clanTag": "UON"
+        },
+        {
+          "username": "gandy",
+          "clientID": "RZR2gcd8",
+          "clanTag": "UON"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 903,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-10T20:33:05.706Z",
+      "url": "https://openfront.io/game/TfLfJ1Gb"
     }
   ]
 }
