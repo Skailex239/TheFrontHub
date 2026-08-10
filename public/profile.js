@@ -18,7 +18,7 @@ import {
   collection, onSnapshot,
   onAuthStateChanged,
 } from "./auth.js";
-import { fetchOpenFront } from "./openfront-client.js";
+import { fetchOpenFront } from "./openfront-client.js?v=24";
 
 /* ── State ── */
 let currentUser = null;
@@ -346,16 +346,27 @@ async function loadStats(publicId) {
   // /public/player/{id}/games returns the actual recent games list with
   // result (victory/defeat) already included — no need for per-game fetch.
   const recentGamesPromise = fetchRecentGames(publicId);
+  // Supprime la rejection non-gérée si on retourne avant (publicId invalide).
+  recentGamesPromise.catch(() => {});
 
   let playerData;
   try {
     playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
   } catch (e) {
     console.error("[profile] OpenFront API error:", e);
-    showError(`Impossible de charger les statistiques depuis l'API OpenFront.`);
+    if (e?.isNotFound || e?.status === 404) {
+      showError(
+        `Joueur introuvable sur l'API OpenFront (publicId : ${publicId}). ` +
+        `Vérifie que ton identifiant OpenFront est correct dans tes paramètres de profil.`
+      );
+    } else {
+      showError(`Impossible de charger les statistiques depuis l'API OpenFront.`);
+    }
     setText("stat-week-rank", "This week rank: —");
     setText("stat-week-score", "This week score: —");
     setText("stat-alltime", "All-time score: —");
+    const c = document.getElementById("profile-recent-games");
+    if (c) c.innerHTML = `<div class="pf-empty">Aucune partie récente.</div>`;
     return;
   }
 
@@ -687,11 +698,17 @@ window.startOwnershipVerification = async () => {
   showToast("Vérification du Public ID…", "info", 3000);
   try {
     const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
-    if (!playerData || !playerData.games) {
+    // L'API /public/player/{id} ne renvoie plus `games` (changement API).
+    // On vérifie l'existence via le champ `publicId` présent dans la réponse.
+    if (!playerData || !playerData.publicId) {
       showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
       return;
     }
   } catch (e) {
+    if (e?.isNotFound || e?.status === 404) {
+      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+      return;
+    }
     showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error", 6000);
     console.error("[ownership] API check failed:", e);
     return;
@@ -722,12 +739,11 @@ window.confirmOwnershipVerification = async () => {
   if (btn) { btn.disabled = true; btn.textContent = "Vérification…"; }
 
   try {
-    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}`);
-    const games = playerData?.games || [];
+    // L'API /public/player/{id} ne renvoie plus `games`. On récupère les
+    // parties récentes via l'endpoint dédié /public/player/{id}/games.
+    const gamesData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}/games`);
+    const games = Array.isArray(gamesData?.results) ? gamesData.results : [];
     let found = games.some((g) => g.username && g.username.includes(_ownershipCode));
-    if (!found && playerData?.user?.username && playerData.user.username.includes(_ownershipCode)) {
-      found = true;
-    }
     if (!found) {
       showToast("Code non trouvé dans vos parties récentes. Jouez une partie avec le code dans votre pseudo, puis confirmez.", "error", 6000);
       if (btn) { btn.disabled = false; btn.textContent = original; }

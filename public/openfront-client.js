@@ -1,12 +1,25 @@
 /**
  * Appels API OpenFront côté navigateur.
  *
- * En dev local  : proxy via /api/openfront/ (server.js)
- * En production : proxy CORS (corsproxy.io) pour contourner les restrictions
- *                 CORS de l'API OpenFront (qui n'autorise que openfront.io).
+ * Stratégie de résolution (par ordre de priorité) :
  *
- * Alternative propre : déployer server.js sur Render/Railway et pointer
- * OPENFRONT_API_PROXY vers cette URL.
+ *   1. PROXY LOCAL Next.js  →  /api/openfront/<path>
+ *      Fonctionne partout où l'app est servie par Next.js (dev, preview,
+ *      Vercel, etc.). Aucun problème CORS car la requête est same-origin
+ *      et le serveur Next.js fait le fetch vers OpenFront côté backend.
+ *      C'est le chemin le plus rapide et le plus fiable.
+ *
+ *   2. PROXY CORS externes  →  corsproxy.io, codetabs, allorigins
+ *      Utilisé uniquement si le proxy local n'existe pas (ex: hébergement
+ *      statique GitHub Pages où /api/openfront/... renvoie une 404 HTML).
+ *      On essaie plusieurs proxies en cascade car ils sont souvent
+ *      surchargés ou devenus payants.
+ *
+ *   3. PROXY CUSTOM  →  window.OPENFRONT_API_PROXY ou <meta>
+ *      URL de backend personnel (Render/Railway/Vercel) si défini.
+ *
+ * Note : l'API OpenFront n'autorise CORS que depuis openfront.io, d'où
+ * le besoin d'un proxy côté serveur.
  */
 
 import { parseSessionsPayload, normalizeSession } from "./openfront-parse.js";
@@ -16,13 +29,9 @@ export { parseSessionsPayload, normalizeSession };
 export const API_BASE = "https://api.openfront.io";
 
 /**
- * URL d'un proxy CORS pour la production.
- * Peut être surchargé via window.OPENFRONT_API_PROXY ou un <meta> tag.
- *
- * Options :
- *   - "corsproxy"  → utilise https://corsproxy.io/ (gratuit, fiable)
- *   - URL complète → proxy custom (ex: https://my-api.render.com/api/openfront)
- *   - null/false   → désactivé (fetch direct, ne marche que si CORS le permet)
+ * Configuration du proxy custom (optionnel).
+ *   - URL complète (http...) → proxy custom
+ *   - "false" / null         → désactivé
  */
 const CORS_PROXY_META = typeof document !== "undefined"
   ? document.querySelector('meta[name="openfront-api-proxy"]')?.content
@@ -32,93 +41,135 @@ const CORS_PROXY_GLOBAL = typeof window !== "undefined"
   ? window.OPENFRONT_API_PROXY
   : null;
 
-const CORS_PROXY_CONFIG = CORS_PROXY_META || CORS_PROXY_GLOBAL || "corsproxy";
+const CUSTOM_PROXY = (CORS_PROXY_META || CORS_PROXY_GLOBAL || "").trim();
+const CUSTOM_PROXY_ENABLED = CUSTOM_PROXY && CUSTOM_PROXY !== "false" && CUSTOM_PROXY.startsWith("http");
 
 /**
- * Résout l'URL complète pour un appel API OpenFront.
- * En dev : proxy local via server.js (/api/openfront/...)
- * En prod : proxy CORS ou URL custom
+ * Erreur typée transportant le statut HTTP.
+ * Permet aux callers de distinguer un 404 « joueur introuvable »
+ * (publicId invalide) d'une vraie erreur réseau/proxy.
  */
-export function resolveOpenFrontFetchUrl(apiPath) {
-  const path = apiPath.startsWith("/") ? apiPath : `/${apiPath}`;
-
-  if (typeof location !== "undefined") {
-    const host = location.hostname;
-    // Dev local → proxy server.js
-    if (host === "localhost" || host === "127.0.0.1") {
-      return `/api/openfront${path}`;
-    }
+export class OpenFrontError extends Error {
+  constructor(message, status) {
+    super(message);
+    this.name = "OpenFrontError";
+    this.status = status ?? null;
   }
-
-  // Production → CORS proxy
-  if (CORS_PROXY_CONFIG === "corsproxy") {
-    return `https://corsproxy.io/?url=${encodeURIComponent(API_BASE + path)}`;
+  get isNotFound() {
+    return this.status === 404;
   }
-
-  // URL de proxy custom (ex: backend déployé sur Render/Railway)
-  if (CORS_PROXY_CONFIG && CORS_PROXY_CONFIG !== "false" && CORS_PROXY_CONFIG.startsWith("http")) {
-    return `${CORS_PROXY_CONFIG}${path}`;
-  }
-
-  // Aucun proxy configuré → fetch direct (sera bloqué par CORS sauf si on est sur openfront.io)
-  return API_BASE + path;
 }
 
 /**
- * Fetch générique vers l'API OpenFront, avec gestion CORS proxy.
- * Retries with fallback CORS proxy if the primary one fails.
+ * Liste des proxies CORS externes à essayer en cascade (fallback).
+ * corsproxy.io est devenu payant côté serveur mais fonctionne encore
+ * depuis un navigateur avec Origin ; codetabs et allorigins sont des
+ * alternatives gratuites souvent surchargées.
  */
-export async function fetchOpenFront(apiPath, retries = 2) {
-  let lastError = null;
+function buildCorsProxyUrls(apiPath) {
+  const path = apiPath.startsWith("/") ? apiPath : `/${apiPath}`;
+  const encodedUrl = encodeURIComponent(API_BASE + path);
+  const proxies = [
+    `https://corsproxy.io/?url=${encodedUrl}`,
+    `https://api.codetabs.com/v1/proxy/?quest=${encodedUrl}`,
+    `https://api.allorigins.win/raw?url=${encodedUrl}`,
+    `https://thingproxy.freeboard.io/fetch/${API_BASE}${path}`,
+  ];
+  if (CUSTOM_PROXY_ENABLED) {
+    proxies.unshift(`${CUSTOM_PROXY}${path}`);
+  }
+  return proxies;
+}
 
-  // fetchWithTimeout: AbortController-based timeout to prevent hanging on unresponsive proxies
-  const fetchWithTimeout = async (url, ms = 6000) => {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), ms);
-    try {
-      const r = await fetch(url, { cache: "no-store", signal: ctrl.signal });
-      return r;
-    } finally {
-      clearTimeout(timer);
-    }
-  };
+/**
+ * fetch avec timeout basé sur AbortController.
+ */
+function fetchWithTimeout(url, ms = 6000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  return fetch(url, { cache: "no-store", signal: ctrl.signal })
+    .finally(() => clearTimeout(timer));
+}
 
-  for (let attempt = 0; attempt <= retries; attempt++) {
+/**
+ * Tente une URL et renvoie le JSON parsé.
+ *
+ * - 200 → retourne le JSON.
+ * - 404 avec corps JSON → c'est une vraie réponse API (« Not found » pour
+ *   un publicId invalide). On propage une OpenFrontError(404) pour que
+ *   l'app puisse afficher « joueur introuvable » plutôt que de retomber
+ *   sur le proxy suivant.
+ * - 404 avec corps HTML (route proxy inexistante sur hébergement statique)
+ *   → on rejette avec une erreur réseau pour enchaîner sur le proxy suivant.
+ * - Autre statut → OpenFrontError(status).
+ */
+async function tryFetchJson(url, ms) {
+  const r = await fetchWithTimeout(url, ms);
+  const ct = r.headers.get("content-type") || "";
+  if (r.ok) {
+    const text = await r.text();
     try {
-      const url = resolveOpenFrontFetchUrl(apiPath);
-      const r = await fetchWithTimeout(url);
-      if (!r.ok) {
-        const text = await r.text().catch(() => "");
-        throw new Error(`HTTP ${r.status}${text ? `: ${text.slice(0, 120)}` : ""}`);
-      }
-      return r.json();
-    } catch (e) {
-      lastError = e;
-      // Try fallback CORS proxies (helps with large responses >1MB)
-      // Only try fallbacks on first attempt to avoid compounding timeouts
-      if (attempt === 0 && CORS_PROXY_CONFIG === "corsproxy") {
-        const path = apiPath.startsWith("/") ? apiPath : `/${apiPath}`;
-        const encodedUrl = encodeURIComponent(API_BASE + path);
-        const fallbacks = [
-          `https://api.codetabs.com/v1/proxy/?quest=${encodedUrl}`,
-          `https://api.allorigins.win/raw?url=${encodedUrl}`,
-        ];
-        for (const fallbackUrl of fallbacks) {
-          try {
-            const r = await fetchWithTimeout(fallbackUrl, 8000);
-            if (r.ok) {
-              const text = await r.text();
-              try { return JSON.parse(text); } catch { /* not JSON */ }
-            }
-          } catch (fallbackErr) {
-            // continue to next fallback (timeout or network error)
-          }
-        }
-      }
-      if (attempt < retries) {
-        await new Promise(r => setTimeout(r, 300 * (attempt + 1)));
-      }
+      return JSON.parse(text);
+    } catch {
+      throw new OpenFrontError(`Réponse non-JSON depuis ${url}`, r.status);
     }
   }
-  throw lastError;
+  // Non-OK : on regarde le corps pour distinguer une 404 API (JSON)
+  // d'une 404 de route proxy (HTML).
+  const body = await r.text().catch(() => "");
+  const isJson = ct.includes("json") || body.trim().startsWith("{") || body.trim().startsWith("[");
+  if (r.status === 404 && !isJson) {
+    // Route proxy inexistante (ex: GitHub Pages) → enchaîner sur le suivant.
+    throw new OpenFrontError(`Route proxy introuvable (HTML 404): ${url}`, -1);
+  }
+  // Vraie erreur API (404 JSON = joueur introuvable, 5xx, etc.)
+  const snippet = body ? `: ${body.slice(0, 120)}` : "";
+  throw new OpenFrontError(`HTTP ${r.status}${snippet}`, r.status);
+}
+
+/**
+ * Fetch générique vers l'API OpenFront.
+ *
+ * Ordre :
+ *   1. Proxy local Next.js (/api/openfront/...) — rapide, same-origin.
+ *   2. Proxies CORS externes en cascade.
+ *
+ * Une OpenFrontError avec status=404 remonte immédiatement (joueur
+ * introuvable) sans essayer les autres proxies, car un 404 de l'API
+ * OpenFront est cohérent quel que soit le chemin.
+ */
+export async function fetchOpenFront(apiPath) {
+  const path = apiPath.startsWith("/") ? apiPath : `/${apiPath}`;
+  let lastError = null;
+
+  // ── 1. Proxy local Next.js (priorité — fonctionne en dev/preview/Vercel) ──
+  try {
+    return await tryFetchJson(`/api/openfront${path}`, 6000);
+  } catch (e) {
+    // 404 API (JSON) = joueur introuvable : on propage tout de suite.
+    if (e instanceof OpenFrontError && e.status === 404) throw e;
+    // Sinon (route absente, timeout, réseau) : on note et on enchaîne.
+    lastError = e;
+  }
+
+  // ── 2. Proxies CORS externes (fallback — hébergement statique) ──
+  const proxyUrls = buildCorsProxyUrls(apiPath);
+  for (const proxyUrl of proxyUrls) {
+    if (proxyUrl === `/api/openfront${path}`) continue; // déjà essayé
+    try {
+      return await tryFetchJson(proxyUrl, 8000);
+    } catch (e) {
+      if (e instanceof OpenFrontError && e.status === 404) throw e;
+      lastError = e;
+      // essaie le proxy suivant
+    }
+  }
+
+  // ── 3. Échec total ──
+  throw lastError instanceof OpenFrontError
+    ? lastError
+    : new OpenFrontError(
+        `Échec de tous les proxies OpenFront: ${lastError?.message || "unknown"}`,
+        null
+      );
 }

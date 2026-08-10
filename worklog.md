@@ -538,3 +538,68 @@ Stage Summary:
 - Recent games now display correctly for ALL profiles (own + public + ranked redirect).
 - BONUS improvements: 10 games shown (was 5), richer info (ranked badge, player count, duration, mode), faster (no per-game fetch), better visual design (horizontal cards with colored result badges).
 - Commit b8382ca LIVE on origin/main.
+
+---
+Task ID: 12
+Agent: main (Z.ai Code)
+Task: Fix profile page stats not loading (corsproxy.io 404 errors) + nav inconsistency ("tableau de bord qui spawne" on profile page vs "speedrun" on index page).
+
+Work Log:
+- Diagnosed root cause of stats loading failure:
+  * corsproxy.io became PAYWALLED — returns 403 "Server-side requests are not allowed on your plan"
+  * Fallback proxies (codetabs, allorigins) return 522 (overloaded/down)
+  * openfront-client.js only used the local Next.js proxy (/api/openfront/) on hostname=localhost/127.0.0.1, but the preview runs on a sandbox domain → fell through to broken corsproxy.io
+  * Result: ~60s of cascading timeouts, then failure — "ça fait ça avec un peu tout le monde"
+  * Also: user's publicId (jqdA2tHP) returns 404 from the OpenFront API directly (invalid id), but code showed a generic error instead of "player not found"
+
+- Discovered CRITICAL secondary bug in ownership verification (profile.js + app.js):
+  * Both step 1 (verify publicId exists) and step 2 (confirm challenge code) checked `!playerData.games`
+  * But the OpenFront API /public/player/{id} NO LONGER returns a `games` array (changed per Task 11)
+  * So ownership verification was BROKEN FOR EVERYONE — every valid publicId showed "Public ID introuvable"
+  * Step 2 also read `playerData.games` (always []) → challenge code never found → confirmation always failed
+
+- Fix 1 — openfront-client.js (full rewrite):
+  * Local Next.js proxy (/api/openfront/...) is now PRIMARY, tried first ALWAYS (not just localhost)
+  * New OpenFrontError class carries HTTP status (e.g. 404) so callers can distinguish "player not found" from network errors
+  * tryFetchJson distinguishes: JSON 404 (real API "Not found" → propagate immediately) vs HTML 404 (route missing on static host → fall through to next proxy)
+  * CORS proxies (corsproxy.io, codetabs, allorigins, thingproxy) only used as FALLBACK when local proxy route is absent (e.g. GitHub Pages static hosting)
+  * Reduced timeouts: 6s local, 8s CORS (was causing 60s+ hangs)
+  * A 404 from any proxy propagates immediately (no retry cascade for invalid publicIds)
+
+- Fix 2 — profile.js loadStats:
+  * Catches 404 specifically → shows "Joueur introuvable sur l'API OpenFront (publicId : X). Vérifie que ton identifiant OpenFront est correct..."
+  * Added recentGamesPromise.catch(() => {}) to prevent unhandled rejection on early return
+  * Clears recent games section on error
+
+- Fix 3 — ownership verification (profile.js + app.js):
+  * Step 1: changed existence check `!playerData.games` → `!playerData.publicId` (publicId is always present in API response for valid players)
+  * Step 1: added 404 handling in catch → shows "Public ID introuvable" (not generic "API indisponible")
+  * Step 2: fetch games from `/public/player/{id}/games` endpoint (returns {results: [...10 games...]}) instead of `playerData.games`
+  * Step 2: removed broken `playerData.user.username` fallback (wrong path — username is at `playerData.username` top-level, and checking main username for challenge code was nonsensical anyway)
+
+- Fix 4 — profile.html nav inconsistency:
+  * Changed nav from [Tableau de bord (home icon), Classements (trophy), Mon Profil] → [Speedruns (trophy), Classé (swords), Mon Profil]
+  * Now EXACTLY matches index.html nav (same labels, same icons, same order)
+  * Added role="tablist" and aria-selected for consistency
+
+- Cache busting:
+  * profile.js?v=23 → ?v=24 in profile.html
+  * openfront-client.js import in profile.js → ?v=24 (ensures browser fetches new client)
+  * All 4 dynamic imports in app.js → ?v=24
+
+- Agent Browser verification:
+  * Valid profile (hFaZs30i): stats loaded in <1s via local proxy — ELO 1v1: 2585 (Peak 2601) Rank #1, All-time 5032 (1108 wins), 10 recent games with VICTOIRE/DÉFAITE badges ✅
+  * Invalid profile (jqdA2tHP): clear "Joueur introuvable sur l'API OpenFront (publicId : jqdA2tHP)" message, no hang ✅
+  * Nav on BOTH index.html and profile.html: [Speedruns, Classé, Mon Profil] — consistent ✅
+  * Zero console errors, zero corsproxy.io requests (100% via /api/openfront/ local proxy)
+  * Dev log confirms all requests through local proxy with 380-920ms response times (was 60s+ before)
+
+- NOT pushed to GitHub (no token in env). Changes are LIVE in preview.
+
+Stage Summary:
+- TWO root causes fixed:
+  1. corsproxy.io paywalled + code only used local proxy on localhost → now local proxy is PRIMARY everywhere
+  2. Ownership verification broken by API change (!playerData.games always true) → fixed to use !playerData.publicId + /games endpoint
+- Nav inconsistency resolved: profile.html now matches index.html exactly [Speedruns, Classé, Mon Profil]
+- 404 (invalid publicId) now shows clear "Joueur introuvable" message instead of hanging/generic error
+- All verified end-to-end in Agent Browser with no console errors.

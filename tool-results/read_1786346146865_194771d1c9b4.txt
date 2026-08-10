@@ -1,0 +1,868 @@
+     1→     1→/**
+     2→     2→ * profile.js — Profile page logic for TheFrontHub.
+     3→     3→ *
+     4→     4→ * Flow:
+     5→     5→ *   onAuthStateChanged →
+     6→     6→ *     • no user                       → show #profile-gate
+     7→     7→ *     • user, no Firestore profile    → show #profile-setup (ownership verification)
+     8→     8→ *     • user, profile with publicId   → fetch OpenFront stats → show #profile-main
+     9→     9→ *
+    10→    10→ * Stats are fetched from `https://api.openfront.io/public/player/{publicId}` via
+    11→    11→ * fetchOpenFront (handles CORS proxy). ELO is read from local `ranked.json`.
+    12→    12→ * Recent games (last 5) get an additional `/public/game/{gameId}` fetch to
+    13→    13→ * determine win/loss based on the `winner` array (clientIDs of winners).
+    14→    14→ */
+    15→    15→
+    16→    16→import {
+    17→    17→  auth, db, doc, getDoc, setDoc,
+    18→    18→  collection, onSnapshot,
+    19→    19→  onAuthStateChanged,
+    20→    20→} from "./auth.js";
+    21→    21→import { fetchOpenFront } from "./openfront-client.js";
+    22→    22→
+    23→    23→/* ── State ── */
+    24→    24→let currentUser = null;
+    25→    25→let currentProfile = null;
+    26→    26→let _ownershipCode = null;
+    27→    27→let _ownershipPublicId = null;
+    28→    28→let _ownershipUsername = null;
+    29→    29→let _rankedCache = null;
+    30→    30→
+    31→    31→// VIP skin: publicId → rewardType (matching par PUBLIC ID, pas par alias)
+    32→    32→let vipPlayersByPid = new Map();
+    33→    33→let _vipUnsub = null;
+    34→    34→const NEW_SKIN_TYPES = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'];
+    35→    35→
+    36→    36→/**
+    37→    37→ * Écoute public-rewards et construit la map publicId → rewardType.
+    38→    38→ * Le skin suit le PUBLIC ID (identité stable) plutôt que l'alias (changeant).
+    39→    39→ * On lit data.publicId directement; en fallback on essaie data.username contre
+    40→    40→ * le username du profil courant.
+    41→    41→ */
+    42→    42→function loadVipForProfile() {
+    43→    43→  if (_vipUnsub) return; // déjà abonné
+    44→    44→  try {
+    45→    45→    _vipUnsub = onSnapshot(collection(db, "public-rewards"), (snap) => {
+    46→    46→      vipPlayersByPid = new Map();
+    47→    47→      // fallback: username → rewardType (pour les docs sans publicId direct)
+    48→    48→      const usernameToType = new Map();
+    49→    49→      snap.forEach((docSnap) => {
+    50→    50→        const data = docSnap.data();
+    51→    51→        const rewardType = data.activeType || data.type || null;
+    52→    52→        if (!rewardType || data.activated === false) return;
+    53→    53→        if (data.publicId) vipPlayersByPid.set(String(data.publicId), rewardType);
+    54→    54→        if (data.username) usernameToType.set(data.username, rewardType);
+    55→    55→      });
+    56→    56→      // Re-applique le skin sur le hero si on a un profil
+    57→    57→      // En mode visualisation publique, on utilise le profil virtuel du joueur consulté
+    58→    58→      // (son publicId) plutôt que le profil propre de l'utilisateur courant.
+    59→    59→      if (viewingPublicId) {
+    60→    60→        applyProfileSkin({ username: viewingUsername, publicId: viewingPublicId }, usernameToType);
+    61→    61→      } else if (currentProfile) {
+    62→    62→        applyProfileSkin(currentProfile, usernameToType);
+    63→    63→      }
+    64→    64→    }, (err) => {
+    65→    65→      console.warn("[profile] VIP listener error (non-critique):", err.message);
+    66→    66→    });
+    67→    67→  } catch (e) {
+    68→    68→    console.warn("[profile] loadVipForProfile error:", e);
+    69→    69→  }
+    70→    70→}
+    71→    71→
+    72→    72→/**
+    73→    73→ * Applique le skin VIP sur le pseudo du hero, résolu via publicId (prioritaire)
+    74→    74→ * puis fallback username.
+    75→    75→ */
+    76→    76→function applyProfileSkin(profile, usernameToTypeFallback) {
+    77→    77→  const nameEl = document.getElementById("profile-title-name");
+    78→    78→  if (!nameEl) return;
+    79→    79→  const pid = profile?.publicId;
+    80→    80→  const rewardType = (pid && vipPlayersByPid.get(pid))
+    81→    81→    || (profile?.username && usernameToTypeFallback?.get(profile.username))
+    82→    82→    || null;
+    83→    83→  if (rewardType && NEW_SKIN_TYPES.includes(rewardType)) {
+    84→    84→    nameEl.className = `rgb-${rewardType}`;
+    85→    85→  } else if (rewardType) {
+    86→    86→    nameEl.className = `player-${rewardType}`;
+    87→    87→  } else {
+    88→    88→    nameEl.className = "";
+    89→    89→  }
+    90→    90→}
+    91→    91→
+    92→    92→/* ── Helpers ── */
+    93→    93→
+    94→    94→function esc(s) {
+    95→    95→  return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    96→    96→    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    97→    97→}
+    98→    98→
+    99→    99→function showToast(msg, type = "info", duration = 4000) {
+   100→   100→  if (typeof window.showToast === "function") window.showToast(msg, type, duration);
+   101→   101→  else console.log(`[toast:${type}]`, msg);
+   102→   102→}
+   103→   103→
+   104→   104→function showView(view) {
+   105→   105→  const views = ["profile-loading", "profile-gate", "profile-setup", "profile-main"];
+   106→   106→  views.forEach((id) => {
+   107→   107→    const el = document.getElementById(id);
+   108→   108→    if (el) el.classList.toggle("is-active", id === view);
+   109→   109→  });
+   110→   110→}
+   111→   111→
+   112→   112→function formatDateShort(iso) {
+   113→   113→  if (!iso) return "—";
+   114→   114→  try {
+   115→   115→    return new Date(iso).toLocaleDateString(undefined, { day: "2-digit", month: "short", year: "numeric" });
+   116→   116→  } catch { return iso; }
+   117→   117→}
+   118→   118→
+   119→   119→function formatDateTime(iso) {
+   120→   120→  if (!iso) return "—";
+   121→   121→  try {
+   122→   122→    return new Date(iso).toLocaleString(undefined, { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
+   123→   123→  } catch { return iso; }
+   124→   124→}
+   125→   125→
+   126→   126→function setStat(id, value, muted = false) {
+   127→   127→  const el = document.getElementById(id);
+   128→   128→  if (!el) return;
+   129→   129→  el.textContent = value == null ? "—" : String(value);
+   130→   130→  el.classList.toggle("muted", muted);
+   131→   131→}
+   132→   132→
+   133→   133→/* ── Auth state ── */
+   134→   134→
+   135→   135→// Public profile view state (set when URL contains ?publicId=XXX)
+   136→   136→let viewingPublicId = null;
+   137→   137→let viewingUsername = null;
+   138→   138→
+   139→   139→/**
+   140→   140→ * Détecte si l'URL demande de visualiser le profil PUBLIC d'un autre joueur.
+   141→   141→ * Format: profile.html?player=NAME&publicId=XXXXXXXX
+   142→   142→ * Si le publicId correspond à celui de l'utilisateur courant, on ignore
+   143→   143→ * (c'est son propre profil — flux normal).
+   144→   144→ */
+   145→   145→function getPublicProfileRequest() {
+   146→   146→  const params = new URLSearchParams(window.location.search);
+   147→   147→  const pid = (params.get("publicId") || "").trim();
+   148→   148→  const name = (params.get("player") || "").trim();
+   149→   149→  if (pid && /^[A-Za-z0-9]{8}$/.test(pid)) {
+   150→   150→    return { publicId: pid, username: name || pid };
+   151→   151→  }
+   152→   152→  return null;
+   153→   153→}
+   154→   154→
+   155→   155→onAuthStateChanged(auth, async (user) => {
+   156→   156→  // ── Cas 1 : visualisation du profil public d'un autre joueur ──
+   157→   157→  // On vérifie l'URL AVANT toute logique d'auth, car cela doit fonctionner
+   158→   158→  // même si l'utilisateur n'est pas connecté.
+   159→   159→  const pubReq = getPublicProfileRequest();
+   160→   160→  if (pubReq) {
+   161→   161→    // Lecture du propre profil de l'utilisateur courant (s'il est connecté)
+   162→   162→    // pour détecter s'il visualise son PROPRE profil → flux normal.
+   163→   163→    let ownProfile = null;
+   164→   164→    if (user) {
+   165→   165→      try {
+   166→   166→        const snap = await getDoc(doc(db, "users", user.uid));
+   167→   167→        if (snap.exists()) ownProfile = snap.data();
+   168→   168→      } catch (e) {
+   169→   169→        console.warn("[profile] Firestore read error (own, non-bloquant):", e.message);
+   170→   170→      }
+   171→   171→    }
+   172→   172→
+   173→   173→    if (ownProfile && ownProfile.publicId === pubReq.publicId) {
+   174→   174→      // L'utilisateur visualise son propre profil → flux normal (on nettoie l'URL)
+   175→   175→      history.replaceState(null, "", window.location.pathname);
+   176→   176→      currentUser = user;
+   177→   177→      currentProfile = ownProfile;
+   178→   178→      updateSidebarUI(user, ownProfile);
+   179→   179→      showView("profile-main");
+   180→   180→      renderHero(user, ownProfile);
+   181→   181→      loadVipForProfile();
+   182→   182→      await loadStats(ownProfile.publicId);
+   183→   183→      return;
+   184→   184→    }
+   185→   185→
+   186→   186→    // ── Profil d'un AUTRE joueur (ou visiteur non connecté) ──
+   187→   187→    currentUser = user; // peut être null
+   188→   188→    currentProfile = ownProfile; // pour la sidebar (peut être null)
+   189→   189→    updateSidebarUI(user, ownProfile);
+   190→   190→    viewingPublicId = pubReq.publicId;
+   191→   191→    viewingUsername = pubReq.username;
+   192→   192→    showView("profile-main");
+   193→   193→    renderPublicProfile(pubReq.username, pubReq.publicId);
+   194→   194→    loadVipForProfile();
+   195→   195→    await loadStats(pubReq.publicId);
+   196→   196→    return;
+   197→   197→  }
+   198→   198→
+   199→   199→  // ── Cas 2 : pas de ?publicId dans l'URL → flux normal ──
+   200→   200→  if (!user) {
+   201→   201→    currentUser = null;
+   202→   202→    currentProfile = null;
+   203→   203→    updateSidebarUI(null);
+   204→   204→    showView("profile-gate");
+   205→   205→    return;
+   206→   206→  }
+   207→   207→
+   208→   208→  currentUser = user;
+   209→   209→
+   210→   210→  // Read Firestore profile
+   211→   211→  let profile = null;
+   212→   212→  try {
+   213→   213→    const snap = await getDoc(doc(db, "users", user.uid));
+   214→   214→    if (snap.exists()) profile = snap.data();
+   215→   215→  } catch (e) {
+   216→   216→    console.error("[profile] Firestore read error:", e);
+   217→   217→    showToast("Erreur de lecture du profil (Firestore).", "error");
+   218→   218→  }
+   219→   219→
+   220→   220→  currentProfile = profile;
+   221→   221→  updateSidebarUI(user, profile);
+   222→   222→
+   223→   223→  if (!profile || !profile.publicId) {
+   224→   224→    // New user → setup form
+   225→   225→    showView("profile-setup");
+   226→   226→    return;
+   227→   227→  }
+   228→   228→
+   229→   229→  // Returning user with publicId → fetch & display stats
+   230→   230→  showView("profile-main");
+   231→   231→  renderHero(user, profile);
+   232→   232→  // Lance l'écoute VIP (skin par publicId) — re-applique le skin dès que les rewards arrivent
+   233→   233→  loadVipForProfile();
+   234→   234→  await loadStats(profile.publicId);
+   235→   235→});
+   236→   236→
+   237→   237→/**
+   238→   238→ * Affiche le profil PUBLIC d'un autre joueur (ou le sien propre si visité via URL).
+   239→   239→ * Masque le bouton de déconnexion, neutralise les actions d'édition, et applique
+   240→   240→ * le skin VIP résolu via publicId.
+   241→   241→ */
+   242→   242→function renderPublicProfile(username, publicId) {
+   243→   243→  const nameEl = document.getElementById("profile-title-name");
+   244→   244→  if (nameEl) nameEl.textContent = username;
+   245→   245→
+   246→   246→  const badgeEl = document.getElementById("profile-public-badge");
+   247→   247→  if (badgeEl) badgeEl.textContent = "Public ID : " + publicId;
+   248→   248→
+   249→   249→  // Affiche la bannière "Profil public" + bouton retour
+   250→   250→  const banner = document.getElementById("public-profile-banner");
+   251→   251→  if (banner) banner.style.display = "flex";
+   252→   252→
+   253→   253→  // Masque le bouton de déconnexion (ce n'est pas notre session)
+   254→   254→  const logoutBtn = document.querySelector(".pf-logout-btn");
+   255→   255→  if (logoutBtn) logoutBtn.style.display = "none";
+   256→   256→
+   257→   257→  // Avatar : fallback PDP.png (on n'a pas l'avatar du joueur distant)
+   258→   258→  const avatarEl = document.getElementById("profile-avatar-large");
+   259→   259→  if (avatarEl) {
+   260→   260→    avatarEl.innerHTML = `<img src="PDP.png" alt="${esc(username)}" style="width:100%;height:100%;object-fit:cover">`;
+   261→   261→  }
+   262→   262→
+   263→   263→  // Construit un pseudo-profil pour que applyProfileSkin résolve le skin VIP
+   264→   264→  // via le publicId du joueur visualisé (et non celui de l'utilisateur courant).
+   265→   265→  const virtualProfile = { username, publicId };
+   266→   266→  applyProfileSkin(virtualProfile, null);
+   267→   267→}
+   268→   268→
+   269→   269→/* ── Sidebar / dropdown UI ── */
+   270→   270→
+   271→   271→function updateSidebarUI(user, profile) {
+   272→   272→  const loginBtn = document.getElementById("login-btn-main");
+   273→   273→  const userContainer = document.getElementById("user-container");
+   274→   274→  if (!user) {
+   275→   275→    if (loginBtn) loginBtn.style.display = "flex";
+   276→   276→    if (userContainer) { userContainer.style.display = "none"; userContainer.classList.remove("open"); }
+   277→   277→    return;
+   278→   278→  }
+   279→   279→  if (loginBtn) loginBtn.style.display = "none";
+   280→   280→  if (userContainer) userContainer.style.display = "block";
+   281→   281→
+   282→   282→  const name = profile?.username || user.displayName || user.email || "Joueur";
+   283→   283→  const publicId = profile?.publicId || "Non lié";
+   284→   284→
+   285→   285→  const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+   286→   286→  setText("user-display-name", name);
+   287→   287→  setText("user-public-id-side", publicId !== "Non lié" ? publicId : "En ligne");
+   288→   288→  setText("dropdown-username-display", name);
+   289→   289→  setText("dropdown-publicid-display", publicId);
+   290→   290→
+   291→   291→  const avatarEl = document.getElementById("dropdown-avatar");
+   292→   292→  if (avatarEl) {
+   293→   293→    if (user.photoURL) {
+   294→   294→      avatarEl.innerHTML = `<img src="${esc(user.photoURL)}" alt="${esc(name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover">`;
+   295→   295→    } else {
+   296→   296→      avatarEl.textContent = (name || "U").substring(0, 2).toUpperCase();
+   297→   297→      avatarEl.style.background = "linear-gradient(135deg,var(--accent),var(--accentL))";
+   298→   298→    }
+   299→   299→  }
+   300→   300→}
+   301→   301→
+   302→   302→/* ── Main view: hero ── */
+   303→   303→
+   304→   304→function renderHero(user, profile) {
+   305→   305→  const nameEl = document.getElementById("profile-title-name");
+   306→   306→  if (nameEl) nameEl.textContent = profile.username || user.displayName || "Joueur";
+   307→   307→
+   308→   308→  const badgeEl = document.getElementById("profile-public-badge");
+   309→   309→  if (badgeEl) badgeEl.textContent = "Public ID: " + (profile.publicId || "—");
+   310→   310→
+   311→   311→  // Masque la bannière "Profil public" (flux normal = propre profil)
+   312→   312→  const banner = document.getElementById("public-profile-banner");
+   313→   313→  if (banner) banner.style.display = "none";
+   314→   314→
+   315→   315→  // Ré-affiche le bouton de déconnexion (flux normal)
+   316→   316→  const logoutBtn = document.querySelector(".pf-logout-btn");
+   317→   317→  if (logoutBtn) logoutBtn.style.display = "";
+   318→   318→
+   319→   319→  const avatarEl = document.getElementById("profile-avatar-large");
+   320→   320→  if (avatarEl) {
+   321→   321→    // Use PDP.png as the avatar image (instead of default letter)
+   322→   322→    avatarEl.innerHTML = `<img src="PDP.png" alt="${esc(profile.username || 'avatar')}" style="width:100%;height:100%;object-fit:cover">`;
+   323→   323→  }
+   324→   324→
+   325→   325→  // Applique le skin VIP résolu par publicId (le listener VIP re-appliquera quand
+   326→   326→  // les rewards arriveront). Fallback username = null ici car pas encore chargé.
+   327→   327→  applyProfileSkin(profile, null);
+   328→   328→}
+   329→   329→
+   330→   330→/* ── Main view: load stats ── */
+   331→   331→
+   332→   332→async function loadStats(publicId) {
+   333→   333→  // Reset stats list to loading
+   334→   334→  setText("stat-week-rank", "This week rank: …");
+   335→   335→  setText("stat-week-score", "This week score: …");
+   336→   336→  setText("stat-alltime", "All-time score: …");
+   337→   337→  const recentEl = document.getElementById("profile-recent-games");
+   338→   338→  if (recentEl) recentEl.innerHTML = `<div class="pf-empty">Chargement…</div>`;
+   339→   339→  hideError();
+   340→   340→
+   341→   341→  // Kick off ELO lookup (ranked.json) in parallel
+   342→   342→  const eloPromise = getRankedEntry(publicId);
+   343→   343→
+   344→   344→  // Kick off recent games fetch in parallel (separate endpoint)
+   345→   345→  // /public/player/{id} returns aggregated stats only (no games array).
+   346→   346→  // /public/player/{id}/games returns the actual recent games list with
+   347→   347→  // result (victory/defeat) already included — no need for per-game fetch.
+   348→   348→  const recentGamesPromise = fetchRecentGames(publicId);
+   349→   349→
+   350→   350→  let playerData;
+   351→   351→  try {
+   352→   352→    playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
+   353→   353→  } catch (e) {
+   354→   354→    console.error("[profile] OpenFront API error:", e);
+   355→   355→    showError(`Impossible de charger les statistiques depuis l'API OpenFront.`);
+   356→   356→    setText("stat-week-rank", "This week rank: —");
+   357→   357→    setText("stat-week-score", "This week score: —");
+   358→   358→    setText("stat-alltime", "All-time score: —");
+   359→   359→    return;
+   360→   360→  }
+   361→   361→
+   362→   362→  if (!playerData) {
+   363→   363→    showError("Réponse vide de l'API OpenFront.");
+   364→   364→    return;
+   365→   365→  }
+   366→   366→
+   367→   367→  // NOTE: /public/player/{id} no longer returns a `games` array.
+   368→   368→  // Recent games come from the separate /games endpoint (recentGamesPromise).
+   369→   369→  const games = [];
+   370→   370→  const stats = computeStats(games, playerData.stats || {});
+   371→   371→
+   372→   372→  // Compute week stats (games in last 7 days)
+   373→   373→  const now = Date.now();
+   374→   374→  const weekAgo = now - 7 * 24 * 60 * 60 * 1000;
+   375→   375→  const weekGames = games.filter(g => {
+   376→   376→    const t = new Date(g.start || 0).getTime();
+   377→   377→    return !isNaN(t) && t >= weekAgo && t <= now;
+   378→   378→  });
+   379→   379→  const weekWins = weekGames.length; // approximate: count week games as "score"
+   380→   380→  const weekRank = "—"; // not available without global calc
+   381→   381→
+   382→   382→  // All-time score: wins * 1 + games played (simple heuristic)
+   383→   383→  const allTimeScore = stats.wins * 4 + (stats.total - stats.wins);
+   384→   384→
+   385→   385→  // Breakdown by mode (from stats tree)
+   386→   386→  const breakdown = computeModeBreakdown(playerData.stats || {});
+   387→   387→  const detail = [];
+   388→   388→  if (breakdown.FFA) detail.push("FFA: " + breakdown.FFA);
+   389→   389→  if (breakdown.Team) detail.push("Team: " + breakdown.Team);
+   390→   390→  if (breakdown.Duos) detail.push("Duos: " + breakdown.Duos);
+   391→   391→  if (breakdown.Trios) detail.push("Trios: " + breakdown.Trios);
+   392→   392→  if (breakdown.Quads) detail.push("Quads: " + breakdown.Quads);
+   393→   393→  const detailStr = detail.length ? " (" + detail.join(", ") + ")" : "";
+   394→   394→
+   395→   395→  setText("stat-week-rank", `This week rank: #${weekRank}`);
+   396→   396→  setText("stat-week-score", `This week score: ${weekWins}`);
+   397→   397→  setText("stat-alltime", `All-time score: ${allTimeScore} (${stats.wins} wins${detailStr})`);
+   398→   398→
+   399→   399→  // ELO from ranked.json (1v1)
+   400→   400→  const ranked1v1 = await eloPromise;
+   401→   401→  const eloLine = document.getElementById("stat-elo-line");
+   402→   402→  if (eloLine) {
+   403→   403→    if (ranked1v1 && ranked1v1.elo != null) {
+   404→   404→      eloLine.textContent = `ELO 1v1: ${ranked1v1.elo} (Peak: ${ranked1v1.peakElo ?? '—'}) — Rank #${ranked1v1.rank}`;
+   405→   405→      eloLine.style.display = "list-item";
+   406→   406→    } else {
+   407→   407→      eloLine.style.display = "none";
+   408→   408→    }
+   409→   409→  }
+   410→   410→  
+   411→   411→  // ELO 2v2 from ranked.json
+   412→   412→  const ranked2v2 = await getRankedEntry(publicId, "2v2");
+   413→   413→  const elo2v2Line = document.getElementById("stat-elo-2v2-line");
+   414→   414→  if (elo2v2Line) {
+   415→   415→    if (ranked2v2 && ranked2v2.elo != null) {
+   416→   416→      elo2v2Line.textContent = `ELO 2v2: ${ranked2v2.elo} (Peak: ${ranked2v2.peakElo ?? '—'}) — Rank #${ranked2v2.rank}`;
+   417→   417→      elo2v2Line.style.display = "list-item";
+   418→   418→    } else {
+   419→   419→      elo2v2Line.style.display = "none";
+   420→   420→    }
+   421→   421→  }
+   422→   422→
+   423→   423→  // Recent games — fetched from /public/player/{id}/games (separate endpoint).
+   424→   424→  // The result field (victory/defeat) is already included, no per-game fetch needed.
+   425→   425→  try {
+   426→   426→    const recentGames = await recentGamesPromise;
+   427→   427→    renderRecentGames(recentGames, publicId);
+   428→   428→  } catch (e) {
+   429→   429→    console.error("[profile] recent games fetch failed:", e);
+   430→   430→    const c = document.getElementById("profile-recent-games");
+   431→   431→    if (c) c.innerHTML = `<div class="pf-empty">Impossible de charger les parties récentes.</div>`;
+   432→   432→  }
+   433→   433→}
+   434→   434→
+   435→   435→/**
+   436→   436→ * Fetch recent games for a player from the /public/player/{id}/games endpoint.
+   437→   437→ * Returns up to 10 games with result (victory/defeat) already included.
+   438→   438→ * Supports cursor pagination to fetch more if needed.
+   439→   439→ */
+   440→   440→async function fetchRecentGames(publicId, maxPages = 1) {
+   441→   441→  const all = [];
+   442→   442→  let cursor = null;
+   443→   443→  for (let page = 0; page < maxPages; page++) {
+   444→   444→    const url = `/public/player/${encodeURIComponent(publicId)}/games` +
+   445→   445→      (cursor ? `?cursor=${encodeURIComponent(cursor)}` : "");
+   446→   446→    const data = await fetchOpenFront(url);
+   447→   447→    const results = Array.isArray(data?.results) ? data.results : [];
+   448→   448→    all.push(...results);
+   449→   449→    cursor = data?.nextCursor;
+   450→   450→    if (!cursor || results.length === 0) break;
+   451→   451→  }
+   452→   452→  return all;
+   453→   453→}
+   454→   454→
+   455→   455→function setText(id, text) {
+   456→   456→  const el = document.getElementById(id);
+   457→   457→  if (el) el.textContent = text;
+   458→   458→}
+   459→   459→
+   460→   460→function computeModeBreakdown(statsTree) {
+   461→   461→  const out = { FFA: 0, Team: 0, Duos: 0, Trios: 0, Quads: 0 };
+   462→   462→  if (!statsTree || typeof statsTree !== "object") return out;
+   463→   463→  for (const catKey of Object.keys(statsTree)) {
+   464→   464→    const cat = statsTree[catKey];
+   465→   465→    if (!cat || typeof cat !== "object") continue;
+   466→   466→    for (const modeKey of Object.keys(cat)) {
+   467→   467→      const mode = cat[modeKey];
+   468→   468→      if (!mode || typeof mode !== "object") continue;
+   469→   469→      let wins = 0;
+   470→   470→      for (const diffKey of Object.keys(mode)) {
+   471→   471→        const diff = mode[diffKey];
+   472→   472→        if (diff && typeof diff === "object" && diff.wins != null) {
+   473→   473→          wins += parseInt(diff.wins, 10) || 0;
+   474→   474→        }
+   475→   475→      }
+   476→   476→      if (modeKey === "Free For All") out.FFA += wins;
+   477→   477→      else if (modeKey === "Team") {
+   478→   478→        // Try to break down by playerTeams if available
+   479→   479→        out.Team += wins;
+   480→   480→      }
+   481→   481→    }
+   482→   482→  }
+   483→   483→  return out;
+   484→   484→}
+   485→   485→
+   486→   486→function computeStats(games, statsTree) {
+   487→   487→  // Wins: sum all "wins" fields across the stats tree (Private/Public/Ranked → mode → difficulty)
+   488→   488→  let wins = 0;
+   489→   489→  let total = 0;
+   490→   490→  if (statsTree && typeof statsTree === "object") {
+   491→   491→    for (const catKey of Object.keys(statsTree)) {
+   492→   492→      const cat = statsTree[catKey];
+   493→   493→      if (!cat || typeof cat !== "object") continue;
+   494→   494→      for (const modeKey of Object.keys(cat)) {
+   495→   495→        const mode = cat[modeKey];
+   496→   496→        if (!mode || typeof mode !== "object") continue;
+   497→   497→        for (const diffKey of Object.keys(mode)) {
+   498→   498→          const diff = mode[diffKey];
+   499→   499→          if (!diff || typeof diff !== "object") continue;
+   500→   500→          if (diff.wins != null) wins += parseInt(diff.wins, 10) || 0;
+   501→   501→          if (diff.total != null) total += parseInt(diff.total, 10) || 0;
+   502→   502→          else if (diff.wins != null && diff.losses != null) {
+   503→   503→            total += (parseInt(diff.wins, 10) || 0) + (parseInt(diff.losses, 10) || 0);
+   504→   504→          }
+   505→   505→        }
+   506→   506→      }
+   507→   507→    }
+   508→   508→  }
+   509→   509→
+   510→   510→  // Fallback: if stats tree has no totals, use games.length
+   511→   511→  if (total === 0 && games.length > 0) total = games.length;
+   512→   512→
+   513→   513→  // Unique maps + favourite map
+   514→   514→  const mapCounts = {};
+   515→   515→  let lastGame = null;
+   516→   516→  for (const g of games) {
+   517→   517→    if (g.map) mapCounts[g.map] = (mapCounts[g.map] || 0) + 1;
+   518→   518→    if (g.start) {
+   519→   519→      const d = new Date(g.start).getTime();
+   520→   520→      if (!isNaN(d) && (lastGame === null || d > lastGame)) lastGame = d;
+   521→   521→    }
+   522→   522→  }
+   523→   523→  const uniqueMaps = Object.keys(mapCounts).length;
+   524→   524→  let favMap = null;
+   525→   525→  let favCount = 0;
+   526→   526→  for (const [m, c] of Object.entries(mapCounts)) {
+   527→   527→    if (c > favCount) { favMap = m; favCount = c; }
+   528→   528→  }
+   529→   529→  const lastGameIso = lastGame ? new Date(lastGame).toISOString() : null;
+   530→   530→
+   531→   531→  return { wins, total, uniqueMaps, favMap, lastGame: lastGameIso };
+   532→   532→}
+   533→   533→
+   534→   534→async function getRankedEntry(publicId, mode = "1v1") {
+   535→   535→  if (_rankedCache === null) {
+   536→   536→    try {
+   537→   537→      const res = await fetch("ranked.json", { cache: "no-store" });
+   538→   538→      if (res.ok) _rankedCache = await res.json();
+   539→   539→      else _rankedCache = {};
+   540→   540→    } catch (e) {
+   541→   541→      console.warn("[profile] ranked.json load failed:", e);
+   542→   542→      _rankedCache = {};
+   543→   543→    }
+   544→   544→  }
+   545→   545→  const list = (_rankedCache && Array.isArray(_rankedCache[mode])) ? _rankedCache[mode] : [];
+   546→   546→  return list.find((p) => p && p.public_id === publicId) || null;
+   547→   547→}
+   548→   548→
+   549→   549→function showError(msg) {
+   550→   550→  const el = document.getElementById("profile-api-error");
+   551→   551→  if (!el) return;
+   552→   552→  el.textContent = msg;
+   553→   553→  el.style.display = "block";
+   554→   554→}
+   555→   555→function hideError() {
+   556→   556→  const el = document.getElementById("profile-api-error");
+   557→   557→  if (el) el.style.display = "none";
+   558→   558→}
+   559→   559→
+   560→   560→/* ── Recent games ── */
+   561→   561→
+   562→   562→/**
+   563→   563→ * Render recent games from /public/player/{id}/games endpoint.
+   564→   564→ * Each game already includes a `result` field ("victory" | "defeat" | other)
+   565→   565→ * so no per-game fetch is needed.
+   566→   566→ *
+   567→   567→ * Game object structure:
+   568→   568→ *   { gameId, start, durationSeconds, map, mode, type, playerTeams,
+   569→   569→ *     rankedType, result, totalPlayers, username, clanTag }
+   570→   570→ */
+   571→   571→function renderRecentGames(games, publicId) {
+   572→   572→  const container = document.getElementById("profile-recent-games");
+   573→   573→  if (!container) return;
+   574→   574→
+   575→   575→  // Sort by start date desc, take last 10 (API returns 10 per page)
+   576→   576→  const sorted = games
+   577→   577→    .slice()
+   578→   578→    .sort((a, b) => new Date(b.start || 0).getTime() - new Date(a.start || 0).getTime())
+   579→   579→    .slice(0, 10);
+   580→   580→
+   581→   581→  if (sorted.length === 0) {
+   582→   582→    container.innerHTML = `<div class="pf-empty">Aucune partie récente.</div>`;
+   583→   583→    return;
+   584→   584→  }
+   585→   585→
+   586→   586→  container.innerHTML = sorted.map((g) => {
+   587→   587→    const isWin = g.result === "victory";
+   588→   588→    const resultClass = isWin ? "win" : "loss";
+   589→   589→    const resultLabel = isWin ? "VICTOIRE" : (g.result === "defeat" ? "DÉFAITE" : (g.result || "—"));
+   590→   590→    const duration = g.durationSeconds ? formatDuration(g.durationSeconds) : "—";
+   591→   591→    const modeLabel = formatGameMode(g);
+   592→   592→    const mapName = g.map || "Carte inconnue";
+   593→   593→    const rankedBadge = g.rankedType && g.rankedType !== "unranked"
+   594→   594→      ? `<span class="pf-game-ranked">${esc(g.rankedType)}</span>` : "";
+   595→   595→    const totalPlayers = g.totalPlayers != null ? `${g.totalPlayers} joueurs` : "";
+   596→   596→
+   597→   597→    return `
+   598→   598→      <div class="pf-game-card ${resultClass}">
+   599→   599→        <div class="pf-game-result">${resultLabel}</div>
+   600→   600→        <div class="pf-game-info">
+   601→   601→          <div class="pf-game-map">${esc(mapName)} ${rankedBadge}</div>
+   602→   602→          <div class="pf-game-meta">${esc(modeLabel)}${totalPlayers ? ' · ' + esc(totalPlayers) : ''} · ${duration}</div>
+   603→   603→          <div class="pf-game-meta">${formatDateTime(g.start)}</div>
+   604→   604→        </div>
+   605→   605→        <a class="pf-game-replay" href="https://openfront.io/game/${encodeURIComponent(g.gameId)}" target="_blank" rel="noopener" title="Voir le replay">
+   606→   606→          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+   607→   607→        </a>
+   608→   608→      </div>
+   609→   609→    `;
+   610→   610→  }).join("");
+   611→   611→}
+   612→   612→
+   613→   613→/** Format duration in seconds as M:SS or H:MM:SS */
+   614→   614→function formatDuration(seconds) {
+   615→   615→  const s = Math.floor(Number(seconds) || 0);
+   616→   616→  if (s < 60) return `${s}s`;
+   617→   617→  const m = Math.floor(s / 60);
+   618→   618→  const rs = s % 60;
+   619→   619→  if (m < 60) return `${m}:${String(rs).padStart(2, "0")}`;
+   620→   620→  const h = Math.floor(m / 60);
+   621→   621→  const rm = m % 60;
+   622→   622→  return `${h}:${String(rm).padStart(2, "0")}:${String(rs).padStart(2, "0")}`;
+   623→   623→}
+   624→   624→
+   625→   625→/** Build a human-readable game mode label from the game object */
+   626→   626→function formatGameMode(g) {
+   627→   627→  const parts = [];
+   628→   628→  if (g.type) parts.push(g.type);
+   629→   629→  if (g.mode) parts.push(g.mode === "Free For All" ? "FFA" : g.mode);
+   630→   630→  if (g.playerTeams && g.playerTeams !== "null") parts.push(g.playerTeams);
+   631→   631→  return parts.join(" · ") || "—";
+   632→   632→}
+   633→   633→
+   634→   634→/**
+   635→   635→ * Check whether the given clientId is among the winners of the given game.
+   636→   636→ * OpenFront `/public/game/{gameId}` returns `info.winner` as
+   637→   637→ * `[type, name, ...clientIDs]`.
+   638→   638→ */
+   639→   639→async function checkGameWin(gameId, clientId) {
+   640→   640→  if (!gameId || !clientId) return null;
+   641→   641→  const data = await fetchOpenFront(`/public/game/${encodeURIComponent(gameId)}`);
+   642→   642→  const winner = data?.info?.winner;
+   643→   643→  if (!Array.isArray(winner) || winner.length < 3) return null;
+   644→   644→  // winner[0] = "team" | "player", winner[1] = name, winner[2..] = clientIDs
+   645→   645→  const winnerIds = winner.slice(2);
+   646→   646→  return winnerIds.includes(clientId);
+   647→   647→}
+   648→   648→
+   649→   649→/* ── Setup: ownership verification ── */
+   650→   650→
+   651→   651→window.startOwnershipVerification = async () => {
+   652→   652→  if (!currentUser) {
+   653→   653→    showToast("Veuillez vous connecter d'abord.", "warning");
+   654→   654→    return;
+   655→   655→  }
+   656→   656→  const usernameInput = document.getElementById("setup-username");
+   657→   657→  const publicIdInput = document.getElementById("setup-public-id");
+   658→   658→  const username = (usernameInput?.value || "").trim();
+   659→   659→  const publicId = (publicIdInput?.value || "").trim();
+   660→   660→
+   661→   661→  if (!username || !publicId) {
+   662→   662→    showToast("Veuillez remplir tous les champs.", "warning");
+   663→   663→    return;
+   664→   664→  }
+   665→   665→  if (username.length < 2 || username.length > 30) {
+   666→   666→    showToast("Le pseudo doit faire entre 2 et 30 caractères.", "warning");
+   667→   667→    return;
+   668→   668→  }
+   669→   669→  if (!/^[A-Za-z0-9]{8}$/.test(publicId)) {
+   670→   670→    showToast("Le Public ID doit faire exactement 8 caractères alphanumériques (ex: HabCsQYR).", "warning");
+   671→   671→    return;
+   672→   672→  }
+   673→   673→  if (/[^a-zA-Z0-9_\- ]/.test(username)) {
+   674→   674→    showToast("Le pseudo ne peut contenir que des lettres, chiffres, espaces, _ et -.", "warning");
+   675→   675→    return;
+   676→   676→  }
+   677→   677→
+   678→   678→  // If user already has a different publicId, refuse change
+   679→   679→  try {
+   680→   680→    if (currentProfile && currentProfile.publicId && currentProfile.publicId !== publicId) {
+   681→   681→      showToast("Le Public ID OpenFront ne peut plus être modifié.", "error");
+   682→   682→      return;
+   683→   683→    }
+   684→   684→  } catch (e) { /* non-blocking */ }
+   685→   685→
+   686→   686→  // Verify publicId exists on OpenFront
+   687→   687→  showToast("Vérification du Public ID…", "info", 3000);
+   688→   688→  try {
+   689→   689→    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
+   690→   690→    if (!playerData || !playerData.games) {
+   691→   691→      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+   692→   692→      return;
+   693→   693→    }
+   694→   694→  } catch (e) {
+   695→   695→    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error", 6000);
+   696→   696→    console.error("[ownership] API check failed:", e);
+   697→   697→    return;
+   698→   698→  }
+   699→   699→
+   700→   700→  // Generate TFS-XXXX challenge code
+   701→   701→  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+   702→   702→  _ownershipCode = "TFS-";
+   703→   703→  const _randBytes = crypto.getRandomValues(new Uint8Array(4));
+   704→   704→  for (let i = 0; i < 4; i++) _ownershipCode += chars[_randBytes[i] % chars.length];
+   705→   705→  _ownershipPublicId = publicId;
+   706→   706→  _ownershipUsername = username;
+   707→   707→
+   708→   708→  // Switch to step 2
+   709→   709→  document.getElementById("profile-setup-step1").style.display = "none";
+   710→   710→  document.getElementById("profile-setup-step2").style.display = "block";
+   711→   711→  const codeEl = document.getElementById("ownership-code");
+   712→   712→  const exEl = document.getElementById("ownership-example");
+   713→   713→  if (codeEl) codeEl.textContent = _ownershipCode;
+   714→   714→  if (exEl) exEl.textContent = _ownershipCode + " " + username;
+   715→   715→  showToast("Code généré. Suivez les instructions ci-dessous.", "info");
+   716→   716→};
+   717→   717→
+   718→   718→window.confirmOwnershipVerification = async () => {
+   719→   719→  if (!_ownershipCode || !_ownershipPublicId) return;
+   720→   720→  const btn = document.getElementById("confirm-ownership-btn");
+   721→   721→  const original = btn?.textContent || "Confirmer";
+   722→   722→  if (btn) { btn.disabled = true; btn.textContent = "Vérification…"; }
+   723→   723→
+   724→   724→  try {
+   725→   725→    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}`);
+   726→   726→    const games = playerData?.games || [];
+   727→   727→    let found = games.some((g) => g.username && g.username.includes(_ownershipCode));
+   728→   728→    if (!found && playerData?.user?.username && playerData.user.username.includes(_ownershipCode)) {
+   729→   729→      found = true;
+   730→   730→    }
+   731→   731→    if (!found) {
+   732→   732→      showToast("Code non trouvé dans vos parties récentes. Jouez une partie avec le code dans votre pseudo, puis confirmez.", "error", 6000);
+   733→   733→      if (btn) { btn.disabled = false; btn.textContent = original; }
+   734→   734→      return;
+   735→   735→    }
+   736→   736→    // Verified → save to Firestore
+   737→   737→    await saveUserProfile(_ownershipUsername, _ownershipPublicId);
+   738→   738→  } catch (e) {
+   739→   739→    console.error("[ownership] Confirmation failed:", e);
+   740→   740→    showToast("Erreur lors de la vérification. Réessayez.", "error");
+   741→   741→    if (btn) { btn.disabled = false; btn.textContent = original; }
+   742→   742→  }
+   743→   743→};
+   744→   744→
+   745→   745→window.cancelOwnershipVerification = () => {
+   746→   746→  _ownershipCode = null;
+   747→   747→  _ownershipPublicId = null;
+   748→   748→  _ownershipUsername = null;
+   749→   749→  const s1 = document.getElementById("profile-setup-step1");
+   750→   750→  const s2 = document.getElementById("profile-setup-step2");
+   751→   751→  if (s1) s1.style.display = "block";
+   752→   752→  if (s2) s2.style.display = "none";
+   753→   753→};
+   754→   754→
+   755→   755→async function saveUserProfile(username, publicId) {
+   756→   756→  if (!currentUser) throw new Error("No authenticated user");
+   757→   757→  try {
+   758→   758→    const existing = currentProfile || {};
+   759→   759→    await setDoc(doc(db, "users", currentUser.uid), {
+   760→   760→      username,
+   761→   761→      publicId,
+   762→   762→      email: currentUser.email || null,
+   763→   763→      verified: true,
+   764→   764→      verifiedAt: new Date().toISOString(),
+   765→   765→      createdAt: existing.createdAt || new Date().toISOString(),
+   766→   766→      updatedAt: new Date().toISOString(),
+   767→   767→    }, { merge: true });
+   768→   768→
+   769→   769→    currentProfile = { ...(currentProfile || {}), username, publicId, verified: true };
+   770→   770→    showToast("Profil vérifié et enregistré avec succès !", "success");
+   771→   771→
+   772→   772→    // Publie le lien publicId ↔ username/uid dans une collection publique pour que
+   773→   773→    // le matching VIP par PUBLIC ID fonctionne pour tous les viewers (skin suit le
+   774→   774→    // public_id, pas l'alias). Best-effort: ignoré silencieusement si règles bloquent.
+   775→   775→    try {
+   776→   776→      await setDoc(doc(db, "public-aliases", currentUser.uid), {
+   777→   777→        username,
+   778→   778→        publicId,
+   779→   779→        aliases: [username],
+   780→   780→        updatedAt: new Date().toISOString(),
+   781→   781→      }, { merge: true });
+   782→   782→    } catch (bridgeErr) {
+   783→   783→      console.warn("[profile] Bridge public-aliases (publicId) write failed (non-critique):", bridgeErr.message);
+   784→   784→    }
+   785→   785→    try {
+   786→   786→      await setDoc(doc(db, "public-rewards", currentUser.uid), {
+   787→   787→        publicId,
+   788→   788→        username,
+   789→   789→      }, { merge: true });
+   790→   790→    } catch (rewardsErr) {
+   791→   791→      console.warn("[profile] public-rewards publicId merge failed (non-critique):", rewardsErr.message);
+   792→   792→    }
+   793→   793→
+   794→   794→    // Reset setup form
+   795→   795→    window.cancelOwnershipVerification();
+   796→   796→    updateSidebarUI(currentUser, currentProfile);
+   797→   797→
+   798→   798→    // Switch to main view and load stats
+   799→   799→    showView("profile-main");
+   800→   800→    renderHero(currentUser, currentProfile);
+   801→   801→    loadVipForProfile(); // écoute VIP pour appliquer le skin par publicId
+   802→   802→    await loadStats(publicId);
+   803→   803→  } catch (e) {
+   804→   804→    console.error("[profile] Save profile error:", e);
+   805→   805→    showToast("Erreur lors de la sauvegarde du profil.", "error");
+   806→   806→    throw e;
+   807→   807→  }
+   808→   808→}
+   809→   809→
+   810→   810→/* ── Sidebar / auth modal handlers ── */
+   811→   811→
+   812→   812→window.toggleAuthModal = function () {
+   813→   813→  const modal = document.getElementById("auth-modal");
+   814→   814→  if (modal) modal.classList.toggle("active");
+   815→   815→};
+   816→   816→
+   817→   817→window.handleLogin = async function (provider) {
+   818→   818→  if (window._loginInProgress) return;
+   819→   819→  window._loginInProgress = true;
+   820→   820→  const authBtns = document.querySelectorAll(".auth-btn");
+   821→   821→  authBtns.forEach((b) => { b.disabled = true; b.style.opacity = "0.6"; });
+   822→   822→  try {
+   823→   823→    if (provider === "google") await window.loginWithGoogle();
+   824→   824→    else if (provider === "discord") await window.loginWithDiscord();
+   825→   825→    // Close modal on success — onAuthStateChanged will switch view
+   826→   826→    const modal = document.getElementById("auth-modal");
+   827→   827→    if (modal) modal.classList.remove("active");
+   828→   828→  } catch (e) {
+   829→   829→    console.error("[profile] Login error:", e);
+   830→   830→  } finally {
+   831→   831→    window._loginInProgress = false;
+   832→   832→    authBtns.forEach((b) => { b.disabled = false; b.style.opacity = ""; });
+   833→   833→  }
+   834→   834→};
+   835→   835→
+   836→   836→window.handleLogout = async function (event) {
+   837→   837→  if (event) event.stopPropagation();
+   838→   838→  if (!confirm("Voulez-vous vous déconnecter ?")) return;
+   839→   839→  try { await window.logout(); } catch (e) { console.warn("[profile] logout error:", e); }
+   840→   840→  currentUser = null;
+   841→   841→  currentProfile = null;
+   842→   842→  updateSidebarUI(null);
+   843→   843→  showView("profile-gate");
+   844→   844→};
+   845→   845→
+   846→   846→window.toggleUserDropdown = function (event) {
+   847→   847→  if (event) event.stopPropagation();
+   848→   848→  const c = document.getElementById("user-container");
+   849→   849→  if (c) c.classList.toggle("open");
+   850→   850→};
+   851→   851→
+   852→   852→window.closeUserDropdown = function () {
+   853→   853→  const c = document.getElementById("user-container");
+   854→   854→  if (c) c.classList.remove("open");
+   855→   855→};
+   856→   856→
+   857→   857→window.goToProfilePage = function (event) {
+   858→   858→  if (event) event.stopPropagation();
+   859→   859→  // Already on profile page — just close dropdown
+   860→   860→  window.closeUserDropdown();
+   861→   861→};
+   862→   862→
+   863→   863→// Close dropdown on outside click
+   864→   864→document.addEventListener("click", (e) => {
+   865→   865→  const c = document.getElementById("user-container");
+   866→   866→  if (c && !c.contains(e.target)) c.classList.remove("open");
+   867→   867→});
+   868→   868→
