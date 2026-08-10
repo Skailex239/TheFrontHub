@@ -603,3 +603,75 @@ Stage Summary:
 - Nav inconsistency resolved: profile.html now matches index.html exactly [Speedruns, Classé, Mon Profil]
 - 404 (invalid publicId) now shows clear "Joueur introuvable" message instead of hanging/generic error
 - All verified end-to-end in Agent Browser with no console errors.
+
+---
+Task ID: 13
+Agent: main (Z.ai Code)
+Task: Integrate PR-Front (Power Ranking tournament site) into TheFrontHub as a new "Tournois" category. User decisions: keep PR-Front logic, embed inside FrontHub's Tournois tab, no redirect to profile.html, all views, TheFrontHub design system, keep data/ files, FR only.
+
+Work Log:
+- Cloned PR-Front repo (github.com/Skailex239/PR-Front) to /tmp/PR-Front for analysis.
+- Analyzed PR-Front architecture: Next.js 15 + React + TS, App Router, 5 views (home, ranking, tournaments, player profile, calendar), PR engine in src/lib/pr.ts (pure functions), data in data/ (551 players, 7 tournaments, scoring.config.json, calendar.json).
+- Decision: Since TheFrontHub is static HTML/JS/CSS in /public (not React), port PR-Front's logic to vanilla JS static files to match TheFrontHub's architecture and design system. Honors user's intent (embed PR-Front inside Tournois category with TheFrontHub design).
+
+- Data setup:
+  * Copied data/players.json (551 players, 82KB), data/scoring.config.json (4KB), data/calendar.json, data/tournaments/*.json (7 files, 2MB total) to /public/data/
+  * Generated /public/data/tournaments/manifest.json (list of slugs) for dynamic discovery
+
+- PR engine port (tournois-engine.js, 280 lines):
+  * Ported pr.ts → vanilla JS: basePoints, phaseUsesTierMultiplier, isFinalPhase, tierMultiplier, rewardPoints, computePlayerPRs, computeLeaderboard, computeTournamentPlayerStats
+  * Ported format.ts: formatPoints, formatDate, formatDateShort, formatDateTime, initials, placeLabel
+  * Added loadData() — fetches all JSON from /data/, caches in memory, returns {players, scoring, tournaments, calendar, leaderboard}
+
+- Page shell (tournois.html):
+  * TheFrontHub sidebar layout (same as index.html): logo + nav [Speedruns, Classé, Tournois (active), Mon Profil]
+  * Added tournois sub-nav in sidebar: Accueil, Classement PR, Tournois, Calendrier
+  * Topbar with dynamic title/subtitle/count
+  * Content area (#tournois-view) + breadcrumb for detail views
+
+- Styles (tournois.css, ~550 lines):
+  * Built entirely on TheFrontHub design system (CSS variables: --orange, --card, --border, --radius, etc.)
+  * Components: t-card, t-hero, t-podium, t-avatar, t-rank-circle, t-table (sortable), t-badge (major/standard/minor), t-filters, t-search, t-tournament-card, t-detail-header, t-phase-section, t-results-table, t-stats-table, t-profile-header, t-awards-list, t-chart (CSS bars), t-cal-item, breadcrumb
+  * Responsive (grid collapses on mobile, table scroll)
+
+- Controller (tournois.js, ~750 lines):
+  * Hash router: #/home, #/ranking, #/tournaments, #/tournament/:slug, #/player/:id, #/calendar
+  * loadData() once, then render per route
+  * 6 views implemented:
+    1. Home: champion hero card (orange gradient), 4 stat cards, podium (top 3 with avatars + bars), top 5 list, spotlight (most wins), latest tournament results
+    2. Ranking: sortable table (rank, player, PR, events, wins, top3, avgPlace) + 4 filters (all, recurring ≥2, top 100, with clan) + search + rank circles + avatars + clan tags + "new" badge
+    3. Tournaments list: responsive card grid (7 tournaments) with tier badges, format, participants, series, multiplier, winner
+    4. Tournament detail: header (date, format, tier, series, participants, map) + stats table (per-player: games, wins, kills, survived, best place, furthest stage, playtime, avg points) + phase sections (classement with placements, points PR, Plutonium rewards)
+    5. Player profile: header (avatar, name, clan, rank, 6-7 stat cards incl. Plutonium) + awards breakdown (grouped by tournament, clickable) + PR chart (top 8 tournaments as CSS bars)
+    6. Calendar: event list with date blocks, format/tier badges, registration link
+
+- Nav integration:
+  * Added "Tournois" tab (medal icon) to index.html sidebar → links to tournois.html
+  * Added "Tournois" tab to profile.html sidebar → links to tournois.html
+  * tournois.html sidebar has "Tournois" active, other tabs link back to index.html / profile.html
+
+- Bug fix during testing:
+  * Tournament detail threw "phaseUsesTierMult is not defined" — function was declared locally with wrong name AFTER its use. Fixed: imported phaseUsesTierMultiplier from engine, removed local declaration, renamed usage.
+  * Bumped tournois.js cache v1→v2.
+
+- Agent Browser verification (all passed):
+  * Home: champion Ultimus_Rex (3185 PR, 3 tournois, 1 win, 2 top3), podium, top 5, spotlight, latest tournament ✅
+  * Ranking: 551 rows, sort by wins works (desc → players with 1 win first), search "ALPHA" → 1 result, filters work ✅
+  * Tournaments list: 7 cards, first = "2026 Summer FFA Major" (Major, FFA, 128, ×2.5, winner Ultimus_Rex) ✅
+  * Tournament detail: title + meta + 128-player stats table + 1 phase (Classement) with placements, first row Ultimus_Rex #1 +2500 PR + 750 P Plutonium (1000×2.5=2500 ✅) ✅
+  * Player profile: Ultimus_Rex — 3185 PR, 3 tournois, 1 win, 2 top3, best #1, avg #12.7, 750 P Plutonium, awards breakdown, chart ✅
+  * Calendar: 1 event "6th 2026 Summer FFA Minor" with date block + register link ✅
+  * Nav from index.html: 4 tabs [Speedruns, Classé, Tournois, Mon Profil] ✅
+  * Zero render errors, zero console errors (after fix), data loads in ~126ms
+
+- NOT pushed to GitHub (no token). Changes LIVE in preview.
+
+Stage Summary:
+- PR-Front fully integrated into TheFrontHub as a new "Tournois" category.
+- New files: /public/tournois.html, /public/tournois.js, /public/tournois.css, /public/tournois-engine.js, /public/data/ (players.json, scoring.config.json, calendar.json, tournaments/*.json, manifest.json)
+- Modified: index.html (added Tournois tab), profile.html (added Tournois tab)
+- All 6 views functional: Home, Ranking (551 players, sortable+filterable+searchable), Tournaments list (7), Tournament detail (phases+stats+rewards), Player profile (PR breakdown+chart+Plutonium), Calendar.
+- Design: 100% TheFrontHub design system (orange theme, sidebar, cards, icons via icons.js).
+- PR engine faithfully ported (same scoring rules: tier multipliers major×2.5/standard×1.0/minor×0.5, ignoreTierMultiplier for minor classement, Plutonium rewards for majors, no decay).
+- Data files preserved as-is so user can update tournament results by editing JSON.
+- Verified end-to-end with Agent Browser — no errors.

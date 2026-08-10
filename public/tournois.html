@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>TheFrontHub — Tournois & Power Ranking</title>
+<meta name="description" content="Classement Power Ranking des tournois OpenFront — circuit compétitif, profils joueurs et calendrier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon-new.png">
+<link rel="stylesheet" href="styles.css?v=22">
+<link rel="stylesheet" href="tournois.css?v=1">
+<style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
+<script type="module" src="icons.js?v=2"></script>
+</head>
+<body>
+<a href="#tournois-content" class="skip-link">Aller au contenu principal</a>
+<div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
+
+<div class="app">
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <img src="logo-new.png" alt="TheFrontHub" loading="eager">
+    </div>
+
+    <nav role="tablist">
+      <a class="nav-item tab-btn" id="tab-btn-maps" href="index.html">
+        <i data-icon="trophy"></i> Speedruns
+      </a>
+      <a class="nav-item tab-btn" id="tab-btn-ranked" href="index.html?tab=ranked">
+        <i data-icon="swords"></i> Classé
+      </a>
+      <a class="nav-item tab-btn active" id="tab-btn-tournois" role="tab" aria-selected="true">
+        <i data-icon="medal"></i> Tournois
+      </a>
+      <a class="nav-item tab-btn" id="tab-btn-profile" href="profile.html">
+        <i data-icon="user"></i> Mon Profil
+      </a>
+    </nav>
+
+    <!-- Sous-nav Tournois (internes, hash-routées) -->
+    <div class="tournois-subnav" id="tournois-subnav">
+      <button class="subnav-item active" data-route="home">
+        <i data-icon="home" data-icon-size="16"></i> Accueil
+      </button>
+      <button class="subnav-item" data-route="ranking">
+        <i data-icon="trophy" data-icon-size="16"></i> Classement PR
+      </button>
+      <button class="subnav-item" data-route="tournaments">
+        <i data-icon="swords" data-icon-size="16"></i> Tournois
+      </button>
+      <button class="subnav-item" data-route="calendar">
+        <i data-icon="info" data-icon-size="16"></i> Calendrier
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="content" id="tournois-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div>
+        <h1 id="tournois-title">Tournois</h1>
+        <p id="tournois-subtitle">Power Ranking · Circuit compétitif OpenFront</p>
+      </div>
+      <div class="topbar-right">
+        <div id="tournois-count" class="game-version"></div>
+      </div>
+    </header>
+
+    <!-- Zone de rendu des vues -->
+    <section class="tournois-view" id="tournois-view">
+      <div class="tournois-loading">
+        <div class="spinner"></div>
+        <p>Chargement des données tournoi…</p>
+      </div>
+    </section>
+
+    <!-- Fil d'ariane / retour (visible sur les vues détaillées) -->
+    <div class="tournois-breadcrumb" id="tournois-breadcrumb" style="display:none">
+      <button class="breadcrumb-back" id="breadcrumb-back">
+        <i data-icon="arrowDown" data-icon-size="14" style="transform:rotate(90deg)"></i> Retour
+      </button>
+      <span class="breadcrumb-path" id="breadcrumb-path"></span>
+    </div>
+
+  </main>
+
+</div>
+
+<script type="module" src="tournois.js?v=2"></script>
+</body>
+</html>
