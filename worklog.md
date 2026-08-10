@@ -886,3 +886,59 @@ Stage Summary:
 - TOUT le travail récent est sur le remote : intégration Tournois & PR complète, courbe d'évolution SVG, suppression du logo brand moche, fix profil/stats/nav.
 - Token GitHub nettoyé du .git/config après push.
 - Remote main maintenant synchronisé avec le sandbox local.
+
+---
+Task ID: 18
+Agent: main (Z.ai Code)
+Task: RESTAURER l'auto-sync GitHub + tous les fichiers supprimés par le force-push (Task 17).
+
+Work Log:
+- Diagnostic : le force-push (Task 17) a écrasé le remote avec l'historique local. Le remote avait avant : 95 fichiers (site statique plat à la racine + .github/workflows/sync.yml auto-sync + scripts sync + data files). Le local Next.js avait ces fichiers dans public/ mais PAS à la racine, et n'avait PAS les workflows GitHub Actions.
+
+- Récupération via GitHub API (old commit c6de6a13, encore accessible) :
+  * GET /git/trees/c6de6a13?recursive=1 → liste des 95 fichiers de l'ancien HEAD.
+  * Comparaison local-tracked vs old-remote-files → 85 fichiers manquants (excluding package.json qui reste en version Next.js, et .gitignore qui est mergé).
+  * Script Python : téléchargement des 85 fichiers via raw.githubusercontent.com/{repo}/{sha}/{path} → placement aux chemins d'origine dans /home/z/my-project/.
+  * Résultat : 85/85 fichiers restaurés, 0 erreur.
+
+- Fichiers critiques restaurés :
+  * .github/workflows/sync.yml (9387 bytes) — l'auto-sync (4 jobs: sync-standard → sync-compact → sync-teams → sync-ranked + retrigger boucle continue).
+  * .github/workflows/deploy-pages.yml (865 bytes) — déploiement GitHub Pages (path: '.', branch: [main]).
+  * .nojekyll — pour GitHub Pages.
+  * Scripts sync : sync.js, sync-teams.js, sync-ranked.js, server.js, shared/extract-speedrun.js, shared/firebase-config.js, shared/maps.js.
+  * Data files : runs.json.gz, runs_public.json.gz, runs_compact.json.gz, ranked.json, ranked.json.gz, ranked_history.json.gz, ranked_2v2_history.json.gz, teams.json, teams.json.gz, teams_public.json.gz, teams_runs.json.gz, seen.json, seen_compact.json, checkpoint.json, checkpoint_compact.json, teams_checkpoint.json, teams_seen.json, maps_list.json, etc.
+  * Static site à la racine : app.js, index.html, profile.html, profile.js, profile.css, runs.html, runs.js, styles.css, icons.js, openfront-client.js, openfront-api.js, openfront-parse.js, animations.js, animations.css, auth.js, auth.css, i18n.js, sw.js, toast.js, toast.css, generate-code.js, test-api.js.
+  * Logos/favicons : logo-new.png, favicon-new.png, logo-*.png (12 variants), favicon.ico, PDP.png.
+  * Config : .env.example, .trae/skills/launch/SKILL.md, .windsurf/workflows/reset-full.md, GUIDE_NETTOYAGE.md, do-reset.ps1, restore-sync.sh, push_via_api.py, sync-workflow-template.yml.
+
+- .gitignore mergé : ajouté /ranked_history.json, /ranked_2v2_history.json, *backup.json, *full.json (exclusions du .gitignore old remote).
+
+- package.json : GARDÉ version Next.js (le workflow sync crée son propre package.json temporaire via `npm init -y && npm install node-fetch@2` puis le supprime avant commit → pas de conflit).
+
+- Commit : "Restore auto-sync workflow, deploy-pages, static site files, sync scripts and data" (f7b3a01a).
+- Push : daace96..f7b3a01 main -> main (push normal, PAS de force-push).
+- Token nettoyé du .git/config.
+
+- Vérification post-push :
+  * .github/workflows/ : sync.yml + deploy-pages.yml présents (HTTP 200) ✅
+  * Scripts sync à la racine : sync.js, sync-teams.js, sync-ranked.js, server.js (HTTP 200) ✅
+  * Data files : runs.json.gz, ranked.json.gz, teams.json.gz, seen.json, checkpoint.json (HTTP 200) ✅
+  * Projet Next.js intact : public/tournois.html, public/tournois.js, src/app/page.tsx, package.json, prisma/schema.prisma (HTTP 200) ✅
+
+- Re-trigger de l'Auto Sync :
+  * POST /actions/workflows/305580575/dispatches {"ref":"main"} → HTTP 204 ✅
+  * Run déclenché : Auto Sync | in_progress | workflow_dispatch | 20:30:44Z ✅
+  * Après ~3 min : commit [auto] sync (4d76bd15) par github-actions[bot] → job sync-standard OK ✅
+  * Après ~4 min : commit [auto] sync compact (f3764578) → job sync-compact OK ✅
+  * Workflow continue (in_progress) avec teams → ranked → retrigger (boucle continue 24/7).
+  * Deploy to GitHub Pages : 20:30:13 success (déclenché par le push de restauration) ✅
+
+Stage Summary:
+- Auto-sync GitHub Actions COMPLÈTEMENT restauré et opérationnel.
+- 85 fichiers récupérés depuis l'ancien commit c6de6a13 (via GitHub API raw).
+- .github/workflows/sync.yml (4 jobs + boucle continue) + deploy-pages.yml restaurés.
+- Scripts sync (sync.js, sync-teams.js, sync-ranked.js) + data files restaurés à la racine.
+- Site statique à la racine (GitHub Pages) restauré tel qu'avant.
+- Projet Next.js (public/, src/, package.json) conservé intact alongside.
+- Auto-sync confirmé actif : 2 commits [auto] sync de github-actions[bot] déjà poussés après restauration.
+- Le remote main est maintenant synchronisé ET l'auto-sync tourne en boucle continue.
