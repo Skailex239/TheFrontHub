@@ -675,3 +675,79 @@ Stage Summary:
 - PR engine faithfully ported (same scoring rules: tier multipliers major×2.5/standard×1.0/minor×0.5, ignoreTierMultiplier for minor classement, Plutonium rewards for majors, no decay).
 - Data files preserved as-is so user can update tournament results by editing JSON.
 - Verified end-to-end with Agent Browser — no errors.
+
+---
+Task ID: 14
+Agent: main (Z.ai Code)
+Task: Refonte de la section Tournois pour reprendre EXACTEMENT le style PR-Front (couleurs, typographie, icônes) + supprimer les sous-catégories de la sidebar (sauf mobile) + mettre la navigation Tournois en barre horizontale en haut pour desktop.
+
+Work Log:
+- Analyse du design system PR-Front (src/app/globals.css, src/components/navbar.tsx, src/lib/icon-paths.ts) : couleurs #e8781d (accent) / #c95d0c (accent-strong) / #f7f8fa (beige) / #171a20 (sidebar dark) / #e3e6ea (line), police Inter, cartes translucides (rgba(255,255,255,0.94)), animations card-reveal/row-reveal/page-reveal, podium-glow, lb-row hover, sidebar-link avec bordure orange gauche.
+
+- Création de tournois-icons.js (nouveau fichier, ~330 lignes) :
+  * Portage EXACT de toutes les icônes PR-Front depuis src/lib/icon-paths.ts (35 icônes : home, trophy, shield, calendar, swords, crown, search, menu, play, medal, star, starFilled, users, bolt, chart, history, hourglass, broadcast, link, check, close, warning, info, plutonium, radiation, bulb, rocket, puzzle, note, globe, arrowLeft, arrowRight, chevronDown, target, flag, settings).
+  * Support complet des métadonnées PR-Front : fill (booléen), stroke (épaisseur par icône, défaut 1.7), width (épaisseur par tracé), viewBox (custom pour plutonium 1200×1200), fillColor (#22c55e pour plutonium).
+  * Système d'hydratation <i data-prf-icon="..."> avec data-prf-icon-size et data-prf-icon-color.
+  * Auto-hydratation + MutationObserver (comme icons.js existant).
+  * Export: ICONS, prfIcon, hydratePrfIcons + window.prfIcon/hydratePrfIcons pour usage classique.
+
+- Réécriture de tournois.css (712 → ~960 lignes, v3) :
+  * Variables PR-Front préfixées --prf- (pour ne pas collisionner avec styles.css) : --prf-accent #e8781d, --prf-accent-strong #c95d0c, --prf-beige #f7f8fa, --prf-sidebar #171a20, --prf-line #e3e6ea, --prf-muted #7d848e, --prf-text #20242b, --prf-gold #c9932b, --prf-silver #7f899b, --prf-bronze #a85d2c, --prf-font Inter.
+  * body.tournois-page : applique le fond beige + police Inter de PR-Front.
+  * Top-nav horizontale (sticky) : .prf-topnav avec fond blanc translucide + backdrop-blur, .prf-topnav-link avec bordure orange du bas (3px #e8781d) quand active, .prf-topnav-brand avec logo gradient orange, .prf-play-btn (gradient #ed8829→#d96713 avec soft-pulse).
+  * Tiroir mobile : .prf-drawer (fond #171a20, transform translateX), .prf-drawer-link (style sidebar-link PR-Front avec bordure orange gauche 4px quand active), .prf-drawer-overlay (backdrop blur).
+  * Cartes PR-Front : .prf-card (rgba(255,255,255,0.94), border #e3e6ea, radius 0.65rem, shadow 0 2px 7px rgba(22,28,38,0.04), animation card-reveal).
+  * Hero : .prf-hero (fond #171a20, label orange #f28a28, text-shadow).
+  * Podium : .prf-podium-card avec glow-1/2/3 (border-color golden/silver/bronze + box-shadow orange).
+  * Tableau : .prf-table avec .lb-row style (hover translateX + inset shadow orange, animation row-reveal en cascade).
+  * Badges : .prf-badge-major (gold), .prf-badge-standard (orange), .prf-badge-minor (gris), .prf-badge-new (cyan #0e8e86).
+  * Spotlight : .prf-spotlight (gradient orange subtil).
+  * Toutes les autres composantes : filtres, recherche, cartes tournoi (avec major-card glow doré), détail tournoi, profil joueur, chart PR, calendrier, breadcrumb.
+  * Animations portées : prf-page-reveal, prf-card-reveal, prf-row-reveal, prf-soft-pulse, prf-shine, prf-plutonium-spin.
+  * Responsive : @media (max-width: 1024px) → top-nav devient hamburger, @media (max-width: 768px) → padding réduit, colonnes empilées.
+
+- Réécriture de tournois.html (v3) :
+  * body class="tournois-page" (active le design PR-Front).
+  * Sidebar TheFrontHub conservée (4 onglets : Speedruns, Classé, Tournois [actif], Mon Profil) — SANS sous-nav (supprimée).
+  * Nouvelle top-nav horizontale .prf-topnav : brand "Tournois & PR" + 4 liens (Accueil, Classement PR, Tournois, Calendrier) avec icônes PR-Front + bouton "Jouer" (gradient orange).
+  * .prf-page-head séparé (titre + sous-titre + count) peuplé dynamiquement par setHeader.
+  * .prf-breadcrumb (retour) pour les vues détaillées.
+  * .prf-view : conteneur de rendu des vues.
+  * Tiroir mobile .prf-drawer + .prf-drawer-overlay : 4 liens avec icônes PR-Front + bouton fermer.
+  * Bouton hamburger .prf-menu-toggle (visible < 1024px).
+  * Chargement : icons.js (pour sidebar TheFrontHub) + tournois-icons.js (pour contenu PR-Front) + tournois.css?v=3 + tournois.js?v=3.
+
+- Réécriture de tournois.js (880 lignes, v3) :
+  * Import hydratePrfIcons depuis ./tournois-icons.js (au lieu de hydrateIcons depuis ./icons.js).
+  * Tous les data-icon → data-prf-icon dans le rendu HTML.
+  * Tous les préfixes de classes t- → prf- (t-card→prf-card, t-hero→prf-hero, t-podium→prf-podium, t-table→prf-table, t-badge→prf-badge, t-avatar→prf-avatar, etc.).
+  * Toutes les variables CSS var(--orange)→var(--prf-accent-strong), var(--gold)→var(--prf-gold), var(--muted)→var(--prf-muted), var(--text)→var(--prf-text).
+  * tournois-error → prf-error, tournois-loading → prf-loading.
+  * Nouvelle fonction updateNavActive(route) : met à jour .prf-topnav-link ET .prf-drawer-link (active + aria-selected).
+  * Logique tiroir mobile : openDrawer()/closeDrawer() avec body scroll lock, aria-expanded, fermeture sur Échap + clic overlay + clic lien.
+  * Podium refactorisé en .prf-podium-card avec glow-1/2/3 (au lieu de t-podium-step avec barres).
+  * setHeader utilise innerHTML pour countEl (support des chips avec icônes PR-Front).
+  * Icônes mises à jour : info→calendar (date détail), info→search (recherche classement), map→flag (map tournoi — PR-Front n'a pas d'icône map).
+
+- Vérification Agent Browser (desktop 1280×800 + mobile 390×844) :
+  * Home : hero dark (#171a20) avec label orange #f28a28, 4 stat cards, podium 3 cartes (glow doré sur #1), top 5, spotlight, dernier tournoi ✅
+  * Ranking : 551 joueurs, table avec lb-row hover (translateX + inset shadow orange), filtres, recherche, tri ✅
+  * Tournaments : 7 cartes (major-card avec glow doré), badges tier, méta avec icônes PR-Front ✅
+  * Tournament detail : header + 128 stats joueurs + phase Classement (128 résultats) + breadcrumb "Tournois / 2026 Summer FFA Major" ✅
+  * Player profile : 7 stat cards (Points PR, Tournois, Victoires, Top 3, Meilleure place, Place moy., Plutonium), 3 awards, 3 chart bars, breadcrumb "Classement / Ultimus_Rex" ✅
+  * Calendar : events avec date blocks orange, badges tier, bouton "S'inscrire" ✅
+  * Top-nav desktop : 4 onglets, active state avec bordure orange du bas (#e8781d), clic navigue ✅
+  * Mobile (< 1024px) : hamburger visible, top-nav liens cachés, drawer s'ouvre (translateX(0)), overlay opacity 1, body scroll locked, clic lien navigue + ferme drawer ✅
+  * Styles computed vérifiés : bodyFont=Inter, bodyBg=#f7f8fa, topnavBg=rgba(255,255,255,0.95), topnavLinkColor=#c95d0c, topnavLinkAfterBg=#e8781d, heroBg=#171a20, cardBg=rgba(255,255,255,0.94), cardBorder=1px solid #e3e6ea, podium1Border=#dda252, playBtnBg=linear-gradient(#ed8829,#d96713) ✅
+  * 15 icônes PR-Front rendues dans le contenu + 4 icônes TheFrontHub dans la sidebar ✅
+  * VLM confirme : design moderne, orange accent, hero dark, podium avec glow doré, Inter font, icônes PR-Front ✅
+  * Zéro erreur console, zéro erreur de rendu, lint passes (0 erreurs) ✅
+
+Stage Summary:
+- Refonte complète de la section Tournois pour correspondre EXACTEMENT au style PR-Front.
+- Nouveaux fichiers : /public/tournois-icons.js (icônes PR-Front portées avec fill/stroke/viewBox/fillColor).
+- Modifiés : /public/tournois.html (sidebar sans sous-nav + top-nav horizontale PR-Front + drawer mobile), /public/tournois.css (design system PR-Front complet : couleurs, cartes, animations, podium, table, badges), /public/tournois.js (classes prf-, icônes data-prf-icon, nav top-nav + drawer, variables --prf-).
+- Architecture nav : TheFrontHub sidebar (4 onglets globaux) + top-nav horizontale PR-Front (4 sous-catégories Tournois sur desktop) + drawer mobile (même 4 sous-catégories). AUCUNE sous-catégorie dans la sidebar, conformément à la demande.
+- Toutes les vues fonctionnelles : Home, Ranking (551 joueurs), Tournaments (7), Tournament detail (128 joueurs), Player profile (7 stats + awards + chart), Calendar.
+- Design 100% PR-Front : couleurs (#e8781d/#c95d0c/#f7f8fa/#171a20), Inter, cartes translucides, podium-glow, lb-row hover, animations card-reveal/row-reveal, icônes maison PR-Front (35 icônes portées).
+- Vérifié end-to-end avec Agent Browser (desktop + mobile) + VLM. Zéro erreur.

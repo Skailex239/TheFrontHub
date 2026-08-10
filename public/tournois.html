@@ -8,20 +8,21 @@
 <meta name="description" content="Classement Power Ranking des tournois OpenFront — circuit compétitif, profils joueurs et calendrier.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon-new.png">
 <link rel="stylesheet" href="styles.css?v=22">
-<link rel="stylesheet" href="tournois.css?v=1">
-<style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
+<link rel="stylesheet" href="tournois.css?v=3">
+<style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange,#ef6c00);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
+<script type="module" src="tournois-icons.js?v=1"></script>
 </head>
-<body>
+<body class="tournois-page">
 <a href="#tournois-content" class="skip-link">Aller au contenu principal</a>
 <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
 
 <div class="app">
 
-  <!-- ═══ SIDEBAR ═══ -->
+  <!-- ═══ SIDEBAR TheFrontHub (nav principale : 4 onglets, SANS sous-nav) ═══ -->
   <aside class="sidebar">
 
     <div class="logo">
@@ -43,58 +44,103 @@
       </a>
     </nav>
 
-    <!-- Sous-nav Tournois (internes, hash-routées) -->
-    <div class="tournois-subnav" id="tournois-subnav">
-      <button class="subnav-item active" data-route="home">
-        <i data-icon="home" data-icon-size="16"></i> Accueil
-      </button>
-      <button class="subnav-item" data-route="ranking">
-        <i data-icon="trophy" data-icon-size="16"></i> Classement PR
-      </button>
-      <button class="subnav-item" data-route="tournaments">
-        <i data-icon="swords" data-icon-size="16"></i> Tournois
-      </button>
-      <button class="subnav-item" data-route="calendar">
-        <i data-icon="info" data-icon-size="16"></i> Calendrier
-      </button>
-    </div>
-
   </aside>
 
   <!-- ═══ MAIN CONTENT ═══ -->
   <main class="content" id="tournois-content">
 
-    <!-- Topbar -->
-    <header class="topbar">
-      <div>
-        <h1 id="tournois-title">Tournois</h1>
-        <p id="tournois-subtitle">Power Ranking · Circuit compétitif OpenFront</p>
+    <!-- Top-nav horizontale PR-Front (desktop) + menu hamburger (mobile) -->
+    <header class="prf-topnav">
+      <div class="prf-topnav-brand">
+        <div class="prf-brand-mark">
+          <i data-prf-icon="trophy" data-prf-icon-size="16"></i>
+        </div>
+        <span>Tournois & PR</span>
       </div>
-      <div class="topbar-right">
-        <div id="tournois-count" class="game-version"></div>
-      </div>
+
+      <nav class="prf-topnav-links" id="prf-topnav-links" role="tablist">
+        <button class="prf-topnav-link active" data-route="home" role="tab" aria-selected="true">
+          <i data-prf-icon="home" data-prf-icon-size="18"></i> Accueil
+        </button>
+        <button class="prf-topnav-link" data-route="ranking" role="tab" aria-selected="false">
+          <i data-prf-icon="trophy" data-prf-icon-size="18"></i> Classement PR
+        </button>
+        <button class="prf-topnav-link" data-route="tournaments" role="tab" aria-selected="false">
+          <i data-prf-icon="shield" data-prf-icon-size="18"></i> Tournois
+        </button>
+        <button class="prf-topnav-link" data-route="calendar" role="tab" aria-selected="false">
+          <i data-prf-icon="calendar" data-prf-icon-size="18"></i> Calendrier
+        </button>
+      </nav>
+
+      <button class="prf-menu-toggle" id="prf-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="prf-drawer">
+        <i data-prf-icon="menu" data-prf-icon-size="22"></i>
+      </button>
+
+      <a class="prf-play-btn" href="https://openfront.io" target="_blank" rel="noreferrer" style="margin-left:12px">
+        <i data-prf-icon="play" data-prf-icon-size="14"></i> Jouer
+      </a>
     </header>
 
-    <!-- Zone de rendu des vues -->
-    <section class="tournois-view" id="tournois-view">
-      <div class="tournois-loading">
+    <!-- En-tête de page (titre + sous-titre, peuplé dynamiquement) -->
+    <div class="prf-page-head" id="tournois-page-head" style="padding:24px 24px 0;max-width:1280px;margin:0 auto">
+      <h1 class="prf-page-title" id="tournois-title">Tournois</h1>
+      <p class="prf-page-sub" id="tournois-subtitle">Power Ranking · Circuit compétitif OpenFront</p>
+      <div id="tournois-count"></div>
+    </div>
+
+    <!-- Fil d'ariane / retour (visible sur les vues détaillées) -->
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+      <div class="prf-breadcrumb" id="tournois-breadcrumb" style="display:none">
+        <button class="prf-breadcrumb-back" id="breadcrumb-back">
+          <i data-prf-icon="arrowLeft" data-prf-icon-size="14"></i> Retour
+        </button>
+        <span class="prf-breadcrumb-path" id="breadcrumb-path"></span>
+      </div>
+    </div>
+
+    <!-- Zone de rendu des vues (style PR-Front) -->
+    <section class="prf-view" id="tournois-view">
+      <div class="prf-loading">
         <div class="spinner"></div>
         <p>Chargement des données tournoi…</p>
       </div>
     </section>
 
-    <!-- Fil d'ariane / retour (visible sur les vues détaillées) -->
-    <div class="tournois-breadcrumb" id="tournois-breadcrumb" style="display:none">
-      <button class="breadcrumb-back" id="breadcrumb-back">
-        <i data-icon="arrowDown" data-icon-size="14" style="transform:rotate(90deg)"></i> Retour
-      </button>
-      <span class="breadcrumb-path" id="breadcrumb-path"></span>
-    </div>
-
   </main>
 
 </div>
 
-<script type="module" src="tournois.js?v=2"></script>
+<!-- ═══ Tiroir mobile (sub-nav pour téléphone) ═══ -->
+<div class="prf-drawer-overlay" id="prf-drawer-overlay"></div>
+<aside class="prf-drawer" id="prf-drawer" role="dialog" aria-modal="true" aria-label="Navigation Tournois">
+  <div class="prf-drawer-header">
+    <div style="display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:14px">
+      <div style="width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#e8781d,#c95d0c);display:flex;align-items:center;justify-content:center">
+        <i data-prf-icon="trophy" data-prf-icon-size="16"></i>
+      </div>
+      Tournois & PR
+    </div>
+    <button class="prf-drawer-close" id="prf-drawer-close" aria-label="Fermer le menu">
+      <i data-prf-icon="close" data-prf-icon-size="22"></i>
+    </button>
+  </div>
+  <nav class="prf-drawer-nav">
+    <button class="prf-drawer-link active" data-route="home">
+      <i data-prf-icon="home" data-prf-icon-size="20"></i> Accueil
+    </button>
+    <button class="prf-drawer-link" data-route="ranking">
+      <i data-prf-icon="trophy" data-prf-icon-size="20"></i> Classement PR
+    </button>
+    <button class="prf-drawer-link" data-route="tournaments">
+      <i data-prf-icon="shield" data-prf-icon-size="20"></i> Tournois
+    </button>
+    <button class="prf-drawer-link" data-route="calendar">
+      <i data-prf-icon="calendar" data-prf-icon-size="20"></i> Calendrier
+    </button>
+  </nav>
+</aside>
+
+<script type="module" src="tournois.js?v=3"></script>
 </body>
 </html>

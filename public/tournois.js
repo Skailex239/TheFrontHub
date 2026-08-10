@@ -7,8 +7,9 @@
  *   - Charge les données une fois (loadData du moteur) puis rend la vue.
  *   - Les vues sont des fonctions pures (rootEl, data) => HTML string.
  *
- * Design : réutilise le design system TheFrontHub (variables CSS, .sidebar,
- * .topbar, .nav-item, icônes icons.js).
+ * Design : reprend EXACTEMENT le style PR-Front (couleurs, typographie,
+ * cartes, animations) via les classes .prf- de tournois.css. Les icônes
+ * utilisées sont les icônes maison de PR-Front (tournois-icons.js).
  */
 
 import {
@@ -28,7 +29,7 @@ import {
   getPlayer,
   getTournament,
 } from "./tournois-engine.js";
-import { hydrateIcons } from "./icons.js";
+import { hydratePrfIcons } from "./tournois-icons.js";
 
 /* ════════════════════════════════════════════════════════════════
    État global
@@ -50,21 +51,21 @@ const breadcrumbBack = document.getElementById("breadcrumb-back");
 function setHeader(title, subtitle, count) {
   if (titleEl) titleEl.textContent = title;
   if (subtitleEl) subtitleEl.textContent = subtitle || "";
-  if (countEl) countEl.textContent = count || "";
+  if (countEl) countEl.innerHTML = count || "";
 }
 
 function showBreadcrumb(path) {
   if (!breadcrumb) return;
   if (path) {
     breadcrumb.style.display = "flex";
-    breadcrumbPath.innerHTML = path;
+    if (breadcrumbPath) breadcrumbPath.innerHTML = path;
   } else {
     breadcrumb.style.display = "none";
   }
 }
 
 function avatarHtml(name, size = "sm") {
-  return `<span class="t-avatar t-avatar-${size}">${initials(name)}</span>`;
+  return `<span class="prf-avatar prf-avatar-${size}">${initials(name)}</span>`;
 }
 
 function rankCircleHtml(rank) {
@@ -73,12 +74,12 @@ function rankCircleHtml(rank) {
   else if (rank === 2) cls = "top2";
   else if (rank === 3) cls = "top3";
   else if (rank <= 10) cls = "top10";
-  return `<span class="t-rank-circle ${cls}">${rank}</span>`;
+  return `<span class="prf-rank-circle ${cls}">${rank}</span>`;
 }
 
 function tierBadge(tier) {
   const labels = { major: "Major", standard: "Standard", minor: "Minor" };
-  return `<span class="t-badge t-badge-${tier}">${labels[tier] || tier}</span>`;
+  return `<span class="prf-badge prf-badge-${tier}">${labels[tier] || tier}</span>`;
 }
 
 function formatTierMult(tier) {
@@ -116,7 +117,7 @@ async function router() {
       _data = await loadData();
     } catch (e) {
       console.error("[tournois] loadData failed:", e);
-      view.innerHTML = `<div class="tournois-error">
+      view.innerHTML = `<div class="prf-error">
         <div class="spinner"></div>
         <h3>Impossible de charger les données</h3>
         <p>${escapeHtml(e.message)}</p>
@@ -127,10 +128,8 @@ async function router() {
 
   const { route, params } = parseHash();
 
-  // Mise à jour de la sous-nav active
-  document.querySelectorAll(".subnav-item").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.route === route);
-  });
+  // Mise à jour de la nav active (top-nav + drawer)
+  updateNavActive(route);
 
   // Breadcrumb + retour
   let bcPath = "";
@@ -145,7 +144,7 @@ async function router() {
     backRoute = "ranking";
   }
   showBreadcrumb(bcPath);
-  breadcrumbBack?.setAttribute("data-back", backRoute);
+  if (breadcrumbBack) breadcrumbBack.setAttribute("data-back", backRoute);
 
   // Rendu
   try {
@@ -158,10 +157,10 @@ async function router() {
       case "home":
       default: await renderHome(); break;
     }
-    hydrateIcons(view);
+    hydratePrfIcons(view);
   } catch (e) {
     console.error("[tournois] render error:", e);
-    view.innerHTML = `<div class="tournois-error"><h3>Erreur de rendu</h3><p>${escapeHtml(e.message)}</p></div>`;
+    view.innerHTML = `<div class="prf-error"><h3>Erreur de rendu</h3><p>${escapeHtml(e.message)}</p></div>`;
   }
 
   // Scroll en haut
@@ -169,11 +168,27 @@ async function router() {
 }
 
 /* ════════════════════════════════════════════════════════════════
+   Navigation active state (top-nav + mobile drawer)
+   ════════════════════════════════════════════════════════════════ */
+function updateNavActive(route) {
+  // Top-nav (desktop)
+  document.querySelectorAll(".prf-topnav-link").forEach((btn) => {
+    const active = btn.dataset.route === route;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-selected", active ? "true" : "false");
+  });
+  // Drawer (mobile)
+  document.querySelectorAll(".prf-drawer-link").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.route === route);
+  });
+}
+
+/* ════════════════════════════════════════════════════════════════
    VUE : Accueil
    ════════════════════════════════════════════════════════════════ */
 async function renderHome() {
   setHeader("Tournois", "Power Ranking · Circuit compétitif OpenFront",
-    `${_data.tournaments.length} tournois · ${_data.leaderboard.length} joueurs`);
+    `<span class="prf-chip"><i data-prf-icon="trophy" data-prf-icon-size="14"></i> ${_data.tournaments.length} tournois</span> <span class="prf-chip"><i data-prf-icon="users" data-prf-icon-size="14"></i> ${_data.leaderboard.length} joueurs</span>`);
 
   const lb = _data.leaderboard;
   const champion = lb[0] ?? null;
@@ -214,100 +229,105 @@ async function renderHome() {
       recentResultsHtml = top3.map((p) => {
         const name = getPlayer(_data.players, p.player)?.name || p.player;
         const entry = lb.find((e) => e.playerId === p.player);
-        return `<div class="t-list-item">
+        return `<li class="prf-list-item" onclick="location.hash='#/player/${encodeURIComponent(p.player)}'">
           ${rankCircleHtml(p.place)}
-          <span class="t-list-name">${escapeHtml(name)}</span>
-          ${entry ? `<span class="t-list-points">${formatPoints(entry.points)} PR</span>` : ""}
-        </div>`;
+          <span class="prf-list-name">${escapeHtml(name)}</span>
+          ${entry ? `<span class="prf-list-points">${formatPoints(entry.points)} PR</span>` : ""}
+        </li>`;
       }).join("");
     }
   }
 
   view.innerHTML = `
     ${champion ? `
-    <div class="t-hero">
-      <div class="t-hero-label">Champion Power Ranking</div>
-      <div class="t-hero-name">${escapeHtml(champion.player?.name || champion.playerId)}</div>
-      <div style="opacity:.9;font-size:var(--text-md)">
+    <div class="prf-hero">
+      <div class="prf-hero-label">Champion Power Ranking</div>
+      <div class="prf-hero-name">${escapeHtml(champion.player?.name || champion.playerId)}</div>
+      <div class="prf-hero-sub">
         ${champion.player?.clan ? `[${escapeHtml(champion.player.clan)}] ` : ""}Rank #${champion.rank}
       </div>
-      <div class="t-hero-stats">
-        <div class="t-hero-stat">
-          <div class="t-hero-stat-val">${formatPoints(champion.points)}</div>
-          <div class="t-hero-stat-label">Points PR</div>
+      <div class="prf-hero-stats">
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${formatPoints(champion.points)}</div>
+          <div class="prf-hero-stat-label">Points PR</div>
         </div>
-        <div class="t-hero-stat">
-          <div class="t-hero-stat-val">${champion.events}</div>
-          <div class="t-hero-stat-label">Tournois</div>
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${champion.events}</div>
+          <div class="prf-hero-stat-label">Tournois</div>
         </div>
-        <div class="t-hero-stat">
-          <div class="t-hero-stat-val">${champion.wins}</div>
-          <div class="t-hero-stat-label">Victoires</div>
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${champion.wins}</div>
+          <div class="prf-hero-stat-label">Victoires</div>
         </div>
-        <div class="t-hero-stat">
-          <div class="t-hero-stat-val">${champion.top3}</div>
-          <div class="t-hero-stat-label">Top 3</div>
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${champion.top3}</div>
+          <div class="prf-hero-stat-label">Top 3</div>
         </div>
       </div>
     </div>` : ""}
 
-    <div class="t-stats-grid">
-      <div class="t-stat-card">
+    <div class="prf-stats-grid">
+      <div class="prf-stat-card">
         <div class="label">Tournois</div>
         <div class="value">${_data.tournaments.length}</div>
         <div class="sub">${_data.tournaments.filter(t => t.tier === "major").length} major · ${_data.tournaments.filter(t => t.tier === "minor").length} minor</div>
       </div>
-      <div class="t-stat-card">
+      <div class="prf-stat-card">
         <div class="label">Joueurs classés</div>
         <div class="value">${lb.length}</div>
         <div class="sub">${lb.filter(e => e.events >= 2).length} récurrents</div>
       </div>
-      <div class="t-stat-card">
+      <div class="prf-stat-card">
         <div class="label">Points distribués</div>
         <div class="value">${formatPoints(totalPoints)}</div>
         <div class="sub">cumul à vie</div>
       </div>
-      <div class="t-stat-card">
+      <div class="prf-stat-card">
         <div class="label">Dernier vainqueur</div>
-        <div class="value" style="font-size:var(--text-xl)">${escapeHtml(latestWinnerName)}</div>
+        <div class="value" style="font-size:1.125rem">${escapeHtml(latestWinnerName)}</div>
         <div class="sub">${latestTournament ? formatDateShort(latestTournament.date) : "—"}</div>
       </div>
     </div>
 
-    <div class="t-grid-2">
-      <div class="t-card">
-        <div class="t-card-header">
-          <span class="t-card-title">Podium Power Ranking</span>
+    <div class="prf-grid-2">
+      <div class="prf-card">
+        <div class="prf-card-header">
+          <span class="prf-card-title">Podium Power Ranking</span>
         </div>
-        <div class="t-card-body">
+        <div class="prf-card-body">
           ${podium.length ? `
-          <div class="t-podium">
-            ${podium.map((e, i) => `
-              <div class="t-podium-step">
-                <div class="t-podium-bar"></div>
-                <div class="t-podium-rank">#${e.rank}</div>
-                ${avatarHtml(e.player?.name || e.playerId, "md")}
-                <div class="t-podium-name">${escapeHtml(e.player?.name || e.playerId)}</div>
-                <div class="t-podium-points">${formatPoints(e.points)}</div>
-              </div>
-            `).join("")}
-          </div>` : `<p style="color:var(--muted);text-align:center;padding:20px">Aucun classement.</p>`}
+          <div class="prf-podium">
+            ${podium.map((e) => {
+              const name = e.player?.name || e.playerId;
+              const glow = e.rank === 1 ? "glow-1" : e.rank === 2 ? "glow-2" : "glow-3";
+              return `
+              <a class="prf-podium-card ${glow}" href="#/player/${encodeURIComponent(e.playerId)}">
+                <div class="prf-podium-rank">#${e.rank}</div>
+                <div style="margin-top:8px;display:flex;justify-content:center">${avatarHtml(name, "md")}</div>
+                <div class="prf-podium-name">${escapeHtml(name)}</div>
+                ${e.player?.clan ? `<div class="prf-podium-clan">[${escapeHtml(e.player.clan)}]</div>` : ""}
+                <div class="prf-podium-pts">${formatPoints(e.points)}<span class="unit">PR</span></div>
+                <div class="prf-podium-meta">${e.events} tournois · ${e.wins} victoires</div>
+              </a>
+            `;
+            }).join("")}
+          </div>` : `<p style="color:var(--prf-muted);text-align:center;padding:20px">Aucun classement.</p>`}
         </div>
       </div>
 
-      <div class="t-card">
-        <div class="t-card-header">
-          <span class="t-card-title">Top 5</span>
-          <a class="t-link" href="#/ranking">Tout voir →</a>
+      <div class="prf-card">
+        <div class="prf-card-header">
+          <span class="prf-card-title">Top 5</span>
+          <a class="prf-link" href="#/ranking">Tout voir →</a>
         </div>
-        <div class="t-card-body">
-          <ul class="t-list">
+        <div class="prf-card-body">
+          <ul class="prf-list">
             ${top5.map((e) => `
-              <li class="t-list-item t-row-link" onclick="location.hash='#/player/${encodeURIComponent(e.playerId)}'">
+              <li class="prf-list-item" onclick="location.hash='#/player/${encodeURIComponent(e.playerId)}'">
                 ${rankCircleHtml(e.rank)}
                 ${avatarHtml(e.player?.name || e.playerId, "sm")}
-                <span class="t-list-name">${escapeHtml(e.player?.name || e.playerId)}</span>
-                <span class="t-list-points">${formatPoints(e.points)}</span>
+                <span class="prf-list-name">${escapeHtml(e.player?.name || e.playerId)}</span>
+                <span class="prf-list-points">${formatPoints(e.points)}</span>
               </li>
             `).join("")}
           </ul>
@@ -316,34 +336,34 @@ async function renderHome() {
     </div>
 
     ${mostWins && mostWins.wins > 0 ? `
-    <div class="t-card" style="margin-top:20px">
-      <div class="t-card-header">
-        <span class="t-card-title">Spotlight — Plus de victoires</span>
+    <div class="prf-card" style="margin-top:20px">
+      <div class="prf-card-header">
+        <span class="prf-card-title">Spotlight — Plus de victoires</span>
       </div>
-      <div class="t-card-body">
-        <div class="t-spotlight">
-          <div class="t-spotlight-icon"><i data-icon="crown" data-icon-size="24"></i></div>
-          <div class="t-spotlight-content">
-            <div class="t-spotlight-title">Joueur le plus titré</div>
-            <div class="t-spotlight-name">${escapeHtml(mostWins.player?.name || mostWins.playerId)}</div>
-            <div class="t-spotlight-meta">${mostWins.wins} victoires · ${mostWins.top3} top 3 · ${mostWins.events} tournois</div>
+      <div class="prf-card-body">
+        <div class="prf-spotlight">
+          <div class="prf-spotlight-icon"><i data-prf-icon="crown" data-prf-icon-size="24"></i></div>
+          <div class="prf-spotlight-content">
+            <div class="prf-spotlight-title">Joueur le plus titré</div>
+            <div class="prf-spotlight-name">${escapeHtml(mostWins.player?.name || mostWins.playerId)}</div>
+            <div class="prf-spotlight-meta">${mostWins.wins} victoires · ${mostWins.top3} top 3 · ${mostWins.events} tournois</div>
           </div>
         </div>
       </div>
     </div>` : ""}
 
     ${recentResultsHtml ? `
-    <div class="t-card" style="margin-top:20px">
-      <div class="t-card-header">
-        <span class="t-card-title">Dernier tournoi — ${escapeHtml(latestTournament?.name || "")}</span>
-        <a class="t-link" href="#/tournament/${encodeURIComponent(latestTournament?.slug || "")}">Détails →</a>
+    <div class="prf-card" style="margin-top:20px">
+      <div class="prf-card-header">
+        <span class="prf-card-title">Dernier tournoi — ${escapeHtml(latestTournament?.name || "")}</span>
+        <a class="prf-link" href="#/tournament/${encodeURIComponent(latestTournament?.slug || "")}">Détails →</a>
       </div>
-      <div class="t-card-body">
-        <ul class="t-list">${recentResultsHtml}</ul>
+      <div class="prf-card-body">
+        <ul class="prf-list">${recentResultsHtml}</ul>
       </div>
     </div>` : ""}
   `;
-  hydrateIcons(view);
+  hydratePrfIcons(view);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -354,7 +374,7 @@ let _lbState = { q: "", filter: "all", sort: { key: "points", direction: "desc" 
 
 async function renderRanking() {
   setHeader("Classement Power Ranking", "Points cumulés sur tous les tournois",
-    `${_data.leaderboard.length} joueurs`);
+    `<span class="prf-chip"><i data-prf-icon="users" data-prf-icon-size="14"></i> ${_data.leaderboard.length} joueurs</span>`);
 
   const rows = _data.leaderboard.map((e) => ({
     rank: e.rank,
@@ -369,42 +389,42 @@ async function renderRanking() {
   }));
 
   view.innerHTML = `
-    <div class="t-card">
-      <div class="t-card-header">
-        <span class="t-card-title">Classement général</span>
+    <div class="prf-card">
+      <div class="prf-card-header">
+        <span class="prf-card-title">Classement général</span>
       </div>
-      <div class="t-filters" id="lb-filters">
+      <div class="prf-filters" id="lb-filters">
         ${[
           { id: "all", label: "Tous", count: rows.length },
           { id: "recurring", label: "Réguliers (≥2)", count: rows.filter(r => r.events >= 2).length },
           { id: "top100", label: "Top 100", count: Math.min(100, rows.length) },
           { id: "clan", label: "Avec clan", count: rows.filter(r => r.clan).length },
-        ].map(f => `<button class="t-filter-btn ${_lbState.filter === f.id ? "active" : ""}" data-filter="${f.id}">${f.label}<span class="count">${f.count}</span></button>`).join("")}
-        <div class="t-search">
-          <i data-icon="info" data-icon-size="14"></i>
+        ].map(f => `<button class="prf-filter-btn ${_lbState.filter === f.id ? "active" : ""}" data-filter="${f.id}">${f.label}<span class="count">${f.count}</span></button>`).join("")}
+        <div class="prf-search">
+          <span class="prf-search-icon"><i data-prf-icon="search" data-prf-icon-size="14"></i></span>
           <input type="text" id="lb-search" placeholder="Rechercher un joueur…" value="${escapeHtml(_lbState.q)}">
         </div>
       </div>
-      <div class="t-table-wrap">
-        <table class="t-table" id="lb-table">
+      <div class="prf-table-wrap">
+        <table class="prf-table" id="lb-table">
           <thead></thead>
           <tbody></tbody>
         </table>
       </div>
     </div>
   `;
-  hydrateIcons(view);
+  hydratePrfIcons(view);
 
   const filtersEl = document.getElementById("lb-filters");
   const searchEl = document.getElementById("lb-search");
   const tableEl = document.getElementById("lb-table");
 
   filtersEl.addEventListener("click", (e) => {
-    const btn = e.target.closest(".t-filter-btn");
+    const btn = e.target.closest(".prf-filter-btn");
     if (!btn) return;
     _lbState.filter = btn.dataset.filter;
     renderLbTable();
-    filtersEl.querySelectorAll(".t-filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === _lbState.filter));
+    filtersEl.querySelectorAll(".prf-filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === _lbState.filter));
   });
   searchEl.addEventListener("input", (e) => {
     _lbState.q = e.target.value;
@@ -449,28 +469,28 @@ async function renderRanking() {
       </tr>
     `;
     tableEl.querySelector("tbody").innerHTML = out.length ? out.map((r) => `
-      <tr class="t-row-link" onclick="location.hash='#/player/${encodeURIComponent(r.id)}'">
+      <tr class="prf-row-link" onclick="location.hash='#/player/${encodeURIComponent(r.id)}'">
         <td>${rankCircleHtml(r.rank)}</td>
         <td>
-          <div class="t-player-cell">
+          <div class="prf-player-cell">
             ${avatarHtml(r.name, "sm")}
             <div>
               <div>
-                ${r.clan ? `<span class="t-player-clan">[${escapeHtml(r.clan)}]</span>` : ""}
-                <span class="t-player-name">${escapeHtml(r.name)}</span>
-                ${r.events === 1 ? `<span class="t-badge t-badge-new" style="margin-left:6px">Nouveau</span>` : ""}
+                ${r.clan ? `<span class="prf-player-clan">[${escapeHtml(r.clan)}]</span>` : ""}
+                <span class="prf-player-name">${escapeHtml(r.name)}</span>
+                ${r.events === 1 ? `<span class="prf-badge prf-badge-new" style="margin-left:6px">Nouveau</span>` : ""}
               </div>
-              <div class="t-player-id">${escapeHtml(r.id)}</div>
+              <div class="prf-player-id">${escapeHtml(r.id)}</div>
             </div>
           </div>
         </td>
-        <td class="num"><span class="t-points">${formatPoints(r.points)}</span></td>
+        <td class="num"><span class="prf-points">${formatPoints(r.points)}</span></td>
         <td class="num">${r.events}</td>
         <td class="num">${r.wins}</td>
         <td class="num">${r.top3}</td>
         <td class="num">${r.avgPlace == null ? "—" : `#${r.avgPlace.toFixed(1)}`}</td>
       </tr>
-    `).join("") : `<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Aucun résultat.</td></tr>`;
+    `).join("") : `<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--prf-muted)">Aucun résultat.</td></tr>`;
 
     // Tri au clic sur les en-têtes
     tableEl.querySelector("thead").addEventListener("click", (e) => {
@@ -495,7 +515,7 @@ async function renderRanking() {
    ════════════════════════════════════════════════════════════════ */
 async function renderTournamentsList() {
   setHeader("Tournois", "Circuit compétitif OpenFront",
-    `${_data.tournaments.length} tournois`);
+    `<span class="prf-chip"><i data-prf-icon="trophy" data-prf-icon-size="14"></i> ${_data.tournaments.length} tournois</span>`);
 
   const cards = _data.tournaments.map((t) => {
     const finalPhase = t.phases.find((p) => isFinalPhase(_data.scoring, t, p.type));
@@ -503,31 +523,31 @@ async function renderTournamentsList() {
     const winnerName = winner ? (getPlayer(_data.players, winner.player)?.name || "—") : null;
     const participantCount = finalPhase?.placements.length || t.participants || 0;
     return `
-      <div class="t-tournament-card" onclick="location.hash='#/tournament/${encodeURIComponent(t.slug)}'">
-        <div class="t-tournament-card-header">
+      <a class="prf-tournament-card ${t.tier === "major" ? "major-card" : ""}" href="#/tournament/${encodeURIComponent(t.slug)}">
+        <div class="prf-tournament-card-header">
           <div>
-            <div class="t-tournament-name">${escapeHtml(t.name)}</div>
-            <div class="t-tournament-date">${formatDate(t.date)}</div>
+            <div class="prf-tournament-name">${escapeHtml(t.name)}</div>
+            <div class="prf-tournament-date">${formatDate(t.date)}</div>
           </div>
           ${tierBadge(t.tier)}
         </div>
-        <div class="t-tournament-meta">
-          <span><i data-icon="swords" data-icon-size="14"></i> ${t.format.toUpperCase()}</span>
-          <span><i data-icon="users" data-icon-size="14"></i> ${participantCount}</span>
-          ${t.series ? `<span><i data-icon="trophy" data-icon-size="14"></i> ${escapeHtml(t.series)}</span>` : ""}
-          ${formatTierMult(t.tier) ? `<span style="color:var(--orange);font-weight:700">${formatTierMult(t.tier)}</span>` : ""}
+        <div class="prf-tournament-meta">
+          <span><i data-prf-icon="swords" data-prf-icon-size="14"></i> ${t.format.toUpperCase()}</span>
+          <span><i data-prf-icon="users" data-prf-icon-size="14"></i> ${participantCount}</span>
+          ${t.series ? `<span><i data-prf-icon="trophy" data-prf-icon-size="14"></i> ${escapeHtml(t.series)}</span>` : ""}
+          ${formatTierMult(t.tier) ? `<span style="color:var(--prf-accent-strong);font-weight:800">${formatTierMult(t.tier)}</span>` : ""}
         </div>
-        ${winnerName ? `<div style="font-size:var(--text-sm);color:var(--muted)">Vainqueur : <strong style="color:var(--text)">${escapeHtml(winnerName)}</strong></div>` : ""}
-      </div>
+        ${winnerName ? `<div class="prf-tournament-winner"><i data-prf-icon="crown" data-prf-icon-size="14"></i> Vainqueur : <span class="name">${escapeHtml(winnerName)}</span></div>` : ""}
+      </a>
     `;
   }).join("");
 
   view.innerHTML = `
-    <div class="t-tournament-grid">
-      ${cards || `<p style="color:var(--muted)">Aucun tournoi.</p>`}
+    <div class="prf-tournament-grid">
+      ${cards || `<p style="color:var(--prf-muted)">Aucun tournoi.</p>`}
     </div>
   `;
-  hydrateIcons(view);
+  hydratePrfIcons(view);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -537,13 +557,12 @@ async function renderTournamentDetail(slug) {
   const t = getTournament(_data.tournaments, slug);
   if (!t) {
     setHeader("Tournoi introuvable", "", "");
-    view.innerHTML = `<div class="tournois-error"><h3>Tournoi introuvable</h3><p>Slug : ${escapeHtml(slug)}</p></div>`;
+    view.innerHTML = `<div class="prf-error"><h3>Tournoi introuvable</h3><p>Slug : ${escapeHtml(slug)}</p></div>`;
     return;
   }
 
-  setHeader(t.name, `${formatDate(t.date)} · ${t.format.toUpperCase()} · ${tierBadge(t.tier)}`, "");
-  // Le badge dans le subtitle ne rendra pas en HTML via textContent, donc on le met dans count
-  countEl.innerHTML = `${tierBadge(t.tier)} <span style="margin-left:8px;color:var(--muted);font-size:12px">${formatTierMult(t.tier)}</span>`;
+  setHeader(t.name, `${formatDate(t.date)} · ${t.format.toUpperCase()}`, "");
+  countEl.innerHTML = `${tierBadge(t.tier)} <span style="margin-left:8px;color:var(--prf-muted);font-size:12px;font-weight:600">${formatTierMult(t.tier)}</span>`;
 
   const scoring = _data.scoring;
   const mult = tierMultiplier(scoring, t);
@@ -566,9 +585,9 @@ async function renderTournamentDetail(slug) {
     if (placements.length === 0) {
       const participants = phase.placements;
       return `
-        <div class="t-phase-section">
-          <h3 class="t-phase-title">${escapeHtml(label)} ${isFinal ? '<span class="t-badge t-badge-major">Finale</span>' : ''}</h3>
-          <p style="color:var(--muted);padding:8px 0">${participants.length} participants (pas de classement détaillé)</p>
+        <div class="prf-phase-section">
+          <h3 class="prf-phase-title">${escapeHtml(label)} ${isFinal ? '<span class="prf-badge prf-badge-major">Finale</span>' : ''}</h3>
+          <p style="color:var(--prf-muted);padding:8px 0">${participants.length} participants (pas de classement détaillé)</p>
         </div>
       `;
     }
@@ -578,28 +597,28 @@ async function renderTournamentDetail(slug) {
       const entry = _data.leaderboard.find(e => e.playerId === p.player);
       const reward = rewardPoints(scoring, t, p.place);
       return `
-        <tr class="t-row-link" onclick="location.hash='#/player/${encodeURIComponent(p.player)}'">
+        <tr class="prf-row-link" onclick="location.hash='#/player/${encodeURIComponent(p.player)}'">
           <td>${rankCircleHtml(p.place)}</td>
           <td>
-            <div class="t-player-cell">
+            <div class="prf-player-cell">
               ${avatarHtml(name, "sm")}
               <div>
-                ${entry?.player?.clan ? `<span class="t-player-clan">[${escapeHtml(entry.player.clan)}]</span>` : ""}
-                <span class="t-player-name">${escapeHtml(name)}</span>
+                ${entry?.player?.clan ? `<span class="prf-player-clan">[${escapeHtml(entry.player.clan)}]</span>` : ""}
+                <span class="prf-player-name">${escapeHtml(name)}</span>
               </div>
             </div>
           </td>
-          <td class="num"><strong style="color:var(--orange)">+${Math.round((phaseConf?.places?.[String(p.place)] || 0) * (usesMult ? mult : 1))}</strong></td>
-          <td class="num">${reward > 0 ? `<span style="color:var(--gold);font-weight:700">${reward} P</span>` : "—"}</td>
+          <td class="num pr-points-cell">+${Math.round((phaseConf?.places?.[String(p.place)] || 0) * (usesMult ? mult : 1))}</td>
+          <td class="num">${reward > 0 ? `<span style="color:var(--prf-gold);font-weight:800">${reward} P</span>` : "—"}</td>
         </tr>
       `;
     }).join("");
 
     return `
-      <div class="t-phase-section">
-        <h3 class="t-phase-title">${escapeHtml(label)} ${isFinal ? '<span class="t-badge t-badge-major">Finale</span>' : ''}</h3>
-        <div class="t-table-wrap">
-          <table class="t-results-table">
+      <div class="prf-phase-section">
+        <h3 class="prf-phase-title">${escapeHtml(label)} ${isFinal ? '<span class="prf-badge prf-badge-major">Finale</span>' : ''}</h3>
+        <div class="prf-table-wrap">
+          <table class="prf-results-table">
             <thead>
               <tr>
                 <th>Place</th>
@@ -623,10 +642,10 @@ async function renderTournamentDetail(slug) {
     if (statsArr.length) {
       const stageLabels = { qualifier: "Qualif", semifinal: "Demi", final: "Finale" };
       statsHtml = `
-        <div class="t-card" style="margin-bottom:20px">
-          <div class="t-card-header"><span class="t-card-title">Stats du tournoi (par joueur)</span></div>
-          <div class="t-table-wrap">
-            <table class="t-stats-table">
+        <div class="prf-card" style="margin-bottom:20px">
+          <div class="prf-card-header"><span class="prf-card-title">Stats du tournoi (par joueur)</span></div>
+          <div class="prf-table-wrap">
+            <table class="prf-stats-table">
               <thead>
                 <tr>
                   <th>Joueur</th>
@@ -643,7 +662,7 @@ async function renderTournamentDetail(slug) {
               <tbody>
                 ${statsArr.map(s => {
                   const name = getPlayer(_data.players, s.playerId)?.name || s.playerId;
-                  return `<tr class="t-row-link" onclick="location.hash='#/player/${encodeURIComponent(s.playerId)}'">
+                  return `<tr class="prf-row-link" onclick="location.hash='#/player/${encodeURIComponent(s.playerId)}'">
                     <td><strong>${escapeHtml(name)}</strong></td>
                     <td>${s.gamesPlayed}</td>
                     <td>${s.wins}</td>
@@ -664,20 +683,20 @@ async function renderTournamentDetail(slug) {
   }
 
   view.innerHTML = `
-    <div class="t-detail-header">
-      <div class="t-detail-title">${escapeHtml(t.name)}</div>
-      <div class="t-detail-meta">
-        <span><i data-icon="info" data-icon-size="14"></i> ${formatDate(t.date)}</span>
-        <span><i data-icon="swords" data-icon-size="14"></i> ${t.format.toUpperCase()}</span>
-        <span><i data-icon="trophy" data-icon-size="14"></i> ${escapeHtml(t.series || "—")}</span>
-        <span><i data-icon="users" data-icon-size="14"></i> ${t.participants} participants</span>
-        ${t.map ? `<span><i data-icon="map" data-icon-size="14"></i> ${escapeHtml(t.map)}</span>` : ""}
+    <div class="prf-detail-header">
+      <div class="prf-detail-title">${escapeHtml(t.name)}</div>
+      <div class="prf-detail-meta">
+        <span><i data-prf-icon="calendar" data-prf-icon-size="14"></i> ${formatDate(t.date)}</span>
+        <span><i data-prf-icon="swords" data-prf-icon-size="14"></i> ${t.format.toUpperCase()}</span>
+        <span><i data-prf-icon="trophy" data-prf-icon-size="14"></i> ${escapeHtml(t.series || "—")}</span>
+        <span><i data-prf-icon="users" data-prf-icon-size="14"></i> ${t.participants} participants</span>
+        ${t.map ? `<span><i data-prf-icon="flag" data-prf-icon-size="14"></i> ${escapeHtml(t.map)}</span>` : ""}
       </div>
     </div>
     ${statsHtml}
-    ${phasesHtml || '<p style="color:var(--muted)">Aucune phase.</p>'}
+    ${phasesHtml || '<p style="color:var(--prf-muted)">Aucune phase.</p>'}
   `;
-  hydrateIcons(view);
+  hydratePrfIcons(view);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -689,7 +708,7 @@ async function renderPlayerProfile(discordId) {
 
   if (!player && !entry) {
     setHeader("Joueur introuvable", "", "");
-    view.innerHTML = `<div class="tournois-error"><h3>Joueur introuvable</h3><p>ID : ${escapeHtml(discordId)}</p></div>`;
+    view.innerHTML = `<div class="prf-error"><h3>Joueur introuvable</h3><p>ID : ${escapeHtml(discordId)}</p></div>`;
     return;
   }
 
@@ -739,101 +758,102 @@ async function renderPlayerProfile(discordId) {
   }
 
   const awardsHtml = tournaments.length ? tournaments.map((grp) => `
-    <div class="t-award">
-      <div class="t-award-place">${grp.tier === "major" ? "★" : "•"}</div>
-      <div class="t-award-info">
-        <div class="t-award-tournament">
-          <a class="t-link" href="#/tournament/${encodeURIComponent(grp.slug)}">${escapeHtml(grp.name)}</a>
+    <div class="prf-award" onclick="location.hash='#/tournament/${encodeURIComponent(grp.slug)}'">
+      <div class="prf-award-place">${grp.tier === "major" ? "★" : "•"}</div>
+      <div class="prf-award-info">
+        <div class="prf-award-tournament">
+          <a class="prf-link" href="#/tournament/${encodeURIComponent(grp.slug)}">${escapeHtml(grp.name)}</a>
         </div>
-        <div class="t-award-phase">
+        <div class="prf-award-phase">
           ${formatDateShort(grp.date)} · ${grp.awards.map(a => `${a.phaseLabel}${a.place ? ` #${a.place}` : ""}`).join(", ")}
         </div>
       </div>
-      <div class="t-award-points">+${formatPoints(grp.total)}</div>
+      <div class="prf-award-points">+${formatPoints(grp.total)}</div>
     </div>
-  `).join("") : `<p style="color:var(--muted);padding:16px">Aucun tournoi joué.</p>`;
+  `).join("") : `<p style="color:var(--prf-muted);padding:16px">Aucun tournoi joué.</p>`;
 
   const chartHtml = chartData.length ? `
-    <div class="t-chart">
+    <div class="prf-chart">
       ${chartData.map(c => `
-        <div class="t-chart-row">
-          <div class="t-chart-label" title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</div>
-          <div class="t-chart-bar-wrap"><div class="t-chart-bar" style="width:${(c.total / maxChart * 100).toFixed(1)}%"></div></div>
-          <div class="t-chart-val">${formatPoints(c.total)}</div>
+        <div class="prf-chart-row">
+          <div class="prf-chart-label" title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</div>
+          <div class="prf-chart-bar-wrap"><div class="prf-chart-bar" style="width:${(c.total / maxChart * 100).toFixed(1)}%"></div></div>
+          <div class="prf-chart-val">${formatPoints(c.total)}</div>
         </div>
       `).join("")}
     </div>
-  ` : `<p style="color:var(--muted)">Pas assez de données.</p>`;
+  ` : `<p style="color:var(--prf-muted)">Pas assez de données.</p>`;
 
   view.innerHTML = `
-    <div class="t-profile-header">
+    <div class="prf-profile-header">
       ${avatarHtml(name, "lg")}
       <div style="flex:1">
-        <div class="t-profile-name">${escapeHtml(name)}</div>
-        <div class="t-profile-sub">
-          ${clan ? `Clan : <strong>${escapeHtml(clan)}</strong> · ` : ""}Rank Power Ranking : <strong style="color:var(--orange)">#${rank}</strong>
+        <div class="prf-profile-name">${escapeHtml(name)}</div>
+        <div class="prf-profile-sub">
+          ${clan ? `Clan : <strong>${escapeHtml(clan)}</strong> · ` : ""}Rank Power Ranking : <strong style="color:var(--prf-accent-strong)">#${rank}</strong>
         </div>
-        <div class="t-profile-stats">
-          <div class="t-profile-stat"><div class="v">${formatPoints(points)}</div><div class="l">Points PR</div></div>
-          <div class="t-profile-stat"><div class="v">${events}</div><div class="l">Tournois</div></div>
-          <div class="t-profile-stat"><div class="v">${wins}</div><div class="l">Victoires</div></div>
-          <div class="t-profile-stat"><div class="v">${top3}</div><div class="l">Top 3</div></div>
-          <div class="t-profile-stat"><div class="v">${bestPlace == null ? "—" : `#${bestPlace}`}</div><div class="l">Meilleure place</div></div>
-          <div class="t-profile-stat"><div class="v">${avgPlace == null ? "—" : `#${avgPlace.toFixed(1)}`}</div><div class="l">Place moy.</div></div>
-          ${totalPlutonium > 0 ? `<div class="t-profile-stat"><div class="v" style="color:var(--gold)">${totalPlutonium} P</div><div class="l">Plutonium</div></div>` : ""}
+        <div class="prf-profile-stats">
+          <div class="prf-profile-stat"><div class="v">${formatPoints(points)}</div><div class="l">Points PR</div></div>
+          <div class="prf-profile-stat"><div class="v">${events}</div><div class="l">Tournois</div></div>
+          <div class="prf-profile-stat"><div class="v">${wins}</div><div class="l">Victoires</div></div>
+          <div class="prf-profile-stat"><div class="v">${top3}</div><div class="l">Top 3</div></div>
+          <div class="prf-profile-stat"><div class="v">${bestPlace == null ? "—" : `#${bestPlace}`}</div><div class="l">Meilleure place</div></div>
+          <div class="prf-profile-stat"><div class="v">${avgPlace == null ? "—" : `#${avgPlace.toFixed(1)}`}</div><div class="l">Place moy.</div></div>
+          ${totalPlutonium > 0 ? `<div class="prf-profile-stat"><div class="v" style="color:var(--prf-gold)">${totalPlutonium} P</div><div class="l">Plutonium</div></div>` : ""}
         </div>
       </div>
     </div>
 
-    <div class="t-grid-2">
-      <div class="t-card">
-        <div class="t-card-header"><span class="t-card-title">Décomposition des points</span></div>
-        <div class="t-card-body">
-          <div class="t-awards-list">${awardsHtml}</div>
+    <div class="prf-grid-2">
+      <div class="prf-card">
+        <div class="prf-card-header"><span class="prf-card-title">Décomposition des points</span></div>
+        <div class="prf-card-body">
+          <div class="prf-awards-list">${awardsHtml}</div>
         </div>
       </div>
-      <div class="t-card">
-        <div class="t-card-header"><span class="t-card-title">Points par tournoi (top 8)</span></div>
-        <div class="t-card-body">${chartHtml}</div>
+      <div class="prf-card">
+        <div class="prf-card-header"><span class="prf-card-title">Points par tournoi (top 8)</span></div>
+        <div class="prf-card-body">${chartHtml}</div>
       </div>
     </div>
   `;
-  hydrateIcons(view);
+  hydratePrfIcons(view);
 }
 
 /* ════════════════════════════════════════════════════════════════
    VUE : Calendrier
    ════════════════════════════════════════════════════════════════ */
 async function renderCalendar() {
-  setHeader("Calendrier", "Prochains tournois du circuit", `${_data.calendar.length} événement(s)`);
+  setHeader("Calendrier", "Prochains tournois du circuit",
+    `<span class="prf-chip"><i data-prf-icon="calendar" data-prf-icon-size="14"></i> ${_data.calendar.length} événement(s)</span>`);
 
   const events = [..._data.calendar].sort((a, b) =>
     (a.startsAt ?? a.date).localeCompare(b.startsAt ?? b.date)
   );
 
   if (!events.length) {
-    view.innerHTML = `<div class="t-card"><div class="t-card-body"><p style="color:var(--muted);padding:20px">Aucun événement à venir.</p></div></div>`;
+    view.innerHTML = `<div class="prf-card"><div class="prf-card-body"><p style="color:var(--prf-muted);padding:20px">Aucun événement à venir.</p></div></div>`;
     return;
   }
 
   const monthLabels = ["JAN","FÉV","MAR","AVR","MAI","JUN","JUL","AOÛ","SEP","OCT","NOV","DÉC"];
 
   view.innerHTML = `
-    <div class="t-cal-list">
+    <div class="prf-cal-list">
       ${events.map(ev => {
         const d = new Date(ev.startsAt || ev.date + "T12:00:00Z");
         const day = d.getUTCDate();
         const month = monthLabels[d.getUTCMonth()];
         const time = ev.startsAt ? formatDateTime(ev.startsAt) : formatDate(ev.date);
         return `
-          <div class="t-cal-item">
-            <div class="t-cal-date">
-              <div class="t-cal-day">${day}</div>
-              <div class="t-cal-month">${month}</div>
+          <div class="prf-cal-item">
+            <div class="prf-cal-date">
+              <div class="prf-cal-day">${day}</div>
+              <div class="prf-cal-month">${month}</div>
             </div>
-            <div class="t-cal-info">
-              <div class="t-cal-name">${escapeHtml(ev.name)}</div>
-              <div class="t-cal-meta">
+            <div class="prf-cal-info">
+              <div class="prf-cal-name">${escapeHtml(ev.name)}</div>
+              <div class="prf-cal-meta">
                 ${time}
                 ${ev.format ? ` · ${ev.format.toUpperCase()}` : ""}
                 ${ev.tier ? ` · ${tierBadge(ev.tier)}` : ""}
@@ -841,25 +861,64 @@ async function renderCalendar() {
                 ${ev.participants ? ` · ${ev.participants} inscrits` : ""}
               </div>
             </div>
-            ${ev.registrationUrl ? `<a class="t-cal-register" href="${escapeHtml(ev.registrationUrl)}" target="_blank" rel="noreferrer">S'inscrire</a>` : ""}
+            ${ev.registrationUrl ? `<a class="prf-cal-register" href="${escapeHtml(ev.registrationUrl)}" target="_blank" rel="noreferrer">S'inscrire</a>` : ""}
           </div>
         `;
       }).join("")}
     </div>
   `;
-  hydrateIcons(view);
+  hydratePrfIcons(view);
 }
 
 /* ════════════════════════════════════════════════════════════════
    Init & events
    ════════════════════════════════════════════════════════════════ */
 
-// Sous-nav : navigation par hash
-document.querySelectorAll(".subnav-item").forEach((btn) => {
+// Top-nav (desktop) : navigation par hash
+document.querySelectorAll(".prf-topnav-link").forEach((btn) => {
   btn.addEventListener("click", () => {
     const route = btn.dataset.route;
     if (route) location.hash = `#/${route}`;
   });
+});
+
+// Mobile drawer : toggle + navigation
+const drawer = document.getElementById("prf-drawer");
+const drawerOverlay = document.getElementById("prf-drawer-overlay");
+const menuToggle = document.getElementById("prf-menu-toggle");
+const drawerClose = document.getElementById("prf-drawer-close");
+
+function openDrawer() {
+  if (!drawer) return;
+  drawer.classList.add("open");
+  drawerOverlay?.classList.add("open");
+  menuToggle?.setAttribute("aria-expanded", "true");
+  document.body.style.overflow = "hidden";
+}
+function closeDrawer() {
+  if (!drawer) return;
+  drawer.classList.remove("open");
+  drawerOverlay?.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "";
+}
+
+menuToggle?.addEventListener("click", openDrawer);
+drawerClose?.addEventListener("click", closeDrawer);
+drawerOverlay?.addEventListener("click", closeDrawer);
+
+// Drawer links : navigation + fermeture
+document.querySelectorAll(".prf-drawer-link").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const route = btn.dataset.route;
+    if (route) location.hash = `#/${route}`;
+    closeDrawer();
+  });
+});
+
+// Fermer le drawer sur Échap
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeDrawer();
 });
 
 // Breadcrumb retour
