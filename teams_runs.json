@@ -21592,6 +21592,34 @@
       "numPlayers": 75,
       "timestamp": "2026-08-10T20:40:41.632Z",
       "url": "https://openfront.io/game/XNy4f4YU"
+    },
+    {
+      "id": "NtsAKLU1",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Grandma Gary",
+          "clientID": "CCZ5UNt9",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Patanek",
+          "clientID": "QmenVEhe",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "DioxFrost",
+          "clientID": "qXEzmnaC",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 757,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-10T21:23:03.634Z",
+      "url": "https://openfront.io/game/NtsAKLU1"
     }
   ],
   "quads": [
@@ -38235,6 +38263,24 @@
       "numPlayers": 44,
       "timestamp": "2026-08-10T21:00:42.291Z",
       "url": "https://openfront.io/game/qs7YD8Wf"
+    },
+    {
+      "id": "q5ReCcAC",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "PeesALittle",
+          "clientID": "nUX7dmnU",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-10T21:06:50.154Z",
+      "url": "https://openfront.io/game/q5ReCcAC"
     }
   ]
 }
