@@ -8157,6 +8157,47 @@
       "numPlayers": 64,
       "timestamp": "2026-08-10T20:02:47.873Z",
       "url": "https://openfront.io/game/kt5uXcVh"
+    },
+    {
+      "id": "GqZih2vf",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Clanker",
+          "clientID": "R1JpmdT5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "schmeet me",
+          "clientID": "YMGf1ngu",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1088,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-10T20:53:18.886Z",
+      "url": "https://openfront.io/game/GqZih2vf"
+    },
+    {
+      "id": "ZUDruAmf",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "EMPIRE OF FRANCE",
+          "clientID": "MuVZQ4dk",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1360,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "timestamp": "2026-08-10T20:50:23.697Z",
+      "url": "https://openfront.io/game/ZUDruAmf"
     }
   ],
   "trios": [
@@ -38161,6 +38202,39 @@
       "numPlayers": 92,
       "timestamp": "2026-08-10T20:33:05.706Z",
       "url": "https://openfront.io/game/TfLfJ1Gb"
+    },
+    {
+      "id": "qs7YD8Wf",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "2naJednego666",
+          "clientID": "ggDzDUUS",
+          "clanTag": "NLZ"
+        },
+        {
+          "username": "Vozinha",
+          "clientID": "MNkSsyaC",
+          "clanTag": "NLZ"
+        },
+        {
+          "username": "LDK",
+          "clientID": "6ria3HDQ",
+          "clanTag": "NLZ"
+        },
+        {
+          "username": "IsThereNoHonor",
+          "clientID": "SVduBeid",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1087,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-10T21:00:42.291Z",
+      "url": "https://openfront.io/game/qs7YD8Wf"
     }
   ]
 }
