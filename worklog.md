@@ -751,3 +751,66 @@ Stage Summary:
 - Toutes les vues fonctionnelles : Home, Ranking (551 joueurs), Tournaments (7), Tournament detail (128 joueurs), Player profile (7 stats + awards + chart), Calendar.
 - Design 100% PR-Front : couleurs (#e8781d/#c95d0c/#f7f8fa/#171a20), Inter, cartes translucides, podium-glow, lb-row hover, animations card-reveal/row-reveal, icônes maison PR-Front (35 icônes portées).
 - Vérifié end-to-end avec Agent Browser (desktop + mobile) + VLM. Zéro erreur.
+
+---
+Task ID: 15
+Agent: main (Z.ai Code)
+Task: Profil joueur PR — remplacer le "LOGO" moche (avatar orange avec initiales) par rien, et remplacer le graphique en barres par la courbe d'évolution du Power Ranking (port de pr-chart.tsx de PR-Front).
+
+Work Log:
+- Analyse de l'état initial (Agent Browser + VLM sur /tournois.html#/player/296454138877968385 = Ultimus_Rex) :
+  * Header de profil contenait `${avatarHtml(name, "lg")}` → cercle orange 64px avec initiales "UR" en blanc → c'est le "LOGO" moche signalé par l'utilisateur.
+  * Carte de droite "Points par tournoi (top 8)" contenait un graphique en barres horizontales CSS (.prf-chart-bar) — pas une courbe.
+  * PR-Front original (src/components/pr-chart.tsx) a une vraie courbe SVG : polyline orange + area fill gradient + points survolables + tooltip HTML + animations (chart-draw, area-reveal, point-pop).
+
+- Étude du code source PR-Front :
+  * src/components/pr-chart.tsx : géométrie viewBox 720×190, PAD={12,14,16,38}, x(i) et y(v) mapping, coords/line/area, nearestIndex par conversion clientX→viewBox, tooltip positionné via clamp().
+  * src/app/players/[id]/page.tsx (lignes 104-118) : construction des chart points — tri chronologique ASC, cumul progressif (running += g.total), bestPlace = min des places du groupe.
+  * src/app/globals.css (lignes 79, 127-129) : keyframes chart-draw (stroke-dashoffset 1800→0), .pr-chart-line/area/point animations.
+
+- Modifs tournois.js (v4) :
+  * Suppression de `${avatarHtml(name, "lg")}` dans le header de renderPlayerProfile → header clean avec juste nom + sous-titre + stats.
+  * Remplacement du calcul chartData (top 8 trié par total DESC) par calcul chronologique ASC avec cumul progressif + bestPlace par groupe (port exact de page.tsx).
+  * Suppression de l'ancien chartHtml (barres CSS).
+  * Ajout de 2 nouvelles fonctions avant renderPlayerProfile :
+    - buildPRChartCard(chartData) : génère le HTML de la carte avec SVG (viewBox 720×190), grid lines (3), polygon area fill (gradient url #prf-pr-area orange 0.28→0.02), polyline orange stroke-width 3, line cursor dashed, points <g> avec circle + text date, tooltip HTML caché, hint text. Gestion empty state (0 tournoi).
+    - attachPRChart(chartData) : attache les listeners après render — mousemove/mouseleave/touchstart/touchmove/touchend/keydown(ArrowLeft/Right/Escape)/blur. setActive(idx) met à jour r/stroke-width des dots, position x du cursor, contenu du tooltip (name, date+bestPlace, cumulative, gained), position left via clamp(). nearestIndex(clientX) convertit clientX→viewBox x et trouve le point le plus proche.
+  * Appel de attachPRChart(chartData) après hydratePrfIcons(view) dans renderPlayerProfile.
+
+- Modifs tournois.css (v4) :
+  * Suppression des anciennes règles .prf-chart / .prf-chart-row / .prf-chart-label / .prf-chart-bar-wrap / .prf-chart-bar / .prf-chart-val (barres CSS).
+  * Ajout section "11.bis Courbe d'évolution du Power Ranking (SVG, port de pr-chart.tsx)" :
+    - .prf-pr-chart, .prf-pr-chart-empty (190px centré), .prf-pr-chart-header (flex space-between), .prf-pr-chart-title (uppercase 900), .prf-pr-chart-sub, .prf-pr-chart-badge (bg #fff5e9, accent-strong).
+    - .prf-pr-chart-wrap (position relative pour tooltip), .prf-pr-chart-svg (height 190px, width 100%, overflow visible, cursor crosshair, touch-action none, focus-visible outline orange).
+    - .prf-pr-chart-line (stroke-dasharray 1800, animation prf-chart-draw 1.35s cubic-bezier(.3,.7,.2,1) .35s forwards).
+    - .prf-pr-chart-area (opacity 0, animation prf-area-reveal .8s ease 1s forwards).
+    - .prf-pr-chart-point (opacity 0, transform-box fill-box, animation prf-point-pop .35s cubic-bezier(.2,1.7,.4,1) forwards).
+    - .prf-pr-chart-dot (transition r/stroke-width .15s).
+    - @keyframes prf-chart-draw, prf-area-reveal, prf-point-pop.
+    - Tooltip : .prf-pr-chart-tip (position absolute top 0, width 190px, bg rgba(255,255,255,0.97), border, shadow, backdrop-blur, pointer-events none, animation prf-tip-fade .15s), .prf-pr-chart-tip-name (11px 900 truncate), .prf-pr-chart-tip-meta (10px muted), .prf-pr-chart-tip-body (flex space-between), .prf-pr-chart-tip-lbl (9px uppercase), .prf-pr-chart-tip-total (16px 900 accent-strong tabular-nums), .prf-pr-chart-tip-gained (14px 800 #1e8e5a tabular-nums).
+    - @keyframes prf-tip-fade (opacity 0→1, translateY -4px→0).
+
+- Modifs tournois.html (v4) : bump cache tournois.css?v=3→v4 et tournois.js?v=3→v4.
+
+- Vérification Agent Browser + VLM :
+  * Desktop 1280×800 (Ultimus_Rex, 3 tournois) :
+    - Header de profil : PLUS de cercle orange avec initiales "UR" → juste le nom + sous-titre + 7 stats ✅
+    - Carte droite : "ÉVOLUTION DU POWER RANKING" + badge "POWER RANKING" + sous-titre "Points cumulés après chaque tournoi" ✅
+    - SVG line chart : ligne orange diagonale montante (85→685→3185), 3 points dots orange/white, area fill gradient orange, 3 date labels en bas (27/06, 11/07, 02/08) ✅
+    - Hint text "Survolez la courbe (ou utilisez les flèches) pour voir le détail" ✅
+    - Animations : line draw (1.35s), area reveal (0.8s), points pop en cascade (110ms delay) ✅
+  * Test interactivité (eval mousemove) : tooltip s'affiche (display:block), nom="2nd 2026 Summer FFA Minor", total="685", gained="+600" ✅
+  * Edge case 1 tournoi (_Stone, discordId 775865372745138197) : chart rendu avec 1 seul dot centré (x=W/2), pas d'empty state, date label "11/07" ✅
+  * Mobile 390×844 : SVG chart scale correctement (width 100%), header clean, layout non cassé, tooltip accessible au touch ✅
+  * node --check tournois.js : 0 erreur de syntaxe ✅
+  * dev.log : aucune nouvelle erreur ✅
+
+Stage Summary:
+- "LOGO" moche (avatar orange avec initiales "UR") supprimé du header de profil joueur.
+- Graphique en barres remplacé par la courbe SVG d'évolution du Power Ranking (port fidèle de pr-chart.tsx) :
+  * Polyline orange + area fill gradient + points survolables + tooltip HTML (nom, date, bestPlace, total cumulé, points gagnés).
+  * Animations : line draw (stroke-dashoffset), area reveal, points pop en cascade.
+  * Interactivité : mousemove, touch (mobile), flèches clavier (accessibilité), Escape.
+  * Gestion empty state (0 tournoi) + single point (1 tournoi, centré).
+- Cache bump : tournois.css?v=4, tournois.js?v=4.
+- Vérifié end-to-end (desktop + mobile + edge cases) avec Agent Browser + VLM. Zéro erreur.

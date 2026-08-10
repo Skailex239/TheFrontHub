@@ -700,6 +700,179 @@ async function renderTournamentDetail(slug) {
 }
 
 /* ════════════════════════════════════════════════════════════════
+   Courbe d'évolution du Power Ranking (port de pr-chart.tsx)
+   ════════════════════════════════════════════════════════════════ */
+const PR_CHART_W = 720;
+const PR_CHART_H = 190;
+const PR_CHART_PAD = { left: 12, right: 14, top: 16, bottom: 38 };
+
+function buildPRChartCard(chartData) {
+  if (!chartData.length) {
+    return `<div class="prf-card">
+      <div class="prf-card-header"><span class="prf-card-title">Évolution du Power Ranking</span></div>
+      <div class="prf-card-body">
+        <div class="prf-pr-chart prf-pr-chart-empty">Aucune donnée</div>
+      </div>
+    </div>`;
+  }
+
+  const W = PR_CHART_W, H = PR_CHART_H, PAD = PR_CHART_PAD;
+  const max = Math.max(...chartData.map(p => p.cumulative), 1);
+  const innerW = W - PAD.left - PAD.right;
+  const innerH = H - PAD.top - PAD.bottom;
+  const x = (i) => chartData.length <= 1 ? W / 2 : PAD.left + (i / (chartData.length - 1)) * innerW;
+  const y = (v) => PAD.top + (1 - v / max) * innerH;
+  const coords = chartData.map((p, i) => ({ x: x(i), y: y(p.cumulative) }));
+  const line = coords.map(c => `${c.x.toFixed(1)},${c.y.toFixed(1)}`).join(" ");
+  const area = coords.length
+    ? `${coords[0].x.toFixed(1)},${H - PAD.bottom} ${line} ${coords[coords.length - 1].x.toFixed(1)},${H - PAD.bottom}`
+    : "";
+  const baseline = H - PAD.bottom;
+
+  const gridLines = [0, 0.5, 1].map(p => {
+    const yy = PAD.top + p * innerH;
+    return `<line x1="${PAD.left}" x2="${W - PAD.right}" y1="${yy}" y2="${yy}" stroke="#e8e2dc" stroke-width="1"/>`;
+  }).join("");
+
+  const pointsHtml = coords.map((c, i) => {
+    const lbl = formatDateShort(chartData[i].date).slice(0, 5);
+    return `<g class="prf-pr-chart-point" style="animation-delay:${700 + i * 110}ms">
+      <circle class="prf-pr-chart-dot" data-i="${i}" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4" fill="#fff" stroke="#e8781d" stroke-width="2.5"/>
+      <text x="${c.x.toFixed(1)}" y="${H - 12}" text-anchor="middle" fill="#8b837d" font-size="10" font-weight="400">${escapeHtml(lbl)}</text>
+    </g>`;
+  }).join("");
+
+  return `<div class="prf-card">
+    <div class="prf-card-body">
+      <div class="prf-pr-chart">
+        <div class="prf-pr-chart-header">
+          <div>
+            <div class="prf-pr-chart-title">Évolution du Power Ranking</div>
+            <div class="prf-pr-chart-sub">Points cumulés après chaque tournoi</div>
+          </div>
+          <div class="prf-pr-chart-badge">POWER RANKING</div>
+        </div>
+        <div class="prf-pr-chart-wrap" id="prf-pr-chart-wrap">
+          <svg class="prf-pr-chart-svg" id="prf-pr-chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Évolution des points PR cumulés — survolez la courbe pour le détail" tabindex="0">
+            <defs>
+              <linearGradient id="prf-pr-area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e8781d" stop-opacity="0.28"/>
+                <stop offset="1" stop-color="#e8781d" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            ${gridLines}
+            <polygon class="prf-pr-chart-area" points="${area}" fill="url(#prf-pr-area)"/>
+            <polyline class="prf-pr-chart-line" points="${line}" fill="none" stroke="#e8781d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <line class="prf-pr-chart-cursor" id="prf-pr-chart-cursor" x1="0" x2="0" y1="${PAD.top - 4}" y2="${baseline}" stroke="#e8781d" stroke-width="1.5" stroke-dasharray="4 4" opacity="0"/>
+            ${pointsHtml}
+          </svg>
+          <div class="prf-pr-chart-tip" id="prf-pr-chart-tip" style="display:none">
+            <div class="prf-pr-chart-tip-name"></div>
+            <div class="prf-pr-chart-tip-meta"></div>
+            <div class="prf-pr-chart-tip-body">
+              <div>
+                <div class="prf-pr-chart-tip-lbl">Total PR</div>
+                <div class="prf-pr-chart-tip-total"></div>
+              </div>
+              <div class="prf-pr-chart-tip-gained-wrap">
+                <div class="prf-pr-chart-tip-lbl">Gagnés</div>
+                <div class="prf-pr-chart-tip-gained"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="prf-pr-chart-hint">Survolez la courbe (ou utilisez les flèches) pour voir le détail</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+function attachPRChart(chartData) {
+  const wrap = document.getElementById("prf-pr-chart-wrap");
+  const svg = document.getElementById("prf-pr-chart-svg");
+  const tip = document.getElementById("prf-pr-chart-tip");
+  const cursor = document.getElementById("prf-pr-chart-cursor");
+  if (!wrap || !svg || !tip || !cursor || !chartData.length) return;
+
+  const W = PR_CHART_W, H = PR_CHART_H, PAD = PR_CHART_PAD;
+  const max = Math.max(...chartData.map(p => p.cumulative), 1);
+  const innerW = W - PAD.left - PAD.right;
+  const innerH = H - PAD.top - PAD.bottom;
+  const x = (i) => chartData.length <= 1 ? W / 2 : PAD.left + (i / (chartData.length - 1)) * innerW;
+  const y = (v) => PAD.top + (1 - v / max) * innerH;
+  const coords = chartData.map((p, i) => ({ x: x(i), y: y(p.cumulative) }));
+  const dots = svg.querySelectorAll(".prf-pr-chart-dot");
+  let activeIdx = null;
+
+  function setActive(idx) {
+    activeIdx = idx;
+    if (idx == null) {
+      tip.style.display = "none";
+      cursor.setAttribute("opacity", "0");
+      dots.forEach(d => { d.setAttribute("r", "4"); d.setAttribute("stroke-width", "2.5"); });
+      return;
+    }
+    const c = coords[idx];
+    const p = chartData[idx];
+    dots.forEach(d => {
+      const i = parseInt(d.dataset.i, 10);
+      if (i === idx) { d.setAttribute("r", "6.5"); d.setAttribute("stroke-width", "3.5"); }
+      else { d.setAttribute("r", "4"); d.setAttribute("stroke-width", "2.5"); }
+    });
+    cursor.setAttribute("x1", c.x);
+    cursor.setAttribute("x2", c.x);
+    cursor.setAttribute("opacity", "0.55");
+
+    tip.style.display = "block";
+    tip.querySelector(".prf-pr-chart-tip-name").textContent = p.name;
+    tip.querySelector(".prf-pr-chart-tip-meta").textContent =
+      formatDateShort(p.date) + (p.bestPlace != null ? ` · #${p.bestPlace}` : "");
+    tip.querySelector(".prf-pr-chart-tip-total").textContent = formatPoints(p.cumulative);
+    tip.querySelector(".prf-pr-chart-tip-gained").textContent = "+" + formatPoints(p.gained);
+
+    const tipW = 190;
+    const leftPct = (c.x / W) * 100;
+    tip.style.left = `clamp(0px, calc(${leftPct}% - ${tipW / 2}px), calc(100% - ${tipW}px))`;
+  }
+
+  function nearestIndex(clientX) {
+    const rect = svg.getBoundingClientRect();
+    if (rect.width === 0) return null;
+    const vx = ((clientX - rect.left) / rect.width) * W;
+    let best = 0, bestDist = Infinity;
+    coords.forEach((c, i) => {
+      const d = Math.abs(c.x - vx);
+      if (d < bestDist) { bestDist = d; best = i; }
+    });
+    return best;
+  }
+
+  svg.addEventListener("mousemove", (e) => setActive(nearestIndex(e.clientX)));
+  svg.addEventListener("mouseleave", () => setActive(null));
+  svg.addEventListener("touchstart", (e) => {
+    const t = e.touches[0];
+    if (t) setActive(nearestIndex(t.clientX));
+  }, { passive: true });
+  svg.addEventListener("touchmove", (e) => {
+    const t = e.touches[0];
+    if (t) { setActive(nearestIndex(t.clientX)); e.preventDefault(); }
+  }, { passive: false });
+  svg.addEventListener("touchend", () => setActive(null));
+  svg.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+      e.preventDefault();
+      const cur = activeIdx == null ? -1 : activeIdx;
+      const next = e.key === "ArrowRight" ? cur + 1 : cur - 1;
+      const clamped = Math.max(0, Math.min(chartData.length - 1, next));
+      setActive(clamped);
+    } else if (e.key === "Escape") {
+      setActive(null);
+    }
+  });
+  svg.addEventListener("blur", () => setActive(null));
+}
+
+/* ════════════════════════════════════════════════════════════════
    VUE : Profil joueur
    ════════════════════════════════════════════════════════════════ */
 async function renderPlayerProfile(discordId) {
@@ -744,9 +917,22 @@ async function renderPlayerProfile(discordId) {
   }
   const tournaments = [...byTournament.values()].sort((a, b) => b.date.localeCompare(a.date));
 
-  // Chart PR (top 8 tournois par points)
-  const chartData = tournaments.slice(0, 8).sort((a, b) => b.total - a.total);
-  const maxChart = Math.max(...chartData.map(c => c.total), 1);
+  // Chart PR : chronologique, avec cumul progressif (courbe d'évolution)
+  let _running = 0;
+  const chartData = [...tournaments]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .map((g) => {
+      _running += g.total;
+      const bestPlace = g.awards.map(a => a.place).filter(p => p != null).sort((a, b) => a - b)[0] ?? null;
+      return {
+        slug: g.slug,
+        name: g.name,
+        date: g.date,
+        gained: g.total,
+        cumulative: _running,
+        bestPlace,
+      };
+    });
 
   // Récompenses Plutonium cumulées
   let totalPlutonium = 0;
@@ -772,21 +958,10 @@ async function renderPlayerProfile(discordId) {
     </div>
   `).join("") : `<p style="color:var(--prf-muted);padding:16px">Aucun tournoi joué.</p>`;
 
-  const chartHtml = chartData.length ? `
-    <div class="prf-chart">
-      ${chartData.map(c => `
-        <div class="prf-chart-row">
-          <div class="prf-chart-label" title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</div>
-          <div class="prf-chart-bar-wrap"><div class="prf-chart-bar" style="width:${(c.total / maxChart * 100).toFixed(1)}%"></div></div>
-          <div class="prf-chart-val">${formatPoints(c.total)}</div>
-        </div>
-      `).join("")}
-    </div>
-  ` : `<p style="color:var(--prf-muted)">Pas assez de données.</p>`;
+
 
   view.innerHTML = `
     <div class="prf-profile-header">
-      ${avatarHtml(name, "lg")}
       <div style="flex:1">
         <div class="prf-profile-name">${escapeHtml(name)}</div>
         <div class="prf-profile-sub">
@@ -811,13 +986,11 @@ async function renderPlayerProfile(discordId) {
           <div class="prf-awards-list">${awardsHtml}</div>
         </div>
       </div>
-      <div class="prf-card">
-        <div class="prf-card-header"><span class="prf-card-title">Points par tournoi (top 8)</span></div>
-        <div class="prf-card-body">${chartHtml}</div>
-      </div>
+      ${buildPRChartCard(chartData)}
     </div>
   `;
   hydratePrfIcons(view);
+  attachPRChart(chartData);
 }
 
 /* ════════════════════════════════════════════════════════════════
