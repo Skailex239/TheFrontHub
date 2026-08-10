@@ -8221,6 +8221,29 @@
       "numPlayers": 54,
       "timestamp": "2026-08-10T21:16:07.698Z",
       "url": "https://openfront.io/game/M6gkZbdD"
+    },
+    {
+      "id": "FejrpKMy",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Syola",
+          "clientID": "UEBuYoxq",
+          "clanTag": "DUCK"
+        },
+        {
+          "username": "bbl",
+          "clientID": "autoJaYQ",
+          "clanTag": "DUCK"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 2137,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "timestamp": "2026-08-10T21:39:08.589Z",
+      "url": "https://openfront.io/game/FejrpKMy"
     }
   ],
   "trios": [
@@ -21671,6 +21694,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-10T21:48:12.634Z",
       "url": "https://openfront.io/game/mvTWeDNt"
+    },
+    {
+      "id": "nHjAtYji",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Mouse",
+          "clientID": "G4UaidzC",
+          "clanTag": null
+        },
+        {
+          "username": "LIZANO",
+          "clientID": "fkuUM2aq",
+          "clanTag": "OG"
+        },
+        {
+          "username": "Cascadia",
+          "clientID": "ad4nd6wW",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 833,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-10T21:59:54.422Z",
+      "url": "https://openfront.io/game/nHjAtYji"
     }
   ],
   "quads": [
@@ -38393,6 +38444,39 @@
       "numPlayers": 58,
       "timestamp": "2026-08-10T21:42:24.272Z",
       "url": "https://openfront.io/game/cyGYbbEE"
+    },
+    {
+      "id": "SyaBmaGZ",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "tutnordia",
+          "clientID": "ccG2tgxj",
+          "clanTag": null
+        },
+        {
+          "username": "A Trading MacLennan",
+          "clientID": "XhtFV8tQ",
+          "clanTag": "JON"
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "hGhsmdd8",
+          "clanTag": null
+        },
+        {
+          "username": "THINKER_011",
+          "clientID": "p36BycaC",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1409,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-10T21:48:47.173Z",
+      "url": "https://openfront.io/game/SyaBmaGZ"
     }
   ]
 }
