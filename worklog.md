@@ -991,3 +991,59 @@ Stage Summary:
 - Push réussi malgré l'auto-sync continu (boucle fetch-rebase-push).
 - Déploiement GitHub Pages confirmé success sur commit d4c62415.
 - Vérifié end-to-end sur le site en ligne avec Agent Browser : onglet visible + page tournois charge les données (0 erreur).
+
+---
+Task ID: 20
+Agent: main (Z.ai Code)
+Task: Fix nav (4 onglets toujours visibles sur Mon Profil) + ajouter "Tableau de bord" avec classement par points (FFA +10 / Team +5), vues Global + Cette semaine, profils cliquables.
+
+Work Log:
+- Diagnostic nav : le profile.html à la RACINE (GitHub Pages) était une vieille version (restaurée en Task 18) avec seulement 3 onglets ("Tableau de bord"/"Classements"/"Mon Profil"), SANS Tournois, et des labels différents. Le public/profile.html local avait les 4 bons onglets.
+  * Fix : copie public/profile.html → racine/profile.html. Poussé (commit cec673d).
+  * Vérifié sur live site : 4 onglets (Speedruns, Classé, Tournois, Mon Profil) ✅
+
+- Feature "Tableau de bord" — Nouveau système de classement par points :
+  * Scoring (tournois-engine.js) :
+    - FFA : 1er=+10, 2e=+7, 3e=+5, 4e=+3, 5e=+1
+    - Team : 1er=+5, 2e=+3, 3e=+2
+    - isTeamTournament() détecte le format via format/nom/série ("2v2"/"team"/"équipe")
+    - weekKey() / currentWeekKey() pour le filtre hebdomadaire (semaine ISO lundi→dimanche)
+    - computeDashboardRanking(tournaments, players, scoring, {weekOnly}) → classement trié par points
+  * Vue renderDashboard() (tournois.js) :
+    - Champion hero (Global ou semaine) avec stats : Points, Victoires, FFA, Team
+    - 4 stats cards : Joueurs classés, Points distribués, Victoires FFA (+10), Victoires Team (+5)
+    - Tableau classement : #, Joueur (avatar+clan), FFA, Team, Top 3, Points — 50 lignes scrollables
+    - Toggle "Global" / "Cette semaine" (re-rendu instantané, état préservé via _dashMode)
+    - Lignes cliquables → #/player/:id (profil joueur existant avec stats détaillées)
+    - Barème info en bas
+  * Nav : "Accueil" renommé "Tableau de bord" (data-route="dashboard") dans top-nav desktop + tiroir mobile
+  * Route par défaut : #/dashboard (au lieu de #/home)
+  * CSS (tournois.css v6) : .prf-dash-toggle, .prf-dash-table, .prf-td-player, .prf-dash-scoring-info + responsive mobile
+  * Cache bump : tournois.css?v=6, tournois.js?v=5
+
+- Fichiers copiés public/ → racine/ (GitHub Pages) : tournois.html, tournois.js, tournois.css, tournois-engine.js
+
+- Vérification locale (Agent Browser + VLM) :
+  * Dashboard desktop : layout propre, champion card (imperium romanum, 17 pts), 4 stats cards, tableau 50 lignes, toggle Global/Cette semaine ✅
+  * Toggle "Cette semaine" : empty state "Aucun tournoi cette semaine" (normal, tournois en juin-août 2026) ✅
+  * Clic ligne → profil joueur (imperium romanum : 2518 PR, 7 tournois, 1 victoire, décomposition points) ✅
+  * Mobile 390×844 : tiroir a "Tableau de bord" en 1er ✅
+  * Profile.html : 4 onglets (Speedruns, Classé, Tournois, Mon Profil) ✅
+  * Console : 0 erreur ✅
+  * VLM : "high-fidelity, well-polished UI typical of modern gaming/esports dashboards" ✅
+
+- Push GitHub (commit 773cf20) : rebase + push réussi malgré auto-sync continu.
+- Deploy to GitHub Pages : success sur 773cf205 ✅
+- Vérification live site (skailex239.github.io/TheFrontHub) :
+  * tournois.html#/dashboard : titre "Tableau de bord", nav correct, champion "imperium romanum", 50 lignes ✅
+  * profile.html : 4 onglets ✅
+  * 0 erreur console ✅
+
+Stage Summary:
+- Bug nav corrigé : les 4 catégories (Speedruns, Classé, Tournois, Mon Profil) sont maintenant TOUJOURS visibles sur toutes les pages (index, tournois, profile), sur le site local ET déployé.
+- Nouveau "Tableau de bord" ajouté à la page Tournois (1er onglet, vue par défaut) :
+  * Classement par points avec barème simple : FFA win +10, Team win +5 (podium dégressif)
+  * Toggle Global / Cette semaine
+  * Tableau 50 joueurs cliquables → profil détaillé
+  * Champion hero + 4 stats cards
+- Tout est déployé sur GitHub Pages et vérifié end-to-end.
