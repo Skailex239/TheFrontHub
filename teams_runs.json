@@ -43762,6 +43762,67 @@
       "numPlayers": 28,
       "timestamp": "2026-08-11T22:19:29.210Z",
       "url": "https://openfront.io/game/inBJGabA"
+    },
+    {
+      "id": "U73gUinB",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "judom",
+          "clientID": "AY8LjqAo",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Kad",
+          "clientID": "zBpWeD5N",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nonex",
+          "clientID": "TWm4ZeNj",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Jay Jacule",
+          "clientID": "5gYVUnCG",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 981,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-11T22:42:38.662Z",
+      "url": "https://openfront.io/game/U73gUinB"
+    },
+    {
+      "id": "2tbLhd8u",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "AnonKangaroo9",
+          "clientID": "YzwzGj4r",
+          "clanTag": null
+        },
+        {
+          "username": "Arnon",
+          "clientID": "QoHeLyM8",
+          "clanTag": null
+        },
+        {
+          "username": "CunningLinguist",
+          "clientID": "DgU2MQ4y",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1152,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-11T22:39:30.464Z",
+      "url": "https://openfront.io/game/2tbLhd8u"
     }
   ]
 }
