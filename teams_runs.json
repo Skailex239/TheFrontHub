@@ -24054,6 +24054,24 @@
       "numPlayers": 36,
       "timestamp": "2026-08-11T18:07:46.627Z",
       "url": "https://openfront.io/game/AL3qin6Y"
+    },
+    {
+      "id": "d5gK5dtM",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "Farsnip",
+          "clientID": "Q3Gj1S8N",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 3756,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "timestamp": "2026-08-11T18:01:24.581Z",
+      "url": "https://openfront.io/game/d5gK5dtM"
     }
   ],
   "quads": [
@@ -42763,6 +42781,39 @@
       "numPlayers": 27,
       "timestamp": "2026-08-11T18:22:27.542Z",
       "url": "https://openfront.io/game/Gr5FoEpH"
+    },
+    {
+      "id": "UZkCR9qV",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Hello",
+          "clientID": "Cdd4VtEm",
+          "clanTag": "111"
+        },
+        {
+          "username": "Factory",
+          "clientID": "h9NJvWWD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEagle7",
+          "clientID": "VGnCbAZk",
+          "clanTag": null
+        },
+        {
+          "username": "Nuke Rat2",
+          "clientID": "eYeFfyVp",
+          "clanTag": "US"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1224,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-11T18:37:35.006Z",
+      "url": "https://openfront.io/game/UZkCR9qV"
     }
   ]
 }
