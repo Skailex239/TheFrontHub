@@ -22999,6 +22999,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-11T11:37:41.018Z",
       "url": "https://openfront.io/game/WKhe2pqS"
+    },
+    {
+      "id": "3BSqdN5t",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "vive la france",
+          "clientID": "4p1a2KMC",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Factorio",
+          "clientID": "EZ9qtypE",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 1402,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 99,
+      "timestamp": "2026-08-11T11:57:17.220Z",
+      "url": "https://openfront.io/game/3BSqdN5t"
     }
   ],
   "quads": [
@@ -41059,6 +41082,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-11T11:19:46.916Z",
       "url": "https://openfront.io/game/UedcWSK9"
+    },
+    {
+      "id": "B4EN1z8f",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ccd",
+          "clientID": "WY9CiPQi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hmmmm",
+          "clientID": "F31vi75s",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LEX JBP",
+          "clientID": "pUjiFfzi",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 882,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-11T12:01:18.464Z",
+      "url": "https://openfront.io/game/B4EN1z8f"
     }
   ]
 }
