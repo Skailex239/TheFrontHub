@@ -1047,3 +1047,73 @@ Stage Summary:
   * Tableau 50 joueurs cliquables → profil détaillé
   * Champion hero + 4 stats cards
 - Tout est déployé sur GitHub Pages et vérifié end-to-end.
+
+---
+Task ID: 21
+Agent: main (Z.ai Code)
+Task: Remettre la page Tournois comme avant (Accueil) + créer "Tableau de bord" comme NOUVELLE 5e catégorie (tout en haut de la sidebar) basée sur les parties ranked (FFA +10 / Team +5 par victoire).
+
+Work Log:
+- Correction de l'incompréhension Task 20 : le "Tableau de bord" ne devait PAS remplacer l'Accueil de la page Tournois. C'est une nouvelle catégorie séparée.
+
+- Revert page Tournois (public/tournois.html + tournois.js) :
+  * Top-nav : "Tableau de bord" → "Accueil" (data-route="home")
+  * Tiroir mobile : "Tableau de bord" → "Accueil"
+  * Routeur : default route "dashboard" → "home"
+  * Cache bump : tournois.css?v=7, tournois.js?v=6
+  * La fonction renderDashboard() est conservée dans tournois.js (non utilisée, harmless) mais la route par défaut est "home".
+
+- Nouvelle page dashboard.html (standalone, public/dashboard.html) :
+  * Sidebar avec 5 onglets : Tableau de bord (top, actif), Speedruns, Classé, Tournois, Mon Profil
+  * Reuse styles.css + auth.css + toast.css (système existant)
+  * dashboard.css?v=1 (styles spécifiques : hero, stats grid, table, toggle)
+  * Icône "chart" (icône barres) depuis icons.js
+
+- dashboard.js (public/dashboard.js) :
+  * Charge ranked.json (1v1 = FFA, 2v2 = Team, avec wins/losses/total par joueur)
+  * Charge ranked_history.json.gz + ranked_2v2_history.json.gz via DecompressionStream("gzip") pour la vue hebdo
+  * Vue Global : points = (FFA wins × 10) + (Team wins × 5) — EXACT match spec utilisateur
+  * Vue Cette semaine : ELO gagné sur 7 jours (proxy progression hebdo, depuis ranked_history)
+  * Merge 1v1 + 2v2 par public_id (même joueur peut être dans les deux)
+  * Champion hero (Global ou semaine) avec stats
+  * 4 stats cards : joueurs classés, points distribués, victoires FFA, victoires Team
+  * Tableau 100 lignes scrollables : #, Joueur (avatar), FFA (×10), Team (×5), Top ELO, Points
+  * Toggle Global / Cette semaine
+  * Lignes cliquables → profile.html?pid=:publicId
+
+- dashboard.css : hero (gradient dark), stats grid (4 cols), card, toggle, table (sticky header, hover, rank circles gold/silver/bronze), responsive mobile.
+
+- Sidebars mises à jour (5 onglets, Tableau de bord en haut) :
+  * public/index.html : ajout onglet Tableau de bord (href="dashboard.html") AVANT Speedruns
+  * public/tournois.html : ajout onglet Tableau de bord
+  * public/profile.html : ajout onglet Tableau de bord
+  * dashboard.html : 5 onglets, Tableau de bord actif
+
+- Fichiers copiés public/ → racine/ (GitHub Pages) : dashboard.html, dashboard.js, dashboard.css, index.html, tournois.html, tournois.js, tournois.css, profile.html
+
+- Vérification locale (Agent Browser + VLM) :
+  * dashboard.html : 5 onglets (dashboard actif top), champion "Nvr_Kn.6967" (13970 pts = 1348 FFA wins ×10 + 98 Team wins ×5), 168 joueurs, 100 lignes ✅
+  * Toggle "Cette semaine" : champion "smsfun.8062" (+442 ELO), 37 joueurs actifs ✅
+  * Clic ligne → profile.html?pid=hWNuSrnS ✅
+  * Page Tournois : top-nav "Accueil" (pas Tableau de bord), route #/home ✅
+  * Profile.html : 5 onglets ✅
+  * VLM : "exceptionally clean and modern, card-based design, all components visible" ✅
+  * Console : 0 erreur ✅
+
+- Push GitHub (commit cf1593c) : rebase + push réussi.
+- Deploy to GitHub Pages : success sur cf1593c8 ✅
+- Vérification live site :
+  * dashboard.html : 5 onglets (dashboard actif), champion "EyesOfRuby.1498", 100 lignes, 0 erreur ✅
+  * tournois.html : 5 onglets sidebar, top-nav "Accueil" first, route #/home ✅
+  * profile.html : 5 onglets ✅
+
+Stage Summary:
+- Page Tournois REMISE comme avant (Accueil, route #/home, nav interne intacte).
+- NOUVELLE catégorie "Tableau de bord" créée — 5e onglet, placé TOUT EN HAUT de la sidebar sur toutes les pages (index, tournois, profile, dashboard).
+- Le Tableau de bord est une page standalone (dashboard.html) qui classe les joueurs par POINTS basés sur les PARTIES RANKED (que tout le monde peut jouer) :
+  * FFA (1v1 ranked) : chaque victoire = +10 points
+  * Team (2v2 ranked) : chaque victoire = +5 points
+  * Vue Global (cumul victoires) + Cette semaine (progression ELO 7 jours)
+  * Tableau 100 joueurs cliquables → profil
+- Champion global actuel : EyesOfRuby.1498 (données live).
+- Tout déployé sur GitHub Pages et vérifié end-to-end.
