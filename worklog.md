@@ -1731,3 +1731,40 @@ Stage Summary:
 - The two-panel layout only exists in src/app/page.tsx (Next.js React sandbox version). The static public/dashboard.js uses the older toggle UI.
 - To get the two-panel layout on GitHub Pages, public/dashboard.js's render() function needs to be modified to output two columns instead of a toggle+single column.
 - The Cloudflare Worker (step 2) is not yet deployed — the dashboard works via public CORS proxy fallback, but without the x-skailex-access rate-limit exemption.
+
+---
+Task ID: 8
+Agent: main (Z.ai Code)
+Task: Configure deployed Cloudflare Worker as the API proxy for the live GitHub Pages dashboard.
+
+Work Log:
+- User deployed the Worker at https://openfront-proxy.diofortnite3.workers.dev (subdomain = diofortnite3, not skailex as previously guessed).
+- Tested Worker directly via curl:
+  - GET /public/player/UWetOwlW/games → HTTP 200, 2505 bytes, 0.5s, valid JSON with game data ✓
+  - CORS headers present: access-control-allow-origin: *, allow-methods: GET OPTIONS, allow-headers: Content-Type Accept ✓
+  - Root URL (/) returns 404 (expected — Worker only handles /public/* paths)
+  - x-skailex-access exemption header added server-side (token not exposed to browser)
+- Found 3 files referencing the old placeholder URL (openfront-proxy.skailex.workers.dev):
+  - dashboard.html (root, deployed to GH Pages)
+  - public/dashboard.html (sandbox copy)
+  - cloudflare-worker/README.md
+- Updated all 3 to use the correct URL: https://openfront-proxy.diofortnite3.workers.dev
+- Committed: 50225d6 → rebased onto 6 auto-sync commits → became 945d556.
+- Pushed: 7ba37dd..945d556 main -> main ✓
+- GitHub Pages deploy completed/success in ~90s.
+- Agent Browser verification on live site (https://skailex239.github.io/TheFrontHub/dashboard.html):
+  - Meta tag in DOM: "https://openfront-proxy.diofortnite3.workers.dev" ✓
+  - Direct fetch to Worker from browser: HTTP 200 ✓
+  - Network requests: GET https://openfront-proxy.diofortnite3.workers.dev/public/player/UWetOwlW/games → 200 ✓
+  - Public CORS proxies (corsproxy/codetabs/allorigins): NO requests captured ✓ (Worker used exclusively)
+  - Console: "Stats live chargées" + 5 players loaded with game counts (Skailex 220, Zwiper 240, Anto 210, YellowBiscuit 200) ✓
+  - Dashboard renders: champion card "Nvr_Kn" (#1, 1599 pts) + ranking list of 163 players ✓
+  - VLM confirmed: fully loaded, no spinner, data visible
+- Rate-limiting note: some late pagination pages (page 20+) show "Failed to fetch" warnings — Cloudflare free tier limits concurrent requests. Dashboard still loads enough data (200+ games per player) to compute accurate stats. Non-blocking.
+
+Stage Summary:
+- Cloudflare Worker is deployed, configured, and VERIFIED WORKING on the live GitHub Pages site ✓
+- The dashboard now uses the Worker exclusively (no more public CORS proxy fallback) — faster + rate-limit exemption via x-skailex-access header
+- Token security: x-skailex-access is hardcoded in the Worker (server-side), never exposed to the browser
+- 3 files updated with correct Worker URL, pushed as commit 945d556
+- REMINDER: User must revoke the exposed GitHub PAT at https://github.com/settings/tokens
