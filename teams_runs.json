@@ -24386,6 +24386,29 @@
       "numPlayers": 78,
       "timestamp": "2026-08-11T20:37:49.898Z",
       "url": "https://openfront.io/game/YGfAnJ8r"
+    },
+    {
+      "id": "CfWh8K9o",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Bombidaro",
+          "clientID": "kBZvSaBA",
+          "clanTag": "BUTT"
+        },
+        {
+          "username": "Timbo",
+          "clientID": "Lens15PZ",
+          "clanTag": "BUTT"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1186,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-11T20:48:12.484Z",
+      "url": "https://openfront.io/game/CfWh8K9o"
     }
   ],
   "quads": [
@@ -43283,6 +43306,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-11T20:46:39.394Z",
       "url": "https://openfront.io/game/Dt838bBb"
+    },
+    {
+      "id": "SKGhLxXq",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Kniveris",
+          "clientID": "kRrMgdfV",
+          "clanTag": "GVTRP"
+        },
+        {
+          "username": "stalin",
+          "clientID": "MeaT6Zhx",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 768,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T20:55:50.027Z",
+      "url": "https://openfront.io/game/SKGhLxXq"
     }
   ]
 }
