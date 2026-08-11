@@ -1646,3 +1646,30 @@ Stage Summary:
 - Cache localStorage 30min (clé dash_live_stats_v2) pour éviter de re-fetcher 3500+ games à chaque visite.
 - Responsive : 2 colonnes en desktop (≥ 900px), 1 colonne empilée en mobile (< 900px), padding réduit en < 640px.
 - Sticky footer via `min-h-screen flex flex-col` + `mt-auto` sur le footer.
+
+---
+Task ID: 6
+Agent: main (Z.ai Code)
+Task: Remove the "Stats live à jour (X joueurs connectés)" status tag from the dashboard header and push the change to GitHub.
+
+Work Log:
+- Read worklog (Tasks 1-5) to understand context: Next.js dashboard at src/app/page.tsx + static dashboard at public/dashboard.js, both served from /home/z/my-project (which is itself the TheFrontHub git repo, remote = github.com/Skailex239/TheFrontHub.git).
+- Located the "Stats live à jour" tag in src/app/page.tsx (Header component, liveTagDoneStyle block) and the equivalent "✓ Stats live (X joueurs connectés)" in public/dashboard.js (render() liveTag ternary, line 447).
+- Edit 1 (src/app/page.tsx): removed the entire `{liveDone && liveProgress.total > 0 && (...)}` block that rendered the green "✓ Stats live à jour" badge. Kept the loading indicator "⚡ Chargement live des stats…". Net: -5 lines.
+- Edit 2 (public/dashboard.js): simplified the liveTag ternary from `!_liveFetchDone ? loading : _connectedPlayers.length > 0 ? doneTag : ""` to `!_liveFetchDone ? loading : ""`. Net: -2 lines, +1 line.
+- Committed: 261702d "fix(dashboard): remove 'Stats live à jour' status tag from header" (2 files changed, 1 insertion, 8 deletions).
+- Attempted `git push origin main` → failed: no stored GitHub credentials (no PAT in env, no ~/.git-credentials, no gh CLI config). Push PENDING — need user to provide a GitHub PAT.
+- Agent Browser verification (http://localhost:3000/):
+  - Waited 8s for live stats to finish loading (5 connected players).
+  - eval "Stats live à jour" in body → false ✓
+  - eval "joueurs connectés" in body → false ✓
+  - Header innerText: "🏆 OpenFront · Tableau de bord / Classement des meilleurs joueurs · Cette semaine a commencé le lundi 10 août 2026 / 168 joueurs au classement global · 5 actifs cette semaine" — no green badge ✓
+  - Screenshot saved: /home/z/my-project/dashboard-no-live-tag.png
+- VLM visual confirmation: "there is no green badge or text saying 'Stats live à jour' or 'joueurs connectés' in the header meta area." Confirmed only static text remains.
+
+Stage Summary:
+- The "Stats live à jour (X joueurs connectés)" green badge is REMOVED from both dashboards (Next.js page.tsx + static dashboard.js).
+- Commit 261702d is ready locally but NOT YET PUSHED — no GitHub credentials available in the sandbox.
+- The loading indicator "⚡ Chargement live des stats… (X/Y)" is KEPT (user only asked to remove the "à jour" done-state tag).
+- Verified at 3 levels: DOM (innerText), visual (screenshot + VLM), and code (git diff).
+- BLOCKER: need a GitHub PAT from the user to push commit 261702d to origin/main.
