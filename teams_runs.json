@@ -8349,6 +8349,24 @@
       "numPlayers": 38,
       "timestamp": "2026-08-11T06:29:52.765Z",
       "url": "https://openfront.io/game/GuqEoCZd"
+    },
+    {
+      "id": "8MRK6Wny",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Mike",
+          "clientID": "34T5uw5X",
+          "clanTag": "PL"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2135,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-11T07:39:08.695Z",
+      "url": "https://openfront.io/game/8MRK6Wny"
     }
   ],
   "trios": [
@@ -22309,6 +22327,24 @@
       "numPlayers": 36,
       "timestamp": "2026-08-11T07:12:18.896Z",
       "url": "https://openfront.io/game/uzaeVo2G"
+    },
+    {
+      "id": "W87FUHRd",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Blarmpfus",
+          "clientID": "QExoc6MV",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1134,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T07:58:33.893Z",
+      "url": "https://openfront.io/game/W87FUHRd"
     }
   ],
   "quads": [
@@ -39962,6 +39998,34 @@
       "numPlayers": 47,
       "timestamp": "2026-08-11T07:43:08.912Z",
       "url": "https://openfront.io/game/FTs4FLVW"
+    },
+    {
+      "id": "ft12Qt3E",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "USA PORT",
+          "clientID": "rEqEmrAA",
+          "clanTag": "GER"
+        },
+        {
+          "username": "Finland",
+          "clientID": "YMocQfhm",
+          "clanTag": null
+        },
+        {
+          "username": "nowa",
+          "clientID": "ACCy5d4u",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1674,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-11T07:53:11.524Z",
+      "url": "https://openfront.io/game/ft12Qt3E"
     }
   ]
 }
