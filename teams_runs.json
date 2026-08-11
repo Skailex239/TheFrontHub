@@ -41393,6 +41393,62 @@
       "numPlayers": 103,
       "timestamp": "2026-08-11T12:58:16.039Z",
       "url": "https://openfront.io/game/BsQTGzNQ"
+    },
+    {
+      "id": "ZRzbkkfF",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "TOHID THE GREAT",
+          "clientID": "7FVrukKA",
+          "clanTag": "RIP"
+        },
+        {
+          "username": "artin.eh",
+          "clientID": "6GF3oGDU",
+          "clanTag": "RIP"
+        },
+        {
+          "username": "MUTTABURRASAURUS",
+          "clientID": "dULGHkBP",
+          "clanTag": null
+        },
+        {
+          "username": "tdfriese",
+          "clientID": "3N5icqFD",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1238,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-11T13:15:29.131Z",
+      "url": "https://openfront.io/game/ZRzbkkfF"
+    },
+    {
+      "id": "BMwVxNYa",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Erteschio",
+          "clientID": "RpjfpiJA",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "SDRome",
+          "clientID": "1zV4dtpN",
+          "clanTag": "OPS"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 847,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-11T13:21:14.539Z",
+      "url": "https://openfront.io/game/BMwVxNYa"
     }
   ]
 }
