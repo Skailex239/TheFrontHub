@@ -39832,6 +39832,67 @@
       "numPlayers": 74,
       "timestamp": "2026-08-11T07:19:08.435Z",
       "url": "https://openfront.io/game/7mswdSPi"
+    },
+    {
+      "id": "vbsW5T8U",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Tom Tom et Nana",
+          "clientID": "b1PzeWQw",
+          "clanTag": null
+        },
+        {
+          "username": "spare me",
+          "clientID": "dN5shhQ4",
+          "clanTag": null
+        },
+        {
+          "username": "reza",
+          "clientID": "GKEX8QMq",
+          "clanTag": "RIP"
+        },
+        {
+          "username": "Hello",
+          "clientID": "YFeaaEUt",
+          "clanTag": "RIP"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 797,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "timestamp": "2026-08-11T07:32:52.072Z",
+      "url": "https://openfront.io/game/vbsW5T8U"
+    },
+    {
+      "id": "UHUQkSuP",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "VOC",
+          "clientID": "vtw8gbqB",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AA1",
+          "clientID": "2d1LMmCb",
+          "clanTag": null
+        },
+        {
+          "username": "Antionia",
+          "clientID": "yvZkHvy3",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1384,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-11T07:22:39.641Z",
+      "url": "https://openfront.io/game/UHUQkSuP"
     }
   ]
 }
