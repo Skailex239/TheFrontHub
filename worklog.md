@@ -942,3 +942,52 @@ Stage Summary:
 - Projet Next.js (public/, src/, package.json) conservé intact alongside.
 - Auto-sync confirmé actif : 2 commits [auto] sync de github-actions[bot] déjà poussés après restauration.
 - Le remote main est maintenant synchronisé ET l'auto-sync tourne en boucle continue.
+
+---
+Task ID: 19
+Agent: main (Z.ai Code)
+Task: Fix "onglet Tournois manquant" sur le site déployé GitHub Pages + push.
+
+Work Log:
+- Diagnostic : le site local (Next.js dev, port 3000) avait bien l'onglet Tournois, mais le site déployé GitHub Pages (https://skailex239.github.io/TheFrontHub/) ne l'avait PAS.
+  * Cause : la Task 17 (force-push) avait écrasé le remote avec l'historique local Next.js. La Task 18 a restauré les fichiers statiques à la racine, MAIS les fichiers tournois (tournois.html, tournois.js, tournois.css, tournois-engine.js, tournois-icons.js, data/) n'ont JAMAIS été copiés de public/ vers la racine. Le index.html racine n'avait pas non plus l'onglet Tournois.
+  * Vérification Agent Browser local : nav-items = [maps, ranked, tournois, profile] ✅ (local OK).
+  * Vérification remote raw : tournois.html = 404, tab-btn-tournois absent de index.html racine ❌.
+
+- Fix 1 — public/tournois-engine.js : chemins absolus → relatifs pour compat subpath GitHub Pages (/TheFrontHub/).
+  * fetch("/data/players.json") → fetch("data/players.json") (×3 : players, scoring, calendar)
+  * fetch("/data/tournaments/manifest.json") → fetch("data/tournaments/manifest.json")
+  * fetch(`/data/tournaments/${slug}.json`) → fetch(`data/tournaments/${slug}.json`)
+
+- Fix 2 — Copie des fichiers tournois de public/ vers la racine (GitHub Pages sert la racine) :
+  * tournois.html, tournois.css, tournois.js, tournois-icons.js, tournois-engine.js
+  * data/ (players.json 82KB, scoring.config.json, calendar.json, tournaments/ : 7 tournois + manifest.json)
+
+- Fix 3 — index.html racine : ajout du bloc onglet Tournois (sync avec public/index.html) :
+  * <a class="nav-item tab-btn" id="tab-btn-tournois" href="tournois.html"><i data-icon="medal"></i> Tournois</a>
+
+- Vérification locale (Agent Browser, port 3000) :
+  * Page tournois.html#/home : données chargées ✅ (Ultimus_Rex 3185 PR, 551 joueurs, podium, courbe PR)
+  * Console : 0 erreur ✅
+  * Nav : 4 onglets dont Tournois ✅
+
+- Push GitHub (token fourni par utilisateur) :
+  * Rebase sur origin/main (l'auto-sync tourne en boucle et pousse constamment → race condition).
+  * Boucle fetch-rebase-push (5 tentatives max) pour passer entre deux cycles auto-sync.
+  * Succès : 4539e75..d4c6241 main -> main ✅
+  * Token nettoyé du .git/config (remote.origin.url remis à https://github.com/Skailex239/TheFrontHub.git).
+  * git config core.fileMode false (les diffs de mode 644→755 polluaient le statut).
+
+- Vérification déploiement GitHub Pages :
+  * Workflow "Deploy to GitHub Pages" sur commit d4c62415 : in_progress → completed/success ✅
+  * Live site (https://skailex239.github.io/TheFrontHub/) : tab-btn-tournois présent ✅, tournois.html = HTTP 200 ✅
+  * Agent Browser sur live site /tournois.html#/home : données chargées ✅ (Ultimus_Rex 3185 PR, 551 joueurs, podium, dernier vainqueur 02/08/2026)
+  * Console : 0 erreur ✅
+
+Stage Summary:
+- Onglet Tournois restauré sur le site déployé GitHub Pages.
+- Cause racine : fichiers tournois jamais copiés de public/ vers la racine (servie par GitHub Pages) après le force-push de la Task 17.
+- Fix complet : chemins relatifs dans tournois-engine.js + copie de 5 fichiers tournois + dossier data/ + onglet dans index.html racine.
+- Push réussi malgré l'auto-sync continu (boucle fetch-rebase-push).
+- Déploiement GitHub Pages confirmé success sur commit d4c62415.
+- Vérifié end-to-end sur le site en ligne avec Agent Browser : onglet visible + page tournois charge les données (0 erreur).
