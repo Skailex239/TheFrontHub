@@ -9232,6 +9232,52 @@
       "numPlayers": 30,
       "timestamp": "2026-08-11T20:27:27.299Z",
       "url": "https://openfront.io/game/RRmgSrye"
+    },
+    {
+      "id": "8As2ZArU",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "TINY",
+          "clientID": "uYJNk2E3",
+          "clanTag": "NIP"
+        },
+        {
+          "username": "Toni",
+          "clientID": "6bpkdvHY",
+          "clanTag": "NIP"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1323,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-11T21:15:46.292Z",
+      "url": "https://openfront.io/game/8As2ZArU"
+    },
+    {
+      "id": "xSXVU92P",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "TouchMeAndICry",
+          "clientID": "vyPFPif6",
+          "clanTag": null
+        },
+        {
+          "username": "folk valley",
+          "clientID": "PBVw1BpF",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1520,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-11T21:05:48.645Z",
+      "url": "https://openfront.io/game/xSXVU92P"
     }
   ],
   "trios": [
@@ -24437,6 +24483,34 @@
       "numPlayers": 54,
       "timestamp": "2026-08-11T20:59:17.235Z",
       "url": "https://openfront.io/game/RSGkb6B2"
+    },
+    {
+      "id": "cH6jgXXh",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "brayden",
+          "clientID": "7vNqMyCG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rizzi",
+          "clientID": "CX5fS6Y1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "DeLoVaN",
+          "clientID": "MkNA6zHj",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 882,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-11T21:18:16.458Z",
+      "url": "https://openfront.io/game/cH6jgXXh"
     }
   ],
   "quads": [
@@ -43357,6 +43431,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-11T20:55:50.027Z",
       "url": "https://openfront.io/game/SKGhLxXq"
+    },
+    {
+      "id": "ymLFxBTs",
+      "team": "Green",
+      "players": [
+        {
+          "username": "PERSIAN EMPIRE",
+          "clientID": "pGb28d3c",
+          "clanTag": "PSH"
+        },
+        {
+          "username": "AnonUnicorn3",
+          "clientID": "28FP3Lf1",
+          "clanTag": null
+        },
+        {
+          "username": "VinWin",
+          "clientID": "WguUnPtR",
+          "clanTag": "DZ"
+        },
+        {
+          "username": "Thicklatina444",
+          "clientID": "96EkUP5k",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 644,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-11T21:24:42.885Z",
+      "url": "https://openfront.io/game/ymLFxBTs"
     }
   ]
 }
