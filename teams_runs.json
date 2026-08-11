@@ -8605,6 +8605,29 @@
       "numPlayers": 24,
       "timestamp": "2026-08-11T11:45:54.483Z",
       "url": "https://openfront.io/game/i7oEWJzX"
+    },
+    {
+      "id": "NQweosUH",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "AnonLinen5",
+          "clientID": "btD4iP4y",
+          "clanTag": null
+        },
+        {
+          "username": "I need chicken",
+          "clientID": "bYnqKYxv",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-11T12:33:09.478Z",
+      "url": "https://openfront.io/game/NQweosUH"
     }
   ],
   "trios": [
@@ -41184,6 +41207,62 @@
       "numPlayers": 40,
       "timestamp": "2026-08-11T12:02:02.499Z",
       "url": "https://openfront.io/game/Tnukh3RR"
+    },
+    {
+      "id": "6k2PaL4r",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Eire",
+          "clientID": "QrX1WZ1s",
+          "clanTag": null
+        },
+        {
+          "username": "Belgium",
+          "clientID": "Pb4zkGoL",
+          "clanTag": "BEL"
+        },
+        {
+          "username": "PROUT MangeurDeSaucisson",
+          "clientID": "htA5uhGP",
+          "clanTag": null
+        },
+        {
+          "username": "Anon666",
+          "clientID": "cY3BQE6K",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 602,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-11T12:34:51.575Z",
+      "url": "https://openfront.io/game/6k2PaL4r"
+    },
+    {
+      "id": "PnmFKD77",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "yeetdapro250",
+          "clientID": "CAc75eMC",
+          "clanTag": "BBD"
+        },
+        {
+          "username": "AnonZeppelin2",
+          "clientID": "n8mzEP75",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1595,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "timestamp": "2026-08-11T12:22:59.864Z",
+      "url": "https://openfront.io/game/PnmFKD77"
     }
   ]
 }
