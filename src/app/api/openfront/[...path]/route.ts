@@ -1,18 +1,22 @@
 import { NextResponse } from "next/server";
 
 /**
- * Proxy CORS vers l'API publique OpenFront.
+ * Proxy CORS vers l'API publique OpenFront avec exemption Skailex.
  *
  * Le client (openfront-client.js) appelle /api/openfront/<path> en dev local
  * pour contourner les restrictions CORS de l'API OpenFront (qui n'autorise
- * que openfront.io). En production (GitHub Pages), le client utilise
- * corsproxy.io à la place.
+ * que openfront.io). En production (GitHub Pages), le client utilise le
+ * Cloudflare Worker (cloudflare-worker/openfront-proxy.js) à la place.
+ *
+ * Cette route ajoute le header `x-skailex-access` côté serveur pour bénéficier
+ * de l'exemption de rate-limit. Le token n'est jamais exposé côté client.
  *
  * Cette route est utilisée UNIQUEMENT en environnement de développement
  * Next.js (localhost). Elle forward vers https://api.openfront.io/<path>.
  */
 
 const OPENFRONT_API_BASE = "https://api.openfront.io";
+const SKAILEX_ACCESS_TOKEN = "6e477cdeeea36386e4061dd89450a66c";
 
 export async function GET(
   request: Request,
@@ -29,7 +33,8 @@ export async function GET(
     const upstream = await fetch(targetUrl, {
       headers: {
         Accept: "application/json",
-        "User-Agent": "TheFrontHub-DevProxy/1.0",
+        "User-Agent": "skailex",
+        "x-skailex-access": SKAILEX_ACCESS_TOKEN,
       },
       cache: "no-store",
     });
