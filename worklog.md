@@ -1695,3 +1695,39 @@ Stage Summary:
 - The "Stats live à jour" green badge is removed from both dashboards (Next.js page.tsx + static dashboard.js) — both deployed.
 - The rebase was clean (no conflicts) because dashboard UI code and auto-sync data files don't overlap.
 - REMINDER: User must revoke the exposed GitHub PAT at https://github.com/settings/tokens
+
+---
+Task ID: 7
+Agent: main (Z.ai Code)
+Task: Deploy the new live-API dashboard to GitHub Pages (replace old sync-based dashboard at repo root).
+
+Work Log:
+- Read worklog Task 6 to understand context: Next.js sandbox uses public/dashboard.js (910 lines, live API) but root dashboard.js (691 lines, old sync-based) is what GitHub Pages deploys.
+- Compared root vs public/ for all dashboard dependencies:
+  - DIFFER: dashboard.html (215→216 lines), dashboard.js (691→910 lines), openfront-client.js (124→175 lines)
+  - IDENTICAL: dashboard.css, styles.css, auth.css, auth.js, toast.css, toast.js, icons.js, openfront-parse.js, i18n.js (all byte-identical, no copy needed)
+- Read public/dashboard.html: confirmed it has <meta name="openfront-api-proxy" content="https://openfront-proxy.skailex.workers.dev"> (line 16) + dashboard.js?v=4 (line 212). Root version lacked the proxy meta tag + used v=3.
+- Read public/openfront-client.js: confirmed fallback strategy — tries /api/openfront (Next.js, 404 on GH Pages) → Cloudflare Worker (custom proxy from meta tag) → public CORS proxies (corsproxy.io, codetabs, allorigins, thingproxy). So dashboard works on GH Pages even WITHOUT Worker deployed (via public CORS proxies, just no rate-limit exemption).
+- Copied 3 files: public/dashboard.html → root, public/dashboard.js → root, public/openfront-client.js → root. Verified byte-identical with diff.
+- Syntax-checked: node --check passed for dashboard.js + openfront-client.js.
+- Committed: 98378ff "feat(dashboard): replace sync-based dashboard with live API version" (3 files, +435/-164 lines).
+- Remote had 65 auto-sync commits ahead. Rebased cleanly (no conflicts — dashboard UI code doesn't overlap with auto-sync data files). Commit became 2320751.
+- Pushed: e8aa1e0..2320751 main -> main ✓
+- Verified via GitHub API: commit 2320751 live, "Deploy to GitHub Pages" workflow triggered by push, completed/success in ~90s.
+- Verified live site (https://skailex239.github.io/TheFrontHub/dashboard.html):
+  - dashboard.js: 910 lines ✓ (was 691)
+  - openfront-client.js: 175 lines ✓ (was 124)
+  - dashboard.html: proxy meta tag present ✓, dashboard.js?v=4 ✓
+- Agent Browser verification:
+  - Page loads, title "TheFrontHub — Tableau de bord" ✓
+  - Live stats loaded (5 connected players fetched via OpenFront API) ✓
+  - "Stats live à jour" tag: GONE ✓
+  - Layout: single column with "Global / Cette semaine" toggle + "Top joueur" champion card + ranking list
+
+Stage Summary:
+- The LIVE API dashboard is now deployed to GitHub Pages ✓ (no more sync-based dashboard_ranking.json dependency — fetches ranked.json + Firebase aliases + OpenFront API directly from browser).
+- The "Stats live à jour" green badge is gone ✓.
+- ⚠️ GAP: The deployed dashboard uses a TOGGLE layout (Global / Cette semaine — one column at a time), NOT the two side-by-side panels ("Top players all Time" left + "Top players this Week" right) that the user originally requested.
+- The two-panel layout only exists in src/app/page.tsx (Next.js React sandbox version). The static public/dashboard.js uses the older toggle UI.
+- To get the two-panel layout on GitHub Pages, public/dashboard.js's render() function needs to be modified to output two columns instead of a toggle+single column.
+- The Cloudflare Worker (step 2) is not yet deployed — the dashboard works via public CORS proxy fallback, but without the x-skailex-access rate-limit exemption.
