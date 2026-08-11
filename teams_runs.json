@@ -21855,6 +21855,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-11T01:31:28.211Z",
       "url": "https://openfront.io/game/W1mwpNEm"
+    },
+    {
+      "id": "N4g7dLdT",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Bikini Bottom",
+          "clientID": "PoiXwBag",
+          "clanTag": null
+        },
+        {
+          "username": "VietNam_88",
+          "clientID": "oDjfpUbk",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1531,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-11T02:00:48.886Z",
+      "url": "https://openfront.io/game/N4g7dLdT"
     }
   ],
   "quads": [
@@ -38946,6 +38969,39 @@
       "numPlayers": 54,
       "timestamp": "2026-08-11T01:21:22.606Z",
       "url": "https://openfront.io/game/gr3iR9ha"
+    },
+    {
+      "id": "oEB2zvLc",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "AnonScarlet",
+          "clientID": "w1qX6Gs3",
+          "clanTag": null
+        },
+        {
+          "username": "Ofournet",
+          "clientID": "gDnxSKVS",
+          "clanTag": "AST"
+        },
+        {
+          "username": "sten",
+          "clientID": "vy2UXDCF",
+          "clanTag": null
+        },
+        {
+          "username": "only trade",
+          "clientID": "QpaL9QtD",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1127,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "timestamp": "2026-08-11T02:07:40.800Z",
+      "url": "https://openfront.io/game/oEB2zvLc"
     }
   ]
 }
