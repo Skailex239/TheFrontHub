@@ -9301,6 +9301,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-11T21:28:12.070Z",
       "url": "https://openfront.io/game/xTp9VCTN"
+    },
+    {
+      "id": "oQgxsD3x",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "york wines",
+          "clientID": "wdAZWT7w",
+          "clanTag": "WINES"
+        },
+        {
+          "username": "Cogito Ergo Sum",
+          "clientID": "qQDzG83Z",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 640,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-11T22:35:15.184Z",
+      "url": "https://openfront.io/game/oQgxsD3x"
     }
   ],
   "trios": [
@@ -24585,6 +24608,34 @@
       "numPlayers": 89,
       "timestamp": "2026-08-11T22:04:27.273Z",
       "url": "https://openfront.io/game/9LR6YHdc"
+    },
+    {
+      "id": "QopTFRre",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Magellan",
+          "clientID": "Mk4GZkDc",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "mkx5ZyW7",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSquid7",
+          "clientID": "AqhG1ck9",
+          "clanTag": "CCC"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1205,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-11T22:26:30.618Z",
+      "url": "https://openfront.io/game/QopTFRre"
     }
   ],
   "quads": [
