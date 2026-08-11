@@ -22258,6 +22258,29 @@
       "numPlayers": 33,
       "timestamp": "2026-08-11T06:43:22.249Z",
       "url": "https://openfront.io/game/6tqmy5dv"
+    },
+    {
+      "id": "E6Rj8GH2",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "VarXard",
+          "clientID": "ocaYSFgG",
+          "clanTag": "LBU"
+        },
+        {
+          "username": "Skailex",
+          "clientID": "CWDssunR",
+          "clanTag": "LBU"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 934,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "timestamp": "2026-08-11T06:49:10.597Z",
+      "url": "https://openfront.io/game/E6Rj8GH2"
     }
   ],
   "quads": [
@@ -39715,6 +39738,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-11T06:27:52.135Z",
       "url": "https://openfront.io/game/Um77RNGn"
+    },
+    {
+      "id": "pTScUP6g",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "7ANGELO7",
+          "clientID": "JY5TXK2y",
+          "clanTag": "UN"
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "hxCAabTX",
+          "clanTag": null
+        },
+        {
+          "username": "IamTrader_I_Trade",
+          "clientID": "CCFhoze6",
+          "clanTag": null
+        },
+        {
+          "username": "SUCCESSO",
+          "clientID": "21C8ZDe2",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 738,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-11T06:57:01.524Z",
+      "url": "https://openfront.io/game/pTScUP6g"
     }
   ]
 }
