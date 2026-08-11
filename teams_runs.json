@@ -38757,6 +38757,57 @@
       "numPlayers": 52,
       "timestamp": "2026-08-10T23:57:02.198Z",
       "url": "https://openfront.io/game/VWNidByP"
+    },
+    {
+      "id": "bfNYu6xD",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "mattcmx2",
+          "clientID": "ioFz5vav",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "losapevo",
+          "clientID": "3sNpQUD8",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "World",
+      "duration_s": 2304,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-10T23:51:18.883Z",
+      "url": "https://openfront.io/game/bfNYu6xD"
+    },
+    {
+      "id": "knmDvPcJ",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Empire of Norden",
+          "clientID": "RxAaezXj",
+          "clanTag": null
+        },
+        {
+          "username": "ZACH",
+          "clientID": "VbbsPc1X",
+          "clanTag": "XXX"
+        },
+        {
+          "username": "mrgorillaz",
+          "clientID": "tsoGiivh",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 1251,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-11T00:12:56.082Z",
+      "url": "https://openfront.io/game/knmDvPcJ"
     }
   ]
 }
