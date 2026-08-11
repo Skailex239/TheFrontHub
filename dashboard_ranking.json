@@ -1,36 +1,55 @@
 {
-  "updatedAt": "2026-08-11T15:28:11.891Z",
-  "gamesScanned": 165,
+  "updatedAt": "2026-08-11T15:55:44.717Z",
+  "gamesScanned": 166,
   "sources": {
-    "rankedCount": 164,
+    "rankedCount": 165,
     "connectedCount": 6,
-    "total": 165,
-    "note": "Skailex (UWetOwlW) mis à jour via API live le 2026-08-11T15:28:11.891Z"
+    "total": 166
   },
   "global": {
     "from": null,
-    "to": "2026-08-11T15:02:17.002Z",
-    "gamesScanned": 165,
+    "to": "2026-08-11T15:55:44.717Z",
+    "gamesScanned": 166,
     "players": [
       {
         "publicId": "UWetOwlW",
         "username": "Skailex on YT",
         "clan": null,
-        "ffaCasualWins": 397,
+        "ffaCasualWins": 490,
         "ffaRankedWins": 369,
-        "teamCasualWins": 223,
+        "teamCasualWins": 327,
         "teamRankedWins": 117,
-        "points": 5571
+        "points": 7021
       },
       {
         "publicId": "hWNuSrnS",
         "username": "Nvr_Kn",
         "clan": null,
-        "ffaCasualWins": 14,
+        "ffaCasualWins": 248,
         "ffaRankedWins": 1355,
-        "teamCasualWins": 0,
-        "teamRankedWins": 102,
-        "points": 1597
+        "teamCasualWins": 151,
+        "teamRankedWins": 104,
+        "points": 4694
+      },
+      {
+        "publicId": "u0u81Hll",
+        "username": "Anto",
+        "clan": null,
+        "ffaCasualWins": 364,
+        "ffaRankedWins": 336,
+        "teamCasualWins": 42,
+        "teamRankedWins": 29,
+        "points": 4215
+      },
+      {
+        "publicId": "tqMGOI2Q",
+        "username": "Zwiper",
+        "clan": null,
+        "ffaCasualWins": 238,
+        "ffaRankedWins": 168,
+        "teamCasualWins": 257,
+        "teamRankedWins": 11,
+        "points": 3844
       },
       {
         "publicId": "Ajp51M2d",
@@ -51,16 +70,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 99,
         "points": 1134
-      },
-      {
-        "publicId": "u0u81Hll",
-        "username": "Anto",
-        "clan": null,
-        "ffaCasualWins": 53,
-        "ffaRankedWins": 336,
-        "teamCasualWins": 3,
-        "teamRankedWins": 29,
-        "points": 910
       },
       {
         "publicId": "CpomD1Nt",
@@ -107,10 +116,10 @@
         "username": "Fibs4785.6952",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 609,
+        "ffaRankedWins": 610,
         "teamCasualWins": 0,
         "teamRankedWins": 16,
-        "points": 625
+        "points": 626
       },
       {
         "publicId": "hFaZs30i",
@@ -131,16 +140,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 18,
         "points": 515
-      },
-      {
-        "publicId": "tqMGOI2Q",
-        "username": "Zwiper",
-        "clan": null,
-        "ffaCasualWins": 15,
-        "ffaRankedWins": 168,
-        "teamCasualWins": 36,
-        "teamRankedWins": 11,
-        "points": 509
       },
       {
         "publicId": "fyQoftrK",
@@ -179,8 +178,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 415,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 426
+        "teamRankedWins": 14,
+        "points": 429
       },
       {
         "publicId": "HqyukEj5",
@@ -243,6 +242,16 @@
         "points": 367
       },
       {
+        "publicId": "EFqhVYJW",
+        "username": "YellowBiscuit",
+        "clan": null,
+        "ffaCasualWins": 14,
+        "ffaRankedWins": 117,
+        "teamCasualWins": 18,
+        "teamRankedWins": 1,
+        "points": 348
+      },
+      {
         "publicId": "Q93X0qis",
         "username": "VarXard.9236",
         "clan": null,
@@ -269,8 +278,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 315,
         "teamCasualWins": 0,
-        "teamRankedWins": 8,
-        "points": 323
+        "teamRankedWins": 0,
+        "points": 315
       },
       {
         "publicId": "TYSIT7UO",
@@ -377,10 +386,10 @@
         "username": "Revenflok.8023",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 221,
+        "ffaRankedWins": 225,
         "teamCasualWins": 0,
-        "teamRankedWins": 32,
-        "points": 253
+        "teamRankedWins": 33,
+        "points": 258
       },
       {
         "publicId": "TnLNa9Db",
@@ -493,16 +502,6 @@
         "points": 217
       },
       {
-        "publicId": "EFqhVYJW",
-        "username": "YellowBiscuit",
-        "clan": null,
-        "ffaCasualWins": 7,
-        "ffaRankedWins": 117,
-        "teamCasualWins": 5,
-        "teamRankedWins": 1,
-        "points": 213
-      },
-      {
         "publicId": "ji5LH0gm",
         "username": "ji5LH0gm",
         "clan": null,
@@ -523,6 +522,16 @@
         "points": 208
       },
       {
+        "publicId": "GPamIlQR",
+        "username": "One_skif.3565",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 197,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 197
+      },
+      {
         "publicId": "imAGxfTl",
         "username": "vari",
         "clan": null,
@@ -531,16 +540,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 11,
         "points": 195
-      },
-      {
-        "publicId": "GPamIlQR",
-        "username": "One_skif.3565",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 193,
-        "teamCasualWins": 0,
-        "teamRankedWins": 0,
-        "points": 193
       },
       {
         "publicId": "lc4dP1Xv",
@@ -743,6 +742,16 @@
         "points": 126
       },
       {
+        "publicId": "S7Or4TjK",
+        "username": "imperium romanum.1668",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 115,
+        "teamCasualWins": 0,
+        "teamRankedWins": 9,
+        "points": 124
+      },
+      {
         "publicId": "pLXDUmUt",
         "username": "pLXDUmUt",
         "clan": null,
@@ -751,16 +760,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 0,
         "points": 123
-      },
-      {
-        "publicId": "S7Or4TjK",
-        "username": "imperium romanum.1668",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 111,
-        "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 120
       },
       {
         "publicId": "nAZMfTr8",
@@ -869,8 +868,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 71,
         "teamCasualWins": 0,
-        "teamRankedWins": 15,
-        "points": 86
+        "teamRankedWins": 17,
+        "points": 88
       },
       {
         "publicId": "COLlNy6T",
@@ -1063,6 +1062,16 @@
         "points": 44
       },
       {
+        "publicId": "fXNE7kwI",
+        "username": "Jojco.6249",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 40,
+        "points": 40
+      },
+      {
         "publicId": "59fDSVJW",
         "username": "DioxFrost.7067",
         "clan": null,
@@ -1075,16 +1084,6 @@
       {
         "publicId": "CR4uDCXB",
         "username": "Odyrion.0441",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 0,
-        "teamRankedWins": 36,
-        "points": 36
-      },
-      {
-        "publicId": "fXNE7kwI",
-        "username": "Jojco.6249",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -1273,6 +1272,16 @@
         "points": 20
       },
       {
+        "publicId": "xjsh5rgf",
+        "username": "Raccoon.4288",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 19,
+        "points": 19
+      },
+      {
         "publicId": "pPXLna2O",
         "username": "pPXLna2O",
         "clan": null,
@@ -1365,6 +1374,16 @@
       {
         "publicId": "XpYRA2Az",
         "username": "XpYRA2Az",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 15,
+        "points": 15
+      },
+      {
+        "publicId": "6bmUqDG2",
+        "username": "Hermann8888.1778",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -1493,16 +1512,6 @@
         "points": 11
       },
       {
-        "publicId": "G0Fl2nMH",
-        "username": "Mole.6950",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 11
-      },
-      {
         "publicId": "nTajqyhX",
         "username": "Globi.4474",
         "clan": null,
@@ -1525,16 +1534,6 @@
       {
         "publicId": "CesQ9ncU",
         "username": "CesQ9ncU",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 10
-      },
-      {
-        "publicId": "xjsh5rgf",
-        "username": "Raccoon.4288",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -1643,6 +1642,16 @@
         "points": 8
       },
       {
+        "publicId": "mJkxrwnl",
+        "username": "A Wet Sandwich.1657",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 8,
+        "points": 8
+      },
+      {
         "publicId": "pJ3obEj0",
         "username": "pJ3obEj0",
         "clan": null,
@@ -1665,20 +1674,10 @@
     ]
   },
   "weekly": {
-    "from": "2026-08-04T15:02:17.001Z",
-    "to": "2026-08-11T15:02:17.002Z",
+    "from": "2026-08-04T15:55:44.716Z",
+    "to": "2026-08-11T15:55:44.717Z",
     "gamesScanned": 5,
     "players": [
-      {
-        "publicId": "UWetOwlW",
-        "username": "Skailex on YT",
-        "clan": null,
-        "ffaCasualWins": 3,
-        "ffaRankedWins": 3,
-        "teamCasualWins": 9,
-        "teamRankedWins": 87,
-        "points": 165
-      },
       {
         "publicId": "u0u81Hll",
         "username": "Anto",
@@ -1698,6 +1697,16 @@
         "teamCasualWins": 0,
         "teamRankedWins": 4,
         "points": 16
+      },
+      {
+        "publicId": "UWetOwlW",
+        "username": "Skailex on YT",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 1,
+        "teamRankedWins": 6,
+        "points": 11
       },
       {
         "publicId": "tqMGOI2Q",
@@ -2180,8 +2189,8 @@
         "points": 0
       },
       {
-        "publicId": "imAGxfTl",
-        "username": "vari",
+        "publicId": "GPamIlQR",
+        "username": "One_skif.3565",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -2190,8 +2199,8 @@
         "points": 0
       },
       {
-        "publicId": "GPamIlQR",
-        "username": "One_skif.3565",
+        "publicId": "imAGxfTl",
+        "username": "vari",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -2400,8 +2409,8 @@
         "points": 0
       },
       {
-        "publicId": "pLXDUmUt",
-        "username": "pLXDUmUt",
+        "publicId": "S7Or4TjK",
+        "username": "imperium romanum.1668",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -2410,8 +2419,8 @@
         "points": 0
       },
       {
-        "publicId": "S7Or4TjK",
-        "username": "imperium romanum.1668",
+        "publicId": "pLXDUmUt",
+        "username": "pLXDUmUt",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -2720,6 +2729,16 @@
         "points": 0
       },
       {
+        "publicId": "fXNE7kwI",
+        "username": "Jojco.6249",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 0
+      },
+      {
         "publicId": "59fDSVJW",
         "username": "DioxFrost.7067",
         "clan": null,
@@ -2732,16 +2751,6 @@
       {
         "publicId": "CR4uDCXB",
         "username": "Odyrion.0441",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 0,
-        "teamRankedWins": 0,
-        "points": 0
-      },
-      {
-        "publicId": "fXNE7kwI",
-        "username": "Jojco.6249",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -2930,6 +2939,16 @@
         "points": 0
       },
       {
+        "publicId": "xjsh5rgf",
+        "username": "Raccoon.4288",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 0
+      },
+      {
         "publicId": "pPXLna2O",
         "username": "pPXLna2O",
         "clan": null,
@@ -3022,6 +3041,16 @@
       {
         "publicId": "XpYRA2Az",
         "username": "XpYRA2Az",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 0
+      },
+      {
+        "publicId": "6bmUqDG2",
+        "username": "Hermann8888.1778",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -3150,16 +3179,6 @@
         "points": 0
       },
       {
-        "publicId": "G0Fl2nMH",
-        "username": "Mole.6950",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 0,
-        "teamRankedWins": 0,
-        "points": 0
-      },
-      {
         "publicId": "nTajqyhX",
         "username": "Globi.4474",
         "clan": null,
@@ -3182,16 +3201,6 @@
       {
         "publicId": "CesQ9ncU",
         "username": "CesQ9ncU",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 0,
-        "teamRankedWins": 0,
-        "points": 0
-      },
-      {
-        "publicId": "xjsh5rgf",
-        "username": "Raccoon.4288",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
@@ -3292,6 +3301,16 @@
       {
         "publicId": "JBT8713s",
         "username": "JBT8713s",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 0
+      },
+      {
+        "publicId": "mJkxrwnl",
+        "username": "A Wet Sandwich.1657",
         "clan": null,
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
