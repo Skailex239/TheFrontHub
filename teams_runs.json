@@ -8436,6 +8436,24 @@
       "numPlayers": 32,
       "timestamp": "2026-08-11T08:47:46.016Z",
       "url": "https://openfront.io/game/Qme9iX3X"
+    },
+    {
+      "id": "D9mpGrcE",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "ALPES MARITIMES",
+          "clientID": "doJJyPB6",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2592,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-11T08:55:46.509Z",
+      "url": "https://openfront.io/game/D9mpGrcE"
     }
   ],
   "trios": [
@@ -40286,6 +40304,62 @@
       "numPlayers": 64,
       "timestamp": "2026-08-11T09:12:21.555Z",
       "url": "https://openfront.io/game/PRNWwySJ"
+    },
+    {
+      "id": "HSsSM8Y2",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Osacar123",
+          "clientID": "pN8b9PYz",
+          "clanTag": "DK"
+        },
+        {
+          "username": "BBJ2210",
+          "clientID": "Cc4UAnR6",
+          "clanTag": "DK"
+        },
+        {
+          "username": "GoldStorm.9ySV",
+          "clientID": "pk7GQte3",
+          "clanTag": null
+        },
+        {
+          "username": "Train Appreciator Choo Choo",
+          "clientID": "CPYa9x4S",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1189,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-11T09:19:23.992Z",
+      "url": "https://openfront.io/game/HSsSM8Y2"
+    },
+    {
+      "id": "cswPQNFC",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Max",
+          "clientID": "yoTFKCuJ",
+          "clanTag": "BEL"
+        },
+        {
+          "username": "AnonLibra",
+          "clientID": "vLcTDpWK",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 1200,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-11T09:18:36.945Z",
+      "url": "https://openfront.io/game/cswPQNFC"
     }
   ]
 }
