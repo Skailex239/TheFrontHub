@@ -68,3 +68,6 @@ server.log
 dashboard-*-screenshot.png
 dashboard-v[0-9]-*.png
 live-*-final.png
+
+# All dashboard screenshots (never commit)
+dashboard-*.png

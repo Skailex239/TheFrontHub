@@ -600,9 +600,18 @@ function render() {
   const globalTopN = globalView.slice(0, 50);
   const weeklyTopN = weeklyView.slice(0, 50);
 
-  // Indicateur de chargement live
+  // Indicateur de chargement live — barre de progression 0-100 %
+  const total = _connectedPlayers.length || 1;
+  const done = _liveFetchProgress;
+  const pct = Math.min(100, Math.round((done / total) * 100));
   const liveTag = !_liveFetchDone
-    ? `<span class="dash-fallback-tag">⚡ Chargement live des stats… (${_liveFetchProgress}/${_connectedPlayers.length})</span>`
+    ? `<div class="dash-progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Chargement des stats live">
+        <div class="dash-progress-header">
+          <span class="dash-progress-label"><i data-icon="chart"></i> Chargement des stats live…</span>
+          <span class="dash-progress-pct">${pct}%</span>
+        </div>
+        <div class="dash-progress-track"><div class="dash-progress-fill" style="width:${pct}%"></div></div>
+      </div>`
     : "";
 
   // Label "Depuis le lundi X …" (début de semaine en heure locale navigateur)
@@ -667,7 +676,7 @@ function renderChampion(champion, isWeekly) {
       </div>
       <div class="dash-champion">
         <div class="dash-champion-top">
-          <span class="dash-champion-trophy" aria-hidden="true">🏆</span>
+          <span class="dash-champion-trophy" aria-hidden="true"><i data-icon="trophy"></i></span>
           <div class="dash-champion-meta">
             <div class="dash-champion-name">${escapeHtml(name)}${champion.clan ? ` <span class="dash-player-clan">[${escapeHtml(champion.clan)}]</span>` : ""}</div>
             <div class="dash-champion-sub">Rang #1 · ${isWeekly ? "champion de la semaine" : "champion global"}</div>
@@ -707,9 +716,10 @@ function renderRanking(topN, totalPlayers, modeLabel) {
     const profileUrl = p.publicId
       ? `profile.html?pid=${encodeURIComponent(p.publicId)}&player=${encodeURIComponent(name)}`
       : `profile.html?player=${encodeURIComponent(name)}`;
-    const trophy = p.rank === 1 ? "🏆" : p.rank === 2 ? "🥈" : p.rank === 3 ? "🥉" : null;
-    const rankSlot = trophy
-      ? `<span class="dash-rank-trophy" aria-hidden="true">${trophy}</span>`
+    // Icônes SVG (pas d'émojis) pour les 3 premiers : trophy / medal / medal
+    const rankIcon = p.rank === 1 ? "trophy" : p.rank === 2 ? "medal" : p.rank === 3 ? "medal" : null;
+    const rankSlot = rankIcon
+      ? `<span class="dash-rank-trophy dash-rank-${p.rank}" aria-hidden="true"><i data-icon="${rankIcon}"></i></span>`
       : `<span class="dash-rank-badge">${p.rank}</span>`;
     return `
       <a class="dash-row dash-row-link" href="${profileUrl}">

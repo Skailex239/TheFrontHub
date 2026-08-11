@@ -1953,3 +1953,45 @@ Stage Summary:
 - Cache localStorage 30 min (key v2 pour vanilla, v3 pour Next.js) → loads subséquents instantanés
 - NOTE : la pagination hebdo est séquentielle par joueur (10-17 pages × 500ms = 5-8s par joueur actif). Pour aller plus vite, on pourrait paralléliser les joueurs plus agressivement ou afficher le panel "all time" dès que les career stats sont prêtes (avant la fin de la pagination hebdo). Non bloquant pour l'instant.
 - PAS ENCORE PUSHÉ SUR GITHUB — l'utilisateur n'a pas demandé à push dans ce tour
+
+---
+Task ID: 11
+Agent: main (Z.ai Code)
+Task: Push sur GitHub + répondre à "c'est vraiment obligatoire le Cloudflare ?"
+
+Work Log:
+- Testé si l'API OpenFront marche sans header x-skailex-access :
+    55 requêtes rapprochées sans header → toutes HTTP 200, aucun rate-limiting
+    → Le header d'exemption n'est PLUS NÉCESSAIRE avec seulement ~51 requêtes
+- Testé CORS sans proxy :
+    curl -H "Origin: https://skailex239.github.io" https://api.openfront.io/...
+    → Réponse: access-control-allow-origin: https://openfront.io
+    → L'API n'autorise CORS QUE depuis openfront.io
+    → Un navigateur sur skailex239.github.io NE PEUT PAS appeler api.openfront.io directement
+    → Un proxy EST obligatoire pour CORS
+
+- Push GitHub :
+    git fetch origin main → remote a 14 commits auto-sync ahead (data files)
+    git rebase origin/main → 3/3 commits rebased sans conflit (auto-sync touche data, pas le code)
+    Nettoyage : git rm tool-results/ (38 fichiers) + 3 screenshots + .gitignore rules
+    Commit cleanup : 0e3d936
+    Push avec PAT one-time URL (non stocké dans git config) : 4803930..0e3d936 main -> main ✓
+    Vérif GitHub API : dernier commit = 0e3d936 ✓
+    Vérif raw dashboard.js sur GitHub : extractCareerWinsFromStats présent (2 occurrences) ✓
+
+- Vérif site live (Agent Browser sur https://skailex239.github.io/TheFrontHub/dashboard.html) :
+    Page charge correctement ✓
+    "Top players all Time" : 164 joueurs, Skailex.9681 #1 (7076 pts) ✓
+    "Top players this Week" : "Depuis le lundi 10 août 2026" ✓
+    Console logs confirment la nouvelle architecture :
+      Nvr_Kn → 3563 games, global={ffaCasual:248, ffaRanked:1335, teamCasual:151, teamRanked:104}
+      → 3563 games en 1 seule requête career (aurait crashé l'ancien code !)
+      Skailex → global={ffaCasual:499, ffaRanked:260, teamCasual:320, teamRanked:117}
+      Tous les 5 joueurs connectés chargés sans erreur ✓
+    Worker Cloudflare testé : https://openfront-proxy.diofortnite3.workers.dev/public/player/{id} → 200, 13KB ✓
+
+Stage Summary:
+- PUSH RÉUSSI : commit 0e3d936 sur main, site live vérifié fonctionnel
+- RÉPONSE CLOUDFLARE : Le Worker n'est obligatoire que pour le CORS (l'API bloque les requêtes cross-origin depuis github.io). Pour le rate-limit, ce n'est plus nécessaire (51 req << limite). Alternatives au Worker : proxies CORS publics (corsproxy.io, codetabs, allorigins — déjà en fallback dans openfront-client.js) MAIS ils sont peu fiables. Le Worker reste le meilleur choix (gratuit, rapide, fiable).
+- Pour supprimer Cloudflare entièrement : il faudrait basculer sur Alternative 1 (GitHub Actions précalcule leaderboard.json, le site charge un fichier statique, 0 requête API navigateur).
+- PAT : [PAT REDACTED] utilisé en one-time URL push, NON stocké dans git config. L'utilisateur DOIT le révoquer.

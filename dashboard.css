@@ -54,6 +54,54 @@
   font-weight: 600;
 }
 
+/* ═══ Progress bar (chargement live 0-100%) ═══ */
+.dash-progress {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  background: #FFF7ED;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  border-radius: 10px;
+}
+.dash-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.dash-progress-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange-deep);
+  font-size: 13px;
+  font-weight: 600;
+}
+.dash-progress-label svg,
+.dash-progress-label i {
+  width: 14px;
+  height: 14px;
+  color: var(--orange);
+  display: inline-flex;
+}
+.dash-progress-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange-deep);
+  font-variant-numeric: tabular-nums;
+}
+.dash-progress-track {
+  height: 6px;
+  background: rgba(249, 115, 22, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.dash-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-deep));
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
 /* ═══ Controls row (toggle + scoring hint) ═══ */
 .dash-controls-row {
   display: flex;
@@ -196,7 +244,22 @@
 .dash-rank-trophy {
   font-size: 26px;
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
 }
+.dash-rank-trophy svg,
+.dash-rank-trophy i {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+}
+/* Couleurs par rang : or / argent / bronze */
+.dash-rank-1 { color: #D4A017; }   /* or */
+.dash-rank-2 { color: #9CA3AF; }   /* argent */
+.dash-rank-3 { color: #B45309; }   /* bronze */
 .dash-rank-badge {
   width: 30px;
   height: 30px;
@@ -306,6 +369,16 @@
   font-size: 44px;
   line-height: 1;
   flex-shrink: 0;
+  color: #D4A017;  /* or */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.dash-champion-trophy svg,
+.dash-champion-trophy i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
 }
 .dash-champion-meta {
   flex: 1 1 auto;
@@ -437,6 +510,7 @@
   .dash-toggle-btn { padding: 7px 14px; font-size: 13px; }
 
   .dash-champion-trophy { font-size: 36px; }
+  .dash-champion-trophy svg, .dash-champion-trophy i { width: 32px; height: 32px; }
   .dash-champion-name { font-size: 18px; }
   .dash-champion-points { font-size: 26px; }
   .dash-champion-breakdown { grid-template-columns: 1fr; gap: 10px; padding: 14px 0; }
@@ -444,7 +518,8 @@
   .dash-row { min-height: 50px; padding: 8px 10px; gap: 10px; }
   .dash-rank-slot { width: 32px; }
   .dash-rank-badge { width: 26px; height: 26px; font-size: 12px; }
-  .dash-rank-trophy { font-size: 22px; }
+  .dash-rank-trophy { font-size: 22px; width: 26px; height: 26px; }
+  .dash-rank-trophy svg, .dash-rank-trophy i { width: 20px; height: 20px; }
   .dash-player-name { font-size: 15px; }
   .dash-score { min-width: 70px; }
   .dash-score-val { font-size: 15px; }

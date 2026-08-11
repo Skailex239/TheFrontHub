@@ -18,6 +18,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Trophy, Medal, BarChart3 } from "lucide-react";
 import {
   buildMergedPlayers,
   fetchPlayerStats,
@@ -211,11 +212,14 @@ function Header({
   liveProgress: { done: number; total: number };
   liveDone: boolean;
 }) {
+  const pct = liveProgress.total > 0
+    ? Math.min(100, Math.round((liveProgress.done / liveProgress.total) * 100))
+    : 0;
   return (
     <header style={headerStyle}>
       <div style={headerTopStyle}>
         <span style={logoBadgeStyle} aria-hidden="true">
-          🏆
+          <Trophy size={36} color={ORANGE_DEEP} strokeWidth={2.5} />
         </span>
         <div>
           <h1 style={h1Style}>OpenFront · Tableau de bord</h1>
@@ -229,9 +233,18 @@ function Header({
       </div>
       <div style={headerMetaStyle}>
         {liveProgress.total > 0 && !liveDone && (
-          <span style={liveTagLoadingStyle}>
-            ⚡ Chargement live des stats… ({liveProgress.done}/{liveProgress.total})
-          </span>
+          <div style={progressBarStyle} role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label="Chargement des stats live">
+            <div style={progressHeaderStyle}>
+              <span style={progressLabelStyle}>
+                <BarChart3 size={14} color={ORANGE} strokeWidth={2.5} />
+                Chargement des stats live…
+              </span>
+              <span style={progressPctStyle}>{pct}%</span>
+            </div>
+            <div style={progressTrackStyle}>
+              <div style={{ ...progressFillStyle, width: `${pct}%` }} />
+            </div>
+          </div>
         )}
         <span style={metaTextStyle}>
           {globalCount} joueurs au classement global · {weeklyCount} actifs cette semaine
@@ -378,13 +391,25 @@ function RankingRow({
 
 function RankBadge({ rank }: { rank: number }) {
   if (rank === 1) {
-    return <span style={trophyStyle} aria-label="Rang 1">🏆</span>;
+    return (
+      <span style={{ ...trophyStyle, color: "#D4A017" }} aria-label="Rang 1">
+        <Trophy size={22} strokeWidth={2.5} />
+      </span>
+    );
   }
   if (rank === 2) {
-    return <span style={trophyStyle} aria-label="Rang 2">🥈</span>;
+    return (
+      <span style={{ ...trophyStyle, color: "#9CA3AF" }} aria-label="Rang 2">
+        <Medal size={22} strokeWidth={2.5} />
+      </span>
+    );
   }
   if (rank === 3) {
-    return <span style={trophyStyle} aria-label="Rang 3">🥉</span>;
+    return (
+      <span style={{ ...trophyStyle, color: "#B45309" }} aria-label="Rang 3">
+        <Medal size={22} strokeWidth={2.5} />
+      </span>
+    );
   }
   return (
     <span style={rankBadgeStyle} className="dash-rank-badge" aria-label={`Rang ${rank}`}>
@@ -475,8 +500,14 @@ const headerTopStyle: React.CSSProperties = {
 };
 
 const logoBadgeStyle: React.CSSProperties = {
-  fontSize: 40,
-  lineHeight: 1,
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 52,
+  height: 52,
+  borderRadius: 14,
+  background: ORANGE_PALE,
+  border: `1px solid ${ORANGE_PALE_BORDER}`,
   flexShrink: 0,
 };
 
@@ -502,16 +533,47 @@ const headerMetaStyle: React.CSSProperties = {
   marginTop: 8,
 };
 
-const liveTagLoadingStyle: React.CSSProperties = {
-  display: "inline-flex",
-  alignItems: "center",
-  padding: "6px 12px",
+const progressBarStyle: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 6,
+  padding: "8px 12px",
   background: ORANGE_PALE,
   border: `1px solid ${ORANGE_PALE_BORDER}`,
-  borderRadius: 999,
+  borderRadius: 10,
+  minWidth: 240,
+};
+const progressHeaderStyle: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: 8,
+};
+const progressLabelStyle: React.CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 6,
   color: ORANGE_DEEP,
   fontSize: 12,
   fontWeight: 600,
+};
+const progressPctStyle: React.CSSProperties = {
+  fontSize: 12,
+  fontWeight: 700,
+  color: ORANGE_DEEP,
+  fontVariantNumeric: "tabular-nums",
+};
+const progressTrackStyle: React.CSSProperties = {
+  height: 5,
+  background: "rgba(249, 115, 22, 0.15)",
+  borderRadius: 999,
+  overflow: "hidden",
+};
+const progressFillStyle: React.CSSProperties = {
+  height: "100%",
+  background: `linear-gradient(90deg, ${ORANGE}, ${ORANGE_DEEP})`,
+  borderRadius: 999,
+  transition: "width 0.4s ease",
 };
 
 const liveTagDoneStyle: React.CSSProperties = {
@@ -602,10 +664,11 @@ const rowStyle: React.CSSProperties = {
 };
 
 const trophyStyle: React.CSSProperties = {
-  fontSize: 26,
-  lineHeight: 1,
-  width: 36,
-  textAlign: "center",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 30,
+  height: 30,
   flexShrink: 0,
 };
 
