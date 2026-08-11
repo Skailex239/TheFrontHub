@@ -1,16 +1,27 @@
 {
-  "updatedAt": "2026-08-11T15:02:17.001Z",
+  "updatedAt": "2026-08-11T15:28:11.891Z",
   "gamesScanned": 165,
   "sources": {
     "rankedCount": 164,
     "connectedCount": 6,
-    "total": 165
+    "total": 165,
+    "note": "Skailex (UWetOwlW) mis à jour via API live le 2026-08-11T15:28:11.891Z"
   },
   "global": {
     "from": null,
     "to": "2026-08-11T15:02:17.002Z",
     "gamesScanned": 165,
     "players": [
+      {
+        "publicId": "UWetOwlW",
+        "username": "Skailex on YT",
+        "clan": null,
+        "ffaCasualWins": 397,
+        "ffaRankedWins": 369,
+        "teamCasualWins": 223,
+        "teamRankedWins": 117,
+        "points": 5571
+      },
       {
         "publicId": "hWNuSrnS",
         "username": "Nvr_Kn",
@@ -110,16 +121,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 0,
         "points": 613
-      },
-      {
-        "publicId": "UWetOwlW",
-        "username": "Skailex on YT",
-        "clan": null,
-        "ffaCasualWins": 3,
-        "ffaRankedWins": 369,
-        "teamCasualWins": 9,
-        "teamRankedWins": 117,
-        "points": 561
       },
       {
         "publicId": "wrzYZEVn",
@@ -1669,6 +1670,16 @@
     "gamesScanned": 5,
     "players": [
       {
+        "publicId": "UWetOwlW",
+        "username": "Skailex on YT",
+        "clan": null,
+        "ffaCasualWins": 3,
+        "ffaRankedWins": 3,
+        "teamCasualWins": 9,
+        "teamRankedWins": 87,
+        "points": 165
+      },
+      {
         "publicId": "u0u81Hll",
         "username": "Anto",
         "clan": null,
@@ -1687,16 +1698,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 4,
         "points": 16
-      },
-      {
-        "publicId": "UWetOwlW",
-        "username": "Skailex on YT",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 0,
-        "teamCasualWins": 1,
-        "teamRankedWins": 6,
-        "points": 11
       },
       {
         "publicId": "tqMGOI2Q",

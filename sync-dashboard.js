@@ -42,7 +42,7 @@ const HAS_EXEMPTION = hasExemption();
 const FIREBASE_PROJECT = firebaseConfig.projectId;
 const FIRESTORE_BASE = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT}/databases/(default)/documents`;
 
-const MAX_PAGES_PER_PLAYER = parseInt(process.env.DASH_MAX_PAGES || "20", 10); // 20 pages × 10 = 200 games max
+const MAX_PAGES_PER_PLAYER = parseInt(process.env.DASH_MAX_PAGES || "500", 10); // 500 pages × 10 = 5000 games max (was 20 = bug)
 const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000; // 7 jours
 const DETAIL_CONCURRENCY = HAS_EXEMPTION ? 8 : 3;
 const BATCH_DELAY = HAS_EXEMPTION ? 0 : 150;
