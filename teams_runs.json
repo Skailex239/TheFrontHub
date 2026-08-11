@@ -23022,6 +23022,34 @@
       "numPlayers": 99,
       "timestamp": "2026-08-11T11:57:17.220Z",
       "url": "https://openfront.io/game/3BSqdN5t"
+    },
+    {
+      "id": "AVEhNTyo",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Nimaze",
+          "clientID": "1eW5gj5N",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTitan7",
+          "clientID": "Ua2xSFiK",
+          "clanTag": null
+        },
+        {
+          "username": "FR V0RTAK",
+          "clientID": "3U6HMmx3",
+          "clanTag": "LGC"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 460,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "timestamp": "2026-08-11T12:31:52.406Z",
+      "url": "https://openfront.io/game/AVEhNTyo"
     }
   ],
   "quads": [
@@ -41110,6 +41138,52 @@
       "numPlayers": 72,
       "timestamp": "2026-08-11T12:01:18.464Z",
       "url": "https://openfront.io/game/B4EN1z8f"
+    },
+    {
+      "id": "CzCW2zZM",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Imperium of Man",
+          "clientID": "z6m45rP4",
+          "clanTag": null
+        },
+        {
+          "username": "SEND DUDES",
+          "clientID": "sFvBGHgG",
+          "clanTag": "GUYS"
+        },
+        {
+          "username": "Russia",
+          "clientID": "BCf4qiSo",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1109,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-11T12:20:35.178Z",
+      "url": "https://openfront.io/game/CzCW2zZM"
+    },
+    {
+      "id": "Tnukh3RR",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Doofy",
+          "clientID": "1PJLtwWe",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 2116,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-11T12:02:02.499Z",
+      "url": "https://openfront.io/game/Tnukh3RR"
     }
   ]
 }
