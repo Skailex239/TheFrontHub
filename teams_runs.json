@@ -22128,6 +22128,34 @@
       "numPlayers": 34,
       "timestamp": "2026-08-11T04:52:09.611Z",
       "url": "https://openfront.io/game/DQCJwHAM"
+    },
+    {
+      "id": "BiWRwNWS",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "JohnFront",
+          "clientID": "t6fz5hqf",
+          "clanTag": null
+        },
+        {
+          "username": "MrMatLat",
+          "clientID": "6uLtu2JE",
+          "clanTag": "LV"
+        },
+        {
+          "username": "AnonFern3",
+          "clientID": "WxqqZHTS",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1287,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-11T05:25:55.306Z",
+      "url": "https://openfront.io/game/BiWRwNWS"
     }
   ],
   "quads": [
@@ -39463,6 +39491,39 @@
       "numPlayers": 53,
       "timestamp": "2026-08-11T04:25:35.598Z",
       "url": "https://openfront.io/game/XQELWcNH"
+    },
+    {
+      "id": "aMeWZUMN",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "I WILL KILL YOU",
+          "clientID": "QfG72xn3",
+          "clanTag": "KILL"
+        },
+        {
+          "username": "Anon561",
+          "clientID": "SmMY6zeu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWhisper4",
+          "clientID": "WNvsWAbv",
+          "clanTag": null
+        },
+        {
+          "username": "TradeTrain",
+          "clientID": "RUSdb2yD",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 695,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-11T05:35:55.097Z",
+      "url": "https://openfront.io/game/aMeWZUMN"
     }
   ]
 }
