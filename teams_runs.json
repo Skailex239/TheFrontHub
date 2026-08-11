@@ -8797,6 +8797,47 @@
       "numPlayers": 92,
       "timestamp": "2026-08-11T14:40:23.279Z",
       "url": "https://openfront.io/game/gMLhfRNZ"
+    },
+    {
+      "id": "D15qRyM7",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "RipperSeeker",
+          "clientID": "59p3cKAR",
+          "clanTag": "NU"
+        },
+        {
+          "username": "ollo",
+          "clientID": "ZMCTnkou",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1558,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-11T15:03:50.676Z",
+      "url": "https://openfront.io/game/D15qRyM7"
+    },
+    {
+      "id": "5BKCJdE6",
+      "team": "Team 32",
+      "players": [
+        {
+          "username": "the Sea Peoples",
+          "clientID": "1fTQLTT9",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1163,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-11T15:05:59.826Z",
+      "url": "https://openfront.io/game/5BKCJdE6"
     }
   ],
   "trios": [
@@ -23382,6 +23423,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-11T14:41:49.362Z",
       "url": "https://openfront.io/game/jrZJQ1aP"
+    },
+    {
+      "id": "kKZZjhNM",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "wookstym",
+          "clientID": "wEhoe3G4",
+          "clanTag": "BORG"
+        },
+        {
+          "username": "Najwyzsza Izba Kontroli",
+          "clientID": "mtKgCJo9",
+          "clanTag": "BORG"
+        },
+        {
+          "username": "Flask",
+          "clientID": "P56qUGGw",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1140,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-11T15:07:46.937Z",
+      "url": "https://openfront.io/game/kKZZjhNM"
     }
   ],
   "quads": [
@@ -41773,6 +41842,39 @@
       "numPlayers": 80,
       "timestamp": "2026-08-11T14:56:30.229Z",
       "url": "https://openfront.io/game/BAAmgsPe"
+    },
+    {
+      "id": "Bj9xZq1v",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "hyperborea",
+          "clientID": "ZQYccVUk",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "whyman",
+          "clientID": "ymxaTbwB",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "AnonCwel",
+          "clientID": "4Vu5UHKj",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "AnonHamster7",
+          "clientID": "ZtMqJ57q",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 977,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-11T15:12:06.222Z",
+      "url": "https://openfront.io/game/Bj9xZq1v"
     }
   ]
 }
