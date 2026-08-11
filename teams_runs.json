@@ -22044,6 +22044,34 @@
       "numPlayers": 34,
       "timestamp": "2026-08-11T03:28:18.048Z",
       "url": "https://openfront.io/game/dSkfmWbz"
+    },
+    {
+      "id": "aLbP3z55",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "e7e8e",
+          "clientID": "srap2VPH",
+          "clanTag": null
+        },
+        {
+          "username": "Mito Man",
+          "clientID": "rQNSRTYe",
+          "clanTag": null
+        },
+        {
+          "username": "tchou tchou train",
+          "clientID": "WTekwPC2",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 1317,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-11T04:22:34.598Z",
+      "url": "https://openfront.io/game/aLbP3z55"
     }
   ],
   "quads": [
@@ -39323,6 +39351,62 @@
       "numPlayers": 20,
       "timestamp": "2026-08-11T04:11:18.934Z",
       "url": "https://openfront.io/game/nPd65Zij"
+    },
+    {
+      "id": "V3hABbF4",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "SKYNET SECRUITY",
+          "clientID": "abZgpb4f",
+          "clanTag": "AST"
+        },
+        {
+          "username": "zen",
+          "clientID": "oztzU8xp",
+          "clanTag": null
+        },
+        {
+          "username": "svr ptsd",
+          "clientID": "k9jLQFEr",
+          "clanTag": "DID"
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 718,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "timestamp": "2026-08-11T04:33:50.794Z",
+      "url": "https://openfront.io/game/V3hABbF4"
+    },
+    {
+      "id": "XQELWcNH",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "thecrisp",
+          "clientID": "DKHDG8wM",
+          "clanTag": "OPEN"
+        },
+        {
+          "username": "Stars",
+          "clientID": "33xjEZno",
+          "clanTag": "NTU"
+        },
+        {
+          "username": "wheH",
+          "clientID": "1ANscqZQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1332,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-11T04:25:35.598Z",
+      "url": "https://openfront.io/game/XQELWcNH"
     }
   ]
 }
