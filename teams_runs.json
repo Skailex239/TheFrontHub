@@ -24197,6 +24197,62 @@
       "numPlayers": 89,
       "timestamp": "2026-08-11T19:22:10.890Z",
       "url": "https://openfront.io/game/fdCMxQQ4"
+    },
+    {
+      "id": "VJSFAEni",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "gui",
+          "clientID": "inTfwap5",
+          "clanTag": null
+        },
+        {
+          "username": "LOENNi",
+          "clientID": "DonHiDDv",
+          "clanTag": "NU"
+        },
+        {
+          "username": "2a1b0t",
+          "clientID": "U14k1pRK",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 830,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T19:55:34.291Z",
+      "url": "https://openfront.io/game/VJSFAEni"
+    },
+    {
+      "id": "uPSdNMrj",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Erteschio",
+          "clientID": "nYoyDMAa",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "SDRome",
+          "clientID": "QkmKPYpX",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "Ataraxia",
+          "clientID": "FojoFSfW",
+          "clanTag": "OPS"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 936,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-11T19:48:23.862Z",
+      "url": "https://openfront.io/game/uPSdNMrj"
     }
   ],
   "quads": [
@@ -42972,6 +43028,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-11T18:57:43.957Z",
       "url": "https://openfront.io/game/ZPTxPkxd"
+    },
+    {
+      "id": "bYBgqABc",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "P Diddler",
+          "clientID": "WRPajLSV",
+          "clanTag": "ASDOH"
+        },
+        {
+          "username": "SlingBlade",
+          "clientID": "ZE8Q2Sjg",
+          "clanTag": "ASDOH"
+        },
+        {
+          "username": "Codigga",
+          "clientID": "8eUjXiin",
+          "clanTag": "ASDOH"
+        },
+        {
+          "username": "Zyon on mobile",
+          "clientID": "Skp1uVJc",
+          "clanTag": "ASDOH"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 883,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-11T19:52:17.077Z",
+      "url": "https://openfront.io/game/bYBgqABc"
     }
   ]
 }
