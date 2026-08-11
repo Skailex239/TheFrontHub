@@ -63,9 +63,11 @@ const lastUpdateEl = document.getElementById("last-update");
 let _rankedData = null;        // ranked.json décodé (ranked wins carrière)
 let _connectedPlayers = [];    // [{publicId, username}] depuis Firebase
 let _liveStats = {};           // { publicId: { global: {...}, weekly: {...}, games: [], fetchedAt } }
-let _mergedPlayers = [];       // liste fusionnée ranked + live
+// Layout 2 panneaux : on maintient deux vues (global + weekly) en parallèle
+let _mergedViews = { global: [], weekly: [] };
 let _liveFetchDone = false;    // true quand toutes les stats live sont chargées
 let _liveFetchProgress = 0;    // nombre de joueurs connectés traités
+// _dashMode conservé pour compat (plus utilisé par render() — layout 2 panneaux)
 let _dashMode = "global";      // "global" | "weekly"
 let currentUser = null;     // { name, publicId, avatar, uid, email }
 let _ownershipCode = null;
@@ -96,6 +98,30 @@ function escapeHtml(s) {
 
 function formatPoints(n) {
   return new Intl.NumberFormat("fr-FR").format(n || 0);
+}
+
+/**
+ * Retourne le timestamp (ms) du lundi 00:00 (heure locale navigateur)
+ * de la semaine contenant `now`. Utilisé pour le label "Depuis lundi …".
+ */
+function getWeekStartMs(now) {
+  const d = new Date(now);
+  d.setHours(0, 0, 0, 0);
+  // getDay(): 0=Sunday, 1=Monday... On veut lundi comme début de semaine
+  const day = d.getDay();
+  const diff = day === 0 ? -6 : 1 - day; // recule jusqu'à lundi
+  d.setDate(d.getDate() + diff);
+  return d.getTime();
+}
+
+/** Formate un timestamp (ms) en date longue française (ex: "lundi 11 août 2026"). */
+function formatFrenchDate(ms) {
+  return new Intl.DateTimeFormat("fr-FR", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(ms));
 }
 
 function initials(name) {
@@ -312,7 +338,7 @@ function updateLastUpdateLabel(ts) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   Merge ranked.json + stats live → _mergedPlayers
+   Merge ranked.json + stats live → _mergedViews { global, weekly }
    ════════════════════════════════════════════════════════════════ */
 
 function pointsFor(p) {
@@ -322,85 +348,98 @@ function pointsFor(p) {
        + (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
 }
 
-/** Fusionne ranked.json (career ranked wins) + live API (casual wins). */
-function buildMergedPlayers() {
-  const byPid = new Map();
-  const isWeekly = _dashMode === "weekly";
+/**
+ * Fusionne ranked.json (career ranked wins) + live API (casual wins)
+ * pour les DEUX vues (global + weekly) d'un coup. Les stats live
+ * contiennent déjà `global` et `weekly` pour chaque joueur (cf.
+ * computeWinsFromGames), donc on parcourt _liveStats deux fois sans
+ * re-fetcher.
+ */
+function buildMergedViews() {
+  const buildForMode = (isWeekly) => {
+    const byPid = new Map();
 
-  // 1. ranked.json → ranked wins carrière (GLOBAL uniquement)
-  //    En weekly, on ne peut pas déduire les wins hebdo depuis ranked.json (career total only)
-  //    → les joueurs ranked-only ont 0 pts en weekly
-  if (_rankedData) {
-    const getOrCreate = (pid, name) => {
+    // 1. ranked.json → ranked wins carrière (GLOBAL uniquement)
+    //    En weekly, on ne peut pas déduire les wins hebdo depuis ranked.json
+    //    (career total only) → les joueurs ranked-only ont 0 pts en weekly
+    if (_rankedData) {
+      const getOrCreate = (pid, name) => {
+        let e = byPid.get(pid);
+        if (!e) {
+          e = {
+            publicId: pid, username: name || pid, clan: null,
+            ffaCasualWins: 0, ffaRankedWins: 0,
+            teamCasualWins: 0, teamRankedWins: 0,
+            _hasLive: false,
+          };
+          byPid.set(pid, e);
+        }
+        return e;
+      };
+      for (const p of _rankedData["1v1"] || []) {
+        const nm = p.username || p.accountUsername || p.public_id;
+        const e = getOrCreate(p.public_id, nm);
+        if (!isWeekly) e.ffaRankedWins = p.wins || 0;
+        if (nm && nm !== p.public_id) e.username = nm;
+      }
+      for (const p of _rankedData["2v2"] || []) {
+        const nm = p.username || p.accountUsername || p.public_id;
+        const e = getOrCreate(p.public_id, nm);
+        if (!isWeekly) e.teamRankedWins = p.wins || 0;
+        if (nm && nm !== p.public_id) e.username = nm;
+      }
+    }
+
+    // 2. Stats live → casual wins + ranked wins
+    for (const [pid, live] of Object.entries(_liveStats)) {
       let e = byPid.get(pid);
       if (!e) {
         e = {
-          publicId: pid, username: name || pid, clan: null,
+          publicId: pid, username: live.username || pid, clan: null,
           ffaCasualWins: 0, ffaRankedWins: 0,
           teamCasualWins: 0, teamRankedWins: 0,
           _hasLive: false,
         };
         byPid.set(pid, e);
       }
-      return e;
-    };
-    for (const p of _rankedData["1v1"] || []) {
-      const nm = p.username || p.accountUsername || p.public_id;
-      const e = getOrCreate(p.public_id, nm);
-      // En weekly, on garde les career wins uniquement si le joueur n'a PAS de stats live
-      // (les stats live remplaceront par les vraies valeurs hebdo)
-      if (!isWeekly) e.ffaRankedWins = p.wins || 0;
-      if (nm && nm !== p.public_id) e.username = nm;
+      const g = isWeekly ? live.weekly : live.global;
+      e.ffaCasualWins = g.ffaCasual;
+      e.teamCasualWins = g.teamCasual;
+      // Ranked wins :
+      //   - Global : max(ranked.json career, API live) — ranked.json est plus complet
+      //   - Weekly : API live uniquement (ranked.json n'a pas de breakdown hebdo)
+      if (isWeekly) {
+        e.ffaRankedWins = g.ffaRanked;
+        e.teamRankedWins = g.teamRanked;
+      } else {
+        e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
+        e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
+      }
+      e._hasLive = true;
+      if (live.username && live.username !== pid) e.username = live.username;
     }
-    for (const p of _rankedData["2v2"] || []) {
-      const nm = p.username || p.accountUsername || p.public_id;
-      const e = getOrCreate(p.public_id, nm);
-      if (!isWeekly) e.teamRankedWins = p.wins || 0;
-      if (nm && nm !== p.public_id) e.username = nm;
-    }
-  }
 
-  // 2. Stats live → casual wins + ranked wins
-  for (const [pid, live] of Object.entries(_liveStats)) {
-    let e = byPid.get(pid);
-    if (!e) {
-      e = {
-        publicId: pid, username: live.username || pid, clan: null,
-        ffaCasualWins: 0, ffaRankedWins: 0,
-        teamCasualWins: 0, teamRankedWins: 0,
-        _hasLive: false,
-      };
-      byPid.set(pid, e);
-    }
-    const g = isWeekly ? live.weekly : live.global;
-    e.ffaCasualWins = g.ffaCasual;
-    e.teamCasualWins = g.teamCasual;
-    // Ranked wins :
-    //   - Global : max(ranked.json career, API live) — ranked.json est plus complet
-    //   - Weekly : API live uniquement (ranked.json n'a pas de breakdown hebdo)
-    if (isWeekly) {
-      e.ffaRankedWins = g.ffaRanked;
-      e.teamRankedWins = g.teamRanked;
-    } else {
-      e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
-      e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
-    }
-    e._hasLive = true;
-    if (live.username && live.username !== pid) e.username = live.username;
-  }
+    // 3. Calcul des points + tri
+    const players = [...byPid.values()].map((p) => ({
+      ...p,
+      points: pointsFor(p),
+    }));
+    players.sort((a, b) => b.points - a.points);
+    return players;
+  };
 
-  // 3. Calcul des points + tri
-  const players = [...byPid.values()].map((p) => ({
-    ...p,
-    points: pointsFor(p),
-  }));
-  players.sort((a, b) => b.points - a.points);
-  return players;
+  return {
+    global: buildForMode(false),
+    weekly: buildForMode(true),
+  };
 }
 
-/** Retourne la vue active (global ou weekly). */
+/**
+ * Compat shim : retourne la vue globale (ancienne API).
+ * Plus utilisé par render() mais conservé pour d'éventuels appels externes.
+ */
 function getActiveView() {
-  return { players: _mergedPlayers };
+  return { players: _mergedViews.global };
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -408,7 +447,7 @@ function getActiveView() {
    ════════════════════════════════════════════════════════════════ */
 
 function render() {
-  if (!_rankedData && _mergedPlayers.length === 0) {
+  if (!_rankedData && _mergedViews.global.length === 0 && _mergedViews.weekly.length === 0) {
     view.innerHTML = `
       <div class="dash-empty-state">
         <div class="dash-empty-icon"><i data-icon="chart"></i></div>
@@ -419,69 +458,73 @@ function render() {
     return;
   }
 
-  const isWeekly = _dashMode === "weekly";
-  const players = _mergedPlayers.map((p) => ({ ...p }));
-  if (players.length === 0) {
+  // Deux vues : globale (all time) + hebdo (cette semaine)
+  const globalView = _mergedViews.global.map((p) => ({ ...p }));
+  const weeklyView = _mergedViews.weekly.map((p) => ({ ...p }));
+  if (globalView.length === 0 && weeklyView.length === 0) {
     view.innerHTML = `
       <div class="dash-empty-state">
         <div class="dash-empty-icon"><i data-icon="chart"></i></div>
         <h3>Aucune donnée disponible</h3>
-        <p>${isWeekly ? "Aucune partie cette semaine." : "Chargement…"}</p>
+        <p>Chargement…</p>
       </div>`;
     if (window.hydrateIcons) window.hydrateIcons(view);
     return;
   }
 
-  // Ajout du rang
-  players.forEach((p, i) => { p.rank = i + 1; });
+  // Ajout du rang dans chaque vue
+  globalView.forEach((p, i) => { p.rank = i + 1; });
+  weeklyView.forEach((p, i) => { p.rank = i + 1; });
 
-  const champion = players[0] ?? null;
-  const totalPlayers = players.length;
-  const topN = players.slice(0, 50);
-  const modeLabel = isWeekly ? "Cette semaine" : "Global";
+  const globalChampion = globalView[0] ?? null;
+  const weeklyChampion = weeklyView[0] ?? null;
+  const globalTopN = globalView.slice(0, 50);
+  const weeklyTopN = weeklyView.slice(0, 50);
 
   // Indicateur de chargement live
   const liveTag = !_liveFetchDone
     ? `<span class="dash-fallback-tag">⚡ Chargement live des stats… (${_liveFetchProgress}/${_connectedPlayers.length})</span>`
     : "";
 
+  // Label "Depuis le lundi X …" (début de semaine en heure locale navigateur)
+  const weekStartMs = getWeekStartMs(Date.now());
+  const weekStartLabel = formatFrenchDate(weekStartMs);
+
   view.innerHTML = `
     ${liveTag}
 
-    <div class="dash-controls-row">
-      <div class="dash-toggle" role="tablist" aria-label="Période du classement">
-        <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
-        <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
-      </div>
-      <div class="dash-scoring-inline">FFA casual +10 · FFA classé +1 · Team casual +5 · Team classé +1</div>
-    </div>
-
     <div class="dash-grid">
-      ${champion ? renderChampion(champion, isWeekly) : ""}
-      ${renderRanking(topN, totalPlayers, modeLabel)}
+      <section class="dash-panel">
+        <div class="dash-panel-header">
+          <h2 class="dash-panel-title">Top players all Time</h2>
+          <span class="dash-panel-sub">Classement cumulé · ${globalView.length} joueurs</span>
+        </div>
+        ${globalChampion ? renderChampion(globalChampion, false) : ""}
+        ${renderRanking(globalTopN, globalView.length, "Global")}
+      </section>
+      <section class="dash-panel">
+        <div class="dash-panel-header">
+          <h2 class="dash-panel-title">Top players this Week</h2>
+          <span class="dash-panel-sub">Depuis le ${weekStartLabel} · ${weeklyView.length} joueurs actifs</span>
+        </div>
+        ${weeklyChampion ? renderChampion(weeklyChampion, true) : ""}
+        ${renderRanking(weeklyTopN, weeklyView.length, "Cette semaine")}
+      </section>
     </div>
 
     <div class="dash-scoring-info">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). ${isWeekly ? "Vue hebdomadaire = parties des 7 derniers jours." : "Vue globale = cumul de toutes les parties."} Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
+      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). Colonne gauche = cumul de toutes les parties. Colonne droite = parties des 7 derniers jours. Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
     </div>
   `;
 
   // Hydrate les icônes <i data-icon>
   if (window.hydrateIcons) window.hydrateIcons(view);
-
-  // Toggle listeners (les boutons sont dans #dashboard-view)
-  view.querySelectorAll(".dash-toggle-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      _dashMode = btn.dataset.mode;
-      mergeAndRender();
-    });
-  });
 }
 
 /** Merge + render (utilisé après chaque fetch live pour mise à jour progressive). */
 function mergeAndRender() {
-  _mergedPlayers = buildMergedPlayers();
+  _mergedViews = buildMergedViews();
   render();
 }
 
@@ -884,7 +927,7 @@ document.addEventListener("click", (e) => {
   try {
     // Phase 1 : Charger ranked.json → rendu immédiat avec données classées
     await loadRankedJson();
-    _mergedPlayers = buildMergedPlayers();
+    _mergedViews = buildMergedViews();
     render();
 
     // Phase 2 : Charger la liste des joueurs connectés (Firebase)

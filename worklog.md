@@ -1768,3 +1768,66 @@ Stage Summary:
 - Token security: x-skailex-access is hardcoded in the Worker (server-side), never exposed to the browser
 - 3 files updated with correct Worker URL, pushed as commit 945d556
 - REMINDER: User must revoke the exposed GitHub PAT at https://github.com/settings/tokens
+
+---
+Task ID: 9
+Agent: general-purpose (layout 2 panneaux)
+Task: Refactoriser dashboard.js statique pour afficher 2 panneaux côte à côte (all time + this week) au lieu du toggle.
+
+Work Log:
+- Lu worklog Tasks 6/7/8 pour le contexte : la version statique vanilla JS de dashboard.js (public/ + root, 911 lignes) était déployée sur GitHub Pages avec un layout toggle (Global/Cette semaine). La version React (src/app/page.tsx) avait déjà le layout 2 panneaux côte à côte. Objectif : aligner le vanilla sur le React.
+- Lu public/dashboard.js (911 lignes) en entier :
+  - `buildMergedPlayers()` (l.326) branchait sur `_dashMode` ("global"|"weekly") pour choisir quelle vue construire — un seul mode à la fois.
+  - `render()` (l.410) générait un toggle `.dash-controls-row` + un seul `<div class="dash-grid">` avec 1 champion + 1 ranking list.
+  - `mergeAndRender()` (l.483) mettait à jour `_mergedPlayers` puis render().
+  - `init()` (l.883) appelait `_mergedPlayers = buildMergedPlayers()`.
+  - `computeWinsFromGames()` (l.227) peuple déjà `live.global` ET `live.weekly` pour chaque joueur → pas besoin de re-fetcher pour avoir les 2 vues.
+- Lu src/app/page.tsx (référence React) pour voir le rendu exact attendu : `<RankingColumn title="Top players all Time" subtitle="Classement cumulé · N joueurs" />` à gauche, `<RankingColumn title="Top players this Week" subtitle="Depuis le {formatFrenchDate(weekStartMs)} · N joueurs actifs" />` à droite. Confirmé que `getWeekStartMs()` et `formatFrenchDate()` existent dans src/lib/openfront.ts (l.131 et l.193) mais PAS dans dashboard.js.
+- Lu public/dashboard.html (216 lignes) : confirmé `dashboard.css?v=3` (l.24) + `dashboard.js?v=4` (l.212). Vérifié que root dashboard.html était identique.
+- Lu public/dashboard.css (455 lignes) : confirmé `.dash-grid { grid-template-columns: 1fr 1fr; }` déjà présent (l.101-106), responsive `.dash-grid { grid-template-columns: 1fr; }` en mobile (l.428). Pas besoin de toucher à ces règles.
+
+REFACTORING public/dashboard.js (4 edits via MultiEdit) :
+- Edit 1 — State (l.66-71) : remplacé `let _mergedPlayers = [];` par `let _mergedViews = { global: [], weekly: [] };`. Conservé `let _dashMode = "global";` pour compat (plus utilisé par render() mais reste accessible si un script externe y fait référence — aucun ne le fait dans ce repo).
+- Edit 2 — Helpers (après formatPoints, ~l.99) : ajouté `getWeekStartMs(now)` (retourne le timestamp du lundi 00:00 heure locale navigateur) + `formatFrenchDate(ms)` (Intl.DateTimeFormat fr-FR : weekday/day/month/year). Le calcul du lundi utilise `getDay()` + diff (0=dimanche → -6, sinon 1-day) — version navigateur-local comme spécifié dans le task description.
+- Edit 3 — Merge (l.325-404) : remplacé `buildMergedPlayers()` par `buildMergedViews()` qui encapsule l'ancien corps dans une fonction interne `buildForMode(isWeekly)` et retourne `{ global: buildForMode(false), weekly: buildForMode(true) }`. Logique inchangée : ranked.json ne contribue qu'en global (career wins), API live contribue aux deux (casual + ranked). Adapté `getActiveView()` en shim qui retourne `{ players: _mergedViews.global }` pour compat.
+- Edit 4 — Render + mergeAndRender (l.410-486) : refactorisé `render()` pour générer 2 `<section class="dash-panel">` côte à côte (gauche=all-time avec champion global + ranking global, droite=this-week avec champion hebdo + ranking hebdo). Supprimé le toggle `.dash-controls-row` et les listeners `.dash-toggle-btn`. Conservé le `liveTag` (indicateur de chargement), le `.dash-scoring-info` final (texte adapté : "Colonne gauche = cumul … Colonne droite = parties des 7 derniers jours"). `mergeAndRender()` simplifié en `_mergedViews = buildMergedViews(); render();`.
+- Edit 5 — init() (l.887) : `_mergedPlayers = buildMergedPlayers()` → `_mergedViews = buildMergedViews()`.
+- Vérifications post-refactor :
+  - `grep _mergedPlayers|buildMergedPlayers|dash-toggle|dash-controls-row` → 0 occurrence ✓
+  - `grep _dashMode` → 2 occurrences (déclaration + commentaire), aucune utilisation ✓
+  - `node --check public/dashboard.js` → exit 0, syntaxe OK ✓
+
+AJOUT CSS public/dashboard.css :
+- Bumpé le commentaire d'en-tête v3 → v4 (précise "layout 2 panneaux côte à côte").
+- Ajouté un bloc final (l.456-489) avec `.dash-panel` (flex column gap 16px), `.dash-panel-header` (flex column + border-bottom), `.dash-panel-title` (20px/700), `.dash-panel-sub` (13px/gris). Neutralisé `.dash-panel .dash-section` (padding:0, border:none, box-shadow:none) car les sections champion/ranking sont nested dans le panneau. Conservé `.dash-panel .dash-ranking-section .dash-section-header { margin-bottom: 12px; }`.
+
+BUMP CACHE-BUST dans les 2 dashboard.html (public/ + root) :
+- `dashboard.css?v=3` → `dashboard.css?v=4` (l.24)
+- `dashboard.js?v=4` → `dashboard.js?v=5` (l.212)
+
+SYNCHRO ROOT ↔ PUBLIC :
+- `cp public/dashboard.js root/dashboard.js` ✓ (identique)
+- `cp public/dashboard.css root/dashboard.css` ✓ (identique)
+- `diff -q public/dashboard.html root/dashboard.html` ✓ (identique, les 2 ont été édités séparément avec les mêmes bumps)
+- `node --check root/dashboard.js` → exit 0 ✓
+
+FONCTIONS MODIFIÉES (dans dashboard.js) :
+1. `buildMergedPlayers()` → renommée `buildMergedViews()`, retourne `{global, weekly}` via `buildForMode(isWeekly)` interne.
+2. `render()` : 2 panneaux côte à côte au lieu de toggle + 1 colonne. Supprimé listeners toggle.
+3. `mergeAndRender()` : `_mergedViews = buildMergedViews()` au lieu de `_mergedPlayers = buildMergedPlayers()`.
+4. `getActiveView()` : shim compat qui retourne `_mergedViews.global`.
+5. `init()` : appelle `buildMergedViews()` au lieu de `buildMergedPlayers()`.
+
+FONCTIONS AJOUTÉES (dans dashboard.js) :
+- `getWeekStartMs(now)` : lundi 00:00 (heure locale navigateur).
+- `formatFrenchDate(ms)` : formatage fr-FR long.
+
+Stage Summary:
+- Le dashboard statique vanilla (public/dashboard.js + root/dashboard.js) affiche maintenant DEUX panneaux côte à côte : "Top players all Time" (gauche) + "Top players this Week" (droite), chacun avec champion card + liste scrollable top 50. Layout aligné sur la version React (src/app/page.tsx).
+- 4 fichiers mis à jour et synchronisés : dashboard.js (public/ + root, +~75 lignes net), dashboard.css (public/ + root, +35 lignes net), dashboard.html (public/ + root, cache-bust bumps). node --check passe ✓.
+- NON COMMITÉ — l'utilisateur fera le commit/push lui-même après vérification.
+- SUBTILITÉS / BUGS POTENTIELS :
+  1. Le label du panneau droit dit "Depuis le lundi X août" (calculé via getWeekStartMs → lundi 00:00 heure locale navigateur), MAIS les stats hebdo sont toujours calculées avec la logique "7 jours glissants" (computeWinsFromGames compare `now - g.start < WEEKLY_MS` où WEEKLY_MS = 7*24*3600*1000). Donc le label "Depuis lundi" est légèrement inexact : c'est en réalité "7 derniers jours glissants". Pour aligner vraiment sur "depuis lundi", il faudrait modifier computeWinsFromGames pour checker `g.start >= getWeekStartMs(now)` — ce qui invaliderait le cache localStorage actuel (clé `dash_live_stats_v1`) et forcerait un re-fetch de toutes les games. Choix : spec disait "pas besoin de re-fetcher", donc j'ai conservé la logique 7 jours glissants et seulement ajusté le label. À noter pour une future itération (bump cache → v2 + computeWinsFromGames(weekStartMs)).
+  2. `getWeekStartMs` utilise l'heure LOCALE du navigateur (via `new Date(now).setHours(0,0,0,0)` + `getDay()`), PAS Europe/Paris comme la version React. Pour 99% des utilisateurs (Europe/Paris) c'est identique. Pour un utilisateur hors EU, le "lundi" affiché sera leur lundi local, ce qui peut différer de quelques heures du lundi Europe/Paris. La version React utilisait Intl.DateTimeFormat avec `timeZone: "Europe/Paris"` pour être strictement précis. J'ai suivi la spec exacte (helper fourni dans le task description) qui utilise l'heure locale — moins précis mais plus simple et suffisant dans la pratique.
+  3. `_dashMode` (variable d'état) reste déclarée en haut de fichier (l.71) pour compat mais n'est plus lue nulle part. Aucun impact fonctionnel — juste un peu de dead code. Si on veut nettoyer, supprimer la déclaration.
+  4. Les styles `.dash-controls-row`, `.dash-toggle`, `.dash-toggle-btn`, `.dash-scoring-inline` sont TOUJOURS présents dans dashboard.css (lignes 56-98) bien que plus utilisés dans le DOM. Pas urgent à nettoyer (pas de bug, juste ~50 lignes de CSS mort) — je les ai laissés en place pour ne pas casser un éventuel autre HTML qui les référencerait (vérifié : aucun ne le fait, mais c'est défensif).

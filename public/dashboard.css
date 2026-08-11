@@ -1,6 +1,7 @@
 /* ════════════════════════════════════════════════════════════════
-   Tableau de bord — Styles spécifiques (v3)
+   Tableau de bord — Styles spécifiques (v4)
    Minimalist mockup: two-column grid, flex rows, square orange badges.
+   v4: layout 2 panneaux (all-time | this week) côte à côte.
    ════════════════════════════════════════════════════════════════ */
 
 .dash-view {
@@ -452,3 +453,38 @@
 
   .dash-footer-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
+
+/* ═══ Two-panel layout (all-time | this week) ═══ */
+.dash-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.dash-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F3F4F6;
+}
+.dash-panel-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.dash-panel-sub {
+  font-size: 13px;
+  color: #6B7280;
+}
+/* Les enfants directs de dash-panel (champion card + ranking section) ne doivent
+   plus avoir le padding/border de .dash-section car ils sont nested. On neutralise : */
+.dash-panel .dash-section {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+/* Mais on garde le padding pour le header interne de la ranking list */
+.dash-panel .dash-ranking-section .dash-section-header { margin-bottom: 12px; }
