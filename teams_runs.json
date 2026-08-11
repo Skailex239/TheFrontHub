@@ -8413,6 +8413,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-11T08:39:15.475Z",
       "url": "https://openfront.io/game/pu5VDFrB"
+    },
+    {
+      "id": "Qme9iX3X",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Anon347",
+          "clientID": "DEr56vvw",
+          "clanTag": null
+        },
+        {
+          "username": "ConquestOfGarlicBread",
+          "clientID": "YTACavBN",
+          "clanTag": "ANAR"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1671,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-11T08:47:46.016Z",
+      "url": "https://openfront.io/game/Qme9iX3X"
     }
   ],
   "trios": [
@@ -40151,6 +40174,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-11T07:53:11.524Z",
       "url": "https://openfront.io/game/ft12Qt3E"
+    },
+    {
+      "id": "zuNDmgtc",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Persian kingdom",
+          "clientID": "DiUZ6HpZ",
+          "clanTag": "IR"
+        },
+        {
+          "username": "TRADER",
+          "clientID": "bjqTiN5H",
+          "clanTag": null
+        },
+        {
+          "username": "Loki",
+          "clientID": "kfHRdvUR",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-11T08:57:22.623Z",
+      "url": "https://openfront.io/game/zuNDmgtc"
     }
   ]
 }
