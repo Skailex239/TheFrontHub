@@ -9035,6 +9035,29 @@
       "numPlayers": 61,
       "timestamp": "2026-08-11T18:06:47.029Z",
       "url": "https://openfront.io/game/fPPJyfyG"
+    },
+    {
+      "id": "uyLX7Fq1",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Give gold take troops",
+          "clientID": "q6KBsCNC",
+          "clanTag": "OMAX"
+        },
+        {
+          "username": "Lure",
+          "clientID": "uQTLFJHZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1273,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-11T18:14:17.237Z",
+      "url": "https://openfront.io/game/uyLX7Fq1"
     }
   ],
   "trios": [
@@ -23957,6 +23980,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-11T17:50:33.539Z",
       "url": "https://openfront.io/game/zLMd1Lv6"
+    },
+    {
+      "id": "AL3qin6Y",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Anon235",
+          "clientID": "tB6JnFhN",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "Anon997",
+          "clientID": "ZgU8zqhy",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "Geez",
+          "clientID": "q93Bwgyf",
+          "clanTag": "LAW"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1097,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T18:07:46.627Z",
+      "url": "https://openfront.io/game/AL3qin6Y"
     }
   ],
   "quads": [
@@ -42605,6 +42656,39 @@
       "numPlayers": 12,
       "timestamp": "2026-08-11T17:56:29.668Z",
       "url": "https://openfront.io/game/EBmsXNac"
+    },
+    {
+      "id": "rkjJ4zuf",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "NULL",
+          "clientID": "fHZaPU6i",
+          "clanTag": "NULL"
+        },
+        {
+          "username": "GION",
+          "clientID": "4smHPoea",
+          "clanTag": null
+        },
+        {
+          "username": "Novanix",
+          "clientID": "EtQBkwDL",
+          "clanTag": null
+        },
+        {
+          "username": "Fresh Fish",
+          "clientID": "WiDpzAad",
+          "clanTag": "00000"
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 1214,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-11T18:09:08.269Z",
+      "url": "https://openfront.io/game/rkjJ4zuf"
     }
   ]
 }
