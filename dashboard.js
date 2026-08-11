@@ -1,23 +1,32 @@
 /**
  * dashboard.js — Contrôleur du Tableau de bord TheFrontHub.
  *
- * Source principale : dashboard_ranking.json (produit par le backend sync).
- *   Schéma :
- *   {
- *     updatedAt, gamesScanned,
- *     global:  { from, to, gamesScanned, players: [ { publicId, username, clan,
- *                ffaCasualWins, ffaRankedWins, teamCasualWins, teamRankedWins, points } ] },
- *     weekly:  { ... idem ... }
- *   }
+ * Architecture (NO SYNC — le site fait les requêtes API lui-même) :
+ *
+ *   1. ranked.json (auto-synced par GitHub Actions) → ranked wins carrière
+ *      pour le top 100 1v1 + top 100 2v2. Servé depuis GitHub Pages.
+ *
+ *   2. Firebase public-aliases (Firestore REST API) → liste des joueurs
+ *      connectés via Google/Discord qui ont lié leur Public ID.
+ *
+ *   3. OpenFront API (via proxy Cloudflare Worker ou /api/openfront en dev)
+ *      → pour chaque joueur connecté, on pagine TOUTES ses parties et on
+ *      compte les victoires par catégorie (FFA casual, FFA classé, Team
+ *      casual, Team classé). Le proxy ajoute le header x-skailex-access
+ *      côté serveur (exemption de rate-limit).
+ *
+ *   Merge :
+ *     - Joueurs ranked-only : ranked wins de ranked.json, casual = 0
+ *     - Joueurs connectés : ranked wins = max(ranked.json, API carrière),
+ *       casual wins = API live
+ *
+ *   Cache : les stats live sont mises en cache dans localStorage (30 min)
+ *   pour éviter de re-fetcher à chaque visite.
  *
  * Barème :
  *   FFA casual  = +10  ·  FFA classé (1v1) = +1
  *   Team casual = +5   ·  Team classé (2v2) = +1
  *   (ranked = 1 pt, PAS en plus du FFA/Team)
- *
- * Fallback : si dashboard_ranking.json est absent/vide, on charge ranked.json
- * (top 100 classé 1v1 + 2v2) et on l'affiche en FFA ranked + Team ranked uniquement
- * (casual = 0).
  *
  * Auth : importe auth.js (Firebase) et écoute onAuthStateChanged pour brancher
  * la sidebar (login-btn / user-badge). Définit sur window les handlers utilisés
@@ -51,14 +60,25 @@ const PTS_TEAM_RANKED = 1;   // ranked = 1 pt, pas en plus du Team
 const view = document.getElementById("dashboard-view");
 const lastUpdateEl = document.getElementById("last-update");
 
-let _data = null;          // dashboard_ranking.json décodé
-let _fallbackRanked = null; // ranked.json décodé (fallback)
-let _dashMode = "global";   // "global" | "weekly"
+let _rankedData = null;        // ranked.json décodé (ranked wins carrière)
+let _connectedPlayers = [];    // [{publicId, username}] depuis Firebase
+let _liveStats = {};           // { publicId: { global: {...}, weekly: {...}, games: [], fetchedAt } }
+let _mergedPlayers = [];       // liste fusionnée ranked + live
+let _liveFetchDone = false;    // true quand toutes les stats live sont chargées
+let _liveFetchProgress = 0;    // nombre de joueurs connectés traités
+let _dashMode = "global";      // "global" | "weekly"
 let currentUser = null;     // { name, publicId, avatar, uid, email }
 let _ownershipCode = null;
 let _ownershipPublicId = null;
 let _ownershipUsername = null;
 let _loginInProgress = false;
+
+const LIVE_CACHE_KEY = "dash_live_stats_v1";
+const LIVE_CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000;
+const MAX_GAMES_PER_PLAYER = 5000; // sécurité
+const FIREBASE_PROJECT = "openfront-speedrun";
+const FIRESTORE_BASE = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT}/databases/(default)/documents`;
 
 /* ════════════════════════════════════════════════════════════════
    Helpers
@@ -109,34 +129,176 @@ function showToast(msg, type = "info", duration = 4000) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   Chargement des données
+   Chargement des données (LIVE — pas de sync)
    ════════════════════════════════════════════════════════════════ */
 
-async function loadData() {
-  // Tentative principale : dashboard_ranking.json (cache-bust)
-  try {
-    const res = await fetch(`dashboard_ranking.json?v=${Date.now()}`, { cache: "no-store" });
-    if (res.ok) {
-      const json = await res.json();
-      if (json && (json.global?.players?.length || json.weekly?.players?.length)) {
-        _data = json;
-        if (_data.updatedAt) updateLastUpdateLabel(_data.updatedAt);
-        return;
-      }
-    }
-  } catch (e) {
-    console.warn("[dashboard] dashboard_ranking.json indisponible:", e.message);
-  }
-
-  // Fallback : ranked.json (top 100 classé 1v1 + 2v2)
-  _data = null;
+/** Charge ranked.json (ranked wins carrière pour top 100 1v1 + 2v2). */
+async function loadRankedJson() {
   try {
     const res = await fetch("ranked.json", { cache: "no-store" });
-    if (res.ok) _fallbackRanked = await res.json();
+    if (res.ok) {
+      _rankedData = await res.json();
+      if (_rankedData?.updatedAt) updateLastUpdateLabel(_rankedData.updatedAt);
+      console.log(`[dashboard] ranked.json: ${(_rankedData["1v1"]?.length || 0) + (_rankedData["2v2"]?.length || 0)} joueurs classés`);
+    }
   } catch (e) {
     console.warn("[dashboard] ranked.json indisponible:", e.message);
   }
-  if (_fallbackRanked?.updatedAt) updateLastUpdateLabel(_fallbackRanked.updatedAt);
+}
+
+/** Charge la liste des joueurs connectés depuis Firebase public-aliases. */
+async function loadConnectedPlayers() {
+  try {
+    const url = `${FIRESTORE_BASE}/public-aliases`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      console.warn(`[dashboard] Firebase public-aliases: HTTP ${res.status}`);
+      return;
+    }
+    const data = await res.json();
+    const docs = data.documents || [];
+    const seen = new Set();
+    _connectedPlayers = docs.map((doc) => {
+      const fields = doc.fields || {};
+      const val = (f) => (f?.stringValue || f?.integerValue || "");
+      const publicId = val(fields.publicId);
+      return {
+        publicId,
+        username: val(fields.username) || publicId || "?",
+      };
+    })
+    // Filtrer : publicId valide = exactement 8 caractères alphanumériques
+    .filter((p) => /^[A-Za-z0-9]{8}$/.test(p.publicId))
+    // Dédoublonner par publicId (garder le premier)
+    .filter((p) => {
+      if (seen.has(p.publicId)) return false;
+      seen.add(p.publicId);
+      return true;
+    });
+    console.log(`[dashboard] Firebase: ${_connectedPlayers.length} joueurs connectés (sur ${docs.length} documents)`);
+  } catch (e) {
+    console.warn("[dashboard] Firebase indisponible:", e.message);
+  }
+}
+
+/**
+ * Pagine TOUTES les parties d'un joueur via le proxy OpenFront.
+ * Retourne [{ gameId, start, mode, rankedType, result, map, ... }].
+ */
+async function fetchAllPlayerGames(publicId) {
+  const allGames = [];
+  let cursor = null;
+  for (let page = 0; page < 500; page++) {
+    let apiPath = `/public/player/${encodeURIComponent(publicId)}/games`;
+    if (cursor) apiPath += `?cursor=${encodeURIComponent(cursor)}`;
+    let data;
+    try {
+      data = await fetchOpenFront(apiPath);
+    } catch (e) {
+      console.warn(`[dashboard] fetch games ${publicId} page ${page}:`, e.message);
+      break;
+    }
+    const results = data?.results || [];
+    if (results.length === 0) break;
+    allGames.push(...results);
+    if (!data.nextCursor) break;
+    cursor = data.nextCursor;
+    if (allGames.length >= MAX_GAMES_PER_PLAYER) break;
+  }
+  return allGames;
+}
+
+/** Classifie une game en catégorie. */
+function classifyGame(g) {
+  const mode = String(g.mode || "").toLowerCase();
+  const rt = String(g.rankedType || "").toLowerCase();
+  const isTeam =
+    mode === "team" ||
+    mode.startsWith("2v2") ||
+    mode.startsWith("3v3") ||
+    mode.startsWith("4v4") ||
+    rt === "2v2";
+  const isRanked = rt === "1v1" || rt === "2v2" || rt === "ranked";
+  if (isTeam) return isRanked ? "teamRanked" : "teamCasual";
+  return isRanked ? "ffaRanked" : "ffaCasual";
+}
+
+/** Calcule les wins globales + hebdo depuis une liste de games. */
+function computeWinsFromGames(games) {
+  const global = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
+  const weekly = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
+  const now = Date.now();
+  for (const g of games) {
+    if (g.result !== "victory") continue;
+    const cat = classifyGame(g);
+    global[cat]++;
+    if (g.start && now - new Date(g.start).getTime() < WEEKLY_MS) {
+      weekly[cat]++;
+    }
+  }
+  return { global, weekly };
+}
+
+/** Charge les stats live pour tous les joueurs connectés (avec cache, en parallèle). */
+async function loadLiveStats() {
+  if (_connectedPlayers.length === 0) {
+    _liveFetchDone = true;
+    return;
+  }
+
+  // ── 1. Charger le cache localStorage ──
+  let cached = {};
+  try {
+    const raw = localStorage.getItem(LIVE_CACHE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") cached = parsed;
+    }
+  } catch (e) { /* ignore */ }
+
+  // ── 2. Séparer les joueurs en cache (frais) vs à fetcher ──
+  const toFetch = [];
+  for (const player of _connectedPlayers) {
+    const cacheEntry = cached[player.publicId];
+    const isFresh = cacheEntry && (Date.now() - cacheEntry.fetchedAt) < LIVE_CACHE_TTL;
+    if (isFresh) {
+      _liveStats[player.publicId] = cacheEntry;
+      _liveFetchProgress++;
+    } else {
+      toFetch.push(player);
+    }
+  }
+  // Premier rendu avec les données en cache
+  if (_liveFetchProgress > 0) mergeAndRender();
+
+  // ── 3. Fetch tous les joueurs en parallèle (exemption = 8 concurrent) ──
+  const fetchOne = async (player) => {
+    try {
+      const games = await fetchAllPlayerGames(player.publicId);
+      const wins = computeWinsFromGames(games);
+      const entry = {
+        publicId: player.publicId,
+        username: player.username,
+        games: games.slice(-20), // garder les 20 plus récentes pour le profil
+        global: wins.global,
+        weekly: wins.weekly,
+        totalGames: games.length,
+        fetchedAt: Date.now(),
+      };
+      _liveStats[player.publicId] = entry;
+      cached[player.publicId] = entry;
+      localStorage.setItem(LIVE_CACHE_KEY, JSON.stringify(cached));
+      console.log(`[dashboard] live: ${player.username} (${player.publicId}) → ${games.length} games, global=${JSON.stringify(wins.global)}`);
+    } catch (e) {
+      console.warn(`[dashboard] live fetch failed for ${player.publicId}:`, e.message);
+    }
+    _liveFetchProgress++;
+    mergeAndRender(); // rendu progressif après chaque joueur
+  };
+
+  // Lancer tous les fetchs en parallèle
+  await Promise.all(toFetch.map(fetchOne));
+  _liveFetchDone = true;
 }
 
 function updateLastUpdateLabel(ts) {
@@ -150,60 +312,95 @@ function updateLastUpdateLabel(ts) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   Construction de la vue (depuis dashboard_ranking.json)
+   Merge ranked.json + stats live → _mergedPlayers
    ════════════════════════════════════════════════════════════════ */
 
-function getActiveView() {
-  if (!_data) return null;
-  return _dashMode === "weekly" ? _data.weekly : _data.global;
-}
-
 function pointsFor(p) {
-  // Le JSON fournit déjà `points`, mais on le recalcule pour être sûr
-  // de la cohérence avec le barème affiché.
   return (p.ffaCasualWins || 0) * PTS_FFA_CASUAL
        + (p.ffaRankedWins || 0) * PTS_FFA_RANKED
        + (p.teamCasualWins || 0) * PTS_TEAM_CASUAL
        + (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
 }
 
-function rankedView() {
-  // Construit une vue synthétique à partir du fallback ranked.json
-  // (casual = 0 partout, ranked wins = wins du leaderboard).
-  if (!_fallbackRanked) return null;
+/** Fusionne ranked.json (career ranked wins) + live API (casual wins). */
+function buildMergedPlayers() {
   const byPid = new Map();
-  const getOrCreate = (pid, name) => {
+  const isWeekly = _dashMode === "weekly";
+
+  // 1. ranked.json → ranked wins carrière (GLOBAL uniquement)
+  //    En weekly, on ne peut pas déduire les wins hebdo depuis ranked.json (career total only)
+  //    → les joueurs ranked-only ont 0 pts en weekly
+  if (_rankedData) {
+    const getOrCreate = (pid, name) => {
+      let e = byPid.get(pid);
+      if (!e) {
+        e = {
+          publicId: pid, username: name || pid, clan: null,
+          ffaCasualWins: 0, ffaRankedWins: 0,
+          teamCasualWins: 0, teamRankedWins: 0,
+          _hasLive: false,
+        };
+        byPid.set(pid, e);
+      }
+      return e;
+    };
+    for (const p of _rankedData["1v1"] || []) {
+      const nm = p.username || p.accountUsername || p.public_id;
+      const e = getOrCreate(p.public_id, nm);
+      // En weekly, on garde les career wins uniquement si le joueur n'a PAS de stats live
+      // (les stats live remplaceront par les vraies valeurs hebdo)
+      if (!isWeekly) e.ffaRankedWins = p.wins || 0;
+      if (nm && nm !== p.public_id) e.username = nm;
+    }
+    for (const p of _rankedData["2v2"] || []) {
+      const nm = p.username || p.accountUsername || p.public_id;
+      const e = getOrCreate(p.public_id, nm);
+      if (!isWeekly) e.teamRankedWins = p.wins || 0;
+      if (nm && nm !== p.public_id) e.username = nm;
+    }
+  }
+
+  // 2. Stats live → casual wins + ranked wins
+  for (const [pid, live] of Object.entries(_liveStats)) {
     let e = byPid.get(pid);
     if (!e) {
       e = {
-        publicId: pid, username: name || pid, clan: null,
+        publicId: pid, username: live.username || pid, clan: null,
         ffaCasualWins: 0, ffaRankedWins: 0,
         teamCasualWins: 0, teamRankedWins: 0,
+        _hasLive: false,
       };
       byPid.set(pid, e);
     }
-    return e;
-  };
-  for (const p of _fallbackRanked["1v1"] || []) {
-    const nm = p.username || p.accountUsername || p.public_id;
-    const e = getOrCreate(p.public_id, nm);
-    e.ffaRankedWins = p.wins || 0;
-    if (nm && nm !== p.public_id) e.username = nm;
+    const g = isWeekly ? live.weekly : live.global;
+    e.ffaCasualWins = g.ffaCasual;
+    e.teamCasualWins = g.teamCasual;
+    // Ranked wins :
+    //   - Global : max(ranked.json career, API live) — ranked.json est plus complet
+    //   - Weekly : API live uniquement (ranked.json n'a pas de breakdown hebdo)
+    if (isWeekly) {
+      e.ffaRankedWins = g.ffaRanked;
+      e.teamRankedWins = g.teamRanked;
+    } else {
+      e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
+      e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
+    }
+    e._hasLive = true;
+    if (live.username && live.username !== pid) e.username = live.username;
   }
-  for (const p of _fallbackRanked["2v2"] || []) {
-    const nm = p.username || p.accountUsername || p.public_id;
-    const e = getOrCreate(p.public_id, nm);
-    e.teamRankedWins = p.wins || 0;
-    if (nm && nm !== p.public_id) e.username = nm;
-  }
-  const players = [...byPid.values()].map((p) => ({ ...p, points: pointsFor(p) }));
+
+  // 3. Calcul des points + tri
+  const players = [...byPid.values()].map((p) => ({
+    ...p,
+    points: pointsFor(p),
+  }));
   players.sort((a, b) => b.points - a.points);
-  return {
-    from: null, to: null,
-    gamesScanned: null,
-    players,
-    _fallback: true,
-  };
+  return players;
+}
+
+/** Retourne la vue active (global ou weekly). */
+function getActiveView() {
+  return { players: _mergedPlayers };
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -211,34 +408,30 @@ function rankedView() {
    ════════════════════════════════════════════════════════════════ */
 
 function render() {
-  if (!_data && !_fallbackRanked) {
+  if (!_rankedData && _mergedPlayers.length === 0) {
     view.innerHTML = `
       <div class="dash-empty-state">
         <div class="dash-empty-icon"><i data-icon="chart"></i></div>
-        <h3>Aucune donnée disponible</h3>
-        <p>Synchronisation en cours… Revenez dans quelques minutes.</p>
+        <h3>Chargement…</h3>
+        <p>Récupération du classement…</p>
       </div>`;
     if (window.hydrateIcons) window.hydrateIcons(view);
     return;
   }
 
   const isWeekly = _dashMode === "weekly";
-  const active = _data ? (isWeekly ? _data.weekly : _data.global) : rankedView();
-  if (!active || !active.players || !active.players.length) {
+  const players = _mergedPlayers.map((p) => ({ ...p }));
+  if (players.length === 0) {
     view.innerHTML = `
       <div class="dash-empty-state">
         <div class="dash-empty-icon"><i data-icon="chart"></i></div>
         <h3>Aucune donnée disponible</h3>
-        <p>${isWeekly ? "Aucune partie scannée cette semaine." : "Synchronisation en cours…"} Revenez dans quelques minutes.</p>
+        <p>${isWeekly ? "Aucune partie cette semaine." : "Chargement…"}</p>
       </div>`;
     if (window.hydrateIcons) window.hydrateIcons(view);
     return;
   }
 
-  // Calcul des points (cohérence) + tri desc
-  const players = active.players
-    .map((p) => ({ ...p, points: typeof p.points === "number" ? p.points : pointsFor(p) }))
-    .sort((a, b) => b.points - a.points);
   // Ajout du rang
   players.forEach((p, i) => { p.rank = i + 1; });
 
@@ -246,12 +439,14 @@ function render() {
   const totalPlayers = players.length;
   const topN = players.slice(0, 50);
   const modeLabel = isWeekly ? "Cette semaine" : "Global";
-  const fallbackTag = active._fallback
-    ? `<span class="dash-fallback-tag">Données classées uniquement (synchronisation casual en cours)</span>`
+
+  // Indicateur de chargement live
+  const liveTag = !_liveFetchDone
+    ? `<span class="dash-fallback-tag">⚡ Chargement live des stats… (${_liveFetchProgress}/${_connectedPlayers.length})</span>`
     : "";
 
   view.innerHTML = `
-    ${fallbackTag}
+    ${liveTag}
 
     <div class="dash-controls-row">
       <div class="dash-toggle" role="tablist" aria-label="Période du classement">
@@ -268,7 +463,7 @@ function render() {
 
     <div class="dash-scoring-info">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). ${isWeekly ? "Vue hebdomadaire = parties scannées sur les 7 derniers jours." : "Vue globale = cumul de toutes les parties scannées."}</span>
+      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). ${isWeekly ? "Vue hebdomadaire = parties des 7 derniers jours." : "Vue globale = cumul de toutes les parties."} Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
     </div>
   `;
 
@@ -279,9 +474,15 @@ function render() {
   view.querySelectorAll(".dash-toggle-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       _dashMode = btn.dataset.mode;
-      render();
+      mergeAndRender();
     });
   });
+}
+
+/** Merge + render (utilisé après chaque fetch live pour mise à jour progressive). */
+function mergeAndRender() {
+  _mergedPlayers = buildMergedPlayers();
+  render();
 }
 
 /* ── Champion card (left column) ── */
@@ -681,8 +882,26 @@ document.addEventListener("click", (e) => {
 
 (async function init() {
   try {
-    await loadData();
+    // Phase 1 : Charger ranked.json → rendu immédiat avec données classées
+    await loadRankedJson();
+    _mergedPlayers = buildMergedPlayers();
     render();
+
+    // Phase 2 : Charger la liste des joueurs connectés (Firebase)
+    await loadConnectedPlayers();
+
+    // Phase 3 : Charger les stats live pour chaque joueur connecté
+    // (rendu progressif après chaque joueur)
+    if (_connectedPlayers.length > 0) {
+      loadLiveStats().then(() => {
+        mergeAndRender();
+        console.log("[dashboard] Stats live chargées");
+      }).catch((e) => {
+        console.warn("[dashboard] loadLiveStats error:", e.message);
+      });
+    } else {
+      _liveFetchDone = true;
+    }
   } catch (e) {
     console.error("[dashboard] init failed:", e);
     view.innerHTML = `<div class="dash-empty-state"><div class="dash-empty-icon"><i data-icon="warning"></i></div><h3>Erreur</h3><p>${escapeHtml(e.message || "Chargement impossible.")}</p></div>`;
