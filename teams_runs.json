@@ -8628,6 +8628,29 @@
       "numPlayers": 24,
       "timestamp": "2026-08-11T12:33:09.478Z",
       "url": "https://openfront.io/game/NQweosUH"
+    },
+    {
+      "id": "XkiQnrST",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "180k",
+          "clientID": "hTw7tPkc",
+          "clanTag": null
+        },
+        {
+          "username": "Foggia",
+          "clientID": "rxUt6uGt",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1091,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-11T12:35:27.609Z",
+      "url": "https://openfront.io/game/XkiQnrST"
     }
   ],
   "trios": [
@@ -23073,6 +23096,34 @@
       "numPlayers": 15,
       "timestamp": "2026-08-11T12:31:52.406Z",
       "url": "https://openfront.io/game/AVEhNTyo"
+    },
+    {
+      "id": "WXoSgZWA",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "hyperborea",
+          "clientID": "QJtgyWWP",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "AnonCwel",
+          "clientID": "W6rYy2n1",
+          "clanTag": "KMFDM"
+        },
+        {
+          "username": "whyman",
+          "clientID": "i3ghkjfQ",
+          "clanTag": "KMFDM"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-11T12:29:58.777Z",
+      "url": "https://openfront.io/game/WXoSgZWA"
     }
   ],
   "quads": [
