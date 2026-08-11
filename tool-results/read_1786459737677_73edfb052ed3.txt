@@ -1,0 +1,733 @@
+     1→/**
+     2→ * dashboard.js — Contrôleur du Tableau de bord TheFrontHub.
+     3→ *
+     4→ * Source principale : dashboard_ranking.json (produit par le backend sync).
+     5→ *   Schéma :
+     6→ *   {
+     7→ *     updatedAt, gamesScanned,
+     8→ *     global:  { from, to, gamesScanned, players: [ { publicId, username, clan,
+     9→ *                ffaCasualWins, ffaRankedWins, teamCasualWins, teamRankedWins, points } ] },
+    10→ *     weekly:  { ... idem ... }
+    11→ *   }
+    12→ *
+    13→ * Barème :
+    14→ *   FFA casual  = +10  ·  FFA classé (1v1) = +11
+    15→ *   Team casual = +5   ·  Team classé (2v2) = +6
+    16→ *
+    17→ * Fallback : si dashboard_ranking.json est absent/vide, on charge ranked.json
+    18→ * (top 100 classé 1v1 + 2v2) et on l'affiche en FFA ranked + Team ranked uniquement
+    19→ * (casual = 0).
+    20→ *
+    21→ * Auth : importe auth.js (Firebase) et écoute onAuthStateChanged pour brancher
+    22→ * la sidebar (login-btn / user-badge). Définit sur window les handlers utilisés
+    23→ * par les onclick du HTML : toggleAuthModal, handleLogin, handleLogout,
+    24→ * toggleUserDropdown, goToProfilePage, closeProfileModal,
+    25→ * startOwnershipVerification, confirmOwnershipVerification,
+    26→ * cancelOwnershipVerification.
+    27→ */
+    28→
+    29→import {
+    30→  auth, db,
+    31→  doc, getDoc, setDoc,
+    32→  collection, query, where, onSnapshot,
+    33→  onAuthStateChanged, signOut,
+    34→} from "./auth.js";
+    35→import { fetchOpenFront } from "./openfront-client.js?v=24";
+    36→
+    37→/* ════════════════════════════════════════════════════════════════
+    38→   Constantes (barème)
+    39→   ════════════════════════════════════════════════════════════════ */
+    40→
+    41→const PTS_FFA_CASUAL  = 10;
+    42→const PTS_FFA_RANKED  = 11;
+    43→const PTS_TEAM_CASUAL = 5;
+    44→const PTS_TEAM_RANKED = 6;
+    45→
+    46→/* ════════════════════════════════════════════════════════════════
+    47→   State + DOM
+    48→   ════════════════════════════════════════════════════════════════ */
+    49→
+    50→const view = document.getElementById("dashboard-view");
+    51→const lastUpdateEl = document.getElementById("last-update");
+    52→
+    53→let _data = null;          // dashboard_ranking.json décodé
+    54→let _fallbackRanked = null; // ranked.json décodé (fallback)
+    55→let _dashMode = "global";   // "global" | "weekly"
+    56→let currentUser = null;     // { name, publicId, avatar, uid, email }
+    57→let _ownershipCode = null;
+    58→let _ownershipPublicId = null;
+    59→let _ownershipUsername = null;
+    60→let _loginInProgress = false;
+    61→
+    62→/* ════════════════════════════════════════════════════════════════
+    63→   Helpers
+    64→   ════════════════════════════════════════════════════════════════ */
+    65→
+    66→function escapeHtml(s) {
+    67→  if (s == null) return "";
+    68→  return String(s)
+    69→    .replace(/&/g, "&amp;")
+    70→    .replace(/</g, "&lt;")
+    71→    .replace(/>/g, "&gt;")
+    72→    .replace(/"/g, "&quot;")
+    73→    .replace(/'/g, "&#39;");
+    74→}
+    75→
+    76→function formatPoints(n) {
+    77→  return new Intl.NumberFormat("fr-FR").format(n || 0);
+    78→}
+    79→
+    80→function initials(name) {
+    81→  if (!name) return "?";
+    82→  const clean = name.replace(/^\[[^\]]+\]\s*/, "").trim();
+    83→  const parts = clean.split(/[\s_-]+/).filter(Boolean);
+    84→  const letters = parts.length >= 2 ? parts[0][0] + parts[1][0] : clean.slice(0, 2);
+    85→  return letters.toUpperCase();
+    86→}
+    87→
+    88→function rankCircleHtml(rank) {
+    89→  let cls = "dash-rank";
+    90→  if (rank === 1) cls += " dash-rank-1";
+    91→  else if (rank === 2) cls += " dash-rank-2";
+    92→  else if (rank === 3) cls += " dash-rank-3";
+    93→  return `<span class="${cls}">${rank}</span>`;
+    94→}
+    95→
+    96→function avatarHtml(name, size = "sm") {
+    97→  return `<span class="dash-avatar dash-avatar-${size}" aria-hidden="true">${escapeHtml(initials(name))}</span>`;
+    98→}
+    99→
+   100→function clanBadgeHtml(clan) {
+   101→  if (!clan) return "";
+   102→  return `<span class="dash-clan">[${escapeHtml(clan)}]</span>`;
+   103→}
+   104→
+   105→function showToast(msg, type = "info", duration = 4000) {
+   106→  if (typeof window.showToast === "function") window.showToast(msg, type, duration);
+   107→  else console.log(`[toast:${type}]`, msg);
+   108→}
+   109→
+   110→/* ════════════════════════════════════════════════════════════════
+   111→   Chargement des données
+   112→   ════════════════════════════════════════════════════════════════ */
+   113→
+   114→async function loadData() {
+   115→  // Tentative principale : dashboard_ranking.json (cache-bust)
+   116→  try {
+   117→    const res = await fetch(`dashboard_ranking.json?v=${Date.now()}`, { cache: "no-store" });
+   118→    if (res.ok) {
+   119→      const json = await res.json();
+   120→      if (json && (json.global?.players?.length || json.weekly?.players?.length)) {
+   121→        _data = json;
+   122→        if (_data.updatedAt) updateLastUpdateLabel(_data.updatedAt);
+   123→        return;
+   124→      }
+   125→    }
+   126→  } catch (e) {
+   127→    console.warn("[dashboard] dashboard_ranking.json indisponible:", e.message);
+   128→  }
+   129→
+   130→  // Fallback : ranked.json (top 100 classé 1v1 + 2v2)
+   131→  _data = null;
+   132→  try {
+   133→    const res = await fetch("ranked.json", { cache: "no-store" });
+   134→    if (res.ok) _fallbackRanked = await res.json();
+   135→  } catch (e) {
+   136→    console.warn("[dashboard] ranked.json indisponible:", e.message);
+   137→  }
+   138→  if (_fallbackRanked?.updatedAt) updateLastUpdateLabel(_fallbackRanked.updatedAt);
+   139→}
+   140→
+   141→function updateLastUpdateLabel(ts) {
+   142→  if (!ts || !lastUpdateEl) return;
+   143→  const d = new Date(typeof ts === "number" ? ts : ts);
+   144→  if (Number.isNaN(d.getTime())) return;
+   145→  lastUpdateEl.textContent = "Mis à jour le " + new Intl.DateTimeFormat("fr-FR", {
+   146→    day: "2-digit", month: "2-digit", year: "numeric",
+   147→    hour: "2-digit", minute: "2-digit",
+   148→  }).format(d);
+   149→}
+   150→
+   151→/* ════════════════════════════════════════════════════════════════
+   152→   Construction de la vue (depuis dashboard_ranking.json)
+   153→   ════════════════════════════════════════════════════════════════ */
+   154→
+   155→function getActiveView() {
+   156→  if (!_data) return null;
+   157→  return _dashMode === "weekly" ? _data.weekly : _data.global;
+   158→}
+   159→
+   160→function pointsFor(p) {
+   161→  // Le JSON fournit déjà `points`, mais on le recalcule pour être sûr
+   162→  // de la cohérence avec le barème affiché.
+   163→  return (p.ffaCasualWins || 0) * PTS_FFA_CASUAL
+   164→       + (p.ffaRankedWins || 0) * PTS_FFA_RANKED
+   165→       + (p.teamCasualWins || 0) * PTS_TEAM_CASUAL
+   166→       + (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
+   167→}
+   168→
+   169→function rankedView() {
+   170→  // Construit une vue synthétique à partir du fallback ranked.json
+   171→  // (casual = 0 partout, ranked wins = wins du leaderboard).
+   172→  if (!_fallbackRanked) return null;
+   173→  const byPid = new Map();
+   174→  const getOrCreate = (pid, name) => {
+   175→    let e = byPid.get(pid);
+   176→    if (!e) {
+   177→      e = {
+   178→        publicId: pid, username: name || pid, clan: null,
+   179→        ffaCasualWins: 0, ffaRankedWins: 0,
+   180→        teamCasualWins: 0, teamRankedWins: 0,
+   181→      };
+   182→      byPid.set(pid, e);
+   183→    }
+   184→    return e;
+   185→  };
+   186→  for (const p of _fallbackRanked["1v1"] || []) {
+   187→    const nm = p.username || p.accountUsername || p.public_id;
+   188→    const e = getOrCreate(p.public_id, nm);
+   189→    e.ffaRankedWins = p.wins || 0;
+   190→    if (nm && nm !== p.public_id) e.username = nm;
+   191→  }
+   192→  for (const p of _fallbackRanked["2v2"] || []) {
+   193→    const nm = p.username || p.accountUsername || p.public_id;
+   194→    const e = getOrCreate(p.public_id, nm);
+   195→    e.teamRankedWins = p.wins || 0;
+   196→    if (nm && nm !== p.public_id) e.username = nm;
+   197→  }
+   198→  const players = [...byPid.values()].map((p) => ({ ...p, points: pointsFor(p) }));
+   199→  players.sort((a, b) => b.points - a.points);
+   200→  return {
+   201→    from: null, to: null,
+   202→    gamesScanned: null,
+   203→    players,
+   204→    _fallback: true,
+   205→  };
+   206→}
+   207→
+   208→/* ════════════════════════════════════════════════════════════════
+   209→   Rendu
+   210→   ════════════════════════════════════════════════════════════════ */
+   211→
+   212→function render() {
+   213→  if (!_data && !_fallbackRanked) {
+   214→    view.innerHTML = `
+   215→      <div class="dash-empty-state">
+   216→        <div class="dash-empty-icon"><i data-icon="chart"></i></div>
+   217→        <h3>Aucune donnée disponible</h3>
+   218→        <p>Synchronisation en cours… Revenez dans quelques minutes.</p>
+   219→      </div>`;
+   220→    if (window.hydrateIcons) window.hydrateIcons(view);
+   221→    return;
+   222→  }
+   223→
+   224→  const isWeekly = _dashMode === "weekly";
+   225→  const active = _data ? (isWeekly ? _data.weekly : _data.global) : rankedView();
+   226→  if (!active || !active.players || !active.players.length) {
+   227→    view.innerHTML = `
+   228→      <div class="dash-empty-state">
+   229→        <div class="dash-empty-icon"><i data-icon="chart"></i></div>
+   230→        <h3>Aucune donnée disponible</h3>
+   231→        <p>${isWeekly ? "Aucune partie scannée cette semaine." : "Synchronisation en cours…"} Revenez dans quelques minutes.</p>
+   232→      </div>`;
+   233→    if (window.hydrateIcons) window.hydrateIcons(view);
+   234→    return;
+   235→  }
+   236→
+   237→  // Calcul des points (cohérence) + tri desc
+   238→  const players = active.players
+   239→    .map((p) => ({ ...p, points: typeof p.points === "number" ? p.points : pointsFor(p) }))
+   240→    .sort((a, b) => b.points - a.points);
+   241→  // Ajout du rang
+   242→  players.forEach((p, i) => { p.rank = i + 1; });
+   243→
+   244→  const champion = players[0] ?? null;
+   245→  const totalPlayers = players.length;
+   246→  const gamesScanned = active.gamesScanned ?? null;
+   247→  const totalFfaWins = players.reduce((s, p) => s + (p.ffaCasualWins || 0) + (p.ffaRankedWins || 0), 0);
+   248→  const totalTeamWins = players.reduce((s, p) => s + (p.teamCasualWins || 0) + (p.teamRankedWins || 0), 0);
+   249→  const topN = players.slice(0, 100);
+   250→  const modeLabel = isWeekly ? "Cette semaine" : "Global";
+   251→  const fallbackTag = active._fallback
+   252→    ? `<span class="dash-fallback-tag">Données classées uniquement (synchronisation casual en cours)</span>`
+   253→    : "";
+   254→
+   255→  view.innerHTML = `
+   256→    ${champion ? renderHero(champion, isWeekly) : ""}
+   257→
+   258→    ${fallbackTag}
+   259→
+   260→    <div class="dash-stats-grid">
+   261→      <div class="dash-stat-card">
+   262→        <div class="label">Joueurs classés</div>
+   263→        <div class="value">${formatPoints(totalPlayers)}</div>
+   264→        <div class="sub">${modeLabel}</div>
+   265→      </div>
+   266→      <div class="dash-stat-card">
+   267→        <div class="label">Parties scannées</div>
+   268→        <div class="value">${gamesScanned != null ? formatPoints(gamesScanned) : "—"}</div>
+   269→        <div class="sub">${modeLabel}</div>
+   270→      </div>
+   271→      <div class="dash-stat-card">
+   272→        <div class="label">Victoires FFA</div>
+   273→        <div class="value">${formatPoints(totalFfaWins)}</div>
+   274→        <div class="sub">casual + classé</div>
+   275→      </div>
+   276→      <div class="dash-stat-card">
+   277→        <div class="label">Victoires Team</div>
+   278→        <div class="value">${formatPoints(totalTeamWins)}</div>
+   279→        <div class="sub">casual + classé</div>
+   280→      </div>
+   281→    </div>
+   282→
+   283→    <div class="dash-card">
+   284→      <div class="dash-card-header">
+   285→        <span class="dash-card-title">Classement — ${modeLabel}</span>
+   286→        <div class="dash-toggle" role="tablist" aria-label="Période du classement">
+   287→          <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
+   288→          <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
+   289→        </div>
+   290→      </div>
+   291→      <div class="dash-card-body">
+   292→        ${topN.length ? renderTable(topN) : `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
+   293→      </div>
+   294→    </div>
+   295→
+   296→    <div class="dash-scoring-info">
+   297→      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+   298→      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +11</strong> · <strong>Team casual +5</strong> · <strong>Team classé +6</strong>. ${isWeekly ? "Vue hebdomadaire = parties scannées sur les 7 derniers jours." : "Vue globale = cumul de toutes les parties scannées."}</span>
+   299→    </div>
+   300→  `;
+   301→
+   302→  // Hydrate les icônes <i data-icon>
+   303→  if (window.hydrateIcons) window.hydrateIcons(view);
+   304→
+   305→  // Toggle listeners (les boutons sont dans #dashboard-view)
+   306→  view.querySelectorAll(".dash-toggle-btn").forEach((btn) => {
+   307→    btn.addEventListener("click", () => {
+   308→      _dashMode = btn.dataset.mode;
+   309→      render();
+   310→    });
+   311→  });
+   312→}
+   313→
+   314→function renderHero(champion, isWeekly) {
+   315→  const ffaCasualPts  = (champion.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
+   316→  const ffaRankedPts  = (champion.ffaRankedWins  || 0) * PTS_FFA_RANKED;
+   317→  const teamCasualPts = (champion.teamCasualWins || 0) * PTS_TEAM_CASUAL;
+   318→  const teamRankedPts = (champion.teamRankedWins || 0) * PTS_TEAM_RANKED;
+   319→  const heroAvatar = champion.username || champion.publicId;
+   320→  return `
+   321→    <div class="dash-hero">
+   322→      <div class="dash-hero-glow" aria-hidden="true"></div>
+   323→      <div class="dash-hero-content">
+   324→        <div class="dash-hero-top">
+   325→          ${avatarHtml(heroAvatar, "lg")}
+   326→          <div class="dash-hero-meta">
+   327→            <div class="dash-hero-label">${isWeekly ? "Champion de la semaine" : "Champion Global"}</div>
+   328→            <div class="dash-hero-name">${escapeHtml(champion.username || champion.publicId)}
+   329→              ${champion.clan ? clanBadgeHtml(champion.clan) : ""}
+   330→            </div>
+   331→            <div class="dash-hero-sub">Rang #${champion.rank}</div>
+   332→          </div>
+   333→          <div class="dash-hero-points">
+   334→            <div class="dash-hero-points-val">${formatPoints(champion.points)}</div>
+   335→            <div class="dash-hero-points-label">points</div>
+   336→          </div>
+   337→        </div>
+   338→        <div class="dash-hero-stats">
+   339→          <div class="dash-hero-stat">
+   340→            <div class="dash-hero-stat-val">${champion.ffaCasualWins || 0}</div>
+   341→            <div class="dash-hero-stat-label">FFA casual · +${formatPoints(ffaCasualPts)}</div>
+   342→          </div>
+   343→          <div class="dash-hero-stat">
+   344→            <div class="dash-hero-stat-val">${champion.ffaRankedWins || 0}</div>
+   345→            <div class="dash-hero-stat-label">FFA classé · +${formatPoints(ffaRankedPts)}</div>
+   346→          </div>
+   347→          <div class="dash-hero-stat">
+   348→            <div class="dash-hero-stat-val">${champion.teamCasualWins || 0}</div>
+   349→            <div class="dash-hero-stat-label">Team casual · +${formatPoints(teamCasualPts)}</div>
+   350→          </div>
+   351→          <div class="dash-hero-stat">
+   352→            <div class="dash-hero-stat-val">${champion.teamRankedWins || 0}</div>
+   353→            <div class="dash-hero-stat-label">Team classé · +${formatPoints(teamRankedPts)}</div>
+   354→          </div>
+   355→        </div>
+   356→      </div>
+   357→    </div>`;
+   358→}
+   359→
+   360→function renderTable(topN) {
+   361→  const rows = topN.map((p) => {
+   362→    const name = p.username || p.publicId;
+   363→    const profileUrl = p.publicId
+   364→      ? `profile.html?pid=${encodeURIComponent(p.publicId)}&player=${encodeURIComponent(name)}`
+   365→      : `profile.html?player=${encodeURIComponent(name)}`;
+   366→    const ffaCasualPts  = (p.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
+   367→    const ffaRankedPts  = (p.ffaRankedWins  || 0) * PTS_FFA_RANKED;
+   368→    const teamCasualPts = (p.teamCasualWins || 0) * PTS_TEAM_CASUAL;
+   369→    const teamRankedPts = (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
+   370→    return `
+   371→      <tr class="dash-row-link" data-href="${profileUrl}">
+   372→        <td class="dash-td-rank">${rankCircleHtml(p.rank)}</td>
+   373→        <td class="dash-td-player">
+   374→          ${avatarHtml(name, "sm")}
+   375→          <div class="dash-td-player-info">
+   376→            <span class="dash-td-name">${escapeHtml(name)} ${clanBadgeHtml(p.clan)}</span>
+   377→          </div>
+   378→        </td>
+   379→        <td class="dash-td-num dash-td-ffa-casual">
+   380→          <span class="dash-td-count">${p.ffaCasualWins || 0}</span>
+   381→          <span class="dash-td-pts">${formatPoints(ffaCasualPts)}</span>
+   382→        </td>
+   383→        <td class="dash-td-num dash-td-ffa-ranked">
+   384→          <span class="dash-td-count">${p.ffaRankedWins || 0}</span>
+   385→          <span class="dash-td-pts">${formatPoints(ffaRankedPts)}</span>
+   386→        </td>
+   387→        <td class="dash-td-num dash-td-team-casual">
+   388→          <span class="dash-td-count">${p.teamCasualWins || 0}</span>
+   389→          <span class="dash-td-pts">${formatPoints(teamCasualPts)}</span>
+   390→        </td>
+   391→        <td class="dash-td-num dash-td-team-ranked">
+   392→          <span class="dash-td-count">${p.teamRankedWins || 0}</span>
+   393→          <span class="dash-td-pts">${formatPoints(teamRankedPts)}</span>
+   394→        </td>
+   395→        <td class="dash-td-num dash-td-points">${formatPoints(p.points)}</td>
+   396→      </tr>`;
+   397→  }).join("");
+   398→
+   399→  return `
+   400→    <div class="dash-table-wrap">
+   401→      <table class="dash-table">
+   402→        <thead>
+   403→          <tr>
+   404→            <th class="dash-th-rank">#</th>
+   405→            <th>Joueur</th>
+   406→            <th class="dash-th-num">FFA casual</th>
+   407→            <th class="dash-th-num">FFA classé</th>
+   408→            <th class="dash-th-num">Team casual</th>
+   409→            <th class="dash-th-num">Team classé</th>
+   410→            <th class="dash-th-num">Points</th>
+   411→          </tr>
+   412→        </thead>
+   413→        <tbody>${rows}</tbody>
+   414→      </table>
+   415→    </div>`;
+   416→}
+   417→
+   418→/* ════════════════════════════════════════════════════════════════
+   419→   Auth UI (sidebar)
+   420→   ════════════════════════════════════════════════════════════════ */
+   421→
+   422→function updateAuthUI(user) {
+   423→  const loginBtn = document.getElementById("login-btn-main");
+   424→  const userContainer = document.getElementById("user-container");
+   425→  if (!loginBtn || !userContainer) return;
+   426→
+   427→  if (!user) {
+   428→    loginBtn.style.display = "flex";
+   429→    userContainer.style.display = "none";
+   430→    userContainer.classList.remove("open");
+   431→    return;
+   432→  }
+   433→
+   434→  loginBtn.style.display = "none";
+   435→  userContainer.style.display = "block";
+   436→
+   437→  const name = user.name || "Joueur";
+   438→  const publicId = user.publicId || "Non lié";
+   439→
+   440→  const setText = (id, val) => {
+   441→    const el = document.getElementById(id);
+   442→    if (el) el.textContent = val;
+   443→  };
+   444→  setText("user-display-name", name);
+   445→  setText("user-public-id-side", publicId !== "Non lié" ? publicId : "En ligne");
+   446→  setText("dropdown-username-display", name);
+   447→  setText("dropdown-publicid-display", publicId);
+   448→
+   449→  const avatarEl = document.getElementById("dropdown-avatar");
+   450→  const sidebarAvatarEl = document.getElementById("sidebar-avatar");
+   451→  const renderAvatar = (el) => {
+   452→    if (!el) return;
+   453→    if (user.avatar) {
+   454→      el.innerHTML = `<img src="${escapeHtml(user.avatar)}" alt="${escapeHtml(name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover">`;
+   455→    } else {
+   456→      el.innerHTML = "";
+   457→      el.textContent = initials(name);
+   458→      el.style.background = "linear-gradient(135deg,var(--accent),var(--accentL))";
+   459→      el.style.color = "#fff";
+   460→    }
+   461→  };
+   462→  renderAvatar(avatarEl);
+   463→  renderAvatar(sidebarAvatarEl);
+   464→}
+   465→
+   466→onAuthStateChanged(auth, async (user) => {
+   467→  if (!user) {
+   468→    currentUser = null;
+   469→    updateAuthUI(null);
+   470→    return;
+   471→  }
+   472→  currentUser = { uid: user.uid, avatar: user.photoURL, email: user.email };
+   473→
+   474→  // Lecture du profil Firestore
+   475→  let profile = null;
+   476→  try {
+   477→    const snap = await getDoc(doc(db, "users", user.uid));
+   478→    if (snap.exists()) profile = snap.data();
+   479→  } catch (e) {
+   480→    console.warn("[dashboard] Firestore read error:", e.message);
+   481→  }
+   482→
+   483→  if (profile && profile.publicId) {
+   484→    currentUser.name = profile.username;
+   485→    currentUser.publicId = profile.publicId;
+   486→    updateAuthUI(currentUser);
+   487→  } else {
+   488→    // Premier login sans profil : on affiche le badge + ouvre le setup modal
+   489→    currentUser.name = user.displayName || "Joueur";
+   490→    updateAuthUI(currentUser);
+   491→    // Redirige vers profile.html pour finaliser le setup (le dashboard n'a pas
+   492→    // vocation à héberger tout le flow d'ownership verification ici).
+   493→    if (profile == null) {
+   494→      // Pas de doc Firestore du tout → l'utilisateur n'a jamais finalisé.
+   495→      // On l'envoie sur profile.html qui gère le setup.
+   496→      // On évite la boucle en ne redirigeant que si l'URL ne contient pas ?setup=1
+   497→      const params = new URLSearchParams(window.location.search);
+   498→      if (params.get("setup") !== "1") {
+   499→        // Petit délai pour laisser le toast se figurer
+   500→        showToast("Bienvenue ! Finalisez votre profil pour accéder à vos stats.", "info", 3500);
+   501→        setTimeout(() => { window.location.href = "profile.html"; }, 1200);
+   502→        return;
+   503→      }
+   504→    }
+   505→  }
+   506→});
+   507→
+   508→/* ════════════════════════════════════════════════════════════════
+   509→   Handlers globaux (pour onclick HTML)
+   510→   ════════════════════════════════════════════════════════════════ */
+   511→
+   512→window.toggleAuthModal = function () {
+   513→  const modal = document.getElementById("auth-modal");
+   514→  if (modal) modal.classList.toggle("active");
+   515→};
+   516→
+   517→window.closeProfileModal = function () {
+   518→  const modal = document.getElementById("profile-modal");
+   519→  if (modal) modal.classList.remove("active");
+   520→};
+   521→
+   522→window.handleLogin = async function (provider) {
+   523→  if (_loginInProgress) return;
+   524→  _loginInProgress = true;
+   525→  const authBtns = document.querySelectorAll(".auth-btn");
+   526→  authBtns.forEach((b) => { b.disabled = true; b.style.opacity = "0.6"; });
+   527→  try {
+   528→    if (provider === "google") await window.loginWithGoogle();
+   529→    else if (provider === "discord") await window.loginWithDiscord();
+   530→    const modal = document.getElementById("auth-modal");
+   531→    if (modal) modal.classList.remove("active");
+   532→    // onAuthStateChanged prend le relais pour la redirection / UI
+   533→  } catch (e) {
+   534→    console.error("[dashboard] Login error:", e);
+   535→  } finally {
+   536→    _loginInProgress = false;
+   537→    authBtns.forEach((b) => { b.disabled = false; b.style.opacity = ""; });
+   538→  }
+   539→};
+   540→
+   541→window.handleLogout = async function (event) {
+   542→  if (event) event.stopPropagation();
+   543→  if (!confirm("Voulez-vous vous déconnecter ?")) return;
+   544→  try { await signOut(auth); } catch (e) { console.warn("[dashboard] logout error:", e.message); }
+   545→  currentUser = null;
+   546→  updateAuthUI(null);
+   547→};
+   548→
+   549→window.toggleUserDropdown = function (event) {
+   550→  if (event) event.stopPropagation();
+   551→  const c = document.getElementById("user-container");
+   552→  if (c) c.classList.toggle("open");
+   553→};
+   554→
+   555→window.closeUserDropdown = function () {
+   556→  const c = document.getElementById("user-container");
+   557→  if (c) c.classList.remove("open");
+   558→};
+   559→
+   560→window.goToProfilePage = function (event) {
+   561→  if (event) event.stopPropagation();
+   562→  window.closeUserDropdown();
+   563→  // Si l'utilisateur a un publicId, on pointe vers son profil public
+   564→  const pid = currentUser?.publicId;
+   565→  if (pid) {
+   566→    window.location.href = `profile.html?publicId=${encodeURIComponent(pid)}&player=${encodeURIComponent(currentUser.name || "")}`;
+   567→  } else {
+   568→    window.location.href = "profile.html";
+   569→  }
+   570→};
+   571→
+   572→// Fermer le dropdown au clic extérieur
+   573→document.addEventListener("click", (e) => {
+   574→  const c = document.getElementById("user-container");
+   575→  if (c && !c.contains(e.target)) c.classList.remove("open");
+   576→});
+   577→
+   578→/* ── Ownership verification (pour le #profile-modal copié de index.html) ── */
+   579→
+   580→window.startOwnershipVerification = async function () {
+   581→  if (!currentUser) {
+   582→    showToast("Veuillez vous connecter d'abord.", "warning");
+   583→    return;
+   584→  }
+   585→  const usernameInput = document.getElementById("profile-username");
+   586→  const publicIdInput = document.getElementById("profile-public-id");
+   587→  const username = (usernameInput?.value || "").trim();
+   588→  const publicId = (publicIdInput?.value || "").trim();
+   589→
+   590→  if (!username || !publicId) {
+   591→    showToast("Veuillez remplir tous les champs.", "warning");
+   592→    return;
+   593→  }
+   594→  if (username.length < 2 || username.length > 30) {
+   595→    showToast("Le pseudo doit faire entre 2 et 30 caractères.", "warning");
+   596→    return;
+   597→  }
+   598→  if (!/^[A-Za-z0-9]{8}$/.test(publicId)) {
+   599→    showToast("Le Public ID doit faire exactement 8 caractères alphanumériques (ex: HabCsQYR).", "warning");
+   600→    return;
+   601→  }
+   602→  if (/[^a-zA-Z0-9_\- ]/.test(username)) {
+   603→    showToast("Le pseudo ne peut contenir que des lettres, chiffres, espaces, _ et -.", "warning");
+   604→    return;
+   605→  }
+   606→
+   607→  showToast("Vérification du Public ID…", "info", 3000);
+   608→  try {
+   609→    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
+   610→    if (!playerData || !playerData.publicId) {
+   611→      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+   612→      return;
+   613→    }
+   614→  } catch (e) {
+   615→    if (e?.isNotFound || e?.status === 404) {
+   616→      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+   617→      return;
+   618→    }
+   619→    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error", 6000);
+   620→    console.error("[ownership] API check failed:", e);
+   621→    return;
+   622→  }
+   623→
+   624→  // Génération du code challenge TFS-XXXX
+   625→  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+   626→  _ownershipCode = "TFS-";
+   627→  const rand = crypto.getRandomValues(new Uint8Array(4));
+   628→  for (let i = 0; i < 4; i++) _ownershipCode += chars[rand[i] % chars.length];
+   629→  _ownershipPublicId = publicId;
+   630→  _ownershipUsername = username;
+   631→
+   632→  const s1 = document.getElementById("profile-setup-step1");
+   633→  const s2 = document.getElementById("profile-setup-step2");
+   634→  if (s1) s1.style.display = "none";
+   635→  if (s2) s2.style.display = "block";
+   636→  const codeEl = document.getElementById("ownership-code");
+   637→  const exEl = document.getElementById("ownership-example");
+   638→  if (codeEl) codeEl.textContent = _ownershipCode;
+   639→  if (exEl) exEl.textContent = _ownershipCode + " " + username;
+   640→  showToast("Code généré. Suivez les instructions ci-dessous.", "info");
+   641→  if (window.hydrateIcons) window.hydrateIcons(document.getElementById("profile-modal"));
+   642→};
+   643→
+   644→window.confirmOwnershipVerification = async function () {
+   645→  if (!_ownershipCode || !_ownershipPublicId) return;
+   646→  const btn = document.getElementById("confirm-ownership-btn");
+   647→  const original = btn?.textContent || "Confirmer";
+   648→  if (btn) { btn.disabled = true; btn.textContent = "Vérification…"; }
+   649→  try {
+   650→    const gamesData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}/games`);
+   651→    const games = Array.isArray(gamesData?.results) ? gamesData.results : [];
+   652→    const found = games.some((g) => g.username && g.username.includes(_ownershipCode));
+   653→    if (!found) {
+   654→      showToast("Code non trouvé dans vos parties récentes. Jouez une partie avec le code dans votre pseudo, puis confirmez.", "error", 6000);
+   655→      if (btn) { btn.disabled = false; btn.textContent = original; }
+   656→      return;
+   657→    }
+   658→    await saveUserProfile(_ownershipUsername, _ownershipPublicId);
+   659→  } catch (e) {
+   660→    console.error("[ownership] Confirmation failed:", e);
+   661→    showToast("Erreur lors de la vérification. Réessayez.", "error");
+   662→    if (btn) { btn.disabled = false; btn.textContent = original; }
+   663→  }
+   664→};
+   665→
+   666→window.cancelOwnershipVerification = function () {
+   667→  _ownershipCode = null;
+   668→  _ownershipPublicId = null;
+   669→  _ownershipUsername = null;
+   670→  const s1 = document.getElementById("profile-setup-step1");
+   671→  const s2 = document.getElementById("profile-setup-step2");
+   672→  if (s1) s1.style.display = "block";
+   673→  if (s2) s2.style.display = "none";
+   674→};
+   675→
+   676→async function saveUserProfile(username, publicId) {
+   677→  if (!currentUser) throw new Error("No authenticated user");
+   678→  try {
+   679→    const userDocRef = doc(db, "users", currentUser.uid);
+   680→    const existing = (await getDoc(userDocRef)).data() || {};
+   681→    await setDoc(userDocRef, {
+   682→      username,
+   683→      publicId,
+   684→      email: currentUser.email,
+   685→      verified: true,
+   686→      verifiedAt: new Date().toISOString(),
+   687→      createdAt: existing.createdAt || new Date().toISOString(),
+   688→      updatedAt: new Date().toISOString(),
+   689→      openFrontSyncPending: true,
+   690→    }, { merge: true });
+   691→
+   692→    currentUser.name = username;
+   693→    currentUser.publicId = publicId;
+   694→
+   695→    const modal = document.getElementById("profile-modal");
+   696→    if (modal) modal.classList.remove("active");
+   697→    window.cancelOwnershipVerification();
+   698→    updateAuthUI(currentUser);
+   699→    showToast("Profil vérifié et enregistré avec succès ! Redirection…", "success");
+   700→    setTimeout(() => { window.location.href = `profile.html?publicId=${encodeURIComponent(publicId)}&player=${encodeURIComponent(username)}`; }, 800);
+   701→  } catch (e) {
+   702→    console.error("[dashboard] Save profile error:", e);
+   703→    showToast("Erreur lors de la sauvegarde du profil.", "error");
+   704→    throw e;
+   705→  }
+   706→}
+   707→
+   708→/* ════════════════════════════════════════════════════════════════
+   709→   Navigation cliquable des lignes du tableau (délégation)
+   710→   ════════════════════════════════════════════════════════════════ */
+   711→
+   712→document.addEventListener("click", (e) => {
+   713→  const row = e.target.closest(".dash-row-link");
+   714→  if (row && row.dataset.href) {
+   715→    window.location.href = row.dataset.href;
+   716→  }
+   717→});
+   718→
+   719→/* ════════════════════════════════════════════════════════════════
+   720→   Init
+   721→   ════════════════════════════════════════════════════════════════ */
+   722→
+   723→(async function init() {
+   724→  try {
+   725→    await loadData();
+   726→    render();
+   727→  } catch (e) {
+   728→    console.error("[dashboard] init failed:", e);
+   729→    view.innerHTML = `<div class="dash-empty-state"><div class="dash-empty-icon"><i data-icon="warning"></i></div><h3>Erreur</h3><p>${escapeHtml(e.message || "Chargement impossible.")}</p></div>`;
+   730→    if (window.hydrateIcons) window.hydrateIcons(view);
+   731→  }
+   732→})();
+   733→

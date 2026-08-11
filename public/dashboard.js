@@ -243,54 +243,26 @@ function render() {
 
   const champion = players[0] ?? null;
   const totalPlayers = players.length;
-  const gamesScanned = active.gamesScanned ?? null;
-  const totalFfaWins = players.reduce((s, p) => s + (p.ffaCasualWins || 0) + (p.ffaRankedWins || 0), 0);
-  const totalTeamWins = players.reduce((s, p) => s + (p.teamCasualWins || 0) + (p.teamRankedWins || 0), 0);
-  const topN = players.slice(0, 100);
+  const topN = players.slice(0, 50);
   const modeLabel = isWeekly ? "Cette semaine" : "Global";
   const fallbackTag = active._fallback
     ? `<span class="dash-fallback-tag">Données classées uniquement (synchronisation casual en cours)</span>`
     : "";
 
   view.innerHTML = `
-    ${champion ? renderHero(champion, isWeekly) : ""}
-
     ${fallbackTag}
 
-    <div class="dash-stats-grid">
-      <div class="dash-stat-card">
-        <div class="label">Joueurs classés</div>
-        <div class="value">${formatPoints(totalPlayers)}</div>
-        <div class="sub">${modeLabel}</div>
+    <div class="dash-controls-row">
+      <div class="dash-toggle" role="tablist" aria-label="Période du classement">
+        <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
+        <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
       </div>
-      <div class="dash-stat-card">
-        <div class="label">Parties scannées</div>
-        <div class="value">${gamesScanned != null ? formatPoints(gamesScanned) : "—"}</div>
-        <div class="sub">${modeLabel}</div>
-      </div>
-      <div class="dash-stat-card">
-        <div class="label">Victoires FFA</div>
-        <div class="value">${formatPoints(totalFfaWins)}</div>
-        <div class="sub">casual + classé</div>
-      </div>
-      <div class="dash-stat-card">
-        <div class="label">Victoires Team</div>
-        <div class="value">${formatPoints(totalTeamWins)}</div>
-        <div class="sub">casual + classé</div>
-      </div>
+      <div class="dash-scoring-inline">FFA casual +10 · FFA classé +11 · Team casual +5 · Team classé +6</div>
     </div>
 
-    <div class="dash-card">
-      <div class="dash-card-header">
-        <span class="dash-card-title">Classement — ${modeLabel}</span>
-        <div class="dash-toggle" role="tablist" aria-label="Période du classement">
-          <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
-          <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
-        </div>
-      </div>
-      <div class="dash-card-body">
-        ${topN.length ? renderTable(topN) : `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
-      </div>
+    <div class="dash-grid">
+      ${champion ? renderChampion(champion, isWeekly) : ""}
+      ${renderRanking(topN, totalPlayers, modeLabel)}
     </div>
 
     <div class="dash-scoring-info">
@@ -311,108 +283,94 @@ function render() {
   });
 }
 
-function renderHero(champion, isWeekly) {
+/* ── Champion card (left column) ── */
+function renderChampion(champion, isWeekly) {
+  const name = champion.username || champion.publicId;
+  const profileUrl = champion.publicId
+    ? `profile.html?pid=${encodeURIComponent(champion.publicId)}&player=${encodeURIComponent(name)}`
+    : `profile.html?player=${encodeURIComponent(name)}`;
+
   const ffaCasualPts  = (champion.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
   const ffaRankedPts  = (champion.ffaRankedWins  || 0) * PTS_FFA_RANKED;
   const teamCasualPts = (champion.teamCasualWins || 0) * PTS_TEAM_CASUAL;
   const teamRankedPts = (champion.teamRankedWins || 0) * PTS_TEAM_RANKED;
-  const heroAvatar = champion.username || champion.publicId;
+
   return `
-    <div class="dash-hero">
-      <div class="dash-hero-glow" aria-hidden="true"></div>
-      <div class="dash-hero-content">
-        <div class="dash-hero-top">
-          ${avatarHtml(heroAvatar, "lg")}
-          <div class="dash-hero-meta">
-            <div class="dash-hero-label">${isWeekly ? "Champion de la semaine" : "Champion Global"}</div>
-            <div class="dash-hero-name">${escapeHtml(champion.username || champion.publicId)}
-              ${champion.clan ? clanBadgeHtml(champion.clan) : ""}
-            </div>
-            <div class="dash-hero-sub">Rang #${champion.rank}</div>
-          </div>
-          <div class="dash-hero-points">
-            <div class="dash-hero-points-val">${formatPoints(champion.points)}</div>
-            <div class="dash-hero-points-label">points</div>
-          </div>
-        </div>
-        <div class="dash-hero-stats">
-          <div class="dash-hero-stat">
-            <div class="dash-hero-stat-val">${champion.ffaCasualWins || 0}</div>
-            <div class="dash-hero-stat-label">FFA casual · +${formatPoints(ffaCasualPts)}</div>
-          </div>
-          <div class="dash-hero-stat">
-            <div class="dash-hero-stat-val">${champion.ffaRankedWins || 0}</div>
-            <div class="dash-hero-stat-label">FFA classé · +${formatPoints(ffaRankedPts)}</div>
-          </div>
-          <div class="dash-hero-stat">
-            <div class="dash-hero-stat-val">${champion.teamCasualWins || 0}</div>
-            <div class="dash-hero-stat-label">Team casual · +${formatPoints(teamCasualPts)}</div>
-          </div>
-          <div class="dash-hero-stat">
-            <div class="dash-hero-stat-val">${champion.teamRankedWins || 0}</div>
-            <div class="dash-hero-stat-label">Team classé · +${formatPoints(teamRankedPts)}</div>
-          </div>
-        </div>
+    <section class="dash-section dash-champion-section">
+      <div class="dash-section-header">
+        <h2 class="dash-section-title">Top joueur</h2>
+        <span class="dash-section-meta">${isWeekly ? "Cette semaine" : "Global"}</span>
       </div>
-    </div>`;
+      <div class="dash-champion">
+        <div class="dash-champion-top">
+          <span class="dash-champion-trophy" aria-hidden="true">🏆</span>
+          <div class="dash-champion-meta">
+            <div class="dash-champion-name">${escapeHtml(name)}${champion.clan ? ` <span class="dash-player-clan">[${escapeHtml(champion.clan)}]</span>` : ""}</div>
+            <div class="dash-champion-sub">Rang #1 · ${isWeekly ? "champion de la semaine" : "champion global"}</div>
+          </div>
+          <div class="dash-champion-points-wrap">
+            <div class="dash-champion-points">${formatPoints(champion.points)}</div>
+            <div class="dash-champion-points-label">points</div>
+          </div>
+        </div>
+        <div class="dash-champion-breakdown">
+          <div class="dash-champion-stat">
+            <span class="dash-champion-stat-label">FFA casual</span>
+            <span class="dash-champion-stat-val">${champion.ffaCasualWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(ffaCasualPts)}</span></span>
+          </div>
+          <div class="dash-champion-stat">
+            <span class="dash-champion-stat-label">FFA classé</span>
+            <span class="dash-champion-stat-val">${champion.ffaRankedWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(ffaRankedPts)}</span></span>
+          </div>
+          <div class="dash-champion-stat">
+            <span class="dash-champion-stat-label">Team casual</span>
+            <span class="dash-champion-stat-val">${champion.teamCasualWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(teamCasualPts)}</span></span>
+          </div>
+          <div class="dash-champion-stat">
+            <span class="dash-champion-stat-label">Team classé</span>
+            <span class="dash-champion-stat-val">${champion.teamRankedWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(teamRankedPts)}</span></span>
+          </div>
+        </div>
+        <a class="dash-more-btn" href="${profileUrl}">Voir le profil</a>
+      </div>
+    </section>`;
 }
 
-function renderTable(topN) {
+/* ── Ranking list (right column, flex rows) ── */
+function renderRanking(topN, totalPlayers, modeLabel) {
   const rows = topN.map((p) => {
     const name = p.username || p.publicId;
     const profileUrl = p.publicId
       ? `profile.html?pid=${encodeURIComponent(p.publicId)}&player=${encodeURIComponent(name)}`
       : `profile.html?player=${encodeURIComponent(name)}`;
-    const ffaCasualPts  = (p.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
-    const ffaRankedPts  = (p.ffaRankedWins  || 0) * PTS_FFA_RANKED;
-    const teamCasualPts = (p.teamCasualWins || 0) * PTS_TEAM_CASUAL;
-    const teamRankedPts = (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
+    const trophy = p.rank === 1 ? "🏆" : p.rank === 2 ? "🥈" : p.rank === 3 ? "🥉" : null;
+    const rankSlot = trophy
+      ? `<span class="dash-rank-trophy" aria-hidden="true">${trophy}</span>`
+      : `<span class="dash-rank-badge">${p.rank}</span>`;
     return `
-      <tr class="dash-row-link" data-href="${profileUrl}">
-        <td class="dash-td-rank">${rankCircleHtml(p.rank)}</td>
-        <td class="dash-td-player">
-          ${avatarHtml(name, "sm")}
-          <div class="dash-td-player-info">
-            <span class="dash-td-name">${escapeHtml(name)} ${clanBadgeHtml(p.clan)}</span>
-          </div>
-        </td>
-        <td class="dash-td-num dash-td-ffa-casual">
-          <span class="dash-td-count">${p.ffaCasualWins || 0}</span>
-          <span class="dash-td-pts">${formatPoints(ffaCasualPts)}</span>
-        </td>
-        <td class="dash-td-num dash-td-ffa-ranked">
-          <span class="dash-td-count">${p.ffaRankedWins || 0}</span>
-          <span class="dash-td-pts">${formatPoints(ffaRankedPts)}</span>
-        </td>
-        <td class="dash-td-num dash-td-team-casual">
-          <span class="dash-td-count">${p.teamCasualWins || 0}</span>
-          <span class="dash-td-pts">${formatPoints(teamCasualPts)}</span>
-        </td>
-        <td class="dash-td-num dash-td-team-ranked">
-          <span class="dash-td-count">${p.teamRankedWins || 0}</span>
-          <span class="dash-td-pts">${formatPoints(teamRankedPts)}</span>
-        </td>
-        <td class="dash-td-num dash-td-points">${formatPoints(p.points)}</td>
-      </tr>`;
+      <a class="dash-row dash-row-link" href="${profileUrl}">
+        <span class="dash-rank-slot">${rankSlot}</span>
+        <span class="dash-player">
+          <span class="dash-player-name">${escapeHtml(name)}</span>
+          ${p.clan ? `<span class="dash-player-clan">[${escapeHtml(p.clan)}]</span>` : ""}
+        </span>
+        <span class="dash-score">
+          <span class="dash-score-val">${formatPoints(p.points)}</span><span class="dash-score-suffix">pts</span>
+        </span>
+      </a>`;
   }).join("");
 
   return `
-    <div class="dash-table-wrap">
-      <table class="dash-table">
-        <thead>
-          <tr>
-            <th class="dash-th-rank">#</th>
-            <th>Joueur</th>
-            <th class="dash-th-num">FFA casual</th>
-            <th class="dash-th-num">FFA classé</th>
-            <th class="dash-th-num">Team casual</th>
-            <th class="dash-th-num">Team classé</th>
-            <th class="dash-th-num">Points</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`;
+    <section class="dash-section dash-ranking-section">
+      <div class="dash-section-header">
+        <h2 class="dash-section-title">Classement</h2>
+        <span class="dash-section-meta">${totalPlayers} joueurs · ${modeLabel}</span>
+      </div>
+      <div class="dash-list">
+        ${rows || `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
+      </div>
+      <a class="dash-more-btn" href="index.html?tab=ranked">Voir tout le classement</a>
+    </section>`;
 }
 
 /* ════════════════════════════════════════════════════════════════

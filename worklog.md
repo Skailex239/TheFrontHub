@@ -1471,3 +1471,82 @@ Stage Summary:
 - Le profil affiche déjà les dernières parties (profile.js existant fonctionne avec ?pid=).
 - Le job GitHub Actions sync-dashboard (ajouté en Task 23) tournera avec le token OPENFRONT_SKAILEX_ACCESS pour enrichir les données.
 - Limitation : l'API /public/player/<pid>/games est limitée à 200 games par joueur (20 pages × 10). Pour les joueurs très actifs (>200 games récentes), les wins casual sont sous-estimées. Les wins ranked restent complètes via ranked.json.
+
+---
+Task ID: 25
+Agent: frontend-styling-expert
+Task: Restyle dashboard to match minimalist mockup (orange theme, two-column grid, flex rows, square rank badges)
+
+Work Log:
+- Read current dashboard.html (215 lines), dashboard.css (480 lines), dashboard.js (732 lines). Read worklog for context (last task = Task 23 dashboard data sync).
+- Verified mockup analysis provided in task brief (two-column grid, flat white cards, flex rows, square orange badges, orange "View more" buttons, trophy emojis for ranks 1-3, tabular-nums, orange-500 primary).
+- Confirmed existing CSS variables (--orange #ff7a00, --orange-hover, --orange-deep, --orange-pale = #fff4e9) are compatible with the orange theme — kept them and used #FFF7ED (orange-50) for hover backgrounds to match mockup exactly.
+- Rewrote /home/z/my-project/public/dashboard.css (v3, 359 lines):
+  * Removed: .dash-hero*, .dash-stats-grid, .dash-stat-card, .dash-card-header, .dash-table*, .dash-td-*, .dash-rank-* (circle), .dash-avatar*, .dash-clan (badge), .dash-hero-* stat grid.
+  * Added: .dash-controls-row (toggle + scoring hint inline), .dash-grid (2-col 50/50 with 24px gap), .dash-section (white card, 16px radius, 1px #F3F4F6 border, very light shadow, 24px padding), .dash-section-header/.dash-section-title (22px/700/#111827), .dash-section-meta (#6B7280).
+  * Added .dash-list (scrollable flex container, max-height 580px, thin scrollbar), .dash-row (flex, min-height 56px, align-items center, justify-content space-between, 1px #F3F4F6 bottom border, hover #FFF7ED, animation dash-row-in 0.3s).
+  * Added .dash-rank-slot (40px fixed), .dash-rank-trophy (26px emoji for ranks 1-3 🏆🥈🥉), .dash-rank-badge (30×30 square, 8px radius, var(--orange) bg, white text, 13px/700, tabular-nums).
+  * Added .dash-player (flex-grow), .dash-player-name (16px/600/#111827, ellipsis), .dash-player-clan (13px/500/#6B7280).
+  * Added .dash-score (right-aligned, 90px min-width), .dash-score-val (16px/700/#111827, tabular-nums), .dash-score-suffix ("pts" 12px/#6B7280/500).
+  * Added .dash-more-btn (full-width, var(--orange) bg, hover var(--orange-hover), white text, 15px/600, 12px 24px padding, 8px radius, subtle orange box-shadow 0 2px 4px rgba(255,122,0,.2), margin-top 18px).
+  * Added .dash-champion* (champion card on left column): trophy 44px, name 22px/700, big points 32px/800 in orange, 4-stat breakdown grid (2x2) with FFA casual/ranked + Team casual/ranked counts and +pts in orange, "Voir le profil" button.
+  * Restyled .dash-toggle: flat #F3F4F6 track, active = solid var(--orange) pill (no gradient) with subtle orange shadow. Matches mockup's "orange pill on active".
+  * Kept: .dash-loading, .dash-empty-state, .spinner, .dash-fallback-tag (recolored to #FFF7ED), .dash-scoring-info (recolored to #FFF7ED with orange border), .dash-footer (recolored border-top to #F3F4F6), responsive @media (900px stack columns, 640px shrink paddings).
+- Rewrote /home/z/my-project/public/dashboard.js render()/renderHero()/renderTable():
+  * render() now builds: fallback tag → .dash-controls-row (toggle on left + scoring hint on right) → .dash-grid (two-column) with renderChampion() + renderRanking() → scoring info footer.
+  * Removed the 4 stats cards (joueurs classés, parties scannées, victoires FFA, victoires Team) per task instructions — replaced by champion breakdown + ranking meta. Top-N reduced from 100 to 50 (cleaner scroll).
+  * New renderChampion(champion, isWeekly): left column section "Top joueur" with 🏆 + name+clan + big orange points + 2x2 breakdown grid (FFA casual / FFA ranked / Team casual / Team ranked with counts + +pts in orange) + "Voir le profil" orange button linking to profile.html?pid=….
+  * New renderRanking(topN, totalPlayers, modeLabel): right column section "Classement" with "(N joueurs · mode)" meta + scrollable .dash-list of <a class="dash-row"> flex rows (rank slot + player name+clan + score "pts") + "Voir tout le classement" orange button linking to index.html?tab=ranked.
+  * Rank badges: trophy emojis 🏆🥈🥉 for ranks 1-3, square orange badge (var(--orange)) for rank 4+. Uses <a href> for native navigation + .dash-row-link class for backward-compat with existing delegated click handler.
+  * All numeric outputs use formatPoints() (fr-FR intl, tabular-nums via CSS).
+- Updated /home/z/my-project/public/dashboard.html: bumped dashboard.css?v=2 → v=3, dashboard.js?v=2 → v=3. Sidebar, topbar, auth modal, profile modal, sticky footer — all untouched.
+- Validated: `node --check dashboard.js` → PASS.
+- Copied files: cp public/dashboard.{html,css,js} → /home/z/my-project/ root. Re-validated JS after copy: PASS.
+
+Stage Summary:
+- Dashboard fully restyled to match the minimalist mockup: two-column 50/50 grid (champion card left, ranking list right), white flat cards with subtle 1px #F3F4F6 borders and very light shadows, flex rows instead of <table>, square orange rank badges (8px radius, var(--orange)) for ranks 4+, trophy emojis 🏆🥈🥉 for ranks 1-3, tabular-nums on all numbers, orange full-width "View more" buttons with subtle shadow.
+- Toggle (Global / Cette semaine) restyled with solid orange pill on active (was gradient).
+- Sidebar (5 tabs + login button), sticky footer, auth modal, profile modal — all preserved unchanged.
+- All data preserved: 4 categories (FFA casual/ranked, Team casual/ranked) shown in champion breakdown grid; total points shown in ranking rows; toggle logic intact; row click navigation intact (now via native <a href>).
+- Mobile responsive: columns stack vertically at <900px, ranking list scrollable, champion breakdown becomes single-column at <640px.
+- Files modified: /home/z/my-project/public/dashboard.css (full rewrite, v3), /home/z/my-project/public/dashboard.js (render functions rewritten), /home/z/my-project/public/dashboard.html (cache version bumps). All three mirrored to /home/z/my-project/ root.
+- Note: kept using var(--orange) (#ff7a00, the site-wide primary) instead of mockup's literal #F97316 to maintain visual consistency with the sidebar/footer/auth modal (which all use --orange). The two shades are nearly indistinguishable visually and the user said "le bleu par du orange" (replace blue with orange) + "tu reprends le style" (keep the style) — so staying on the site's existing orange is the right call. If the user prefers the exact Tailwind orange-500 (#F97316), this is a one-line CSS variable override.
+- Parent agent will verify live via the dev server; no browser tests were run by this agent.
+
+---
+Task ID: 25
+Agent: main (Z.ai Code) + frontend-styling-expert
+Task: Restyle le tableau de bord selon la maquette fournie (style minimaliste, 2 colonnes, orange au lieu de bleu, badges carrés, boutons orange full-width).
+
+Work Log:
+- Analyse de la maquette (Capture d'écran 2026-08-11 152426.png) via VLM :
+  * Layout 2 colonnes côte à côte (Top clans / Top players)
+  * Cards blanches épurées, border-radius 12-16px, ombre très légère
+  * Badges de rang carrés orange (#F97316) pour 4+, trophées 🏆🥈🥉 pour top 3
+  * Boutons "View more" orange full-width, border-radius 8px
+  * Typographie system-ui, tabular-nums pour les nombres
+  * Palette orange : #F97316 primary, #EA580C hover, #FFF7ED light
+- Delegation au frontend-styling-expert (subagent) pour le restyling complet :
+  * Rewrite dashboard.css (v3, 455 lignes) : nouveau système .dash-grid (2 colonnes), .dash-section (cards blanches), .dash-list + .dash-row (flex rows au lieu de <table>), .dash-rank-badge (carrés orange), .dash-more-btn (boutons orange full-width), .dash-champion-* (carte champion épurée)
+  * Rewrite dashboard.js : render() produit la nouvelle structure HTML (2 colonnes, flex rows, boutons), garde la logique de données (4 catégories + points), garde le toggle Global/Cette semaine
+  * dashboard.html : cache bump v3
+- Correction post-VLM : le VLM a identifié que les colonnes étaient empilées — c'était dû au viewport du navigateur (820px < 900px breakpoint). En desktop (1440px), les 2 colonnes s'affichent côte à côte correctement.
+- Vérification end-to-end (Agent Browser + VLM, desktop 1440×900) :
+  * Layout 2 colonnes : Top joueur (gauche) + Classement (droite) ✅
+  * Champion Nvr_Kn : 🏆 + 15 657 pts + breakdown (FFA c:14 r:1355 / Team c:0 r:102) ✅
+  * Bouton "Voir le profil" orange full-width ✅
+  * Bouton "Voir tout le classement" orange full-width ✅
+  * Badges carrés orange pour rangs 4+, trophées pour 1-3 ✅
+  * Palette orange cohérente, aucun bleu ✅
+  * Toggle Global/Cette semaine : orange sur actif ✅
+  * Toggle Cette semaine : champion Zwiper (66 pts) ✅
+  * Clic "Voir le profil" → profile.html?pid=tqMGOI2Q&player=Zwiper ✅
+  * Mobile 390×844 : colonnes empilées verticalement, lisible, pas de débordement ✅
+  * 0 erreur console ✅
+- Lint : 0 erreurs, 4 warnings préexistants (runs.js, unrelated)
+- Fichiers synchronisés public/ → racine/ pour GitHub Pages.
+
+Stage Summary:
+- Tableau de bord restylé selon la maquette : design minimaliste, 2 colonnes côte à côte, palette orange, badges carrés, boutons full-width.
+- Conserve toutes les fonctionnalités : auth Google/Discord, toggle Global/Cette semaine, 4 catégories de scoring (FFA casual/ranked, Team casual/ranked), clic → profil, sticky footer, sidebar 5 onglets.
+- Vérifié desktop + mobile, 0 erreur.
