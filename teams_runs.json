@@ -38691,6 +38691,39 @@
       "numPlayers": 92,
       "timestamp": "2026-08-10T23:28:49.106Z",
       "url": "https://openfront.io/game/RqF2EFQg"
+    },
+    {
+      "id": "rcSJq3C1",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "admiral",
+          "clientID": "BgCK48ti",
+          "clanTag": "PIVO"
+        },
+        {
+          "username": "michman",
+          "clientID": "5ZAFg4gX",
+          "clanTag": "PIVO"
+        },
+        {
+          "username": "cook",
+          "clientID": "RPmxP4LL",
+          "clanTag": "PIVO"
+        },
+        {
+          "username": "Mr. Yunga",
+          "clientID": "dnjJE4GD",
+          "clanTag": "PIVO"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1247,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-10T23:44:19.000Z",
+      "url": "https://openfront.io/game/rcSJq3C1"
     }
   ]
 }
