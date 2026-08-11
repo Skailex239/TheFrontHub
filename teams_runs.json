@@ -8523,6 +8523,29 @@
       "numPlayers": 59,
       "timestamp": "2026-08-11T10:00:35.379Z",
       "url": "https://openfront.io/game/WJEc8wS3"
+    },
+    {
+      "id": "Sp11xnbq",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Fred",
+          "clientID": "dB7N9jyu",
+          "clanTag": null
+        },
+        {
+          "username": "High Noon",
+          "clientID": "SZQToork",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 835,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "timestamp": "2026-08-11T10:27:25.929Z",
+      "url": "https://openfront.io/game/Sp11xnbq"
     }
   ],
   "trios": [
@@ -22682,6 +22705,70 @@
       "numPlayers": 72,
       "timestamp": "2026-08-11T09:45:39.504Z",
       "url": "https://openfront.io/game/1jFfuLnN"
+    },
+    {
+      "id": "TGsPbaCc",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "KING BAGHER",
+          "clientID": "tzr38yi9",
+          "clanTag": "LFT"
+        },
+        {
+          "username": "king gabar",
+          "clientID": "XiXKjohr",
+          "clanTag": "LFT"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1637,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-11T10:10:45.957Z",
+      "url": "https://openfront.io/game/TGsPbaCc"
+    },
+    {
+      "id": "dFqoomFC",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Ciaphas Cain",
+          "clientID": "aXdfTyTC",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1015,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-11T10:24:57.790Z",
+      "url": "https://openfront.io/game/dFqoomFC"
+    },
+    {
+      "id": "RjH6xLJx",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BrackleFishington",
+          "clientID": "J3dbN2jf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "West Korea",
+          "clientID": "YBN3Ldtb",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 943,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-11T10:22:55.652Z",
+      "url": "https://openfront.io/game/RjH6xLJx"
     }
   ],
   "quads": [
