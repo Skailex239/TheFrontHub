@@ -15,9 +15,9 @@
  *
  * Scoring :
  *   FFA casual   win = +10
- *   FFA ranked   win = +11 (10 + 1 bonus ranked)
+ *   FFA ranked   win = +1   (ranked = 1 pt, PAS en plus du FFA)
  *   Team casual  win = +5
- *   Team ranked  win = +6  (5 + 1 bonus ranked)
+ *   Team ranked  win = +1   (ranked = 1 pt, PAS en plus du Team)
  *
  * Sortie :
  *   - dashboard_ranking.json (agrégat global + hebdo, lu par le frontend)
@@ -165,7 +165,8 @@ function aggregatePlayerWins(games) {
 }
 
 function computePoints(p) {
-  return p.ffaCasualWins * 10 + p.ffaRankedWins * 11 + p.teamCasualWins * 5 + p.teamRankedWins * 6;
+  // FFA casual = 10, Team casual = 5, Ranked (1v1 ou 2v2) = 1 (pas en plus)
+  return p.ffaCasualWins * 10 + p.ffaRankedWins * 1 + p.teamCasualWins * 5 + p.teamRankedWins * 1;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────
@@ -322,7 +323,7 @@ async function main() {
     weeklyPlayers.push({
       ...p,
       ffaCasualWins: ffaC, ffaRankedWins: ffaR, teamCasualWins: teamC, teamRankedWins: teamR,
-      points: ffaC * 10 + ffaR * 11 + teamC * 5 + teamR * 6,
+      points: ffaC * 10 + ffaR * 1 + teamC * 5 + teamR * 1,
     });
   }
   weeklyPlayers.sort((a, b) => b.points - a.points);

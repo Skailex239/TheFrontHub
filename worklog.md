@@ -1550,3 +1550,36 @@ Stage Summary:
 - Tableau de bord restylé selon la maquette : design minimaliste, 2 colonnes côte à côte, palette orange, badges carrés, boutons full-width.
 - Conserve toutes les fonctionnalités : auth Google/Discord, toggle Global/Cette semaine, 4 catégories de scoring (FFA casual/ranked, Team casual/ranked), clic → profil, sticky footer, sidebar 5 onglets.
 - Vérifié desktop + mobile, 0 erreur.
+
+---
+Task ID: 26
+Agent: main (Z.ai Code)
+Task: Correction du scoring : FFA=10, Team=5, Ranked=1 (pas de "+" — le classé rapporte juste 1 pt, pas 11 ou 6).
+
+Work Log:
+- Clarification de l'utilisateur : "FFA : 10 points TEAM : 5 points Ranked : 1 point par win y a pas de 'plus' 1v1 et 2v2 c'est juste 1 point"
+  * FFA casual win = +10
+  * Team casual win = +5
+  * Ranked win (1v1 OU 2v2) = +1 (PAS en plus du FFA/Team — juste 1 pt séparé)
+- sync-dashboard.js :
+  * computePoints() : ffaCasual*10 + ffaRanked*1 + teamCasual*5 + teamRanked*1 (au lieu de *11 et *6)
+  * Calcul weekly identique : ffaC*10 + ffaR*1 + teamC*5 + teamR*1
+- dashboard.js :
+  * Constantes PTS_FFA_RANKED = 1 (au lieu de 11), PTS_TEAM_RANKED = 1 (au lieu de 6)
+  * Légendes mises à jour : "FFA casual +10 · FFA classé +1 · Team casual +5 · Team classé +1"
+  * Note ajoutée : "(le classé rapporte juste 1 pt, pas en plus)"
+- dashboard.html : meta description + topbar subtitle + footer legend mis à jour avec +1 (au lieu de +11/+6)
+- Relance du sync (102 requêtes API, ~10s) :
+  * Champion global : Nvr_Kn (1597 pts — FFA c:14 r:1355 / Team c:0 r:102)
+    - Avant (vieux scoring) : 15657 pts
+    - Maintenant : 14×10 + 1355×1 + 0×5 + 102×1 = 140 + 1355 + 0 + 102 = 1597 pts ✅
+  * Anto remonte à la 4e place (910 pts) grâce à ses 53 FFA casual wins (53×10=530) — les casual wins pèsent beaucoup plus maintenant.
+  * Top 5 weekly : Anto (24), Nvr_Kn (16), Skailex on YT (11), Zwiper (11), YellowBiscuit (1).
+- Vérification VLM : barème correctement affiché "FFA casual +10 • FFA classé +1 • Team casual +5 • Team classé +1", champion Nvr_Kn 1597 pts, calcul vérifié par le VLM.
+- Fichiers synchronisés public/ → racine/.
+
+Stage Summary:
+- Scoring corrigé selon la spec de l'utilisateur : FFA casual +10, FFA classé +1, Team casual +5, Team classé +1 (le classé rapporte juste 1 pt, pas en plus du FFA/Team).
+- Impact : les casual wins pèsent maintenant beaucoup plus (10× ou 5× plus qu'un ranked win). Les joueurs avec beaucoup de casual wins (Anto: 53 FFA casual) remontent dans le classement.
+- Champion Nvr_Kn : 1597 pts (au lieu de 15657 avec l'ancien scoring).
+- Tout vérifié end-to-end via VLM.

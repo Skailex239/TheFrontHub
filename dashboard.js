@@ -11,8 +11,9 @@
  *   }
  *
  * Barème :
- *   FFA casual  = +10  ·  FFA classé (1v1) = +11
- *   Team casual = +5   ·  Team classé (2v2) = +6
+ *   FFA casual  = +10  ·  FFA classé (1v1) = +1
+ *   Team casual = +5   ·  Team classé (2v2) = +1
+ *   (ranked = 1 pt, PAS en plus du FFA/Team)
  *
  * Fallback : si dashboard_ranking.json est absent/vide, on charge ranked.json
  * (top 100 classé 1v1 + 2v2) et on l'affiche en FFA ranked + Team ranked uniquement
@@ -39,9 +40,9 @@ import { fetchOpenFront } from "./openfront-client.js?v=24";
    ════════════════════════════════════════════════════════════════ */
 
 const PTS_FFA_CASUAL  = 10;
-const PTS_FFA_RANKED  = 11;
+const PTS_FFA_RANKED  = 1;   // ranked = 1 pt, pas en plus du FFA
 const PTS_TEAM_CASUAL = 5;
-const PTS_TEAM_RANKED = 6;
+const PTS_TEAM_RANKED = 1;   // ranked = 1 pt, pas en plus du Team
 
 /* ════════════════════════════════════════════════════════════════
    State + DOM
@@ -257,7 +258,7 @@ function render() {
         <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
         <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
       </div>
-      <div class="dash-scoring-inline">FFA casual +10 · FFA classé +11 · Team casual +5 · Team classé +6</div>
+      <div class="dash-scoring-inline">FFA casual +10 · FFA classé +1 · Team casual +5 · Team classé +1</div>
     </div>
 
     <div class="dash-grid">
@@ -267,7 +268,7 @@ function render() {
 
     <div class="dash-scoring-info">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +11</strong> · <strong>Team casual +5</strong> · <strong>Team classé +6</strong>. ${isWeekly ? "Vue hebdomadaire = parties scannées sur les 7 derniers jours." : "Vue globale = cumul de toutes les parties scannées."}</span>
+      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). ${isWeekly ? "Vue hebdomadaire = parties scannées sur les 7 derniers jours." : "Vue globale = cumul de toutes les parties scannées."}</span>
     </div>
   `;
 
