@@ -8500,6 +8500,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-11T09:39:10.129Z",
       "url": "https://openfront.io/game/uABXs1gA"
+    },
+    {
+      "id": "WJEc8wS3",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Soulterr",
+          "clientID": "Vz5JVQPW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Vincent",
+          "clientID": "6tPY9aHC",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1378,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "timestamp": "2026-08-11T10:00:35.379Z",
+      "url": "https://openfront.io/game/WJEc8wS3"
     }
   ],
   "trios": [
@@ -40531,6 +40554,72 @@
       "numPlayers": 73,
       "timestamp": "2026-08-11T10:02:57.519Z",
       "url": "https://openfront.io/game/KSVphk4K"
+    },
+    {
+      "id": "D6XGBn2H",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Dani G. German",
+          "clientID": "itNZoZLb",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "MrGemini",
+          "clientID": "KpNBnq9M",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "Gabe Owners",
+          "clientID": "UDH1KqA6",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "Particular is private owner",
+          "clientID": "42oKqivo",
+          "clanTag": "BOGOR"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1582,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-11T09:57:13.686Z",
+      "url": "https://openfront.io/game/D6XGBn2H"
+    },
+    {
+      "id": "ZSWyzUsc",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonSeal4",
+          "clientID": "wBMQd3YN",
+          "clanTag": null
+        },
+        {
+          "username": "Aurelius",
+          "clientID": "DXbbmvxX",
+          "clanTag": null
+        },
+        {
+          "username": "Bolbistan",
+          "clientID": "baGgix1t",
+          "clanTag": "NOM"
+        },
+        {
+          "username": "Zgidno Vidpovidno",
+          "clientID": "HXKYxMM4",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1419,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-11T10:07:12.262Z",
+      "url": "https://openfront.io/game/ZSWyzUsc"
     }
   ]
 }
