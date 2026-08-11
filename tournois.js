@@ -16,6 +16,10 @@ import {
   loadData,
   computePlayerPRs,
   computeTournamentPlayerStats,
+  computeDashboardRanking,
+  isTeamTournament,
+  weekKey,
+  currentWeekKey,
   isFinalPhase,
   phaseUsesTierMultiplier,
   tierMultiplier,
@@ -102,7 +106,7 @@ function escapeHtml(s) {
 
 function parseHash() {
   const h = window.location.hash.replace(/^#\/?/, "");
-  if (!h) return { route: "home", params: {} };
+  if (!h) return { route: "dashboard", params: {} };
   const parts = h.split("/");
   const route = parts[0];
   const params = {};
@@ -133,7 +137,7 @@ async function router() {
 
   // Breadcrumb + retour
   let bcPath = "";
-  let backRoute = "home";
+  let backRoute = "dashboard";
   if (route === "tournament" && params.slug) {
     const t = getTournament(_data.tournaments, params.slug);
     bcPath = `<strong>Tournois</strong> / ${escapeHtml(t?.name || params.slug)}`;
@@ -149,6 +153,7 @@ async function router() {
   // Rendu
   try {
     switch (route) {
+      case "dashboard": await renderDashboard(); break;
       case "ranking": await renderRanking(); break;
       case "tournaments": await renderTournamentsList(); break;
       case "tournament": await renderTournamentDetail(params.slug); break;
@@ -180,6 +185,147 @@ function updateNavActive(route) {
   // Drawer (mobile)
   document.querySelectorAll(".prf-drawer-link").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.route === route);
+  });
+}
+
+/* ════════════════════════════════════════════════════════════════
+   VUE : Tableau de bord — Classement par points (FFA +10 / Team +5)
+   ════════════════════════════════════════════════════════════════ */
+let _dashMode = "overall"; // "overall" | "weekly"
+
+async function renderDashboard() {
+  setHeader("Tableau de bord", "Classement par points · FFA +10 / Team +5 par victoire",
+    `<span class="prf-chip"><i data-prf-icon="trophy" data-prf-icon-size="14"></i> ${_data.tournaments.length} tournois</span> <span class="prf-chip"><i data-prf-icon="users" data-prf-icon-size="14"></i> ${_data.leaderboard.length} joueurs</span>`);
+
+  const weekOnly = _dashMode === "weekly" ? currentWeekKey() : null;
+  const ranking = computeDashboardRanking(_data.tournaments, _data.players, _data.scoring, { weekOnly });
+
+  // Champion (overall #1 ou weekly #1)
+  const champion = ranking[0] ?? null;
+
+  // Stats globales
+  const totalPlayers = ranking.length;
+  const totalWins = ranking.reduce((s, e) => s + e.wins, 0);
+  const totalPoints = ranking.reduce((s, e) => s + e.points, 0);
+  const totalFfaWins = ranking.reduce((s, e) => s + e.ffaWins, 0);
+  const totalTeamWins = ranking.reduce((s, e) => s + e.teamWins, 0);
+
+  // Top 10 affiché (scrollable si plus)
+  const topN = ranking.slice(0, 50);
+
+  const modeLabel = _dashMode === "weekly" ? "Cette semaine" : "Global";
+
+  view.innerHTML = `
+    ${champion ? `
+    <div class="prf-hero">
+      <div class="prf-hero-label">${_dashMode === "weekly" ? "Champion de la semaine" : "Champion Global"}</div>
+      <div class="prf-hero-name">${escapeHtml(champion.player?.name || champion.playerId)}</div>
+      <div class="prf-hero-sub">
+        ${champion.player?.clan ? `[${escapeHtml(champion.player.clan)}] ` : ""}Rank #${champion.rank}
+      </div>
+      <div class="prf-hero-stats">
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${formatPoints(champion.points)}</div>
+          <div class="prf-hero-stat-label">Points</div>
+        </div>
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${champion.wins}</div>
+          <div class="prf-hero-stat-label">Victoires</div>
+        </div>
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${champion.ffaWins}</div>
+          <div class="prf-hero-stat-label">FFA</div>
+        </div>
+        <div class="prf-hero-stat">
+          <div class="prf-hero-stat-val">${champion.teamWins}</div>
+          <div class="prf-hero-stat-label">Team</div>
+        </div>
+      </div>
+    </div>` : ""}
+
+    <div class="prf-stats-grid">
+      <div class="prf-stat-card">
+        <div class="label">Joueurs classés</div>
+        <div class="value">${totalPlayers}</div>
+        <div class="sub">${modeLabel}</div>
+      </div>
+      <div class="prf-stat-card">
+        <div class="label">Points distribués</div>
+        <div class="value">${formatPoints(totalPoints)}</div>
+        <div class="sub">${modeLabel}</div>
+      </div>
+      <div class="prf-stat-card">
+        <div class="label">Victoires FFA</div>
+        <div class="value">${totalFfaWins}</div>
+        <div class="sub">+10 pts chacune</div>
+      </div>
+      <div class="prf-stat-card">
+        <div class="label">Victoires Team</div>
+        <div class="value">${totalTeamWins}</div>
+        <div class="sub">+5 pts chacune</div>
+      </div>
+    </div>
+
+    <div class="prf-card prf-dash-card">
+      <div class="prf-card-header">
+        <span class="prf-card-title">Classement — ${modeLabel}</span>
+        <div class="prf-dash-toggle" role="tablist" aria-label="Période du classement">
+          <button class="prf-dash-toggle-btn ${_dashMode === "overall" ? "active" : ""}" data-dash-mode="overall" role="tab" aria-selected="${_dashMode === "overall"}">Global</button>
+          <button class="prf-dash-toggle-btn ${_dashMode === "weekly" ? "active" : ""}" data-dash-mode="weekly" role="tab" aria-selected="${_dashMode === "weekly"}">Cette semaine</button>
+        </div>
+      </div>
+      <div class="prf-card-body">
+        ${topN.length ? `
+        <div class="prf-table-wrap" style="max-height:560px;overflow-y:auto">
+          <table class="prf-table prf-dash-table">
+            <thead>
+              <tr>
+                <th class="prf-th-rank">#</th>
+                <th>Joueur</th>
+                <th class="prf-th-num">FFA</th>
+                <th class="prf-th-num">Team</th>
+                <th class="prf-th-num">Top 3</th>
+                <th class="prf-th-num">Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${topN.map((e) => {
+                const name = e.player?.name || e.playerId;
+                const clan = e.player?.clan || "";
+                return `
+                <tr class="prf-row-link" onclick="location.hash='#/player/${encodeURIComponent(e.playerId)}'">
+                  <td class="prf-td-rank">${rankCircleHtml(e.rank)}</td>
+                  <td class="prf-td-player">
+                    ${avatarHtml(name, "sm")}
+                    <div class="prf-td-player-info">
+                      <span class="prf-td-player-name">${escapeHtml(name)}</span>
+                      ${clan ? `<span class="prf-td-player-clan">[${escapeHtml(clan)}]</span>` : ""}
+                    </div>
+                  </td>
+                  <td class="prf-td-num">${e.ffaWins}</td>
+                  <td class="prf-td-num">${e.teamWins}</td>
+                  <td class="prf-td-num">${e.top3}</td>
+                  <td class="prf-td-num prf-td-points">${formatPoints(e.points)}</td>
+                </tr>`;
+              }).join("")}
+            </tbody>
+          </table>
+        </div>` : `<p style="color:var(--prf-muted);text-align:center;padding:40px 20px">Aucun tournoi ${_dashMode === "weekly" ? "cette semaine" : "pour le moment"}.</p>`}
+      </div>
+    </div>
+
+    <div class="prf-dash-scoring-info">
+      <i data-prf-icon="info" data-prf-icon-size="14"></i>
+      <span>Barème : FFA — 1er <strong>+10</strong>, 2e +7, 3e +5, 4e +3, 5e +1 · Team — 1er <strong>+5</strong>, 2e +3, 3e +2</span>
+    </div>
+  `;
+
+  // Toggle event listeners
+  view.querySelectorAll(".prf-dash-toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      _dashMode = btn.dataset.dashMode;
+      renderDashboard();
+    });
   });
 }
 
@@ -1096,7 +1242,7 @@ document.addEventListener("keydown", (e) => {
 
 // Breadcrumb retour
 breadcrumbBack?.addEventListener("click", () => {
-  const back = breadcrumbBack.getAttribute("data-back") || "home";
+  const back = breadcrumbBack.getAttribute("data-back") || "dashboard";
   location.hash = `#/${back}`;
 });
 
@@ -1106,7 +1252,7 @@ window.addEventListener("DOMContentLoaded", router);
 
 // Si pas de hash au démarrage, aller à l'accueil
 if (!window.location.hash) {
-  window.location.hash = "#/home";
+  window.location.hash = "#/dashboard";
 } else {
   router();
 }

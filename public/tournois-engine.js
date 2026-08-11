@@ -157,6 +157,150 @@ export function computePlayerPRs(tournaments, scoring) {
   return prs;
 }
 
+/* ════════════════════════════════════════════════════════════════════
+ *  Tableau de bord — Classement par points (FFA +10 / Team +5 par victoire)
+ * ════════════════════════════════════════════════════════════════════ */
+
+// Barème du Tableau de bord : points attribués selon le format et la place
+// en phase finale. FFA : 1er=+10 (comme demandé), podium dégressif.
+// Team : 1er=+5 (comme demandé), podium dégressif.
+const DASHBOARD_POINTS = {
+  ffa: { 1: 10, 2: 7, 3: 5, 4: 3, 5: 1 },
+  team: { 1: 5, 2: 3, 3: 2 },
+};
+
+// Détermine si un tournoi est FFA ou Team à partir du format/série/nom.
+export function isTeamTournament(t) {
+  const fmt = (t.format || "").toLowerCase();
+  if (fmt === "team" || fmt === "2v2" || fmt === "bracket") {
+    // bracket peut être FFA ou team — on vérifie le nom
+    const name = `${t.name || ""} ${t.series || ""}`.toLowerCase();
+    if (name.includes("2v2") || name.includes("team") || name.includes("équipe")) {
+      return true;
+    }
+    // bracket sans indication team → on considère FFA par défaut
+    return false;
+  }
+  const name = `${t.name || ""} ${t.series || ""}`.toLowerCase();
+  if (name.includes("2v2") || name.includes("team") || name.includes("équipe")) {
+    return true;
+  }
+  return false;
+}
+
+// Retourne la clé de semaine ISO (YYYY-Www) d'une date.
+export function weekKey(iso) {
+  const d = new Date(iso.length === 10 ? `${iso}T12:00:00Z` : iso);
+  if (Number.isNaN(d.getTime())) return null;
+  // Trouver le lundi de la semaine
+  const day = d.getUTCDay() || 7; // 0=dimanche → 7
+  const monday = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - day + 1));
+  const y = monday.getUTCFullYear();
+  const m = monday.getUTCMonth();
+  const jan1 = new Date(Date.UTC(y, 0, 1));
+  const week = Math.ceil(((monday - jan1) / 86400000 + jan1.getUTCDay() + 1) / 7);
+  return `${y}-W${String(week).padStart(2, "0")}`;
+}
+
+// Renvoie la clé de semaine actuelle (UTC).
+export function currentWeekKey() {
+  return weekKey(new Date().toISOString());
+}
+
+/**
+ * Calcule le classement Tableau de bord.
+ * Points : FFA 1er=+10, 2e=+7, 3e=+5, 4e=+3, 5e=+1
+ *          Team 1er=+5, 2e=+3, 3e=+2
+ * @param {Array} tournaments
+ * @param {Array} players
+ * @param {object} scoring
+ * @param {object} [opts] — { weekOnly: string|null } pour filtrer par semaine
+ * @returns {Array} classement trié par points décroissants
+ */
+export function computeDashboardRanking(tournaments, players, scoring, opts = {}) {
+  const { weekOnly = null } = opts;
+  const byId = new Map(players.map((p) => [p.discordId, p]));
+  const map = new Map();
+  const getOrCreate = (id) => {
+    let e = map.get(id);
+    if (!e) {
+      e = {
+        playerId: id,
+        points: 0,
+        ffaWins: 0,
+        teamWins: 0,
+        wins: 0,
+        top3: 0,
+        events: 0,
+        bestPlace: null,
+        awards: [],
+      };
+      map.set(id, e);
+    }
+    return e;
+  };
+
+  const sorted = [...tournaments].sort((a, b) => a.date.localeCompare(b.date));
+  for (const t of sorted) {
+    if (weekOnly) {
+      const wk = weekKey(t.date);
+      if (wk !== weekOnly) continue;
+    }
+    const isTeam = isTeamTournament(t);
+    const ptsTable = isTeam ? DASHBOARD_POINTS.team : DASHBOARD_POINTS.ffa;
+    const seen = new Set();
+    for (const phase of t.phases) {
+      if (!isFinalPhase(scoring, t, phase.type)) continue;
+      for (const p of phase.placements) {
+        if (p.place == null) continue;
+        const e = getOrCreate(p.player);
+        const pts = ptsTable[p.place] || 0;
+        if (pts > 0) {
+          e.points += pts;
+          e.awards.push({
+            tournamentSlug: t.slug,
+            tournamentName: t.name,
+            tournamentDate: t.date,
+            format: isTeam ? "team" : "ffa",
+            tier: t.tier,
+            place: p.place,
+            points: pts,
+          });
+        }
+        if (p.place === 1) {
+          e.wins += 1;
+          if (isTeam) e.teamWins += 1;
+          else e.ffaWins += 1;
+        }
+        if (p.place <= 3) e.top3 += 1;
+        e.bestPlace = e.bestPlace == null ? p.place : Math.min(e.bestPlace, p.place);
+        seen.add(p.player);
+      }
+    }
+    for (const id of seen) getOrCreate(id).events += 1;
+  }
+
+  const arr = [...map.values()];
+  arr.sort((a, b) => {
+    if (b.points !== a.points) return b.points - a.points;
+    if (b.wins !== a.wins) return b.wins - a.wins;
+    if (b.top3 !== a.top3) return b.top3 - a.top3;
+    const ba = a.bestPlace ?? Infinity;
+    const bb = b.bestPlace ?? Infinity;
+    if (bb !== ba) return bb - ba;
+    const na = byId.get(a.playerId)?.name ?? a.playerId;
+    const nb = byId.get(b.playerId)?.name ?? b.playerId;
+    return na.localeCompare(nb, "fr");
+  });
+  return arr
+    .filter((e) => e.points > 0 || e.events > 0)
+    .map((e, i) => ({
+      ...e,
+      rank: i + 1,
+      player: byId.get(e.playerId) ?? null,
+    }));
+}
+
 /** Classement complet, trié : points → victoires → meilleure place → nom. */
 export function computeLeaderboard(tournaments, players, scoring) {
   const byId = new Map(players.map((p) => [p.discordId, p]));
