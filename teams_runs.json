@@ -8697,6 +8697,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-11T12:55:53.891Z",
       "url": "https://openfront.io/game/WvgoPAG8"
+    },
+    {
+      "id": "e1N1LhZg",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "RoM",
+          "clientID": "C1UHo8Pm",
+          "clanTag": "TEG"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1039,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-11T13:27:12.952Z",
+      "url": "https://openfront.io/game/e1N1LhZg"
     }
   ],
   "trios": [
@@ -23170,6 +23188,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-11T12:29:58.777Z",
       "url": "https://openfront.io/game/WXoSgZWA"
+    },
+    {
+      "id": "mRBF6wnt",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Kitschy",
+          "clientID": "wzMQVjXJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mitochondria",
+          "clientID": "usad2kgY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rainer Winkler",
+          "clientID": "4S6vH7ns",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 858,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-11T13:41:01.739Z",
+      "url": "https://openfront.io/game/mRBF6wnt"
     }
   ],
   "quads": [
@@ -41449,6 +41495,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-11T13:21:14.539Z",
       "url": "https://openfront.io/game/BMwVxNYa"
+    },
+    {
+      "id": "zBKc9bne",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Anon822",
+          "clientID": "1NBdHqdB",
+          "clanTag": "UN"
+        },
+        {
+          "username": "pahlavi",
+          "clientID": "93qpmPrm",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ridraax",
+          "clientID": "m3jNSKqo",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SCP Heshmat",
+          "clientID": "bTXtUfX7",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1156,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-11T13:29:32.090Z",
+      "url": "https://openfront.io/game/zBKc9bne"
     }
   ]
 }
