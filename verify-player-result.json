@@ -1,0 +1,26 @@
+{
+  "publicId": "UWetOwlW",
+  "fetchedAt": "2026-08-11T15:26:54.221Z",
+  "elapsedSec": 305,
+  "totalGames": 3010,
+  "wins": {
+    "ffaCasual": 490,
+    "ffaRanked": 260,
+    "teamCasual": 327,
+    "teamRanked": 117
+  },
+  "losses": {
+    "ffaCasual": 698,
+    "ffaRanked": 128,
+    "teamCasual": 404,
+    "teamRanked": 5
+  },
+  "incomplete": {
+    "ffaCasual": 366,
+    "ffaRanked": 5,
+    "teamCasual": 150,
+    "teamRanked": 60
+  },
+  "points_v1_current": 6912,
+  "points_v2_alt": 10097
+}
