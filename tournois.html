@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon-new.png">
 <link rel="stylesheet" href="styles.css?v=22">
-<link rel="stylesheet" href="tournois.css?v=6">
+<link rel="stylesheet" href="tournois.css?v=7">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange,#ef6c00);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 <script type="module" src="tournois-icons.js?v=1"></script>
@@ -30,6 +30,9 @@
     </div>
 
     <nav role="tablist">
+      <a class="nav-item tab-btn" id="tab-btn-dashboard" href="dashboard.html">
+        <i data-icon="chart"></i> Tableau de bord
+      </a>
       <a class="nav-item tab-btn" id="tab-btn-maps" href="index.html">
         <i data-icon="trophy"></i> Speedruns
       </a>
@@ -52,8 +55,8 @@
     <!-- Top-nav horizontale PR-Front (desktop) + menu hamburger (mobile) -->
     <header class="prf-topnav">
       <nav class="prf-topnav-links" id="prf-topnav-links" role="tablist">
-        <button class="prf-topnav-link active" data-route="dashboard" role="tab" aria-selected="true">
-          <i data-prf-icon="home" data-prf-icon-size="18"></i> Tableau de bord
+        <button class="prf-topnav-link active" data-route="home" role="tab" aria-selected="true">
+          <i data-prf-icon="home" data-prf-icon-size="18"></i> Accueil
         </button>
         <button class="prf-topnav-link" data-route="ranking" role="tab" aria-selected="false">
           <i data-prf-icon="trophy" data-prf-icon-size="18"></i> Classement PR
@@ -114,8 +117,8 @@
     </button>
   </div>
   <nav class="prf-drawer-nav">
-    <button class="prf-drawer-link active" data-route="dashboard">
-      <i data-prf-icon="home" data-prf-icon-size="20"></i> Tableau de bord
+    <button class="prf-drawer-link active" data-route="home">
+      <i data-prf-icon="home" data-prf-icon-size="20"></i> Accueil
     </button>
     <button class="prf-drawer-link" data-route="ranking">
       <i data-prf-icon="trophy" data-prf-icon-size="20"></i> Classement PR
@@ -129,6 +132,6 @@
   </nav>
 </aside>
 
-<script type="module" src="tournois.js?v=5"></script>
+<script type="module" src="tournois.js?v=6"></script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>TheFrontHub — Tableau de bord</title>
+<meta name="description" content="Tableau de bord — Classement par points. Chaque victoire FFA = +10 pts, Team = +5 pts.">
+<meta property="og:title" content="TheFrontHub — Tableau de bord">
+<meta property="og:description" content="Classement par points des parties OpenFront">
+<meta property="og:image" content="https://skailex239.github.io/TheFrontHub/logo-new.png">
+<meta property="og:url" content="https://skailex239.github.io/TheFrontHub/dashboard.html">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon-new.png">
+<link rel="stylesheet" href="styles.css?v=22">
+<link rel="stylesheet" href="auth.css?v=15">
+<link rel="stylesheet" href="toast.css">
+<link rel="stylesheet" href="dashboard.css?v=1">
+<style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
+<script type="module" src="icons.js?v=2"></script>
+</head>
+<body>
+<a href="#dashboard-content" class="skip-link">Aller au contenu principal</a>
+<div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
+
+<div class="app">
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <img src="logo-new.png" alt="TheFrontHub" loading="eager">
+    </div>
+
+    <nav role="tablist">
+      <a class="nav-item tab-btn active" id="tab-btn-dashboard" role="tab" aria-selected="true" tabindex="0">
+        <i data-icon="grid"></i> Tableau de bord
+      </a>
+      <a class="nav-item tab-btn" id="tab-btn-maps" href="index.html" role="tab" aria-selected="false" tabindex="0">
+        <i data-icon="trophy"></i> Speedruns
+      </a>
+      <a class="nav-item tab-btn" id="tab-btn-ranked" href="index.html?tab=ranked" role="tab" aria-selected="false" tabindex="0">
+        <i data-icon="swords"></i> Classé
+      </a>
+      <a class="nav-item tab-btn" id="tab-btn-tournois" href="tournois.html" role="tab" aria-selected="false" tabindex="0">
+        <i data-icon="medal"></i> Tournois
+      </a>
+      <a class="nav-item tab-btn" id="tab-btn-profile" href="profile.html" role="tab" aria-selected="false" tabindex="0">
+        <i data-icon="user"></i> Mon Profil
+      </a>
+    </nav>
+
+    <!-- Profile / Auth -->
+    <div class="sidebar-profile">
+
+      <!-- Logged out -->
+      <div class="auth-zone" id="auth-zone">
+        <button class="login-btn login-btn-sidebar" onclick="toggleAuthModal()" id="login-btn-main">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Connexion</span>
+        </button>
+      </div>
+
+      <!-- Logged in (hidden by default) -->
+      <div class="user-container" id="user-container" style="display: none;">
+        <div class="user-badge" id="user-badge-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu" onclick="toggleUserDropdown(event)">
+          <div class="profile-avatar" id="sidebar-avatar">—</div>
+          <div class="profile-info">
+            <h4 id="user-display-name">—</h4>
+            <span>En ligne</span>
+          </div>
+          <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;color:var(--muted);flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="user-dropdown-menu" id="user-dropdown-menu">
+          <div class="dropdown-header">
+            <div class="dropdown-avatar" id="dropdown-avatar"></div>
+            <div class="dropdown-user-info">
+              <div class="dropdown-username" id="dropdown-username-display">—</div>
+              <div class="dropdown-publicid" id="dropdown-publicid-display">—</div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" onclick="goToProfilePage(event)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Mon profil</span>
+          </button>
+          <button class="dropdown-item logout" onclick="handleLogout(event)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <span>Se déconnecter</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main class="content" id="dashboard-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div>
+        <h1 id="topbar-title">Tableau de bord</h1>
+        <p id="topbar-subtitle">Classement par points · FFA +10 / Team +5 par victoire</p>
+      </div>
+      <div class="topbar-right">
+        <div id="last-update" class="last-update-inline" style="margin:0;padding:0;font-size:12px"></div>
+      </div>
+    </header>
+
+    <!-- Zone de rendu du tableau de bord -->
+    <section class="dash-view" id="dashboard-view">
+      <div class="dash-loading">
+        <div class="spinner"></div>
+        <p>Chargement du classement…</p>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- Auth Modal (réutilise le système existant) -->
+<div id="auth-modal" class="auth-modal" style="display:none">
+  <div class="auth-modal-card" id="auth-modal-card"></div>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container"></div>
+
+<script type="module" src="dashboard.js?v=2"></script>
+<script src="auth.js?v=15"></script>
+<script src="toast.js"></script>
+</body>
+</html>

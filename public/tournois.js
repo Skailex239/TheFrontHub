@@ -106,7 +106,7 @@ function escapeHtml(s) {
 
 function parseHash() {
   const h = window.location.hash.replace(/^#\/?/, "");
-  if (!h) return { route: "dashboard", params: {} };
+  if (!h) return { route: "home", params: {} };
   const parts = h.split("/");
   const route = parts[0];
   const params = {};
@@ -137,7 +137,7 @@ async function router() {
 
   // Breadcrumb + retour
   let bcPath = "";
-  let backRoute = "dashboard";
+  let backRoute = "home";
   if (route === "tournament" && params.slug) {
     const t = getTournament(_data.tournaments, params.slug);
     bcPath = `<strong>Tournois</strong> / ${escapeHtml(t?.name || params.slug)}`;
@@ -1242,7 +1242,7 @@ document.addEventListener("keydown", (e) => {
 
 // Breadcrumb retour
 breadcrumbBack?.addEventListener("click", () => {
-  const back = breadcrumbBack.getAttribute("data-back") || "dashboard";
+  const back = breadcrumbBack.getAttribute("data-back") || "home";
   location.hash = `#/${back}`;
 });
 
@@ -1252,7 +1252,7 @@ window.addEventListener("DOMContentLoaded", router);
 
 // Si pas de hash au démarrage, aller à l'accueil
 if (!window.location.hash) {
-  window.location.hash = "#/dashboard";
+  window.location.hash = "#/home";
 } else {
   router();
 }
