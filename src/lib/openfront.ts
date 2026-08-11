@@ -1,21 +1,30 @@
 /**
  * OpenFront client-side helpers.
  *
- * Architecture (NO SYNC at runtime — the browser makes the requests):
+ * Architecture v2 (stats agrégées côté serveur OpenFront) :
  *
  *   1. ranked.json  → static, served from /public (auto-synced offline by
  *      GitHub Actions). Contains career ranked wins for the top 100 1v1
- *      and top 100 2v2 players. NO sync at runtime — it's just a file.
+ *      and top 100 2v2 players. Used for ranked-only players (non connectés).
  *
  *   2. Firebase public-aliases (Firestore REST API) → list of players
  *      who linked their OpenFront Public ID via Google/Discord login.
  *
- *   3. OpenFront API → /api/openfront/public/player/<pid>/games (paginated).
- *      The Next.js route at src/app/api/openfront/[...path]/route.ts adds
- *      the `x-skailex-access` header server-side (rate-limit exemption).
- *      For each connected player, we paginate ALL their games and count
- *      victories by category (FFA casual/ranked, Team casual/ranked),
- *      both globally and for the current week (Mon-Sun Europe/Paris).
+ *   3. OpenFront API → pour chaque joueur connecté, DEUX appels :
+ *
+ *        a) GET /api/openfront/public/player/<pid>  →  objet `stats` AGRÉGÉ
+ *           côté serveur OpenFront. Contient les wins carrière par
+ *           mode/difficulté/ranked. 1 requête = toutes les wins all-time.
+ *           Marche même pour un joueur à 3000+ games (plus de pagination !).
+ *
+ *        b) GET /api/openfront/public/player/<pid>/games  →  pagination
+ *           COURTE qui s'arrête au 1er game de plus de 7 jours. 2-5 pages
+ *           pour un joueur actif (vs 300 si on paginait tout). Sert uniquement
+ *           au calcul hebdo.
+ *
+ *      Le proxy Next.js ajoute le header `x-skailex-access` côté serveur
+ *      (exemption de rate-limit). Avec ~3-6 requêtes par joueur (au lieu de
+ *      300+), le dashboard charge en quelques secondes.
  *
  * Scoring (per Task 26 spec):
  *   FFA casual  = +10 · FFA ranked (1v1)  = +1
@@ -79,6 +88,36 @@ export interface ConnectedPlayer {
   username: string;
 }
 
+/** Réponse de GET /public/player/{id} — objet stats agrégé côté serveur. */
+export interface PlayerProfile {
+  publicId: string;
+  username?: string;
+  createdAt?: string;
+  stats?: PlayerStatsAggregate;
+}
+
+/**
+ * Structure de l'objet `stats` renvoyé par /public/player/{id}.
+ * Vérifiée empiriquement : les wins sont des string (pas number) côté API.
+ */
+export interface PlayerStatsAggregate {
+  Public?: Record<string, Record<string, ModeDiffStats>>;
+  Private?: Record<string, Record<string, ModeDiffStats>>;
+  Singleplayer?: Record<string, Record<string, ModeDiffStats>>;
+  Ranked?: {
+    "1v1"?: ModeDiffStats;
+    "2v2"?: ModeDiffStats;
+  };
+  recent?: Record<string, unknown>;
+}
+
+export interface ModeDiffStats {
+  wins?: string | number;
+  losses?: string | number;
+  total?: string | number;
+  stats?: Record<string, unknown>;
+}
+
 export interface LiveStats {
   publicId: string;
   username: string;
@@ -109,10 +148,15 @@ export const PTS_FFA_RANKED = 1;
 export const PTS_TEAM_CASUAL = 5;
 export const PTS_TEAM_RANKED = 1;
 
-const LIVE_CACHE_KEY = "dash_live_stats_v2";
+// Cache key v3 : invalidé par rapport à v2 car les wins carrière viennent
+// maintenant de l'endpoint agrégé (plus précis que l'ancienne pagination).
+const LIVE_CACHE_KEY = "dash_live_stats_v3";
 const LIVE_CACHE_TTL = 30 * 60 * 1000; // 30 min
-const MAX_GAMES_PER_PLAYER = 5000;
-const MAX_PAGES_PER_PLAYER = 500;
+const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000;
+// Nombre max de pages de games à fetcher pour le calcul hebdo. Chaque page
+// = ~10 games. 50 pages = 500 games = largement plus qu'une semaine d'activité
+// même pour un joueur très actif. On s'arrête en plus dès le 1er game > 7 jours.
+const MAX_WEEKLY_PAGES = 50;
 const FIREBASE_PROJECT = "openfront-speedrun";
 const FIRESTORE_BASE = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT}/databases/(default)/documents`;
 
@@ -273,6 +317,10 @@ async function fetchWithTimeout(url: string, ms = 8000): Promise<Response> {
  * Paginate ALL games of a player via the Next.js proxy.
  * Stops early when `shouldStop(game)` returns true (used for weekly cutoff).
  * Returns the full list of games.
+ *
+ * @deprecated Ne plus utiliser pour le dashboard — préférer fetchPlayerStats
+ *   qui utilise l'endpoint agrégé /public/player/{id} (1 requête au lieu de
+ *   300). Conservé pour la page profil qui a besoin de l'historique complet.
  */
 export async function fetchAllPlayerGames(
   publicId: string,
@@ -281,7 +329,9 @@ export async function fetchAllPlayerGames(
 ): Promise<OpenFrontGame[]> {
   const all: OpenFrontGame[] = [];
   let cursor: string | null = null;
-  for (let page = 0; page < MAX_PAGES_PER_PLAYER; page++) {
+  // Hard cap 500 pages = 5000 games (sécurité, ne devrait jamais être atteint
+  // car shouldStop coupe bien avant pour le calcul hebdo).
+  for (let page = 0; page < 500; page++) {
     let path = `/api/openfront/public/player/${encodeURIComponent(publicId)}/games`;
     if (cursor) path += `?cursor=${encodeURIComponent(cursor)}`;
     let data: { results?: OpenFrontGame[]; nextCursor?: string | null };
@@ -310,9 +360,137 @@ export async function fetchAllPlayerGames(
     if (stop) break;
     if (!data.nextCursor) break;
     cursor = data.nextCursor;
-    if (all.length >= MAX_GAMES_PER_PLAYER) break;
   }
   return all;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   V2 : stats agrégées côté serveur OpenFront
+   ════════════════════════════════════════════════════════════════ */
+
+/**
+ * Extrait les wins carrière (all-time) depuis l'objet `stats` agrégé
+ * renvoyé par GET /public/player/{id}. L'API OpenFront maintient ces
+ * totaux côté serveur → 1 seule requête par joueur, pas de pagination.
+ *
+ * Mapping vers nos 4 catégories :
+ *   ffaCasual   = Σ stats[Public|Private|Singleplayer]["Free For All"][*].wins
+ *                 + Σ stats[*]["Humans Vs Nations"][*].wins
+ *   teamCasual  = Σ stats[Public|Private]["Team"][*].wins
+ *   ffaRanked   = stats.Ranked["1v1"].wins
+ *   teamRanked  = stats.Ranked["2v2"].wins
+ */
+export function extractCareerWinsFromStats(stats?: PlayerStatsAggregate | null): Wins {
+  const global: Wins = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
+  if (!stats || typeof stats !== "object") return global;
+
+  const CASUAL_VIS = ["Public", "Private", "Singleplayer"] as const;
+  const FFA_MODES = ["Free For All", "Humans Vs Nations"];
+  for (const vis of CASUAL_VIS) {
+    const visData = stats[vis];
+    if (!visData) continue;
+    for (const mode of FFA_MODES) {
+      const modeData = visData[mode];
+      if (!modeData) continue;
+      for (const diff of Object.keys(modeData)) {
+        const d = modeData[diff];
+        if (d?.wins != null) global.ffaCasual += Number(d.wins) || 0;
+      }
+    }
+    const teamData = visData["Team"];
+    if (teamData) {
+      for (const diff of Object.keys(teamData)) {
+        const d = teamData[diff];
+        if (d?.wins != null) global.teamCasual += Number(d.wins) || 0;
+      }
+    }
+  }
+
+  const r1 = stats.Ranked?.["1v1"];
+  if (r1?.wins != null) global.ffaRanked = Number(r1.wins) || 0;
+  const r2 = stats.Ranked?.["2v2"];
+  if (r2?.wins != null) global.teamRanked = Number(r2.wins) || 0;
+
+  return global;
+}
+
+/** GET /public/player/{id} → profil + stats agrégées carrière. 1 requête. */
+export async function fetchPlayerProfile(publicId: string): Promise<PlayerProfile | null> {
+  try {
+    const path = `/api/openfront/public/player/${encodeURIComponent(publicId)}`;
+    const res = await fetchWithTimeout(path, 8000);
+    if (!res.ok) {
+      console.warn(`[openfront] profile ${publicId}: HTTP ${res.status}`);
+      return null;
+    }
+    return (await res.json()) as PlayerProfile;
+  } catch (e) {
+    console.warn(`[openfront] profile ${publicId}:`, (e as Error).message);
+    return null;
+  }
+}
+
+/**
+ * Pagine les parties récentes d'un joueur en S'ARRÊTANT dès qu'on croise
+ * une game plus vieille que 7 jours (WEEKLY_MS). Typiquement 2-5 pages.
+ * Retourne uniquement les games des 7 derniers jours.
+ */
+export async function fetchWeeklyGames(publicId: string): Promise<OpenFrontGame[]> {
+  const weeklyGames: OpenFrontGame[] = [];
+  const weekStartMs = Date.now() - WEEKLY_MS;
+  let cursor: string | null = null;
+  for (let page = 0; page < MAX_WEEKLY_PAGES; page++) {
+    let path = `/api/openfront/public/player/${encodeURIComponent(publicId)}/games`;
+    if (cursor) path += `?cursor=${encodeURIComponent(cursor)}`;
+    let data: { results?: OpenFrontGame[]; nextCursor?: string | null };
+    try {
+      const res = await fetchWithTimeout(path, 8000);
+      if (!res.ok) break;
+      data = await res.json();
+    } catch (e) {
+      break;
+    }
+    const results = data?.results || [];
+    if (results.length === 0) break;
+    let hitOld = false;
+    for (const g of results) {
+      const t = g.start ? new Date(g.start).getTime() : 0;
+      if (t && t < weekStartMs) { hitOld = true; break; }
+      weeklyGames.push(g);
+    }
+    if (hitOld) break;
+    if (!data.nextCursor) break;
+    cursor = data.nextCursor;
+  }
+  return weeklyGames;
+}
+
+/**
+ * Charge les stats complètes d'un joueur connecté en 2 étapes :
+ *   1. GET /public/player/{id} → wins carrière (agrégé côté serveur, 1 req)
+ *   2. GET /public/player/{id}/games paginé jusqu'à la barre des 7 jours
+ *      → wins hebdo (2-5 req, stop au 1er game trop vieux)
+ *
+ * Total : ~3-6 requêtes par joueur (vs 300+ auparavant pour un gros joueur).
+ * Pour un joueur à 3000 games, les wins carrière sont EXACTES car l'API
+ * les maintient côté serveur — le site n'a plus besoin de tout télécharger.
+ */
+export async function fetchPlayerStats(player: ConnectedPlayer): Promise<LiveStats> {
+  const profile = await fetchPlayerProfile(player.publicId);
+  const global = extractCareerWinsFromStats(profile?.stats);
+  const username = profile?.username || player.username;
+
+  const weeklyGames = await fetchWeeklyGames(player.publicId);
+  const weekly = computeWinsFromGames(weeklyGames, Date.now() - WEEKLY_MS, Date.now()).global;
+
+  return {
+    publicId: player.publicId,
+    username,
+    gamesCount: weeklyGames.length,
+    global,
+    weekly,
+    fetchedAt: Date.now(),
+  };
 }
 
 /* ════════════════════════════════════════════════════════════════

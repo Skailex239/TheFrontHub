@@ -1864,3 +1864,92 @@ Stage Summary:
 - Commit 4f5e01b pushed, deployed, verified at DOM + visual levels
 - NOTE: The weekly stats currently use a 7-day rolling window (computeWinsFromGames uses `now - g.start < WEEKLY_MS`), while the label says "Depuis lundi". This is a minor inconsistency — to align fully, computeWinsFromGames should take weekStartMs and compare against it. Non-blocking for now.
 - REMINDER: User must revoke the exposed GitHub PAT at https://github.com/settings/tokens
+
+---
+Task ID: 10
+Agent: main (Z.ai Code)
+Task: Le leaderboard Cloudflare met trop de temps. Proposer et implémenter des alternatives simples. L'utilisateur a choisi : Alternative 2 (endpoint stats agrégées) si elle existe, sinon Alternative 1 (GitHub Actions précalcule).
+
+Work Log:
+- Testé 5 endpoints OpenFront candidats avec `curl -H "x-skailex-access: ..."` :
+    /public/player/{id}          → 200, 13KB, contient objet `stats` agrégé ✓
+    /public/player/{id}/stats    → 404
+    /public/player/{id}/summary  → 404
+    /public/player/{id}/wins     → 404
+    /public/player/{id}/games    → 200, paginé (déjà connu)
+  → Alternative 2 GAGNÉE : l'endpoint /public/player/{id} agrège déjà les wins côté serveur.
+
+- Analysé la structure de l'objet `stats` (joueur hWNuSrnS = Nvr_Kn.6967) :
+    stats.Public["Free For All"][Easy|Medium].wins     → wins FFA casual public
+    stats.Public["Team"][Easy|Medium].wins              → wins Team casual public
+    stats.Private["Free For All"][*].wins               → wins FFA casual privé
+    stats.Private["Team"][*].wins                       → wins Team casual privé
+    stats.Singleplayer["Free For All"][*].wins          → wins FFA solo
+    stats.Ranked["1v1"].wins = 1335                     → wins FFA classé carrière (EXACT)
+    stats.Ranked["2v2"].wins = 104                      → wins Team classé carrière (EXACT)
+    stats.recent.*                                      → breakdown 100 dernières games (pas = "cette semaine")
+
+- Décision d'architecture (Alternative 2) :
+    All-time : 1 requête GET /public/player/{id} → extractCareerWinsFromStats(stats)
+    Weekly   : pagination GET /public/player/{id}/games mais STOP au 1er game > 7 jours
+    Total    : ~3-6 requêtes par joueur (vs 300+ avant)
+
+- Modifiés 4 fichiers :
+
+  1. public/dashboard.js (vanilla, déployée sur GitHub Pages) :
+     - Header comment : décrit la nouvelle architecture v2
+     - Import : openfront-client.js?v=24 → ?v=25 (cache-bust)
+     - Constantes : LIVE_CACHE_KEY v1→v2, MAX_GAMES_PER_PLAYER supprimé, MAX_WEEKLY_PAGES=50 ajouté
+     - NOUVELLE fonction extractCareerWinsFromStats(stats) : somme les wins depuis l'objet stats agrégé
+       - ffaCasual = Σ stats[Public|Private|Singleplayer]["Free For All"|["Humans Vs Nations"][*].wins
+       - teamCasual = Σ stats[Public|Private]["Team"][*].wins
+       - ffaRanked = stats.Ranked["1v1"].wins
+       - teamRanked = stats.Ranked["2v2"].wins
+     - NOUVELLE fonction fetchWeeklyGames(publicId) : pagine /games mais stop au 1er game > 7 jours (max 50 pages)
+     - NOUVELLE fonction fetchPlayerStats(player) : combine career (1 req) + weekly (2-5 req)
+     - fetchOne dans loadLiveStats : remplace fetchAllPlayerGames par fetchPlayerStats
+
+  2. src/lib/openfront.ts (lib partagé Next.js) :
+     - Header comment : décrit la nouvelle architecture v2
+     - Types ajoutés : PlayerProfile, PlayerStatsAggregate, ModeDiffStats
+     - LIVE_CACHE_KEY v2→v3, MAX_PAGES_PER_PLAYER/MAX_GAMES_PER_PLAYER supprimés, MAX_WEEKLY_PAGES=50 + WEEKLY_MS ajoutés
+     - fetchAllPlayerGames : marquée @deprecated (conservée pour page profil)
+     - NOUVELLE extractCareerWinsFromStats (identique à vanilla, typée TypeScript)
+     - NOUVELLE fetchPlayerProfile(publicId) : GET /public/player/{id}
+     - NOUVELLE fetchWeeklyGames(publicId) : pagination courte avec stop 7 jours
+     - NOUVELLE fetchPlayerStats(player) : combine career + weekly
+
+  3. src/app/page.tsx (page Next.js sandbox) :
+     - Import : fetchAllPlayerGames + computeWinsFromGames → fetchPlayerStats
+     - Type OpenFrontGame supprimé de l'import (plus utilisé)
+     - fetchOne : `const games = await fetchAllPlayerGames(...); const wins = computeWinsFromGames(games, weekStartMs);`
+       → `const entry = await fetchPlayerStats(player);` (1 ligne au lieu de 10)
+
+  4. dashboard.html (root + public/) :
+     - dashboard.js?v=5 → ?v=6 (cache-bust navigateur)
+
+- Fichiers racine synchronisés avec public/ :
+    dashboard.js      1072 lignes ✓ (identique)
+    dashboard.html     216 lignes ✓ (identique)
+    openfront-client.js 175 lignes ✓ (inchangé)
+
+- Vérification Agent Browser (http://localhost:3000/, cache localStorage vidé) :
+    Page charge en ~12s (vs 2.5+ min avant, avec OOM crash du dev server)
+    Requêtes API : 51 total (5 career + 46 hebdo) vs ~2500 avant (50x moins)
+    Pagination hebdo par joueur : 17, 16, 10, 2, 1 pages (stop au 7j, réaliste)
+    Aucune erreur dans dev.log ✓
+    Layout 2 panneaux rendu correctement :
+      - "Top players all Time" : 168 joueurs, Skailex.9681 #1 (7073 pts, 1302 wins)
+      - "Top players this Week" : 5 actifs, Nvr_Kn.6967 #1 (214 pts, 88 wins)
+    Cache localStorage 30 min : reload suivant = 0 requête API (instantané)
+
+Stage Summary:
+- PROBLÈME RÉSOLU : le dashboard charge en ~12s au lieu de 2.5+ min, sans crash
+- Pour un joueur à 3000 games : les wins carrière sont EXACTES (l'API OpenFront les maintient côté serveur, plus besoin de tout télécharger)
+- Le Worker Cloudflare est TOUJOURS NÉCESSAIRE (ajoute le header x-skailex-access côté serveur pour l'exemption de rate-limit), mais avec ~51 requêtes au lieu de 2500, le rate-limit n'est plus un problème
+- Architecture en 2 étapes par joueur :
+    1. GET /public/player/{id} → stats agrégées carrière (1 req, exact même pour 3000 games)
+    2. GET /public/player/{id}/games paginé jusqu'à 7 jours → wins hebdo (2-17 req selon activité)
+- Cache localStorage 30 min (key v2 pour vanilla, v3 pour Next.js) → loads subséquents instantanés
+- NOTE : la pagination hebdo est séquentielle par joueur (10-17 pages × 500ms = 5-8s par joueur actif). Pour aller plus vite, on pourrait paralléliser les joueurs plus agressivement ou afficher le panel "all time" dès que les career stats sont prêtes (avant la fin de la pagination hebdo). Non bloquant pour l'instant.
+- PAS ENCORE PUSHÉ SUR GITHUB — l'utilisateur n'a pas demandé à push dans ce tour

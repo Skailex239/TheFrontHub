@@ -20,7 +20,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   buildMergedPlayers,
-  fetchAllPlayerGames,
+  fetchPlayerStats,
   fetchConnectedPlayers,
   fetchRankedJson,
   formatFrenchDate,
@@ -29,13 +29,11 @@ import {
   isCacheFresh,
   loadLiveCache,
   saveLiveCache,
-  computeWinsFromGames,
   pointsFor,
   totalWins,
   type ConnectedPlayer,
   type LiveStats,
   type MergedPlayer,
-  type OpenFrontGame,
   type RankedJson,
 } from "@/lib/openfront";
 
@@ -113,16 +111,7 @@ export default function DashboardPage() {
         return;
       }
       try {
-        const games = await fetchAllPlayerGames(player.publicId);
-        const wins = computeWinsFromGames(games, weekStartMs);
-        const entry: LiveStats = {
-          publicId: player.publicId,
-          username: player.username,
-          gamesCount: games.length,
-          global: wins.global,
-          weekly: wins.weekly,
-          fetchedAt: Date.now(),
-        };
+        const entry = await fetchPlayerStats(player);
         if (cancelled) return;
         liveStatsRef.current[player.publicId] = entry;
         cache[player.publicId] = entry;

@@ -1,24 +1,37 @@
 /**
  * dashboard.js — Contrôleur du Tableau de bord TheFrontHub.
  *
- * Architecture (NO SYNC — le site fait les requêtes API lui-même) :
+ * Architecture (v2 — stats agrégées côté serveur OpenFront) :
  *
  *   1. ranked.json (auto-synced par GitHub Actions) → ranked wins carrière
  *      pour le top 100 1v1 + top 100 2v2. Servé depuis GitHub Pages.
+ *      Utilisé pour les joueurs ranked-only (non connectés au site).
  *
  *   2. Firebase public-aliases (Firestore REST API) → liste des joueurs
  *      connectés via Google/Discord qui ont lié leur Public ID.
  *
  *   3. OpenFront API (via proxy Cloudflare Worker ou /api/openfront en dev)
- *      → pour chaque joueur connecté, on pagine TOUTES ses parties et on
- *      compte les victoires par catégorie (FFA casual, FFA classé, Team
- *      casual, Team classé). Le proxy ajoute le header x-skailex-access
- *      côté serveur (exemption de rate-limit).
+ *      → pour chaque joueur connecté, DEUX appels seulement :
+ *
+ *        a) GET /public/player/{id}  →  objet `stats` AGRÉGÉ côté serveur
+ *           contenant les wins carrière par mode/difficulté/ranked.
+ *           1 requête = toutes les wins all-time (plus de pagination de
+ *           300 pages !). Marche même pour un joueur à 3000+ games.
+ *
+ *        b) GET /public/player/{id}/games  →  pagination COURTE qui
+ *           S'ARRÊTE au premier game de plus de 7 jours. Typiquement
+ *           2-5 pages pour un joueur actif (vs 300 si on paginait tout).
+ *           Sert uniquement à calculer les wins de la semaine.
+ *
+ *      Le proxy Cloudflare Worker ajoute le header x-skailex-access côté
+ *      serveur (exemption de rate-limit). Avec seulement ~3-6 requêtes par
+ *      joueur (au lieu de 300+), le rate-limit Cloudflare n'est plus un
+ *      problème et le dashboard charge en quelques secondes.
  *
  *   Merge :
  *     - Joueurs ranked-only : ranked wins de ranked.json, casual = 0
  *     - Joueurs connectés : ranked wins = max(ranked.json, API carrière),
- *       casual wins = API live
+ *       casual wins = API agrégée
  *
  *   Cache : les stats live sont mises en cache dans localStorage (30 min)
  *   pour éviter de re-fetcher à chaque visite.
@@ -42,7 +55,7 @@ import {
   collection, query, where, onSnapshot,
   onAuthStateChanged, signOut,
 } from "./auth.js";
-import { fetchOpenFront } from "./openfront-client.js?v=24";
+import { fetchOpenFront } from "./openfront-client.js?v=25";
 
 /* ════════════════════════════════════════════════════════════════
    Constantes (barème)
@@ -75,10 +88,16 @@ let _ownershipPublicId = null;
 let _ownershipUsername = null;
 let _loginInProgress = false;
 
-const LIVE_CACHE_KEY = "dash_live_stats_v1";
+// Cache key bumped to v2 : anciennes entrées v1 (calculées par pagination
+// exhaustive) sont invalidées car la nouvelle méthode (stats agrégées) donne
+// des nombres différents (plus précis, surtout pour les gros joueurs).
+const LIVE_CACHE_KEY = "dash_live_stats_v2";
 const LIVE_CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000;
-const MAX_GAMES_PER_PLAYER = 5000; // sécurité
+// Nombre max de pages de games à fetcher pour le calcul hebdo. Chaque page
+// = ~10 games. 50 pages = 500 games = largement plus qu'une semaine d'activité
+// même pour un joueur très actif. On s'arrête en plus dès le 1er game > 7 jours.
+const MAX_WEEKLY_PAGES = 50;
 const FIREBASE_PROJECT = "openfront-speedrun";
 const FIRESTORE_BASE = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT}/databases/(default)/documents`;
 
@@ -208,30 +227,140 @@ async function loadConnectedPlayers() {
 }
 
 /**
- * Pagine TOUTES les parties d'un joueur via le proxy OpenFront.
- * Retourne [{ gameId, start, mode, rankedType, result, map, ... }].
+ * Extrait les wins carrière (all-time) depuis l'objet `stats` agrégé
+ * renvoyé par GET /public/player/{id}. L'API OpenFront maintient ces
+ * totaux côté serveur → 1 seule requête par joueur, pas de pagination.
+ *
+ * Structure de stats (vérifiée empiriquement) :
+ *   {
+ *     "Public":       { "Free For All": {Easy:{wins,losses,total}, ...},
+ *                       "Team": {Easy:{wins,...}, ...},
+ *                       "Humans Vs Nations": {...} },
+ *     "Private":      { ... idem ... },
+ *     "Singleplayer": { "Free For All": {...} },
+ *     "Ranked":       { "1v1": {wins, losses, total},
+ *                       "2v2": {wins, losses, total} },
+ *     "recent":       { ... breakdown des 100 dernières games ... }
+ *   }
+ *
+ * Mapping vers nos 4 catégories (pour coller à l'ancien classifyGame) :
+ *   ffaCasual   = Σ stats[Public|Private|Singleplayer]["Free For All"][*].wins
+ *                 + Σ stats[*]["Humans Vs Nations"][*].wins
+ *   teamCasual  = Σ stats[Public|Private]["Team"][*].wins
+ *   ffaRanked   = stats.Ranked["1v1"].wins
+ *   teamRanked  = stats.Ranked["2v2"].wins
  */
-async function fetchAllPlayerGames(publicId) {
-  const allGames = [];
+function extractCareerWinsFromStats(stats) {
+  const global = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
+  if (!stats || typeof stats !== "object") return global;
+
+  // Casual wins : on somme toutes les visibilities (Public/Private/Singleplayer)
+  // et tous les modes non-Team non-Ranked (FFA + Humans Vs Nations).
+  const CASUAL_VIS = ["Public", "Private", "Singleplayer"];
+  const FFA_MODES = ["Free For All", "Humans Vs Nations"];
+  for (const vis of CASUAL_VIS) {
+    const visData = stats[vis];
+    if (!visData || typeof visData !== "object") continue;
+    for (const mode of FFA_MODES) {
+      const modeData = visData[mode];
+      if (!modeData || typeof modeData !== "object") continue;
+      for (const diff of Object.keys(modeData)) {
+        const d = modeData[diff];
+        if (d && typeof d === "object" && d.wins != null) {
+          global.ffaCasual += Number(d.wins) || 0;
+        }
+      }
+    }
+    // Team casual
+    const teamData = visData["Team"];
+    if (teamData && typeof teamData === "object") {
+      for (const diff of Object.keys(teamData)) {
+        const d = teamData[diff];
+        if (d && typeof d === "object" && d.wins != null) {
+          global.teamCasual += Number(d.wins) || 0;
+        }
+      }
+    }
+  }
+
+  // Ranked wins (carrière exacte — pas besoin de ranked.json pour ces joueurs)
+  const r1 = stats?.Ranked?.["1v1"];
+  if (r1 && r1.wins != null) global.ffaRanked = Number(r1.wins) || 0;
+  const r2 = stats?.Ranked?.["2v2"];
+  if (r2 && r2.wins != null) global.teamRanked = Number(r2.wins) || 0;
+
+  return global;
+}
+
+/**
+ * Pagine les parties récentes d'un joueur en S'ARRÊTANT dès qu'on croise
+ * une game plus vieille que WEEKLY_MS (7 jours). Typiquement 2-5 pages
+ * pour un joueur actif, au lieu des 300+ pages qu'il faudrait pour un
+ * joueur à 3000 games si on paginait tout l'historique.
+ *
+ * Retourne uniquement les games des 7 derniers jours.
+ */
+async function fetchWeeklyGames(publicId) {
+  const weeklyGames = [];
+  const weekStartMs = Date.now() - WEEKLY_MS;
   let cursor = null;
-  for (let page = 0; page < 500; page++) {
+  for (let page = 0; page < MAX_WEEKLY_PAGES; page++) {
     let apiPath = `/public/player/${encodeURIComponent(publicId)}/games`;
     if (cursor) apiPath += `?cursor=${encodeURIComponent(cursor)}`;
     let data;
     try {
       data = await fetchOpenFront(apiPath);
     } catch (e) {
-      console.warn(`[dashboard] fetch games ${publicId} page ${page}:`, e.message);
+      console.warn(`[dashboard] weekly games ${publicId} page ${page}:`, e.message);
       break;
     }
     const results = data?.results || [];
     if (results.length === 0) break;
-    allGames.push(...results);
+    let hitOld = false;
+    for (const g of results) {
+      const t = g.start ? new Date(g.start).getTime() : 0;
+      if (t && t < weekStartMs) { hitOld = true; break; }
+      weeklyGames.push(g);
+    }
+    if (hitOld) break;
     if (!data.nextCursor) break;
     cursor = data.nextCursor;
-    if (allGames.length >= MAX_GAMES_PER_PLAYER) break;
   }
-  return allGames;
+  return weeklyGames;
+}
+
+/**
+ * Charge les stats complètes d'un joueur connecté en 2 étapes :
+ *   1. GET /public/player/{id} → wins carrière (agrégé côté serveur, 1 req)
+ *   2. GET /public/player/{id}/games paginé jusqu'à la barre des 7 jours
+ *      → wins hebdo (2-5 req, stop au premier game trop vieux)
+ *
+ * Total : ~3-6 requêtes par joueur (vs 300+ auparavant pour un gros joueur).
+ * Pour un joueur à 3000 games, les wins carrière sont EXACTES car l'API
+ * les maintient côté serveur — le site n'a plus besoin de tout télécharger.
+ */
+async function fetchPlayerStats(player) {
+  // 1. Career (all-time) — 1 requête, stats agrégées côté serveur
+  const profile = await fetchOpenFront(`/public/player/${encodeURIComponent(player.publicId)}`);
+  const global = extractCareerWinsFromStats(profile?.stats || {});
+  const username = profile?.username || player.username;
+
+  // 2. Weekly — pagination courte jusqu'à 7 jours
+  const weeklyGames = await fetchWeeklyGames(player.publicId);
+  // computeWinsFromGames retourne { global, weekly } ; comme on ne lui passe
+  // QUE les games des 7 derniers jours, .global == .weekly (toutes les games
+  // sont dans la fenêtre). On prend .global par simplicité.
+  const weekly = computeWinsFromGames(weeklyGames).global;
+
+  return {
+    publicId: player.publicId,
+    username,
+    games: weeklyGames.slice(-20), // 20 plus récentes pour le profil
+    global,
+    weekly,
+    totalGames: 0, // non disponible simplement depuis l'API agrégée
+    fetchedAt: Date.now(),
+  };
 }
 
 /** Classifie une game en catégorie. */
@@ -300,21 +429,11 @@ async function loadLiveStats() {
   // ── 3. Fetch tous les joueurs en parallèle (exemption = 8 concurrent) ──
   const fetchOne = async (player) => {
     try {
-      const games = await fetchAllPlayerGames(player.publicId);
-      const wins = computeWinsFromGames(games);
-      const entry = {
-        publicId: player.publicId,
-        username: player.username,
-        games: games.slice(-20), // garder les 20 plus récentes pour le profil
-        global: wins.global,
-        weekly: wins.weekly,
-        totalGames: games.length,
-        fetchedAt: Date.now(),
-      };
+      const entry = await fetchPlayerStats(player);
       _liveStats[player.publicId] = entry;
       cached[player.publicId] = entry;
       localStorage.setItem(LIVE_CACHE_KEY, JSON.stringify(cached));
-      console.log(`[dashboard] live: ${player.username} (${player.publicId}) → ${games.length} games, global=${JSON.stringify(wins.global)}`);
+      console.log(`[dashboard] live: ${entry.username} (${player.publicId}) → global=${JSON.stringify(entry.global)} weekly=${JSON.stringify(entry.weekly)}`);
     } catch (e) {
       console.warn(`[dashboard] live fetch failed for ${player.publicId}:`, e.message);
     }
