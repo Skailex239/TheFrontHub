@@ -14,24 +14,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "OpenFront · Tableau de bord — Top players all Time & this Week",
+  description:
+    "Classement des meilleurs joueurs OpenFront : Top players all Time (cumul carrière) et Top players this Week (depuis lundi, Europe/Paris). Données récupérées en direct via l'API OpenFront.",
+  keywords: [
+    "OpenFront",
+    "leaderboard",
+    "Top players",
+    "classement",
+    "FFA",
+    "Team",
+    "ranked",
+  ],
+  authors: [{ name: "TheFrontHub" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "OpenFront · Tableau de bord",
+    description:
+      "Top players all Time & this Week — classement en direct via l'API OpenFront.",
+    siteName: "TheFrontHub",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "OpenFront · Tableau de bord",
+    description:
+      "Top players all Time & this Week — classement en direct via l'API OpenFront.",
   },
 };
 

@@ -1583,3 +1583,66 @@ Stage Summary:
 - Impact : les casual wins pèsent maintenant beaucoup plus (10× ou 5× plus qu'un ranked win). Les joueurs avec beaucoup de casual wins (Anto: 53 FFA casual) remontent dans le classement.
 - Champion Nvr_Kn : 1597 pts (au lieu de 15657 avec l'ancien scoring).
 - Tout vérifié end-to-end via VLM.
+
+---
+Task ID: 27
+Agent: main (Z.ai Code)
+Task: Réécrire le dashboard en Next.js (src/app/page.tsx) — requêtes API directement depuis le navigateur via l'exemption x-skailex-access, sans sync runtime ni GitHub Actions. Layout 2 colonnes "Top players all Time" + "Top players this Week" reproduisant le CSS des maquettes fournies (badges carrés orange, trophées top 3, liens orange, boutons "Voir plus" full-width).
+
+Work Log:
+- Test de l'exemption x-skailex-access : curl direct sur https://api.openfront.io/public/player/hWNuSrnS/games avec header `x-skailex-access: 6e477cdeeea36386e4061dd89450a66c` → HTTP 200, réponse JSON `{results: [...], nextCursor: "..."}` avec 10 games/page. L'exemption fonctionne (pas de rate-limit).
+- Analyse des 2 maquettes fournies (VLM) :
+  * Capture d'écran 2026-08-11 152426.png : 2 colonnes côte à côte (Top clans / Top players), cards blanches épurées, badges carrés bleus pour rangs 4+, trophées 🏆🥈🥉 pour top 3, boutons "View more" full-width.
+  * pasted_image_1786464776332.png : 1 colonne "Top players all time by total wins", lignes avec "X wins" bold + "WR: xx% (Y games)" gris, badges carrés bleus pour rangs 4+.
+  * Décision : reproduire le style visuel (badges carrés ORANGE au lieu de bleu pour cohérence avec le site existant --orange #ff7a00, trophées top 3, liens orange, boutons full-width) mais garder le système de points défini en Task 26 (FFA casual +10, FFA ranked +1, Team casual +5, Team ranked +1).
+- Création de `src/lib/openfront.ts` (≈400 lignes) :
+  * Types : GameCategory, Wins, OpenFrontGame, RankedPlayerEntry, RankedJson, ConnectedPlayer, LiveStats, MergedPlayer.
+  * Constantes : PTS_FFA_CASUAL=10, PTS_FFA_RANKED=1, PTS_TEAM_CASUAL=5, PTS_TEAM_RANKED=1, LIVE_CACHE_KEY="dash_live_stats_v2", LIVE_CACHE_TTL=30min, MAX_GAMES_PER_PLAYER=5000, MAX_PAGES_PER_PLAYER=500.
+  * `getWeekStartMs(now)` : calcule le lundi 00:00 Europe/Paris en UTC ms (sans dépendre d'une DB timezone — utilise Intl.DateTimeFormat avec timeZone:"Europe/Paris"). Testé : pour "now"=2026-08-11T16:25Z → weekStart=2026-08-09T22:00Z (= lundi 10 août 2026 00:00 CEST).
+  * `formatFrenchDate(ms)` : format "lundi 10 août 2026" via Intl.DateTimeFormat fr-FR Europe/Paris.
+  * `fetchRankedJson()` : fetch /ranked.json (statique, servi depuis /public).
+  * `fetchConnectedPlayers()` : fetch Firestore REST `public-aliases` → liste [{publicId, username}] filtrée (8 chars alphanum, dédoublonnée).
+  * `fetchAllPlayerGames(publicId, shouldStop?, onProgress?)` : pagine /api/openfront/public/player/<pid>/games (proxy Next.js avec x-skailex-access côté serveur), jusqu'à 500 pages ou 5000 games.
+  * `classifyGame(g)` : mode="Team" ou rankedType="2v2" → teamCasual/teamRanked ; sinon ffaCasual/ffaRanked.
+  * `computeWinsFromGames(games, weekStartMs)` : compte les victories en global + weekly (depuis weekStartMs).
+  * `pointsFor(w)` et `totalWins(w)` : acceptent soit Wins ({ffaCasual,...}) soit MergedPlayer ({ffaCasualWins,...}) — fix d'un bug de field name mismatch.
+  * `loadLiveCache()` / `saveLiveCache()` / `isCacheFresh()` : cache localStorage 30min.
+  * `buildMergedPlayers(rankedData, liveStats)` : merge ranked.json (career ranked wins) + live API (casual wins + weekly). Retourne {global: MergedPlayer[], weekly: MergedPlayer[]}. Global = max(ranked.json, API live) pour ranked, API live pour casual. Weekly = API live uniquement (ranked.json n'a pas de breakdown hebdo).
+- Création de `src/app/page.tsx` (≈550 lignes, client component) :
+  * Header : 🏆 + "OpenFront · Tableau de bord" + "Cette semaine a commencé le lundi 10 août 2026" (orange deep) + tags live (chargement / à jour).
+  * 2 colonnes côte à côte (grid 1fr 1fr, gap 24px, stack < 900px) :
+    - Gauche : "Top players all Time" + sous-titre "Classement cumulé · N joueurs" + liste scrollable top 10 + bouton "Voir plus de joueurs" orange full-width.
+    - Droite : "Top players this Week" + sous-titre "Depuis le lundi 10 août 2026 · N joueurs actifs" + liste scrollable top 10 + bouton "Voir plus de joueurs" orange full-width.
+  * Row : badge rang (🏆🥈🥉 pour 1-3, carré orange 8px radius pour 4+) | nom (lien orange deep, ellipsis si long) + clan tag gris | score "X pts" bold + sub-info "Y wins · FFA A · Team B" gris.
+  * Row = <a href="/profile.html?pid=...&player=..."> pour navigation native vers la page profil statique.
+  * Légende de scoring (card orange pâle) + footer sticky (mt-auto) avec mention "Données fournies par l'API publique OpenFront · Mises à jour en direct dans le navigateur (cache 30 min)".
+  * États : loading (spinner orange + texte), empty ("Aucune partie cette semaine" pour weekly).
+  * Fetch progressif : useEffect #1 fetch ranked.json + Firebase aliases en parallèle ; useEffect #2 déclenche les fetchs live (Promise.all, 5 joueurs en parallèle). Re-render après chaque joueur via setLiveStats({...ref}).
+- Ajout dans `src/app/globals.css` : keyframes `dash-spin` (spinner) + `dash-row-in` (animation lignes), scrollbar fine pour .dash-list, responsive .dash-grid (stack < 900px) + .dash-section (padding réduit < 640px), .sr-only.
+- Update `src/app/layout.tsx` : metadata title="OpenFront · Tableau de bord — Top players all Time & this Week" + description + keywords + openGraph + twitter.
+- **Fix critique** : `next.config.ts` avait un rewrite `{ source: "/", destination: "/index.html" }` qui servait l'ancien site statique à `/` au lieu de la page Next.js. Supprimé le rewrite → `/` sert maintenant `src/app/page.tsx`. L'ancien site statique reste accessible à `/index.html`, `/dashboard.html`, `/profile.html`, `/runs.html`, `/tournois.html`.
+- **Fix bug** : `buildMergedPlayers` retournait `{global, weekly}` mais le destructuring dans page.tsx utilisait `{globalView, weeklyView}` → TypeError "Cannot read properties of undefined (reading 'length')". Corrigé en `{global: globalView, weekly: weeklyView}`.
+- **Fix bug** : `pointsFor()` et `totalWins()` attendaient un objet Wins ({ffaCasual,...}) mais recevaient un MergedPlayer ({ffaCasualWins,...}) → tous les scores affichaient 0. Corrigé en acceptant les deux conventions de noms via `?? ` fallback.
+- Vérification end-to-end (Agent Browser + VLM, desktop 1440×900 + mobile 390×844) :
+  * Layout 2 colonnes côte à côte en desktop, empilées en mobile ✓
+  * Badges carrés orange pour rangs 4+, trophées 🏆🥈🥉 pour top 3 ✓
+  * Noms en orange (liens), scores bold + sub-info gris ✓
+  * Boutons "Voir plus de joueurs" orange full-width ✓
+  * "Cette semaine a commencé le lundi 10 août 2026" affiché ✓
+  * Top players all Time : Skailex on YT (7018 pts, 1300 wins) #1, Nvr_Kn (4687) #2, Anto (4214) #3, Zwiper (3844) #4, Ajp51M2d (1361) #5... ✓
+  * Top players this Week : Nvr_Kn (16 pts, 7 wins) #1, Zwiper (11 pts, 11 wins) #2, Skailex on YT (9 pts, 5 wins) #3, Anto (0 pts) #4, YellowBiscuit (0 pts) #5 ✓
+  * Clic sur une ligne → /profile.html?pid=UWetOwlW&player=Skailex%20on%20YT (page profil statique) ✓
+  * Mobile 390×844 : colonnes empilées, pas de débordement, badges/scores lisibles ✓
+  * 0 erreur console, 0 erreur runtime ✓
+  * Lint : 0 erreurs, 5 warnings préexistants (cloudflare-worker/openfront-proxy.js, runs.js — non liés à mon code) ✓
+- Cache localStorage v2 : 5 joueurs connectés fetchés en ~90s (Nvr_Kn = 3563 games = 357 pages × ~500ms). Cache valide 30min pour éviter de re-fetcher à chaque visite.
+
+Stage Summary:
+- Dashboard Next.js entièrement rewrite en `src/app/page.tsx` (+ `src/lib/openfront.ts` pour la logique). L'utilisateur voit maintenant le nouveau dashboard à `/` (les anciennes pages statiques restent à /index.html, /dashboard.html, etc.).
+- Architecture "NO SYNC at runtime" : le navigateur fait les requêtes API directement via le proxy `/api/openfront/...` qui ajoute le header `x-skailex-access` côté serveur (exemption rate-limit). ranked.json reste un fichier statique (sync offline par GitHub Actions, pas de sync runtime). Firebase public-aliases donne la liste des joueurs connectés. L'API OpenFront donne les wins casual + hebdo.
+- Layout 2 colonnes "Top players all Time" (gauche) + "Top players this Week" (droite) reproduisant le CSS des maquettes : cards blanches épurées, badges carrés orange #ff7a00 pour rangs 4+, trophées 🏆🥈🥉 pour top 3, noms en orange deep (liens vers profile.html), scores "X pts" bold + sub-info "Y wins · FFA A · Team B" gris, boutons "Voir plus de joueurs" orange full-width.
+- "Cette semaine a commencé le lundi 10 août 2026" affiché en orange dans le header (réponse à la question de l'utilisateur "C'est écrit cette semaine, elle a commencé quand ?"). La semaine = lundi 00:00 Europe/Paris → maintenant (calendar week, pas rolling 7 days).
+- Scoring conservé : FFA casual +10, FFA ranked +1, Team casual +5, Team ranked +1 (le classé rapporte juste 1 pt, pas en plus).
+- Cache localStorage 30min (clé dash_live_stats_v2) pour éviter de re-fetcher 3500+ games à chaque visite.
+- Responsive : 2 colonnes en desktop (≥ 900px), 1 colonne empilée en mobile (< 900px), padding réduit en < 640px.
+- Sticky footer via `min-h-screen flex flex-col` + `mt-auto` sur le footer.

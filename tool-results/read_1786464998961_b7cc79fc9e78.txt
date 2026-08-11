@@ -1,0 +1,913 @@
+     1→/**
+     2→ * dashboard.js — Contrôleur du Tableau de bord TheFrontHub.
+     3→ *
+     4→ * Architecture (NO SYNC — le site fait les requêtes API lui-même) :
+     5→ *
+     6→ *   1. ranked.json (auto-synced par GitHub Actions) → ranked wins carrière
+     7→ *      pour le top 100 1v1 + top 100 2v2. Servé depuis GitHub Pages.
+     8→ *
+     9→ *   2. Firebase public-aliases (Firestore REST API) → liste des joueurs
+    10→ *      connectés via Google/Discord qui ont lié leur Public ID.
+    11→ *
+    12→ *   3. OpenFront API (via proxy Cloudflare Worker ou /api/openfront en dev)
+    13→ *      → pour chaque joueur connecté, on pagine TOUTES ses parties et on
+    14→ *      compte les victoires par catégorie (FFA casual, FFA classé, Team
+    15→ *      casual, Team classé). Le proxy ajoute le header x-skailex-access
+    16→ *      côté serveur (exemption de rate-limit).
+    17→ *
+    18→ *   Merge :
+    19→ *     - Joueurs ranked-only : ranked wins de ranked.json, casual = 0
+    20→ *     - Joueurs connectés : ranked wins = max(ranked.json, API carrière),
+    21→ *       casual wins = API live
+    22→ *
+    23→ *   Cache : les stats live sont mises en cache dans localStorage (30 min)
+    24→ *   pour éviter de re-fetcher à chaque visite.
+    25→ *
+    26→ * Barème :
+    27→ *   FFA casual  = +10  ·  FFA classé (1v1) = +1
+    28→ *   Team casual = +5   ·  Team classé (2v2) = +1
+    29→ *   (ranked = 1 pt, PAS en plus du FFA/Team)
+    30→ *
+    31→ * Auth : importe auth.js (Firebase) et écoute onAuthStateChanged pour brancher
+    32→ * la sidebar (login-btn / user-badge). Définit sur window les handlers utilisés
+    33→ * par les onclick du HTML : toggleAuthModal, handleLogin, handleLogout,
+    34→ * toggleUserDropdown, goToProfilePage, closeProfileModal,
+    35→ * startOwnershipVerification, confirmOwnershipVerification,
+    36→ * cancelOwnershipVerification.
+    37→ */
+    38→
+    39→import {
+    40→  auth, db,
+    41→  doc, getDoc, setDoc,
+    42→  collection, query, where, onSnapshot,
+    43→  onAuthStateChanged, signOut,
+    44→} from "./auth.js";
+    45→import { fetchOpenFront } from "./openfront-client.js?v=24";
+    46→
+    47→/* ════════════════════════════════════════════════════════════════
+    48→   Constantes (barème)
+    49→   ════════════════════════════════════════════════════════════════ */
+    50→
+    51→const PTS_FFA_CASUAL  = 10;
+    52→const PTS_FFA_RANKED  = 1;   // ranked = 1 pt, pas en plus du FFA
+    53→const PTS_TEAM_CASUAL = 5;
+    54→const PTS_TEAM_RANKED = 1;   // ranked = 1 pt, pas en plus du Team
+    55→
+    56→/* ════════════════════════════════════════════════════════════════
+    57→   State + DOM
+    58→   ════════════════════════════════════════════════════════════════ */
+    59→
+    60→const view = document.getElementById("dashboard-view");
+    61→const lastUpdateEl = document.getElementById("last-update");
+    62→
+    63→let _rankedData = null;        // ranked.json décodé (ranked wins carrière)
+    64→let _connectedPlayers = [];    // [{publicId, username}] depuis Firebase
+    65→let _liveStats = {};           // { publicId: { global: {...}, weekly: {...}, games: [], fetchedAt } }
+    66→let _mergedPlayers = [];       // liste fusionnée ranked + live
+    67→let _liveFetchDone = false;    // true quand toutes les stats live sont chargées
+    68→let _liveFetchProgress = 0;    // nombre de joueurs connectés traités
+    69→let _dashMode = "global";      // "global" | "weekly"
+    70→let currentUser = null;     // { name, publicId, avatar, uid, email }
+    71→let _ownershipCode = null;
+    72→let _ownershipPublicId = null;
+    73→let _ownershipUsername = null;
+    74→let _loginInProgress = false;
+    75→
+    76→const LIVE_CACHE_KEY = "dash_live_stats_v1";
+    77→const LIVE_CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+    78→const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000;
+    79→const MAX_GAMES_PER_PLAYER = 5000; // sécurité
+    80→const FIREBASE_PROJECT = "openfront-speedrun";
+    81→const FIRESTORE_BASE = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT}/databases/(default)/documents`;
+    82→
+    83→/* ════════════════════════════════════════════════════════════════
+    84→   Helpers
+    85→   ════════════════════════════════════════════════════════════════ */
+    86→
+    87→function escapeHtml(s) {
+    88→  if (s == null) return "";
+    89→  return String(s)
+    90→    .replace(/&/g, "&amp;")
+    91→    .replace(/</g, "&lt;")
+    92→    .replace(/>/g, "&gt;")
+    93→    .replace(/"/g, "&quot;")
+    94→    .replace(/'/g, "&#39;");
+    95→}
+    96→
+    97→function formatPoints(n) {
+    98→  return new Intl.NumberFormat("fr-FR").format(n || 0);
+    99→}
+   100→
+   101→function initials(name) {
+   102→  if (!name) return "?";
+   103→  const clean = name.replace(/^\[[^\]]+\]\s*/, "").trim();
+   104→  const parts = clean.split(/[\s_-]+/).filter(Boolean);
+   105→  const letters = parts.length >= 2 ? parts[0][0] + parts[1][0] : clean.slice(0, 2);
+   106→  return letters.toUpperCase();
+   107→}
+   108→
+   109→function rankCircleHtml(rank) {
+   110→  let cls = "dash-rank";
+   111→  if (rank === 1) cls += " dash-rank-1";
+   112→  else if (rank === 2) cls += " dash-rank-2";
+   113→  else if (rank === 3) cls += " dash-rank-3";
+   114→  return `<span class="${cls}">${rank}</span>`;
+   115→}
+   116→
+   117→function avatarHtml(name, size = "sm") {
+   118→  return `<span class="dash-avatar dash-avatar-${size}" aria-hidden="true">${escapeHtml(initials(name))}</span>`;
+   119→}
+   120→
+   121→function clanBadgeHtml(clan) {
+   122→  if (!clan) return "";
+   123→  return `<span class="dash-clan">[${escapeHtml(clan)}]</span>`;
+   124→}
+   125→
+   126→function showToast(msg, type = "info", duration = 4000) {
+   127→  if (typeof window.showToast === "function") window.showToast(msg, type, duration);
+   128→  else console.log(`[toast:${type}]`, msg);
+   129→}
+   130→
+   131→/* ════════════════════════════════════════════════════════════════
+   132→   Chargement des données (LIVE — pas de sync)
+   133→   ════════════════════════════════════════════════════════════════ */
+   134→
+   135→/** Charge ranked.json (ranked wins carrière pour top 100 1v1 + 2v2). */
+   136→async function loadRankedJson() {
+   137→  try {
+   138→    const res = await fetch("ranked.json", { cache: "no-store" });
+   139→    if (res.ok) {
+   140→      _rankedData = await res.json();
+   141→      if (_rankedData?.updatedAt) updateLastUpdateLabel(_rankedData.updatedAt);
+   142→      console.log(`[dashboard] ranked.json: ${(_rankedData["1v1"]?.length || 0) + (_rankedData["2v2"]?.length || 0)} joueurs classés`);
+   143→    }
+   144→  } catch (e) {
+   145→    console.warn("[dashboard] ranked.json indisponible:", e.message);
+   146→  }
+   147→}
+   148→
+   149→/** Charge la liste des joueurs connectés depuis Firebase public-aliases. */
+   150→async function loadConnectedPlayers() {
+   151→  try {
+   152→    const url = `${FIRESTORE_BASE}/public-aliases`;
+   153→    const res = await fetch(url, { cache: "no-store" });
+   154→    if (!res.ok) {
+   155→      console.warn(`[dashboard] Firebase public-aliases: HTTP ${res.status}`);
+   156→      return;
+   157→    }
+   158→    const data = await res.json();
+   159→    const docs = data.documents || [];
+   160→    const seen = new Set();
+   161→    _connectedPlayers = docs.map((doc) => {
+   162→      const fields = doc.fields || {};
+   163→      const val = (f) => (f?.stringValue || f?.integerValue || "");
+   164→      const publicId = val(fields.publicId);
+   165→      return {
+   166→        publicId,
+   167→        username: val(fields.username) || publicId || "?",
+   168→      };
+   169→    })
+   170→    // Filtrer : publicId valide = exactement 8 caractères alphanumériques
+   171→    .filter((p) => /^[A-Za-z0-9]{8}$/.test(p.publicId))
+   172→    // Dédoublonner par publicId (garder le premier)
+   173→    .filter((p) => {
+   174→      if (seen.has(p.publicId)) return false;
+   175→      seen.add(p.publicId);
+   176→      return true;
+   177→    });
+   178→    console.log(`[dashboard] Firebase: ${_connectedPlayers.length} joueurs connectés (sur ${docs.length} documents)`);
+   179→  } catch (e) {
+   180→    console.warn("[dashboard] Firebase indisponible:", e.message);
+   181→  }
+   182→}
+   183→
+   184→/**
+   185→ * Pagine TOUTES les parties d'un joueur via le proxy OpenFront.
+   186→ * Retourne [{ gameId, start, mode, rankedType, result, map, ... }].
+   187→ */
+   188→async function fetchAllPlayerGames(publicId) {
+   189→  const allGames = [];
+   190→  let cursor = null;
+   191→  for (let page = 0; page < 500; page++) {
+   192→    let apiPath = `/public/player/${encodeURIComponent(publicId)}/games`;
+   193→    if (cursor) apiPath += `?cursor=${encodeURIComponent(cursor)}`;
+   194→    let data;
+   195→    try {
+   196→      data = await fetchOpenFront(apiPath);
+   197→    } catch (e) {
+   198→      console.warn(`[dashboard] fetch games ${publicId} page ${page}:`, e.message);
+   199→      break;
+   200→    }
+   201→    const results = data?.results || [];
+   202→    if (results.length === 0) break;
+   203→    allGames.push(...results);
+   204→    if (!data.nextCursor) break;
+   205→    cursor = data.nextCursor;
+   206→    if (allGames.length >= MAX_GAMES_PER_PLAYER) break;
+   207→  }
+   208→  return allGames;
+   209→}
+   210→
+   211→/** Classifie une game en catégorie. */
+   212→function classifyGame(g) {
+   213→  const mode = String(g.mode || "").toLowerCase();
+   214→  const rt = String(g.rankedType || "").toLowerCase();
+   215→  const isTeam =
+   216→    mode === "team" ||
+   217→    mode.startsWith("2v2") ||
+   218→    mode.startsWith("3v3") ||
+   219→    mode.startsWith("4v4") ||
+   220→    rt === "2v2";
+   221→  const isRanked = rt === "1v1" || rt === "2v2" || rt === "ranked";
+   222→  if (isTeam) return isRanked ? "teamRanked" : "teamCasual";
+   223→  return isRanked ? "ffaRanked" : "ffaCasual";
+   224→}
+   225→
+   226→/** Calcule les wins globales + hebdo depuis une liste de games. */
+   227→function computeWinsFromGames(games) {
+   228→  const global = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
+   229→  const weekly = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
+   230→  const now = Date.now();
+   231→  for (const g of games) {
+   232→    if (g.result !== "victory") continue;
+   233→    const cat = classifyGame(g);
+   234→    global[cat]++;
+   235→    if (g.start && now - new Date(g.start).getTime() < WEEKLY_MS) {
+   236→      weekly[cat]++;
+   237→    }
+   238→  }
+   239→  return { global, weekly };
+   240→}
+   241→
+   242→/** Charge les stats live pour tous les joueurs connectés (avec cache, en parallèle). */
+   243→async function loadLiveStats() {
+   244→  if (_connectedPlayers.length === 0) {
+   245→    _liveFetchDone = true;
+   246→    return;
+   247→  }
+   248→
+   249→  // ── 1. Charger le cache localStorage ──
+   250→  let cached = {};
+   251→  try {
+   252→    const raw = localStorage.getItem(LIVE_CACHE_KEY);
+   253→    if (raw) {
+   254→      const parsed = JSON.parse(raw);
+   255→      if (parsed && typeof parsed === "object") cached = parsed;
+   256→    }
+   257→  } catch (e) { /* ignore */ }
+   258→
+   259→  // ── 2. Séparer les joueurs en cache (frais) vs à fetcher ──
+   260→  const toFetch = [];
+   261→  for (const player of _connectedPlayers) {
+   262→    const cacheEntry = cached[player.publicId];
+   263→    const isFresh = cacheEntry && (Date.now() - cacheEntry.fetchedAt) < LIVE_CACHE_TTL;
+   264→    if (isFresh) {
+   265→      _liveStats[player.publicId] = cacheEntry;
+   266→      _liveFetchProgress++;
+   267→    } else {
+   268→      toFetch.push(player);
+   269→    }
+   270→  }
+   271→  // Premier rendu avec les données en cache
+   272→  if (_liveFetchProgress > 0) mergeAndRender();
+   273→
+   274→  // ── 3. Fetch tous les joueurs en parallèle (exemption = 8 concurrent) ──
+   275→  const fetchOne = async (player) => {
+   276→    try {
+   277→      const games = await fetchAllPlayerGames(player.publicId);
+   278→      const wins = computeWinsFromGames(games);
+   279→      const entry = {
+   280→        publicId: player.publicId,
+   281→        username: player.username,
+   282→        games: games.slice(-20), // garder les 20 plus récentes pour le profil
+   283→        global: wins.global,
+   284→        weekly: wins.weekly,
+   285→        totalGames: games.length,
+   286→        fetchedAt: Date.now(),
+   287→      };
+   288→      _liveStats[player.publicId] = entry;
+   289→      cached[player.publicId] = entry;
+   290→      localStorage.setItem(LIVE_CACHE_KEY, JSON.stringify(cached));
+   291→      console.log(`[dashboard] live: ${player.username} (${player.publicId}) → ${games.length} games, global=${JSON.stringify(wins.global)}`);
+   292→    } catch (e) {
+   293→      console.warn(`[dashboard] live fetch failed for ${player.publicId}:`, e.message);
+   294→    }
+   295→    _liveFetchProgress++;
+   296→    mergeAndRender(); // rendu progressif après chaque joueur
+   297→  };
+   298→
+   299→  // Lancer tous les fetchs en parallèle
+   300→  await Promise.all(toFetch.map(fetchOne));
+   301→  _liveFetchDone = true;
+   302→}
+   303→
+   304→function updateLastUpdateLabel(ts) {
+   305→  if (!ts || !lastUpdateEl) return;
+   306→  const d = new Date(typeof ts === "number" ? ts : ts);
+   307→  if (Number.isNaN(d.getTime())) return;
+   308→  lastUpdateEl.textContent = "Mis à jour le " + new Intl.DateTimeFormat("fr-FR", {
+   309→    day: "2-digit", month: "2-digit", year: "numeric",
+   310→    hour: "2-digit", minute: "2-digit",
+   311→  }).format(d);
+   312→}
+   313→
+   314→/* ════════════════════════════════════════════════════════════════
+   315→   Merge ranked.json + stats live → _mergedPlayers
+   316→   ════════════════════════════════════════════════════════════════ */
+   317→
+   318→function pointsFor(p) {
+   319→  return (p.ffaCasualWins || 0) * PTS_FFA_CASUAL
+   320→       + (p.ffaRankedWins || 0) * PTS_FFA_RANKED
+   321→       + (p.teamCasualWins || 0) * PTS_TEAM_CASUAL
+   322→       + (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
+   323→}
+   324→
+   325→/** Fusionne ranked.json (career ranked wins) + live API (casual wins). */
+   326→function buildMergedPlayers() {
+   327→  const byPid = new Map();
+   328→  const isWeekly = _dashMode === "weekly";
+   329→
+   330→  // 1. ranked.json → ranked wins carrière (GLOBAL uniquement)
+   331→  //    En weekly, on ne peut pas déduire les wins hebdo depuis ranked.json (career total only)
+   332→  //    → les joueurs ranked-only ont 0 pts en weekly
+   333→  if (_rankedData) {
+   334→    const getOrCreate = (pid, name) => {
+   335→      let e = byPid.get(pid);
+   336→      if (!e) {
+   337→        e = {
+   338→          publicId: pid, username: name || pid, clan: null,
+   339→          ffaCasualWins: 0, ffaRankedWins: 0,
+   340→          teamCasualWins: 0, teamRankedWins: 0,
+   341→          _hasLive: false,
+   342→        };
+   343→        byPid.set(pid, e);
+   344→      }
+   345→      return e;
+   346→    };
+   347→    for (const p of _rankedData["1v1"] || []) {
+   348→      const nm = p.username || p.accountUsername || p.public_id;
+   349→      const e = getOrCreate(p.public_id, nm);
+   350→      // En weekly, on garde les career wins uniquement si le joueur n'a PAS de stats live
+   351→      // (les stats live remplaceront par les vraies valeurs hebdo)
+   352→      if (!isWeekly) e.ffaRankedWins = p.wins || 0;
+   353→      if (nm && nm !== p.public_id) e.username = nm;
+   354→    }
+   355→    for (const p of _rankedData["2v2"] || []) {
+   356→      const nm = p.username || p.accountUsername || p.public_id;
+   357→      const e = getOrCreate(p.public_id, nm);
+   358→      if (!isWeekly) e.teamRankedWins = p.wins || 0;
+   359→      if (nm && nm !== p.public_id) e.username = nm;
+   360→    }
+   361→  }
+   362→
+   363→  // 2. Stats live → casual wins + ranked wins
+   364→  for (const [pid, live] of Object.entries(_liveStats)) {
+   365→    let e = byPid.get(pid);
+   366→    if (!e) {
+   367→      e = {
+   368→        publicId: pid, username: live.username || pid, clan: null,
+   369→        ffaCasualWins: 0, ffaRankedWins: 0,
+   370→        teamCasualWins: 0, teamRankedWins: 0,
+   371→        _hasLive: false,
+   372→      };
+   373→      byPid.set(pid, e);
+   374→    }
+   375→    const g = isWeekly ? live.weekly : live.global;
+   376→    e.ffaCasualWins = g.ffaCasual;
+   377→    e.teamCasualWins = g.teamCasual;
+   378→    // Ranked wins :
+   379→    //   - Global : max(ranked.json career, API live) — ranked.json est plus complet
+   380→    //   - Weekly : API live uniquement (ranked.json n'a pas de breakdown hebdo)
+   381→    if (isWeekly) {
+   382→      e.ffaRankedWins = g.ffaRanked;
+   383→      e.teamRankedWins = g.teamRanked;
+   384→    } else {
+   385→      e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
+   386→      e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
+   387→    }
+   388→    e._hasLive = true;
+   389→    if (live.username && live.username !== pid) e.username = live.username;
+   390→  }
+   391→
+   392→  // 3. Calcul des points + tri
+   393→  const players = [...byPid.values()].map((p) => ({
+   394→    ...p,
+   395→    points: pointsFor(p),
+   396→  }));
+   397→  players.sort((a, b) => b.points - a.points);
+   398→  return players;
+   399→}
+   400→
+   401→/** Retourne la vue active (global ou weekly). */
+   402→function getActiveView() {
+   403→  return { players: _mergedPlayers };
+   404→}
+   405→
+   406→/* ════════════════════════════════════════════════════════════════
+   407→   Rendu
+   408→   ════════════════════════════════════════════════════════════════ */
+   409→
+   410→function render() {
+   411→  if (!_rankedData && _mergedPlayers.length === 0) {
+   412→    view.innerHTML = `
+   413→      <div class="dash-empty-state">
+   414→        <div class="dash-empty-icon"><i data-icon="chart"></i></div>
+   415→        <h3>Chargement…</h3>
+   416→        <p>Récupération du classement…</p>
+   417→      </div>`;
+   418→    if (window.hydrateIcons) window.hydrateIcons(view);
+   419→    return;
+   420→  }
+   421→
+   422→  const isWeekly = _dashMode === "weekly";
+   423→  const players = _mergedPlayers.map((p) => ({ ...p }));
+   424→  if (players.length === 0) {
+   425→    view.innerHTML = `
+   426→      <div class="dash-empty-state">
+   427→        <div class="dash-empty-icon"><i data-icon="chart"></i></div>
+   428→        <h3>Aucune donnée disponible</h3>
+   429→        <p>${isWeekly ? "Aucune partie cette semaine." : "Chargement…"}</p>
+   430→      </div>`;
+   431→    if (window.hydrateIcons) window.hydrateIcons(view);
+   432→    return;
+   433→  }
+   434→
+   435→  // Ajout du rang
+   436→  players.forEach((p, i) => { p.rank = i + 1; });
+   437→
+   438→  const champion = players[0] ?? null;
+   439→  const totalPlayers = players.length;
+   440→  const topN = players.slice(0, 50);
+   441→  const modeLabel = isWeekly ? "Cette semaine" : "Global";
+   442→
+   443→  // Indicateur de chargement live
+   444→  const liveTag = !_liveFetchDone
+   445→    ? `<span class="dash-fallback-tag">⚡ Chargement live des stats… (${_liveFetchProgress}/${_connectedPlayers.length})</span>`
+   446→    : _connectedPlayers.length > 0
+   447→      ? `<span class="dash-fallback-tag" style="background:rgba(34,197,94,.15);color:#22c55e">✓ Stats live (${_connectedPlayers.length} joueurs connectés)</span>`
+   448→      : "";
+   449→
+   450→  view.innerHTML = `
+   451→    ${liveTag}
+   452→
+   453→    <div class="dash-controls-row">
+   454→      <div class="dash-toggle" role="tablist" aria-label="Période du classement">
+   455→        <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
+   456→        <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
+   457→      </div>
+   458→      <div class="dash-scoring-inline">FFA casual +10 · FFA classé +1 · Team casual +5 · Team classé +1</div>
+   459→    </div>
+   460→
+   461→    <div class="dash-grid">
+   462→      ${champion ? renderChampion(champion, isWeekly) : ""}
+   463→      ${renderRanking(topN, totalPlayers, modeLabel)}
+   464→    </div>
+   465→
+   466→    <div class="dash-scoring-info">
+   467→      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+   468→      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). ${isWeekly ? "Vue hebdomadaire = parties des 7 derniers jours." : "Vue globale = cumul de toutes les parties."} Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
+   469→    </div>
+   470→  `;
+   471→
+   472→  // Hydrate les icônes <i data-icon>
+   473→  if (window.hydrateIcons) window.hydrateIcons(view);
+   474→
+   475→  // Toggle listeners (les boutons sont dans #dashboard-view)
+   476→  view.querySelectorAll(".dash-toggle-btn").forEach((btn) => {
+   477→    btn.addEventListener("click", () => {
+   478→      _dashMode = btn.dataset.mode;
+   479→      mergeAndRender();
+   480→    });
+   481→  });
+   482→}
+   483→
+   484→/** Merge + render (utilisé après chaque fetch live pour mise à jour progressive). */
+   485→function mergeAndRender() {
+   486→  _mergedPlayers = buildMergedPlayers();
+   487→  render();
+   488→}
+   489→
+   490→/* ── Champion card (left column) ── */
+   491→function renderChampion(champion, isWeekly) {
+   492→  const name = champion.username || champion.publicId;
+   493→  const profileUrl = champion.publicId
+   494→    ? `profile.html?pid=${encodeURIComponent(champion.publicId)}&player=${encodeURIComponent(name)}`
+   495→    : `profile.html?player=${encodeURIComponent(name)}`;
+   496→
+   497→  const ffaCasualPts  = (champion.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
+   498→  const ffaRankedPts  = (champion.ffaRankedWins  || 0) * PTS_FFA_RANKED;
+   499→  const teamCasualPts = (champion.teamCasualWins || 0) * PTS_TEAM_CASUAL;
+   500→  const teamRankedPts = (champion.teamRankedWins || 0) * PTS_TEAM_RANKED;
+   501→
+   502→  return `
+   503→    <section class="dash-section dash-champion-section">
+   504→      <div class="dash-section-header">
+   505→        <h2 class="dash-section-title">Top joueur</h2>
+   506→        <span class="dash-section-meta">${isWeekly ? "Cette semaine" : "Global"}</span>
+   507→      </div>
+   508→      <div class="dash-champion">
+   509→        <div class="dash-champion-top">
+   510→          <span class="dash-champion-trophy" aria-hidden="true">🏆</span>
+   511→          <div class="dash-champion-meta">
+   512→            <div class="dash-champion-name">${escapeHtml(name)}${champion.clan ? ` <span class="dash-player-clan">[${escapeHtml(champion.clan)}]</span>` : ""}</div>
+   513→            <div class="dash-champion-sub">Rang #1 · ${isWeekly ? "champion de la semaine" : "champion global"}</div>
+   514→          </div>
+   515→          <div class="dash-champion-points-wrap">
+   516→            <div class="dash-champion-points">${formatPoints(champion.points)}</div>
+   517→            <div class="dash-champion-points-label">points</div>
+   518→          </div>
+   519→        </div>
+   520→        <div class="dash-champion-breakdown">
+   521→          <div class="dash-champion-stat">
+   522→            <span class="dash-champion-stat-label">FFA casual</span>
+   523→            <span class="dash-champion-stat-val">${champion.ffaCasualWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(ffaCasualPts)}</span></span>
+   524→          </div>
+   525→          <div class="dash-champion-stat">
+   526→            <span class="dash-champion-stat-label">FFA classé</span>
+   527→            <span class="dash-champion-stat-val">${champion.ffaRankedWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(ffaRankedPts)}</span></span>
+   528→          </div>
+   529→          <div class="dash-champion-stat">
+   530→            <span class="dash-champion-stat-label">Team casual</span>
+   531→            <span class="dash-champion-stat-val">${champion.teamCasualWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(teamCasualPts)}</span></span>
+   532→          </div>
+   533→          <div class="dash-champion-stat">
+   534→            <span class="dash-champion-stat-label">Team classé</span>
+   535→            <span class="dash-champion-stat-val">${champion.teamRankedWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(teamRankedPts)}</span></span>
+   536→          </div>
+   537→        </div>
+   538→        <a class="dash-more-btn" href="${profileUrl}">Voir le profil</a>
+   539→      </div>
+   540→    </section>`;
+   541→}
+   542→
+   543→/* ── Ranking list (right column, flex rows) ── */
+   544→function renderRanking(topN, totalPlayers, modeLabel) {
+   545→  const rows = topN.map((p) => {
+   546→    const name = p.username || p.publicId;
+   547→    const profileUrl = p.publicId
+   548→      ? `profile.html?pid=${encodeURIComponent(p.publicId)}&player=${encodeURIComponent(name)}`
+   549→      : `profile.html?player=${encodeURIComponent(name)}`;
+   550→    const trophy = p.rank === 1 ? "🏆" : p.rank === 2 ? "🥈" : p.rank === 3 ? "🥉" : null;
+   551→    const rankSlot = trophy
+   552→      ? `<span class="dash-rank-trophy" aria-hidden="true">${trophy}</span>`
+   553→      : `<span class="dash-rank-badge">${p.rank}</span>`;
+   554→    return `
+   555→      <a class="dash-row dash-row-link" href="${profileUrl}">
+   556→        <span class="dash-rank-slot">${rankSlot}</span>
+   557→        <span class="dash-player">
+   558→          <span class="dash-player-name">${escapeHtml(name)}</span>
+   559→          ${p.clan ? `<span class="dash-player-clan">[${escapeHtml(p.clan)}]</span>` : ""}
+   560→        </span>
+   561→        <span class="dash-score">
+   562→          <span class="dash-score-val">${formatPoints(p.points)}</span><span class="dash-score-suffix">pts</span>
+   563→        </span>
+   564→      </a>`;
+   565→  }).join("");
+   566→
+   567→  return `
+   568→    <section class="dash-section dash-ranking-section">
+   569→      <div class="dash-section-header">
+   570→        <h2 class="dash-section-title">Classement</h2>
+   571→        <span class="dash-section-meta">${totalPlayers} joueurs · ${modeLabel}</span>
+   572→      </div>
+   573→      <div class="dash-list">
+   574→        ${rows || `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
+   575→      </div>
+   576→      <a class="dash-more-btn" href="index.html?tab=ranked">Voir tout le classement</a>
+   577→    </section>`;
+   578→}
+   579→
+   580→/* ════════════════════════════════════════════════════════════════
+   581→   Auth UI (sidebar)
+   582→   ════════════════════════════════════════════════════════════════ */
+   583→
+   584→function updateAuthUI(user) {
+   585→  const loginBtn = document.getElementById("login-btn-main");
+   586→  const userContainer = document.getElementById("user-container");
+   587→  if (!loginBtn || !userContainer) return;
+   588→
+   589→  if (!user) {
+   590→    loginBtn.style.display = "flex";
+   591→    userContainer.style.display = "none";
+   592→    userContainer.classList.remove("open");
+   593→    return;
+   594→  }
+   595→
+   596→  loginBtn.style.display = "none";
+   597→  userContainer.style.display = "block";
+   598→
+   599→  const name = user.name || "Joueur";
+   600→  const publicId = user.publicId || "Non lié";
+   601→
+   602→  const setText = (id, val) => {
+   603→    const el = document.getElementById(id);
+   604→    if (el) el.textContent = val;
+   605→  };
+   606→  setText("user-display-name", name);
+   607→  setText("user-public-id-side", publicId !== "Non lié" ? publicId : "En ligne");
+   608→  setText("dropdown-username-display", name);
+   609→  setText("dropdown-publicid-display", publicId);
+   610→
+   611→  const avatarEl = document.getElementById("dropdown-avatar");
+   612→  const sidebarAvatarEl = document.getElementById("sidebar-avatar");
+   613→  const renderAvatar = (el) => {
+   614→    if (!el) return;
+   615→    if (user.avatar) {
+   616→      el.innerHTML = `<img src="${escapeHtml(user.avatar)}" alt="${escapeHtml(name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover">`;
+   617→    } else {
+   618→      el.innerHTML = "";
+   619→      el.textContent = initials(name);
+   620→      el.style.background = "linear-gradient(135deg,var(--accent),var(--accentL))";
+   621→      el.style.color = "#fff";
+   622→    }
+   623→  };
+   624→  renderAvatar(avatarEl);
+   625→  renderAvatar(sidebarAvatarEl);
+   626→}
+   627→
+   628→onAuthStateChanged(auth, async (user) => {
+   629→  if (!user) {
+   630→    currentUser = null;
+   631→    updateAuthUI(null);
+   632→    return;
+   633→  }
+   634→  currentUser = { uid: user.uid, avatar: user.photoURL, email: user.email };
+   635→
+   636→  // Lecture du profil Firestore
+   637→  let profile = null;
+   638→  try {
+   639→    const snap = await getDoc(doc(db, "users", user.uid));
+   640→    if (snap.exists()) profile = snap.data();
+   641→  } catch (e) {
+   642→    console.warn("[dashboard] Firestore read error:", e.message);
+   643→  }
+   644→
+   645→  if (profile && profile.publicId) {
+   646→    currentUser.name = profile.username;
+   647→    currentUser.publicId = profile.publicId;
+   648→    updateAuthUI(currentUser);
+   649→  } else {
+   650→    // Premier login sans profil : on affiche le badge + ouvre le setup modal
+   651→    currentUser.name = user.displayName || "Joueur";
+   652→    updateAuthUI(currentUser);
+   653→    // Redirige vers profile.html pour finaliser le setup (le dashboard n'a pas
+   654→    // vocation à héberger tout le flow d'ownership verification ici).
+   655→    if (profile == null) {
+   656→      // Pas de doc Firestore du tout → l'utilisateur n'a jamais finalisé.
+   657→      // On l'envoie sur profile.html qui gère le setup.
+   658→      // On évite la boucle en ne redirigeant que si l'URL ne contient pas ?setup=1
+   659→      const params = new URLSearchParams(window.location.search);
+   660→      if (params.get("setup") !== "1") {
+   661→        // Petit délai pour laisser le toast se figurer
+   662→        showToast("Bienvenue ! Finalisez votre profil pour accéder à vos stats.", "info", 3500);
+   663→        setTimeout(() => { window.location.href = "profile.html"; }, 1200);
+   664→        return;
+   665→      }
+   666→    }
+   667→  }
+   668→});
+   669→
+   670→/* ════════════════════════════════════════════════════════════════
+   671→   Handlers globaux (pour onclick HTML)
+   672→   ════════════════════════════════════════════════════════════════ */
+   673→
+   674→window.toggleAuthModal = function () {
+   675→  const modal = document.getElementById("auth-modal");
+   676→  if (modal) modal.classList.toggle("active");
+   677→};
+   678→
+   679→window.closeProfileModal = function () {
+   680→  const modal = document.getElementById("profile-modal");
+   681→  if (modal) modal.classList.remove("active");
+   682→};
+   683→
+   684→window.handleLogin = async function (provider) {
+   685→  if (_loginInProgress) return;
+   686→  _loginInProgress = true;
+   687→  const authBtns = document.querySelectorAll(".auth-btn");
+   688→  authBtns.forEach((b) => { b.disabled = true; b.style.opacity = "0.6"; });
+   689→  try {
+   690→    if (provider === "google") await window.loginWithGoogle();
+   691→    else if (provider === "discord") await window.loginWithDiscord();
+   692→    const modal = document.getElementById("auth-modal");
+   693→    if (modal) modal.classList.remove("active");
+   694→    // onAuthStateChanged prend le relais pour la redirection / UI
+   695→  } catch (e) {
+   696→    console.error("[dashboard] Login error:", e);
+   697→  } finally {
+   698→    _loginInProgress = false;
+   699→    authBtns.forEach((b) => { b.disabled = false; b.style.opacity = ""; });
+   700→  }
+   701→};
+   702→
+   703→window.handleLogout = async function (event) {
+   704→  if (event) event.stopPropagation();
+   705→  if (!confirm("Voulez-vous vous déconnecter ?")) return;
+   706→  try { await signOut(auth); } catch (e) { console.warn("[dashboard] logout error:", e.message); }
+   707→  currentUser = null;
+   708→  updateAuthUI(null);
+   709→};
+   710→
+   711→window.toggleUserDropdown = function (event) {
+   712→  if (event) event.stopPropagation();
+   713→  const c = document.getElementById("user-container");
+   714→  if (c) c.classList.toggle("open");
+   715→};
+   716→
+   717→window.closeUserDropdown = function () {
+   718→  const c = document.getElementById("user-container");
+   719→  if (c) c.classList.remove("open");
+   720→};
+   721→
+   722→window.goToProfilePage = function (event) {
+   723→  if (event) event.stopPropagation();
+   724→  window.closeUserDropdown();
+   725→  // Si l'utilisateur a un publicId, on pointe vers son profil public
+   726→  const pid = currentUser?.publicId;
+   727→  if (pid) {
+   728→    window.location.href = `profile.html?publicId=${encodeURIComponent(pid)}&player=${encodeURIComponent(currentUser.name || "")}`;
+   729→  } else {
+   730→    window.location.href = "profile.html";
+   731→  }
+   732→};
+   733→
+   734→// Fermer le dropdown au clic extérieur
+   735→document.addEventListener("click", (e) => {
+   736→  const c = document.getElementById("user-container");
+   737→  if (c && !c.contains(e.target)) c.classList.remove("open");
+   738→});
+   739→
+   740→/* ── Ownership verification (pour le #profile-modal copié de index.html) ── */
+   741→
+   742→window.startOwnershipVerification = async function () {
+   743→  if (!currentUser) {
+   744→    showToast("Veuillez vous connecter d'abord.", "warning");
+   745→    return;
+   746→  }
+   747→  const usernameInput = document.getElementById("profile-username");
+   748→  const publicIdInput = document.getElementById("profile-public-id");
+   749→  const username = (usernameInput?.value || "").trim();
+   750→  const publicId = (publicIdInput?.value || "").trim();
+   751→
+   752→  if (!username || !publicId) {
+   753→    showToast("Veuillez remplir tous les champs.", "warning");
+   754→    return;
+   755→  }
+   756→  if (username.length < 2 || username.length > 30) {
+   757→    showToast("Le pseudo doit faire entre 2 et 30 caractères.", "warning");
+   758→    return;
+   759→  }
+   760→  if (!/^[A-Za-z0-9]{8}$/.test(publicId)) {
+   761→    showToast("Le Public ID doit faire exactement 8 caractères alphanumériques (ex: HabCsQYR).", "warning");
+   762→    return;
+   763→  }
+   764→  if (/[^a-zA-Z0-9_\- ]/.test(username)) {
+   765→    showToast("Le pseudo ne peut contenir que des lettres, chiffres, espaces, _ et -.", "warning");
+   766→    return;
+   767→  }
+   768→
+   769→  showToast("Vérification du Public ID…", "info", 3000);
+   770→  try {
+   771→    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
+   772→    if (!playerData || !playerData.publicId) {
+   773→      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+   774→      return;
+   775→    }
+   776→  } catch (e) {
+   777→    if (e?.isNotFound || e?.status === 404) {
+   778→      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+   779→      return;
+   780→    }
+   781→    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error", 6000);
+   782→    console.error("[ownership] API check failed:", e);
+   783→    return;
+   784→  }
+   785→
+   786→  // Génération du code challenge TFS-XXXX
+   787→  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+   788→  _ownershipCode = "TFS-";
+   789→  const rand = crypto.getRandomValues(new Uint8Array(4));
+   790→  for (let i = 0; i < 4; i++) _ownershipCode += chars[rand[i] % chars.length];
+   791→  _ownershipPublicId = publicId;
+   792→  _ownershipUsername = username;
+   793→
+   794→  const s1 = document.getElementById("profile-setup-step1");
+   795→  const s2 = document.getElementById("profile-setup-step2");
+   796→  if (s1) s1.style.display = "none";
+   797→  if (s2) s2.style.display = "block";
+   798→  const codeEl = document.getElementById("ownership-code");
+   799→  const exEl = document.getElementById("ownership-example");
+   800→  if (codeEl) codeEl.textContent = _ownershipCode;
+   801→  if (exEl) exEl.textContent = _ownershipCode + " " + username;
+   802→  showToast("Code généré. Suivez les instructions ci-dessous.", "info");
+   803→  if (window.hydrateIcons) window.hydrateIcons(document.getElementById("profile-modal"));
+   804→};
+   805→
+   806→window.confirmOwnershipVerification = async function () {
+   807→  if (!_ownershipCode || !_ownershipPublicId) return;
+   808→  const btn = document.getElementById("confirm-ownership-btn");
+   809→  const original = btn?.textContent || "Confirmer";
+   810→  if (btn) { btn.disabled = true; btn.textContent = "Vérification…"; }
+   811→  try {
+   812→    const gamesData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}/games`);
+   813→    const games = Array.isArray(gamesData?.results) ? gamesData.results : [];
+   814→    const found = games.some((g) => g.username && g.username.includes(_ownershipCode));
+   815→    if (!found) {
+   816→      showToast("Code non trouvé dans vos parties récentes. Jouez une partie avec le code dans votre pseudo, puis confirmez.", "error", 6000);
+   817→      if (btn) { btn.disabled = false; btn.textContent = original; }
+   818→      return;
+   819→    }
+   820→    await saveUserProfile(_ownershipUsername, _ownershipPublicId);
+   821→  } catch (e) {
+   822→    console.error("[ownership] Confirmation failed:", e);
+   823→    showToast("Erreur lors de la vérification. Réessayez.", "error");
+   824→    if (btn) { btn.disabled = false; btn.textContent = original; }
+   825→  }
+   826→};
+   827→
+   828→window.cancelOwnershipVerification = function () {
+   829→  _ownershipCode = null;
+   830→  _ownershipPublicId = null;
+   831→  _ownershipUsername = null;
+   832→  const s1 = document.getElementById("profile-setup-step1");
+   833→  const s2 = document.getElementById("profile-setup-step2");
+   834→  if (s1) s1.style.display = "block";
+   835→  if (s2) s2.style.display = "none";
+   836→};
+   837→
+   838→async function saveUserProfile(username, publicId) {
+   839→  if (!currentUser) throw new Error("No authenticated user");
+   840→  try {
+   841→    const userDocRef = doc(db, "users", currentUser.uid);
+   842→    const existing = (await getDoc(userDocRef)).data() || {};
+   843→    await setDoc(userDocRef, {
+   844→      username,
+   845→      publicId,
+   846→      email: currentUser.email,
+   847→      verified: true,
+   848→      verifiedAt: new Date().toISOString(),
+   849→      createdAt: existing.createdAt || new Date().toISOString(),
+   850→      updatedAt: new Date().toISOString(),
+   851→      openFrontSyncPending: true,
+   852→    }, { merge: true });
+   853→
+   854→    currentUser.name = username;
+   855→    currentUser.publicId = publicId;
+   856→
+   857→    const modal = document.getElementById("profile-modal");
+   858→    if (modal) modal.classList.remove("active");
+   859→    window.cancelOwnershipVerification();
+   860→    updateAuthUI(currentUser);
+   861→    showToast("Profil vérifié et enregistré avec succès ! Redirection…", "success");
+   862→    setTimeout(() => { window.location.href = `profile.html?publicId=${encodeURIComponent(publicId)}&player=${encodeURIComponent(username)}`; }, 800);
+   863→  } catch (e) {
+   864→    console.error("[dashboard] Save profile error:", e);
+   865→    showToast("Erreur lors de la sauvegarde du profil.", "error");
+   866→    throw e;
+   867→  }
+   868→}
+   869→
+   870→/* ════════════════════════════════════════════════════════════════
+   871→   Navigation cliquable des lignes du tableau (délégation)
+   872→   ════════════════════════════════════════════════════════════════ */
+   873→
+   874→document.addEventListener("click", (e) => {
+   875→  const row = e.target.closest(".dash-row-link");
+   876→  if (row && row.dataset.href) {
+   877→    window.location.href = row.dataset.href;
+   878→  }
+   879→});
+   880→
+   881→/* ════════════════════════════════════════════════════════════════
+   882→   Init
+   883→   ════════════════════════════════════════════════════════════════ */
+   884→
+   885→(async function init() {
+   886→  try {
+   887→    // Phase 1 : Charger ranked.json → rendu immédiat avec données classées
+   888→    await loadRankedJson();
+   889→    _mergedPlayers = buildMergedPlayers();
+   890→    render();
+   891→
+   892→    // Phase 2 : Charger la liste des joueurs connectés (Firebase)
+   893→    await loadConnectedPlayers();
+   894→
+   895→    // Phase 3 : Charger les stats live pour chaque joueur connecté
+   896→    // (rendu progressif après chaque joueur)
+   897→    if (_connectedPlayers.length > 0) {
+   898→      loadLiveStats().then(() => {
+   899→        mergeAndRender();
+   900→        console.log("[dashboard] Stats live chargées");
+   901→      }).catch((e) => {
+   902→        console.warn("[dashboard] loadLiveStats error:", e.message);
+   903→      });
+   904→    } else {
+   905→      _liveFetchDone = true;
+   906→    }
+   907→  } catch (e) {
+   908→    console.error("[dashboard] init failed:", e);
+   909→    view.innerHTML = `<div class="dash-empty-state"><div class="dash-empty-icon"><i data-icon="warning"></i></div><h3>Erreur</h3><p>${escapeHtml(e.message || "Chargement impossible.")}</p></div>`;
+   910→    if (window.hydrateIcons) window.hydrateIcons(view);
+   911→  }
+   912→})();
+   913→
