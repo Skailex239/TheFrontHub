@@ -33,7 +33,7 @@ L'URL sera de la forme :
 ```
 https://openfront-proxy.<votre-sous-domaine>.workers.dev
 ```
-Exemple : `https://openfront-proxy.skailex.workers.dev`
+Exemple : `https://openfront-proxy.diofortnite3.workers.dev`
 
 ### Étape 4 — Configurer le dashboard
 Dans `public/dashboard.html`, ajouter/modifier la balise meta :
