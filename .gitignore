@@ -63,3 +63,8 @@ server.log
 # Backups (ne jamais commit)
 *backup.json
 *full.json
+# Temp files from agent tools (never commit)
+/tool-results/
+dashboard-*-screenshot.png
+dashboard-v[0-9]-*.png
+live-*-final.png
