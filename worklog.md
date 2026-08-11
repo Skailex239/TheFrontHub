@@ -1410,3 +1410,64 @@ Stage Summary:
 - sync-dashboard.js ready for GitHub Actions (will enrich with casual games using OPENFRONT_SKAILEX_ACCESS token).
 - Workflow sync.yml updated with sync-dashboard job in the continuous loop.
 - All files synced public/ → root/ for GitHub Pages deployment.
+
+---
+Task ID: 24
+Agent: main (Z.ai Code)
+Task: Refonte sync-dashboard.js pour fusionner ranked.json + joueurs connectés (Firebase public-aliases) via /public/player/<pid>/games. Le profil doit afficher les dernières parties.
+
+Work Log:
+- Reformulation de la spec par l'utilisateur :
+  * Source des joueurs = 2 pools fusionnées : top classés (ranked.json) + joueurs connectés via Google/Discord (Firebase public-aliases).
+  * Pour chaque joueur connecté, le script fetch ses parties via /public/player/<publicId>/games et compte les victoires.
+  * Scoring : FFA win +10, Team win +5, ranked win +1 bonus (FFA ranked = +11, Team ranked = +6).
+  * Le profil doit afficher les dernières parties du joueur.
+
+- Exploration API :
+  * GET /public/player/<pid>/games?cursor=<base64> → { results: [...], nextCursor } avec par partie { mode, rankedType, result, start, map, gameId, durationSeconds, totalPlayers, username, clanTag }.
+  * result = "victory" | "defeat" | "incomplete" directement — pas besoin de fetcher le détail de la game.
+  * Pagination par curseur (10 games/page, max 20 pages = 200 games par joueur).
+
+- Exploration Firebase :
+  * Collection public-aliases publiquement lisible via Firestore REST API (https://firestore.googleapis.com/v1/projects/openfront-speedrun/databases/(default)/documents/public-aliases).
+  * 7 documents trouvés, 6 avec publicId valide : Nvr_Kn (hWNuSrnS), Skailex on YT (UWetOwlW), YellowBiscuit (EFqhVYJW), Skailex (irooe5968 — 404 sur l'API, compte probablement supprimé), Anto (u0u81Hll), Zwiper (tqMGOI2Q).
+
+- Rewrite complet de sync-dashboard.js :
+  * Lit ranked.json (164 joueurs classés) → index par publicId avec wins ranked.
+  * Lit Firebase public-aliases (6 joueurs connectés) via REST.
+  * Pour chaque joueur connecté, fetch /public/player/<pid>/games (max 200 games, paginé par curseur).
+  * Compte les victoires par catégorie : FFA casual, FFA ranked, Team casual, Team ranked.
+  * Merge intelligent :
+    - Joueur ranked + connecté : garde wins ranked de ranked.json (生涯, plus complet), AJOUTE casual wins de l'API.
+    - Joueur connecté non ranked : utilise toutes les wins de l'API.
+    - Joueur ranked non connecté : garde wins ranked de ranked.json, casual = 0.
+  * Cache les 20 dernières games par joueur dans dashboard_player_games.json (pour affichage profil).
+  * Vue weekly : filtre les games par date (7 derniers jours) pour les joueurs connectés.
+  * Scoring : FFA casual +10, FFA ranked +11, Team casual +5, Team ranked +6.
+  * CLI : --dry-run, --verbose, --no-firebase. Env : DASH_MAX_PAGES (défaut 20).
+
+- Résultat du sync (sans exemption token, 102 requêtes API, ~10s) :
+  * 165 joueurs au total (164 ranked + 5 connectés non-ranked — 1 connecté en 404).
+  * Champion global : Nvr_Kn (15657 pts — FFA c:14 r:1355 / Team c:0 r:102).
+  * Top 5 weekly : Zwiper (66), Nvr_Kn (56), Anto (49), Skailex on YT (41), YellowBiscuit (6).
+  * 5 joueurs avec cache de games récentes (20 games chacun).
+
+- profile.js vérifié : fetch déjà /public/player/<pid>/games via le proxy Next.js et affiche les dernières parties (map, mode, rankedType, result, durée, date). Aucune modification nécessaire — juste ajout de l'alias ?pid= pour ?publicId= (déjà fait en Task 23).
+
+- Fix CSS mobile : ajout de `overflow-x: auto` + `-webkit-overflow-scrolling: touch` au wrapper du tableau pour scroll horizontal sur mobile (le tableau a min-width: 580px sur mobile).
+
+- Vérification end-to-end (Agent Browser + VLM) :
+  * Dashboard desktop : 165 joueurs, champion Nvr_Kn (15657 pts), 4 colonnes avec valeurs (14 FFA casual + 1355 FFA ranked + 102 Team ranked pour le champion).
+  * Toggle Cette semaine : Zwiper #1 (66 pts), 5 joueurs actifs.
+  * Clic ligne Nvr_Kn → profile.html?pid=hWNuSrnS&player=Nvr_Kn.
+  * Profil Nvr_Kn : ELO 1v1 (2479, rang #3), ELO 2v2 (2033, rang #3), section "Dernières parties" avec maps (Australia, Iceland, Asia), mode 2v2, résultats victoire/incomplete, durée, date.
+  * Mobile iPhone 16 : scroll horizontal fonctionnel sur le tableau, pas de chevauchement.
+  * 0 erreur console.
+
+Stage Summary:
+- sync-dashboard.js complètement refait : fusionne ranked.json + joueurs connectés (Firebase public-aliases) via /public/player/<pid>/games.
+- 165 joueurs au classement (164 ranked + 5 connectés actifs + 1 en 404).
+- Le tableau de bord reflète maintenant la spec de l'utilisateur : joueurs classés + joueurs connectés, scoring FFA +10/+11, Team +5/+6.
+- Le profil affiche déjà les dernières parties (profile.js existant fonctionne avec ?pid=).
+- Le job GitHub Actions sync-dashboard (ajouté en Task 23) tournera avec le token OPENFRONT_SKAILEX_ACCESS pour enrichir les données.
+- Limitation : l'API /public/player/<pid>/games est limitée à 200 games par joueur (20 pages × 10). Pour les joueurs très actifs (>200 games récentes), les wins casual sont sous-estimées. Les wins ranked restent complètes via ranked.json.

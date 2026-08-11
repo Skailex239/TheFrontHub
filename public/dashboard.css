@@ -250,9 +250,11 @@
 .dash-card-body { padding: 0; }
 .dash-table-wrap {
   max-height: 600px;
+  overflow-x: auto;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--border-strong, #d4d4d4) transparent;
+  -webkit-overflow-scrolling: touch;
 }
 .dash-table-wrap::-webkit-scrollbar { width: 6px; }
 .dash-table-wrap::-webkit-scrollbar-thumb {

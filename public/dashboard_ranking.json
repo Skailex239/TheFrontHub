@@ -1,11 +1,26 @@
 {
-  "updatedAt": "2026-08-11T14:16:48.378953Z",
-  "gamesScanned": 164,
+  "updatedAt": "2026-08-11T14:41:13.039Z",
+  "gamesScanned": 165,
+  "sources": {
+    "rankedCount": 164,
+    "connectedCount": 6,
+    "total": 165
+  },
   "global": {
     "from": null,
-    "to": "2026-08-11T14:16:48.378953Z",
-    "gamesScanned": 164,
+    "to": "2026-08-11T14:41:13.039Z",
+    "gamesScanned": 165,
     "players": [
+      {
+        "publicId": "hWNuSrnS",
+        "username": "Nvr_Kn",
+        "clan": null,
+        "ffaCasualWins": 14,
+        "ffaRankedWins": 1355,
+        "teamCasualWins": 0,
+        "teamRankedWins": 102,
+        "points": 15657
+      },
       {
         "publicId": "Ajp51M2d",
         "username": "EyesOfRuby.1498",
@@ -15,16 +30,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 35,
         "points": 15654
-      },
-      {
-        "publicId": "hWNuSrnS",
-        "username": "Nvr_Kn.6967",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 1355,
-        "teamCasualWins": 0,
-        "teamRankedWins": 102,
-        "points": 15517
       },
       {
         "publicId": "cRbwVUdp",
@@ -128,13 +133,13 @@
       },
       {
         "publicId": "UWetOwlW",
-        "username": "Skailex.9681",
+        "username": "Skailex on YT",
         "clan": null,
-        "ffaCasualWins": 0,
+        "ffaCasualWins": 3,
         "ffaRankedWins": 369,
-        "teamCasualWins": 0,
+        "teamCasualWins": 9,
         "teamRankedWins": 117,
-        "points": 4761
+        "points": 4836
       },
       {
         "publicId": "A7x0szx9",
@@ -165,6 +170,16 @@
         "teamCasualWins": 0,
         "teamRankedWins": 52,
         "points": 4470
+      },
+      {
+        "publicId": "u0u81Hll",
+        "username": "Anto",
+        "clan": null,
+        "ffaCasualWins": 53,
+        "ffaRankedWins": 336,
+        "teamCasualWins": 3,
+        "teamRankedWins": 29,
+        "points": 4415
       },
       {
         "publicId": "SGGpDXiT",
@@ -205,16 +220,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 84,
         "points": 3914
-      },
-      {
-        "publicId": "u0u81Hll",
-        "username": "Anto.6010",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 336,
-        "teamCasualWins": 0,
-        "teamRankedWins": 29,
-        "points": 3870
       },
       {
         "publicId": "7FxG7bSU",
@@ -467,6 +472,16 @@
         "points": 2288
       },
       {
+        "publicId": "tqMGOI2Q",
+        "username": "Zwiper",
+        "clan": null,
+        "ffaCasualWins": 15,
+        "ffaRankedWins": 168,
+        "teamCasualWins": 36,
+        "teamRankedWins": 11,
+        "points": 2244
+      },
+      {
         "publicId": "9xhGr7Kc",
         "username": "Elin.0270",
         "clan": null,
@@ -535,16 +550,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 10,
         "points": 1930
-      },
-      {
-        "publicId": "tqMGOI2Q",
-        "username": "Zwiper.2734",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 168,
-        "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 1914
       },
       {
         "publicId": "BGxgJIeU",
@@ -707,6 +712,16 @@
         "points": 1441
       },
       {
+        "publicId": "EFqhVYJW",
+        "username": "YellowBiscuit",
+        "clan": null,
+        "ffaCasualWins": 7,
+        "ffaRankedWins": 117,
+        "teamCasualWins": 5,
+        "teamRankedWins": 1,
+        "points": 1388
+      },
+      {
         "publicId": "pLXDUmUt",
         "username": "pLXDUmUt",
         "clan": null,
@@ -715,16 +730,6 @@
         "teamCasualWins": 0,
         "teamRankedWins": 0,
         "points": 1353
-      },
-      {
-        "publicId": "EFqhVYJW",
-        "username": "EFqhVYJW",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 117,
-        "teamCasualWins": 0,
-        "teamRankedWins": 0,
-        "points": 1287
       },
       {
         "publicId": "S7Or4TjK",
@@ -1645,993 +1650,1003 @@
         "teamCasualWins": 0,
         "teamRankedWins": 7,
         "points": 42
+      },
+      {
+        "publicId": "irooe5968",
+        "username": "Skailex",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 0
       }
     ]
   },
   "weekly": {
-    "from": "2026-08-04T14:16:48.378953Z",
-    "to": "2026-08-11T14:16:48.378953Z",
-    "gamesScanned": 164,
+    "from": "2026-08-04T14:41:13.039Z",
+    "to": "2026-08-11T14:41:13.039Z",
+    "gamesScanned": 5,
     "players": [
+      {
+        "publicId": "tqMGOI2Q",
+        "username": "Zwiper",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 11,
+        "points": 66
+      },
+      {
+        "publicId": "hWNuSrnS",
+        "username": "Nvr_Kn",
+        "clan": null,
+        "ffaCasualWins": 1,
+        "ffaRankedWins": 2,
+        "teamCasualWins": 0,
+        "teamRankedWins": 4,
+        "points": 56
+      },
+      {
+        "publicId": "u0u81Hll",
+        "username": "Anto",
+        "clan": null,
+        "ffaCasualWins": 2,
+        "ffaRankedWins": 1,
+        "teamCasualWins": 0,
+        "teamRankedWins": 3,
+        "points": 49
+      },
+      {
+        "publicId": "UWetOwlW",
+        "username": "Skailex on YT",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 1,
+        "teamRankedWins": 6,
+        "points": 41
+      },
+      {
+        "publicId": "EFqhVYJW",
+        "username": "YellowBiscuit",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 1,
+        "points": 6
+      },
       {
         "publicId": "Ajp51M2d",
         "username": "EyesOfRuby.1498",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 1404,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 35,
-        "points": 15654
-      },
-      {
-        "publicId": "hWNuSrnS",
-        "username": "Nvr_Kn.6967",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 1355,
-        "teamCasualWins": 0,
-        "teamRankedWins": 102,
-        "points": 15517
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "cRbwVUdp",
         "username": "ProfessorSployer.9847",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 1035,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 99,
-        "points": 11979
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "CpomD1Nt",
         "username": "Samraan.9216",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 782,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 8602
+        "points": 0
       },
       {
         "publicId": "FBXvYHZ8",
         "username": "ImSoBad.8240",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 672,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 69,
-        "points": 7806
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "wdTUQwfq",
         "username": "7oYo7.8163",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 665,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 48,
-        "points": 7603
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "fKjMQ07q",
         "username": "fKjMQ07q",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 633,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 6963
+        "points": 0
       },
       {
         "publicId": "ct2S5kEX",
         "username": "Fibs4785.6952",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 609,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 16,
-        "points": 6795
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "hFaZs30i",
         "username": "smsfun.8062",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 613,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 6743
+        "points": 0
       },
       {
         "publicId": "wrzYZEVn",
         "username": "wrzYZEVn",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 497,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 18,
-        "points": 5575
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "fyQoftrK",
         "username": "fyQoftrK",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 505,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 5555
+        "points": 0
       },
       {
         "publicId": "bEprFTOW",
         "username": "bEprFTOW",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 449,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 4939
-      },
-      {
-        "publicId": "UWetOwlW",
-        "username": "Skailex.9681",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 369,
-        "teamCasualWins": 0,
-        "teamRankedWins": 117,
-        "points": 4761
+        "points": 0
       },
       {
         "publicId": "A7x0szx9",
         "username": "Mortality.7537",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 415,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 4631
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "HqyukEj5",
         "username": "HqyukEj5",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 412,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 4532
+        "points": 0
       },
       {
         "publicId": "FK3dn8ez",
         "username": "Milki.4467",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 378,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 52,
-        "points": 4470
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "SGGpDXiT",
         "username": "Gandy.2542",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 367,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 4037
+        "points": 0
       },
       {
         "publicId": "B5qzdA0y",
         "username": "DougyJr",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 333,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 47,
-        "points": 3945
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "Wh1T7VkU",
         "username": "Royaume Du Rex.5906",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 342,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 28,
-        "points": 3930
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "oCOTVIG9",
         "username": "Bane.7227",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 310,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 84,
-        "points": 3914
-      },
-      {
-        "publicId": "u0u81Hll",
-        "username": "Anto.6010",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 336,
-        "teamCasualWins": 0,
-        "teamRankedWins": 29,
-        "points": 3870
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "7FxG7bSU",
         "username": "Zorbit.8324",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 301,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 70,
-        "points": 3731
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "P7XZZSk6",
         "username": "P7XZZSk6",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 325,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 3575
+        "points": 0
       },
       {
         "publicId": "zZ5zoZzQ",
         "username": "NIKAS.1400",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 315,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 8,
-        "points": 3513
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "TYSIT7UO",
         "username": "TYSIT7UO",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 307,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 3377
+        "points": 0
       },
       {
         "publicId": "8gNPUMcK",
         "username": "8gNPUMcK",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 290,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 3190
+        "points": 0
       },
       {
         "publicId": "VZWEjtqV",
         "username": "VZWEjtqV",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 278,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 3058
+        "points": 0
       },
       {
         "publicId": "3VjegYOZ",
         "username": "3VjegYOZ",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 277,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 3047
+        "points": 0
       },
       {
         "publicId": "Q93X0qis",
         "username": "VarXard.9236",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 218,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 107,
-        "points": 3040
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "TPcfzlh1",
         "username": "TPcfzlh1",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 272,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2992
+        "points": 0
       },
       {
         "publicId": "dAG8d3CL",
         "username": "deshack.6268",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 257,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 18,
-        "points": 2935
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "7BaSl1Hr",
         "username": "7BaSl1Hr",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 262,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2882
+        "points": 0
       },
       {
         "publicId": "v5BbDFnF",
         "username": "v5BbDFnF",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 260,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2860
+        "points": 0
       },
       {
         "publicId": "wI879hZz",
         "username": "HulKiora.8629",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 255,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 7,
-        "points": 2847
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "9Bbux7ke",
         "username": "Kolibril",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 244,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2684
+        "points": 0
       },
       {
         "publicId": "GaUJ4V0X",
         "username": "Revenflok.8023",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 221,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 32,
-        "points": 2623
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "lkTjuHFZ",
         "username": "lkTjuHFZ",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 237,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2607
+        "points": 0
       },
       {
         "publicId": "bzwipzrg",
         "username": "soothxng.1964",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 228,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 13,
-        "points": 2586
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "F7hWtWLS",
         "username": "F7hWtWLS",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 233,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2563
+        "points": 0
       },
       {
         "publicId": "qNZMiEyR",
         "username": "Zilka.4393",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 169,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 106,
-        "points": 2495
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "CxjNBZlc",
         "username": "CxjNBZlc",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 226,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2486
+        "points": 0
       },
       {
         "publicId": "SBU206vb",
         "username": "SBU206vb",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 224,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2464
+        "points": 0
       },
       {
         "publicId": "TnLNa9Db",
         "username": "Kris.4248",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 193,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 56,
-        "points": 2459
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "Too6ceIW",
         "username": "France.6714",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 194,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 28,
-        "points": 2302
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "ji5LH0gm",
         "username": "ji5LH0gm",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 209,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2299
+        "points": 0
       },
       {
         "publicId": "ZfA1Esmt",
         "username": "ZfA1Esmt",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 208,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2288
+        "points": 0
       },
       {
         "publicId": "9xhGr7Kc",
         "username": "Elin.0270",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 181,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 42,
-        "points": 2243
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "GPamIlQR",
         "username": "One_skif.3565",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 193,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2123
+        "points": 0
       },
       {
         "publicId": "lc4dP1Xv",
         "username": "lc4dP1Xv",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 193,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 2123
+        "points": 0
       },
       {
         "publicId": "imAGxfTl",
         "username": "vari",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 184,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 2090
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "t1nUp9zM",
         "username": "Pyrrha.5566",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 148,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 73,
-        "points": 2066
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "y4zaID7x",
         "username": "Nwy07_.4782",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 150,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 67,
-        "points": 2052
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "tCPqPlao",
         "username": "Noob.4738",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 170,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 1930
-      },
-      {
-        "publicId": "tqMGOI2Q",
-        "username": "Zwiper.2734",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 168,
-        "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 1914
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "BGxgJIeU",
         "username": "BGxgJIeU",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 174,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1914
+        "points": 0
       },
       {
         "publicId": "zCNA4ddx",
         "username": "Galod.5875",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 169,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1859
+        "points": 0
       },
       {
         "publicId": "TRkhApIC",
         "username": "TRkhApIC",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 161,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1771
+        "points": 0
       },
       {
         "publicId": "iabTejk6",
         "username": "Restart",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 138,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 28,
-        "points": 1686
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "Pg26t2IR",
         "username": "Pg26t2IR",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 152,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1672
+        "points": 0
       },
       {
         "publicId": "1tZwM07g",
         "username": "1tZwM07g",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 151,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1661
+        "points": 0
       },
       {
         "publicId": "OJmKmWyk",
         "username": "OJmKmWyk",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 150,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1650
+        "points": 0
       },
       {
         "publicId": "R0wAr3sr",
         "username": "Lolz.4908",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 150,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1650
+        "points": 0
       },
       {
         "publicId": "iqPpA3at",
         "username": "iqPpA3at",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 147,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1617
+        "points": 0
       },
       {
         "publicId": "3HgLok0I",
         "username": "GVM.2051",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 145,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1595
+        "points": 0
       },
       {
         "publicId": "1kvfZzVt",
         "username": "1kvfZzVt",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 145,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1595
+        "points": 0
       },
       {
         "publicId": "tL7sL15E",
         "username": "tL7sL15E",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 144,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1584
+        "points": 0
       },
       {
         "publicId": "VZwBEGTN",
         "username": "VZwBEGTN",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 143,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1573
+        "points": 0
       },
       {
         "publicId": "sFR7TRhM",
         "username": "sFR7TRhM",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 136,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1496
+        "points": 0
       },
       {
         "publicId": "nO7ZbBpM",
         "username": "moo.1969",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 136,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1496
+        "points": 0
       },
       {
         "publicId": "tbpit0gj",
         "username": "PIERRECHARTIERX2007.0598",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 131,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1441
+        "points": 0
       },
       {
         "publicId": "pLXDUmUt",
         "username": "pLXDUmUt",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 123,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1353
-      },
-      {
-        "publicId": "EFqhVYJW",
-        "username": "EFqhVYJW",
-        "clan": null,
-        "ffaCasualWins": 0,
-        "ffaRankedWins": 117,
-        "teamCasualWins": 0,
-        "teamRankedWins": 0,
-        "points": 1287
+        "points": 0
       },
       {
         "publicId": "S7Or4TjK",
         "username": "imperium romanum.1668",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 111,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 1275
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "N6jzJUhw",
         "username": "UN Sparkles.1521",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 92,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 38,
-        "points": 1240
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "nAZMfTr8",
         "username": "ryy.5305",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 112,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1232
+        "points": 0
       },
       {
         "publicId": "zzM5pyvN",
         "username": "zzM5pyvN",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 106,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1166
+        "points": 0
       },
       {
         "publicId": "GPgeMPV7",
         "username": "CMi.2150",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 103,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1133
+        "points": 0
       },
       {
         "publicId": "gcYqHbO2",
         "username": "gcYqHbO2",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 103,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1133
+        "points": 0
       },
       {
         "publicId": "dKNRYyVu",
         "username": "PlanetaryRealignment",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 102,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1122
+        "points": 0
       },
       {
         "publicId": "eCX6vkqJ",
         "username": "EagleEye on YT",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 101,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1111
+        "points": 0
       },
       {
         "publicId": "cBQ6lfbC",
         "username": "John",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 92,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 14,
-        "points": 1096
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "8DMf1PWS",
         "username": "Ziyad.7640",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 66,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 60,
-        "points": 1086
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "uVs4IhR9",
         "username": "uVs4IhR9",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 95,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1045
+        "points": 0
       },
       {
         "publicId": "voILRMRf",
         "username": "voILRMRf",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 95,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 1045
+        "points": 0
       },
       {
         "publicId": "edFs3uR3",
         "username": "edFs3uR3",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 89,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 979
+        "points": 0
       },
       {
         "publicId": "COLlNy6T",
         "username": "COLlNy6T",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 85,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 935
+        "points": 0
       },
       {
         "publicId": "TYYNdQFk",
         "username": "TYYNdQFk",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 84,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 924
+        "points": 0
       },
       {
         "publicId": "Y8pOfyCA",
         "username": "pregnar.4929",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 82,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 902
+        "points": 0
       },
       {
         "publicId": "JecS57vm",
         "username": "JecS57vm",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 81,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 891
+        "points": 0
       },
       {
         "publicId": "8XtYOuc2",
         "username": "Moka",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 71,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 15,
-        "points": 871
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "EaKo3zJk",
         "username": "1m2o.0466",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 77,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 847
+        "points": 0
       },
       {
         "publicId": "u7qsbOja",
         "username": "TeNa.4053",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 75,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 825
+        "points": 0
       },
       {
         "publicId": "0hV7VLFu",
         "username": "0hV7VLFu",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 71,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 781
+        "points": 0
       },
       {
         "publicId": "lo73G87P",
         "username": "lo73G87P",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 70,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 770
+        "points": 0
       },
       {
         "publicId": "wIMw8VlJ",
         "username": "Missouri.6063",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 68,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 748
+        "points": 0
       },
       {
         "publicId": "PXxEI2id",
         "username": "PXxEI2id",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 66,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 726
+        "points": 0
       },
       {
         "publicId": "7dSOV1b6",
         "username": "7dSOV1b6",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 61,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 671
+        "points": 0
       },
       {
         "publicId": "FXx41BE7",
         "username": "FXx41BE7",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 58,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 638
+        "points": 0
       },
       {
         "publicId": "Rx9BJsAS",
@@ -2640,28 +2655,28 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 84,
-        "points": 504
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "5RfzU503",
         "username": "5RfzU503",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 45,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 495
+        "points": 0
       },
       {
         "publicId": "tfvGyX7E",
         "username": "tfvGyX7E",
         "clan": null,
         "ffaCasualWins": 0,
-        "ffaRankedWins": 44,
+        "ffaRankedWins": 0,
         "teamCasualWins": 0,
         "teamRankedWins": 0,
-        "points": 484
+        "points": 0
       },
       {
         "publicId": "WyofC4t8",
@@ -2670,8 +2685,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 60,
-        "points": 360
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "dC2YzdlO",
@@ -2680,8 +2695,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 59,
-        "points": 354
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "3RWJ1EDe",
@@ -2690,8 +2705,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 55,
-        "points": 330
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "uJSIR9n9",
@@ -2700,8 +2715,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 46,
-        "points": 276
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "59fDSVJW",
@@ -2710,8 +2725,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 39,
-        "points": 234
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "CR4uDCXB",
@@ -2720,8 +2735,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 36,
-        "points": 216
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "fXNE7kwI",
@@ -2730,8 +2745,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 36,
-        "points": 216
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "ccCIWk2Z",
@@ -2740,8 +2755,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 34,
-        "points": 204
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "ZwBOHoJp",
@@ -2750,8 +2765,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 30,
-        "points": 180
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "SY171t7w",
@@ -2760,8 +2775,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 30,
-        "points": 180
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "VYuKrlN4",
@@ -2770,8 +2785,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 28,
-        "points": 168
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "gqxCEue3",
@@ -2780,8 +2795,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 28,
-        "points": 168
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "vmtgisQN",
@@ -2790,8 +2805,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 28,
-        "points": 168
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "gt5M6g0V",
@@ -2800,8 +2815,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 27,
-        "points": 162
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "8CqaErVw",
@@ -2810,8 +2825,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 26,
-        "points": 156
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "bkqRCNpT",
@@ -2820,8 +2835,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 26,
-        "points": 156
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "ohzgGIhn",
@@ -2830,8 +2845,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 25,
-        "points": 150
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "eWXId1rb",
@@ -2840,8 +2855,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 24,
-        "points": 144
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "CIGpEYSw",
@@ -2850,8 +2865,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 23,
-        "points": 138
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "MAxrCpAe",
@@ -2860,8 +2875,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 23,
-        "points": 138
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "u0KvFnZI",
@@ -2870,8 +2885,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 22,
-        "points": 132
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "SVtxzbGp",
@@ -2880,8 +2895,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 21,
-        "points": 126
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "v0W5l5uD",
@@ -2890,8 +2905,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 20,
-        "points": 120
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "fbMLxLwN",
@@ -2900,8 +2915,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 20,
-        "points": 120
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "kABBbcSQ",
@@ -2910,8 +2925,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 20,
-        "points": 120
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "pPXLna2O",
@@ -2920,8 +2935,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 19,
-        "points": 114
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "g4dn5JJx",
@@ -2930,8 +2945,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 18,
-        "points": 108
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "ogJE5bqm",
@@ -2940,8 +2955,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 17,
-        "points": 102
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "yKcRxkqh",
@@ -2950,8 +2965,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 16,
-        "points": 96
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "kD6Lacy5",
@@ -2960,8 +2975,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 16,
-        "points": 96
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "Uqd46eiJ",
@@ -2970,8 +2985,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 16,
-        "points": 96
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "vrTivtCP",
@@ -2980,8 +2995,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 16,
-        "points": 96
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "kTUHmJQy",
@@ -2990,8 +3005,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 15,
-        "points": 90
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "YABEeLTl",
@@ -3000,8 +3015,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 15,
-        "points": 90
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "XpYRA2Az",
@@ -3010,8 +3025,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 15,
-        "points": 90
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "NbKwuzaf",
@@ -3020,8 +3035,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 14,
-        "points": 84
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "LKkHCRwU",
@@ -3030,8 +3045,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 14,
-        "points": 84
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "ZtVzBzbV",
@@ -3040,8 +3055,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 14,
-        "points": 84
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "SlYKyy8b",
@@ -3050,8 +3065,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 13,
-        "points": 78
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "kuDssCA0",
@@ -3060,8 +3075,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 12,
-        "points": 72
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "fk6h1mNg",
@@ -3070,8 +3085,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 12,
-        "points": 72
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "HH5B7GkD",
@@ -3080,8 +3095,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 12,
-        "points": 72
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "tAmEOzEO",
@@ -3090,8 +3105,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 12,
-        "points": 72
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "SJ2KOAbE",
@@ -3100,8 +3115,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 66
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "bx8ZfgO7",
@@ -3110,8 +3125,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 66
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "tV3YgU4e",
@@ -3120,8 +3135,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 66
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "05R70T0M",
@@ -3130,8 +3145,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 66
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "G0Fl2nMH",
@@ -3140,8 +3155,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 11,
-        "points": 66
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "nTajqyhX",
@@ -3150,8 +3165,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "zD4Hfe5z",
@@ -3160,8 +3175,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "CesQ9ncU",
@@ -3170,8 +3185,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "xjsh5rgf",
@@ -3180,8 +3195,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "U1SFuUd9",
@@ -3190,8 +3205,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "vGWG7DTN",
@@ -3200,8 +3215,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "AB6J1Qcx",
@@ -3210,8 +3225,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 10,
-        "points": 60
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "r1tUhHBK",
@@ -3220,8 +3235,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 54
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "gyt2iuKu",
@@ -3230,8 +3245,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 54
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "eYno203C",
@@ -3240,8 +3255,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 54
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "tKMFsmVC",
@@ -3250,8 +3265,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 54
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "XZROPj2m",
@@ -3260,8 +3275,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 54
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "W330I0XM",
@@ -3270,8 +3285,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 9,
-        "points": 54
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "JBT8713s",
@@ -3280,8 +3295,8 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 8,
-        "points": 48
+        "teamRankedWins": 0,
+        "points": 0
       },
       {
         "publicId": "pJ3obEj0",
@@ -3290,8 +3305,18 @@
         "ffaCasualWins": 0,
         "ffaRankedWins": 0,
         "teamCasualWins": 0,
-        "teamRankedWins": 7,
-        "points": 42
+        "teamRankedWins": 0,
+        "points": 0
+      },
+      {
+        "publicId": "irooe5968",
+        "username": "Skailex",
+        "clan": null,
+        "ffaCasualWins": 0,
+        "ffaRankedWins": 0,
+        "teamCasualWins": 0,
+        "teamRankedWins": 0,
+        "points": 0
       }
     ]
   }
