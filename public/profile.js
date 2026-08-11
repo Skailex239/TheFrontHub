@@ -144,7 +144,7 @@ let viewingUsername = null;
  */
 function getPublicProfileRequest() {
   const params = new URLSearchParams(window.location.search);
-  const pid = (params.get("publicId") || "").trim();
+  const pid = (params.get("publicId") || params.get("pid") || "").trim();
   const name = (params.get("player") || "").trim();
   if (pid && /^[A-Za-z0-9]{8}$/.test(pid)) {
     return { publicId: pid, username: name || pid };

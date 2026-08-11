@@ -1117,3 +1117,296 @@ Stage Summary:
   * Tableau 100 joueurs cliquables → profil
 - Champion global actuel : EyesOfRuby.1498 (données live).
 - Tout déployé sur GitHub Pages et vérifié end-to-end.
+
+---
+Task ID: 22-b
+Agent: Explore (Z.ai Code)
+Task: Explore the OpenFront API at https://api.openfront.io to find endpoints that list ALL games (ranked + casual/normal), for both FFA and Team modes. Identify how to distinguish FFA vs Team, ranked vs casual, how to get winners, whether a global recent-games endpoint exists, what ranked.json already provides vs what we need from the API, and rate-limiting concerns (incl. the "Skailex access" exemption header).
+
+Work Log:
+- Read existing code to understand current API usage: openfront-client.js (browser), openfront-api.js (server), openfront-parse.js, sync.js (FFA speedruns), sync-ranked.js (ranked leaderboard), sync-teams.js (casual team speedruns), server.js (dev proxy), src/app/api/openfront/[...path]/route.ts (Next.js proxy), shared/extract-speedrun.js.
+- Inspected local ranked.json: top keys = ['1v1','2v2','newcomers1v1','dropouts1v1','newcomers2v2','dropouts2v2','updatedAt','totalPlayers1v1','totalPlayers2v2']. Each player entry has {rank, elo, peakElo, wins, losses, total, public_id, accountUsername, username, streak, movement}. NO game-level data (no gameIds, no recent winners) — only leaderboard state.
+- Probed many endpoints with curl. Results:
+
+  WORKING (no auth):
+    GET /public/games?start=<ISO>&end=<ISO>&[type=Public]&[mode=Free For All|Team]&[rankedType=1v1|2v2|unranked]&[playerTeams=Duos|Trios|Quads]&[limit=N]&[offset=N]
+      → Returns array of game summaries. Each: {game, start, end, type, mode, difficulty, numPlayers, maxPlayers, lobbyFillTime, playerTeams, rankedType}
+      → Pagination: limit (max 50, default 50) + offset (0-indexed). Response header `content-range: games <start>-<end>/<total>` gives the total match count. `?page=` and `?cursor=` are IGNORED here. Range header is also ignored.
+      → Sample: {"game":"3GtARTKi","start":"2026-08-11T10:43:45.863Z","end":"2026-08-11T10:51:27.699Z","type":"Public","mode":"Free For All","difficulty":"Medium","numPlayers":2,"maxPlayers":2,"lobbyFillTime":5455,"playerTeams":null,"rankedType":"1v1"}
+      → Sample 2v2: {"game":"Ddq2JrWN","start":"...","type":"Public","mode":"Team","numPlayers":4,"maxPlayers":4,"playerTeams":"2","rankedType":"2v2"}
+      → Sample casual FFA: rankedType="unranked", mode="Free For All", playerTeams=null
+      → Sample casual Team: rankedType="unranked", mode="Team", playerTeams="Duos"|"Trios"|"Quads"
+      → NO winner info in summary — must fetch game detail.
+
+    GET /public/game/<gameId>?turns=false
+      → Returns {version, gitCommit, info:{gameID, config, players, winner, start, end, duration, num_turns, lobbyCreatedAt}}
+      → config.rankedType = "1v1" | "2v2" | null (null for casual)
+      → config.gameMode = "Free For All" | "Team"
+      → config.gameType = "Public" | "Singleplayer" | "Private"
+      → config.gameMapSize = "Normal" | "Compact"
+      → Winner format:
+         • FFA (casual or 1v1): info.winner = ["player", "<clientID>"]  → single winner
+         • Team (casual Duos/Trios/Quads or 2v2): info.winner = ["team", "<teamName>", ...clientIDs]  → multiple winners
+         • Incomplete games: winner may be undefined
+      → players[] each have: clientID, username, clanTag, isBot, team (sometimes null), cosmetics, persistentID
+      → Confirmed with 3 fetched examples: 1v1 ranked (game 2Fx27ucm, winner ["player","Hum8eJXD"]), 2v2 ranked (game Ddq2JrWN, winner ["team","Blue","5YW2qZSY","ME3z4CRF"]), casual FFA (game DNdQV2Wk, winner ["player","BJBmwKyc"], 55 players).
+
+    GET /public/player/<publicId>
+      → Returns {publicId, createdAt, username, stats:{Private, Public, Singleplayer, Ranked, recent}, clans[]}
+      → stats.Ranked has "1v1" and (sometimes) "2v2" subkeys with wins/losses/total/stats — same shape as leaderboard.
+      → stats.recent is an aggregate counter (last 100 games), NOT a game list.
+      → clans[] = list of {tag, name, role, joinedAt, memberCount}.
+
+    GET /public/player/<publicId>/games
+      → Returns {results:[...], nextCursor:"<base64>"}. 10 results per page.
+      → Cursor decodes to {"gameId":"<numeric_id>","filter":null,"type":null} — server-side filter param name unknown; tested ?type=, ?mode=, ?rankedType=, ?limit= ALL IGNORED (returns same first 10 regardless).
+      → Each result: {gameId, start, durationSeconds, map, mode, type, playerTeams, rankedType, result:"victory"|"defeat", totalPlayers, username, clanTag}
+      → So per-player games require CLIENT-SIDE filtering (filter by mode/rankedType after fetch) + cursor pagination (10 pages at a time → ~10 API calls per 100 games).
+
+    GET /leaderboard/ranked?page=1|2
+      → Returns {"1v1":[...top 50...], "2v2":[...top 50...]}. Each player: {rank, elo, peakElo, wins, losses, total, public_id, accountUsername, username}
+      → HARD-CAPPED at page 2: page=5 returns 400 "Page must be between 1 and 2". So max 100 players per mode (matches ranked.json).
+      → Cache-Control: public, max-age=3600 (1h). ETag set.
+
+  AUTH-REQUIRED (HTTP 401 without session cookie): /games, /players/<id>, /clans
+  NOT FOUND (404): /sessions, /ranked/1v1, /ranked/2v2, /recentGames, /recent-games, /public/games/recent, /public/recentGames, /leaderboard/casual, /leaderboard
+  /public/clan/<tag> returns the games validation error (likely misrouted or endpoint doesn't exist)
+
+- Key schema observations:
+  • `rankedType` is THE field to distinguish ranked vs casual:
+    - In /public/games summary: "1v1" | "2v2" | "unranked"
+    - In /public/game/<id> detail config: "1v1" | "2v2" | null (null/missing = casual)
+  • `mode` distinguishes FFA vs Team: "Free For All" | "Team" (both in summary and detail config.gameMode)
+  • `playerTeams` distinguishes team sizes:
+    - null = FFA (ranked 1v1 or casual FFA)
+    - "2" = ranked 2v2
+    - "Duos" | "Trios" | "Quads" = casual Team
+  • Winner is only in game detail, NOT in /public/games summary. Format depends on game mode:
+    - ["player", clientID] for FFA (ranked 1v1 + casual FFA)
+    - ["team", teamName, ...clientIDs] for Team (ranked 2v2 + casual Duos/Trios/Quads)
+  • Existing code (sync-teams.js extractTeamRun) already handles the team-winner format correctly: `winner[0]==="team"`, `winner[1]=teamName`, `winner.slice(2)=clientIDs[]`.
+  • Existing extract-speedrun.js handles FFA: `winner[0]` is implicitly "player", `winner[1]=clientID`.
+
+- Rate limiting / exemption:
+  • Cloudflare-fronted (server: cloudflare, cf-ray header). No explicit X-RateLimit-* headers observed.
+  • `openFrontHeaders()` in openfront-api.js sends `User-Agent: skailex` + `x-skailex-access: <token>` (token from `OPENFRONT_SKAILEX_ACCESS` env). This is the documented "Skailex access" exemption.
+  • Current sandbox env has NO .env / NO token (confirmed: grep found 0 matches).
+  • Without exemption: sync.js uses BATCH_DELAY_NORMAL=200ms, WINDOW_DELAY=50ms, DETAIL_CONCURRENCY=2, DELAY_429=8s, DEFAULT_HISTORY_WINDOWS=40.
+  • With exemption: 0/0/12/2s/500 respectively.
+  • Empirical test: 10 rapid sequential /public/games calls all returned 200 (no 429 observed) — but this is light load. The sync scripts warn that 429s do happen in production backfills.
+  • 429 handling: simple exponential backoff retry (sync.js, sync-teams.js, sync-ranked.js all do `sleep(DELAY_429 * attempt)` then retry).
+  • Leaderboard has 1h cache (cache-control: public, max-age=3600) — safe to call frequently.
+
+Stage Summary:
+The OpenFront API exposes exactly ONE global games-list endpoint: `GET /public/games?start=<ISO>&end=<ISO>&type=Public&mode=...&rankedType=...&playerTeams=...&limit=50&offset=N`. It returns ALL public games (ranked 1v1, ranked 2v2, casual FFA, casual Team Duos/Trios/Quads, Singleplayer, etc.) and can be filtered by mode (FFA vs Team), rankedType ("1v1"|"2v2"|"unranked"), and playerTeams (Duos/Trios/Quads). Pagination is via `?limit=50&offset=N` (max 50/page, `content-range` header gives total). Winner info is NOT in the summary — must fetch `/public/game/<id>?turns=false` per game, where `info.winner` is `["player", clientID]` for FFA or `["team", teamName, ...clientIDs]` for Team. There is NO /recentGames endpoint — global discovery is purely time-windowed via /public/games. Per-player games are available at `/public/player/<id>/games` (cursor-paginated 10/page, NO filter params honored). ranked.json already has top-100 leaderboard for 1v1/2v2 with public_ids but NO game-level data — to build a recent-games feed we need to (a) poll /public/games with type=Public&rankedType=1v1 (and 2v2) for ranked, plus rankedType=unranked for casual, then (b) fetch /public/game/<id> per candidate to extract winner(s). Rate limiting is Cloudflare-enforced; the `x-skailex-access` header (env: OPENFRONT_SKAILEX_ACCESS) grants an exemption used by existing sync scripts (12× concurrency, 0 delays). No token is present in the current sandbox env, but light polling (10 sequential calls) did not trigger 429s.
+
+---
+Task ID: 22-a
+Agent: Explore sub-agent
+Task: Audit the existing Firebase setup (config + auth + Firestore collections + login UI) across the vanilla-JS root and the Next.js `public/` copy, in preparation for upcoming auth-related work.
+
+Work Log:
+- Read worklog Task 1 for context: the public-aliases / public-rewards bridge already exists, the VIP-by-publicId skin system is in place, and the `users/{uid}` profile doc is the source of truth for `publicId`.
+- Diffed root vs `public/` for all auth-related files: `auth.js`, `auth.css`, `shared/firebase-config.js`, `index.html`, `profile.html`, `dashboard.html`, `dashboard.js` are byte-identical. `app.js` and `profile.js` differ ONLY in OpenFront-API endpoint handling (newer `/public/player/{id}/games` endpoint + cache-bust `?v=24` on the dynamic import in `public/`) — auth logic itself is identical. `public/` is the more up-to-date copy.
+
+1) Firebase config — `/home/z/my-project/shared/firebase-config.js` and `/home/z/my-project/public/shared/firebase-config.js` are identical, 17 lines, single `export const firebaseConfig = { ... }`.
+   Fields present (values REDACTED per task instructions):
+     - apiKey:            "<REDACTED — AIzaSy…>"
+     - authDomain:        "openfront-speedrun.firebaseapp.com"
+     - projectId:         "openfront-speedrun"
+     - storageBucket:     "openfront-speedrun.firebasestorage.app"
+     - messagingSenderId: "710681441859"
+     - appId:             "1:710681441859:web:a01003e5b07c83ea50c6f6"
+     - measurementId:     "G-SD1GNCN8NV"
+   The file is imported by `auth.js` (browser, via CDN) and by `generate-code.js` (Node admin script, via npm `firebase/app`).
+
+2) Auth SDK + flow (`auth.js`, identical in both locations):
+   - Firebase SDK v10.7.1 loaded as ES modules from `https://www.gstatic.com/firebasejs/10.7.1/{firebase-app,firebase-auth,firebase-firestore}.js`.
+   - `initializeApp(firebaseConfig)` → `getAuth(app)` → `getFirestore(app)`.
+   - Persistence: `setPersistence(auth, browserLocalPersistence)` (cross-session login retained).
+   - Providers configured:
+       • Google — `new GoogleAuthProvider()`
+       • Discord — `new OAuthProvider("oidc.discord")`  (custom OIDC provider registered in Firebase Console under Authentication → Sign-in method)
+   - Sign-in flow: `signInWithPopup(auth, provider)` with automatic `signInWithRedirect` fallback when popup is blocked/cancelled. `getRedirectResult(auth)` is consumed on page load to recover the redirect-path credential and set a `sessionStorage["tfs_just_logged_in"] = "1"` flag.
+   - NO anonymous, NO email/password, NO phone, NO custom-token sign-in anywhere in the codebase (grep-confirmed).
+   - Window globals exposed for inline `onclick` handlers: `window.loginWithGoogle`, `window.loginWithDiscord`, `window.logout`.
+   - Robust French error mapping in `buildErrorMessage()` covering `auth/unauthorized-domain`, `auth/operation-not-allowed`, `auth/account-exists-with-different-credential`, `auth/popup-blocked`, `auth/network-request-failed`, etc.
+   - `safeShowToast()` wrapper defers toast until `toast.js` is ready.
+
+3) Auth flow on the consuming pages:
+   - `index.html` → `<script src="app.js?v=29" type="module">` → app.js `import { auth, db, …, onAuthStateChanged } from "./auth.js"` → registers `onAuthStateChanged(auth, async (user) => …)`:
+       • user + Firestore `users/{uid}` doc exists with publicId → build `currentUser`, fetch OpenFront client IDs, call `ensurePublicIdBridge()`, re-render leaderboards.
+       • user + no Firestore doc → first login → `showProfileModal()` to collect username + publicId.
+       • just-logged-in flag set AND profile has publicId → auto-redirect to `profile.html`.
+   - `profile.html` → `<script src="profile.js?v=24" type="module">` → profile.js registers its own `onAuthStateChanged`:
+       • no user → show `#profile-gate` (login prompt).
+       • user + no profile → show `#profile-setup` (ownership verification form).
+       • user + profile.publicId → fetch OpenFront stats → show `#profile-main`.
+       • URL `?player=NAME&publicId=XXXXXXXX` → public profile view (works even when logged out).
+   - `runs.html` → `runs.js` (classic script) → lazily `await import('./auth.js')` to subscribe to `public-rewards` + `public-aliases` for `connectedUsernames` Set (drives the "click a name to open profile" affordance).
+   - `dashboard.html` → ⚠ BUG: `<script src="auth.js?v=15">` is loaded WITHOUT `type="module"`. Because `auth.js` uses ES `import` statements, this script tag will FAIL to execute (silent syntax-error). `dashboard.js` (loaded as `type="module"`) does NOT import auth.js either. Result: the sidebar `.login-btn` and `.user-badge` UI present on dashboard.html are non-functional — clicking "Connexion" calls `toggleAuthModal()` which is never defined, and `#auth-modal` is an empty `<div class="auth-modal-card">` placeholder. The sidebar auth-zone on dashboard.html is currently decorative only. To fix: change the script tag to `type="module"` (or have `dashboard.js` import `./auth.js`), and inject the same modal content as index.html.
+
+4) Login UI element locations:
+   - `index.html` lines 73–114: sidebar `.auth-zone` (logged-out) → `.login-btn` (calls `toggleAuthModal()`); `.user-container` (logged-in, hidden by default) → `.user-badge` dropdown with avatar, username, publicId, "Mon profil", "Se déconnecter".
+   - `index.html` lines 428–451: auth modal `#auth-modal` with two brand-coloured buttons: `<button class="auth-btn google" onclick="handleLogin('google')">Continuer avec Google</button>` and `<button class="auth-btn discord" onclick="handleLogin('discord')">Continuer avec Discord</button>`.
+   - `index.html` lines 453–493: profile-setup modal `#profile-modal` — Step 1 (username + 8-char publicId + "Vérifier mon compte" button → `startOwnershipVerification()`), Step 2 (ownership challenge code `TFS-XXXX` display + "Confirmer" → `confirmOwnershipVerification()` + "Retour" → `cancelOwnershipVerification()`).
+   - `profile.html` lines 435–472: identical sidebar auth-zone.
+   - `profile.html` lines 564–575: top-of-profile hero with separate `.pf-logout-btn` (calls `handleLogout()`).
+   - `profile.html` lines 601–624: identical auth modal with Google + Discord buttons.
+   - `dashboard.html` lines 58–99: identical sidebar auth-zone markup (login-btn + user-dropdown), BUT no handler is registered (see bug above).
+   - `dashboard.html` lines 129–132: empty auth modal placeholder `<div id="auth-modal" class="auth-modal" style="display:none"><div class="auth-modal-card" id="auth-modal-card"></div></div>` — no provider buttons inside.
+   - CSS: `auth.css` (153 lines, identical in both locations) styles `.auth-zone`, `.login-btn`, `.user-badge`, `.user-avatar`, `.auth-modal`, `.auth-modal-logo-img`, `.auth-btn.google` (white), `.auth-btn.discord` (#5865F2), and `.run-row.is-me` / `tr.is-me` highlight for the connected user.
+
+5) Firestore collections referenced (with document structure observed in code):
+   - `users/{uid}` — user profile (written by `saveUserProfile` in app.js + profile.js).
+       Fields: `username` (string), `publicId` (string, 8 chars, immutable once set), `email` (string), `verified` (bool, true after ownership challenge), `verifiedAt` (ISO), `createdAt` (ISO), `updatedAt` (ISO), `openFrontSyncPending` (bool), `openFrontSessions` (array of `{clientId, username, gameId, …}`, optional cached snapshot).
+   - `public-aliases/{uid}` — public bridge for cross-leaderboard matching (written by `ensurePublicIdBridge`; read by `loadPublicAliases` listener in app.js + by runs.js).
+       Fields: `username` (string), `publicId` (string), `aliases` (string[]), `clientIds` (string[], optional), `updatedAt` (ISO). NOTE: per Task 1 worklog, at least one legacy doc also exists with id = publicId (e.g. id="UWetOwlW") holding many aliases — so the collection is keyed by uid for new writes but tolerates publicId-keyed legacy docs.
+   - `public-rewards/{uid}` — VIP cosmetic rewards (read in real time by app.js `loadVipPlayers`, profile.js `loadVipForProfile`, runs.js `loadConnectedUsernames`; written by `ensurePublicIdBridge` for the publicId bridge and by generate-code.js / a redemption flow elsewhere for the cosmetic type).
+       Fields: `username` (string), `publicId` (string, optional — added by bridge), `activeType` (string, e.g. "prism", "cyberpunk", "sunset", "aurore", "pastel", "gold", "volcano", "ocean", "miami", "toxic", "chroma" — the 11 NEW_SKIN_TYPES), `type` (string, legacy fallback), `activated` (bool, false → reward hidden), `uid` (string).
+   - `likes/{runId}` — speedrun likes (real-time listener in app.js).
+       Fields: `count` (number), `users` (map `{ [uid]: true }`). Toggle writes use `setDoc({merge:true})` with `increment(±1)` + `['users.<uid>']: true` / `deleteField()`.
+   - `reward-codes/{code_TIMESTAMP_i}` — admin-generated VIP/GOLD codes (written ONLY by `generate-code.js` Node admin script, gated by `TFS_ADMIN_TOKEN` env var).
+       Fields: `code` (string, e.g. "OR-XXXXXX"), `type` (string, "vip"|"gold"), `used` (bool), `usedBy` (uid|null), `usedAt` (ISO|null), `createdAt` (ISO).
+
+6) Public ID ↔ user linking:
+   - Source of truth: `users/{uid}.publicId` (set once after ownership verification, then immutable — `saveUserProfile` rejects changing it).
+   - Ownership verification flow (`app.js` lines 410–531, mirrored in `profile.js`):
+       a. User enters OpenFront username + 8-char publicId.
+       b. Validate format (username 2–30 chars, publicId `^[A-Za-z0-9]{8}$`).
+       c. Check `users/{uid}` — if existing.publicId differs from new publicId → reject.
+       d. Call OpenFront API `GET /public/player/{publicId}` (via `fetchOpenFront` from `openfront-client.js`) to confirm existence.
+       e. Generate challenge code `"TFS-" + 4 random chars` from `ABCDEFGHJKLMNPQRSTUVWXYZ23456789` using `crypto.getRandomValues`.
+       f. User must play an OpenFront game with the challenge code embedded in their in-game username.
+       g. On "Confirmer", re-fetch OpenFront API and search recent game usernames for the code. If found → `saveUserProfile(username, publicId)` writes to `users/{uid}` with `verified:true, verifiedAt:now` and calls `ensurePublicIdBridge(uid, username, publicId)`.
+       h. `ensurePublicIdBridge` best-effort merges `{username, publicId, aliases:[username], updatedAt}` into `public-aliases/{uid}` AND `{publicId, username}` into `public-rewards/{uid}` (silently ignored if Firestore rules block the write — non-critical).
+
+7) Login button / auth UI summary:
+   - Functional Google + Discord login on `index.html` and `profile.html` (auth modal + sidebar badge + dropdown).
+   - `dashboard.html` has the sidebar auth markup but auth.js is NOT actually loaded (missing `type="module"`), so login is currently broken there.
+   - `runs.html` and `tournois.html` have no login UI (no `.auth-zone`), they only consume the public `public-aliases` / `public-rewards` listeners via lazy `import('./auth.js')` in runs.js.
+
+Stage Summary:
+- Firebase project = `openfront-speedrun`. Web SDK v10.7.1 loaded via gstatic CDN as ES modules. Config lives once in `shared/firebase-config.js` (identical in root and `public/`).
+- Auth flow: popup-first Google + Discord OIDC, redirect fallback, `browserLocalPersistence`, `getRedirectResult` handled on load. No anonymous / email / phone / custom-token auth.
+- 5 Firestore collections are touched: `users` (private profile, keyed by uid), `public-aliases` (public bridge, keyed by uid or legacy publicId), `public-rewards` (public VIP cosmetics, keyed by uid), `likes` (public speedrun likes, keyed by runId), `reward-codes` (admin codes, written only by Node script).
+- Public ID is stored on `users/{uid}.publicId`, propagated to `public-aliases/{uid}` + `public-rewards/{uid}` by `ensurePublicIdBridge`, and protected by an OpenFront in-game-username ownership challenge (code format `TFS-XXXX`).
+- Login UI (Google + Discord modal + sidebar badge) is fully wired on `index.html` and `profile.html`. ⚠ `dashboard.html` is NOT wired — its `<script src="auth.js?v=15">` tag is missing `type="module"` and `dashboard.js` does not import auth.js, so the sidebar login button on dashboard.html is currently dead. This is the most important fix to apply before any new auth work targets the dashboard page.
+- Files audited: `auth.js`, `auth.css`, `shared/firebase-config.js`, `app.js`, `profile.js`, `dashboard.js`, `runs.js`, `generate-code.js`, `index.html`, `profile.html`, `dashboard.html`, `runs.html` (root + `public/` copies). No code changes were made by this audit task.
+
+---
+Task ID: 23-FRONTEND
+Agent: full-stack-developer
+Task: Fix auth on dashboard.html + refonte dashboard.js/css to use dashboard_ranking.json with 4 categories (FFA casual/ranked, Team casual/ranked)
+
+Work Log:
+- Read worklog Task 21 (current dashboard design), Task 22-a (Firebase auth audit — confirmed dashboard auth was broken), Task 22-b (OpenFront API exploration — confirmed `dashboard_ranking.json` schema with 4 categories).
+- Audited existing files: public/dashboard.html (empty `#auth-modal`, `auth.js` loaded WITHOUT `type="module"` → silent fail), public/dashboard.js (used only ranked.json, 2 categories), public/dashboard.css (old 2-category table).
+- Studied auth wiring patterns in app.js (lines 60-110 for `window.toggleAuthModal`/`window.goToProfilePage`, lines 108-183 for `onAuthStateChanged`, lines 573-700 for `handleLogin`/`updateAuthUI`/`handleLogout`/`toggleUserDropdown`) and profile.js (lines 60-230 for `onAuthStateChanged` + `updateSidebarUI`, lines 660-820 for ownership verification, lines 828-880 for window globals).
+- Studied `auth.js` exports: `auth, db, doc, getDoc, setDoc, onAuthStateChanged, signOut` + window globals `loginWithGoogle`, `loginWithDiscord`, `logout`.
+- Verified `fetchOpenFront` (openfront-client.js line 141) is exported and works for `/public/player/{id}` and `/public/player/{id}/games` — used for ownership verification fallback.
+- Copied verbatim from index.html: `#auth-modal` (Google + Discord buttons, lines 428-451) and `#profile-modal` (2-step ownership challenge, lines 454-490) into dashboard.html.
+- Rewrote public/dashboard.html:
+  * Bumped cache versions: `auth.css?v=16`, `dashboard.css?v=2`, `dashboard.js?v=2`.
+  * Wrapped in `<div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column">` containing `.app` (flex:1) + `<footer class="dash-footer">` (sticky at bottom).
+  * Sidebar has 5 tabs (Tableau de bord active, Speedruns, Classé, Tournois, Mon Profil) + auth-zone (login-btn / user-badge with dropdown) — markup copied from profile.html (which already had the `user-public-id-side` span).
+  * Sidebar login button text: "Se connecter" (was "Connexion" before — more idiomatic French for an action button).
+  * Topbar: title "Tableau de bord", subtitle updated to show the 4-category barème, last-update label on the right.
+  * Scripts at the end: `<script type="module" src="dashboard.js?v=2">` (imports auth.js) + `<script type="module" src="auth.js?v=16">` + `<script src="toast.js">`.
+- Rewrote public/dashboard.js (vanilla ES module, ~730 lines):
+  * Imports `auth, db, doc, getDoc, setDoc, onAuthStateChanged, signOut` from `./auth.js` and `fetchOpenFront` from `./openfront-client.js?v=24`.
+  * Constants: `PTS_FFA_CASUAL=10`, `PTS_FFA_RANKED=11`, `PTS_TEAM_CASUAL=5`, `PTS_TEAM_RANKED=6`.
+  * `loadData()`: fetches `dashboard_ranking.json?v=${Date.now()}` (cache-bust). If absent/empty → falls back to `ranked.json` and builds a synthetic view with casual=0 (FFA ranked = 1v1 wins, Team ranked = 2v2 wins). Shows a banner `dash-fallback-tag` in fallback mode.
+  * `render()`: builds champion hero + 4 stats cards + toggle (Global/Cette semaine) + 6-column table (FFA casual, FFA ranked, Team casual, Team ranked, Points) limited to 100 rows.
+  * `renderHero()`: dark gradient card with avatar initials, name + clan badge, big points number, 4 mini-stats showing win count + points contribution per category.
+  * `renderTable()`: each row has `data-href="profile.html?pid=<publicId>"`. Number cells show win count (bold) + points contribution (small muted). Top 3 ranks get gold/silver/bronze circles.
+  * `onAuthStateChanged`: reads Firestore `users/{uid}` profile. If profile has publicId → updates sidebar badge (avatar + name + publicId). If brand-new user (no doc) → toast + redirect to profile.html to finalize setup. The `#profile-modal` is present in dashboard.html as a fallback, with full ownership verification flow (`startOwnershipVerification` / `confirmOwnershipVerification` / `cancelOwnershipVerification` / `saveUserProfile`) copied from profile.js.
+  * Window globals defined: `toggleAuthModal`, `closeProfileModal`, `handleLogin`, `handleLogout`, `toggleUserDropdown`, `closeUserDropdown`, `goToProfilePage`, `startOwnershipVerification`, `confirmOwnershipVerification`, `cancelOwnershipVerification`.
+  * Document-level click delegation for `.dash-row-link` rows (so the listener survives re-renders).
+- Rewrote public/dashboard.css:
+  * Uses only the existing CSS variables from styles.css (no indigo, no blue).
+  * Hero: dark gradient `#1a1a1f → #2a2118 → #1a1410` with orange glow, big orange points number with text-shadow.
+  * Stats grid: 4 cols desktop, 2 cols tablet/mobile.
+  * Toggle: pill-style segmented control with `var(--orange-gradient-subtle)` for active.
+  * Table: 6 numeric columns right-aligned, sticky header, `max-height: 600px` overflow with custom 6px scrollbar, hover row gets left orange accent + translateX.
+  * Rank circles: gold `#FFD700→#f59e0b`, silver `#E8E8E8→#b0b0b0`, bronze `#CD7F32→#8b5a2b` (matches Task spec — gold #FFD700, silver #C0C0C0, bronze #CD7F32).
+  * Champion hero stats: 4 cols → 2 cols on tablet/mobile.
+  * Footer: `.dash-footer` with `flex-shrink:0` (sits at bottom of page-wrap).
+  * Responsive: at 640px the table becomes horizontally scrollable (`min-width: 580px`) — simpler than merging columns.
+- Copied `public/dashboard.{html,js,css}` → project root `/dashboard.{html,js,css}` for GitHub Pages serving.
+- Verified with curl that all assets return 200: dashboard.html, dashboard.js, dashboard.css, auth.js, icons.js, ranked.json.
+- `node --check dashboard.js` passes (no syntax errors).
+
+Stage Summary:
+- ✅ Auth on dashboard.html is now FULLY wired: `auth.js` loads as `type="module"`, `dashboard.js` imports it, `#auth-modal` has Google + Discord buttons (copied verbatim from index.html), `#profile-modal` has the 2-step ownership challenge (copied verbatim from index.html), and all onclick handlers (`toggleAuthModal`, `handleLogin`, `handleLogout`, `toggleUserDropdown`, `goToProfilePage`, `startOwnershipVerification`, `confirmOwnershipVerification`, `cancelOwnershipVerification`) are defined on `window` by dashboard.js. The sidebar login button is no longer dead.
+- ✅ Table shows 4 categories: FFA casual · FFA classé · Team casual · Team classé. Each cell shows win count + points contribution. A 7th column shows the total points (bold orange).
+- ✅ Champion hero card shows the #1 player with avatar, name, clan badge, big points number, and 4 mini-stats (one per category).
+- ✅ 4 stats cards: Joueurs classés · Parties scannées · Victoires FFA · Victoires Team.
+- ✅ Toggle Global / Cette semaine switches between `data.global` and `data.weekly`.
+- ✅ Sticky footer implemented (page-wrap flex column, footer flex-shrink:0).
+- ✅ Fallback to ranked.json if dashboard_ranking.json is absent (with a visible banner).
+- ✅ Files copied to project root for GitHub Pages.
+- ⚠ The `dashboard_ranking.json` file does NOT yet exist — it will be produced by the backend sync script (Task 23-BACKEND). Until then, the dashboard gracefully falls back to ranked.json and shows a banner.
+- ⚠ Row clicks use `profile.html?pid=<publicId>`. The existing profile.js reads `?publicId=` and `?player=` (not `?pid=`) — this may need a small follow-up to either update profile.js to accept `pid`, or change dashboard.js to emit `publicId`/`player`. Left as-is to match the previous Task 21 behavior (which also used `pid` and was reported as working in the worklog).
+
+---
+Task ID: 23-BACKEND
+Agent: main (Z.ai Code)
+Task: Create sync-dashboard.js script that polls OpenFront /public/games API and produces dashboard_ranking.json with FFA casual/ranked + Team casual/ranked winners.
+
+Work Log:
+- Explored OpenFront API: GET /public/games (list), GET /public/game/<id>?turns=false (detail with info.winner + info.players[]).
+- Discovered that `persistentID` is ALWAYS null in public game detail (private field). Winners must be resolved by matching `username` (display name) against ranked.json.
+- Built username→publicId index from ranked.json (164 unique display names, top 100 1v1 + top 100 2v2).
+- Created /home/z/my-project/sync-dashboard.js (ES module):
+  * Polls /public/games in 4 categories: FFA-casual (unranked), FFA-ranked (1v1), Team-casual (unranked), Team-ranked (2v2).
+  * Fetches /public/game/<id>?turns=false per game to extract winners via info.winner (["player", clientId] for FFA, ["team", teamName, ...clientIds] for Team).
+  * Resolves winner publicId via username→publicId map (winners not in ranked.json are kept but with publicId=null).
+  * Maintains incremental log in dashboard_games.json (30-day retention).
+  * Computes dashboard_ranking.json with global + weekly (7 days) aggregations.
+  * Scoring: FFA casual +10, FFA ranked +11, Team casual +5, Team ranked +6.
+  * CLI flags: --dry-run, --full, --verbose. Env vars: DASH_SCAN_HOURS, DASH_WINDOW_MIN, DASH_MAX_OFFSET.
+  * 429 retry with exponential backoff (max 4 retries).
+  * Copies output to public/ for static serving.
+- Added `sync-dashboard` job to .github/workflows/sync.yml (after sync-ranked, before retrigger). Runs with OPENFRONT_SKAILEX_ACCESS token + DASH_SCAN_HOURS=24 DASH_WINDOW_MIN=5.
+- Without the exemption token, the API is rate-limited and the full scan is very slow. Generated a fallback dashboard_ranking.json from ranked.json (164 players, ranked wins only, casual=0) so the frontend has data immediately. The GitHub Actions sync will enrich it with casual games once it runs with the token.
+- Generated fallback: python script that reads ranked.json, maps 1v1 wins → ffaRankedWins, 2v2 wins → teamRankedWins, computes points.
+
+Stage Summary:
+- sync-dashboard.js script created and functional (tested with small windows).
+- Without exemption token, scan is slow (~2-3min for 1h of games). With token on GitHub Actions, will be much faster (concurrency 12, no delays).
+- Fallback dashboard_ranking.json generated from ranked.json: 164 players, champion EyesOfRuby.1498 (15654 pts).
+- GitHub Actions workflow updated: sync-dashboard job added to the continuous loop.
+- Files: /home/z/my-project/sync-dashboard.js, /home/z/my-project/dashboard_ranking.json, /home/z/my-project/dashboard_games.json (empty), /home/z/my-project/public/dashboard_ranking.json.
+
+---
+Task ID: 23-FINAL
+Agent: main (Z.ai Code)
+Task: Integration + verification of the new Tableau de bord with auth + 4 categories + sync script.
+
+Work Log:
+- Fixed profile.js to accept ?pid= URL param (alias for ?publicId=) so dashboard row clicks work: `params.get("publicId") || params.get("pid")`.
+- Synced all files to root for GitHub Pages: dashboard.html, dashboard.js, dashboard.css, dashboard_ranking.json, profile.js.
+- Verified end-to-end via Agent Browser (desktop + mobile):
+  * Auth modal opens with Google + Discord buttons (login button in sidebar).
+  * Toggle Global/Cette semaine works (orange highlight on active).
+  * Table shows 4 columns: FFA casual, FFA classé, Team casual, Team classé + Points.
+  * Champion hero: EyesOfRuby.1498 (15654 pts, FFA classé 1404 wins, Team classé 35 wins).
+  * 164 players ranked, scrollable table.
+  * Row click → profile.html?pid=Ajp51M2d (redirects correctly, profile.js reads pid).
+  * Mobile responsive (iPhone 14): champion card full width, stats grid 2-col, table horizontally scrollable.
+  * Sticky footer at bottom (pushed by content on long pages).
+  * 0 console errors.
+- VLM confirmed: "Interface fonctionnelle, professionnelle, sans bug d'affichage apparent".
+
+Stage Summary:
+- Tableau de bord fully functional with:
+  * Auth Google/Discord via Firebase (modal fixed, type=module added).
+  * 4 scoring categories (FFA casual +10, FFA classé +11, Team casual +5, Team classé +6).
+  * Global + Cette semaine views.
+  * 164 players from ranked.json fallback (casual games will be added by GitHub Actions sync with exemption token).
+  * Clickable rows → player profile.
+  * Mobile responsive + sticky footer.
+- sync-dashboard.js ready for GitHub Actions (will enrich with casual games using OPENFRONT_SKAILEX_ACCESS token).
+- Workflow sync.yml updated with sync-dashboard job in the continuous loop.
+- All files synced public/ → root/ for GitHub Pages deployment.

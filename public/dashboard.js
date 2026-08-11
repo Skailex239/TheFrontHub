@@ -1,25 +1,63 @@
 /**
- * dashboard.js — Contrôleur du Tableau de bord.
+ * dashboard.js — Contrôleur du Tableau de bord TheFrontHub.
  *
- * Classement par points des parties OpenFront :
- *   - FFA (1v1 ranked) : chaque victoire = +10 points
- *   - Team (2v2 ranked) : chaque victoire = +5 points
+ * Source principale : dashboard_ranking.json (produit par le backend sync).
+ *   Schéma :
+ *   {
+ *     updatedAt, gamesScanned,
+ *     global:  { from, to, gamesScanned, players: [ { publicId, username, clan,
+ *                ffaCasualWins, ffaRankedWins, teamCasualWins, teamRankedWins, points } ] },
+ *     weekly:  { ... idem ... }
+ *   }
  *
- * Source : ranked.json (leaderboards 1v1 + 2v2 avec wins/losses/total par joueur).
- * Deux vues : Global (cumul) + Cette semaine (progression ELO sur 7 jours,
- *   issue de ranked_history.json.gz).
+ * Barème :
+ *   FFA casual  = +10  ·  FFA classé (1v1) = +11
+ *   Team casual = +5   ·  Team classé (2v2) = +6
+ *
+ * Fallback : si dashboard_ranking.json est absent/vide, on charge ranked.json
+ * (top 100 classé 1v1 + 2v2) et on l'affiche en FFA ranked + Team ranked uniquement
+ * (casual = 0).
+ *
+ * Auth : importe auth.js (Firebase) et écoute onAuthStateChanged pour brancher
+ * la sidebar (login-btn / user-badge). Définit sur window les handlers utilisés
+ * par les onclick du HTML : toggleAuthModal, handleLogin, handleLogout,
+ * toggleUserDropdown, goToProfilePage, closeProfileModal,
+ * startOwnershipVerification, confirmOwnershipVerification,
+ * cancelOwnershipVerification.
  */
 
-const FFA_POINTS_PER_WIN = 10;
-const TEAM_POINTS_PER_WIN = 5;
+import {
+  auth, db,
+  doc, getDoc, setDoc,
+  collection, query, where, onSnapshot,
+  onAuthStateChanged, signOut,
+} from "./auth.js";
+import { fetchOpenFront } from "./openfront-client.js?v=24";
+
+/* ════════════════════════════════════════════════════════════════
+   Constantes (barème)
+   ════════════════════════════════════════════════════════════════ */
+
+const PTS_FFA_CASUAL  = 10;
+const PTS_FFA_RANKED  = 11;
+const PTS_TEAM_CASUAL = 5;
+const PTS_TEAM_RANKED = 6;
+
+/* ════════════════════════════════════════════════════════════════
+   State + DOM
+   ════════════════════════════════════════════════════════════════ */
 
 const view = document.getElementById("dashboard-view");
 const lastUpdateEl = document.getElementById("last-update");
 
-let _ranked = null; // { '1v1': [...], '2v2': [...], updatedAt, totalPlayers1v1, totalPlayers2v2 }
-let _history1v1 = null; // { publicId: [{t, elo, rank}, ...] }
-let _history2v2 = null;
-let _dashMode = "overall"; // "overall" | "weekly"
+let _data = null;          // dashboard_ranking.json décodé
+let _fallbackRanked = null; // ranked.json décodé (fallback)
+let _dashMode = "global";   // "global" | "weekly"
+let currentUser = null;     // { name, publicId, avatar, uid, email }
+let _ownershipCode = null;
+let _ownershipPublicId = null;
+let _ownershipUsername = null;
+let _loginInProgress = false;
 
 /* ════════════════════════════════════════════════════════════════
    Helpers
@@ -31,14 +69,16 @@ function escapeHtml(s) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function formatPoints(n) {
-  return new Intl.NumberFormat("fr-FR").format(n);
+  return new Intl.NumberFormat("fr-FR").format(n || 0);
 }
 
 function initials(name) {
+  if (!name) return "?";
   const clean = name.replace(/^\[[^\]]+\]\s*/, "").trim();
   const parts = clean.split(/[\s_-]+/).filter(Boolean);
   const letters = parts.length >= 2 ? parts[0][0] + parts[1][0] : clean.slice(0, 2);
@@ -54,191 +94,115 @@ function rankCircleHtml(rank) {
 }
 
 function avatarHtml(name, size = "sm") {
-  return `<span class="dash-avatar dash-avatar-${size}">${escapeHtml(initials(name))}</span>`;
+  return `<span class="dash-avatar dash-avatar-${size}" aria-hidden="true">${escapeHtml(initials(name))}</span>`;
+}
+
+function clanBadgeHtml(clan) {
+  if (!clan) return "";
+  return `<span class="dash-clan">[${escapeHtml(clan)}]</span>`;
+}
+
+function showToast(msg, type = "info", duration = 4000) {
+  if (typeof window.showToast === "function") window.showToast(msg, type, duration);
+  else console.log(`[toast:${type}]`, msg);
 }
 
 /* ════════════════════════════════════════════════════════════════
    Chargement des données
    ════════════════════════════════════════════════════════════════ */
 
-// Charge un fichier .json.gz en le décompressant côté navigateur.
-async function loadGzJson(url) {
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) return null;
+async function loadData() {
+  // Tentative principale : dashboard_ranking.json (cache-bust)
   try {
-    const ds = new DecompressionStream("gzip");
-    const decompressed = res.body.pipeThrough(ds);
-    return await new Response(decompressed).json();
+    const res = await fetch(`dashboard_ranking.json?v=${Date.now()}`, { cache: "no-store" });
+    if (res.ok) {
+      const json = await res.json();
+      if (json && (json.global?.players?.length || json.weekly?.players?.length)) {
+        _data = json;
+        if (_data.updatedAt) updateLastUpdateLabel(_data.updatedAt);
+        return;
+      }
+    }
   } catch (e) {
-    console.warn(`[dashboard] decompression failed for ${url}:`, e);
-    return null;
+    console.warn("[dashboard] dashboard_ranking.json indisponible:", e.message);
   }
+
+  // Fallback : ranked.json (top 100 classé 1v1 + 2v2)
+  _data = null;
+  try {
+    const res = await fetch("ranked.json", { cache: "no-store" });
+    if (res.ok) _fallbackRanked = await res.json();
+  } catch (e) {
+    console.warn("[dashboard] ranked.json indisponible:", e.message);
+  }
+  if (_fallbackRanked?.updatedAt) updateLastUpdateLabel(_fallbackRanked.updatedAt);
 }
 
-async function loadData() {
-  // ranked.json (plaintext, à la racine)
-  const res = await fetch("ranked.json", { cache: "no-store" });
-  if (!res.ok) throw new Error("Impossible de charger ranked.json");
-  _ranked = await res.json();
-
-  // ranked_history pour la vue hebdomadaire (ELO delta sur 7 jours)
-  try {
-    const [h1, h2] = await Promise.all([
-      loadGzJson("ranked_history.json.gz"),
-      loadGzJson("ranked_2v2_history.json.gz"),
-    ]);
-    _history1v1 = h1;
-    _history2v2 = h2;
-  } catch (e) {
-    console.warn("[dashboard] history load failed (weekly view indisponible):", e);
-  }
-
-  if (_ranked.updatedAt) {
-    const d = new Date(typeof _ranked.updatedAt === "number" ? _ranked.updatedAt : _ranked.updatedAt);
-    if (!Number.isNaN(d.getTime())) {
-      lastUpdateEl.textContent = "Mis à jour " + new Intl.DateTimeFormat("fr-FR", {
-        day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit",
-      }).format(d);
-    }
-  }
+function updateLastUpdateLabel(ts) {
+  if (!ts || !lastUpdateEl) return;
+  const d = new Date(typeof ts === "number" ? ts : ts);
+  if (Number.isNaN(d.getTime())) return;
+  lastUpdateEl.textContent = "Mis à jour le " + new Intl.DateTimeFormat("fr-FR", {
+    day: "2-digit", month: "2-digit", year: "numeric",
+    hour: "2-digit", minute: "2-digit",
+  }).format(d);
 }
 
 /* ════════════════════════════════════════════════════════════════
-   Calcul du classement
+   Construction de la vue (depuis dashboard_ranking.json)
    ════════════════════════════════════════════════════════════════ */
 
-// ELO gagné sur les 7 derniers jours pour un joueur (depuis l'historique).
-function weeklyEloGain(history, publicId) {
-  if (!history || !history[publicId]) return 0;
-  const arr = history[publicId];
-  if (!arr.length) return 0;
-  const now = Date.now();
-  const weekAgo = now - 7 * 86400000;
-  // Trouver l'entrée la plus proche d'il y a 7 jours
-  let before = null;
-  for (const e of arr) {
-    if (e.t <= weekAgo) before = e;
-    else break;
-  }
-  const current = arr[arr.length - 1];
-  if (!current) return 0;
-  const baseElo = before ? before.elo : current.elo;
-  return Math.max(0, current.elo - baseElo);
+function getActiveView() {
+  if (!_data) return null;
+  return _dashMode === "weekly" ? _data.weekly : _data.global;
 }
 
-// Construit le classement global (points = FFA wins × 10 + Team wins × 5).
-function buildOverallRanking() {
-  if (!_ranked) return [];
-  const byPid = new Map(); // publicId → entry
-
-  const getOrCreate = (pid, name) => {
-    let e = byPid.get(pid);
-    if (!e) {
-      e = {
-        publicId: pid,
-        name: name || pid,
-        ffaWins: 0,
-        teamWins: 0,
-        ffaLosses: 0,
-        teamLosses: 0,
-        ffaElo: 0,
-        teamElo: 0,
-        ffaGames: 0,
-        teamGames: 0,
-      };
-      byPid.set(pid, e);
-    }
-    return e;
-  };
-
-  // 1v1 = FFA
-  for (const p of _ranked["1v1"] || []) {
-    const e = getOrCreate(p.public_id, p.username || p.accountUsername);
-    e.ffaWins = p.wins || 0;
-    e.ffaLosses = p.losses || 0;
-    e.ffaElo = p.elo || 0;
-    e.ffaGames = p.total || 0;
-    // Conserve le nom le plus propre
-    const nm = p.username || p.accountUsername;
-    if (nm && nm !== p.public_id) e.name = nm;
-  }
-
-  // 2v2 = Team
-  for (const p of _ranked["2v2"] || []) {
-    const e = getOrCreate(p.public_id, p.username || p.accountUsername);
-    e.teamWins = p.wins || 0;
-    e.teamLosses = p.losses || 0;
-    e.teamElo = p.elo || 0;
-    e.teamGames = p.total || 0;
-    const nm = p.username || p.accountUsername;
-    if (nm && nm !== p.public_id) e.name = nm;
-  }
-
-  const arr = [...byPid.values()];
-  for (const e of arr) {
-    e.points = e.ffaWins * FFA_POINTS_PER_WIN + e.teamWins * TEAM_POINTS_PER_WIN;
-    e.totalWins = e.ffaWins + e.teamWins;
-    e.totalGames = e.ffaGames + e.teamGames;
-  }
-  arr.sort((a, b) => {
-    if (b.points !== a.points) return b.points - a.points;
-    if (b.totalWins !== a.totalWins) return b.totalWins - a.totalWins;
-    const aMax = Math.max(a.ffaElo, a.teamElo);
-    const bMax = Math.max(b.ffaElo, b.teamElo);
-    return bMax - aMax;
-  });
-  return arr.map((e, i) => ({ ...e, rank: i + 1 }));
+function pointsFor(p) {
+  // Le JSON fournit déjà `points`, mais on le recalcule pour être sûr
+  // de la cohérence avec le barème affiché.
+  return (p.ffaCasualWins || 0) * PTS_FFA_CASUAL
+       + (p.ffaRankedWins || 0) * PTS_FFA_RANKED
+       + (p.teamCasualWins || 0) * PTS_TEAM_CASUAL
+       + (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
 }
 
-// Construit le classement hebdomadaire (ELO gagné sur 7 jours, proxy activité).
-function buildWeeklyRanking() {
-  if (!_ranked) return [];
+function rankedView() {
+  // Construit une vue synthétique à partir du fallback ranked.json
+  // (casual = 0 partout, ranked wins = wins du leaderboard).
+  if (!_fallbackRanked) return null;
   const byPid = new Map();
-
   const getOrCreate = (pid, name) => {
     let e = byPid.get(pid);
     if (!e) {
       e = {
-        publicId: pid,
-        name: name || pid,
-        ffaEloGain: 0,
-        teamEloGain: 0,
-        ffaWins: 0,
-        teamWins: 0,
-        ffaElo: 0,
-        teamElo: 0,
+        publicId: pid, username: name || pid, clan: null,
+        ffaCasualWins: 0, ffaRankedWins: 0,
+        teamCasualWins: 0, teamRankedWins: 0,
       };
       byPid.set(pid, e);
     }
     return e;
   };
-
-  for (const p of _ranked["1v1"] || []) {
-    const e = getOrCreate(p.public_id, p.username || p.accountUsername);
-    e.ffaEloGain = weeklyEloGain(_history1v1, p.public_id);
-    e.ffaWins = p.wins || 0;
-    e.ffaElo = p.elo || 0;
-    const nm = p.username || p.accountUsername;
-    if (nm && nm !== p.public_id) e.name = nm;
+  for (const p of _fallbackRanked["1v1"] || []) {
+    const nm = p.username || p.accountUsername || p.public_id;
+    const e = getOrCreate(p.public_id, nm);
+    e.ffaRankedWins = p.wins || 0;
+    if (nm && nm !== p.public_id) e.username = nm;
   }
-  for (const p of _ranked["2v2"] || []) {
-    const e = getOrCreate(p.public_id, p.username || p.accountUsername);
-    e.teamEloGain = weeklyEloGain(_history2v2, p.public_id);
-    e.teamWins = p.wins || 0;
-    e.teamElo = p.elo || 0;
-    const nm = p.username || p.accountUsername;
-    if (nm && nm !== p.public_id) e.name = nm;
+  for (const p of _fallbackRanked["2v2"] || []) {
+    const nm = p.username || p.accountUsername || p.public_id;
+    const e = getOrCreate(p.public_id, nm);
+    e.teamRankedWins = p.wins || 0;
+    if (nm && nm !== p.public_id) e.username = nm;
   }
-
-  const arr = [...byPid.values()];
-  for (const e of arr) {
-    // Points hebdo = ELO gagné (FFA + Team) — proxy de la performance de la semaine
-    e.points = e.ffaEloGain + e.teamEloGain;
-  }
-  // Ne garder que les joueurs avec progression > 0 cette semaine
-  const active = arr.filter((e) => e.points > 0);
-  active.sort((a, b) => b.points - a.points);
-  return active.map((e, i) => ({ ...e, rank: i + 1 }));
+  const players = [...byPid.values()].map((p) => ({ ...p, points: pointsFor(p) }));
+  players.sort((a, b) => b.points - a.points);
+  return {
+    from: null, to: null,
+    gamesScanned: null,
+    players,
+    _fallback: true,
+  };
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -246,54 +210,52 @@ function buildWeeklyRanking() {
    ════════════════════════════════════════════════════════════════ */
 
 function render() {
-  if (!_ranked) {
-    view.innerHTML = `<div class="dash-error"><h3>Données indisponibles</h3><p>Impossible de charger le classement.</p></div>`;
+  if (!_data && !_fallbackRanked) {
+    view.innerHTML = `
+      <div class="dash-empty-state">
+        <div class="dash-empty-icon"><i data-icon="chart"></i></div>
+        <h3>Aucune donnée disponible</h3>
+        <p>Synchronisation en cours… Revenez dans quelques minutes.</p>
+      </div>`;
+    if (window.hydrateIcons) window.hydrateIcons(view);
     return;
   }
 
   const isWeekly = _dashMode === "weekly";
-  const ranking = isWeekly ? buildWeeklyRanking() : buildOverallRanking();
-  const champion = ranking[0] ?? null;
+  const active = _data ? (isWeekly ? _data.weekly : _data.global) : rankedView();
+  if (!active || !active.players || !active.players.length) {
+    view.innerHTML = `
+      <div class="dash-empty-state">
+        <div class="dash-empty-icon"><i data-icon="chart"></i></div>
+        <h3>Aucune donnée disponible</h3>
+        <p>${isWeekly ? "Aucune partie scannée cette semaine." : "Synchronisation en cours…"} Revenez dans quelques minutes.</p>
+      </div>`;
+    if (window.hydrateIcons) window.hydrateIcons(view);
+    return;
+  }
 
-  // Stats globales
-  const totalPlayers = ranking.length;
-  const totalPoints = ranking.reduce((s, e) => s + e.points, 0);
-  const totalFfaWins = isWeekly ? 0 : ranking.reduce((s, e) => s + e.ffaWins, 0);
-  const totalTeamWins = isWeekly ? 0 : ranking.reduce((s, e) => s + e.teamWins, 0);
+  // Calcul des points (cohérence) + tri desc
+  const players = active.players
+    .map((p) => ({ ...p, points: typeof p.points === "number" ? p.points : pointsFor(p) }))
+    .sort((a, b) => b.points - a.points);
+  // Ajout du rang
+  players.forEach((p, i) => { p.rank = i + 1; });
 
+  const champion = players[0] ?? null;
+  const totalPlayers = players.length;
+  const gamesScanned = active.gamesScanned ?? null;
+  const totalFfaWins = players.reduce((s, p) => s + (p.ffaCasualWins || 0) + (p.ffaRankedWins || 0), 0);
+  const totalTeamWins = players.reduce((s, p) => s + (p.teamCasualWins || 0) + (p.teamRankedWins || 0), 0);
+  const topN = players.slice(0, 100);
   const modeLabel = isWeekly ? "Cette semaine" : "Global";
-  const topN = ranking.slice(0, 100);
+  const fallbackTag = active._fallback
+    ? `<span class="dash-fallback-tag">Données classées uniquement (synchronisation casual en cours)</span>`
+    : "";
 
   view.innerHTML = `
-    ${champion ? `
-    <div class="dash-hero">
-      <div class="dash-hero-label">${isWeekly ? "Champion de la semaine" : "Champion Global"}</div>
-      <div class="dash-hero-name">${escapeHtml(champion.name)}</div>
-      <div class="dash-hero-sub">Rank #${champion.rank}</div>
-      <div class="dash-hero-stats">
-        <div class="dash-hero-stat">
-          <div class="dash-hero-stat-val">${formatPoints(champion.points)}</div>
-          <div class="dash-hero-stat-label">${isWeekly ? "ELO gagné" : "Points"}</div>
-        </div>
-        ${!isWeekly ? `
-        <div class="dash-hero-stat">
-          <div class="dash-hero-stat-val">${champion.ffaWins}</div>
-          <div class="dash-hero-stat-label">Victoires FFA</div>
-        </div>
-        <div class="dash-hero-stat">
-          <div class="dash-hero-stat-val">${champion.teamWins}</div>
-          <div class="dash-hero-stat-label">Victoires Team</div>
-        </div>` : `
-        <div class="dash-hero-stat">
-          <div class="dash-hero-stat-val">+${formatPoints(champion.ffaEloGain)}</div>
-          <div class="dash-hero-stat-label">ELO FFA</div>
-        </div>
-        <div class="dash-hero-stat">
-          <div class="dash-hero-stat-val">+${formatPoints(champion.teamEloGain)}</div>
-          <div class="dash-hero-stat-label">ELO Team</div>
-        </div>`}
-      </div>
-    </div>` : ""}
+    ${champion ? renderHero(champion, isWeekly) : ""}
+
+    ${fallbackTag}
 
     <div class="dash-stats-grid">
       <div class="dash-stat-card">
@@ -302,19 +264,19 @@ function render() {
         <div class="sub">${modeLabel}</div>
       </div>
       <div class="dash-stat-card">
-        <div class="label">${isWeekly ? "ELO total distribué" : "Points distribués"}</div>
-        <div class="value">${formatPoints(totalPoints)}</div>
+        <div class="label">Parties scannées</div>
+        <div class="value">${gamesScanned != null ? formatPoints(gamesScanned) : "—"}</div>
         <div class="sub">${modeLabel}</div>
       </div>
       <div class="dash-stat-card">
         <div class="label">Victoires FFA</div>
         <div class="value">${formatPoints(totalFfaWins)}</div>
-        <div class="sub">+10 pts chacune</div>
+        <div class="sub">casual + classé</div>
       </div>
       <div class="dash-stat-card">
         <div class="label">Victoires Team</div>
         <div class="value">${formatPoints(totalTeamWins)}</div>
-        <div class="sub">+5 pts chacune</div>
+        <div class="sub">casual + classé</div>
       </div>
     </div>
 
@@ -322,72 +284,25 @@ function render() {
       <div class="dash-card-header">
         <span class="dash-card-title">Classement — ${modeLabel}</span>
         <div class="dash-toggle" role="tablist" aria-label="Période du classement">
-          <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="overall" role="tab" aria-selected="${!isWeekly}">Global</button>
+          <button class="dash-toggle-btn ${!isWeekly ? "active" : ""}" data-mode="global" role="tab" aria-selected="${!isWeekly}">Global</button>
           <button class="dash-toggle-btn ${isWeekly ? "active" : ""}" data-mode="weekly" role="tab" aria-selected="${isWeekly}">Cette semaine</button>
         </div>
       </div>
       <div class="dash-card-body">
-        ${topN.length ? `
-        <div class="dash-table-wrap">
-          <table class="dash-table">
-            <thead>
-              <tr>
-                <th class="dash-th-rank">#</th>
-                <th>Joueur</th>
-                ${isWeekly
-                  ? `<th class="dash-th-num">ELO FFA</th><th class="dash-th-num">ELO Team</th><th class="dash-th-num">Total</th>`
-                  : `<th class="dash-th-num">FFA (×10)</th><th class="dash-th-num">Team (×5)</th><th class="dash-th-num">Top ELO</th><th class="dash-th-num">Points</th>`}
-              </tr>
-            </thead>
-            <tbody>
-              ${topN.map((e) => {
-                const name = e.name;
-                const topElo = Math.max(e.ffaElo || 0, e.teamElo || 0);
-                const profileUrl = `profile.html?pid=${encodeURIComponent(e.publicId)}`;
-                if (isWeekly) {
-                  return `
-                  <tr class="dash-row-link" onclick="location.href='${profileUrl}'">
-                    <td class="dash-td-rank">${rankCircleHtml(e.rank)}</td>
-                    <td class="dash-td-player">
-                      ${avatarHtml(name, "sm")}
-                      <span class="dash-td-name">${escapeHtml(name)}</span>
-                    </td>
-                    <td class="dash-td-num">+${formatPoints(e.ffaEloGain)}</td>
-                    <td class="dash-td-num">+${formatPoints(e.teamEloGain)}</td>
-                    <td class="dash-td-num dash-td-points">+${formatPoints(e.points)}</td>
-                  </tr>`;
-                }
-                const ffaPts = e.ffaWins * FFA_POINTS_PER_WIN;
-                const teamPts = e.teamWins * TEAM_POINTS_PER_WIN;
-                return `
-                <tr class="dash-row-link" onclick="location.href='${profileUrl}'">
-                  <td class="dash-td-rank">${rankCircleHtml(e.rank)}</td>
-                  <td class="dash-td-player">
-                    ${avatarHtml(name, "sm")}
-                    <div class="dash-td-player-info">
-                      <span class="dash-td-name">${escapeHtml(name)}</span>
-                      ${e.totalGames ? `<span class="dash-td-sub">${e.totalGames} parties</span>` : ""}
-                    </div>
-                  </td>
-                  <td class="dash-td-num">${e.ffaWins} <span class="dash-td-pts">(${formatPoints(ffaPts)})</span></td>
-                  <td class="dash-td-num">${e.teamWins} <span class="dash-td-pts">(${formatPoints(teamPts)})</span></td>
-                  <td class="dash-td-num">${formatPoints(topElo)}</td>
-                  <td class="dash-td-num dash-td-points">${formatPoints(e.points)}</td>
-                </tr>`;
-              }).join("")}
-            </tbody>
-          </table>
-        </div>` : `<p class="dash-empty">${isWeekly ? "Aucune progression ELO cette semaine (données d'historique indisponibles ou aucun match joué)." : "Aucun joueur classé pour le moment."}</p>`}
+        ${topN.length ? renderTable(topN) : `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
       </div>
     </div>
 
     <div class="dash-scoring-info">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Barème : <strong>FFA</strong> (1v1 ranked) — chaque victoire = <strong>+10 points</strong> · <strong>Team</strong> (2v2 ranked) — chaque victoire = <strong>+5 points</strong>. ${isWeekly ? "Vue hebdo basée sur la progression ELO sur 7 jours." : "Vue globale = cumul des victoires."}</span>
+      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +11</strong> · <strong>Team casual +5</strong> · <strong>Team classé +6</strong>. ${isWeekly ? "Vue hebdomadaire = parties scannées sur les 7 derniers jours." : "Vue globale = cumul de toutes les parties scannées."}</span>
     </div>
   `;
 
-  // Toggle listeners
+  // Hydrate les icônes <i data-icon>
+  if (window.hydrateIcons) window.hydrateIcons(view);
+
+  // Toggle listeners (les boutons sont dans #dashboard-view)
   view.querySelectorAll(".dash-toggle-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       _dashMode = btn.dataset.mode;
@@ -395,6 +310,411 @@ function render() {
     });
   });
 }
+
+function renderHero(champion, isWeekly) {
+  const ffaCasualPts  = (champion.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
+  const ffaRankedPts  = (champion.ffaRankedWins  || 0) * PTS_FFA_RANKED;
+  const teamCasualPts = (champion.teamCasualWins || 0) * PTS_TEAM_CASUAL;
+  const teamRankedPts = (champion.teamRankedWins || 0) * PTS_TEAM_RANKED;
+  const heroAvatar = champion.username || champion.publicId;
+  return `
+    <div class="dash-hero">
+      <div class="dash-hero-glow" aria-hidden="true"></div>
+      <div class="dash-hero-content">
+        <div class="dash-hero-top">
+          ${avatarHtml(heroAvatar, "lg")}
+          <div class="dash-hero-meta">
+            <div class="dash-hero-label">${isWeekly ? "Champion de la semaine" : "Champion Global"}</div>
+            <div class="dash-hero-name">${escapeHtml(champion.username || champion.publicId)}
+              ${champion.clan ? clanBadgeHtml(champion.clan) : ""}
+            </div>
+            <div class="dash-hero-sub">Rang #${champion.rank}</div>
+          </div>
+          <div class="dash-hero-points">
+            <div class="dash-hero-points-val">${formatPoints(champion.points)}</div>
+            <div class="dash-hero-points-label">points</div>
+          </div>
+        </div>
+        <div class="dash-hero-stats">
+          <div class="dash-hero-stat">
+            <div class="dash-hero-stat-val">${champion.ffaCasualWins || 0}</div>
+            <div class="dash-hero-stat-label">FFA casual · +${formatPoints(ffaCasualPts)}</div>
+          </div>
+          <div class="dash-hero-stat">
+            <div class="dash-hero-stat-val">${champion.ffaRankedWins || 0}</div>
+            <div class="dash-hero-stat-label">FFA classé · +${formatPoints(ffaRankedPts)}</div>
+          </div>
+          <div class="dash-hero-stat">
+            <div class="dash-hero-stat-val">${champion.teamCasualWins || 0}</div>
+            <div class="dash-hero-stat-label">Team casual · +${formatPoints(teamCasualPts)}</div>
+          </div>
+          <div class="dash-hero-stat">
+            <div class="dash-hero-stat-val">${champion.teamRankedWins || 0}</div>
+            <div class="dash-hero-stat-label">Team classé · +${formatPoints(teamRankedPts)}</div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderTable(topN) {
+  const rows = topN.map((p) => {
+    const name = p.username || p.publicId;
+    const profileUrl = p.publicId
+      ? `profile.html?pid=${encodeURIComponent(p.publicId)}&player=${encodeURIComponent(name)}`
+      : `profile.html?player=${encodeURIComponent(name)}`;
+    const ffaCasualPts  = (p.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
+    const ffaRankedPts  = (p.ffaRankedWins  || 0) * PTS_FFA_RANKED;
+    const teamCasualPts = (p.teamCasualWins || 0) * PTS_TEAM_CASUAL;
+    const teamRankedPts = (p.teamRankedWins || 0) * PTS_TEAM_RANKED;
+    return `
+      <tr class="dash-row-link" data-href="${profileUrl}">
+        <td class="dash-td-rank">${rankCircleHtml(p.rank)}</td>
+        <td class="dash-td-player">
+          ${avatarHtml(name, "sm")}
+          <div class="dash-td-player-info">
+            <span class="dash-td-name">${escapeHtml(name)} ${clanBadgeHtml(p.clan)}</span>
+          </div>
+        </td>
+        <td class="dash-td-num dash-td-ffa-casual">
+          <span class="dash-td-count">${p.ffaCasualWins || 0}</span>
+          <span class="dash-td-pts">${formatPoints(ffaCasualPts)}</span>
+        </td>
+        <td class="dash-td-num dash-td-ffa-ranked">
+          <span class="dash-td-count">${p.ffaRankedWins || 0}</span>
+          <span class="dash-td-pts">${formatPoints(ffaRankedPts)}</span>
+        </td>
+        <td class="dash-td-num dash-td-team-casual">
+          <span class="dash-td-count">${p.teamCasualWins || 0}</span>
+          <span class="dash-td-pts">${formatPoints(teamCasualPts)}</span>
+        </td>
+        <td class="dash-td-num dash-td-team-ranked">
+          <span class="dash-td-count">${p.teamRankedWins || 0}</span>
+          <span class="dash-td-pts">${formatPoints(teamRankedPts)}</span>
+        </td>
+        <td class="dash-td-num dash-td-points">${formatPoints(p.points)}</td>
+      </tr>`;
+  }).join("");
+
+  return `
+    <div class="dash-table-wrap">
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th class="dash-th-rank">#</th>
+            <th>Joueur</th>
+            <th class="dash-th-num">FFA casual</th>
+            <th class="dash-th-num">FFA classé</th>
+            <th class="dash-th-num">Team casual</th>
+            <th class="dash-th-num">Team classé</th>
+            <th class="dash-th-num">Points</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Auth UI (sidebar)
+   ════════════════════════════════════════════════════════════════ */
+
+function updateAuthUI(user) {
+  const loginBtn = document.getElementById("login-btn-main");
+  const userContainer = document.getElementById("user-container");
+  if (!loginBtn || !userContainer) return;
+
+  if (!user) {
+    loginBtn.style.display = "flex";
+    userContainer.style.display = "none";
+    userContainer.classList.remove("open");
+    return;
+  }
+
+  loginBtn.style.display = "none";
+  userContainer.style.display = "block";
+
+  const name = user.name || "Joueur";
+  const publicId = user.publicId || "Non lié";
+
+  const setText = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  };
+  setText("user-display-name", name);
+  setText("user-public-id-side", publicId !== "Non lié" ? publicId : "En ligne");
+  setText("dropdown-username-display", name);
+  setText("dropdown-publicid-display", publicId);
+
+  const avatarEl = document.getElementById("dropdown-avatar");
+  const sidebarAvatarEl = document.getElementById("sidebar-avatar");
+  const renderAvatar = (el) => {
+    if (!el) return;
+    if (user.avatar) {
+      el.innerHTML = `<img src="${escapeHtml(user.avatar)}" alt="${escapeHtml(name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover">`;
+    } else {
+      el.innerHTML = "";
+      el.textContent = initials(name);
+      el.style.background = "linear-gradient(135deg,var(--accent),var(--accentL))";
+      el.style.color = "#fff";
+    }
+  };
+  renderAvatar(avatarEl);
+  renderAvatar(sidebarAvatarEl);
+}
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    currentUser = null;
+    updateAuthUI(null);
+    return;
+  }
+  currentUser = { uid: user.uid, avatar: user.photoURL, email: user.email };
+
+  // Lecture du profil Firestore
+  let profile = null;
+  try {
+    const snap = await getDoc(doc(db, "users", user.uid));
+    if (snap.exists()) profile = snap.data();
+  } catch (e) {
+    console.warn("[dashboard] Firestore read error:", e.message);
+  }
+
+  if (profile && profile.publicId) {
+    currentUser.name = profile.username;
+    currentUser.publicId = profile.publicId;
+    updateAuthUI(currentUser);
+  } else {
+    // Premier login sans profil : on affiche le badge + ouvre le setup modal
+    currentUser.name = user.displayName || "Joueur";
+    updateAuthUI(currentUser);
+    // Redirige vers profile.html pour finaliser le setup (le dashboard n'a pas
+    // vocation à héberger tout le flow d'ownership verification ici).
+    if (profile == null) {
+      // Pas de doc Firestore du tout → l'utilisateur n'a jamais finalisé.
+      // On l'envoie sur profile.html qui gère le setup.
+      // On évite la boucle en ne redirigeant que si l'URL ne contient pas ?setup=1
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("setup") !== "1") {
+        // Petit délai pour laisser le toast se figurer
+        showToast("Bienvenue ! Finalisez votre profil pour accéder à vos stats.", "info", 3500);
+        setTimeout(() => { window.location.href = "profile.html"; }, 1200);
+        return;
+      }
+    }
+  }
+});
+
+/* ════════════════════════════════════════════════════════════════
+   Handlers globaux (pour onclick HTML)
+   ════════════════════════════════════════════════════════════════ */
+
+window.toggleAuthModal = function () {
+  const modal = document.getElementById("auth-modal");
+  if (modal) modal.classList.toggle("active");
+};
+
+window.closeProfileModal = function () {
+  const modal = document.getElementById("profile-modal");
+  if (modal) modal.classList.remove("active");
+};
+
+window.handleLogin = async function (provider) {
+  if (_loginInProgress) return;
+  _loginInProgress = true;
+  const authBtns = document.querySelectorAll(".auth-btn");
+  authBtns.forEach((b) => { b.disabled = true; b.style.opacity = "0.6"; });
+  try {
+    if (provider === "google") await window.loginWithGoogle();
+    else if (provider === "discord") await window.loginWithDiscord();
+    const modal = document.getElementById("auth-modal");
+    if (modal) modal.classList.remove("active");
+    // onAuthStateChanged prend le relais pour la redirection / UI
+  } catch (e) {
+    console.error("[dashboard] Login error:", e);
+  } finally {
+    _loginInProgress = false;
+    authBtns.forEach((b) => { b.disabled = false; b.style.opacity = ""; });
+  }
+};
+
+window.handleLogout = async function (event) {
+  if (event) event.stopPropagation();
+  if (!confirm("Voulez-vous vous déconnecter ?")) return;
+  try { await signOut(auth); } catch (e) { console.warn("[dashboard] logout error:", e.message); }
+  currentUser = null;
+  updateAuthUI(null);
+};
+
+window.toggleUserDropdown = function (event) {
+  if (event) event.stopPropagation();
+  const c = document.getElementById("user-container");
+  if (c) c.classList.toggle("open");
+};
+
+window.closeUserDropdown = function () {
+  const c = document.getElementById("user-container");
+  if (c) c.classList.remove("open");
+};
+
+window.goToProfilePage = function (event) {
+  if (event) event.stopPropagation();
+  window.closeUserDropdown();
+  // Si l'utilisateur a un publicId, on pointe vers son profil public
+  const pid = currentUser?.publicId;
+  if (pid) {
+    window.location.href = `profile.html?publicId=${encodeURIComponent(pid)}&player=${encodeURIComponent(currentUser.name || "")}`;
+  } else {
+    window.location.href = "profile.html";
+  }
+};
+
+// Fermer le dropdown au clic extérieur
+document.addEventListener("click", (e) => {
+  const c = document.getElementById("user-container");
+  if (c && !c.contains(e.target)) c.classList.remove("open");
+});
+
+/* ── Ownership verification (pour le #profile-modal copié de index.html) ── */
+
+window.startOwnershipVerification = async function () {
+  if (!currentUser) {
+    showToast("Veuillez vous connecter d'abord.", "warning");
+    return;
+  }
+  const usernameInput = document.getElementById("profile-username");
+  const publicIdInput = document.getElementById("profile-public-id");
+  const username = (usernameInput?.value || "").trim();
+  const publicId = (publicIdInput?.value || "").trim();
+
+  if (!username || !publicId) {
+    showToast("Veuillez remplir tous les champs.", "warning");
+    return;
+  }
+  if (username.length < 2 || username.length > 30) {
+    showToast("Le pseudo doit faire entre 2 et 30 caractères.", "warning");
+    return;
+  }
+  if (!/^[A-Za-z0-9]{8}$/.test(publicId)) {
+    showToast("Le Public ID doit faire exactement 8 caractères alphanumériques (ex: HabCsQYR).", "warning");
+    return;
+  }
+  if (/[^a-zA-Z0-9_\- ]/.test(username)) {
+    showToast("Le pseudo ne peut contenir que des lettres, chiffres, espaces, _ et -.", "warning");
+    return;
+  }
+
+  showToast("Vérification du Public ID…", "info", 3000);
+  try {
+    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
+    if (!playerData || !playerData.publicId) {
+      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+      return;
+    }
+  } catch (e) {
+    if (e?.isNotFound || e?.status === 404) {
+      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+      return;
+    }
+    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error", 6000);
+    console.error("[ownership] API check failed:", e);
+    return;
+  }
+
+  // Génération du code challenge TFS-XXXX
+  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  _ownershipCode = "TFS-";
+  const rand = crypto.getRandomValues(new Uint8Array(4));
+  for (let i = 0; i < 4; i++) _ownershipCode += chars[rand[i] % chars.length];
+  _ownershipPublicId = publicId;
+  _ownershipUsername = username;
+
+  const s1 = document.getElementById("profile-setup-step1");
+  const s2 = document.getElementById("profile-setup-step2");
+  if (s1) s1.style.display = "none";
+  if (s2) s2.style.display = "block";
+  const codeEl = document.getElementById("ownership-code");
+  const exEl = document.getElementById("ownership-example");
+  if (codeEl) codeEl.textContent = _ownershipCode;
+  if (exEl) exEl.textContent = _ownershipCode + " " + username;
+  showToast("Code généré. Suivez les instructions ci-dessous.", "info");
+  if (window.hydrateIcons) window.hydrateIcons(document.getElementById("profile-modal"));
+};
+
+window.confirmOwnershipVerification = async function () {
+  if (!_ownershipCode || !_ownershipPublicId) return;
+  const btn = document.getElementById("confirm-ownership-btn");
+  const original = btn?.textContent || "Confirmer";
+  if (btn) { btn.disabled = true; btn.textContent = "Vérification…"; }
+  try {
+    const gamesData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}/games`);
+    const games = Array.isArray(gamesData?.results) ? gamesData.results : [];
+    const found = games.some((g) => g.username && g.username.includes(_ownershipCode));
+    if (!found) {
+      showToast("Code non trouvé dans vos parties récentes. Jouez une partie avec le code dans votre pseudo, puis confirmez.", "error", 6000);
+      if (btn) { btn.disabled = false; btn.textContent = original; }
+      return;
+    }
+    await saveUserProfile(_ownershipUsername, _ownershipPublicId);
+  } catch (e) {
+    console.error("[ownership] Confirmation failed:", e);
+    showToast("Erreur lors de la vérification. Réessayez.", "error");
+    if (btn) { btn.disabled = false; btn.textContent = original; }
+  }
+};
+
+window.cancelOwnershipVerification = function () {
+  _ownershipCode = null;
+  _ownershipPublicId = null;
+  _ownershipUsername = null;
+  const s1 = document.getElementById("profile-setup-step1");
+  const s2 = document.getElementById("profile-setup-step2");
+  if (s1) s1.style.display = "block";
+  if (s2) s2.style.display = "none";
+};
+
+async function saveUserProfile(username, publicId) {
+  if (!currentUser) throw new Error("No authenticated user");
+  try {
+    const userDocRef = doc(db, "users", currentUser.uid);
+    const existing = (await getDoc(userDocRef)).data() || {};
+    await setDoc(userDocRef, {
+      username,
+      publicId,
+      email: currentUser.email,
+      verified: true,
+      verifiedAt: new Date().toISOString(),
+      createdAt: existing.createdAt || new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      openFrontSyncPending: true,
+    }, { merge: true });
+
+    currentUser.name = username;
+    currentUser.publicId = publicId;
+
+    const modal = document.getElementById("profile-modal");
+    if (modal) modal.classList.remove("active");
+    window.cancelOwnershipVerification();
+    updateAuthUI(currentUser);
+    showToast("Profil vérifié et enregistré avec succès ! Redirection…", "success");
+    setTimeout(() => { window.location.href = `profile.html?publicId=${encodeURIComponent(publicId)}&player=${encodeURIComponent(username)}`; }, 800);
+  } catch (e) {
+    console.error("[dashboard] Save profile error:", e);
+    showToast("Erreur lors de la sauvegarde du profil.", "error");
+    throw e;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Navigation cliquable des lignes du tableau (délégation)
+   ════════════════════════════════════════════════════════════════ */
+
+document.addEventListener("click", (e) => {
+  const row = e.target.closest(".dash-row-link");
+  if (row && row.dataset.href) {
+    window.location.href = row.dataset.href;
+  }
+});
 
 /* ════════════════════════════════════════════════════════════════
    Init
@@ -406,6 +726,7 @@ function render() {
     render();
   } catch (e) {
     console.error("[dashboard] init failed:", e);
-    view.innerHTML = `<div class="dash-error"><h3>Erreur</h3><p>${escapeHtml(e.message)}</p></div>`;
+    view.innerHTML = `<div class="dash-empty-state"><div class="dash-empty-icon"><i data-icon="warning"></i></div><h3>Erreur</h3><p>${escapeHtml(e.message || "Chargement impossible.")}</p></div>`;
+    if (window.hydrateIcons) window.hydrateIcons(view);
   }
 })();

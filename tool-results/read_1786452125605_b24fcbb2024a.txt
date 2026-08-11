@@ -1,0 +1,769 @@
+     1→// Charger .env manuellement AVANT les imports
+     2→import fs from "fs";
+     3→try {
+     4→  const envContent = fs.readFileSync(".env", "utf8");
+     5→  envContent.split(/\r?\n/).forEach(line => {
+     6→    const trimmed = line.trim();
+     7→    if (!trimmed || trimmed.startsWith("#")) return;
+     8→    const [key, ...valueParts] = trimmed.split("=");
+     9→    const value = valueParts.join("=").trim();
+    10→    if (key && value) {
+    11→      process.env[key.trim()] = value;
+    12→    }
+    13→  });
+    14→} catch (e) {
+    15→  // .env optionnel
+    16→}
+    17→
+    18→// On utilise le fetch global (Node 18+), pas node-fetch (voir openfront-api.js).
+    19→import zlib from "zlib";
+    20→import {
+    21→  API_BASE,
+    22→  openFrontFetch,
+    23→  warnIfNoExemption,
+    24→  hasExemption,
+    25→  resetApiStats,
+    26→  logApiStats,
+    27→} from "./openfront-api.js";
+    28→import { MAP_ALIASES, normalizeMap } from "./shared/maps.js";
+    29→import { extractSpeedrun, TIME_OFFSET_SECS } from "./shared/extract-speedrun.js";
+    30→
+    31→// ── Configuration ─────────────────────────────────────────────────────────────
+    32→const FETCH_TIMEOUT    = 8_000;
+    33→
+    34→const HAS_EXEMPTION = hasExemption();
+    35→
+    36→// Avertir si pas d'exemption (après chargement du .env)
+    37→if (!HAS_EXEMPTION) {
+    38→  console.warn("[openfront-api] OPENFRONT_SKAILEX_ACCESS absent — requêtes sans exemption (rate limit strict)");
+    39→} else {
+    40→  console.log("[sync] 🔑 Exemption Skailex active");
+    41→}
+    42→// Fenêtres de 30s : évite de rater des parties si l'API tronque une grosse plage
+    43→const WINDOW_MS  = 30 * 1_000;
+    44→const HISTORY_MS = 400 * 24 * 60 * 60 * 1_000;
+    45→const TARGET_DATE = new Date("2025-11-01").getTime();
+    46→
+    47→const BATCH_DELAY_NORMAL  = HAS_EXEMPTION ? 0 : 200;
+    48→const WINDOW_DELAY        = HAS_EXEMPTION ? 0 : 50;
+    49→const DETAIL_CONCURRENCY  = HAS_EXEMPTION ? 12 : 2;
+    50→const DELAY_429           = HAS_EXEMPTION ? 2_000 : 8_000;
+    51→const CHECKPOINT_EVERY    = 20;
+    52→const DEFAULT_HISTORY_WINDOWS = HAS_EXEMPTION ? 500 : 40;
+    53→
+    54→function resolveHistoryWindowLimit(argv) {
+    55→  // Check mode-specific env var first
+    56→  const envVar = syncMode === "compact" ? "COMPACT_HISTORY_WINDOWS" : "SYNC_HISTORY_WINDOWS";
+    57→  const env = parseInt(process.env[envVar] || "", 10);
+    58→  if (!Number.isNaN(env) && env > 0) return env;
+    59→  const actionArgs = argv.filter(a => !a.startsWith('--mode'));
+    60→  const arg = parseInt(actionArgs[1] || "", 10);
+    61→  if (!Number.isNaN(arg) && arg > 0) return arg;
+    62→  return DEFAULT_HISTORY_WINDOWS;
+    63→}
+    64→
+    65→const RECENT_MAX_MS = 3 * 60 * 60 * 1_000;
+    66→const RECENT_OVERLAP_MS = 10 * 60 * 1_000;
+    67→const GAMES_LIST_FILTER = "type=Public&mode=Free%20For%20All";
+    68→
+    69→const WINDOW_SATURATION_THRESHOLD = 45;
+    70→
+    71→// ── File paths — set dynamically based on mode ──────────────────────────
+    72→let RUNS_FILE        = "runs.json";
+    73→let RUNS_BACKUP_FILE = "runs_backup.json";
+    74→let RUNS_FULL_FILE   = "runs_full.json";
+    75→let CHECKPOINT_FILE = "checkpoint.json";
+    76→let SEEN_FILE       = "seen.json";
+    77→
+    78→/** Update file paths based on mode (normal/compact) */
+    79→function setModePaths(mode) {
+    80→  if (mode === "compact") {
+    81→    RUNS_FILE        = "runs_compact.json";
+    82→    RUNS_BACKUP_FILE = "runs_compact_backup.json";
+    83→    RUNS_FULL_FILE   = "runs_compact_full.json";
+    84→    CHECKPOINT_FILE = "checkpoint_compact.json";
+    85→    SEEN_FILE       = "seen_compact.json";
+    86→  } else {
+    87→    RUNS_FILE        = "runs.json";
+    88→    RUNS_BACKUP_FILE = "runs_backup.json";
+    89→    RUNS_FULL_FILE   = "runs_full.json";
+    90→    CHECKPOINT_FILE = "checkpoint.json";
+    91→    SEEN_FILE       = "seen.json";
+    92→  }
+    93→}
+    94→
+    95→let currentLatestCommit = null;
+    96→
+    97→function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+    98→
+    99→// ── Persistence ───────────────────────────────────────────────────────────────
+   100→function loadRuns() {
+   101→  try {
+   102→    // 1. Try full file first (fastest, raw array — local only, never committed)
+   103→    if (fs.existsSync(RUNS_FULL_FILE)) {
+   104→      const raw = JSON.parse(fs.readFileSync(RUNS_FULL_FILE, "utf8"));
+   105→      return Array.isArray(raw) ? raw : (raw.runs || []);
+   106→    }
+   107→    // 2. Try uncompressed JSON (gitignored, may exist locally)
+   108→    if (fs.existsSync(RUNS_FILE)) {
+   109→      const raw = JSON.parse(fs.readFileSync(RUNS_FILE, "utf8"));
+   110→      return Array.isArray(raw) ? raw : (raw.runs || []);
+   111→    }
+   112→    // 3. Try gzipped file (THIS is the one that's actually committed to the repo!)
+   113→    const gzPath = RUNS_FILE + ".gz";
+   114→    if (fs.existsSync(gzPath)) {
+   115→      const gzipped = fs.readFileSync(gzPath);
+   116→      const decompressed = zlib.gunzipSync(gzipped);
+   117→      const raw = JSON.parse(decompressed.toString("utf8"));
+   118→      return Array.isArray(raw) ? raw : (raw.runs || []);
+   119→    }
+   120→  } catch (e) {
+   121→    console.warn(`[sync] ⚠️ loadRuns error: ${e.message}`);
+   122→  }
+   123→  return [];
+   124→}
+   125→
+   126→function saveRuns(runs) {
+   127→  const meta = {
+   128→    totalCount: runs.length,
+   129→    lastUpdate: new Date().toISOString(),
+   130→    latestCommit: currentLatestCommit,
+   131→  };
+   132→
+   133→  // Fichier public (sans URL, plus léger)
+   134→  const cleanedRuns = runs.map(({ url, ...rest }) => rest);
+   135→  const publicOutput = { ...meta, runs: cleanedRuns };
+   136→  const jsonString = JSON.stringify(publicOutput);
+   137→
+   138→  fs.writeFileSync(RUNS_FILE, jsonString);
+   139→  const gzipped = zlib.gzipSync(jsonString);
+   140→  fs.writeFileSync(RUNS_FILE + ".gz", gzipped);
+   141→
+   142→  // Backup complet (toutes les runs + URLs), mis à jour à chaque sync
+   143→  const backupOutput = { ...meta, runs };
+   144→  const backupString = JSON.stringify(backupOutput);
+   145→  fs.writeFileSync(RUNS_BACKUP_FILE, backupString);
+   146→  try {
+   147→    fs.writeFileSync(RUNS_BACKUP_FILE + ".gz", zlib.gzipSync(backupString));
+   148→  } catch (e) {
+   149→    console.warn("[sync] ⚠️ Impossible d'écrire runs_backup.json.gz:", e.message);
+   150→  }
+   151→
+   152→  // Archive interne (tableau brut, utilisé par loadRuns)
+   153→  try {
+   154→    fs.writeFileSync(RUNS_FULL_FILE, JSON.stringify(runs));
+   155→  } catch (e) {
+   156→    console.warn("[sync] ⚠️ Impossible d'écrire runs_full.json:", e.message);
+   157→  }
+   158→
+   159→  // ── Optimized public payload (tiny instead of 15+ MB) ──
+   160→  // Only includes: top 25 per map + 50 most recent runs
+   161→  // Uses compact array format to minimize size
+   162→  try {
+   163→    const byMap = {};
+   164→    const mapTotals = {}; // NEW: Store true count of runs per map
+   165→    runs.forEach(r => { 
+   166→      if (!byMap[r.map]) byMap[r.map] = []; 
+   167→      byMap[r.map].push(r); 
+   168→      mapTotals[r.map] = (mapTotals[r.map] || 0) + 1;
+   169→    });
+   170→    const topPerMap = [];
+   171→    Object.entries(byMap).forEach(([map, mapRuns]) => {
+   172→      mapRuns.sort((a, b) => a.duration_s - b.duration_s);
+   173→      topPerMap.push(...mapRuns.slice(0, 25));
+   174→    });
+   175→
+   176→    const allSorted = [...runs].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+   177→    const recent50 = allSorted.slice(0, 50);
+   178→
+   179→    const seen = new Set();
+   180→    const merged = [];
+   181→    [...recent50, ...topPerMap].forEach(r => {
+   182→      if (!seen.has(r.id)) { seen.add(r.id); merged.push(r); }
+   183→    });
+   184→
+   185→    // Compact format: array of arrays instead of array of objects
+   186→    // Key map: [id, player, playerId, map, duration_s, difficulty, bots, players, timestamp]
+   187→    const publicPayload = {
+   188→      t: meta.totalCount,
+   189→      u: meta.lastUpdate,
+   190→      c: meta.latestCommit,
+   191→      m: mapTotals, // NEW: Include map totals in the payload
+   192→      k: ['id', 'player', 'playerId', 'map', 'duration_s', 'difficulty', 'bots', 'players', 'timestamp'],
+   193→      r: merged.map(r => [r.id, r.player, r.playerId || '', r.map, r.duration_s, r.difficulty || '', r.bots || 0, r.players || 0, r.timestamp])
+   194→    };
+   195→
+   196→    const publicJson = JSON.stringify(publicPayload);
+   197→    const publicFile = RUNS_FILE.replace('.json', '_public.json');
+   198→    fs.writeFileSync(publicFile, publicJson);
+   199→    fs.writeFileSync(publicFile + '.gz', zlib.gzipSync(publicJson));
+   200→    console.log(`[sync] 🚀 Public payload: ${(publicJson.length / 1024).toFixed(0)} KB raw, ${(zlib.gzipSync(publicJson).length / 1024).toFixed(0)} KB gzipped (${merged.length} runs, top 25/map + 50 recent)`);
+   201→  } catch (e) {
+   202→    console.warn("[sync] ⚠️ Impossible de générer le payload public:", e.message);
+   203→  }
+   204→
+   205→  console.log(
+   206→    `[sync] 💾 ${runs.length} runs — public ${(jsonString.length / 1024 / 1024).toFixed(2)} Mo, ` +
+   207→    `backup ${(backupString.length / 1024 / 1024).toFixed(2)} Mo`
+   208→  );
+   209→}
+   210→
+   211→function loadSeen() {
+   212→  try { return new Set(JSON.parse(fs.readFileSync(SEEN_FILE, "utf8"))); }
+   213→  catch { return new Set(); }
+   214→}
+   215→function saveSeen(seen) {
+   216→  fs.writeFileSync(SEEN_FILE, JSON.stringify([...seen]));
+   217→}
+   218→function loadCheckpoints() {
+   219→  try {
+   220→    const cp = JSON.parse(fs.readFileSync(CHECKPOINT_FILE, "utf8"));
+   221→    // ── Reset check: if do-reset.ps1 set {"reset":true}, clear all sync state ──
+   222→    if (cp.reset === true) {
+   223→      console.log("[checkpoint] ⚠️ Reset detected — clearing sync state for full re-sync.");
+   224→      const cleared = { history_oldest_reached: String(Date.now()), history_saturated_windows: 0, last_sync_time: "0" };
+   225→      saveCheckpoints(cleared);
+   226→      return cleared;
+   227→    }
+   228→    return cp;
+   229→  } catch { return {}; }
+   230→}
+   231→function saveCheckpoints(cp) {
+   232→  fs.writeFileSync(CHECKPOINT_FILE, JSON.stringify(cp, null, 2));
+   233→}
+   234→
+   235→// ── Fetch avec retry et gestion 429 ──────────────────────────────────────────
+   236→async function fetchWithRetry(url, retries = 3) {
+   237→  for (let attempt = 0; attempt <= retries; attempt++) {
+   238→    const controller = new AbortController();
+   239→    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT);
+   240→    try {
+   241→      const res = await openFrontFetch(url, { signal: controller.signal });
+   242→      clearTimeout(timer);
+   243→      if (res.status === 429) {
+   244→        const wait = DELAY_429 * (attempt + 1);
+   245→        console.log(`[rate-limit] 429 — attente ${wait}ms (tentative ${attempt + 1}/${retries})`);
+   246→        await sleep(wait);
+   247→        continue;
+   248→      }
+   249→      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+   250→      return await res.json();
+   251→    } catch (e) {
+   252→      clearTimeout(timer);
+   253→      if (e.name === "AbortError") {
+   254→        if (attempt < retries) { await sleep(500); continue; }
+   255→        throw new Error("Timeout");
+   256→      }
+   257→      if (attempt === retries) throw e;
+   258→      await sleep(500 * (attempt + 1));
+   259→    }
+   260→  }
+   261→}
+   262→
+   263→// MAP_ALIASES, normalizeMap, extractSpeedrun, TIME_OFFSET_SECS are now imported from shared/
+   264→
+   265→// ── Global mode (set by --mode flag) ──────────────────────────────────────
+   266→let syncMode = "normal";
+   267→const MIN_HUMANS = () => syncMode === "compact" ? 3 : 10;
+   268→
+   269→function filterSpeedrunCandidates(games) {
+   270→  return games.filter(g =>
+   271→    g.type === "Public" &&
+   272→    (g.mode === "Free For All" || g.mode === "FFA") &&
+   273→    (g.numPlayers == null || g.numPlayers >= MIN_HUMANS())
+   274→  );
+   275→}
+   276→
+   277→/** Découpe [rangeStart, rangeEnd] en intervalles de 30 secondes */
+   278→function buildWindows30s(rangeStart, rangeEnd) {
+   279→  const windows = [];
+   280→  for (let end = rangeEnd.getTime(); end > rangeStart.getTime(); end -= WINDOW_MS) {
+   281→    const start = Math.max(end - WINDOW_MS, rangeStart.getTime());
+   282→    windows.push({ start: new Date(start), end: new Date(end) });
+   283→  }
+   284→  return windows;
+   285→}
+   286→
+   287→// ── Récupération des parties dans une fenêtre de 30s ──────────────────────────
+   288→async function fetchGamesInWindow(start, end) {
+   289→  const url =
+   290→    `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}` +
+   291→    `&${GAMES_LIST_FILTER}`;
+   292→  try {
+   293→    const data = await fetchWithRetry(url);
+   294→    if (!data) return [];
+   295→    const games = Array.isArray(data) ? data : (data.games || []);
+   296→    return filterSpeedrunCandidates(games);
+   297→  } catch (e) {
+   298→    if (e.message !== "Timeout") console.warn(`[fetch] ⚠️ ${url}: ${e.message}`);
+   299→    return [];
+   300→  }
+   301→}
+   302→
+   303→async function processOneGame(game, seen, runs, runIds) {
+   304→  const gameId = game.game;
+   305→  try {
+   306→    const raw = await fetchGameDetail(gameId);
+   307→    seen.add(gameId);
+   308→    const run = extractSpeedrun(raw, syncMode);
+   309→    if (run && !runIds.has(run.id)) {
+   310→      runs.push(run);
+   311→      runIds.add(run.id);
+   312→      const mins = Math.floor(run.duration_s / 60);
+   313→      const secs = String(run.duration_s % 60).padStart(2, "0");
+   314→      const modeLabel = syncMode === "compact" ? "compact" : "sync";
+   315→      console.log(`[${modeLabel}] ✅ ${run.player} — ${run.map} — ${mins}m${secs}s (${run.difficulty}, ${run.players}p)`);
+   316→      return 1;
+   317→    }
+   318→  } catch (e) {
+   319→    return { error: e, gameId };
+   320→  }
+   321→  return 0;
+   322→}
+   323→
+   324→// ── Traitement d'un lot de parties (parallèle si exemption) ───────────────────
+   325→async function processGames(games, seen, runs, runIds) {
+   326→  const unseen = games.filter(g => g.game && !seen.has(g.game));
+   327→  if (unseen.length === 0) return 0;
+   328→
+   329→  let newRuns = 0;
+   330→  let errors = 0;
+   331→
+   332→  console.log(
+   333→    `[sync] ${unseen.length} parties à détailler (×${DETAIL_CONCURRENCY} parallèle${HAS_EXEMPTION ? ", mode rapide" : ""})`
+   334→  );
+   335→
+   336→  for (let i = 0; i < unseen.length; i += DETAIL_CONCURRENCY) {
+   337→    const chunk = unseen.slice(i, i + DETAIL_CONCURRENCY);
+   338→    const results = await Promise.all(
+   339→      chunk.map(game => processOneGame(game, seen, runs, runIds))
+   340→    );
+   341→    for (const r of results) {
+   342→      if (typeof r === "number") newRuns += r;
+   343→      else if (r?.error) {
+   344→        errors++;
+   345→        if (errors <= 5) console.warn(`[sync] ⚠️ ${r.gameId}: ${r.error.message}`);
+   346→      }
+   347→    }
+   348→    if (BATCH_DELAY_NORMAL > 0) await sleep(BATCH_DELAY_NORMAL);
+   349→  }
+   350→
+   351→  if (errors > 5) console.log(`[sync] ... et ${errors - 5} autres erreurs`);
+   352→  return newRuns;
+   353→}
+   354→
+   355→async function fetchGameDetail(gameId) {
+   356→  return fetchWithRetry(`${API_BASE}/public/game/${gameId}?turns=false`);
+   357→}
+   358→
+   359→// ── Sync normale (dernières 3h) ───────────────────────────────────────────────
+   360→async function syncRecent() {
+   361→  console.log(`[sync] 🔄 Sync récente — ${new Date().toISOString()}`);
+   362→  const seen = loadSeen();
+   363→  const runs = loadRuns();
+   364→  const runIds = new Set(runs.map(r => r.id));
+   365→  let totalNew = 0;
+   366→
+   367→  const now = new Date();
+   368→  const cp = loadCheckpoints();
+   369→  const lastSync = cp.last_sync_time ? parseInt(cp.last_sync_time, 10) : 0;
+   370→  const agoMs = Math.max(now.getTime() - RECENT_MAX_MS, lastSync - RECENT_OVERLAP_MS);
+   371→  const ago = new Date(agoMs);
+   372→  const windowMin = Math.round((now - ago) / 60_000);
+   373→
+   374→  const windows = buildWindows30s(ago, now);
+   375→  console.log(
+   376→    `[sync] ${windows.length} fenêtres de 30s (~${windowMin} min, max 3h, filtre Public FFA ≥10p)`
+   377→  );
+   378→
+   379→  for (const { start, end } of windows) {
+   380→    const games = await fetchGamesInWindow(start, end);
+   381→    if (games.length > 0) {
+   382→      if (games.length >= WINDOW_SATURATION_THRESHOLD) {
+   383→        console.log(
+   384→          `[sync] ⚠️ Fenêtre saturée (${games.length}) ${start.toISOString().slice(11, 19)} — possible troncature`
+   385→        );
+   386→      }
+   387→      totalNew += await processGames(games, seen, runs, runIds);
+   388→    }
+   389→    if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
+   390→  }
+   391→
+   392→  if (totalNew > 0) saveRuns(runs);
+   393→  saveSeen(seen);
+   394→
+   395→  cp.last_sync_time = String(Date.now());
+   396→  saveCheckpoints(cp);
+   397→
+   398→  logApiStats("sync-recent");
+   399→  console.log(`[sync] ✅ Sync récente terminée — ${totalNew} nouveaux runs`);
+   400→  return totalNew;
+   401→}
+   402→
+   403→function countHistoryWindows(rangeStartMs, rangeEndMs) {
+   404→  return Math.max(0, Math.ceil((rangeEndMs - rangeStartMs) / WINDOW_MS));
+   405→}
+   406→
+   407→/** État de la sync (checkpoint, fenêtres, playerId, etc.) */
+   408→function printSyncStatus(cp = loadCheckpoints()) {
+   409→  const runs = loadRuns();
+   410→  const now = Date.now();
+   411→  const oldest = TARGET_DATE;
+   412→  const saved = cp.history_oldest_reached ? parseInt(cp.history_oldest_reached, 10) : now;
+   413→  const totalWindows = countHistoryWindows(oldest, now);
+   414→  const remainingWindows = countHistoryWindows(oldest, saved);
+   415→  const historyPct = totalWindows
+   416→    ? Math.round(((now - saved) / (now - oldest)) * 100)
+   417→    : 100;
+   418→  const withPlayerId = runs.filter((r) => r.playerId).length;
+   419→  const lastSync = cp.last_sync_time
+   420→    ? new Date(parseInt(cp.last_sync_time, 10)).toISOString()
+   421→    : "—";
+   422→
+   423→  let seenCount = 0;
+   424→  try {
+   425→    seenCount = JSON.parse(fs.readFileSync(SEEN_FILE, "utf8")).length;
+   426→  } catch { /* */ }
+   427→
+   428→  const historyDone = saved <= oldest + WINDOW_MS * 2;
+   429→
+   430→  console.log("\n📍 ÉTAT DE LA SYNC");
+   431→  console.log("═══════════════════════════════════════");
+   432→  console.log(`Runs en base:        ${runs.length.toLocaleString()}`);
+   433→  console.log(`Avec clientID:     ${withPlayerId.toLocaleString()} (${Math.round((withPlayerId / runs.length) * 100) || 0}%)`);
+   434→  console.log(`Parties vues (seen): ${seenCount.toLocaleString()}`);
+   435→  console.log(`Dernière sync récente: ${lastSync}`);
+   436→  console.log(`Exemption Skailex: ${HAS_EXEMPTION ? "oui" : "non"}`);
+   437→  console.log(`Fenêtre historique:  ${DEFAULT_HISTORY_WINDOWS} max / run (${HAS_EXEMPTION ? "exemption" : "sans exemption"})`);
+   438→  console.log("");
+   439→  console.log(`Cible historique:    ${new Date(oldest).toISOString().slice(0, 10)} → maintenant`);
+   440→  console.log(`Checkpoint (plus vieux traité): ${new Date(saved).toISOString()}`);
+   441→  console.log(`Fenêtres 30s totales:  ~${totalWindows.toLocaleString()}`);
+   442→  console.log(`Fenêtres restantes:    ~${remainingWindows.toLocaleString()} (recul depuis maintenant)`);
+   443→  console.log(`Avancement historique: ~${historyPct}%`);
+   444→  console.log(`Fenêtres saturées (cumul): ${cp.history_saturated_windows || 0}`);
+   445→  if (historyDone) {
+   446→    console.log("\n⚠️  Historique marqué COMPLET — des parties peuvent manquer (429 / fenêtres saturées).");
+   447→    console.log("   Pour rescanner: node sync.js reset-history  puis  node sync.js history 500");
+   448→  }
+   449→  // Show public payload size
+   450→  try {
+   451→    const publicFile = RUNS_FILE.replace('.json', '_public.json');
+   452→    const stat = fs.statSync(publicFile);
+   453→    const statGz = fs.statSync(publicFile + '.gz');
+   454→    console.log(`Payload public:       ${(stat.size / 1024).toFixed(0)} KB raw, ${(statGz.size / 1024).toFixed(0)} KB gzipped`);
+   455→  } catch { /* public payload may not exist yet */ }
+   456→
+   457→  console.log("═══════════════════════════════════════\n");
+   458→}
+   459→
+   460→// ── Sync historique avec checkpoint ──────────────────────────────────────────
+   461→async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
+   462→  const cp = loadCheckpoints();
+   463→  const oldest = TARGET_DATE;
+   464→  const now = Date.now();
+   465→
+   466→  const saved = cp.history_oldest_reached;
+   467→  const resumeFrom = saved ? Math.max(parseInt(saved) - WINDOW_MS, oldest) : now;
+   468→
+   469→  printSyncStatus(cp);
+   470→
+   471→  if (parseInt(saved) <= oldest + WINDOW_MS * 2) {
+   472→    console.log(`[history] ✅ Historique complet jusqu'au ${new Date(oldest).toISOString().slice(0, 10)}`);
+   473→    console.log("[history] Utilise reset-history puis history 500 pour rescanner les trous.");
+   474→    return 0;
+   475→  }
+   476→
+   477→  console.log(`[history] 🕐 Reprise depuis ${new Date(resumeFrom).toISOString()}`);
+   478→
+   479→  const rangeEnd = new Date(resumeFrom);
+   480→  const rangeStart = new Date(oldest);
+   481→  const windows = buildWindows30s(rangeStart, rangeEnd);
+   482→
+   483→  const toProcess = Math.min(windows.length, maxWindows);
+   484→  console.log(`[history] ${windows.length.toLocaleString()} fenêtres restantes — traitement de ${toProcess} (max ${maxWindows})`);
+   485→
+   486→  const seen = loadSeen();
+   487→  const runs = loadRuns();
+   488→  const runIds = new Set(runs.map(r => r.id));
+   489→  let totalRuns = 0;
+   490→  let oldestReached = resumeFrom;
+   491→  let saturatedWindows = 0;
+   492→
+   493→  for (let i = 0; i < toProcess; i++) {
+   494→    const { start, end } = windows[i];
+   495→    try {
+   496→      const games = await fetchGamesInWindow(start, end);
+   497→      if (games.length > 0) {
+   498→        if (games.length >= WINDOW_SATURATION_THRESHOLD) {
+   499→          saturatedWindows++;
+   500→          if (saturatedWindows <= 3) {
+   501→            console.log(
+   502→              `[history] ⚠️ Fenêtre saturée (${games.length}): ${start.toISOString().slice(0, 16)}`
+   503→            );
+   504→          }
+   505→        }
+   506→        const added = await processGames(games, seen, runs, runIds);
+   507→        totalRuns += added;
+   508→        if (added > 0) {
+   509→          console.log(`[history] +${added} runs (${start.toISOString().slice(0, 10)} ${start.toISOString().slice(11, 16)})`);
+   510→        }
+   511→      }
+   512→      oldestReached = end.getTime();
+   513→    } catch (e) {
+   514→      console.warn(`[history] ⚠️ Erreur fenêtre ${start.toISOString()}: ${e.message}`);
+   515→    }
+   516→
+   517→    if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
+   518→
+   519→    // Checkpoint périodique
+   520→    if ((i + 1) % CHECKPOINT_EVERY === 0 || i === toProcess - 1) {
+   521→      cp.history_oldest_reached = String(oldestReached);
+   522→      cp.history_saturated_windows = (cp.history_saturated_windows || 0) + saturatedWindows;
+   523→      saveCheckpoints(cp);
+   524→      saveSeen(seen);
+   525→      if (totalRuns > 0) saveRuns(runs);
+   526→
+   527→      const pct = Math.round(((now - oldestReached) / (now - oldest)) * 100);
+   528→      console.log(`[history] 💾 ${i + 1}/${toProcess} fenêtres — ${totalRuns} runs — ${pct}% de l'historique`);
+   529→    }
+   530→  }
+   531→
+   532→  // Sauvegarde finale
+   533→  if (totalRuns > 0) saveRuns(runs);
+   534→  saveSeen(seen);
+   535→
+   536→  if (saturatedWindows > 0) {
+   537→    console.log(`[history] ⚠️ ${saturatedWindows} fenêtres saturées détectées — certains runs ont peut-être été manqués`);
+   538→  }
+   539→
+   540→  if (windows.length > maxWindows) {
+   541→    console.log(`[history] ⏹️ Limite atteinte — reprendra au prochain run (reste: ${(windows.length - toProcess).toLocaleString()} fenêtres)`);
+   542→  } else {
+   543→    console.log(`[history] ✅ Historique terminé — ${totalRuns} runs insérés`);
+   544→  }
+   545→
+   546→  return totalRuns;
+   547→}
+   548→
+   549→// ── Diagnostic : vérifie les trous dans la couverture temporelle ──────────────
+   550→async function diagnose() {
+   551→  const cp = loadCheckpoints();
+   552→  const runs = loadRuns();
+   553→
+   554→  printSyncStatus(cp);
+   555→
+   556→  console.log("📊 DIAGNOSTIC DU DATASET");
+   557→  console.log("═══════════════════════════════════════");
+   558→  console.log(`Total runs: ${runs.length.toLocaleString()}`);
+   559→
+   560→  // Répartition par mois
+   561→  const byMonth = {};
+   562→  runs.forEach(r => {
+   563→    const k = r.timestamp ? r.timestamp.slice(0, 7) : "unknown";
+   564→    byMonth[k] = (byMonth[k] || 0) + 1;
+   565→  });
+   566→  console.log("\nRuns par mois:");
+   567→  Object.keys(byMonth).sort().forEach(k => {
+   568→    const bar = "█".repeat(Math.round(byMonth[k] / 200));
+   569→    console.log(`  ${k}: ${byMonth[k].toLocaleString().padStart(6)} ${bar}`);
+   570→  });
+   571→
+   572→  // Top 10 maps
+   573→  const byMap = {};
+   574→  runs.forEach(r => { byMap[r.map] = (byMap[r.map] || 0) + 1; });
+   575→  const topMaps = Object.entries(byMap).sort((a, b) => b[1] - a[1]).slice(0, 10);
+   576→  console.log("\nTop 10 maps:");
+   577→  topMaps.forEach(([map, count]) => console.log(`  ${map.padEnd(30)} ${count.toLocaleString()}`));
+   578→
+   579→  console.log("═══════════════════════════════════════\n");
+   580→}
+   581→
+   582→/** Remet le curseur historique à maintenant pour rescanner (garde runs + seen). */
+   583→function resetHistoryCheckpoint() {
+   584→  const cp = loadCheckpoints();
+   585→  cp.history_oldest_reached = String(Date.now());
+   586→  cp.history_saturated_windows = 0;
+   587→  cp.history_rescan_at = new Date().toISOString();
+   588→  saveCheckpoints(cp);
+   589→  console.log("[reset-history] ✅ Curseur remis à maintenant — les parties déjà dans seen/ seront ignorées, les manquantes seront ajoutées.");
+   590→  printSyncStatus(cp);
+   591→}
+   592→
+   593→// ── Enrich : backfill playerIds manquants ─────
+   594→async function enrichPlayerIds() {
+   595→  const runs = loadRuns();
+   596→  const missing = runs.filter(r => !r.playerId);
+   597→  console.log(`[enrich] ${missing.length} runs sans playerId sur ${runs.length} total`);
+   598→
+   599→  if (missing.length === 0) {
+   600→    console.log("[enrich] ✅ Tous les runs ont déjà un playerId");
+   601→    return;
+   602→  }
+   603→
+   604→  let fixed = 0, errors = 0;
+   605→  const ENRICH_BATCH = 250; // Nombre de runs traités par exécution
+   606→  
+   607→  const toProcess = missing.slice(0, ENRICH_BATCH);
+   608→  console.log(`[enrich] Traitement de ${toProcess.length} runs (max ${ENRICH_BATCH} par exécution)...`);
+   609→
+   610→  for (const run of toProcess) {
+   611→    try {
+   612→      const raw = await fetchWithRetry(`${API_BASE}/public/game/${run.id}?turns=false`);
+   613→      const info = raw.info || raw;
+   614→      const players = info.players || [];
+   615→      const winner = info.winner;
+   616→      if (winner && Array.isArray(winner) && winner.length >= 2) {
+   617→        const wp = players.find(p => p.clientID === winner[1]);
+   618→        if (wp && wp.clientID) {
+   619→          run.playerId = wp.clientID;
+   620→          fixed++;
+   621→        }
+   622→      }
+   623→    } catch (e) {
+   624→      errors++;
+   625→    }
+   626→    await sleep(150);
+   627→  }
+   628→
+   629→  console.log(`[enrich] ✅ ${fixed} runs enrichis, ${errors} erreurs`);
+   630→  if (missing.length > ENRICH_BATCH) {
+   631→    console.log(`[enrich] ⏳ Reste ${missing.length - ENRICH_BATCH} runs — relancer 'node sync.js enrich'`);
+   632→  }
+   633→
+   634→  saveRuns(runs);
+   635→}
+   636→
+   637→// ── Main ──────────────────────────────────────────────────────────────────────
+   638→async function fetchLatestCommit() {
+   639→  try {
+   640→    const res = await fetch("https://api.github.com/repos/openfrontio/OpenFrontIO/commits/main", {
+   641→      headers: { "Accept": "application/vnd.github.v3+json" }
+   642→    });
+   643→    if (res.ok) {
+   644→      const data = await res.json();
+   645→      return {
+   646→        sha: data.sha,
+   647→        date: data.commit.author.date,
+   648→        message: data.commit.message
+   649→      };
+   650→    }
+   651→  } catch (e) {
+   652→    console.warn("[sync] ⚠️ Impossible de récupérer le dernier commit d'OpenFrontIO:", e.message);
+   653→  }
+   654→  return null;
+   655→}
+   656→
+   657→/** Mesure le débit avant 429 — node sync.js benchmark */
+   658→async function benchmarkExemption() {
+   659→  if (!HAS_EXEMPTION) {
+   660→    console.log("[benchmark] OPENFRONT_SKAILEX_ACCESS requis");
+   661→    return;
+   662→  }
+   663→  resetApiStats();
+   664→  console.log("[benchmark] Enchaînement /public/games jusqu'aux 429…");
+   665→  const now = new Date();
+   666→  const ago = new Date(now.getTime() - 3_600_000);
+   667→  const t0 = Date.now();
+   668→  let i = 0;
+   669→  let first429 = null;
+   670→
+   671→  for (i = 0; i < 500; i++) {
+   672→    const url =
+   673→      `${API_BASE}/public/games?start=${ago.toISOString()}&end=${now.toISOString()}` +
+   674→      `&${GAMES_LIST_FILTER}&limit=50`;
+   675→    const res = await openFrontFetch(url);
+   676→    if (res.status === 429) {
+   677→      first429 = i + 1;
+   678→      const retryAfter = res.headers.get("retry-after");
+   679→      console.log(`[benchmark] Premier 429 après ${first429} requêtes (Retry-After: ${retryAfter ?? "n/a"})`);
+   680→      break;
+   681→    }
+   682→    if (!res.ok) {
+   683→      console.log(`[benchmark] HTTP ${res.status} à la requête ${i + 1}`);
+   684→      break;
+   685→    }
+   686→    await res.json();
+   687→  }
+   688→
+   689→  const sec = (Date.now() - t0) / 1000;
+   690→  logApiStats("benchmark");
+   691→  if (!first429) {
+   692→    console.log(`[benchmark] Aucun 429 sur ${i} requêtes en ${sec.toFixed(1)}s (~${(i / sec).toFixed(1)} req/s)`);
+   693→    console.log("[benchmark] Limite non atteinte — exemption probablement illimitée ou >500 req/burst");
+   694→  } else {
+   695→    console.log(`[benchmark] Débit avant limite: ~${(first429 / sec).toFixed(1)} req/s`);
+   696→  }
+   697→  console.log("[benchmark] Plafonds API fixes (exemption ou non): fenêtre 2j, 1000 jeux/requête");
+   698→}
+   699→
+   700→async function main() {
+   701→  const args = process.argv.slice(2);
+   702→
+   703→  // ── Determine sync mode from --mode flag ──────────────────────────────
+   704→  syncMode = args.includes('--mode=compact') ? 'compact' : 'normal';
+   705→  setModePaths(syncMode);
+   706→
+   707→  // Strip --mode flags from args to find the action command
+   708→  const actionArgs = args.filter(a => !a.startsWith('--mode'));
+   709→  const mode = actionArgs[0] || "full";
+   710→
+   711→  const modeLabel = syncMode === "compact" ? "COMPACT" : "Normal";
+   712→  console.log(`[sync] 🚀 Démarrage — ${modeLabel} (action: ${mode})`);
+   713→  if (process.env.OPENFRONT_SKAILEX_ACCESS) {
+   714→    console.log("[sync] 🔑 Exemption Skailex active");
+   715→  }
+   716→  currentLatestCommit = await fetchLatestCommit();
+   717→
+   718→  resetApiStats();
+   719→
+   720→  if (mode === "benchmark") {
+   721→    await benchmarkExemption();
+   722→    return;
+   723→  }
+   724→
+   725→  if (mode === "diagnose" || mode === "status") {
+   726→    if (mode === "status") printSyncStatus();
+   727→    else await diagnose();
+   728→    return;
+   729→  }
+   730→
+   731→  if (mode === "reset-history") {
+   732→    resetHistoryCheckpoint();
+   733→    return;
+   734→  }
+   735→
+   736→  if (mode === "enrich") {
+   737→    await enrichPlayerIds();
+   738→    return;
+   739→  }
+   740→
+   741→  const runs = loadRuns();
+   742→  console.log(`[sync] ${runs.length.toLocaleString()} runs existants (${syncMode})`);
+   743→
+   744→  if (mode === "full" || mode === "recent") {
+   745→    await syncRecent();
+   746→  }
+   747→
+   748→  if (mode === "history") {
+   749→    const maxW = resolveHistoryWindowLimit(actionArgs);
+   750→    await syncHistory(maxW);
+   751→    return;
+   752→  }
+   753→
+   754→  if (mode === "full") {
+   755→    await syncHistory(resolveHistoryWindowLimit(actionArgs));
+   756→  }
+   757→
+   758→  const finalRuns = loadRuns();
+   759→  const finalCount = Array.isArray(finalRuns) ? finalRuns.length : (finalRuns.totalCount || 0);
+   760→  const statsLabel = syncMode === "compact" ? "compact-total" : "sync-total";
+   761→  logApiStats(statsLabel);
+   762→  console.log(`[sync] 🏁 Terminé: ${finalCount.toLocaleString()} runs total (${syncMode})`);
+   763→}
+   764→
+   765→main().catch(e => {
+   766→  console.error("[sync] Fatal:", e);
+   767→  process.exit(1);
+   768→});
+   769→
