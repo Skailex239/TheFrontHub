@@ -9104,6 +9104,29 @@
       "numPlayers": 24,
       "timestamp": "2026-08-11T18:35:44.126Z",
       "url": "https://openfront.io/game/15VWergn"
+    },
+    {
+      "id": "hSu4F2US",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "ben",
+          "clientID": "DURnqwRG",
+          "clanTag": "MSLT"
+        },
+        {
+          "username": "DAVE",
+          "clientID": "J2HREB2y",
+          "clanTag": "MSLT"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1260,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-11T18:49:19.123Z",
+      "url": "https://openfront.io/game/hSu4F2US"
     }
   ],
   "trios": [
@@ -24072,6 +24095,34 @@
       "numPlayers": 91,
       "timestamp": "2026-08-11T18:01:24.581Z",
       "url": "https://openfront.io/game/d5gK5dtM"
+    },
+    {
+      "id": "ATZUMeHj",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Island Boi",
+          "clientID": "mZbdJfdg",
+          "clanTag": null
+        },
+        {
+          "username": "andrrecraft",
+          "clientID": "Kd7zVtoA",
+          "clanTag": "UCAL"
+        },
+        {
+          "username": "AnonShrimp3",
+          "clientID": "ZJL5Thef",
+          "clanTag": null
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 3347,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-11T18:15:09.822Z",
+      "url": "https://openfront.io/game/ATZUMeHj"
     }
   ],
   "quads": [
@@ -42814,6 +42865,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-11T18:37:35.006Z",
       "url": "https://openfront.io/game/UZkCR9qV"
+    },
+    {
+      "id": "ZPTxPkxd",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Trade King",
+          "clientID": "gZEvYKq7",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MITOCHONDRIA",
+          "clientID": "DmetoEjS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "St0rmdizzle",
+          "clientID": "9qqC2QhJ",
+          "clanTag": null
+        },
+        {
+          "username": "Friend",
+          "clientID": "e9QUhPMn",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 926,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-11T18:57:43.957Z",
+      "url": "https://openfront.io/game/ZPTxPkxd"
     }
   ]
 }
