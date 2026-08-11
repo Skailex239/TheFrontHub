@@ -22641,6 +22641,24 @@
       "numPlayers": 71,
       "timestamp": "2026-08-11T09:26:41.914Z",
       "url": "https://openfront.io/game/p1Fmf8Em"
+    },
+    {
+      "id": "1jFfuLnN",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "AnonPeacock6",
+          "clientID": "dpG7rrjR",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1059,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-11T09:45:39.504Z",
+      "url": "https://openfront.io/game/1jFfuLnN"
     }
   ],
   "quads": [
@@ -40434,6 +40452,39 @@
       "numPlayers": 68,
       "timestamp": "2026-08-11T09:18:36.945Z",
       "url": "https://openfront.io/game/cswPQNFC"
+    },
+    {
+      "id": "5xRPG39d",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "M.H.D.1st",
+          "clientID": "RXwNyQ5z",
+          "clanTag": null
+        },
+        {
+          "username": "the imperial rump state",
+          "clientID": "oJoC7tjj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield1",
+          "clientID": "rwB6ZEXf",
+          "clanTag": null
+        },
+        {
+          "username": "EEE",
+          "clientID": "QxhebKSR",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-11T09:43:13.375Z",
+      "url": "https://openfront.io/game/5xRPG39d"
     }
   ]
 }
