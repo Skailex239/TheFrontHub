@@ -1673,3 +1673,25 @@ Stage Summary:
 - The loading indicator "⚡ Chargement live des stats… (X/Y)" is KEPT (user only asked to remove the "à jour" done-state tag).
 - Verified at 3 levels: DOM (innerText), visual (screenshot + VLM), and code (git diff).
 - BLOCKER: need a GitHub PAT from the user to push commit 261702d to origin/main.
+
+---
+Task ID: 6 (UPDATE — push completed)
+Agent: main (Z.ai Code)
+Task: Push the dashboard fix commit to GitHub (continuation of Task 6).
+
+Work Log:
+- User provided GitHub PAT (ghp_...) in chat.
+- Attempted initial push → REJECTED (non-fast-forward): remote had 33 auto-sync commits ([auto] sync / sync ranked / sync teams / sync compact) that local didn't have (the GitHub Actions sync workflow runs every 5 min).
+- Analyzed divergence: local had 4 commits ahead of merge base (70f20dc), remote had 33. Local commits touch src/app/page.tsx, public/dashboard.js, src/lib/openfront.ts, worklog.md, tool-results/ — NO overlap with auto-sync data files (ranked.json, runs_public.json, teams_public.json).
+- Fetched remote main, ran `git rebase FETCH_HEAD` → SUCCESS, no conflicts (4/4 commits replayed cleanly).
+- Pushed via one-time PAT URL (token NOT stored in git config): `c4a6837..e2ff93c main -> main` ✓
+- Verified via GitHub API (authenticated):
+  - Commit 66a50a6 "fix(dashboard): remove 'Stats live à jour' status tag from header" is live on origin/main ✓
+  - Commit date: 2026-08-11T17:23:12Z
+  - Now 2nd most recent commit on main (behind only the UUID-tagged local commit e2ff93c)
+
+Stage Summary:
+- Commit 66a50a6 is LIVE on GitHub origin/main (Skailex239/TheFrontHub).
+- The "Stats live à jour" green badge is removed from both dashboards (Next.js page.tsx + static dashboard.js) — both deployed.
+- The rebase was clean (no conflicts) because dashboard UI code and auto-sync data files don't overlap.
+- REMINDER: User must revoke the exposed GitHub PAT at https://github.com/settings/tokens
