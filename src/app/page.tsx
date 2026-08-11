@@ -244,11 +244,6 @@ function Header({
             ⚡ Chargement live des stats… ({liveProgress.done}/{liveProgress.total})
           </span>
         )}
-        {liveDone && liveProgress.total > 0 && (
-          <span style={liveTagDoneStyle}>
-            ✓ Stats live à jour ({liveProgress.total} joueurs connectés)
-          </span>
-        )}
         <span style={metaTextStyle}>
           {globalCount} joueurs au classement global · {weeklyCount} actifs cette semaine
         </span>

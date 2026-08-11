@@ -443,9 +443,7 @@ function render() {
   // Indicateur de chargement live
   const liveTag = !_liveFetchDone
     ? `<span class="dash-fallback-tag">⚡ Chargement live des stats… (${_liveFetchProgress}/${_connectedPlayers.length})</span>`
-    : _connectedPlayers.length > 0
-      ? `<span class="dash-fallback-tag" style="background:rgba(34,197,94,.15);color:#22c55e">✓ Stats live (${_connectedPlayers.length} joueurs connectés)</span>`
-      : "";
+    : "";
 
   view.innerHTML = `
     ${liveTag}
