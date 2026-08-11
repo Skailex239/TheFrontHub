@@ -8861,6 +8861,52 @@
       "numPlayers": 52,
       "timestamp": "2026-08-11T15:27:52.189Z",
       "url": "https://openfront.io/game/1T1McgLd"
+    },
+    {
+      "id": "LD5Wft4n",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Electron",
+          "clientID": "s1YR8LSW",
+          "clanTag": "QZ"
+        },
+        {
+          "username": "USA",
+          "clientID": "XRJMURPj",
+          "clanTag": "QZ"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 877,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-11T15:52:56.109Z",
+      "url": "https://openfront.io/game/LD5Wft4n"
+    },
+    {
+      "id": "Ki7AV4SH",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Ladron",
+          "clientID": "364AEiWe",
+          "clanTag": "KANCL"
+        },
+        {
+          "username": "AnonMirage1",
+          "clientID": "iBGp4J9w",
+          "clanTag": "KANCL"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 1393,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-11T15:44:01.116Z",
+      "url": "https://openfront.io/game/Ki7AV4SH"
     }
   ],
   "trios": [
@@ -23497,6 +23543,29 @@
       "numPlayers": 63,
       "timestamp": "2026-08-11T15:17:22.532Z",
       "url": "https://openfront.io/game/hgBoaZoU"
+    },
+    {
+      "id": "tKgR71Ls",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Trade All Day",
+          "clientID": "QkDfVFJB",
+          "clanTag": null
+        },
+        {
+          "username": "YellowAndroid.F2tQ",
+          "clientID": "KVgcYxVm",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 616,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T15:56:04.264Z",
+      "url": "https://openfront.io/game/tKgR71Ls"
     }
   ],
   "quads": [
@@ -41921,6 +41990,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-11T15:12:06.222Z",
       "url": "https://openfront.io/game/Bj9xZq1v"
+    },
+    {
+      "id": "WuqhHJmc",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Xap",
+          "clientID": "jUresmkB",
+          "clanTag": null
+        },
+        {
+          "username": "Toast",
+          "clientID": "1FrpLh2m",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonPenguin1",
+          "clientID": "BwkW2L5N",
+          "clanTag": null
+        },
+        {
+          "username": "brayden",
+          "clientID": "udzMMWWW",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 1506,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-11T15:45:21.182Z",
+      "url": "https://openfront.io/game/WuqhHJmc"
     }
   ]
 }
