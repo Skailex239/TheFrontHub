@@ -22953,6 +22953,29 @@
       "numPlayers": 81,
       "timestamp": "2026-08-11T11:10:00.365Z",
       "url": "https://openfront.io/game/PgbTxD1P"
+    },
+    {
+      "id": "WKhe2pqS",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Iseluin",
+          "clientID": "x9U9TncP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "nightchicken",
+          "clientID": "Nxxiw1EP",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 929,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T11:37:41.018Z",
+      "url": "https://openfront.io/game/WKhe2pqS"
     }
   ],
   "quads": [
@@ -40947,6 +40970,72 @@
       "numPlayers": 28,
       "timestamp": "2026-08-11T11:11:26.450Z",
       "url": "https://openfront.io/game/KzcUU2or"
+    },
+    {
+      "id": "EtH4cYFL",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "BnonFlamingo5",
+          "clientID": "Z4BDk5nr",
+          "clanTag": null
+        },
+        {
+          "username": "Xynoxxxx",
+          "clientID": "9jEM648D",
+          "clanTag": "JOY"
+        },
+        {
+          "username": "Anon775",
+          "clientID": "qweDzM2s",
+          "clanTag": null
+        },
+        {
+          "username": "kingdom",
+          "clientID": "QUkotVex",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 609,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-11T11:36:53.457Z",
+      "url": "https://openfront.io/game/EtH4cYFL"
+    },
+    {
+      "id": "UedcWSK9",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Brisants",
+          "clientID": "NfwbL9ks",
+          "clanTag": null
+        },
+        {
+          "username": "bumbum",
+          "clientID": "sqNcjz29",
+          "clanTag": "BB"
+        },
+        {
+          "username": "AnonMango5",
+          "clientID": "JHibpFyb",
+          "clanTag": null
+        },
+        {
+          "username": "Viking empire",
+          "clientID": "rGjjbQV4",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-11T11:19:46.916Z",
+      "url": "https://openfront.io/game/UedcWSK9"
     }
   ]
 }
