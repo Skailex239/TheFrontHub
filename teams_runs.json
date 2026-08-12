@@ -25282,6 +25282,34 @@
       "numPlayers": 36,
       "timestamp": "2026-08-12T04:08:25.984Z",
       "url": "https://openfront.io/game/xwhKo4Z6"
+    },
+    {
+      "id": "rsic52sa",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonFern1",
+          "clientID": "7UHrSypt",
+          "clanTag": null
+        },
+        {
+          "username": "SEND ME TROOPS",
+          "clientID": "R3oRXBUs",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon0809999",
+          "clientID": "gsYvReGq",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 713,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-12T05:56:33.236Z",
+      "url": "https://openfront.io/game/rsic52sa"
     }
   ],
   "quads": [
@@ -45054,6 +45082,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-12T04:57:55.863Z",
       "url": "https://openfront.io/game/RLprmVqH"
+    },
+    {
+      "id": "txU3R8S4",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Failed Nation",
+          "clientID": "cjsPmKbG",
+          "clanTag": null
+        },
+        {
+          "username": "Trash devs",
+          "clientID": "sbAwXotP",
+          "clanTag": "USA"
+        },
+        {
+          "username": "Lish",
+          "clientID": "1aFW3CUW",
+          "clanTag": null
+        },
+        {
+          "username": "nostrax",
+          "clientID": "1DMDMeLZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 830,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-12T05:55:35.182Z",
+      "url": "https://openfront.io/game/txU3R8S4"
     }
   ]
 }
