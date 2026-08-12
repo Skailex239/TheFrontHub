@@ -25652,6 +25652,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-12T08:48:25.344Z",
       "url": "https://openfront.io/game/rtBB54FS"
+    },
+    {
+      "id": "8RCJHivb",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BOKACK",
+          "clientID": "6YN8dUnY",
+          "clanTag": "GOLD"
+        },
+        {
+          "username": "medium h",
+          "clientID": "JJsEx1WQ",
+          "clanTag": "GOLD"
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "GPuN3zuw",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1911,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-12T08:59:04.965Z",
+      "url": "https://openfront.io/game/8RCJHivb"
     }
   ],
   "quads": [
@@ -45574,6 +45602,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-12T08:24:13.938Z",
       "url": "https://openfront.io/game/hdpndRit"
+    },
+    {
+      "id": "Fq86KcD4",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "I WILL KILL YOU",
+          "clientID": "k56b4kVF",
+          "clanTag": "KILL"
+        },
+        {
+          "username": "Ravenna",
+          "clientID": "ZovcMbpg",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFalcon9",
+          "clientID": "TTzyVo9W",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1497,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-12T09:07:00.444Z",
+      "url": "https://openfront.io/game/Fq86KcD4"
     }
   ]
 }
