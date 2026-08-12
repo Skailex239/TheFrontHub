@@ -9887,6 +9887,29 @@
       "numPlayers": 80,
       "timestamp": "2026-08-12T13:28:50.562Z",
       "url": "https://openfront.io/game/owLye9CQ"
+    },
+    {
+      "id": "QtJ1Z8t1",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "BALLZIO",
+          "clientID": "vZiSmbnc",
+          "clanTag": "MD"
+        },
+        {
+          "username": "Boosta Rhymes",
+          "clientID": "awUH7cdd",
+          "clanTag": "MD"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1072,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-12T13:45:42.570Z",
+      "url": "https://openfront.io/game/QtJ1Z8t1"
     }
   ],
   "trios": [
@@ -46925,6 +46948,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-12T12:53:32.443Z",
       "url": "https://openfront.io/game/MMS9VG4o"
+    },
+    {
+      "id": "D6jzFzsn",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Cartylie",
+          "clientID": "R4HabpZY",
+          "clanTag": null
+        },
+        {
+          "username": "Gedeon",
+          "clientID": "JMs3SR8p",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "Krona",
+          "clientID": "86SLWjiH",
+          "clanTag": null
+        },
+        {
+          "username": "Honkan",
+          "clientID": "raHJsVqp",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 1359,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-12T13:43:41.439Z",
+      "url": "https://openfront.io/game/D6jzFzsn"
     }
   ]
 }
