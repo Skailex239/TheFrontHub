@@ -9521,6 +9521,29 @@
       "numPlayers": 26,
       "timestamp": "2026-08-12T03:26:06.533Z",
       "url": "https://openfront.io/game/Ez3ruo2g"
+    },
+    {
+      "id": "nYGckfpa",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Astro T REX",
+          "clientID": "621oYeRn",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonSugar7",
+          "clientID": "bDyfGXfS",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1381,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-12T06:24:43.884Z",
+      "url": "https://openfront.io/game/nYGckfpa"
     }
   ],
   "trios": [
@@ -25310,6 +25333,52 @@
       "numPlayers": 21,
       "timestamp": "2026-08-12T05:56:33.236Z",
       "url": "https://openfront.io/game/rsic52sa"
+    },
+    {
+      "id": "roz8MYeg",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Tulip",
+          "clientID": "XJA6kekb",
+          "clanTag": "IT"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1599,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-12T06:21:48.732Z",
+      "url": "https://openfront.io/game/roz8MYeg"
+    },
+    {
+      "id": "Qi18Erig",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "lnside",
+          "clientID": "MJuodxCR",
+          "clanTag": null
+        },
+        {
+          "username": "Anon461",
+          "clientID": "xc3Je3Z9",
+          "clanTag": null
+        },
+        {
+          "username": "Smitter",
+          "clientID": "3QZ3sRsZ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 780,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-12T06:30:54.241Z",
+      "url": "https://openfront.io/game/Qi18Erig"
     }
   ],
   "quads": [
