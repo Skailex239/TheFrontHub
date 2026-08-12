@@ -16,6 +16,8 @@ name: Auto Sync
 # ─────────────────────────────────────────────────────────────────────────────
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     # cron disabled — retrigger loop handles scheduling
