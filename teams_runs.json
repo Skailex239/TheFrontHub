@@ -9672,6 +9672,52 @@
       "numPlayers": 65,
       "timestamp": "2026-08-12T11:00:01.895Z",
       "url": "https://openfront.io/game/gFwk7twg"
+    },
+    {
+      "id": "G6eSUL3o",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Blblblblblblblblblbl",
+          "clientID": "hGHhduwP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mary Beard",
+          "clientID": "DCLrrRHn",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 1867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-12T11:28:45.552Z",
+      "url": "https://openfront.io/game/G6eSUL3o"
+    },
+    {
+      "id": "azoW8vST",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "one",
+          "clientID": "EGM6g5xZ",
+          "clanTag": "CN"
+        },
+        {
+          "username": "Elin",
+          "clientID": "86Zxoiur",
+          "clanTag": "CN"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 1494,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-12T11:31:46.707Z",
+      "url": "https://openfront.io/game/azoW8vST"
     }
   ],
   "trios": [
@@ -46338,6 +46384,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-12T11:17:37.953Z",
       "url": "https://openfront.io/game/tjVeAacp"
+    },
+    {
+      "id": "GSTSTHPW",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "AnonShark1",
+          "clientID": "MCAS4iVD",
+          "clanTag": null
+        },
+        {
+          "username": "MITOFACTORY",
+          "clientID": "ET3XLcKX",
+          "clanTag": "BEAR"
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 1460,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-12T11:26:06.406Z",
+      "url": "https://openfront.io/game/GSTSTHPW"
     }
   ]
 }
