@@ -1054,6 +1054,51 @@ document.addEventListener("click", (e) => {
 
 (async function init() {
   try {
+    // Phase 0 : Charger dashboard_scores.json.gz (pré-calculé par la sync)
+    // → rendu INSTANTANÉ, pas d'appel API live
+    let scoresLoaded = false;
+    try {
+      const res = await fetch("dashboard_scores.json.gz", { cache: "no-store" });
+      if (res.ok) {
+        const ds = new DecompressionStream("gzip");
+        const decompressed = res.body.pipeThrough(ds);
+        const scoresData = await new Response(decompressed).json();
+        if (scoresData && scoresData.players && scoresData.players.length > 0) {
+          console.log(`[dashboard] ⚡ Scores pré-calculés chargés: ${scoresData.players.length} joueurs (${scoresData.lastUpdate})`);
+
+          // Remplir _liveStats avec les scores pré-calculés pour réutiliser buildMergedViews
+          for (const p of scoresData.players) {
+            _liveStats[p.publicId] = {
+              username: p.username,
+              global: {
+                ffaCasualWins: p.ffa_casual || 0,
+                ffaRankedWins: p.ffa_ranked || 0,
+                teamCasualWins: p.team_casual || 0,
+                teamRankedWins: p.team_ranked || 0,
+              },
+              weekly: { ffaCasualWins: 0, ffaRankedWins: 0, teamCasualWins: 0, teamRankedWins: 0 },
+              elo: p.elo,
+              peak_elo: p.peak_elo,
+              fetchedAt: Date.now(),
+            };
+          }
+
+          _mergedViews = buildMergedViews();
+          mergeAndRender();
+          scoresLoaded = true;
+          _liveFetchDone = true; // pas besoin de live fetch
+        }
+      }
+    } catch (e) {
+      console.warn("[dashboard] dashboard_scores.json.gz non disponible, fallback live:", e.message);
+    }
+
+    if (scoresLoaded) {
+      console.log("[dashboard] ✅ Rendu instantané depuis scores pré-calculés");
+      return;
+    }
+
+    // Fallback : ancien système (ranked.json + live API)
     // Phase 1 : Charger ranked.json → rendu immédiat avec données classées
     await loadRankedJson();
     _mergedViews = buildMergedViews();
@@ -1063,7 +1108,6 @@ document.addEventListener("click", (e) => {
     await loadConnectedPlayers();
 
     // Phase 3 : Charger les stats live pour chaque joueur connecté
-    // (rendu progressif après chaque joueur)
     if (_connectedPlayers.length > 0) {
       loadLiveStats().then(() => {
         mergeAndRender();

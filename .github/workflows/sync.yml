@@ -18,7 +18,8 @@ name: Auto Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    # cron disabled — retrigger loop handles scheduling
+    # - cron: "*/5 * * * *"
 
 concurrency:
   group: auto-sync
@@ -176,8 +177,43 @@ jobs:
           done
           echo "committed=false" >> $GITHUB_OUTPUT
 
+  sync-dashboard:
+    needs: sync-ranked
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit-dashboard.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm init -y --silent && npm install node-fetch@2 --silent && node -e "const p=require('./package.json');p.type='module';require('fs').writeFileSync('package.json',JSON.stringify(p,null,2))"
+      - run: node sync-dashboard.js
+        env:
+          OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+      - name: Commit et push (dashboard scores)
+        id: commit-dashboard
+        run: |
+          rm -rf node_modules package.json package-lock.json 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in dashboard_scores.json dashboard_scores.json.gz; do [ -f "$f" ] && git add "$f" -f; done
+          git diff --cached --quiet && { echo "no changes dashboard"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git commit -m "[auto] sync dashboard scores"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "committed=false" >> $GITHUB_OUTPUT
+
   retrigger:
-    needs: [sync-standard, sync-compact, sync-teams, sync-ranked]
+    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard]
     runs-on: ubuntu-latest
     # ── UNCONDITIONAL self-retrigger — continuous loop 24/7 ──
     # Always re-dispatches this workflow, regardless of whether changes were
