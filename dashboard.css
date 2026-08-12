@@ -1,7 +1,9 @@
 /* ════════════════════════════════════════════════════════════════
-   Tableau de bord — Styles spécifiques (v4)
-   Minimalist mockup: two-column grid, flex rows, square orange badges.
-   v4: layout 2 panneaux (all-time | this week) côte à côte.
+   Tableau de bord — Styles spécifiques (v5 — épuré)
+   Design inspiré du mockup envoyé : liste épurée, pas de carte champion,
+   une ligne par joueur avec rang + nom + breakdown + score.
+   Touche personnelle : palette orange du site (pas de bleu), accent
+   doré sur le #1, hover orange subtil, flèche › au survol.
    ════════════════════════════════════════════════════════════════ */
 
 .dash-view {
@@ -150,78 +152,87 @@
 .dash-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 28px;
   align-items: start;
 }
 
-/* ═══ Section card ═══ */
-.dash-section {
-  background: #FFFFFF;
-  border: 1px solid #F3F4F6;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  padding: 24px;
+/* ═══ Panel (une colonne = un classement) ═══ */
+.dash-panel {
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
-.dash-section-header {
+.dash-panel-header {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 14px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--orange);
+  position: relative;
 }
-.dash-section-title {
-  font-size: 22px;
-  font-weight: 700;
+.dash-panel-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 48px;
+  height: 2px;
+  background: var(--orange-deep);
+}
+.dash-panel-title {
+  font-family: var(--mono, "JetBrains Mono", monospace);
+  font-size: 15px;
+  font-weight: 800;
   color: #111827;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
-.dash-section-meta {
-  font-size: 13px;
+.dash-panel-sub {
+  font-size: 12px;
   color: #6B7280;
   font-weight: 500;
 }
 
-/* ═══ Ranking list (scrollable flex rows) ═══ */
+/* ═══ Ranking list — scrollable, épuré ═══ */
 .dash-list {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  max-height: 580px;
+  max-height: 640px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #E5E7EB transparent;
   -webkit-overflow-scrolling: touch;
-  margin: 0 -8px;
 }
 .dash-list::-webkit-scrollbar { width: 6px; }
 .dash-list::-webkit-scrollbar-thumb {
   background: #E5E7EB;
   border-radius: 3px;
 }
-.dash-list::-webkit-scrollbar-thumb:hover { background: #D1D5DB; }
+.dash-list::-webkit-scrollbar-thumb:hover { background: var(--orange-light); }
 
 .dash-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  min-height: 56px;
-  padding: 10px 12px;
-  border-bottom: 1px solid #F3F4F6;
+  min-height: 52px;
+  padding: 10px 10px;
+  border-bottom: 1px solid #F5F5F5;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
   text-decoration: none;
   color: inherit;
+  position: relative;
   animation: dash-row-in 0.3s ease backwards;
 }
 .dash-row:last-child { border-bottom: none; }
 .dash-row:hover {
-  background: #FFF7ED;
+  background: var(--orange-pale);
+}
+.dash-row:active {
+  transform: scale(0.998);
 }
 .dash-row:nth-child(1) { animation-delay: 0.02s; }
 .dash-row:nth-child(2) { animation-delay: 0.04s; }
@@ -233,9 +244,40 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Podium (rangs 1-3) : accent gauche orange ── */
+.dash-row-podium {
+  padding-left: 14px;
+}
+.dash-row-podium::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--orange);
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+.dash-row-podium:hover::before { opacity: 1; }
+
+/* ── Rang #1 : subtil fond doré ── */
+.dash-row-gold {
+  background: linear-gradient(90deg, rgba(255, 200, 0, 0.06) 0%, transparent 60%);
+}
+.dash-row-gold::before {
+  background: linear-gradient(180deg, var(--gold), var(--orange));
+  opacity: 0.7;
+}
+.dash-row-gold:hover {
+  background: linear-gradient(90deg, rgba(255, 200, 0, 0.12) 0%, var(--orange-pale) 60%);
+}
+.dash-row-gold:hover::before { opacity: 1; }
+
 /* Rank slot (trophy for 1-3, square badge for 4+) */
 .dash-rank-slot {
-  width: 40px;
+  width: 36px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -249,60 +291,90 @@
   justify-content: center;
   width: 30px;
   height: 30px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 .dash-rank-trophy svg,
 .dash-rank-trophy i {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   display: inline-flex;
 }
 /* Couleurs par rang : or / argent / bronze */
-.dash-rank-1 { color: #D4A017; }   /* or */
-.dash-rank-2 { color: #9CA3AF; }   /* argent */
-.dash-rank-3 { color: #B45309; }   /* bronze */
+.dash-rank-1 { color: var(--gold); }       /* or */
+.dash-rank-2 { color: var(--silver); }     /* argent */
+.dash-rank-3 { color: var(--bronze); }     /* bronze */
 .dash-rank-badge {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  background: var(--orange);
-  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: var(--bg-subtle);
+  color: var(--muted);
   font-size: 13px;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-variant-numeric: tabular-nums;
+  border: 1px solid var(--border);
+  transition: all 0.15s ease;
+}
+.dash-row:hover .dash-rank-badge {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
 }
 
-/* Player name + clan tag */
+/* Player name + breakdown */
 .dash-player {
   flex: 1 1 auto;
   min-width: 0;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 2px;
 }
 .dash-player-name {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #111827;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
+  transition: color 0.15s ease;
 }
-.dash-player-clan {
-  font-size: 13px;
-  color: #6B7280;
+.dash-row:hover .dash-player-name {
+  color: var(--orange-deep);
+}
+
+/* Mini breakdown des wins : "29 ⚔ · 9 👥" en texte discret */
+.dash-player-breakdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--dim);
   font-weight: 500;
-  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+.dash-player-breakdown i,
+.dash-player-breakdown svg {
+  width: 11px;
+  height: 11px;
+  opacity: 0.6;
+  display: inline-flex;
+  vertical-align: -1px;
+  margin-left: 2px;
+}
+.dash-bd-sep {
+  color: var(--border-strong);
+  margin: 0 1px;
 }
 
 /* Score (right-aligned) */
 .dash-score {
   flex-shrink: 0;
   text-align: right;
-  min-width: 90px;
+  min-width: 80px;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
@@ -310,14 +382,39 @@
 }
 .dash-score-val {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   color: #111827;
   font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.dash-row-podium .dash-score-val {
+  color: var(--orange-deep);
+}
+.dash-row-gold .dash-score-val {
+  color: var(--orange-deep);
 }
 .dash-score-suffix {
-  font-size: 12px;
-  color: #6B7280;
+  font-size: 11px;
+  color: var(--dim);
   font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* Flèche › au survol (touche personnelle) */
+.dash-row-arrow {
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--orange);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  width: 14px;
+  text-align: center;
+}
+.dash-row:hover .dash-row-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .dash-empty {
@@ -327,147 +424,18 @@
   font-size: 14px;
 }
 
-/* ═══ "View more" button (orange, full-width, flat) ═══ */
-.dash-more-btn {
-  display: block;
-  width: 100%;
-  margin-top: 18px;
-  padding: 12px 24px;
-  background: var(--orange);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: inherit;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.18s ease, transform 0.1s ease;
-  box-shadow: 0 2px 4px rgba(255, 122, 0, 0.2);
-}
-.dash-more-btn:hover {
-  background: var(--orange-hover);
-  color: #fff;
-}
-.dash-more-btn:active {
-  transform: translateY(1px);
-}
-
-/* ═══ Champion card (left column) ═══ */
-.dash-champion {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.dash-champion-top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.dash-champion-trophy {
-  font-size: 44px;
-  line-height: 1;
-  flex-shrink: 0;
-  color: #D4A017;  /* or */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.dash-champion-trophy svg,
-.dash-champion-trophy i {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-}
-.dash-champion-meta {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.dash-champion-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: #111827;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.dash-champion-sub {
-  font-size: 13px;
-  color: #6B7280;
-  margin-top: 3px;
-}
-.dash-champion-points-wrap {
-  text-align: right;
-  flex-shrink: 0;
-}
-.dash-champion-points {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--orange);
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-.dash-champion-points-label {
-  font-size: 12px;
-  color: #6B7280;
-  margin-top: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.dash-champion-breakdown {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 18px;
-  padding: 18px 0;
-  border-top: 1px solid #F3F4F6;
-  border-bottom: 1px solid #F3F4F6;
-}
-.dash-champion-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  min-width: 0;
-}
-.dash-champion-stat-label {
-  font-size: 12px;
-  color: #6B7280;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.dash-champion-stat-val {
-  font-size: 17px;
-  font-weight: 700;
-  color: #111827;
-  font-variant-numeric: tabular-nums;
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-}
-.dash-champion-stat-pts {
-  font-size: 12px;
-  color: var(--orange);
-  font-weight: 600;
-}
-
 /* Scoring info (footer of view) */
 .dash-scoring-info {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin-top: 20px;
+  margin-top: 24px;
   padding: 12px 16px;
   border-radius: 10px;
   background: #FFF7ED;
   border: 1px solid rgba(249, 115, 22, 0.2);
   color: #4B5563;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
 }
 .dash-scoring-info strong { color: var(--orange); font-weight: 700; }
@@ -499,67 +467,27 @@
 
 /* ═══ Responsive ═══ */
 @media (max-width: 900px) {
-  .dash-grid { grid-template-columns: 1fr; }
-  .dash-list { max-height: 480px; }
+  .dash-grid { grid-template-columns: 1fr; gap: 32px; }
+  .dash-list { max-height: 520px; }
 }
 @media (max-width: 640px) {
   .dash-view { padding: 16px; }
-  .dash-section { padding: 18px; border-radius: 12px; }
-  .dash-section-title { font-size: 19px; }
-  .dash-controls-row { gap: 10px; }
-  .dash-toggle-btn { padding: 7px 14px; font-size: 13px; }
+  .dash-panel-header { padding-bottom: 10px; }
+  .dash-panel-title { font-size: 14px; }
+  .dash-panel-sub { font-size: 11px; }
 
-  .dash-champion-trophy { font-size: 36px; }
-  .dash-champion-trophy svg, .dash-champion-trophy i { width: 32px; height: 32px; }
-  .dash-champion-name { font-size: 18px; }
-  .dash-champion-points { font-size: 26px; }
-  .dash-champion-breakdown { grid-template-columns: 1fr; gap: 10px; padding: 14px 0; }
-
-  .dash-row { min-height: 50px; padding: 8px 10px; gap: 10px; }
-  .dash-rank-slot { width: 32px; }
-  .dash-rank-badge { width: 26px; height: 26px; font-size: 12px; }
-  .dash-rank-trophy { font-size: 22px; width: 26px; height: 26px; }
+  .dash-row { min-height: 48px; padding: 8px 8px; gap: 10px; }
+  .dash-rank-slot { width: 30px; }
+  .dash-rank-badge { width: 24px; height: 24px; font-size: 11px; border-radius: 6px; }
+  .dash-rank-trophy { font-size: 22px; width: 24px; height: 24px; }
   .dash-rank-trophy svg, .dash-rank-trophy i { width: 20px; height: 20px; }
-  .dash-player-name { font-size: 15px; }
-  .dash-score { min-width: 70px; }
-  .dash-score-val { font-size: 15px; }
-
-  .dash-more-btn { padding: 11px 18px; font-size: 14px; }
+  .dash-player-name { font-size: 14px; }
+  .dash-player-breakdown { font-size: 10px; }
+  .dash-player-breakdown i, .dash-player-breakdown svg { width: 10px; height: 10px; }
+  .dash-score { min-width: 64px; }
+  .dash-score-val { font-size: 14px; }
+  .dash-score-suffix { font-size: 10px; }
+  .dash-row-arrow { display: none; }
 
   .dash-footer-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
-
-/* ═══ Two-panel layout (all-time | this week) ═══ */
-.dash-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  min-width: 0;
-}
-.dash-panel-header {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #F3F4F6;
-}
-.dash-panel-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #111827;
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-.dash-panel-sub {
-  font-size: 13px;
-  color: #6B7280;
-}
-/* Les enfants directs de dash-panel (champion card + ranking section) ne doivent
-   plus avoir le padding/border de .dash-section car ils sont nested. On neutralise : */
-.dash-panel .dash-section {
-  padding: 0;
-  border: none;
-  box-shadow: none;
-}
-/* Mais on garde le padding pour le header interne de la ranking list */
-.dash-panel .dash-ranking-section .dash-section-header { margin-bottom: 12px; }

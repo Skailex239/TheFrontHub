@@ -642,8 +642,6 @@ function render() {
   globalView.forEach((p, i) => { p.rank = i + 1; });
   weeklyView.forEach((p, i) => { p.rank = i + 1; });
 
-  const globalChampion = globalView[0] ?? null;
-  const weeklyChampion = weeklyView[0] ?? null;
   const globalTopN = globalView.slice(0, 50);
   const weeklyTopN = weeklyView.slice(0, 50);
 
@@ -669,22 +667,20 @@ function render() {
           <h2 class="dash-panel-title">Top players all Time</h2>
           <span class="dash-panel-sub">Classement cumulé · ${globalView.length} joueurs</span>
         </div>
-        ${globalChampion ? renderChampion(globalChampion, false) : ""}
-        ${renderRanking(globalTopN, globalView.length, "Global")}
+        ${renderRanking(globalTopN)}
       </section>
       <section class="dash-panel">
         <div class="dash-panel-header">
           <h2 class="dash-panel-title">Top players this Week</h2>
           <span class="dash-panel-sub">Depuis le ${weekStartLabel} · ${weeklyView.length} joueurs actifs</span>
         </div>
-        ${weeklyChampion ? renderChampion(weeklyChampion, true) : ""}
-        ${renderRanking(weeklyTopN, weeklyView.length, "Cette semaine")}
+        ${renderRanking(weeklyTopN)}
       </section>
     </div>
 
     <div class="dash-scoring-info">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). Colonne gauche = cumul de toutes les parties. Colonne droite = parties des 7 derniers jours. Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
+      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). Colonne gauche = cumul de toutes les parties. Colonne droite = parties de la semaine en cours (reset auto tous les lundis à 00h00 Paris). Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
     </div>
   `;
 
@@ -698,95 +694,53 @@ function mergeAndRender() {
   render();
 }
 
-/* ── Champion card (left column) ── */
-function renderChampion(champion, isWeekly) {
-  const name = champion.username || champion.publicId;
-  const profileUrl = champion.publicId
-    ? `profile.html?pid=${encodeURIComponent(champion.publicId)}&player=${encodeURIComponent(name)}`
-    : `profile.html?player=${encodeURIComponent(name)}`;
-
-  const ffaCasualPts  = (champion.ffaCasualWins  || 0) * PTS_FFA_CASUAL;
-  const ffaRankedPts  = (champion.ffaRankedWins  || 0) * PTS_FFA_RANKED;
-  const teamCasualPts = (champion.teamCasualWins || 0) * PTS_TEAM_CASUAL;
-  const teamRankedPts = (champion.teamRankedWins || 0) * PTS_TEAM_RANKED;
-
-  return `
-    <section class="dash-section dash-champion-section">
-      <div class="dash-section-header">
-        <h2 class="dash-section-title">Top joueur</h2>
-        <span class="dash-section-meta">${isWeekly ? "Cette semaine" : "Global"}</span>
-      </div>
-      <div class="dash-champion">
-        <div class="dash-champion-top">
-          <span class="dash-champion-trophy" aria-hidden="true"><i data-icon="trophy"></i></span>
-          <div class="dash-champion-meta">
-            <div class="dash-champion-name">${escapeHtml(name)}${champion.clan ? ` <span class="dash-player-clan">[${escapeHtml(champion.clan)}]</span>` : ""}</div>
-            <div class="dash-champion-sub">Rang #1 · ${isWeekly ? "champion de la semaine" : "champion global"}</div>
-          </div>
-          <div class="dash-champion-points-wrap">
-            <div class="dash-champion-points">${formatPoints(champion.points)}</div>
-            <div class="dash-champion-points-label">points</div>
-          </div>
-        </div>
-        <div class="dash-champion-breakdown">
-          <div class="dash-champion-stat">
-            <span class="dash-champion-stat-label">FFA casual</span>
-            <span class="dash-champion-stat-val">${champion.ffaCasualWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(ffaCasualPts)}</span></span>
-          </div>
-          <div class="dash-champion-stat">
-            <span class="dash-champion-stat-label">FFA classé</span>
-            <span class="dash-champion-stat-val">${champion.ffaRankedWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(ffaRankedPts)}</span></span>
-          </div>
-          <div class="dash-champion-stat">
-            <span class="dash-champion-stat-label">Team casual</span>
-            <span class="dash-champion-stat-val">${champion.teamCasualWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(teamCasualPts)}</span></span>
-          </div>
-          <div class="dash-champion-stat">
-            <span class="dash-champion-stat-label">Team classé</span>
-            <span class="dash-champion-stat-val">${champion.teamRankedWins || 0}<span class="dash-champion-stat-pts">+${formatPoints(teamRankedPts)}</span></span>
-          </div>
-        </div>
-        <a class="dash-more-btn" href="${profileUrl}">Voir le profil</a>
-      </div>
-    </section>`;
-}
-
-/* ── Ranking list (right column, flex rows) ── */
-function renderRanking(topN, totalPlayers, modeLabel) {
+/* ── Ranking list — design épuré, une ligne par joueur ──
+ *   Pas de carte champion : la liste EST le contenu. Chaque ligne affiche
+ *   le rang (trophée 1-3 / badge orange 4+), le nom du joueur, un mini
+ *   breakdown des victoires (FFA · Team) en texte discret, et le score
+ *   total à droite. Hover = teinte orange subtile + flèche ›. */
+function renderRanking(topN) {
   const rows = topN.map((p) => {
     const name = p.username || p.publicId;
     const profileUrl = p.publicId
       ? `profile.html?pid=${encodeURIComponent(p.publicId)}&player=${encodeURIComponent(name)}`
       : `profile.html?player=${encodeURIComponent(name)}`;
-    // Icônes SVG (pas d'émojis) pour les 3 premiers : trophy / medal / medal
+
+    // Icônes SVG pour les 3 premiers : trophy (or) / medal (argent) / medal (bronze)
     const rankIcon = p.rank === 1 ? "trophy" : p.rank === 2 ? "medal" : p.rank === 3 ? "medal" : null;
     const rankSlot = rankIcon
       ? `<span class="dash-rank-trophy dash-rank-${p.rank}" aria-hidden="true"><i data-icon="${rankIcon}"></i></span>`
       : `<span class="dash-rank-badge">${p.rank}</span>`;
+
+    // Mini breakdown des wins : FFA (casual + classé) · Team (casual + classé)
+    const ffaWins = (p.ffaCasualWins || 0) + (p.ffaRankedWins || 0);
+    const teamWins = (p.teamCasualWins || 0) + (p.teamRankedWins || 0);
+    const breakdown = (ffaWins > 0 || teamWins > 0)
+      ? `<span class="dash-player-breakdown">
+           <span class="dash-bd-ffa">${ffaWins}<i data-icon="swords"></i></span>
+           <span class="dash-bd-sep">·</span>
+           <span class="dash-bd-team">${teamWins}<i data-icon="users"></i></span>
+         </span>`
+      : "";
+
     return `
-      <a class="dash-row dash-row-link" href="${profileUrl}">
+      <a class="dash-row${p.rank <= 3 ? " dash-row-podium" : ""}${p.rank === 1 ? " dash-row-gold" : ""}" href="${profileUrl}">
         <span class="dash-rank-slot">${rankSlot}</span>
         <span class="dash-player">
           <span class="dash-player-name">${escapeHtml(name)}</span>
-          ${p.clan ? `<span class="dash-player-clan">[${escapeHtml(p.clan)}]</span>` : ""}
+          ${breakdown}
         </span>
         <span class="dash-score">
           <span class="dash-score-val">${formatPoints(p.points)}</span><span class="dash-score-suffix">pts</span>
         </span>
+        <span class="dash-row-arrow" aria-hidden="true">›</span>
       </a>`;
   }).join("");
 
   return `
-    <section class="dash-section dash-ranking-section">
-      <div class="dash-section-header">
-        <h2 class="dash-section-title">Classement</h2>
-        <span class="dash-section-meta">${totalPlayers} joueurs · ${modeLabel}</span>
-      </div>
-      <div class="dash-list">
-        ${rows || `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
-      </div>
-      <a class="dash-more-btn" href="index.html?tab=ranked">Voir tout le classement</a>
-    </section>`;
+    <div class="dash-list">
+      ${rows || `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
+    </div>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
