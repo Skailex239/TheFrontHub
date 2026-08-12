@@ -74,6 +74,7 @@ function calculatePoints(stats) {
   for (const catKey of Object.keys(tree)) {
     const cat = tree[catKey];
     if (!cat || typeof cat !== "object") continue;
+    for (const modeKey of Object.keys(cat)) {
       const mode = cat[modeKey];
       if (!mode || typeof mode !== "object") continue;
       let modeWins = 0;
