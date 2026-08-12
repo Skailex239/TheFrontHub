@@ -1,5 +1,5 @@
 // sync-dashboard.js — Pré-calcule les scores du dashboard
-// Lit data/players.json, fetch les stats via API, calcule les points, sauvegarde dashboard_scores.json.gz
+// Lit data/players.json + Firebase public-aliases (Firestore REST), fetch les stats, sauvegarde dashboard_scores.json.gz
 // Usage: node sync-dashboard.js
 
 import fs from "fs";
@@ -9,6 +9,7 @@ import { API_BASE, openFrontFetch, hasExemption } from "./openfront-api.js";
 const PLAYERS_FILE = "data/players.json";
 const OUTPUT_FILE = "dashboard_scores.json";
 const CONCURRENCY = 8;
+const FIRESTORE_BASE = "https://firestore.googleapis.com/v1/projects/openfront-speedrun/databases/(default)/documents";
 
 // Barème
 const SCORE = {
@@ -30,13 +31,45 @@ async function fetchPlayerStats(publicId) {
   }
 }
 
+// Récupérer les joueurs connectés via Firebase (public-aliases)
+async function loadFirebasePlayers() {
+  try {
+    const res = await fetch(`${FIRESTORE_BASE}/public-aliases`, { cache: "no-store" });
+    if (!res.ok) {
+      console.warn(`[dashboard-sync] Firebase public-aliases: HTTP ${res.status}`);
+      return [];
+    }
+    const data = await res.json();
+    const docs = data.documents || [];
+    const players = [];
+    const seen = new Set();
+    for (const doc of docs) {
+      const fields = doc.fields || {};
+      const val = (f) => (f?.stringValue || f?.integerValue || "");
+      const publicId = val(fields.publicId);
+      if (!publicId || !/^[A-Za-z0-9]{8}$/.test(publicId) || seen.has(publicId)) continue;
+      seen.add(publicId);
+      players.push({
+        publicId,
+        name: val(fields.username) || publicId,
+        openfrontId: publicId,
+        source: "firebase",
+      });
+    }
+    console.log(`[dashboard-sync] Firebase: ${players.length} joueurs connectés`);
+    return players;
+  } catch (e) {
+    console.warn(`[dashboard-sync] Firebase error: ${e.message}`);
+    return [];
+  }
+}
+
 function calculatePoints(stats) {
-  if (!stats || !stats.stats) return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0, ranked_elo: null, peak_elo: null };
+  if (!stats || !stats.stats) return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
 
   const tree = stats.stats;
   let ffaCasualWins = 0, ffaRankedWins = 0, teamCasualWins = 0, teamRankedWins = 0;
 
-  // Parse stats tree: { Public: { "Free For All": { Easy: {wins, losses, total}, Medium: {...} }, Team: {...} }, Ranked: { "1v1": {...}, "2v2": {...} } }
   for (const catKey of Object.keys(tree)) {
     const cat = tree[catKey];
     if (!cat || typeof cat !== "object") continue;
@@ -80,41 +113,58 @@ async function main() {
   console.log("[dashboard-sync] 🚀 Démarrage");
   if (hasExemption()) console.log("[dashboard-sync] 🔑 Exemption active");
 
-  // Load players
+  // 1. Charger data/players.json (joueurs Discord)
   const playersData = JSON.parse(fs.readFileSync(PLAYERS_FILE, "utf8"));
-  const players = playersData.players || [];
-  console.log(`[dashboard-sync] ${players.length} joueurs à traiter`);
+  const discordPlayers = (playersData.players || []).map(p => ({
+    publicId: p.openfrontId || p.publicId || p.public_id || p.id,
+    name: p.name || p.username || "Unknown",
+    openfrontId: p.openfrontId || p.publicId || p.public_id || p.id,
+    source: "discord",
+  })).filter(p => p.publicId);
 
-  // Also load ranked.json for ELO
-  let ranked1v1 = [], ranked2v2 = [];
-  try {
-    const ranked = JSON.parse(fs.readFileSync("ranked.json", "utf8"));
-    ranked1v1 = ranked["1v1"] || [];
-    ranked2v2 = ranked["2v2"] || [];
-  } catch (e) { console.warn("[dashboard-sync] ranked.json introuvable"); }
+  console.log(`[dashboard-sync] data/players.json: ${discordPlayers.length} joueurs Discord`);
 
-  const rankedMap = {};
-  for (const p of [...ranked1v1, ...ranked2v2]) {
-    if (p.public_id) {
-      if (!rankedMap[p.public_id]) rankedMap[p.public_id] = {};
-      if (p.elo) rankedMap[p.public_id].elo = p.elo;
-      if (p.peakElo) rankedMap[p.public_id].peak_elo = p.peakElo;
-      if (p.username) rankedMap[p.public_id].username = p.username;
-    }
+  // 2. Charger Firebase public-aliases (joueurs connectés)
+  const firebasePlayers = await loadFirebasePlayers();
+
+  // 3. Fusionner (déduire par publicId)
+  const merged = new Map();
+  for (const p of discordPlayers) {
+    if (p.publicId && !merged.has(p.publicId)) merged.set(p.publicId, p);
+  }
+  for (const p of firebasePlayers) {
+    if (p.publicId && !merged.has(p.publicId)) merged.set(p.publicId, p);
   }
 
-  // Fetch stats for all players in parallel chunks
+  const allPlayers = [...merged.values()];
+  console.log(`[dashboard-sync] Total: ${allPlayers.length} joueurs (${discordPlayers.length} Discord + ${firebasePlayers.length} Firebase, ${allPlayers.length - discordPlayers.length} nouveaux)`);
+
+  // 4. Charger ranked.json pour ELO
+  let rankedMap = {};
+  try {
+    const ranked = JSON.parse(fs.readFileSync("ranked.json", "utf8"));
+    for (const p of [...(ranked["1v1"] || []), ...(ranked["2v2"] || [])]) {
+      if (p.public_id) {
+        if (!rankedMap[p.public_id]) rankedMap[p.public_id] = {};
+        if (p.elo) rankedMap[p.public_id].elo = p.elo;
+        if (p.peakElo) rankedMap[p.public_id].peak_elo = p.peakElo;
+        if (p.username) rankedMap[p.public_id].username = p.username;
+      }
+    }
+  } catch (e) { console.warn("[dashboard-sync] ranked.json introuvable"); }
+
+  // 5. Fetch stats for all players in parallel chunks
   const results = [];
   const chunks = [];
-  for (let i = 0; i < players.length; i += CONCURRENCY) {
-    chunks.push(players.slice(i, i + CONCURRENCY));
+  for (let i = 0; i < allPlayers.length; i += CONCURRENCY) {
+    chunks.push(allPlayers.slice(i, i + CONCURRENCY));
   }
 
   let done = 0;
   for (const chunk of chunks) {
     await Promise.all(chunk.map(async (player) => {
-      const publicId = player.openfrontId || player.publicId || player.public_id || player.id;
-      const username = player.name || player.username || rankedMap[publicId]?.username || "Unknown";
+      const publicId = player.publicId;
+      const username = player.name || rankedMap[publicId]?.username || "Unknown";
 
       if (!publicId) return;
 
@@ -135,14 +185,14 @@ async function main() {
       });
 
       done++;
-      if (done % 20 === 0) console.log(`[dashboard-sync] ${done}/${players.length} traités`);
+      if (done % 20 === 0) console.log(`[dashboard-sync] ${done}/${allPlayers.length} traités`);
     }));
   }
 
-  // Sort by points descending
+  // 6. Sort by points descending
   results.sort((a, b) => b.points - a.points);
 
-  // Save
+  // 7. Save
   const output = {
     lastUpdate: new Date().toISOString(),
     totalPlayers: results.length,
