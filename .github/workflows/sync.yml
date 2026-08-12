@@ -17,8 +17,10 @@ name: Auto Sync
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
+
 concurrency:
   group: auto-sync-v2
   cancel-in-progress: true
