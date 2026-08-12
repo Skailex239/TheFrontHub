@@ -9782,6 +9782,47 @@
       "numPlayers": 98,
       "timestamp": "2026-08-12T12:44:11.872Z",
       "url": "https://openfront.io/game/Wj1xJ7QQ"
+    },
+    {
+      "id": "VQA96UX6",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "AnonAmethyst3",
+          "clientID": "VCZZgdGN",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1782,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-12T12:46:52.050Z",
+      "url": "https://openfront.io/game/VQA96UX6"
+    },
+    {
+      "id": "BmChJxnm",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Dihland",
+          "clientID": "fHWaQh7s",
+          "clanTag": "GOON"
+        },
+        {
+          "username": "Ibrahim Traore",
+          "clientID": "1qaD9Tpk",
+          "clanTag": "GOON"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 2185,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-12T12:33:57.280Z",
+      "url": "https://openfront.io/game/BmChJxnm"
     }
   ],
   "trios": [
@@ -46703,6 +46744,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-12T12:34:52.339Z",
       "url": "https://openfront.io/game/AXjyvhT1"
+    },
+    {
+      "id": "MMS9VG4o",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonMoose8",
+          "clientID": "Uub8opcS",
+          "clanTag": null
+        },
+        {
+          "username": "schmeet me",
+          "clientID": "Hr1HwEXo",
+          "clanTag": "UN"
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "6Crx5xWA",
+          "clanTag": null
+        },
+        {
+          "username": "Anon999",
+          "clientID": "BDviFbLv",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 910,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-12T12:53:32.443Z",
+      "url": "https://openfront.io/game/MMS9VG4o"
     }
   ]
 }
