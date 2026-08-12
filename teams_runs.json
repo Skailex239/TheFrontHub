@@ -45258,6 +45258,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T06:01:20.494Z",
       "url": "https://openfront.io/game/9asq78z4"
+    },
+    {
+      "id": "2ckihsEp",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "mouton",
+          "clientID": "39hmZeoi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Tang357",
+          "clientID": "Du1zkFpj",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonCamel8",
+          "clientID": "y91EmLbN",
+          "clanTag": null
+        },
+        {
+          "username": "iSanti",
+          "clientID": "uvfXtwnt",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 1651,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-12T06:55:14.731Z",
+      "url": "https://openfront.io/game/2ckihsEp"
     }
   ]
 }
