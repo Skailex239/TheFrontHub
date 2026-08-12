@@ -24756,6 +24756,29 @@
       "numPlayers": 90,
       "timestamp": "2026-08-11T23:53:29.932Z",
       "url": "https://openfront.io/game/aom2wo5F"
+    },
+    {
+      "id": "1Yra1jbA",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "twgecko",
+          "clientID": "5Dk8keVt",
+          "clanTag": null
+        },
+        {
+          "username": "6ix7even",
+          "clientID": "Pxd4qkGw",
+          "clanTag": "67"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2678,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-11T23:51:29.817Z",
+      "url": "https://openfront.io/game/1Yra1jbA"
     }
   ],
   "quads": [
@@ -44027,6 +44050,39 @@
       "numPlayers": 56,
       "timestamp": "2026-08-11T23:56:47.099Z",
       "url": "https://openfront.io/game/PMBTu8Nk"
+    },
+    {
+      "id": "9B75sUSo",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Dayjobu",
+          "clientID": "3ndn594c",
+          "clanTag": "ARAM"
+        },
+        {
+          "username": "FeetSlay3er",
+          "clientID": "m4H7QqwE",
+          "clanTag": "ARAM"
+        },
+        {
+          "username": "Dont betray me",
+          "clientID": "K72d37oh",
+          "clanTag": null
+        },
+        {
+          "username": "bruh",
+          "clientID": "Q4qNPrp7",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 866,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-12T00:15:41.273Z",
+      "url": "https://openfront.io/game/9B75sUSo"
     }
   ]
 }
