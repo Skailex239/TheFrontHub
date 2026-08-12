@@ -25420,6 +25420,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-12T06:37:59.637Z",
       "url": "https://openfront.io/game/9EkSGfzR"
+    },
+    {
+      "id": "5pdj1xRM",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Korush",
+          "clientID": "zQ1tCMWu",
+          "clanTag": null
+        },
+        {
+          "username": "Dvusi",
+          "clientID": "9WHvwNY4",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1165,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-12T07:21:33.208Z",
+      "url": "https://openfront.io/game/5pdj1xRM"
     }
   ],
   "quads": [
@@ -45291,6 +45314,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-12T06:55:14.731Z",
       "url": "https://openfront.io/game/2ckihsEp"
+    },
+    {
+      "id": "oWsHgb3a",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonRelic1",
+          "clientID": "tR9Z9Rqo",
+          "clanTag": null
+        },
+        {
+          "username": "NotBot",
+          "clientID": "a2jKLLdY",
+          "clanTag": null
+        },
+        {
+          "username": "Leutnant Hartmut",
+          "clientID": "nSJ5xWvE",
+          "clanTag": null
+        },
+        {
+          "username": "Kingdom Wesex",
+          "clientID": "fLT2X51X",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1420,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-12T07:18:52.060Z",
+      "url": "https://openfront.io/game/oWsHgb3a"
     }
   ]
 }
