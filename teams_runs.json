@@ -47257,6 +47257,67 @@
       "numPlayers": 32,
       "timestamp": "2026-08-12T15:06:39.469Z",
       "url": "https://openfront.io/game/TXZFnwjC"
+    },
+    {
+      "id": "EGS3GmNu",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Andrea",
+          "clientID": "WY2bnnNP",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "ZKzD8pfY",
+          "clanTag": null
+        },
+        {
+          "username": "konk",
+          "clientID": "xYMbWdVq",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1295,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "timestamp": "2026-08-12T15:08:31.573Z",
+      "url": "https://openfront.io/game/EGS3GmNu"
+    },
+    {
+      "id": "amQuqP7w",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Homme des cavernes",
+          "clientID": "MRRixQp4",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "pzhUGgdt",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Coton",
+          "clientID": "5dC28yac",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Yuumi",
+          "clientID": "b51BgtR8",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 903,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 109,
+      "timestamp": "2026-08-12T15:26:50.673Z",
+      "url": "https://openfront.io/game/amQuqP7w"
     }
   ]
 }
