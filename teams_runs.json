@@ -48262,6 +48262,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-12T20:10:56.164Z",
       "url": "https://openfront.io/game/EcD2gYMC"
+    },
+    {
+      "id": "NUMZqjwC",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "WOLF",
+          "clientID": "FHvT71Nz",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "neolan",
+          "clientID": "yk63qS9L",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "RedBlack",
+          "clientID": "BbU8vGU3",
+          "clanTag": "FSM"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1339,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-12T20:16:54.538Z",
+      "url": "https://openfront.io/game/NUMZqjwC"
     }
   ]
 }
