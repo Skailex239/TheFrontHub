@@ -9406,6 +9406,29 @@
       "numPlayers": 43,
       "timestamp": "2026-08-12T01:04:29.175Z",
       "url": "https://openfront.io/game/3sa3uX4y"
+    },
+    {
+      "id": "fBqHzVn7",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Marco",
+          "clientID": "6m23ApZb",
+          "clanTag": "PAL"
+        },
+        {
+          "username": "John of St. John",
+          "clientID": "URLvEjjz",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-12T01:21:21.177Z",
+      "url": "https://openfront.io/game/fBqHzVn7"
     }
   ],
   "trios": [
@@ -24945,6 +24968,29 @@
       "numPlayers": 18,
       "timestamp": "2026-08-12T01:09:48.497Z",
       "url": "https://openfront.io/game/WkXSB2ox"
+    },
+    {
+      "id": "EzukGGh5",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "zel",
+          "clientID": "4JHshWLq",
+          "clanTag": "CAF"
+        },
+        {
+          "username": "Canadian Shield",
+          "clientID": "zhrsh4fP",
+          "clanTag": "CAF"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 983,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-12T01:29:48.684Z",
+      "url": "https://openfront.io/game/EzukGGh5"
     }
   ],
   "quads": [
@@ -44338,6 +44384,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-12T01:06:42.295Z",
       "url": "https://openfront.io/game/QDhNbAJD"
+    },
+    {
+      "id": "oMMZKnk2",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonCactus5",
+          "clientID": "e3M2HuA2",
+          "clanTag": null
+        },
+        {
+          "username": "Papal States.",
+          "clientID": "e5JbL2tb",
+          "clanTag": null
+        },
+        {
+          "username": "Milei",
+          "clientID": "rbLxw62N",
+          "clanTag": "VLLC"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1404,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 25,
+      "timestamp": "2026-08-12T01:26:06.460Z",
+      "url": "https://openfront.io/game/oMMZKnk2"
     }
   ]
 }
