@@ -9360,6 +9360,52 @@
       "numPlayers": 41,
       "timestamp": "2026-08-12T00:40:32.808Z",
       "url": "https://openfront.io/game/qMepzWoC"
+    },
+    {
+      "id": "Rqfe5F2Q",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Oil",
+          "clientID": "MDJiSVgo",
+          "clanTag": "NKTN"
+        },
+        {
+          "username": "Novac",
+          "clientID": "STGuYSKS",
+          "clanTag": "NKTN"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 770,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-12T01:12:03.640Z",
+      "url": "https://openfront.io/game/Rqfe5F2Q"
+    },
+    {
+      "id": "3sa3uX4y",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "AnonOtter6",
+          "clientID": "irpjs5cG",
+          "clanTag": null
+        },
+        {
+          "username": "xHyperz",
+          "clientID": "onrZppRF",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1069,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-12T01:04:29.175Z",
+      "url": "https://openfront.io/game/3sa3uX4y"
     }
   ],
   "trios": [
@@ -24871,6 +24917,34 @@
       "numPlayers": 78,
       "timestamp": "2026-08-12T00:49:09.302Z",
       "url": "https://openfront.io/game/wpymYEi7"
+    },
+    {
+      "id": "WkXSB2ox",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Matteotz",
+          "clientID": "nKrhFgLt",
+          "clanTag": null
+        },
+        {
+          "username": "TREE3",
+          "clientID": "7D4tcTf2",
+          "clanTag": "ENZ0"
+        },
+        {
+          "username": "korea",
+          "clientID": "wsNav2Qi",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 840,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-12T01:09:48.497Z",
+      "url": "https://openfront.io/game/WkXSB2ox"
     }
   ],
   "quads": [
@@ -44236,6 +44310,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-12T00:41:50.886Z",
       "url": "https://openfront.io/game/HCyvWjok"
+    },
+    {
+      "id": "QDhNbAJD",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Jorgen",
+          "clientID": "iDi12DgF",
+          "clanTag": "NU"
+        },
+        {
+          "username": "watermeleon11",
+          "clientID": "F4hAPZZs",
+          "clanTag": "NU"
+        },
+        {
+          "username": "tim",
+          "clientID": "DbWimcko",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-12T01:06:42.295Z",
+      "url": "https://openfront.io/game/QDhNbAJD"
     }
   ]
 }
