@@ -103,10 +103,12 @@
     { selector: '.profile-sections-grid .feed-card', cls: 'reveal', stagger: true },
     { selector: '.sidebar', cls: 'reveal-left' },
     { selector: '.content', cls: 'reveal-right' },
-    /* Dashboard — panels + rows */
+    /* Dashboard — only panels + headers. NOT .dash-row (scrollable container
+       means IntersectionObserver never fires for off-screen rows → stuck
+       at opacity:0, blocking the scroll). Rows have their own .dash-row-in
+       CSS entrance animation. */
     { selector: '.dash-panel', cls: 'reveal', stagger: true },
     { selector: '.dash-panel-header', cls: 'reveal' },
-    { selector: '.dash-row', cls: 'reveal', stagger: true, maxStagger: 12 },
     /* Tournois — cards + sections */
     { selector: '.trn-card', cls: 'reveal', stagger: true },
     { selector: '.trn-section', cls: 'reveal' },
