@@ -44868,6 +44868,57 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T03:19:40.161Z",
       "url": "https://openfront.io/game/fBU3ijmh"
+    },
+    {
+      "id": "dcmmy91i",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "nanders",
+          "clientID": "Xa6UFHy1",
+          "clanTag": null
+        },
+        {
+          "username": "Erick",
+          "clientID": "Q7oQPwgm",
+          "clanTag": null
+        },
+        {
+          "username": "firenutcheese",
+          "clientID": "SnFzPAVz",
+          "clanTag": null
+        },
+        {
+          "username": "lee jae myung",
+          "clientID": "SA2n8a1D",
+          "clanTag": "KOR"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1267,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-12T03:33:53.983Z",
+      "url": "https://openfront.io/game/dcmmy91i"
+    },
+    {
+      "id": "AGfZ643J",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Gooby",
+          "clientID": "ZE9VPvAM",
+          "clanTag": "MEXIC"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1698,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-12T03:21:56.279Z",
+      "url": "https://openfront.io/game/AGfZ643J"
     }
   ]
 }
