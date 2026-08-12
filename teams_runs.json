@@ -10202,6 +10202,24 @@
       "numPlayers": 42,
       "timestamp": "2026-08-12T19:50:47.967Z",
       "url": "https://openfront.io/game/6drUoK8q"
+    },
+    {
+      "id": "UH3gpZHb",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "AFrame",
+          "clientID": "atTCXTmU",
+          "clanTag": "JELLY"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 3371,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-12T20:28:30.203Z",
+      "url": "https://openfront.io/game/UH3gpZHb"
     }
   ],
   "trios": [
@@ -27396,6 +27414,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-12T21:02:04.139Z",
       "url": "https://openfront.io/game/gt1Wr9ix"
+    },
+    {
+      "id": "aSyszijH",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "meow",
+          "clientID": "iPVwq7ed",
+          "clanTag": "UNOB"
+        },
+        {
+          "username": "SKIBIDIX",
+          "clientID": "6SGCSp7D",
+          "clanTag": "UNOB"
+        },
+        {
+          "username": "pepazdeepa",
+          "clientID": "nhZTrLVY",
+          "clanTag": "UNOB"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1213,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "timestamp": "2026-08-12T21:04:15.261Z",
+      "url": "https://openfront.io/game/aSyszijH"
     }
   ],
   "quads": [
