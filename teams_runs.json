@@ -27003,6 +27003,34 @@
       "numPlayers": 75,
       "timestamp": "2026-08-12T17:56:54.305Z",
       "url": "https://openfront.io/game/mkRL1EMu"
+    },
+    {
+      "id": "u83JXDjz",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "At Work Working",
+          "clientID": "UvGoDpqg",
+          "clanTag": null
+        },
+        {
+          "username": "Vindler",
+          "clientID": "g64cSkG8",
+          "clanTag": "EM"
+        },
+        {
+          "username": "Erland",
+          "clientID": "QdNj6MZF",
+          "clanTag": "EM"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 808,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-12T18:40:07.821Z",
+      "url": "https://openfront.io/game/u83JXDjz"
     }
   ],
   "quads": [
@@ -47757,6 +47785,95 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T18:09:07.997Z",
       "url": "https://openfront.io/game/zom9mZWy"
+    },
+    {
+      "id": "AAd7D4Dk",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonSphinx",
+          "clientID": "Mk1d71ZX",
+          "clanTag": null
+        },
+        {
+          "username": "chamrosh",
+          "clientID": "EFpVAubM",
+          "clanTag": null
+        },
+        {
+          "username": "Hebrew",
+          "clientID": "HqWvfFUD",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 912,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-12T18:47:19.231Z",
+      "url": "https://openfront.io/game/AAd7D4Dk"
+    },
+    {
+      "id": "3J1A4P7A",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "cazi",
+          "clientID": "GchJExk6",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Hamza",
+          "clientID": "gNB5819b",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "NIKAS",
+          "clientID": "j8S8SSEo",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "DioxFrost",
+          "clientID": "2ZaPQZP4",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1047,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "timestamp": "2026-08-12T18:35:53.573Z",
+      "url": "https://openfront.io/game/3J1A4P7A"
+    },
+    {
+      "id": "pAHaKBNN",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Coll",
+          "clientID": "9vUk7RwR",
+          "clanTag": null
+        },
+        {
+          "username": "SEB",
+          "clientID": "iz8vExbm",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "New Californian Republic",
+          "clientID": "YNgeJaKL",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 913,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-12T18:44:22.060Z",
+      "url": "https://openfront.io/game/pAHaKBNN"
     }
   ]
 }
