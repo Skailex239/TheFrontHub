@@ -9475,6 +9475,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-12T02:11:06.049Z",
       "url": "https://openfront.io/game/BRi8WNHi"
+    },
+    {
+      "id": "6eQebmHf",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Milki",
+          "clientID": "bvZZXega",
+          "clanTag": "JR"
+        },
+        {
+          "username": "EyesOfRuby",
+          "clientID": "Y5KUybN1",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 937,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "timestamp": "2026-08-12T03:01:59.060Z",
+      "url": "https://openfront.io/game/6eQebmHf"
     }
   ],
   "trios": [
@@ -25116,6 +25139,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-12T02:37:59.639Z",
       "url": "https://openfront.io/game/ZarDJFdJ"
+    },
+    {
+      "id": "FQa86kum",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Stars",
+          "clientID": "qM6FtK73",
+          "clanTag": "NTU"
+        },
+        {
+          "username": "Anon345",
+          "clientID": "sphBEBMG",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1200,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-12T02:59:57.960Z",
+      "url": "https://openfront.io/game/FQa86kum"
     }
   ],
   "quads": [
