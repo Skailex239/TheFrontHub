@@ -3,6 +3,15 @@
 //   1. data/players.json (joueurs Discord)
 //   2. Firebase public-aliases (joueurs connectés via Google/Discord)
 //   3. ranked.json (top 100 1v1 + top 100 2v2 — nouveaux ranked auto-inclus)
+//
+// SEMAINE FIXE (reset automatique) :
+//   Les scores hebdo couvrent la semaine en cours, du LUNDI 00h00 (heure de
+//   Paris) au lundi suivant 00h00. Quand une nouvelle semaine commence, les
+//   points hebdo retombent à 0 automatiquement — aucun reset manuel, aucune
+//   action requise. La frontière est calculée dynamiquement à chaque exécution
+//   via getWeekStartMs(Date.now()), en fuseau Europe/Paris pour rester
+//   cohérent avec le label affiché côté navigateur ("Depuis le lundi …").
+//
 // Usage: node sync-dashboard.js
 
 import fs from "fs";
@@ -20,6 +29,56 @@ const SCORE = {
   team_casual: 5,
   team_ranked: 1,
 };
+
+// Fuseau horaire de référence pour le découpage hebdomadaire.
+// Paris = UTC+1 (CET) en hiver, UTC+2 (CEST) en été. On utilise l'API
+// Intl pour calculer la frontière exacte quelle que soit la période DST.
+const WEEK_TZ = "Europe/Paris";
+
+/**
+ * Retourne le timestamp (ms UTC) du LUNDI 00h00 (heure de Paris)
+ * de la semaine contenant `now`. Utilisé comme frontière de reset hebdo.
+ *
+ * Exemple : si now = mercredi 13 août 2026 15h00 Paris,
+ *   getWeekStartMs(now) = lundi 10 août 2026 00h00 Paris
+ *   = dimanche 9 août 2026 22h00 UTC (Paris est UTC+2 en été).
+ *
+ * Le reset est donc AUTOMATIQUE : dès que le calendrier passe à un nouveau
+ * lundi, cette fonction renvoie la nouvelle frontière et les points hebdo
+ * repartent de zéro.
+ */
+function getWeekStartMs(now) {
+  // 1. Récupère les composantes de date dans le fuseau Paris
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: WEEK_TZ,
+    year: "numeric", month: "2-digit", day: "2-digit", weekday: "short",
+  });
+  const parts = fmt.formatToParts(new Date(now));
+  const obj = {};
+  for (const p of parts) obj[p.type] = p.value;
+  const year = parseInt(obj.year, 10);
+  const month = parseInt(obj.month, 10) - 1; // 0-indexed
+  const day = parseInt(obj.day, 10);
+  const weekdayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const weekday = weekdayMap[obj.weekday];
+  if (weekday == null) return now - 7 * 24 * 60 * 60 * 1000; // fallback défensif
+
+  // 2. Recule jusqu'à lundi (même semaine calendaire Paris)
+  const diff = weekday === 0 ? -6 : 1 - weekday;
+
+  // 3. Construit un candidat "lundi 00h00 UTC" pour cette semaine
+  const candidateUtc = Date.UTC(year, month, day + diff, 0, 0, 0);
+
+  // 4. Calcule l'offset Paris (1h ou 2h selon DST) à cet instant précis,
+  //    puis corrige pour obtenir lundi 00h00 Paris exact.
+  const hourFmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: WEEK_TZ, hour: "2-digit", hour12: false,
+  });
+  let parisHour = parseInt(hourFmt.format(new Date(candidateUtc)), 10);
+  if (isNaN(parisHour)) parisHour = 0;
+  parisHour = parisHour % 24; // gère "24" pour minuit dans certains environnements
+  return candidateUtc - parisHour * 3600 * 1000;
+}
 
 async function fetchPlayerStats(publicId) {
   try {
@@ -107,10 +166,14 @@ function calculatePoints(apiResponse) {
 }
 
 
-// Fetch recent games (last 7 days) for weekly stats
+// Fetch recent games (depuis le lundi 00h00 Paris en cours) pour les stats hebdo.
+// SEMAINE FIXE : on ne compte QUE les victoires de la semaine en cours.
+// Quand une nouvelle semaine démarre (lundi 00h00 Paris), la frontière
+// avance automatiquement → les points hebdo retombent à 0 sans intervention.
 async function fetchWeeklyWins(publicId) {
   try {
-    const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    const weekStartMs = getWeekStartMs(Date.now());
+    const weekStartDate = new Date(weekStartMs);
     let cursor = null;
     let ffaCasual = 0, ffaRanked = 0, teamCasual = 0, teamRanked = 0;
     
@@ -127,7 +190,8 @@ async function fetchWeeklyWins(publicId) {
       let stop = false;
       for (const g of games) {
         const gameDate = g.start ? new Date(g.start) : null;
-        if (gameDate && gameDate < new Date(weekAgo)) { stop = true; break; }
+        // Arrêt dès qu'on croise une game antérieure au lundi 00h00 Paris
+        if (gameDate && gameDate < weekStartDate) { stop = true; break; }
         if (g.result !== 'victory') continue;
         
         const mode = g.mode || g.gameMode || '';
@@ -157,6 +221,12 @@ async function fetchWeeklyWins(publicId) {
 async function main() {
   console.log("[dashboard-sync] 🚀 Démarrage");
   if (hasExemption()) console.log("[dashboard-sync] 🔑 Exemption active");
+
+  // Frontière de la semaine en cours (lundi 00h00 Paris). Affichée pour
+  // vérifier que le reset hebdo est aligné sur le bon jour.
+  const weekStartMs = getWeekStartMs(Date.now());
+  const weekStartIso = new Date(weekStartMs).toISOString();
+  console.log(`[dashboard-sync] 📅 Semaine en cours depuis : ${new Date(weekStartMs).toLocaleString("fr-FR", { timeZone: WEEK_TZ })} (Paris) → ${weekStartIso} (UTC)`);
 
   // 1. data/players.json (Discord)
   const playersData = JSON.parse(fs.readFileSync(PLAYERS_FILE, "utf8"));
@@ -252,7 +322,12 @@ async function main() {
 
   results.sort((a, b) => b.points - a.points);
 
-  const output = { lastUpdate: new Date().toISOString(), totalPlayers: results.length, players: results };
+  const output = {
+    lastUpdate: new Date().toISOString(),
+    weekStart: weekStartIso, // lundi 00h00 Paris = frontière de reset hebdo
+    totalPlayers: results.length,
+    players: results,
+  };
   const json = JSON.stringify(output);
   fs.writeFileSync(OUTPUT_FILE, json);
   fs.writeFileSync(OUTPUT_FILE + ".gz", zlib.gzipSync(json));

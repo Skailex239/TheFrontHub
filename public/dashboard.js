@@ -88,12 +88,14 @@ let _ownershipPublicId = null;
 let _ownershipUsername = null;
 let _loginInProgress = false;
 
-// Cache key bumped to v2 : anciennes entrées v1 (calculées par pagination
-// exhaustive) sont invalidées car la nouvelle méthode (stats agrégées) donne
-// des nombres différents (plus précis, surtout pour les gros joueurs).
-const LIVE_CACHE_KEY = "dash_live_stats_v2";
+// Cache key bumped to v3 : la semaine est désormais fixe (lundi→lundi 00h00
+// Paris) au lieu d'une fenêtre flottante de 7 jours. Les entrées v2
+// contiennent des wins hebdo calculées en fenêtre flottante → à invalider.
+const LIVE_CACHE_KEY = "dash_live_stats_v3";
 const LIVE_CACHE_TTL = 30 * 60 * 1000; // 30 minutes
-const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000;
+const WEEKLY_MS = 7 * 24 * 60 * 60 * 1000; // conservé pour compat arrière
+// Fuseau horaire de référence pour le découpage hebdomadaire (reset lundi 00h00 Paris).
+const WEEK_TZ = "Europe/Paris";
 // Nombre max de pages de games à fetcher pour le calcul hebdo. Chaque page
 // = ~10 games. 50 pages = 500 games = largement plus qu'une semaine d'activité
 // même pour un joueur très actif. On s'arrête en plus dès le 1er game > 7 jours.
@@ -120,22 +122,61 @@ function formatPoints(n) {
 }
 
 /**
- * Retourne le timestamp (ms) du lundi 00:00 (heure locale navigateur)
- * de la semaine contenant `now`. Utilisé pour le label "Depuis lundi …".
+ * Retourne le timestamp (ms UTC) du LUNDI 00h00 (heure de Paris)
+ * de la semaine contenant `now`. Utilisé comme frontière de reset hebdo.
+ *
+ * SEMAINE FIXE (reset automatique) :
+ *   Les scores hebdo couvrent la semaine en cours, du lundi 00h00 (Paris)
+ *   au lundi suivant 00h00. Quand le calendrier passe à un nouveau lundi,
+ *   cette fonction renvoie la nouvelle frontière → les points hebdo
+ *   retombent à 0 automatiquement, sans aucune action manuelle.
+ *
+ * On force le fuseau Europe/Paris (au lieu de l'heure locale du navigateur)
+ * pour que tous les visiteurs voient la MÊME semaine, cohérente avec le
+ * script de pré-calcul (sync-dashboard.js) qui tourne en CI sur UTC.
  */
 function getWeekStartMs(now) {
-  const d = new Date(now);
-  d.setHours(0, 0, 0, 0);
-  // getDay(): 0=Sunday, 1=Monday... On veut lundi comme début de semaine
-  const day = d.getDay();
-  const diff = day === 0 ? -6 : 1 - day; // recule jusqu'à lundi
-  d.setDate(d.getDate() + diff);
-  return d.getTime();
+  // 1. Composantes de date dans le fuseau Paris
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: WEEK_TZ,
+    year: "numeric", month: "2-digit", day: "2-digit", weekday: "short",
+  });
+  const parts = fmt.formatToParts(new Date(now));
+  const obj = {};
+  for (const p of parts) obj[p.type] = p.value;
+  const year = parseInt(obj.year, 10);
+  const month = parseInt(obj.month, 10) - 1; // 0-indexed
+  const day = parseInt(obj.day, 10);
+  const weekdayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const weekday = weekdayMap[obj.weekday];
+  if (weekday == null) {
+    // Fallback défensif : heure locale navigateur (ancien comportement)
+    const d = new Date(now);
+    d.setHours(0, 0, 0, 0);
+    const dday = d.getDay();
+    const diff = dday === 0 ? -6 : 1 - dday;
+    d.setDate(d.getDate() + diff);
+    return d.getTime();
+  }
+  // 2. Recule jusqu'à lundi (même semaine calendaire Paris)
+  const diff = weekday === 0 ? -6 : 1 - weekday;
+  // 3. Candidat "lundi 00h00 UTC"
+  const candidateUtc = Date.UTC(year, month, day + diff, 0, 0, 0);
+  // 4. Corrige l'offset Paris (CET=+1h ou CEST=+2h selon DST) à cet instant
+  const hourFmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: WEEK_TZ, hour: "2-digit", hour12: false,
+  });
+  let parisHour = parseInt(hourFmt.format(new Date(candidateUtc)), 10);
+  if (isNaN(parisHour)) parisHour = 0;
+  parisHour = parisHour % 24; // gère "24" pour minuit dans certains env
+  return candidateUtc - parisHour * 3600 * 1000;
 }
 
-/** Formate un timestamp (ms) en date longue française (ex: "lundi 11 août 2026"). */
+/** Formate un timestamp (ms) en date longue française (ex: "lundi 11 août 2026")
+ *  dans le fuseau Europe/Paris pour rester cohérent avec getWeekStartMs. */
 function formatFrenchDate(ms) {
   return new Intl.DateTimeFormat("fr-FR", {
+    timeZone: WEEK_TZ,
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -294,15 +335,18 @@ function extractCareerWinsFromStats(stats) {
 
 /**
  * Pagine les parties récentes d'un joueur en S'ARRÊTANT dès qu'on croise
- * une game plus vieille que WEEKLY_MS (7 jours). Typiquement 2-5 pages
- * pour un joueur actif, au lieu des 300+ pages qu'il faudrait pour un
- * joueur à 3000 games si on paginait tout l'historique.
+ * une game antérieure au LUNDI 00h00 (Paris) en cours. Typiquement 2-5
+ * pages pour un joueur actif, au lieu des 300+ pages qu'il faudrait pour
+ * un joueur à 3000 games si on paginait tout l'historique.
  *
- * Retourne uniquement les games des 7 derniers jours.
+ * SEMAINE FIXE : ne retourne QUE les games de la semaine en cours
+ * (depuis le lundi 00h00 Paris). Le reset est automatique — quand une
+ * nouvelle semaine démarre, weekStartMs avance et les games de la semaine
+ * précédente ne sont plus incluses.
  */
 async function fetchWeeklyGames(publicId) {
   const weeklyGames = [];
-  const weekStartMs = Date.now() - WEEKLY_MS;
+  const weekStartMs = getWeekStartMs(Date.now());
   let cursor = null;
   for (let page = 0; page < MAX_WEEKLY_PAGES; page++) {
     let apiPath = `/public/player/${encodeURIComponent(publicId)}/games`;
@@ -378,16 +422,19 @@ function classifyGame(g) {
   return isRanked ? "ffaRanked" : "ffaCasual";
 }
 
-/** Calcule les wins globales + hebdo depuis une liste de games. */
+/** Calcule les wins globales + hebdo depuis une liste de games.
+ *  La fenêtre hebdo est la SEMAINE FIXE en cours (depuis le lundi 00h00 Paris),
+ *  pas une fenêtre flottante de 7 jours. Le reset est donc automatique. */
 function computeWinsFromGames(games) {
   const global = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
   const weekly = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
-  const now = Date.now();
+  const weekStartMs = getWeekStartMs(Date.now());
   for (const g of games) {
     if (g.result !== "victory") continue;
     const cat = classifyGame(g);
     global[cat]++;
-    if (g.start && now - new Date(g.start).getTime() < WEEKLY_MS) {
+    const t = g.start ? new Date(g.start).getTime() : 0;
+    if (t && t >= weekStartMs) {
       weekly[cat]++;
     }
   }
@@ -522,17 +569,17 @@ function buildMergedViews() {
         byPid.set(pid, e);
       }
       const g = isWeekly ? live.weekly : live.global;
-      e.ffaCasualWins = g.ffaCasual;
-      e.teamCasualWins = g.teamCasual;
+      e.ffaCasualWins = g.ffaCasualWins;
+      e.teamCasualWins = g.teamCasualWins;
       // Ranked wins :
       //   - Global : max(ranked.json career, API live) — ranked.json est plus complet
       //   - Weekly : API live uniquement (ranked.json n'a pas de breakdown hebdo)
       if (isWeekly) {
-        e.ffaRankedWins = g.ffaRanked;
-        e.teamRankedWins = g.teamRanked;
+        e.ffaRankedWins = g.ffaRankedWins;
+        e.teamRankedWins = g.teamRankedWins;
       } else {
-        e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
-        e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
+        e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRankedWins);
+        e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRankedWins);
       }
       e._hasLive = true;
       if (live.username && live.username !== pid) e.username = live.username;
@@ -604,17 +651,12 @@ function render() {
   const total = _connectedPlayers.length || 1;
   const done = _liveFetchProgress;
   const pct = Math.min(100, Math.round((done / total) * 100));
-  const liveTag = !_liveFetchDone
-    ? `<div class="dash-progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Chargement des stats live">
-        <div class="dash-progress-header">
-          <span class="dash-progress-label"><i data-icon="chart"></i> Chargement des stats live…</span>
-          <span class="dash-progress-pct">${pct}%</span>
-        </div>
-        <div class="dash-progress-track"><div class="dash-progress-fill" style="width:${pct}%"></div></div>
-      </div>`
-    : "";
+  const liveTag = "";
 
-  // Label "Depuis le lundi X …" (début de semaine en heure locale navigateur)
+  // Label "Depuis le lundi X …" — début de semaine à 00h00 (heure de Paris).
+  // Le reset est automatique : à chaque nouveau lundi, le label et les scores
+  // hebdo se réinitialisent sans aucune action manuelle (calculé côté client
+  // ET côté CI via sync-dashboard.js, même frontière Europe/Paris).
   const weekStartMs = getWeekStartMs(Date.now());
   const weekStartLabel = formatFrenchDate(weekStartMs);
 
@@ -1054,6 +1096,54 @@ document.addEventListener("click", (e) => {
 
 (async function init() {
   try {
+    // Phase 0 : Charger dashboard_scores.json.gz (pré-calculé par la sync)
+    // → rendu INSTANTANÉ, pas d'appel API live
+    let scoresLoaded = false;
+    try {
+      const res = await fetch("dashboard_scores.json.gz", { cache: "no-store" });
+      if (res.ok) {
+        const ds = new DecompressionStream("gzip");
+        const decompressed = res.body.pipeThrough(ds);
+        const scoresData = await new Response(decompressed).json();
+        if (scoresData && scoresData.players && scoresData.players.length > 0) {
+          console.log(`[dashboard] ⚡ Scores pré-calculés chargés: ${scoresData.players.length} joueurs (${scoresData.lastUpdate})`);
+
+          // Remplir _liveStats avec les scores pré-calculés pour réutiliser buildMergedViews
+          for (const p of scoresData.players) {
+            _liveStats[p.publicId] = {
+              username: p.username,
+              global: {
+                ffaCasualWins: p.ffa_casual || 0,
+                ffaRankedWins: p.ffa_ranked || 0,
+                teamCasualWins: p.team_casual || 0,
+                teamRankedWins: p.team_ranked || 0,
+              },
+              weekly: { ffaCasualWins: p.weekly_ffa_casual || 0, ffaRankedWins: p.weekly_ffa_ranked || 0, teamCasualWins: p.weekly_team_casual || 0, teamRankedWins: p.weekly_team_ranked || 0 },
+              elo: p.elo,
+              peak_elo: p.peak_elo,
+              fetchedAt: Date.now(),
+            };
+          }
+
+          // Load ranked.json for ELO display + ranked wins merge
+          await loadRankedJson();
+          _mergedViews = buildMergedViews();
+          mergeAndRender();
+          scoresLoaded = true;
+          _liveFetchDone = true;
+          _liveFetchProgress = 1; // prevent progress bar
+        }
+      }
+    } catch (e) {
+      console.warn("[dashboard] dashboard_scores.json.gz non disponible, fallback live:", e.message);
+    }
+
+    if (scoresLoaded) {
+      console.log("[dashboard] ✅ Rendu instantané depuis scores pré-calculés");
+      return;
+    }
+
+    // Fallback : ancien système (ranked.json + live API)
     // Phase 1 : Charger ranked.json → rendu immédiat avec données classées
     await loadRankedJson();
     _mergedViews = buildMergedViews();
@@ -1063,7 +1153,6 @@ document.addEventListener("click", (e) => {
     await loadConnectedPlayers();
 
     // Phase 3 : Charger les stats live pour chaque joueur connecté
-    // (rendu progressif après chaque joueur)
     if (_connectedPlayers.length > 0) {
       loadLiveStats().then(() => {
         mergeAndRender();
