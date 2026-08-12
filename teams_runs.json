@@ -47706,6 +47706,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-12T17:35:38.068Z",
       "url": "https://openfront.io/game/gecLtjgM"
+    },
+    {
+      "id": "zom9mZWy",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Name of god",
+          "clientID": "99RdYbq8",
+          "clanTag": null
+        },
+        {
+          "username": "cazi",
+          "clientID": "AQw8tX1s",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Evoked",
+          "clientID": "vPoVmWEQ",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1000,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-12T18:09:07.997Z",
+      "url": "https://openfront.io/game/zom9mZWy"
     }
   ]
 }
