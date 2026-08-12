@@ -531,8 +531,8 @@ function buildMergedViews() {
         e.ffaRankedWins = g.ffaRankedWins;
         e.teamRankedWins = g.teamRankedWins;
       } else {
-        e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
-        e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
+        e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRankedWins);
+        e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRankedWins);
       }
       e._hasLive = true;
       if (live.username && live.username !== pid) e.username = live.username;
