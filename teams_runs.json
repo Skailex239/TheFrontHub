@@ -9590,6 +9590,29 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T07:52:33.072Z",
       "url": "https://openfront.io/game/Ji7qYDhV"
+    },
+    {
+      "id": "odiJaYXq",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Camping With STEVE",
+          "clientID": "VFdeLST9",
+          "clanTag": "PTFO"
+        },
+        {
+          "username": "Anon363",
+          "clientID": "BkdEtTBH",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1651,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-12T09:11:26.721Z",
+      "url": "https://openfront.io/game/odiJaYXq"
     }
   ],
   "trios": [
@@ -25680,6 +25703,62 @@
       "numPlayers": 39,
       "timestamp": "2026-08-12T08:59:04.965Z",
       "url": "https://openfront.io/game/8RCJHivb"
+    },
+    {
+      "id": "wvhm8TCz",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "tdfriese",
+          "clientID": "kdaQQfT6",
+          "clanTag": null
+        },
+        {
+          "username": "terminator",
+          "clientID": "Fq1Fk9S2",
+          "clanTag": "CLUNY"
+        },
+        {
+          "username": "kiki",
+          "clientID": "q9CeeWHu",
+          "clanTag": "CLUNY"
+        }
+      ],
+      "map": "World",
+      "duration_s": 894,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-12T09:37:37.275Z",
+      "url": "https://openfront.io/game/wvhm8TCz"
+    },
+    {
+      "id": "GRi1ixq2",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Pona",
+          "clientID": "gnREXu9V",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Tiddys",
+          "clientID": "E2rB71DG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Smitter",
+          "clientID": "aHZfSKqK",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 1156,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-12T09:22:54.348Z",
+      "url": "https://openfront.io/game/GRi1ixq2"
     }
   ],
   "quads": [
@@ -45630,6 +45709,105 @@
       "numPlayers": 96,
       "timestamp": "2026-08-12T09:07:00.444Z",
       "url": "https://openfront.io/game/Fq86KcD4"
+    },
+    {
+      "id": "6pH9gsKq",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonThistle4",
+          "clientID": "HMrqQfL9",
+          "clanTag": null
+        },
+        {
+          "username": "Nation",
+          "clientID": "iefmu2Q6",
+          "clanTag": "JOHN"
+        },
+        {
+          "username": "AnonLighthouse6",
+          "clientID": "CwtHWpaH",
+          "clanTag": null
+        },
+        {
+          "username": "claudes plan",
+          "clientID": "rHExdY2Z",
+          "clanTag": "JOHN"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 1002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-12T09:21:57.297Z",
+      "url": "https://openfront.io/game/6pH9gsKq"
+    },
+    {
+      "id": "qnpTt68W",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "BABABA",
+          "clientID": "TF8612di",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShadow7",
+          "clientID": "ttn3z5sw",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLadybug2",
+          "clientID": "NP1r5vkp",
+          "clanTag": null
+        },
+        {
+          "username": "Ira",
+          "clientID": "1newE67R",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1592,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-12T09:15:11.955Z",
+      "url": "https://openfront.io/game/qnpTt68W"
+    },
+    {
+      "id": "8zCsp8YU",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "prengelz",
+          "clientID": "czpEVAHN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFjord6",
+          "clientID": "Z6mSeBtE",
+          "clanTag": null
+        },
+        {
+          "username": "Okinawa",
+          "clientID": "YPLCDD4F",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Arnon",
+          "clientID": "ePAFaYEq",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 974,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-12T09:35:39.163Z",
+      "url": "https://openfront.io/game/8zCsp8YU"
     }
   ]
 }
