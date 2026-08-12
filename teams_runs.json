@@ -10097,6 +10097,24 @@
       "numPlayers": 20,
       "timestamp": "2026-08-12T16:54:01.710Z",
       "url": "https://openfront.io/game/TGrRTNeY"
+    },
+    {
+      "id": "bsi9tQz2",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Peng0ins",
+          "clientID": "CkQDLMhV",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 1025,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-12T17:39:42.303Z",
+      "url": "https://openfront.io/game/bsi9tQz2"
     }
   ],
   "trios": [
@@ -26898,6 +26916,47 @@
       "numPlayers": 75,
       "timestamp": "2026-08-12T15:54:11.315Z",
       "url": "https://openfront.io/game/kJniJrfj"
+    },
+    {
+      "id": "gWp8Kxf7",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "TrashBoat",
+          "clientID": "QwsJrcT8",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1659,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-12T17:37:59.196Z",
+      "url": "https://openfront.io/game/gWp8Kxf7"
+    },
+    {
+      "id": "c3fdP5LH",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "LABUBU",
+          "clientID": "4NMVitZw",
+          "clanTag": "67"
+        },
+        {
+          "username": "Viva Milei",
+          "clientID": "1dBUkXiW",
+          "clanTag": "67"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1116,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-12T17:45:09.596Z",
+      "url": "https://openfront.io/game/c3fdP5LH"
     }
   ],
   "quads": [
@@ -47601,6 +47660,29 @@
       "numPlayers": 29,
       "timestamp": "2026-08-12T17:05:30.352Z",
       "url": "https://openfront.io/game/Fsd3jLop"
+    },
+    {
+      "id": "gecLtjgM",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Muslim",
+          "clientID": "m9xm45EA",
+          "clanTag": null
+        },
+        {
+          "username": "Anon125",
+          "clientID": "B89EM6Qx",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1619,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-12T17:35:38.068Z",
+      "url": "https://openfront.io/game/gecLtjgM"
     }
   ]
 }
