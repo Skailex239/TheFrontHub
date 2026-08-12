@@ -62,24 +62,26 @@ body::before {
 .stagger-7 { animation-delay: .35s; }
 .stagger-8 { animation-delay: .40s; }
 
-/* ── 4. Scroll Reveal ── */
+/* ── 4. Scroll Reveal ──
+   Subtle fade + slide-up. 280ms ease-out for a premium, snappy feel.
+   Revealed when element enters viewport (IntersectionObserver in animations.js). */
 .reveal {
   opacity: 0;
-  transform: translateY(30px) scale(.97);
-  transition: opacity .55s cubic-bezier(.22,.68,.36,1.05),
-              transform .55s cubic-bezier(.22,.68,.36,1.05);
+  transform: translateY(20px);
+  transition: opacity .28s cubic-bezier(.16,1,.3,1),
+              transform .28s cubic-bezier(.16,1,.3,1);
 }
 .reveal.revealed {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 /* Direction variants */
 .reveal-left {
   opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity .55s cubic-bezier(.22,.68,.36,1.05),
-              transform .55s cubic-bezier(.22,.68,.36,1.05);
+  transform: translateX(-24px);
+  transition: opacity .28s cubic-bezier(.16,1,.3,1),
+              transform .28s cubic-bezier(.16,1,.3,1);
 }
 .reveal-left.revealed {
   opacity: 1;
@@ -88,13 +90,25 @@ body::before {
 
 .reveal-right {
   opacity: 0;
-  transform: translateX(30px);
-  transition: opacity .55s cubic-bezier(.22,.68,.36,1.05),
-              transform .55s cubic-bezier(.22,.68,.36,1.05);
+  transform: translateX(24px);
+  transition: opacity .28s cubic-bezier(.16,1,.3,1),
+              transform .28s cubic-bezier(.16,1,.3,1);
 }
 .reveal-right.revealed {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Scale variant — for hero elements */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .3s cubic-bezier(.16,1,.3,1),
+              transform .3s cubic-bezier(.16,1,.3,1);
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* ── 5. Stat Cards — Enhanced 3D Hover ── */
@@ -474,8 +488,76 @@ body::before {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal, .reveal-left, .reveal-right {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* ═══ 31. Premium Micro-Interactions (v2) ═══
+   Subtle, snappy hover effects. 200-280ms ease-out for a premium feel.
+   Use .lift on any card/button for a gentle elevation on hover. */
+
+/* Generic lift — subtle translateY + shadow on hover */
+.lift {
+  transition: transform var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out) !important;
+}
+.lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow), var(--shadow-orange);
+}
+
+/* Gentle scale — for buttons, badges, icons */
+.scale-hover {
+  transition: transform var(--dur) var(--ease-out) !important;
+}
+.scale-hover:hover {
+  transform: scale(1.04);
+}
+
+/* Color shift — for links and nav items */
+.color-hover {
+  transition: color var(--dur) var(--ease-out) !important;
+}
+.color-hover:hover {
+  color: var(--orange);
+}
+
+/* Premium card — unified hover for all card-like elements
+   (replaces scattered hover rules with one consistent effect) */
+.premium-card {
+  transition: transform var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out),
+              border-color var(--dur) var(--ease-out) !important;
+}
+.premium-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--orange-glow-strong);
+}
+
+/* Focus ring — accessible + premium */
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-sm);
+}
+
+/* Smooth opacity fade for dynamic content */
+.fade-in {
+  animation: fadeIn var(--dur) var(--ease-out) forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Slide-up entrance (for JS-injected content) */
+.slide-up {
+  animation: slideUp var(--dur-slow) var(--ease-out) forwards;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
