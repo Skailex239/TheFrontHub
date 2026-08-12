@@ -735,6 +735,13 @@ function render() {
 
   // Hydrate les icônes <i data-icon>
   if (window.hydrateIcons) window.hydrateIcons(view);
+
+  // Re-init scroll reveal pour les nouveaux éléments .dash-panel / .dash-row
+  // qui viennent d'être injectés dans le DOM (animations.js tourne avant le
+  // rendu du dashboard, donc il ne les avait pas vus).
+  if (window.TFH_reveal) {
+    requestAnimationFrame(() => window.TFH_reveal());
+  }
 }
 
 /** Merge + render (utilisé après chaque fetch live pour mise à jour progressive). */

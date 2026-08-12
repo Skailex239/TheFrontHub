@@ -316,6 +316,28 @@
     if (!document.hidden) initParticles();
   }
 
+  /* ── Re-init for dynamically injected content ──
+     Call window.TFH_reveal() after injecting new elements (e.g. dashboard
+     renders its rows async after fetching scores). This re-scans for
+     .reveal elements and observes them. */
+  function reinitReveal() {
+    var reveals = document.querySelectorAll('.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed), .reveal-scale:not(.revealed)');
+    if (!reveals.length) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+    reveals.forEach(function (el) { observer.observe(el); });
+  }
+
+  // Expose globally so dashboard.js / tournois.js can call after async render
+  window.TFH_reveal = reinitReveal;
+  window.TFH_initScrollReveal = initScrollReveal;
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
