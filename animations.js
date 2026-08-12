@@ -305,11 +305,205 @@
     });
   }
 
+  /* ── 8. Lenis smooth scroll (Linear/Apple feel) ──
+     Initializes Lenis if available (loaded via lenis.js before animations.js).
+     Uses default lerp=0.1 for a buttery, premium scroll. */
+  var lenisInstance = null;
+  function initLenis() {
+    if (REDUCED_MOTION) return;
+    if (typeof window.Lenis !== 'function') return;
+
+    lenisInstance = new window.Lenis({
+      duration: 1.1,
+      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
+    });
+
+    function raf(time) {
+      lenisInstance.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Expose for anchor links
+    window.TFH_lenis = lenisInstance;
+  }
+
+  /* ── 9. Scroll progress bar (thin, top) ──
+     Creates a .scroll-progress element that grows with scroll. */
+  function initScrollProgress() {
+    if (REDUCED_MOTION) return;
+    var bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    document.body.appendChild(bar);
+
+    function update() {
+      var st = document.documentElement.scrollTop || document.body.scrollTop;
+      var sh = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+      var pct = sh > 0 ? (st / sh) * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    // Use Lenis scroll event if available, else fallback to native
+    if (lenisInstance) {
+      lenisInstance.on('scroll', update);
+    } else {
+      window.addEventListener('scroll', update, { passive: true });
+    }
+    update();
+  }
+
+  /* ── 10. Premium scroll reveal (fade + up + blur, 100ms stagger) ──
+     Auto-applies .reveal-premium to known section/card selectors.
+     Uses IntersectionObserver to add .is-visible when in viewport. */
+  var PREMIUM_REVEAL_RULES = [
+    { selector: '.hero-stats .stat-card', cls: 'reveal-premium', stagger: true, max: 8 },
+    { selector: '.feed-card', cls: 'reveal-premium', stagger: true, max: 12 },
+    { selector: '.hof-card', cls: 'reveal-premium', stagger: true, max: 8 },
+    { selector: '.chart-card', cls: 'reveal-premium', stagger: true, max: 6 },
+    { selector: '.profile-stats-grid .modal-stat', cls: 'reveal-premium', stagger: true, max: 8 },
+    { selector: '.profile-sections-grid .feed-card', cls: 'reveal-premium', stagger: true, max: 8 },
+    { selector: '.sidebar', cls: 'reveal-slide-left' },
+    { selector: '.content', cls: 'reveal-slide-right' },
+    /* Dashboard */
+    { selector: '.dash-panel', cls: 'reveal-premium', stagger: true, max: 4 },
+    { selector: '.dash-panel-header', cls: 'reveal-fade' },
+    { selector: '.dash-row', cls: 'reveal-premium', stagger: true, max: 12 },
+    /* Tournois */
+    { selector: '.trn-card', cls: 'reveal-premium', stagger: true, max: 8 },
+    { selector: '.trn-section', cls: 'reveal-premium' },
+    { selector: '.trn-hero', cls: 'reveal-scale-premium' },
+    /* Generic sections */
+    { selector: 'section', cls: 'reveal-premium', stagger: false },
+    { selector: 'main > *', cls: 'reveal-premium', stagger: true, max: 6 }
+  ];
+
+  function applyPremiumReveal() {
+    PREMIUM_REVEAL_RULES.forEach(function (rule) {
+      var els = document.querySelectorAll(rule.selector);
+      els.forEach(function (el, i) {
+        // Skip if already has any reveal class
+        if (el.classList.contains('reveal-premium') ||
+            el.classList.contains('reveal-fade') ||
+            el.classList.contains('reveal-slide-left') ||
+            el.classList.contains('reveal-slide-right') ||
+            el.classList.contains('reveal-scale-premium')) return;
+        // Skip if inside a .dash-list (rows are handled separately with stagger)
+        if (rule.selector === 'section' && el.closest('.dash-panel')) return;
+
+        el.classList.add(rule.cls);
+        if (rule.stagger) {
+          var idx = rule.max ? Math.min(i, rule.max) : i;
+          el.style.transitionDelay = (idx * 0.1) + 's'; // 100ms stagger
+        }
+      });
+    });
+  }
+
+  function initPremiumReveal() {
+    if (REDUCED_MOTION) return;
+    applyPremiumReveal();
+
+    var reveals = document.querySelectorAll(
+      '.reveal-premium:not(.is-visible), ' +
+      '.reveal-fade:not(.is-visible), ' +
+      '.reveal-slide-left:not(.is-visible), ' +
+      '.reveal-slide-right:not(.is-visible), ' +
+      '.reveal-scale-premium:not(.is-visible)'
+    );
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ── 11. Magnetic hover on buttons ──
+     Elements with .magnetic translate toward the cursor (subtle, max 6px). */
+  function initMagneticHover() {
+    if (REDUCED_MOTION) return;
+    var targets = document.querySelectorAll('.magnetic, .login-btn, .auth-btn, .dash-more-btn, .see-more-btn');
+    var MAX_PULL = 6; // px
+
+    targets.forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top - rect.height / 2;
+        var pullX = (x / rect.width) * MAX_PULL;
+        var pullY = (y / rect.height) * MAX_PULL;
+        el.style.transform = 'translate(' + pullX + 'px, ' + pullY + 'px) translateY(-2px)';
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.transform = '';
+      });
+    });
+  }
+
+  /* ── 12. Smooth page transitions ──
+     Intercept internal link clicks → fade out → navigate.
+     On page load, body gets .page-enter (fade in). */
+  function initPageTransitions() {
+    if (REDUCED_MOTION) return;
+
+    // Fade in on load — remove any stale page-exit from bfcache
+    document.body.classList.remove('page-exit');
+    document.body.classList.add('page-enter');
+
+    // Handle bfcache restore (back/forward button) — re-fade-in
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) {
+        document.body.classList.remove('page-exit');
+        document.body.classList.remove('page-enter');
+        void document.body.offsetWidth; // force reflow
+        document.body.classList.add('page-enter');
+      }
+    });
+
+    // Intercept same-origin link clicks
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+      if (link.target === '_blank') return;
+      if (link.hasAttribute('download')) return;
+
+      // Same-origin only
+      var url;
+      try { url = new URL(link.href, window.location.href); }
+      catch (err) { return; }
+      if (url.origin !== window.location.origin) return;
+
+      // Skip if it's just a hash change on the same page
+      if (url.pathname === window.location.pathname && url.hash) return;
+
+      e.preventDefault();
+      document.body.classList.add('page-exit');
+      setTimeout(function () {
+        window.location.href = link.href;
+      }, 200);
+    });
+  }
+
   /* ── Initialize Everything ── */
   function init() {
+    initPageTransitions();
+    initLenis();
+    initScrollProgress();
+    initPremiumReveal();
     initPageEntrance();
     initScrollReveal();
     initCountUp();
+    initMagneticHover();
     initRipple();
     initShimmer();
     init3DTilt();
@@ -326,17 +520,24 @@
   function reinitReveal() {
     // First, add .reveal classes to any new elements that match auto-reveal rules
     applyAutoReveal();
+    applyPremiumReveal();
 
-    var reveals = document.querySelectorAll('.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed), .reveal-scale:not(.revealed)');
+    // Re-scan both legacy and premium reveal classes
+    var reveals = document.querySelectorAll(
+      '.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed), .reveal-scale:not(.revealed), ' +
+      '.reveal-premium:not(.is-visible), .reveal-fade:not(.is-visible), .reveal-slide-left:not(.is-visible), .reveal-slide-right:not(.is-visible), .reveal-scale-premium:not(.is-visible)'
+    );
     if (!reveals.length) return;
+
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(function (el) { observer.observe(el); });
   }
 
