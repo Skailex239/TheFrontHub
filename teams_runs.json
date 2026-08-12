@@ -9631,6 +9631,29 @@
       "numPlayers": 43,
       "timestamp": "2026-08-12T10:06:00.856Z",
       "url": "https://openfront.io/game/AKEHBeWw"
+    },
+    {
+      "id": "AsXrk5fg",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "cazi",
+          "clientID": "a2B7BfAg",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "SPoS",
+          "clientID": "TndwJKft",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "World",
+      "duration_s": 671,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-12T10:45:41.063Z",
+      "url": "https://openfront.io/game/AsXrk5fg"
     }
   ],
   "trios": [
@@ -25879,6 +25902,34 @@
       "numPlayers": 78,
       "timestamp": "2026-08-12T10:29:55.190Z",
       "url": "https://openfront.io/game/sza3WhNs"
+    },
+    {
+      "id": "k4b1z3wn",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Fettmaus",
+          "clientID": "RjXL48ds",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Piotr",
+          "clientID": "x1qW5U3A",
+          "clanTag": null
+        },
+        {
+          "username": "MUTTABURRASAURUS",
+          "clientID": "LoGGJkss",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1023,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-12T10:40:02.788Z",
+      "url": "https://openfront.io/game/k4b1z3wn"
     }
   ],
   "quads": [
@@ -46017,6 +46068,39 @@
       "numPlayers": 82,
       "timestamp": "2026-08-12T09:41:57.519Z",
       "url": "https://openfront.io/game/8w3ZkPmG"
+    },
+    {
+      "id": "D3tGzZQ8",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "ayaaa0077kol",
+          "clientID": "hMqtKHxC",
+          "clanTag": null
+        },
+        {
+          "username": "ZndmoN",
+          "clientID": "mHgqRc57",
+          "clanTag": "ZNK"
+        },
+        {
+          "username": "AnonFjord6",
+          "clientID": "kFV1k3zd",
+          "clanTag": null
+        },
+        {
+          "username": "nha",
+          "clientID": "7eFoZ25X",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1368,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-12T10:34:08.446Z",
+      "url": "https://openfront.io/game/D3tGzZQ8"
     }
   ]
 }
