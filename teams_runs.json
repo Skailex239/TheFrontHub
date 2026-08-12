@@ -27031,6 +27031,24 @@
       "numPlayers": 71,
       "timestamp": "2026-08-12T18:40:07.821Z",
       "url": "https://openfront.io/game/u83JXDjz"
+    },
+    {
+      "id": "Q8NuziVK",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Train Me",
+          "clientID": "Cughbyek",
+          "clanTag": "UON"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 873,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-12T19:00:46.982Z",
+      "url": "https://openfront.io/game/Q8NuziVK"
     }
   ],
   "quads": [
@@ -47874,6 +47892,34 @@
       "numPlayers": 72,
       "timestamp": "2026-08-12T18:44:22.060Z",
       "url": "https://openfront.io/game/pAHaKBNN"
+    },
+    {
+      "id": "MidXAS9W",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "lets play",
+          "clientID": "8EtniHKV",
+          "clanTag": null
+        },
+        {
+          "username": "Deutsches Kaiserreich",
+          "clientID": "T4a7DT4b",
+          "clanTag": null
+        },
+        {
+          "username": "Troops to front",
+          "clientID": "gCWJ8GQC",
+          "clanTag": "GIVE"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2930,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-12T18:19:45.629Z",
+      "url": "https://openfront.io/game/MidXAS9W"
     }
   ]
 }
