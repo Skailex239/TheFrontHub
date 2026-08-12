@@ -45003,6 +45003,57 @@
       "numPlayers": 24,
       "timestamp": "2026-08-12T04:09:10.028Z",
       "url": "https://openfront.io/game/2JGQzYQ9"
+    },
+    {
+      "id": "92bfh17f",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "kale",
+          "clientID": "h1hFhQFL",
+          "clanTag": "ALIEN"
+        },
+        {
+          "username": "AnonJellyfish7",
+          "clientID": "zwi4tVqz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz7",
+          "clientID": "c32BmWKL",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 977,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-12T05:12:15.724Z",
+      "url": "https://openfront.io/game/92bfh17f"
+    },
+    {
+      "id": "RLprmVqH",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Nuke Party",
+          "clientID": "VRAz7sWB",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Gondor",
+          "clientID": "xkGwus6d",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1771,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-12T04:57:55.863Z",
+      "url": "https://openfront.io/game/RLprmVqH"
     }
   ]
 }
