@@ -9823,6 +9823,52 @@
       "numPlayers": 20,
       "timestamp": "2026-08-12T12:33:57.280Z",
       "url": "https://openfront.io/game/BmChJxnm"
+    },
+    {
+      "id": "PeDqhCbU",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ArmanStrike",
+          "clientID": "7Pjq3DFZ",
+          "clanTag": "AURA"
+        },
+        {
+          "username": "Uriel",
+          "clientID": "GmxynDZ2",
+          "clanTag": "AURA"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1328,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-12T13:22:06.126Z",
+      "url": "https://openfront.io/game/PeDqhCbU"
+    },
+    {
+      "id": "PRnAbSJk",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "manki",
+          "clientID": "hVaKfyKK",
+          "clanTag": null
+        },
+        {
+          "username": "ajit",
+          "clientID": "UtaAjJXB",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 925,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-12T13:19:01.951Z",
+      "url": "https://openfront.io/game/PRnAbSJk"
     }
   ],
   "trios": [
@@ -26494,6 +26540,34 @@
       "numPlayers": 73,
       "timestamp": "2026-08-12T13:04:24.085Z",
       "url": "https://openfront.io/game/3T9BHono"
+    },
+    {
+      "id": "PykFoFiH",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "VROT",
+          "clientID": "eCP5HKHi",
+          "clanTag": "PNS"
+        },
+        {
+          "username": "Pipiska",
+          "clientID": "ijirzRmc",
+          "clanTag": "PNS"
+        },
+        {
+          "username": "Im Trying my Best",
+          "clientID": "rsymydPd",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 2027,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-12T13:07:25.282Z",
+      "url": "https://openfront.io/game/PykFoFiH"
     }
   ],
   "quads": [
