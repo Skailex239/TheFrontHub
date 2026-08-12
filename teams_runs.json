@@ -10243,6 +10243,52 @@
       "numPlayers": 30,
       "timestamp": "2026-08-12T21:19:26.201Z",
       "url": "https://openfront.io/game/bR2Ka6Pz"
+    },
+    {
+      "id": "NqXJS6r6",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "feEEda",
+          "clientID": "HWzhMUid",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Magellan",
+          "clientID": "AHQ4cdxu",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1831,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-12T21:11:24.688Z",
+      "url": "https://openfront.io/game/NqXJS6r6"
+    },
+    {
+      "id": "y3pAKvYo",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Rizzi",
+          "clientID": "aTRvtxJw",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Amazon",
+          "clientID": "SR2ukTaS",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1105,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-12T21:32:28.926Z",
+      "url": "https://openfront.io/game/y3pAKvYo"
     }
   ],
   "trios": [
@@ -27521,6 +27567,57 @@
       "numPlayers": 69,
       "timestamp": "2026-08-12T21:23:56.440Z",
       "url": "https://openfront.io/game/2A7df21U"
+    },
+    {
+      "id": "vtNbaDMn",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Purofu",
+          "clientID": "aQ8f7BL4",
+          "clanTag": null
+        },
+        {
+          "username": "Anon098",
+          "clientID": "KH77w2fb",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonVanilla2",
+          "clientID": "xCAJMpmB",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1551,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-12T21:20:20.249Z",
+      "url": "https://openfront.io/game/vtNbaDMn"
+    },
+    {
+      "id": "YQtsPbrj",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "Vukojebina",
+          "clientID": "nnSt56bd",
+          "clanTag": null
+        },
+        {
+          "username": "3rd Party Reinforcements",
+          "clientID": "PwUjPwxj",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 2015,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-12T21:09:26.579Z",
+      "url": "https://openfront.io/game/YQtsPbrj"
     }
   ],
   "quads": [
