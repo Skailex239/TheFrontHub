@@ -9979,6 +9979,65 @@
       "numPlayers": 54,
       "timestamp": "2026-08-12T14:42:21.935Z",
       "url": "https://openfront.io/game/UkJrEUf3"
+    },
+    {
+      "id": "UMcq6y1o",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Hamza",
+          "clientID": "acf4Zsdo",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "cazi",
+          "clientID": "dDPtuRhU",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 858,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-12T14:55:35.815Z",
+      "url": "https://openfront.io/game/UMcq6y1o"
+    },
+    {
+      "id": "nzfdTEgf",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "doomsday",
+          "clientID": "SZAQLHfU",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1136,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-12T14:50:45.493Z",
+      "url": "https://openfront.io/game/nzfdTEgf"
+    },
+    {
+      "id": "goR3smec",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "AnonCamel7",
+          "clientID": "xkWw5ke1",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1566,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-12T14:44:23.075Z",
+      "url": "https://openfront.io/game/goR3smec"
     }
   ],
   "trios": [
@@ -47165,6 +47224,39 @@
       "numPlayers": 91,
       "timestamp": "2026-08-12T14:34:55.512Z",
       "url": "https://openfront.io/game/3cdrT8qN"
+    },
+    {
+      "id": "TXZFnwjC",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "British Empire",
+          "clientID": "ztHDZ7s7",
+          "clanTag": null
+        },
+        {
+          "username": "United States of Russia",
+          "clientID": "KtAygC7i",
+          "clanTag": "CSTO"
+        },
+        {
+          "username": "Anon977",
+          "clientID": "5M1s3oJ8",
+          "clanTag": null
+        },
+        {
+          "username": "sasanian",
+          "clientID": "tKWKhxtc",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 957,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-12T15:06:39.469Z",
+      "url": "https://openfront.io/game/TXZFnwjC"
     }
   ]
 }
