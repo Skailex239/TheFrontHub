@@ -1813,20 +1813,6 @@ if (modeParam === 'compact' && !mapSizeParam) {
 updateCurrentMode();
 updateSubtitle();
 
-// Rediriger la racine (/ sans query ni hash) vers le tableau de bord.
-// Les liens internes utilisent index.html?tab=... ou #map=X, donc ils
-// ne sont pas affectés. Permet au site d'arriver sur le dashboard par défaut.
-(function redirectToDashboardByDefault() {
-  if (window.location.search || window.location.hash) return;
-  // Vérifier qu'on est bien à la racine (pas un sous-chemin)
-  const path = window.location.pathname.replace(/\/+$/, '');
-  const isRoot = path === '' || path === '/' || path.endsWith('/index.html');
-  if (isRoot) {
-    window.location.replace('dashboard.html');
-    return;
-  }
-})();
-
 redirectToProfileIfRequested();
 loadData().then(()=>{
   loadVipPlayers(); // Charger les joueurs VIP en parallèle

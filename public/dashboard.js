@@ -799,7 +799,7 @@ function renderRanking(topN) {
   }).join("");
 
   return `
-    <div class="dash-list">
+    <div class="dash-list" data-lenis-prevent>
       ${rows || `<p class="dash-empty">Aucun joueur classé pour le moment.</p>`}
     </div>`;
 }
