@@ -10330,6 +10330,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-12T21:49:36.937Z",
       "url": "https://openfront.io/game/N9LeR78H"
+    },
+    {
+      "id": "qEpR3uEh",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Stumponia",
+          "clientID": "fnQSZZUW",
+          "clanTag": "6767"
+        },
+        {
+          "username": "AnonSkunk3",
+          "clientID": "YLGfrSTw",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 1225,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 26,
+      "timestamp": "2026-08-12T23:16:58.810Z",
+      "url": "https://openfront.io/game/qEpR3uEh"
     }
   ],
   "trios": [
@@ -48790,6 +48813,39 @@
       "numPlayers": 79,
       "timestamp": "2026-08-12T21:53:30.148Z",
       "url": "https://openfront.io/game/e3VWfQV1"
+    },
+    {
+      "id": "JfiZsu6a",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "judom",
+          "clientID": "4J3dkse5",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "aquarium de judom",
+          "clientID": "jekUC2Pv",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Kanuke",
+          "clientID": "kXR59avm",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "ja couille",
+          "clientID": "E8adcdNE",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1041,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-12T23:14:12.645Z",
+      "url": "https://openfront.io/game/JfiZsu6a"
     }
   ]
 }
