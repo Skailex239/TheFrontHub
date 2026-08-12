@@ -10179,6 +10179,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-12T18:57:41.802Z",
       "url": "https://openfront.io/game/GBwKXzgq"
+    },
+    {
+      "id": "6drUoK8q",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "StrikingSpliff",
+          "clientID": "Q1x5oARH",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Lonely_Millennial",
+          "clientID": "NkUC4P41",
+          "clanTag": "ROYS"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1201,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "timestamp": "2026-08-12T19:50:47.967Z",
+      "url": "https://openfront.io/game/6drUoK8q"
     }
   ],
   "trios": [
@@ -27220,6 +27243,24 @@
       "numPlayers": 39,
       "timestamp": "2026-08-12T19:46:16.716Z",
       "url": "https://openfront.io/game/tkCzhevC"
+    },
+    {
+      "id": "fgRgrQBC",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "JKM Krul",
+          "clientID": "L23JFa2n",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1112,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-12T20:00:49.543Z",
+      "url": "https://openfront.io/game/fgRgrQBC"
     }
   ],
   "quads": [
@@ -48124,6 +48165,29 @@
       "numPlayers": 80,
       "timestamp": "2026-08-12T19:47:29.805Z",
       "url": "https://openfront.io/game/ZLZBtdhw"
+    },
+    {
+      "id": "cm15Aacu",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "AnonTimber5",
+          "clientID": "sMx6u21J",
+          "clanTag": null
+        },
+        {
+          "username": "SKYNET SECRUITY",
+          "clientID": "29rRkTfB",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1294,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-12T19:55:35.258Z",
+      "url": "https://openfront.io/game/cm15Aacu"
     }
   ]
 }
