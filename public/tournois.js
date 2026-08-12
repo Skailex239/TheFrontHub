@@ -152,6 +152,9 @@ async function router() {
 
   // Rendu
   try {
+    // Restaurer le header bar (caché sur la home pour le hero pleine largeur)
+    const headerEl = document.getElementById("tournois-page-head");
+    if (headerEl) headerEl.style.display = "";
     switch (route) {
       case "dashboard": await renderDashboard(); break;
       case "ranking": await renderRanking(); break;
@@ -343,173 +346,119 @@ async function renderHome() {
 
   // Dernier vainqueur
   let latestWinnerName = "—";
+  let latestWinnerId = "";
+  let latestDate = "—";
   if (latestTournament) {
+    latestDate = formatDateShort(latestTournament.date);
     for (const phase of latestTournament.phases) {
       if (!isFinalPhase(_data.scoring, latestTournament, phase.type)) continue;
       const win = phase.placements.find((p) => p.place === 1);
       if (win) {
         latestWinnerName = getPlayer(_data.players, win.player)?.name || win.player;
+        latestWinnerId = win.player;
         break;
       }
     }
   }
 
-  // Top 5 pour le mini-classement
-  const top5 = lb.slice(0, 5);
-  const podium = lb.slice(0, 3);
-
-  // Total points distribués
-  const totalPoints = lb.reduce((s, e) => s + e.points, 0);
-
-  // Derniers résultats (top 3 du dernier tournoi)
-  let recentResultsHtml = "";
-  if (latestTournament) {
-    const finalPhase = latestTournament.phases.find((p) =>
-      isFinalPhase(_data.scoring, latestTournament, p.type)
-    );
-    if (finalPhase) {
-      const top3 = [...finalPhase.placements]
-        .filter((p) => p.place != null)
-        .sort((a, b) => a.place - b.place)
-        .slice(0, 3);
-      recentResultsHtml = top3.map((p) => {
-        const name = getPlayer(_data.players, p.player)?.name || p.player;
-        const entry = lb.find((e) => e.playerId === p.player);
-        return `<li class="prf-list-item" onclick="location.hash='#/player/${encodeURIComponent(p.player)}'">
-          ${rankCircleHtml(p.place)}
-          <span class="prf-list-name">${escapeHtml(name)}</span>
-          ${entry ? `<span class="prf-list-points">${formatPoints(entry.points)} PR</span>` : ""}
-        </li>`;
-      }).join("");
-    }
-  }
+  // Cacher le header par défaut pour le hero pleine largeur
+  const headerEl = document.getElementById("tournois-page-head");
+  if (headerEl) headerEl.style.display = "none";
 
   view.innerHTML = `
-    ${champion ? `
-    <div class="prf-hero">
-      <div class="prf-hero-label">Champion Power Ranking</div>
-      <div class="prf-hero-name">${escapeHtml(champion.player?.name || champion.playerId)}</div>
-      <div class="prf-hero-sub">
-        ${champion.player?.clan ? `[${escapeHtml(champion.player.clan)}] ` : ""}Rank #${champion.rank}
-      </div>
-      <div class="prf-hero-stats">
-        <div class="prf-hero-stat">
-          <div class="prf-hero-stat-val">${formatPoints(champion.points)}</div>
-          <div class="prf-hero-stat-label">Points PR</div>
-        </div>
-        <div class="prf-hero-stat">
-          <div class="prf-hero-stat-val">${champion.events}</div>
-          <div class="prf-hero-stat-label">Tournois</div>
-        </div>
-        <div class="prf-hero-stat">
-          <div class="prf-hero-stat-val">${champion.wins}</div>
-          <div class="prf-hero-stat-label">Victoires</div>
-        </div>
-        <div class="prf-hero-stat">
-          <div class="prf-hero-stat-val">${champion.top3}</div>
-          <div class="prf-hero-stat-label">Top 3</div>
-        </div>
-      </div>
-    </div>` : ""}
+    <div class="trn-home">
+      <!-- ═══ HERO SOMBRE ═══ -->
+      <section class="trn-hero">
+        <div class="trn-hero-bg"></div>
+        <div class="trn-hero-content">
+          <div class="trn-hero-eyebrow">CIRCUIT COMPÉTITIF OPENFRONT</div>
+          <h1 class="trn-hero-title">Tournois & Power Ranking</h1>
+          <p class="trn-hero-subtitle">Suivez les performances des meilleurs joueurs du circuit compétitif.</p>
 
-    <div class="prf-stats-grid">
-      <div class="prf-stat-card">
-        <div class="label">Tournois</div>
-        <div class="value">${_data.tournaments.length}</div>
-        <div class="sub">${_data.tournaments.filter(t => t.tier === "major").length} major · ${_data.tournaments.filter(t => t.tier === "minor").length} minor</div>
-      </div>
-      <div class="prf-stat-card">
-        <div class="label">Joueurs classés</div>
-        <div class="value">${lb.length}</div>
-        <div class="sub">${lb.filter(e => e.events >= 2).length} récurrents</div>
-      </div>
-      <div class="prf-stat-card">
-        <div class="label">Points distribués</div>
-        <div class="value">${formatPoints(totalPoints)}</div>
-        <div class="sub">cumul à vie</div>
-      </div>
-      <div class="prf-stat-card">
-        <div class="label">Dernier vainqueur</div>
-        <div class="value" style="font-size:1.125rem">${escapeHtml(latestWinnerName)}</div>
-        <div class="sub">${latestTournament ? formatDateShort(latestTournament.date) : "—"}</div>
-      </div>
-    </div>
+          <div class="trn-hero-search">
+            <i data-prf-icon="search" data-prf-icon-size="20"></i>
+            <input type="text" id="trn-home-search" placeholder="Rechercher un joueur, un clan, un tournoi…" />
+            <button onclick="window._trnSearch()" aria-label="Rechercher">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
 
-    <div class="prf-grid-2">
-      <div class="prf-card">
-        <div class="prf-card-header">
-          <span class="prf-card-title">Podium Power Ranking</span>
-        </div>
-        <div class="prf-card-body">
-          ${podium.length ? `
-          <div class="prf-podium">
-            ${podium.map((e) => {
-              const name = e.player?.name || e.playerId;
-              const glow = e.rank === 1 ? "glow-1" : e.rank === 2 ? "glow-2" : "glow-3";
-              return `
-              <a class="prf-podium-card ${glow}" href="#/player/${encodeURIComponent(e.playerId)}">
-                <div class="prf-podium-rank">#${e.rank}</div>
-                <div style="margin-top:8px;display:flex;justify-content:center">${avatarHtml(name, "md")}</div>
-                <div class="prf-podium-name">${escapeHtml(name)}</div>
-                ${e.player?.clan ? `<div class="prf-podium-clan">[${escapeHtml(e.player.clan)}]</div>` : ""}
-                <div class="prf-podium-pts">${formatPoints(e.points)}<span class="unit">PR</span></div>
-                <div class="prf-podium-meta">${e.events} tournois · ${e.wins} victoires</div>
-              </a>
-            `;
-            }).join("")}
-          </div>` : `<p style="color:var(--prf-muted);text-align:center;padding:20px">Aucun classement.</p>`}
-        </div>
-      </div>
-
-      <div class="prf-card">
-        <div class="prf-card-header">
-          <span class="prf-card-title">Top 5</span>
-          <a class="prf-link" href="#/ranking">Tout voir →</a>
-        </div>
-        <div class="prf-card-body">
-          <ul class="prf-list">
-            ${top5.map((e) => `
-              <li class="prf-list-item" onclick="location.hash='#/player/${encodeURIComponent(e.playerId)}'">
-                ${rankCircleHtml(e.rank)}
-                ${avatarHtml(e.player?.name || e.playerId, "sm")}
-                <span class="prf-list-name">${escapeHtml(e.player?.name || e.playerId)}</span>
-                <span class="prf-list-points">${formatPoints(e.points)}</span>
-              </li>
-            `).join("")}
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    ${mostWins && mostWins.wins > 0 ? `
-    <div class="prf-card" style="margin-top:20px">
-      <div class="prf-card-header">
-        <span class="prf-card-title">Spotlight — Plus de victoires</span>
-      </div>
-      <div class="prf-card-body">
-        <div class="prf-spotlight">
-          <div class="prf-spotlight-icon"><i data-prf-icon="crown" data-prf-icon-size="24"></i></div>
-          <div class="prf-spotlight-content">
-            <div class="prf-spotlight-title">Joueur le plus titré</div>
-            <div class="prf-spotlight-name">${escapeHtml(mostWins.player?.name || mostWins.playerId)}</div>
-            <div class="prf-spotlight-meta">${mostWins.wins} victoires · ${mostWins.top3} top 3 · ${mostWins.events} tournois</div>
+          <div class="trn-hero-stats">
+            <span class="trn-hero-stat">
+              <i data-prf-icon="trophy" data-prf-icon-size="16"></i> ${_data.tournaments.length} tournois
+            </span>
+            <span class="trn-hero-stat">
+              <i data-prf-icon="users" data-prf-icon-size="16"></i> ${lb.length} joueurs classés
+            </span>
           </div>
         </div>
-      </div>
-    </div>` : ""}
+      </section>
 
-    ${recentResultsHtml ? `
-    <div class="prf-card" style="margin-top:20px">
-      <div class="prf-card-header">
-        <span class="prf-card-title">Dernier tournoi — ${escapeHtml(latestTournament?.name || "")}</span>
-        <a class="prf-link" href="#/tournament/${encodeURIComponent(latestTournament?.slug || "")}">Détails →</a>
+      <!-- ═══ 3 CARTES HIGHLIGHT ═══ -->
+      <div class="trn-home-cards">
+        ${champion ? `
+        <a class="trn-hl-card trn-hl-gold" href="#/player/${encodeURIComponent(champion.playerId)}">
+          <div class="trn-hl-header">
+            <span class="trn-hl-label">CHAMPION ACTUEL</span>
+            <span class="trn-hl-more">Voir plus <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </div>
+          <div class="trn-hl-body">
+            ${avatarHtml(champion.player?.name || champion.playerId, "md")}
+            <div class="trf-hl-info">
+              <div class="trn-hl-name">${escapeHtml(champion.player?.name || champion.playerId)}</div>
+              <div class="trn-hl-meta">${champion.player?.clan ? `[${escapeHtml(champion.player.clan)}] ` : ""}PR ${formatPoints(champion.points)} · #1</div>
+            </div>
+            <div class="trn-hl-watermark"><i data-prf-icon="crown" data-prf-icon-size="56"></i></div>
+          </div>
+        </a>` : ""}
+
+        ${mostWins && mostWins.wins > 0 ? `
+        <a class="trn-hl-card trn-hl-cyan" href="#/player/${encodeURIComponent(mostWins.playerId)}">
+          <div class="trn-hl-header">
+            <span class="trn-hl-label">PLUS DE VICTOIRES</span>
+            <span class="trn-hl-more">Voir plus <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </div>
+          <div class="trn-hl-body">
+            ${avatarHtml(mostWins.player?.name || mostWins.playerId, "md")}
+            <div class="trf-hl-info">
+              <div class="trn-hl-name">${escapeHtml(mostWins.player?.name || mostWins.playerId)}</div>
+              <div class="trn-hl-meta">${mostWins.wins} victoires · ${mostWins.events} tournois</div>
+            </div>
+            <div class="trn-hl-watermark"><i data-prf-icon="trophy" data-prf-icon-size="56"></i></div>
+          </div>
+        </a>` : ""}
+
+        ${latestTournament ? `
+        <a class="trn-hl-card trn-hl-purple" href="#/tournament/${encodeURIComponent(latestTournament.slug || "")}">
+          <div class="trn-hl-header">
+            <span class="trn-hl-label">DERNIER TOURNOI</span>
+            <span class="trn-hl-more">Voir plus <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+          </div>
+          <div class="trn-hl-body">
+            ${avatarHtml(latestWinnerName, "md")}
+            <div class="trf-hl-info">
+              <div class="trn-hl-name">${escapeHtml(latestWinnerName)}</div>
+              <div class="trn-hl-meta">${escapeHtml(latestTournament.name)} · ${latestDate}</div>
+            </div>
+            <div class="trn-hl-watermark"><i data-prf-icon="flag" data-prf-icon-size="56"></i></div>
+          </div>
+        </a>` : ""}
       </div>
-      <div class="prf-card-body">
-        <ul class="prf-list">${recentResultsHtml}</ul>
-      </div>
-    </div>` : ""}
+    </div>
   `;
   hydratePrfIcons(view);
+
+  // Wire la recherche vers la route classement
+  const searchInput = document.getElementById("trn-home-search");
+  if (searchInput) {
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") window._trnSearch();
+    });
+  }
+  window._trnSearch = function () {
+    const q = document.getElementById("trn-home-search")?.value?.trim() || "";
+    location.hash = "#/ranking" + (q ? "?q=" + encodeURIComponent(q) : "");
+  };
 }
 
 /* ════════════════════════════════════════════════════════════════
