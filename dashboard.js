@@ -522,14 +522,14 @@ function buildMergedViews() {
         byPid.set(pid, e);
       }
       const g = isWeekly ? live.weekly : live.global;
-      e.ffaCasualWins = g.ffaCasual;
-      e.teamCasualWins = g.teamCasual;
+      e.ffaCasualWins = g.ffaCasualWins;
+      e.teamCasualWins = g.teamCasualWins;
       // Ranked wins :
       //   - Global : max(ranked.json career, API live) — ranked.json est plus complet
       //   - Weekly : API live uniquement (ranked.json n'a pas de breakdown hebdo)
       if (isWeekly) {
-        e.ffaRankedWins = g.ffaRanked;
-        e.teamRankedWins = g.teamRanked;
+        e.ffaRankedWins = g.ffaRankedWins;
+        e.teamRankedWins = g.teamRankedWins;
       } else {
         e.ffaRankedWins = Math.max(e.ffaRankedWins || 0, g.ffaRanked);
         e.teamRankedWins = Math.max(e.teamRankedWins || 0, g.teamRanked);
