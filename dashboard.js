@@ -1088,7 +1088,8 @@ document.addEventListener("click", (e) => {
           _mergedViews = buildMergedViews();
           mergeAndRender();
           scoresLoaded = true;
-          _liveFetchDone = true; // pas besoin de live fetch
+          _liveFetchDone = true;
+          _liveFetchProgress = 1; // prevent progress bar
         }
       }
     } catch (e) {
