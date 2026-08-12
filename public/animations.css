@@ -111,13 +111,13 @@ body::before {
   transform: scale(1);
 }
 
-/* ── 5. Stat Cards — Enhanced 3D Hover ── */
+/* ── 5. Stat Cards — Enhanced Hover ──
+   Note: removed perspective/preserve-3d (was creating a stacking context
+   that made the game-mode dropdown appear BEHIND stat cards). */
 .stat-card {
   transition: transform .25s cubic-bezier(.22,.68,.36,1.15),
               border-color .25s ease,
               box-shadow .25s ease !important;
-  transform-style: preserve-3d;
-  perspective: 800px;
 }
 .stat-card:hover {
   transform: translateY(-4px) scale(1.02) !important;

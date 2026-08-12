@@ -245,7 +245,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* ── SERVER INFO ── */
-.server-info{margin-bottom:28px}
+.server-info{margin-bottom:28px;position:relative;z-index:10}
 .server-info h3{color:var(--orange);font-size:15px;font-weight:700;margin-bottom:4px}
 .server-info p{color:#777;font-size:13px}
 .gamemode-switch{margin-top:14px;display:flex;gap:8px}
@@ -306,7 +306,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
     border:1px solid var(--border);
     border-radius:var(--radius);
     box-shadow:var(--shadow-lg);
-    z-index:100;
+    z-index:200;
     overflow:hidden;
     padding:4px;
     animation:dropdownFade .15s ease;

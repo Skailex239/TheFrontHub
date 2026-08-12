@@ -450,18 +450,14 @@ window.startOwnershipVerification = async () => {
   // L8: Verify publicId exists via OpenFront API
   showToast("Vérification du Public ID...", "info", 3000);
   try {
-    const { fetchOpenFront } = await import('./openfront-client.js?v=24');
+    const { fetchOpenFront } = await import('./openfront-client.js');
     const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
-    if (!playerData || !playerData.publicId) {
+    if (!playerData || !playerData.games) {
       showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
       return;
     }
   } catch (e) {
-    if (e?.isNotFound || e?.status === 404) {
-      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
-      return;
-    }
-    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error", 6000);
+    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error");
     console.error("[ownership] API check failed:", e);
     return;
   }
@@ -491,18 +487,21 @@ window.confirmOwnershipVerification = async () => {
   btn.textContent = "Vérification...";
 
   try {
-    const { fetchOpenFront } = await import('./openfront-client.js?v=24');
-    // L'API /public/player/{id} ne renvoie plus `games`. Endpoint dédié /games.
-    const gamesData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}/games`);
+    const { fetchOpenFront } = await import('./openfront-client.js');
+    const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(_ownershipPublicId)}`);
 
     // L7: Search for the challenge code in recent game usernames
-    const games = Array.isArray(gamesData?.results) ? gamesData.results : [];
+    const games = playerData.games || [];
     let found = false;
     for (const g of games) {
       if (g.username && g.username.includes(_ownershipCode)) {
         found = true;
         break;
       }
+    }
+    // Also check the main username field
+    if (!found && playerData.user && playerData.user.username && playerData.user.username.includes(_ownershipCode)) {
+      found = true;
     }
 
     if (!found) {
@@ -1813,6 +1812,21 @@ if (modeParam === 'compact' && !mapSizeParam) {
 }
 updateCurrentMode();
 updateSubtitle();
+
+// Rediriger la racine (/ sans query ni hash) vers le tableau de bord.
+// Les liens internes utilisent index.html?tab=... ou #map=X, donc ils
+// ne sont pas affectés. Permet au site d'arriver sur le dashboard par défaut.
+(function redirectToDashboardByDefault() {
+  if (window.location.search || window.location.hash) return;
+  // Vérifier qu'on est bien à la racine (pas un sous-chemin)
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const isRoot = path === '' || path === '/' || path.endsWith('/index.html');
+  if (isRoot) {
+    window.location.replace('dashboard.html');
+    return;
+  }
+})();
+
 redirectToProfileIfRequested();
 loadData().then(()=>{
   loadVipPlayers(); // Charger les joueurs VIP en parallèle
@@ -2445,7 +2459,7 @@ async function showRankedPlayerModal(publicId, username) {
     // Try to fetch via openfront-client if available, otherwise direct
     let pData;
     try {
-      const { fetchOpenFront } = await import('./openfront-client.js?v=24');
+      const { fetchOpenFront } = await import('./openfront-client.js');
       pData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
     } catch (e) {
       // Fallback direct fetch (will likely fail on GH Pages due to CORS)
@@ -2503,7 +2517,7 @@ async function showRankedPlayerModal(publicId, username) {
       try {
         let gInfo;
         try {
-          const { fetchOpenFront } = await import('./openfront-client.js?v=24');
+          const { fetchOpenFront } = await import('./openfront-client.js');
           const gRaw = await fetchOpenFront(`/public/game/${g.gameId}?turns=false`);
           gInfo = gRaw.info || gRaw;
         } catch (e) {

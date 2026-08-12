@@ -366,10 +366,13 @@
     { selector: '.profile-sections-grid .feed-card', cls: 'reveal-premium', stagger: true, max: 8 },
     { selector: '.sidebar', cls: 'reveal-slide-left' },
     { selector: '.content', cls: 'reveal-slide-right' },
-    /* Dashboard */
+    /* Dashboard — only panels + headers get reveal. Rows are inside a
+       scrollable container (.dash-list has overflow-y:auto), so the
+       IntersectionObserver (which observes the viewport, not the container)
+       never fires for rows below the fold. Rows already have their own
+       CSS entrance animation (.dash-row-in), so they don't need reveal. */
     { selector: '.dash-panel', cls: 'reveal-premium', stagger: true, max: 4 },
     { selector: '.dash-panel-header', cls: 'reveal-fade' },
-    { selector: '.dash-row', cls: 'reveal-premium', stagger: true, max: 12 },
     /* Tournois */
     { selector: '.trn-card', cls: 'reveal-premium', stagger: true, max: 8 },
     { selector: '.trn-section', cls: 'reveal-premium' },
