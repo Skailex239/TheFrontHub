@@ -1068,7 +1068,7 @@ document.addEventListener("click", (e) => {
                 teamCasualWins: p.team_casual || 0,
                 teamRankedWins: p.team_ranked || 0,
               },
-              weekly: { ffaCasualWins: p.ffa_casual || 0, ffaRankedWins: p.ffa_ranked || 0, teamCasualWins: p.team_casual || 0, teamRankedWins: p.team_ranked || 0 },
+              weekly: { ffaCasualWins: p.weekly_ffa_casual || 0, ffaRankedWins: p.weekly_ffa_ranked || 0, teamCasualWins: p.weekly_team_casual || 0, teamRankedWins: p.weekly_team_ranked || 0 },
               elo: p.elo,
               peak_elo: p.peak_elo,
               fetchedAt: Date.now(),

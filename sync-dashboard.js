@@ -106,6 +106,54 @@ function calculatePoints(apiResponse) {
   return { total, ffa_casual: ffaCasualWins, ffa_ranked: ffaRankedWins, team_casual: teamCasualWins, team_ranked: teamRankedWins };
 }
 
+
+// Fetch recent games (last 7 days) for weekly stats
+async function fetchWeeklyWins(publicId) {
+  try {
+    const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    let cursor = null;
+    let ffaCasual = 0, ffaRanked = 0, teamCasual = 0, teamRanked = 0;
+    
+    for (let page = 0; page < 10; page++) {
+      let url = `${API_BASE}/public/player/${encodeURIComponent(publicId)}/games?limit=50`;
+      if (cursor) url += `&cursor=${encodeURIComponent(cursor)}`;
+      
+      const res = await openFrontFetch(url);
+      if (!res || !res.ok) break;
+      const data = await res.json();
+      const games = data.results || data.games || [];
+      if (!games.length) break;
+      
+      let stop = false;
+      for (const g of games) {
+        const gameDate = g.start ? new Date(g.start) : null;
+        if (gameDate && gameDate < new Date(weekAgo)) { stop = true; break; }
+        if (g.result !== 'victory') continue;
+        
+        const mode = g.mode || g.gameMode || '';
+        const type = g.type || g.gameType || '';
+        const ranked = g.rankedType || '';
+        
+        if (ranked === '1v1' || ranked === '2v2') {
+          if (ranked === '1v1') ffaRanked++;
+          else teamRanked++;
+        } else if (mode === 'Free For All' || mode === 'FFA') {
+          ffaCasual++;
+        } else if (mode === 'Team') {
+          teamCasual++;
+        }
+      }
+      
+      cursor = data.nextCursor || data.cursor;
+      if (!cursor || stop) break;
+    }
+    
+    return { ffa_casual: ffaCasual, ffa_ranked: ffaRanked, team_casual: teamCasual, team_ranked: teamRanked };
+  } catch (e) {
+    return { ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
+  }
+}
+
 async function main() {
   console.log("[dashboard-sync] 🚀 Démarrage");
   if (hasExemption()) console.log("[dashboard-sync] 🔑 Exemption active");
@@ -177,6 +225,10 @@ async function main() {
         finalPoints = ffaRanked * SCORE.ffa_ranked + teamRanked * SCORE.team_ranked;
       }
 
+      // Fetch weekly wins (last 7 days)
+      const weekly = await fetchWeeklyWins(publicId);
+      const weeklyPoints = weekly.ffa_casual * SCORE.ffa_casual + weekly.ffa_ranked * SCORE.ffa_ranked + weekly.team_casual * SCORE.team_casual + weekly.team_ranked * SCORE.team_ranked;
+      
       results.push({
         publicId, username,
         points: finalPoints,
@@ -184,6 +236,11 @@ async function main() {
         ffa_ranked: ffaRanked,
         team_casual: points.team_casual,
         team_ranked: teamRanked,
+        weekly_ffa_casual: weekly.ffa_casual,
+        weekly_ffa_ranked: weekly.ffa_ranked,
+        weekly_team_casual: weekly.team_casual,
+        weekly_team_ranked: weekly.team_ranked,
+        weekly_points: weeklyPoints,
         elo: elo.elo || null,
         peak_elo: elo.peak_elo || null,
       });
