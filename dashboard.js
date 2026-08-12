@@ -604,15 +604,7 @@ function render() {
   const total = _connectedPlayers.length || 1;
   const done = _liveFetchProgress;
   const pct = Math.min(100, Math.round((done / total) * 100));
-  const liveTag = !_liveFetchDone
-    ? `<div class="dash-progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Chargement des stats live">
-        <div class="dash-progress-header">
-          <span class="dash-progress-label"><i data-icon="chart"></i> Chargement des stats live…</span>
-          <span class="dash-progress-pct">${pct}%</span>
-        </div>
-        <div class="dash-progress-track"><div class="dash-progress-fill" style="width:${pct}%"></div></div>
-      </div>`
-    : "";
+  const liveTag = "";
 
   // Label "Depuis le lundi X …" (début de semaine en heure locale navigateur)
   const weekStartMs = getWeekStartMs(Date.now());
