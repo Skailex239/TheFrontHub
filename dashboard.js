@@ -82,6 +82,10 @@ let _liveFetchDone = false;    // true quand toutes les stats live sont chargée
 let _liveFetchProgress = 0;    // nombre de joueurs connectés traités
 // _dashMode conservé pour compat (plus utilisé par render() — layout 2 panneaux)
 let _dashMode = "global";      // "global" | "weekly"
+// Skins VIP : publicId → rewardType (ex: "prism", "cyberpunk", "gold"…)
+// Chargé depuis Firestore (collection public-rewards). Permet d'afficher le
+// pseudo en dégradé animé pour les joueurs qui ont un cosmétique actif.
+let _vipSkins = new Map();
 let currentUser = null;     // { name, publicId, avatar, uid, email }
 let _ownershipCode = null;
 let _ownershipPublicId = null;
@@ -265,6 +269,56 @@ async function loadConnectedPlayers() {
   } catch (e) {
     console.warn("[dashboard] Firebase indisponible:", e.message);
   }
+}
+
+/**
+ * Charge les skins VIP depuis Firestore (collection public-rewards).
+ * Mappe publicId → rewardType pour appliquer la classe .rgb-{type} sur
+ * les pseudos du classement. Les définitions CSS (.rgb-prism, .rgb-gold,
+ * etc.) vivent dans styles.css et sont déjà chargées sur la page.
+ *
+ * Collection: public-rewards (docs publics, pas d'auth requise)
+ * Champs utilisés: publicId, username, activeType, activated
+ */
+async function loadVipSkins() {
+  try {
+    const url = `${FIRESTORE_BASE}/public-rewards`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      console.warn(`[dashboard] Firebase public-rewards: HTTP ${res.status}`);
+      return;
+    }
+    const data = await res.json();
+    const docs = data.documents || [];
+    _vipSkins = new Map();
+    for (const doc of docs) {
+      const f = doc.fields || {};
+      const val = (field) => (field?.stringValue || field?.integerValue || "");
+      const publicId = val(f.publicId);
+      const username = val(f.username);
+      // activeType = nouveau format, type = ancien format (rétrocompat)
+      const rewardType = val(f.activeType) || val(f.type) || "";
+      // activated peut être booleanValue ou absent (= true par défaut)
+      const activated = f.activated?.booleanValue !== false;
+      if (!rewardType || !activated) continue;
+      // Priorité : publicId (stable), fallback username
+      if (publicId) _vipSkins.set(publicId, rewardType);
+      else if (username) _vipSkins.set(`@${username}`, rewardType);
+    }
+    console.log(`[dashboard] Skins VIP: ${_vipSkins.size} joueurs cosmétiques`);
+  } catch (e) {
+    console.warn("[dashboard] Skins VIP indisponibles:", e.message);
+  }
+}
+
+/**
+ * Résout le rewardType (skin) d'un joueur du classement.
+ * Priorité: publicId direct → username (fallback legacy).
+ */
+function getSkinForPlayer(publicId, username) {
+  if (publicId && _vipSkins.has(publicId)) return _vipSkins.get(publicId);
+  if (username && _vipSkins.has(`@${username}`)) return _vipSkins.get(`@${username}`);
+  return null;
 }
 
 /**
@@ -677,11 +731,6 @@ function render() {
         ${renderRanking(weeklyTopN)}
       </section>
     </div>
-
-    <div class="dash-scoring-info">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Barème : <strong>FFA casual +10</strong> · <strong>FFA classé +1</strong> · <strong>Team casual +5</strong> · <strong>Team classé +1</strong> (le classé rapporte juste 1 pt, pas en plus). Colonne gauche = cumul de toutes les parties. Colonne droite = parties de la semaine en cours (reset auto tous les lundis à 00h00 Paris). Les stats des joueurs connectés sont récupérées en temps réel via l'API OpenFront.</span>
-    </div>
   `;
 
   // Hydrate les icônes <i data-icon>
@@ -723,11 +772,16 @@ function renderRanking(topN) {
          </span>`
       : "";
 
+    // Skin VIP : applique la classe .rgb-{type} (prism, cyberpunk, gold…)
+    // sur le span du pseudo. Les définitions CSS sont dans styles.css.
+    const skinType = getSkinForPlayer(p.publicId, name);
+    const skinClass = skinType ? ` rgb-${skinType}` : "";
+
     return `
       <a class="dash-row${p.rank <= 3 ? " dash-row-podium" : ""}${p.rank === 1 ? " dash-row-gold" : ""}" href="${profileUrl}">
         <span class="dash-rank-slot">${rankSlot}</span>
         <span class="dash-player">
-          <span class="dash-player-name">${escapeHtml(name)}</span>
+          <span class="dash-player-name${skinClass}">${escapeHtml(name)}</span>
           ${breakdown}
         </span>
         <span class="dash-score">
@@ -1094,6 +1148,8 @@ document.addEventListener("click", (e) => {
 
     if (scoresLoaded) {
       console.log("[dashboard] ✅ Rendu instantané depuis scores pré-calculés");
+      // Skins VIP en arrière-plan : re-render quand ils arrivent (non bloquant)
+      loadVipSkins().then(() => { if (_vipSkins.size > 0) mergeAndRender(); }).catch(() => {});
       return;
     }
 
@@ -1102,6 +1158,8 @@ document.addEventListener("click", (e) => {
     await loadRankedJson();
     _mergedViews = buildMergedViews();
     render();
+    // Skins VIP en arrière-plan même en mode fallback
+    loadVipSkins().then(() => { if (_vipSkins.size > 0) mergeAndRender(); }).catch(() => {});
 
     // Phase 2 : Charger la liste des joueurs connectés (Firebase)
     await loadConnectedPlayers();

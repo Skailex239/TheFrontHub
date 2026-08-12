@@ -1,9 +1,10 @@
 /* ════════════════════════════════════════════════════════════════
-   Tableau de bord — Styles spécifiques (v5 — épuré)
+   Tableau de bord — Styles spécifiques (v6 — épuré + skins VIP)
    Design inspiré du mockup envoyé : liste épurée, pas de carte champion,
    une ligne par joueur avec rang + nom + breakdown + score.
    Touche personnelle : palette orange du site (pas de bleu), accent
    doré sur le #1, hover orange subtil, flèche › au survol.
+   v6 : skins VIP (prism, cyberpunk, gold…) sur les pseudos.
    ════════════════════════════════════════════════════════════════ */
 
 .dash-view {
@@ -463,6 +464,99 @@
   font-family: var(--mono, monospace);
   font-size: 11px;
   color: #9CA3AF;
+}
+
+/* ═══ Skins VIP — pseudo en dégradé animé ═══
+   Les joueurs avec un cosmétique actif (prism, cyberpunk, gold…)
+   voient leur pseudo rendu en texte dégradé animé. Les définitions
+   de base vivent dans styles.css (.rgb-prism global), mais les autres
+   skins ne sont définies que sous #ranked-list. On les redéfinit ici
+   pour le contexte du dashboard (.dash-player-name).
+   L'animation prism-slide est déjà déclarée dans styles.css. */
+@keyframes dash-prism-slide { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+
+.dash-player-name.rgb-prism,
+.dash-player-name.rgb-cyberpunk,
+.dash-player-name.rgb-sunset,
+.dash-player-name.rgb-aurore,
+.dash-player-name.rgb-pastel,
+.dash-player-name.rgb-gold,
+.dash-player-name.rgb-volcano,
+.dash-player-name.rgb-ocean,
+.dash-player-name.rgb-miami,
+.dash-player-name.rgb-toxic,
+.dash-player-name.rgb-chroma {
+  display: inline-block;
+  font-weight: 800;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  background-size: 200% auto !important;
+  animation: dash-prism-slide 4s linear infinite !important;
+}
+
+.dash-player-name.rgb-prism {
+  font-family: 'Orbitron', sans-serif !important;
+  background: linear-gradient(90deg, #ff0055, #ff6600, #ffdd00, #00ff88, #00ccff, #6644ff, #cc00ff, #ff0055) !important;
+}
+.dash-player-name.rgb-cyberpunk {
+  font-family: 'Orbitron', sans-serif !important;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff) !important;
+  animation-duration: 3s !important;
+  filter: brightness(1.2);
+}
+.dash-player-name.rgb-sunset {
+  background: linear-gradient(90deg, #ff4500, #ff8c00, #ffd700, #ff6347) !important;
+}
+.dash-player-name.rgb-aurore {
+  background: linear-gradient(90deg, #00ff87, #60efff, #0061ff, #60efff, #00ff87) !important;
+  animation-duration: 5s !important;
+}
+.dash-player-name.rgb-gold {
+  background: linear-gradient(90deg, #ffd700, #ffec8b, #daa520, #ffec8b, #ffd700) !important;
+  animation-duration: 3s !important;
+  filter: brightness(1.1);
+}
+.dash-player-name.rgb-volcano {
+  background: linear-gradient(90deg, #ff0000, #ff4500, #ff8c00, #ff4500, #ff0000) !important;
+  animation-duration: 2.5s !important;
+}
+.dash-player-name.rgb-ocean {
+  background: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef, #00b4d8, #0077b6) !important;
+}
+.dash-player-name.rgb-miami {
+  background: linear-gradient(90deg, #ff6ec7, #7b68ee, #ff6ec7) !important;
+  animation-duration: 3s !important;
+}
+.dash-player-name.rgb-toxic {
+  background: linear-gradient(90deg, #39ff14, #7fff00, #adff2f, #7fff00, #39ff14) !important;
+  animation-duration: 2s !important;
+  filter: brightness(1.15);
+}
+.dash-player-name.rgb-chroma {
+  background: linear-gradient(90deg, #ff0000, #ff8800, #ffff00, #00ff00, #00aaff, #8800ff, #ff0088, #ff0000) !important;
+}
+.dash-player-name.rgb-pastel {
+  background: linear-gradient(90deg, #ff9a9e, #fecfef, #a18cd1, #fbc2eb, #ff9a9e) !important;
+  animation-duration: 6s !important;
+}
+
+/* Les skins VIP ne doivent pas changer de couleur au hover (le dégradé
+   reste intact). On neutralise le hover orange-deep pour ces pseudos. */
+.dash-row:hover .dash-player-name.rgb-prism,
+.dash-row:hover .dash-player-name.rgb-cyberpunk,
+.dash-row:hover .dash-player-name.rgb-sunset,
+.dash-row:hover .dash-player-name.rgb-aurore,
+.dash-row:hover .dash-player-name.rgb-pastel,
+.dash-row:hover .dash-player-name.rgb-gold,
+.dash-row:hover .dash-player-name.rgb-volcano,
+.dash-row:hover .dash-player-name.rgb-ocean,
+.dash-row:hover .dash-player-name.rgb-miami,
+.dash-row:hover .dash-player-name.rgb-toxic,
+.dash-row:hover .dash-player-name.rgb-chroma {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* ═══ Responsive ═══ */
