@@ -9759,6 +9759,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-12T11:11:26.587Z",
       "url": "https://openfront.io/game/FzrDauPN"
+    },
+    {
+      "id": "Wj1xJ7QQ",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "yuya",
+          "clientID": "UNdL9arM",
+          "clanTag": "ANO"
+        },
+        {
+          "username": "kenya",
+          "clientID": "UXJecRAf",
+          "clanTag": "ANO"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1298,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-12T12:44:11.872Z",
+      "url": "https://openfront.io/game/Wj1xJ7QQ"
     }
   ],
   "trios": [
@@ -26318,6 +26341,62 @@
       "numPlayers": 90,
       "timestamp": "2026-08-12T12:39:10.622Z",
       "url": "https://openfront.io/game/j92r8xCC"
+    },
+    {
+      "id": "cy4s1Lhj",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Tomcikas",
+          "clientID": "sSjAoM4p",
+          "clanTag": "UN"
+        },
+        {
+          "username": "crucifixion",
+          "clientID": "YtprdfoV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PERU TU DIOS",
+          "clientID": "ArcsvjW6",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1094,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 121,
+      "timestamp": "2026-08-12T12:41:11.725Z",
+      "url": "https://openfront.io/game/cy4s1Lhj"
+    },
+    {
+      "id": "obJgmkdA",
+      "team": "Team 29",
+      "players": [
+        {
+          "username": "MJD778",
+          "clientID": "N4c2eRyp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGanon",
+          "clientID": "ut4m9tcM",
+          "clanTag": null
+        },
+        {
+          "username": "Hugin Munin",
+          "clientID": "WG66cmDj",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1483,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-12T12:31:57.166Z",
+      "url": "https://openfront.io/game/obJgmkdA"
     }
   ],
   "quads": [
@@ -46601,6 +46680,29 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T12:32:29.186Z",
       "url": "https://openfront.io/game/3eLVHHf8"
+    },
+    {
+      "id": "AXjyvhT1",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Tanaka",
+          "clientID": "uSxv7fNZ",
+          "clanTag": null
+        },
+        {
+          "username": "amesas",
+          "clientID": "zfLP9Dqa",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1423,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-12T12:34:52.339Z",
+      "url": "https://openfront.io/game/AXjyvhT1"
     }
   ]
 }
