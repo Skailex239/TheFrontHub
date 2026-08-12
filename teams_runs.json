@@ -9324,6 +9324,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-11T22:35:15.184Z",
       "url": "https://openfront.io/game/oQgxsD3x"
+    },
+    {
+      "id": "Qn5A7AzA",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "SEIFTUBE123",
+          "clientID": "xTnm46g6",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 3551,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-11T23:27:00.350Z",
+      "url": "https://openfront.io/game/Qn5A7AzA"
     }
   ],
   "trios": [
@@ -24687,6 +24705,57 @@
       "numPlayers": 14,
       "timestamp": "2026-08-11T23:53:55.950Z",
       "url": "https://openfront.io/game/KG5Q2Pte"
+    },
+    {
+      "id": "EUSPw3PW",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Islamic Republic of Japan",
+          "clientID": "PuSxw9Zh",
+          "clanTag": null
+        },
+        {
+          "username": "big yahu",
+          "clientID": "aYn7pnus",
+          "clanTag": "UAS"
+        }
+      ],
+      "map": "France",
+      "duration_s": 973,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-12T00:07:13.718Z",
+      "url": "https://openfront.io/game/EUSPw3PW"
+    },
+    {
+      "id": "aom2wo5F",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "takuwan",
+          "clientID": "Sm7sh12y",
+          "clanTag": null
+        },
+        {
+          "username": "Robinio",
+          "clientID": "h9AKV9Vn",
+          "clanTag": "BOMBI"
+        },
+        {
+          "username": "Atza",
+          "clientID": "hHXgC7ej",
+          "clanTag": "BOMBI"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1849,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-11T23:53:29.932Z",
+      "url": "https://openfront.io/game/aom2wo5F"
     }
   ],
   "quads": [
@@ -43940,6 +44009,24 @@
       "numPlayers": 28,
       "timestamp": "2026-08-11T22:47:12.946Z",
       "url": "https://openfront.io/game/8ZjA4CHU"
+    },
+    {
+      "id": "PMBTu8Nk",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Viceroyalty of Bubo",
+          "clientID": "ocJyFNtJ",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 1774,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-11T23:56:47.099Z",
+      "url": "https://openfront.io/game/PMBTu8Nk"
     }
   ]
 }
