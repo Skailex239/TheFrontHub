@@ -48662,6 +48662,52 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T21:21:53.334Z",
       "url": "https://openfront.io/game/RH8BfF2j"
+    },
+    {
+      "id": "ejwEkBFw",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Trade",
+          "clientID": "Pu4ib9N7",
+          "clanTag": null
+        },
+        {
+          "username": "equa",
+          "clientID": "65Z988qr",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3092,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-12T21:45:47.714Z",
+      "url": "https://openfront.io/game/ejwEkBFw"
+    },
+    {
+      "id": "e3VWfQV1",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Samcon",
+          "clientID": "AVEFhG9M",
+          "clanTag": "WINT"
+        },
+        {
+          "username": "Diamondn",
+          "clientID": "25GdgnxE",
+          "clanTag": "WINT"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 2510,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-12T21:53:30.148Z",
+      "url": "https://openfront.io/game/e3VWfQV1"
     }
   ]
 }
