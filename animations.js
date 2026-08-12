@@ -512,11 +512,10 @@
     initMagneticHover();
     initRipple();
     initShimmer();
-    init3DTilt();
-    initLiveUpdates();
-
-    // Particles last — non-critical visual
-    if (!document.hidden) initParticles();
+    // Disabled: too heavy / distracting for a premium minimalist feel
+    // init3DTilt();    // 3D card tilt on mousemove (CPU)
+    // initLiveUpdates(); // MutationObserver on every .stat-value
+    // initParticles(); // Floating orange particles canvas (CPU, distracting)
   }
 
   /* ── 13. Mobile navigation drawer (hamburger) ──

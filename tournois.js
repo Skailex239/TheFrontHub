@@ -107,11 +107,18 @@ function escapeHtml(s) {
 function parseHash() {
   const h = window.location.hash.replace(/^#\/?/, "");
   if (!h) return { route: "home", params: {} };
-  const parts = h.split("/");
+  // Séparer la route des query params (?q=...)
+  const [pathPart, queryPart] = h.split("?");
+  const parts = pathPart.split("/");
   const route = parts[0];
   const params = {};
   if (route === "tournament" && parts[1]) params.slug = decodeURIComponent(parts[1]);
   else if (route === "player" && parts[1]) params.id = decodeURIComponent(parts[1]);
+  // Parser les query params (ex: ?q=ultimus)
+  if (queryPart) {
+    const search = new URLSearchParams(queryPart);
+    for (const [k, v] of search) params[k] = v;
+  }
   return { route, params };
 }
 
@@ -157,7 +164,7 @@ async function router() {
     if (headerEl) headerEl.style.display = "";
     switch (route) {
       case "dashboard": await renderDashboard(); break;
-      case "ranking": await renderRanking(); break;
+      case "ranking": await renderRanking(params); break;
       case "tournaments": await renderTournamentsList(); break;
       case "tournament": await renderTournamentDetail(params.slug); break;
       case "player": await renderPlayerProfile(params.id); break;
@@ -467,7 +474,10 @@ async function renderHome() {
 
 let _lbState = { q: "", filter: "all", sort: { key: "points", direction: "desc" } };
 
-async function renderRanking() {
+async function renderRanking(params = {}) {
+  // Pré-remplir la recherche si ?q=... est dans l'URL (depuis la home search bar)
+  if (params.q) _lbState.q = params.q;
+
   setHeader("Classement Power Ranking", "Points cumulés sur tous les tournois",
     `<span class="prf-chip"><i data-prf-icon="users" data-prf-icon-size="14"></i> ${_data.leaderboard.length} joueurs</span>`);
 

@@ -575,22 +575,19 @@ body::before {
   --dur-premium-slow: 600ms;
 }
 
-/* ── 32a. Scroll Reveal — fade + up + blur ──
+/* ── 32a. Scroll Reveal — fade + up (no blur for performance)
    Stagger via inline transition-delay (100ms per item, capped at 12). */
 .reveal-premium {
   opacity: 0;
   transform: translateY(24px);
-  filter: blur(8px);
   transition:
     opacity var(--dur-premium) var(--ease-premium),
-    transform var(--dur-premium) var(--ease-premium),
-    filter var(--dur-premium) var(--ease-premium);
-  will-change: opacity, transform, filter;
+    transform var(--dur-premium) var(--ease-premium);
+  will-change: opacity, transform;
 }
 .reveal-premium.is-visible {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 
 /* Variant: fade only (no movement) — for overlays, badges */
@@ -604,48 +601,39 @@ body::before {
 .reveal-slide-left {
   opacity: 0;
   transform: translateX(-20px);
-  filter: blur(6px);
   transition:
     opacity var(--dur-premium) var(--ease-premium),
-    transform var(--dur-premium) var(--ease-premium),
-    filter var(--dur-premium) var(--ease-premium);
+    transform var(--dur-premium) var(--ease-premium);
 }
 .reveal-slide-left.is-visible {
   opacity: 1;
   transform: translateX(0);
-  filter: blur(0);
 }
 
 /* Variant: slide from right — for main content panels */
 .reveal-slide-right {
   opacity: 0;
   transform: translateX(20px);
-  filter: blur(6px);
   transition:
     opacity var(--dur-premium) var(--ease-premium),
-    transform var(--dur-premium) var(--ease-premium),
-    filter var(--dur-premium) var(--ease-premium);
+    transform var(--dur-premium) var(--ease-premium);
 }
 .reveal-slide-right.is-visible {
   opacity: 1;
   transform: translateX(0);
-  filter: blur(0);
 }
 
 /* Variant: scale-in — for hero, modal content */
 .reveal-scale-premium {
   opacity: 0;
   transform: scale(0.96);
-  filter: blur(8px);
   transition:
     opacity var(--dur-premium) var(--ease-premium),
-    transform var(--dur-premium) var(--ease-premium),
-    filter var(--dur-premium) var(--ease-premium);
+    transform var(--dur-premium) var(--ease-premium);
 }
 .reveal-scale-premium.is-visible {
   opacity: 1;
   transform: scale(1);
-  filter: blur(0);
 }
 
 /* ── 32b. Top scroll progress bar ──

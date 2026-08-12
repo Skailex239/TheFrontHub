@@ -1764,9 +1764,10 @@ function updateURL(){
   const p=new URLSearchParams();
   const activeTab=document.querySelector('.tab-btn.active');
   if(activeTab){
-    const tabs=['maps','ranked'];
-    const idx=[...document.querySelectorAll('.tab-btn')].indexOf(activeTab);
-    if(idx>=0&&tabs[idx])p.set('tab',tabs[idx]);
+    // Resolve tab name from button ID (robust against other nav tabs)
+    const tabName = activeTab.id === 'tab-btn-ranked' ? 'ranked'
+                  : activeTab.id === 'tab-btn-maps' ? 'maps' : null;
+    if(tabName) p.set('tab',tabName);
   }
   if(activeMap)p.set('map',activeMap);
   const h=window.location.pathname+(p.toString()?'?'+p:'');
@@ -1823,10 +1824,11 @@ loadData().then(()=>{
     return;
   }
   if (tabParam) {
-    const btns = document.querySelectorAll('.tab-btn');
-    const tabs = ['maps', 'ranked'];
-    const idx = tabs.indexOf(tabParam);
-    if (idx >= 0 && btns[idx]) switchTab(tabParam, btns[idx]);
+    // Map tab name → button ID (more robust than index-based lookup which
+    // breaks when nav has other tabs like dashboard/tournois/profile).
+    const tabBtnId = tabParam === 'ranked' ? 'tab-btn-ranked' : 'tab-btn-maps';
+    const btn = document.getElementById(tabBtnId);
+    if (btn) switchTab(tabParam, btn);
   }
 });
 
