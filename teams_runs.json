@@ -9910,6 +9910,29 @@
       "numPlayers": 73,
       "timestamp": "2026-08-12T13:45:42.570Z",
       "url": "https://openfront.io/game/QtJ1Z8t1"
+    },
+    {
+      "id": "9GMv6Yno",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Dismaland",
+          "clientID": "7DeeTFCj",
+          "clanTag": null
+        },
+        {
+          "username": "Zoe",
+          "clientID": "TiNjoQEw",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1534,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 37,
+      "timestamp": "2026-08-12T14:29:14.194Z",
+      "url": "https://openfront.io/game/9GMv6Yno"
     }
   ],
   "trios": [
@@ -26637,6 +26660,24 @@
       "numPlayers": 51,
       "timestamp": "2026-08-12T14:10:12.036Z",
       "url": "https://openfront.io/game/425dG72B"
+    },
+    {
+      "id": "bEMu734L",
+      "team": "Team 34",
+      "players": [
+        {
+          "username": "Forest",
+          "clientID": "q5RxrruP",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 5056,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-12T13:14:42.725Z",
+      "url": "https://openfront.io/game/bEMu734L"
     }
   ],
   "quads": [
@@ -47009,6 +47050,42 @@
       "numPlayers": 52,
       "timestamp": "2026-08-12T13:43:41.439Z",
       "url": "https://openfront.io/game/D6jzFzsn"
+    },
+    {
+      "id": "zG3hykFx",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "openu",
+          "clientID": "LMkHQZb6",
+          "clanTag": "CAPX"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3803,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-12T13:40:15.224Z",
+      "url": "https://openfront.io/game/zG3hykFx"
+    },
+    {
+      "id": "Cfuch4oB",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "some",
+          "clientID": "uU3QvFtn",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 2407,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 97,
+      "timestamp": "2026-08-12T14:16:46.464Z",
+      "url": "https://openfront.io/game/Cfuch4oB"
     }
   ]
 }
