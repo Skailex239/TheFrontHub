@@ -121,7 +121,10 @@ async function loadTopRuns({ limit, windowDays }) {
 
       const tdPlayer = document.createElement('td');
       tdPlayer.className = 'global-player';
-      var playerName = r.player || '\u2014';
+      // Sanitize player name: strip control chars and limit length
+      var rawName = r.player || '\u2014';
+      var playerName = String(rawName).replace(/[\x00-\x1F\x7F-\x9F]/g, '').trim() || '\u2014';
+      if (playerName.length > 28) playerName = playerName.slice(0, 25) + '...';
       if (connectedUsernames.has(playerName)) {
         tdPlayer.innerHTML = '<a href="#" onclick="handlePlayerClick(\'' + escapeHtml(playerName).replace(/'/g, "\\'") + "');return false\" style=\"cursor:pointer;text-decoration:underline;color:var(--orange)\">" + escapeHtml(playerName) + '</a>';
       } else {

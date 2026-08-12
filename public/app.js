@@ -2060,12 +2060,12 @@ function renderRankedTable(players) {
           </div>
         </td>
         <td style="padding: 12px 8px; font-family: 'JetBrains Mono', monospace; color: var(--accent); font-weight: 700;">${p.elo}</td>
-        <td style="padding: 12px 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted);">${peakHtml}</td>
+        <td class="rk-mobile-hide" style="padding: 12px 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted);">${peakHtml}</td>
         <td style="padding: 12px 8px; font-weight: 700; color: ${wrColor};">${winrateStr}%</td>
         <td style="padding: 12px 8px; color: var(--text2); font-family: 'JetBrains Mono', monospace; font-size: 12px;"><span style="color:#10b981">${p.wins}</span> - <span style="color:#ef4444">${p.losses}</span></td>
-        <td style="padding: 12px 8px; color: var(--text3); font-family: 'JetBrains Mono', monospace;">${p.total}</td>
-        <td style="padding: 12px 8px; text-align: center; font-size: 12px;">${moveHtml}</td>
-        <td style="padding: 12px 8px; text-align: center; font-size: 12px;">${streakHtml}</td>
+        <td class="rk-mobile-hide" style="padding: 12px 8px; color: var(--text3); font-family: 'JetBrains Mono', monospace;">${p.total}</td>
+        <td class="rk-mobile-hide" style="padding: 12px 8px; text-align: center; font-size: 12px;">${moveHtml}</td>
+        <td class="rk-mobile-hide" style="padding: 12px 8px; text-align: center; font-size: 12px;">${streakHtml}</td>
       </tr>
     `;
   });

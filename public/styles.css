@@ -31,8 +31,8 @@
 
     /* ── Text ── */
     --text:#232323;            /* primary */
-    --muted:#6b6b6b;           /* secondary */
-    --dim:#767676;             /* tertiary */
+    --muted:#595959;           /* secondary — WCAG AA compliant on white */
+    --dim:#4a4a4a;             /* tertiary — WCAG AA compliant */
 
     /* ── Borders ── */
     --border:#ececec;          /* default */
@@ -337,7 +337,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
     box-shadow:var(--shadow);transition:all .3s ease;position:relative;overflow:hidden;
 }
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.08)}
-.card h2{background:var(--orange-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:30px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.card h2{background:var(--orange-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:clamp(20px, 4vw, 30px);font-weight:800;letter-spacing:-.5px;margin-bottom:4px;font-variant-numeric:tabular-nums;line-height:1.1;word-break:break-word}
 .card p{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.8px}
 .card .stat-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:30px;opacity:.07}
 
@@ -484,10 +484,13 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 
 /* ── GLOBAL TABLE ── */
 .global-table{width:100%;border-collapse:collapse}
-.global-table th{text-align:left;padding:12px 18px;font-size:11px;color:#fff;text-transform:uppercase;letter-spacing:1px;font-weight:700;border-bottom:1px solid var(--border);background:var(--orange-gradient-subtle)}
+.global-table th{text-align:left;padding:12px 18px;font-size:11px;color:#fff;text-transform:uppercase;letter-spacing:1px;font-weight:700;border-bottom:1px solid var(--border);background:var(--orange-gradient-subtle);position:sticky;top:0;z-index:5}
 .global-table td{padding:12px 18px;border-bottom:1px solid var(--border-light);font-size:13px}
-.global-table tr{transition:all .2s ease}
-.global-table tr:hover{background:var(--card-hover)}
+.global-table tr{transition:background .2s ease}
+.global-table tr:nth-child(even){background:#fafafa}
+.global-table tr:hover{background:var(--orange-pale)}
+/* Numeric columns — right aligned for scanability */
+.global-table td.num,.global-table th.num{text-align:right;font-variant-numeric:tabular-nums}
 
 /* ── CONTAINER (runs.html / profile.html) ── */
 .container{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
@@ -511,8 +514,8 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 .global-player-cell{padding:12px 18px;border-bottom:1px solid var(--border-light);font-size:13px}
 
 /* ── HALL OF FAME ── */
-.hof-cards{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0}
-.hof-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 20px;text-align:center;min-width:180px;transition:all .3s ease;box-shadow:var(--shadow)}
+.hof-cards{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0;align-items:stretch}
+.hof-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 20px;text-align:center;min-width:180px;flex:1 1 180px;transition:all .3s ease;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between}
 .hof-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.08)}
 .hof-1{border-color:rgba(255,200,0,.3);box-shadow:0 0 24px rgba(255,200,0,.1)}
 .hof-1:hover{box-shadow:0 8px 32px rgba(255,200,0,.2)}
@@ -627,6 +630,18 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 #profile-best-maps .player-run-row,#profile-recent-runs .player-run-row{grid-template-columns:1fr 85px 36px}
 
 /* ── COSMETIC SKINS — PRISM ── */
+
+/* Ranked list — zebra striping + hover + responsive */
+#ranked-list tr:nth-child(even) { background: #fafafa !important; }
+#ranked-list tr:hover { background: var(--orange-pale) !important; }
+#ranked-list tr td { font-variant-numeric: tabular-nums; }
+/* Hide secondary columns on mobile to prevent horizontal scroll */
+@media (max-width: 768px) {
+  #ranked-list th.rk-mobile-hide,
+  #ranked-list td.rk-mobile-hide { display: none !important; }
+  #ranked-list td { padding: 10px 6px !important; font-size: 12px !important; }
+  #ranked-list th { padding: 8px 6px !important; font-size: 10px !important; }
+}
 @keyframes prism-slide{from{background-position:0% 50%}to{background-position:100% 50%}}
 .rgb-prism{display:inline-block;font-family:'Orbitron',sans-serif;background:linear-gradient(90deg,#ff0055,#ff6600,#ffdd00,#00ff88,#00ccff,#6644ff,#cc00ff,#ff0055,#ff6600,#ffdd00,#00ff88,#00ccff,#6644ff,#cc00ff,#ff0055);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;animation:prism-slide 4s linear infinite}
 .run-row.is-prism .run-player{font-weight:900;font-size:16px;display:inline-block;font-family:'Orbitron',sans-serif;background:linear-gradient(90deg,#ff0055,#ff6600,#ffdd00,#00ff88,#00ccff,#6644ff,#cc00ff,#ff0055,#ff6600,#ffdd00,#00ff88,#00ccff,#6644ff,#cc00ff,#ff0055);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;animation:prism-slide 4s linear infinite}
@@ -921,6 +936,16 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
     .leaderboard{grid-template-columns:1fr}
     .maps{max-height:400px}
     .chart-grid{grid-template-columns:1fr}
+}
+
+/* ── Player name ellipsis (prevent overflow on long pseudos) ── */
+.run-player,.global-player,.prf-list-name,.prf-podium-name,
+#ranked-list span[style*="font-weight: 500"],
+.dash-player-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media(max-width:900px){
