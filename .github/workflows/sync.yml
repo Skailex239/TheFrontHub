@@ -24,7 +24,7 @@ on:
     # - cron: "*/5 * * * *"
 
 concurrency:
-  group: auto-sync
+  group: auto-sync-v2
   cancel-in-progress: true
 
 jobs:
