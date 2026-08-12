@@ -25517,6 +25517,62 @@
       "numPlayers": 52,
       "timestamp": "2026-08-12T07:25:32.426Z",
       "url": "https://openfront.io/game/ibwqa2QV"
+    },
+    {
+      "id": "gUWtjpsm",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "VarXard",
+          "clientID": "9vVevpuJ",
+          "clanTag": "LBU"
+        },
+        {
+          "username": "Skailex",
+          "clientID": "GoYDHyr8",
+          "clanTag": "LBU"
+        },
+        {
+          "username": "AnonPulley3",
+          "clientID": "m5Y6zNvk",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-12T08:38:52.765Z",
+      "url": "https://openfront.io/game/gUWtjpsm"
+    },
+    {
+      "id": "SAYXaPD8",
+      "team": "Team 27",
+      "players": [
+        {
+          "username": "tdfriese",
+          "clientID": "QyQCB3wX",
+          "clanTag": null
+        },
+        {
+          "username": "TrADE Partners 4EvEr",
+          "clientID": "NBRJRsXJ",
+          "clanTag": null
+        },
+        {
+          "username": "Timmy",
+          "clientID": "kA5A86KS",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1119,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-12T08:31:36.355Z",
+      "url": "https://openfront.io/game/SAYXaPD8"
     }
   ],
   "quads": [
@@ -45421,6 +45477,24 @@
       "numPlayers": 50,
       "timestamp": "2026-08-12T07:18:52.060Z",
       "url": "https://openfront.io/game/oWsHgb3a"
+    },
+    {
+      "id": "hdpndRit",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "axe",
+          "clientID": "7dbrhQoh",
+          "clanTag": "SJH"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1949,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-12T08:24:13.938Z",
+      "url": "https://openfront.io/game/hdpndRit"
     }
   ]
 }
