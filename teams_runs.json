@@ -9429,6 +9429,29 @@
       "numPlayers": 28,
       "timestamp": "2026-08-12T01:21:21.177Z",
       "url": "https://openfront.io/game/fBqHzVn7"
+    },
+    {
+      "id": "DJtB4hrK",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "HRE",
+          "clientID": "hU7awDtP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AmirHoseain0188",
+          "clientID": "P7BVfbDH",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 890,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-12T01:43:23.416Z",
+      "url": "https://openfront.io/game/DJtB4hrK"
     }
   ],
   "trios": [
@@ -44412,6 +44435,39 @@
       "numPlayers": 25,
       "timestamp": "2026-08-12T01:26:06.460Z",
       "url": "https://openfront.io/game/oMMZKnk2"
+    },
+    {
+      "id": "r5oPagpk",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "AnonOmen8",
+          "clientID": "pa6ajKji",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ABU7MDAN",
+          "clientID": "136Hiidz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BOSS",
+          "clientID": "3uvNKvUZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hyde",
+          "clientID": "d6bxDc6r",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 3150,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-12T01:08:43.420Z",
+      "url": "https://openfront.io/game/r5oPagpk"
     }
   ]
 }
