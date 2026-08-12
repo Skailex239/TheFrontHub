@@ -10061,6 +10061,24 @@
       "numPlayers": 44,
       "timestamp": "2026-08-12T16:19:19.769Z",
       "url": "https://openfront.io/game/pMZ7bcag"
+    },
+    {
+      "id": "zwcuKAKF",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "NeedHugs",
+          "clientID": "DLW89yoa",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 948,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-12T16:31:51.477Z",
+      "url": "https://openfront.io/game/zwcuKAKF"
     }
   ],
   "trios": [
@@ -47397,6 +47415,85 @@
       "numPlayers": 109,
       "timestamp": "2026-08-12T15:26:50.673Z",
       "url": "https://openfront.io/game/amQuqP7w"
+    },
+    {
+      "id": "rsLeVo9A",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "clowny",
+          "clientID": "iHinNJoF",
+          "clanTag": null
+        },
+        {
+          "username": "Moist",
+          "clientID": "Z6FofbKD",
+          "clanTag": "BUNK"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1482,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-12T16:26:25.173Z",
+      "url": "https://openfront.io/game/rsLeVo9A"
+    },
+    {
+      "id": "ffKfYbtS",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "AnonPulley3",
+          "clientID": "n1GJeVSv",
+          "clanTag": null
+        },
+        {
+          "username": "Callisto",
+          "clientID": "mSQY3MYv",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 3044,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-12T16:06:13.011Z",
+      "url": "https://openfront.io/game/ffKfYbtS"
+    },
+    {
+      "id": "LQfApzQ5",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Samaeldes",
+          "clientID": "xbZ1zktF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PPLAM",
+          "clientID": "MPukMvFn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Shox",
+          "clientID": "Mo8s9o9P",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Korea No.1",
+          "clientID": "gajN6gAn",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1297,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-12T16:28:26.284Z",
+      "url": "https://openfront.io/game/LQfApzQ5"
     }
   ]
 }
