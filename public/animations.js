@@ -93,45 +93,48 @@
   }
 
   /* ── 2. Scroll Reveal via IntersectionObserver ── */
-  function initScrollReveal() {
-    var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-    if (!reveals.length) return;
+  /* ── Auto-reveal rules: add .reveal class to known selectors ── */
+  var AUTO_REVEAL_RULES = [
+    { selector: '.hero-stats .stat-card', cls: 'reveal', stagger: true },
+    { selector: '.feed-card', cls: 'reveal' },
+    { selector: '.hof-card', cls: 'reveal', stagger: true },
+    { selector: '.chart-card', cls: 'reveal', stagger: true },
+    { selector: '.profile-stats-grid .modal-stat', cls: 'reveal', stagger: true },
+    { selector: '.profile-sections-grid .feed-card', cls: 'reveal', stagger: true },
+    { selector: '.sidebar', cls: 'reveal-left' },
+    { selector: '.content', cls: 'reveal-right' },
+    /* Dashboard — panels + rows */
+    { selector: '.dash-panel', cls: 'reveal', stagger: true },
+    { selector: '.dash-panel-header', cls: 'reveal' },
+    { selector: '.dash-row', cls: 'reveal', stagger: true, maxStagger: 12 },
+    /* Tournois — cards + sections */
+    { selector: '.trn-card', cls: 'reveal', stagger: true },
+    { selector: '.trn-section', cls: 'reveal' },
+    { selector: '.trn-hero', cls: 'reveal' }
+  ];
 
-    var autoReveal = [
-      { selector: '.hero-stats .stat-card', cls: 'reveal', stagger: true },
-      { selector: '.feed-card', cls: 'reveal' },
-      { selector: '.hof-card', cls: 'reveal', stagger: true },
-      { selector: '.chart-card', cls: 'reveal', stagger: true },
-      { selector: '.profile-stats-grid .modal-stat', cls: 'reveal', stagger: true },
-      { selector: '.profile-sections-grid .feed-card', cls: 'reveal', stagger: true },
-      { selector: '.sidebar', cls: 'reveal-left' },
-      { selector: '.content', cls: 'reveal-right' },
-      /* Dashboard — panels + rows */
-      { selector: '.dash-panel', cls: 'reveal', stagger: true },
-      { selector: '.dash-panel-header', cls: 'reveal' },
-      { selector: '.dash-row', cls: 'reveal', stagger: true, maxStagger: 12 },
-      /* Tournois — cards + sections */
-      { selector: '.trn-card', cls: 'reveal', stagger: true },
-      { selector: '.trn-section', cls: 'reveal' },
-      { selector: '.trn-hero', cls: 'reveal' }
-    ];
-
-    autoReveal.forEach(function (rule) {
+  /* Apply auto-reveal classes to elements that don't have them yet.
+     Called both on init AND after dynamic content injection (TFH_reveal). */
+  function applyAutoReveal() {
+    AUTO_REVEAL_RULES.forEach(function (rule) {
       var els = document.querySelectorAll(rule.selector);
       els.forEach(function (el, i) {
-        if (!el.classList.contains('reveal') && !el.classList.contains('reveal-left') && !el.classList.contains('reveal-right')) {
+        if (!el.classList.contains('reveal') && !el.classList.contains('reveal-left') && !el.classList.contains('reveal-right') && !el.classList.contains('reveal-scale')) {
           el.classList.add(rule.cls);
           if (rule.stagger) {
-            /* Cap stagger delay so long lists (e.g. 50 dashboard rows) don't
-               take 2.5s to fully reveal. After maxStagger items, delay stays flat. */
             var idx = rule.maxStagger ? Math.min(i, rule.maxStagger) : i;
             el.style.transitionDelay = (idx * 0.04) + 's';
           }
         }
       });
     });
+  }
 
-    reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  function initScrollReveal() {
+    applyAutoReveal();
+
+    var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    if (!reveals.length) return;
 
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -321,6 +324,9 @@
      renders its rows async after fetching scores). This re-scans for
      .reveal elements and observes them. */
   function reinitReveal() {
+    // First, add .reveal classes to any new elements that match auto-reveal rules
+    applyAutoReveal();
+
     var reveals = document.querySelectorAll('.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed), .reveal-scale:not(.revealed)');
     if (!reveals.length) return;
     var observer = new IntersectionObserver(function (entries) {
