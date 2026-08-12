@@ -1083,6 +1083,8 @@ document.addEventListener("click", (e) => {
             };
           }
 
+          // Load ranked.json for ELO display + ranked wins merge
+          await loadRankedJson();
           _mergedViews = buildMergedViews();
           mergeAndRender();
           scoresLoaded = true;
