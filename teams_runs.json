@@ -25810,6 +25810,34 @@
       "numPlayers": 74,
       "timestamp": "2026-08-12T09:31:02.848Z",
       "url": "https://openfront.io/game/iovmP3NV"
+    },
+    {
+      "id": "R3LrK43o",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Karbanatek",
+          "clientID": "zsgGLC7W",
+          "clanTag": "SSSVT"
+        },
+        {
+          "username": "BallsGuy67",
+          "clientID": "TF7Nz98m",
+          "clanTag": "SSSVT"
+        },
+        {
+          "username": "baradam",
+          "clientID": "xccYDsem",
+          "clanTag": "SSSVT"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1905,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-12T09:37:13.265Z",
+      "url": "https://openfront.io/game/R3LrK43o"
     }
   ],
   "quads": [
@@ -45859,6 +45887,95 @@
       "numPlayers": 60,
       "timestamp": "2026-08-12T09:35:39.163Z",
       "url": "https://openfront.io/game/8zCsp8YU"
+    },
+    {
+      "id": "CswJGtWp",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "boop god",
+          "clientID": "YHiPBRTa",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Parrot",
+          "clientID": "CxQTNyau",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "AnonHarp9",
+          "clientID": "w4fgV7gN",
+          "clanTag": null
+        },
+        {
+          "username": "Jan Mayen",
+          "clientID": "Hq4VJatv",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 906,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-12T09:56:52.367Z",
+      "url": "https://openfront.io/game/CswJGtWp"
+    },
+    {
+      "id": "nQdpXhgE",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Mary Beard",
+          "clientID": "oKsdRzqc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon076",
+          "clientID": "uipp3Gcs",
+          "clanTag": null
+        },
+        {
+          "username": "Smitter",
+          "clientID": "zz8JnCZ4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonWhisper5",
+          "clientID": "j1kpEnkR",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1033,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-12T09:55:18.287Z",
+      "url": "https://openfront.io/game/nQdpXhgE"
+    },
+    {
+      "id": "8w3ZkPmG",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "nightchicken",
+          "clientID": "wGAzK25X",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mary Beard",
+          "clientID": "Zk4AcSVb",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1537,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-12T09:41:57.519Z",
+      "url": "https://openfront.io/game/8w3ZkPmG"
     }
   ]
 }
