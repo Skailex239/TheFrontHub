@@ -67,9 +67,16 @@ function loadRankedPlayers(ranked) {
   return players;
 }
 
-function calculatePoints(stats) {
-  if (!stats) return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
-  const tree = stats.stats || stats;
+function calculatePoints(apiResponse) {
+  if (!apiResponse) return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
+  let tree = null;
+  if (apiResponse.stats && typeof apiResponse.stats === "object") {
+    tree = apiResponse.stats;
+  } else if (apiResponse.Public || apiResponse.Private || apiResponse.Ranked) {
+    tree = apiResponse;
+  } else {
+    return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
+  }
   let ffaCasualWins = 0, ffaRankedWins = 0, teamCasualWins = 0, teamRankedWins = 0;
   for (const catKey of Object.keys(tree)) {
     const cat = tree[catKey];
