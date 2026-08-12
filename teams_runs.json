@@ -26203,6 +26203,52 @@
       "numPlayers": 45,
       "timestamp": "2026-08-12T11:46:13.512Z",
       "url": "https://openfront.io/game/J3DmXREK"
+    },
+    {
+      "id": "6yGXgvfm",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "EMPIRE OF FRANCE",
+          "clientID": "6pgorgZj",
+          "clanTag": "UN"
+        },
+        {
+          "username": "OPPERGOD",
+          "clientID": "3KrUnkDG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Son of Tzu",
+          "clientID": "m758G8eF",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1151,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-12T12:14:18.124Z",
+      "url": "https://openfront.io/game/6yGXgvfm"
+    },
+    {
+      "id": "ZnRZEQqc",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "BigBoy",
+          "clientID": "gqdzcNGe",
+          "clanTag": "TE"
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 1111,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "timestamp": "2026-08-12T12:20:29.466Z",
+      "url": "https://openfront.io/game/ZnRZEQqc"
     }
   ],
   "quads": [
