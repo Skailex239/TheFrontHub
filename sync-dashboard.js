@@ -23,7 +23,9 @@ const SCORE = {
 
 async function fetchPlayerStats(publicId) {
   try {
-    return await openFrontFetch(`${API_BASE}/public/player/${encodeURIComponent(publicId)}`);
+    const res = await openFrontFetch(`${API_BASE}/public/player/${encodeURIComponent(publicId)}`);
+    if (!res || !res.ok) return null;
+    return await res.json();
   } catch (e) {
     console.warn(`[dashboard-sync] Failed for ${publicId}: ${e.message}`);
     return null;
