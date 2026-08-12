@@ -9718,6 +9718,47 @@
       "numPlayers": 30,
       "timestamp": "2026-08-12T11:31:46.707Z",
       "url": "https://openfront.io/game/azoW8vST"
+    },
+    {
+      "id": "V39GbWyx",
+      "team": "Team 23",
+      "players": [
+        {
+          "username": "LSCpansa",
+          "clientID": "f6AvTq9o",
+          "clanTag": null
+        },
+        {
+          "username": "RusEmpire",
+          "clientID": "pogWLw1Y",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1229,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-12T12:28:55.975Z",
+      "url": "https://openfront.io/game/V39GbWyx"
+    },
+    {
+      "id": "FzrDauPN",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BARON",
+          "clientID": "aYuxF79M",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 6153,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-12T11:11:26.587Z",
+      "url": "https://openfront.io/game/FzrDauPN"
     }
   ],
   "trios": [
@@ -26249,6 +26290,34 @@
       "numPlayers": 84,
       "timestamp": "2026-08-12T12:20:29.466Z",
       "url": "https://openfront.io/game/ZnRZEQqc"
+    },
+    {
+      "id": "j92r8xCC",
+      "team": "Team 23",
+      "players": [
+        {
+          "username": "CorsicaPennArBed",
+          "clientID": "vuhc48QD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGong2",
+          "clientID": "RXn7TuD1",
+          "clanTag": null
+        },
+        {
+          "username": "RigorMortis",
+          "clientID": "vb56QJ9q",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier France",
+      "duration_s": 937,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-12T12:39:10.622Z",
+      "url": "https://openfront.io/game/j92r8xCC"
     }
   ],
   "quads": [
@@ -46504,6 +46573,34 @@
       "numPlayers": 88,
       "timestamp": "2026-08-12T11:26:06.406Z",
       "url": "https://openfront.io/game/GSTSTHPW"
+    },
+    {
+      "id": "3eLVHHf8",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Reon.S.Kennedy",
+          "clientID": "yvvmExsN",
+          "clanTag": null
+        },
+        {
+          "username": "Rus",
+          "clientID": "geoTHeVq",
+          "clanTag": null
+        },
+        {
+          "username": "Reidiac",
+          "clientID": "1ibUtoaw",
+          "clanTag": "TRADE"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1180,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-12T12:32:29.186Z",
+      "url": "https://openfront.io/game/3eLVHHf8"
     }
   ]
 }
