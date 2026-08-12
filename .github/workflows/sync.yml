@@ -22,7 +22,6 @@ on:
   schedule:
     # cron disabled — retrigger loop handles scheduling
     # - cron: "*/5 * * * *"
-
 concurrency:
   group: auto-sync-v2
   cancel-in-progress: true
