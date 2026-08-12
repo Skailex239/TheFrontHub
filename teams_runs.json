@@ -24779,6 +24779,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-11T23:51:29.817Z",
       "url": "https://openfront.io/game/1Yra1jbA"
+    },
+    {
+      "id": "APNoGBMa",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "BIGGER THAN URS",
+          "clientID": "dDE8F916",
+          "clanTag": "MINE"
+        },
+        {
+          "username": "GOO GOO GAH GAH",
+          "clientID": "DMrMrcP7",
+          "clanTag": null
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 1053,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-12T00:34:54.451Z",
+      "url": "https://openfront.io/game/APNoGBMa"
     }
   ],
   "quads": [
@@ -44083,6 +44106,39 @@
       "numPlayers": 68,
       "timestamp": "2026-08-12T00:15:41.273Z",
       "url": "https://openfront.io/game/9B75sUSo"
+    },
+    {
+      "id": "3gxVUyio",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "NAPOLEON",
+          "clientID": "9zRgPRBU",
+          "clanTag": null
+        },
+        {
+          "username": "issou blard",
+          "clientID": "UWynfY8W",
+          "clanTag": "EML"
+        },
+        {
+          "username": "Zayd",
+          "clientID": "vjjuTxqU",
+          "clanTag": null
+        },
+        {
+          "username": "Iran",
+          "clientID": "2VMLqPyd",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1588,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-12T00:27:48.021Z",
+      "url": "https://openfront.io/game/3gxVUyio"
     }
   ]
 }
