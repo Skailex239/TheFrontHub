@@ -500,6 +500,7 @@
     initLenis();
     initScrollProgress();
     initPremiumReveal();
+    initMobileNav();
     initPageEntrance();
     initScrollReveal();
     initCountUp();
@@ -511,6 +512,86 @@
 
     // Particles last — non-critical visual
     if (!document.hidden) initParticles();
+  }
+
+  /* ── 13. Mobile navigation drawer (hamburger) ──
+     Creates a hamburger button + backdrop dynamically on every page.
+     Tapping the button slides the sidebar in from the left.
+     Tapping the backdrop or a nav link closes it.
+     Only active on screens ≤ 900px (CSS controls visibility). */
+  function initMobileNav() {
+    var sidebar = document.querySelector('.sidebar');
+    if (!sidebar) return;
+
+    // Create hamburger button
+    var btn = document.createElement('button');
+    btn.className = 'mobile-nav-btn';
+    btn.setAttribute('aria-label', 'Ouvrir le menu');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+    document.body.appendChild(btn);
+
+    // Create backdrop
+    var backdrop = document.createElement('div');
+    backdrop.className = 'sidebar-backdrop';
+    document.body.appendChild(backdrop);
+
+    function open() {
+      sidebar.classList.add('open');
+      backdrop.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'Fermer le menu');
+      // Swap to X icon
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+      // Stop Lenis from scrolling the background
+      if (window.TFH_lenis && typeof window.TFH_lenis.stop === 'function') {
+        window.TFH_lenis.stop();
+      }
+    }
+
+    function close() {
+      sidebar.classList.remove('open');
+      backdrop.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Ouvrir le menu');
+      // Restore hamburger icon
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      if (window.TFH_lenis && typeof window.TFH_lenis.start === 'function') {
+        window.TFH_lenis.start();
+      }
+    }
+
+    function toggle() {
+      if (sidebar.classList.contains('open')) close();
+      else open();
+    }
+
+    btn.addEventListener('click', toggle);
+    backdrop.addEventListener('click', close);
+
+    // Close when a nav link is tapped (snappy navigation)
+    sidebar.querySelectorAll('a.nav-item, .nav-item').forEach(function (link) {
+      link.addEventListener('click', function () {
+        // Only close if it's an actual navigation link (has href)
+        if (link.getAttribute('href') || link.getAttribute('onclick')) {
+          close();
+        }
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+        close();
+      }
+    });
+
+    // Close when resizing to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900 && sidebar.classList.contains('open')) {
+        close();
+      }
+    });
   }
 
   /* ── Re-init for dynamically injected content ──
