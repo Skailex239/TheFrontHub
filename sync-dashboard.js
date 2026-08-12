@@ -68,8 +68,8 @@ function loadRankedPlayers(ranked) {
 }
 
 function calculatePoints(stats) {
-  if (!stats || !stats.stats) return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
-  const tree = stats.stats;
+  if (!stats) return { total: 0, ffa_casual: 0, ffa_ranked: 0, team_casual: 0, team_ranked: 0 };
+  const tree = stats.stats || stats;
   let ffaCasualWins = 0, ffaRankedWins = 0, teamCasualWins = 0, teamRankedWins = 0;
   for (const catKey of Object.keys(tree)) {
     const cat = tree[catKey];
