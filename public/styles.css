@@ -1004,7 +1004,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
     .run-replay,.run-gap{display:none}
     .global-table td,.global-table th{padding:8px 10px;font-size:12px}
     .modal-stats{grid-template-columns:1fr 1fr}
-    .content{padding:20px 14px 60px}
+    .content{padding:70px 14px 60px}
     .cmp-row{flex-direction:column}
     .topbar h1{font-size:24px}
 }
