@@ -10821,6 +10821,52 @@
       "numPlayers": 64,
       "timestamp": "2026-08-13T12:44:27.900Z",
       "url": "https://openfront.io/game/rYANkLTX"
+    },
+    {
+      "id": "ByjPmbpE",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "JAPAN",
+          "clientID": "BcFbQBZi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "tim",
+          "clientID": "ZUrfnkf1",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 1940,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "timestamp": "2026-08-13T14:02:57.610Z",
+      "url": "https://openfront.io/game/ByjPmbpE"
+    },
+    {
+      "id": "rC162CDM",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Hambone",
+          "clientID": "i29PD3mz",
+          "clanTag": null
+        },
+        {
+          "username": "Houdini",
+          "clientID": "ctjDftFK",
+          "clanTag": "DARK"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1036,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 46,
+      "timestamp": "2026-08-13T14:25:01.890Z",
+      "url": "https://openfront.io/game/rC162CDM"
     }
   ],
   "trios": [
@@ -29448,6 +29494,29 @@
       "numPlayers": 51,
       "timestamp": "2026-08-13T13:31:12.726Z",
       "url": "https://openfront.io/game/eSpDdrSq"
+    },
+    {
+      "id": "F5xWwnjr",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Broomsweep",
+          "clientID": "EDmWgypB",
+          "clanTag": "VALLA"
+        },
+        {
+          "username": "Anon088",
+          "clientID": "sSEFXjMt",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 2382,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-13T13:54:26.114Z",
+      "url": "https://openfront.io/game/F5xWwnjr"
     }
   ],
   "quads": [
@@ -51884,6 +51953,24 @@
       "numPlayers": 20,
       "timestamp": "2026-08-13T13:37:59.134Z",
       "url": "https://openfront.io/game/oNsTo6AM"
+    },
+    {
+      "id": "GZkVvceH",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "SrLmo",
+          "clientID": "zXNwTL25",
+          "clanTag": "BRA"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1054,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-13T14:18:52.553Z",
+      "url": "https://openfront.io/game/GZkVvceH"
     }
   ]
 }
