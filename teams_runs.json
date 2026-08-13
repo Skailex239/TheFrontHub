@@ -27774,6 +27774,57 @@
       "numPlayers": 44,
       "timestamp": "2026-08-12T23:21:06.059Z",
       "url": "https://openfront.io/game/8UvELgKp"
+    },
+    {
+      "id": "fGwtF6KJ",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "BabyGucciButt",
+          "clientID": "CthQtagy",
+          "clanTag": "BTC"
+        },
+        {
+          "username": "TripleOSeven",
+          "clientID": "PwQhYFzR",
+          "clanTag": "BTC"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1747,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-12T23:32:23.763Z",
+      "url": "https://openfront.io/game/fGwtF6KJ"
+    },
+    {
+      "id": "FA8zx6er",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "HM31",
+          "clientID": "CouBMLoj",
+          "clanTag": "BOO"
+        },
+        {
+          "username": "extractmetrics.com",
+          "clientID": "6GiN2V9u",
+          "clanTag": null
+        },
+        {
+          "username": "Sense",
+          "clientID": "YChkJJ27",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 1405,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-12T23:40:10.289Z",
+      "url": "https://openfront.io/game/FA8zx6er"
     }
   ],
   "quads": [
@@ -48897,6 +48948,29 @@
       "numPlayers": 72,
       "timestamp": "2026-08-12T23:14:12.645Z",
       "url": "https://openfront.io/game/JfiZsu6a"
+    },
+    {
+      "id": "PcXt8oNy",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "AnonToucan2",
+          "clientID": "7CfKgRkG",
+          "clanTag": null
+        },
+        {
+          "username": "GIVE ME TROOPS I CARRY",
+          "clientID": "uXS6BrqG",
+          "clanTag": "DOG"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1156,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "timestamp": "2026-08-12T23:47:51.718Z",
+      "url": "https://openfront.io/game/PcXt8oNy"
     }
   ]
 }
