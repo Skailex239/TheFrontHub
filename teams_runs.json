@@ -11118,6 +11118,52 @@
       "numPlayers": 63,
       "timestamp": "2026-08-13T18:16:17.661Z",
       "url": "https://openfront.io/game/QAQdLajA"
+    },
+    {
+      "id": "8nxFNn9w",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "regreg",
+          "clientID": "1oJmC7Px",
+          "clanTag": "JUICE"
+        },
+        {
+          "username": "TGD",
+          "clientID": "VHYLeE6z",
+          "clanTag": "JUICE"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 933,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-13T18:33:57.669Z",
+      "url": "https://openfront.io/game/8nxFNn9w"
+    },
+    {
+      "id": "9CGEqi4C",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "SchlaendMan",
+          "clientID": "RLBNSH3m",
+          "clanTag": "LIT"
+        },
+        {
+          "username": "USA",
+          "clientID": "67nQxqZc",
+          "clanTag": "LIT"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1947,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-13T18:14:16.505Z",
+      "url": "https://openfront.io/game/9CGEqi4C"
     }
   ],
   "trios": [
@@ -30153,6 +30199,34 @@
       "numPlayers": 67,
       "timestamp": "2026-08-13T18:08:34.152Z",
       "url": "https://openfront.io/game/xQsNDu6z"
+    },
+    {
+      "id": "UD8TVkuS",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "pregnar",
+          "clientID": "QppfatQz",
+          "clanTag": "NL"
+        },
+        {
+          "username": "Trojo",
+          "clientID": "68omahqn",
+          "clanTag": "NL"
+        },
+        {
+          "username": "Kruiden",
+          "clientID": "ddfjNVXy",
+          "clanTag": "NL"
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 937,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-13T18:41:01.085Z",
+      "url": "https://openfront.io/game/UD8TVkuS"
     }
   ],
   "quads": [
