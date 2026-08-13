@@ -27996,6 +27996,34 @@
       "numPlayers": 65,
       "timestamp": "2026-08-13T01:43:28.646Z",
       "url": "https://openfront.io/game/dqQVi7cc"
+    },
+    {
+      "id": "q82rUhUd",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Rice",
+          "clientID": "EZADqU9J",
+          "clanTag": null
+        },
+        {
+          "username": "Freaky Thursday",
+          "clientID": "fDLkL9Zv",
+          "clanTag": null
+        },
+        {
+          "username": "Anonomon",
+          "clientID": "nfsPrQD5",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 2131,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-13T02:21:49.884Z",
+      "url": "https://openfront.io/game/q82rUhUd"
     }
   ],
   "quads": [
@@ -49399,6 +49427,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-13T01:35:24.190Z",
       "url": "https://openfront.io/game/itBAneWM"
+    },
+    {
+      "id": "T1dc14Ms",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Parsa221",
+          "clientID": "kps5LakN",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "goblandia",
+          "clientID": "qt6ztyuu",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "Griffer310",
+          "clientID": "hSsM2cfa",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "toast",
+          "clientID": "dtgr1KX6",
+          "clanTag": "GOB"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 765,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "timestamp": "2026-08-13T02:39:28.936Z",
+      "url": "https://openfront.io/game/T1dc14Ms"
     }
   ]
 }
