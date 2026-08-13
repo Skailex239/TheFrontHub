@@ -28711,6 +28711,24 @@
       "numPlayers": 33,
       "timestamp": "2026-08-13T08:04:02.798Z",
       "url": "https://openfront.io/game/VxS3LE9g"
+    },
+    {
+      "id": "WB3XVpnq",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "chlebik28",
+          "clientID": "XosZ3xBW",
+          "clanTag": "KGB"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1717,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "timestamp": "2026-08-13T08:27:43.165Z",
+      "url": "https://openfront.io/game/WB3XVpnq"
     }
   ],
   "quads": [
@@ -50430,6 +50448,62 @@
       "numPlayers": 60,
       "timestamp": "2026-08-13T07:39:05.346Z",
       "url": "https://openfront.io/game/ePbaHy8N"
+    },
+    {
+      "id": "Yns1TMuA",
+      "team": "Green",
+      "players": [
+        {
+          "username": "babeland",
+          "clientID": "2MrKFxER",
+          "clanTag": null
+        },
+        {
+          "username": "MrMatLat",
+          "clientID": "jaiptePz",
+          "clanTag": "LV"
+        },
+        {
+          "username": "Someone",
+          "clientID": "3aqWVp9P",
+          "clanTag": null
+        },
+        {
+          "username": "Cowabunga",
+          "clientID": "1iNTvNm5",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 742,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-13T08:39:52.839Z",
+      "url": "https://openfront.io/game/Yns1TMuA"
+    },
+    {
+      "id": "DGoPDTdE",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Former_UN_member",
+          "clientID": "7riCXcBo",
+          "clanTag": "SVK"
+        },
+        {
+          "username": "Creator",
+          "clientID": "ZFBDaLaN",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1275,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-13T08:34:54.568Z",
+      "url": "https://openfront.io/game/DGoPDTdE"
     }
   ]
 }
