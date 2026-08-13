@@ -10775,6 +10775,29 @@
       "numPlayers": 98,
       "timestamp": "2026-08-13T11:47:26.685Z",
       "url": "https://openfront.io/game/kkWPwsCu"
+    },
+    {
+      "id": "5WYMG3L9",
+      "team": "Team 23",
+      "players": [
+        {
+          "username": "Mr. Anon",
+          "clientID": "rJr3PigQ",
+          "clanTag": null
+        },
+        {
+          "username": "BouncyKid.HTWw",
+          "clientID": "5LFuSpSG",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 2265,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-13T12:18:17.391Z",
+      "url": "https://openfront.io/game/5WYMG3L9"
     }
   ],
   "trios": [
@@ -29165,6 +29188,62 @@
       "numPlayers": 114,
       "timestamp": "2026-08-13T11:25:42.378Z",
       "url": "https://openfront.io/game/jiUuLsXT"
+    },
+    {
+      "id": "HfuzSHf4",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "island",
+          "clientID": "gmUw7528",
+          "clanTag": "UN"
+        },
+        {
+          "username": "henroikol",
+          "clientID": "vHt2bD4r",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LittleCastro",
+          "clientID": "q8Vd9Sa8",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1372,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-13T12:23:22.665Z",
+      "url": "https://openfront.io/game/HfuzSHf4"
+    },
+    {
+      "id": "H8hwcebN",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Electron",
+          "clientID": "wv8gDaC7",
+          "clanTag": "QZ"
+        },
+        {
+          "username": "USA",
+          "clientID": "CZRseAqb",
+          "clanTag": "QZ"
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "CZE27hvG",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1405,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "timestamp": "2026-08-13T12:27:49.912Z",
+      "url": "https://openfront.io/game/H8hwcebN"
     }
   ],
   "quads": [
