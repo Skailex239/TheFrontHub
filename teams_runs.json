@@ -29982,6 +29982,57 @@
       "numPlayers": 114,
       "timestamp": "2026-08-13T16:58:55.037Z",
       "url": "https://openfront.io/game/B8kLbK8m"
+    },
+    {
+      "id": "4Cp21MYB",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Anon0",
+          "clientID": "BdfJo5SV",
+          "clanTag": null
+        },
+        {
+          "username": "bigtimehardline",
+          "clientID": "NqkhF6RU",
+          "clanTag": "UA"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-13T17:48:09.975Z",
+      "url": "https://openfront.io/game/4Cp21MYB"
+    },
+    {
+      "id": "H6raz242",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Cristianprk3",
+          "clientID": "g2PrDN75",
+          "clanTag": null
+        },
+        {
+          "username": "Anon170",
+          "clientID": "TupBUpVb",
+          "clanTag": null
+        },
+        {
+          "username": "Broc_Liath",
+          "clientID": "E8j4TrfK",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-13T17:34:18.156Z",
+      "url": "https://openfront.io/game/H6raz242"
     }
   ],
   "quads": [
@@ -52917,6 +52968,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-13T17:42:10.585Z",
       "url": "https://openfront.io/game/Jt7aEw4q"
+    },
+    {
+      "id": "KdYanE6f",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "MommysLilStinker",
+          "clientID": "Xw5WyaT9",
+          "clanTag": null
+        },
+        {
+          "username": "Bonzo",
+          "clientID": "Pj7Lhrvd",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Mr John OPENFRONT",
+          "clientID": "SZS7Z5Zn",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1861,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-13T17:27:54.789Z",
+      "url": "https://openfront.io/game/KdYanE6f"
     }
   ]
 }
