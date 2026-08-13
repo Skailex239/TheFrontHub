@@ -11256,6 +11256,29 @@
       "numPlayers": 51,
       "timestamp": "2026-08-13T19:48:44.042Z",
       "url": "https://openfront.io/game/mjczHYJV"
+    },
+    {
+      "id": "HTBtp5L8",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Who_s_in_Paris",
+          "clientID": "rTzhm5iH",
+          "clanTag": "HILB"
+        },
+        {
+          "username": "DioCleziano",
+          "clientID": "Q8ZkdE5e",
+          "clanTag": "HILB"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1650,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 31,
+      "timestamp": "2026-08-13T20:55:01.859Z",
+      "url": "https://openfront.io/game/HTBtp5L8"
     }
   ],
   "trios": [
@@ -53934,6 +53957,39 @@
       "numPlayers": 68,
       "timestamp": "2026-08-13T20:34:05.660Z",
       "url": "https://openfront.io/game/hzVKCtVB"
+    },
+    {
+      "id": "gYDHCkDN",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "ESS",
+          "clientID": "nNHVuScG",
+          "clanTag": "67"
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "bXztT1ug",
+          "clanTag": null
+        },
+        {
+          "username": "chtog",
+          "clientID": "ph7dSCFM",
+          "clanTag": "239"
+        },
+        {
+          "username": "Bubobubo",
+          "clientID": "j5bbMnd3",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 958,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "timestamp": "2026-08-13T21:05:45.030Z",
+      "url": "https://openfront.io/game/gYDHCkDN"
     }
   ]
 }
