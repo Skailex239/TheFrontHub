@@ -11279,6 +11279,24 @@
       "numPlayers": 31,
       "timestamp": "2026-08-13T20:55:01.859Z",
       "url": "https://openfront.io/game/HTBtp5L8"
+    },
+    {
+      "id": "GbcZnDyT",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "AnonCobalt",
+          "clientID": "vYMjNRf7",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 1554,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-13T21:10:22.291Z",
+      "url": "https://openfront.io/game/GbcZnDyT"
     }
   ],
   "trios": [
@@ -53990,6 +54008,39 @@
       "numPlayers": 35,
       "timestamp": "2026-08-13T21:05:45.030Z",
       "url": "https://openfront.io/game/gYDHCkDN"
+    },
+    {
+      "id": "RcLAX9bZ",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "LIVE ttv bktalks",
+          "clientID": "7YAqdmkv",
+          "clanTag": "NU"
+        },
+        {
+          "username": "bahma",
+          "clientID": "gwQkkmX7",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Nice Tits",
+          "clientID": "uM63BWC5",
+          "clanTag": "NU"
+        },
+        {
+          "username": "FLiPFLAVA",
+          "clientID": "VXTRegGL",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-13T21:26:30.265Z",
+      "url": "https://openfront.io/game/RcLAX9bZ"
     }
   ]
 }
