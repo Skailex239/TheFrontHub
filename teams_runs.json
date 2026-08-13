@@ -10619,6 +10619,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-13T06:03:29.823Z",
       "url": "https://openfront.io/game/DhTEpaCJ"
+    },
+    {
+      "id": "Dnz5FzLL",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Sadra",
+          "clientID": "6Hi6mLN1",
+          "clanTag": null
+        },
+        {
+          "username": "Ween",
+          "clientID": "fw7F3X5u",
+          "clanTag": "PEEN"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 990,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-13T06:52:41.721Z",
+      "url": "https://openfront.io/game/Dnz5FzLL"
     }
   ],
   "trios": [
@@ -50246,6 +50269,34 @@
       "numPlayers": 59,
       "timestamp": "2026-08-13T06:40:26.024Z",
       "url": "https://openfront.io/game/Pb5usvCm"
+    },
+    {
+      "id": "JooKedJ8",
+      "team": "Red",
+      "players": [
+        {
+          "username": "CuddleMonster67",
+          "clientID": "HvLEZPs6",
+          "clanTag": null
+        },
+        {
+          "username": "AMiR_H",
+          "clientID": "yoMPiXuM",
+          "clanTag": "IRI"
+        },
+        {
+          "username": "Dools",
+          "clientID": "YKdzzZ2v",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 1126,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-13T06:43:54.210Z",
+      "url": "https://openfront.io/game/JooKedJ8"
     }
   ]
 }
