@@ -10885,6 +10885,47 @@
       "numPlayers": 60,
       "timestamp": "2026-08-13T14:27:05.012Z",
       "url": "https://openfront.io/game/c26trFzB"
+    },
+    {
+      "id": "KtcsHf6Q",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Anon052",
+          "clientID": "BJPqGjA3",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 6224,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-13T13:25:58.416Z",
+      "url": "https://openfront.io/game/KtcsHf6Q"
+    },
+    {
+      "id": "hzYWNRSa",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "AAAAAAAAAAAEHAEJH",
+          "clientID": "pfV6K7X2",
+          "clanTag": "UFOZ"
+        },
+        {
+          "username": "labitdumoine",
+          "clientID": "9CUaTKfd",
+          "clanTag": "UFOZ"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1860,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-13T14:26:01.954Z",
+      "url": "https://openfront.io/game/hzYWNRSa"
     }
   ],
   "trios": [
@@ -29563,6 +29604,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-13T14:34:22.414Z",
       "url": "https://openfront.io/game/FgY3BRQ3"
+    },
+    {
+      "id": "KxpnYrTQ",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Sally Migret",
+          "clientID": "LRPwgbBY",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "MIKE",
+          "clientID": "LbG3QV5J",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "card hock",
+          "clientID": "4caUWMo8",
+          "clanTag": "ABC"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1669,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-13T14:45:45.083Z",
+      "url": "https://openfront.io/game/KxpnYrTQ"
     }
   ],
   "quads": [
@@ -52045,6 +52114,39 @@
       "numPlayers": 52,
       "timestamp": "2026-08-13T14:33:53.384Z",
       "url": "https://openfront.io/game/LaPQ1GDG"
+    },
+    {
+      "id": "DR2JYvQJ",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "judom",
+          "clientID": "rzSXmyuU",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "wybb",
+          "clientID": "xaSRzbeL",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "couye molle",
+          "clientID": "LAUX8GUr",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "TQ9QJ5Hd",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1018,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "timestamp": "2026-08-13T14:52:25.480Z",
+      "url": "https://openfront.io/game/DR2JYvQJ"
     }
   ]
 }
