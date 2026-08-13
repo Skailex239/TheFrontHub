@@ -10642,6 +10642,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-13T06:52:41.721Z",
       "url": "https://openfront.io/game/Dnz5FzLL"
+    },
+    {
+      "id": "Y7CkaamU",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "WeTradeWeWin",
+          "clientID": "21MnCax4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOcean6",
+          "clientID": "pJ5V8MRN",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1140,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-13T07:45:43.752Z",
+      "url": "https://openfront.io/game/Y7CkaamU"
     }
   ],
   "trios": [
@@ -50315,6 +50338,47 @@
       "numPlayers": 73,
       "timestamp": "2026-08-13T06:36:35.792Z",
       "url": "https://openfront.io/game/32qy9vqQ"
+    },
+    {
+      "id": "kmmQgf2y",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "ATHINA",
+          "clientID": "ZAJPiYbq",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 2373,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-13T07:30:33.821Z",
+      "url": "https://openfront.io/game/kmmQgf2y"
+    },
+    {
+      "id": "ePbaHy8N",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "I WILL KILL YOU",
+          "clientID": "nxn4DkAT",
+          "clanTag": "KILL"
+        },
+        {
+          "username": "VsL",
+          "clientID": "m5VE6VAE",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1606,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-13T07:39:05.346Z",
+      "url": "https://openfront.io/game/ePbaHy8N"
     }
   ]
 }
