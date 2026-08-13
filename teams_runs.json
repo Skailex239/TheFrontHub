@@ -30250,6 +30250,52 @@
       "numPlayers": 71,
       "timestamp": "2026-08-13T18:41:01.085Z",
       "url": "https://openfront.io/game/UD8TVkuS"
+    },
+    {
+      "id": "9uQppCLw",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "lowk...",
+          "clientID": "HeLWtAuQ",
+          "clanTag": "NUA"
+        },
+        {
+          "username": "KingJay",
+          "clientID": "9gKe52iw",
+          "clanTag": "NUA"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 866,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-13T18:58:43.125Z",
+      "url": "https://openfront.io/game/9uQppCLw"
+    },
+    {
+      "id": "X7mFphAF",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "mucmuc",
+          "clientID": "sDkuKMK6",
+          "clanTag": "MUC"
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "NN7JTuVg",
+          "clanTag": null
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1286,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-13T18:55:11.904Z",
+      "url": "https://openfront.io/game/X7mFphAF"
     }
   ],
   "quads": [
@@ -53246,6 +53292,72 @@
       "numPlayers": 88,
       "timestamp": "2026-08-13T18:47:00.466Z",
       "url": "https://openfront.io/game/sPZ23XnP"
+    },
+    {
+      "id": "t9zULnmb",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Rise of Nations",
+          "clientID": "wHzWEbGf",
+          "clanTag": null
+        },
+        {
+          "username": "Anon896",
+          "clientID": "EvhYkSNp",
+          "clanTag": null
+        },
+        {
+          "username": "Anon746",
+          "clientID": "nxrDAg1s",
+          "clanTag": null
+        },
+        {
+          "username": "Alph",
+          "clientID": "rGU18gLJ",
+          "clanTag": "POKKA"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-13T19:15:40.101Z",
+      "url": "https://openfront.io/game/t9zULnmb"
+    },
+    {
+      "id": "vZEX3qXd",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ToxicCro",
+          "clientID": "rSiHpRTM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "brrk",
+          "clientID": "6cGX53U8",
+          "clanTag": "UN"
+        },
+        {
+          "username": "HRE",
+          "clientID": "q4doSsRW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Wipeout",
+          "clientID": "eZQirjnJ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "timestamp": "2026-08-13T18:44:19.281Z",
+      "url": "https://openfront.io/game/vZEX3qXd"
     }
   ]
 }
