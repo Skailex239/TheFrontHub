@@ -11164,6 +11164,29 @@
       "numPlayers": 56,
       "timestamp": "2026-08-13T18:14:16.505Z",
       "url": "https://openfront.io/game/9CGEqi4C"
+    },
+    {
+      "id": "EtQKsftr",
+      "team": "Team 25",
+      "players": [
+        {
+          "username": "maa",
+          "clientID": "nakCHTKX",
+          "clanTag": null
+        },
+        {
+          "username": "Timocrat",
+          "clientID": "S9r9iqLm",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 2161,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-13T18:31:56.550Z",
+      "url": "https://openfront.io/game/EtQKsftr"
     }
   ],
   "trios": [
@@ -53190,6 +53213,39 @@
       "numPlayers": 48,
       "timestamp": "2026-08-13T17:27:54.789Z",
       "url": "https://openfront.io/game/KdYanE6f"
+    },
+    {
+      "id": "sPZ23XnP",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "book",
+          "clientID": "xDq66kut",
+          "clanTag": null
+        },
+        {
+          "username": "Clarity Act",
+          "clientID": "XYrRHjkf",
+          "clanTag": "XRP"
+        },
+        {
+          "username": "ooo",
+          "clientID": "NqntuouG",
+          "clanTag": null
+        },
+        {
+          "username": "Roman Empire",
+          "clientID": "vMDh8nEb",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 946,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-13T18:47:00.466Z",
+      "url": "https://openfront.io/game/sPZ23XnP"
     }
   ]
 }
