@@ -29673,6 +29673,34 @@
       "numPlayers": 43,
       "timestamp": "2026-08-13T14:45:45.083Z",
       "url": "https://openfront.io/game/KxpnYrTQ"
+    },
+    {
+      "id": "eryC14di",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Geez",
+          "clientID": "SfRmk13r",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "micro",
+          "clientID": "cDebXRTG",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "Anon235",
+          "clientID": "BN49FfP7",
+          "clanTag": "LAW"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1247,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "timestamp": "2026-08-13T15:34:26.922Z",
+      "url": "https://openfront.io/game/eryC14di"
     }
   ],
   "quads": [
@@ -52338,6 +52366,47 @@
       "numPlayers": 68,
       "timestamp": "2026-08-13T15:15:08.791Z",
       "url": "https://openfront.io/game/bdxSrRV2"
+    },
+    {
+      "id": "gze4hXPV",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Skullot",
+          "clientID": "Ekjer46i",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Empire of Floptropica",
+          "clientID": "MCWMvVLE",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 849,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-13T15:38:34.176Z",
+      "url": "https://openfront.io/game/gze4hXPV"
+    },
+    {
+      "id": "Rp8yshEU",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "But Why",
+          "clientID": "VmRNL3pk",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1437,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "timestamp": "2026-08-13T15:27:42.526Z",
+      "url": "https://openfront.io/game/Rp8yshEU"
     }
   ]
 }
