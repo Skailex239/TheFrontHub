@@ -10926,6 +10926,47 @@
       "numPlayers": 54,
       "timestamp": "2026-08-13T14:26:01.954Z",
       "url": "https://openfront.io/game/hzYWNRSa"
+    },
+    {
+      "id": "GmHdBzb1",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Lietuva",
+          "clientID": "2xNMbXXA",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1314,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-13T14:55:57.682Z",
+      "url": "https://openfront.io/game/GmHdBzb1"
+    },
+    {
+      "id": "aKGFg9G6",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Zorting",
+          "clientID": "w8XRSjqD",
+          "clanTag": "SRD"
+        },
+        {
+          "username": "UFOPLS",
+          "clientID": "vssqn5Pw",
+          "clanTag": "SRD"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1346,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-13T14:56:46.746Z",
+      "url": "https://openfront.io/game/aKGFg9G6"
     }
   ],
   "trios": [
@@ -52147,6 +52188,67 @@
       "numPlayers": 84,
       "timestamp": "2026-08-13T14:52:25.480Z",
       "url": "https://openfront.io/game/DR2JYvQJ"
+    },
+    {
+      "id": "2PuU1mJN",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "AnonHamster7",
+          "clientID": "s3GF51S9",
+          "clanTag": null
+        },
+        {
+          "username": "YoMama",
+          "clientID": "7w7phQsN",
+          "clanTag": null
+        },
+        {
+          "username": "ecurb",
+          "clientID": "g3V2jV5D",
+          "clanTag": null
+        },
+        {
+          "username": "Anon672",
+          "clientID": "fsL1cmDq",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 819,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-13T15:10:31.521Z",
+      "url": "https://openfront.io/game/2PuU1mJN"
+    },
+    {
+      "id": "9ZTthZsw",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "GuMo",
+          "clientID": "zvhXmfAm",
+          "clanTag": null
+        },
+        {
+          "username": "pplkk",
+          "clientID": "4EL2czyp",
+          "clanTag": "BALD"
+        },
+        {
+          "username": "AnonObsidian5",
+          "clientID": "vPHoKQDX",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1476,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-13T15:00:34.944Z",
+      "url": "https://openfront.io/game/9ZTthZsw"
     }
   ]
 }
