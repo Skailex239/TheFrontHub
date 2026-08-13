@@ -27853,6 +27853,57 @@
       "numPlayers": 36,
       "timestamp": "2026-08-12T23:54:59.145Z",
       "url": "https://openfront.io/game/ZJ1Ngd3p"
+    },
+    {
+      "id": "AEiXP8bR",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "Rataj",
+          "clientID": "kHtjka2h",
+          "clanTag": null
+        },
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "ThhVtm8C",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1276,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-13T00:07:16.883Z",
+      "url": "https://openfront.io/game/AEiXP8bR"
+    },
+    {
+      "id": "J6qQP1Sr",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "SnugglePuppy",
+          "clientID": "LHSBAUbD",
+          "clanTag": null
+        },
+        {
+          "username": "le faucheur",
+          "clientID": "z4M4M8id",
+          "clanTag": "DZ"
+        },
+        {
+          "username": "drerg",
+          "clientID": "11FZh2VV",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1635,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-13T00:00:48.500Z",
+      "url": "https://openfront.io/game/J6qQP1Sr"
     }
   ],
   "quads": [
@@ -48999,6 +49050,57 @@
       "numPlayers": 62,
       "timestamp": "2026-08-12T23:47:51.718Z",
       "url": "https://openfront.io/game/PcXt8oNy"
+    },
+    {
+      "id": "71A6xwRE",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Alexander Der Grosse",
+          "clientID": "dZq1VxHR",
+          "clanTag": "BER"
+        },
+        {
+          "username": "Mootzen",
+          "clientID": "FPmv1FyF",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUnicorn3",
+          "clientID": "rcS6K95V",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1560,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-12T23:58:47.379Z",
+      "url": "https://openfront.io/game/71A6xwRE"
+    },
+    {
+      "id": "mwZdnXWP",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Anon660",
+          "clientID": "sgaW35HW",
+          "clanTag": null
+        },
+        {
+          "username": "AXELT52",
+          "clientID": "ybf17vWq",
+          "clanTag": "69"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1174,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "timestamp": "2026-08-13T00:05:42.796Z",
+      "url": "https://openfront.io/game/mwZdnXWP"
     }
   ]
 }
