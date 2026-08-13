@@ -10417,6 +10417,29 @@
       "numPlayers": 14,
       "timestamp": "2026-08-13T03:04:34.470Z",
       "url": "https://openfront.io/game/xwoAa8TR"
+    },
+    {
+      "id": "Fuq98CfH",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Bedful",
+          "clientID": "xbow9ukc",
+          "clanTag": "GLBRG"
+        },
+        {
+          "username": "STONE",
+          "clientID": "F563X4pd",
+          "clanTag": "GLBRG"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 881,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-13T03:17:19.230Z",
+      "url": "https://openfront.io/game/Fuq98CfH"
     }
   ],
   "trios": [
@@ -49529,6 +49552,39 @@
       "numPlayers": 42,
       "timestamp": "2026-08-13T02:39:28.936Z",
       "url": "https://openfront.io/game/T1dc14Ms"
+    },
+    {
+      "id": "ZrKTqpxG",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Unova",
+          "clientID": "2VqkfWqT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "TRADE",
+          "clientID": "rccHstNk",
+          "clanTag": null
+        },
+        {
+          "username": "abubles",
+          "clientID": "wsEQmKsk",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BEB",
+          "clientID": "vZPToybB",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 806,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-13T03:12:53.955Z",
+      "url": "https://openfront.io/game/ZrKTqpxG"
     }
   ]
 }
