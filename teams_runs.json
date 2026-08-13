@@ -11003,6 +11003,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-13T16:04:29.725Z",
       "url": "https://openfront.io/game/soAq5G3g"
+    },
+    {
+      "id": "o1kVD2tm",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "JustLetMeTrade",
+          "clientID": "LeBXpyNT",
+          "clanTag": null
+        },
+        {
+          "username": "foundation",
+          "clientID": "XXWqAbwy",
+          "clanTag": "04"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1441,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-13T16:44:41.138Z",
+      "url": "https://openfront.io/game/o1kVD2tm"
     }
   ],
   "trios": [
@@ -29811,6 +29834,24 @@
       "numPlayers": 71,
       "timestamp": "2026-08-13T16:32:04.366Z",
       "url": "https://openfront.io/game/9DQTtpiW"
+    },
+    {
+      "id": "pRvaF5jp",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Klijin",
+          "clientID": "ffEtdfhE",
+          "clanTag": "H10"
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 1310,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-13T16:51:35.572Z",
+      "url": "https://openfront.io/game/pRvaF5jp"
     }
   ],
   "quads": [
@@ -52629,6 +52670,72 @@
       "numPlayers": 72,
       "timestamp": "2026-08-13T16:33:36.457Z",
       "url": "https://openfront.io/game/po6zfzYm"
+    },
+    {
+      "id": "W6CSpZMZ",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Harry",
+          "clientID": "Xaz8p5sx",
+          "clanTag": null
+        },
+        {
+          "username": "Louis",
+          "clientID": "K4GyPYqQ",
+          "clanTag": "DDG"
+        },
+        {
+          "username": "AnonGong6",
+          "clientID": "6gN2Eo55",
+          "clanTag": null
+        },
+        {
+          "username": "Anon110",
+          "clientID": "zp9hgkFb",
+          "clanTag": null
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 996,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-13T16:49:20.427Z",
+      "url": "https://openfront.io/game/W6CSpZMZ"
+    },
+    {
+      "id": "FKg4URyU",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Czech Republic",
+          "clientID": "WotSJ7rP",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSteam3",
+          "clientID": "kuRVGajK",
+          "clanTag": null
+        },
+        {
+          "username": "puni.81",
+          "clientID": "cx9hYZWn",
+          "clanTag": null
+        },
+        {
+          "username": "HIWI",
+          "clientID": "enHjwqXW",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 491,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-13T16:56:22.875Z",
+      "url": "https://openfront.io/game/FKg4URyU"
     }
   ]
 }
