@@ -30393,6 +30393,57 @@
       "numPlayers": 47,
       "timestamp": "2026-08-13T19:15:23.089Z",
       "url": "https://openfront.io/game/iorww9j1"
+    },
+    {
+      "id": "PKVKqDRd",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "PAYDAR",
+          "clientID": "e8udhJBJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "TROLL",
+          "clientID": "geXZrHGY",
+          "clanTag": null
+        },
+        {
+          "username": "im bad but a good teammate",
+          "clientID": "crGJK8zq",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1118,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-13T19:37:14.311Z",
+      "url": "https://openfront.io/game/PKVKqDRd"
+    },
+    {
+      "id": "9P2KgXNX",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "AnonObsidian1",
+          "clientID": "sagSSibv",
+          "clanTag": null
+        },
+        {
+          "username": "sallycanwait",
+          "clientID": "JXaYhY8P",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1006,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-13T19:42:53.686Z",
+      "url": "https://openfront.io/game/9P2KgXNX"
     }
   ],
   "quads": [
@@ -53455,6 +53506,57 @@
       "numPlayers": 91,
       "timestamp": "2026-08-13T18:44:19.281Z",
       "url": "https://openfront.io/game/vZEX3qXd"
+    },
+    {
+      "id": "WWf6RMmi",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Barrels",
+          "clientID": "TBdu5BPY",
+          "clanTag": null
+        },
+        {
+          "username": "Anon243",
+          "clientID": "jipW8MGM",
+          "clanTag": null
+        },
+        {
+          "username": "Spligan",
+          "clientID": "fwxdDCp6",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 1109,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-13T19:46:36.921Z",
+      "url": "https://openfront.io/game/WWf6RMmi"
+    },
+    {
+      "id": "wgE7hTZW",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Director Interneta",
+          "clientID": "PGz6CNsC",
+          "clanTag": null
+        },
+        {
+          "username": "Gutter Creature",
+          "clientID": "8KubF2om",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1434,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-13T19:30:47.931Z",
+      "url": "https://openfront.io/game/wgE7hTZW"
     }
   ]
 }
