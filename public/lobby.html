@@ -12,11 +12,11 @@
 <link rel="icon" type="image/png" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="128x128" href="favicon-180x180.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
-<link rel="stylesheet" href="styles.css?v=30">
+<link rel="stylesheet" href="styles.css?v=31">
 <link rel="stylesheet" href="auth.css?v=17">
 <link rel="stylesheet" href="toast.css">
 <link rel="stylesheet" href="animations.css?v=6">
-<link rel="stylesheet" href="lobby.css?v=3">
+<link rel="stylesheet" href="lobby.css?v=4">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 </head>
@@ -31,7 +31,7 @@
   <!-- ═══ SIDEBAR ═══ -->
   <aside class="sidebar">
 
-    <div class="logo">
+    <div class="logo" onclick="logoClickAnim(event)" role="link" aria-label="Aller au tableau de bord" tabindex="0">
       <img src="TheFrontHub Logo Text.png" alt="TheFrontHub" loading="eager">
     </div>
 
@@ -148,10 +148,10 @@
 <!-- Toast container -->
 <div id="toast-container"></div>
 
-<script type="module" src="lobby.js?v=4"></script>
+<script type="module" src="lobby.js?v=5"></script>
 <script type="module" src="auth.js?v=17"></script>
 <script src="toast.js"></script>
 <script src="lenis.js?v=2"></script>
-<script src="animations.js?v=9"></script>
+<script src="animations.js?v=10"></script>
 </body>
 </html>

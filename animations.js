@@ -630,6 +630,19 @@
   window.TFH_reveal = reinitReveal;
   window.TFH_initScrollReveal = initScrollReveal;
 
+  // Logo click animation + redirect to dashboard
+  window.logoClickAnim = function (e) {
+    e.preventDefault();
+    const logo = e.currentTarget || document.querySelector('.logo');
+    if (!logo) return;
+    logo.classList.remove('clicked');
+    void logo.offsetWidth; // force reflow
+    logo.classList.add('clicked');
+    setTimeout(function () {
+      window.location.href = 'dashboard.html';
+    }, 350);
+  };
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

@@ -137,8 +137,11 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
     box-shadow:2px 0 20px rgba(0,0,0,.03);
 }
 
-.logo{margin-bottom:36px;text-align:center}
-.logo img{max-width:100%;width:auto;height:auto;max-height:80px;display:block;margin:0 auto 8px;object-fit:contain}
+.logo{margin-bottom:36px;text-align:center;cursor:pointer}
+.logo img{max-width:100%;width:auto;height:auto;max-height:80px;display:block;margin:0 auto 8px;object-fit:contain;transition:transform 0.3s var(--ease-out,cubic-bezier(0.22,1,0.36,1))}
+.logo:active img{transform:scale(0.92)}
+.logo.clicked img{animation:logoClick 0.4s var(--ease-out,cubic-bezier(0.22,1,0.36,1))}
+@keyframes logoClick{0%{transform:scale(1)}30%{transform:scale(0.88) rotate(-3deg)}60%{transform:scale(1.05) rotate(2deg)}100%{transform:scale(1)}}
 .logo-text{font-size:20px;font-weight:800;color:var(--text);letter-spacing:-.3px}
 
 /* ── Sidebar Nav ── */

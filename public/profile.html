@@ -20,7 +20,7 @@
   <link rel="icon" type="image/png" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="128x128" href="favicon-180x180.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
-  <link rel="stylesheet" href="styles.css?v=30">
+  <link rel="stylesheet" href="styles.css?v=31">
   <link rel="stylesheet" href="auth.css?v=17">
   <link rel="stylesheet" href="profile.css?v=15">
   <link rel="stylesheet" href="animations.css?v=6" media="print" onload="this.media='all'">
@@ -406,7 +406,7 @@
   <!-- ═══ SIDEBAR ═══ -->
   <aside class="sidebar">
 
-    <div class="logo">
+    <div class="logo" onclick="logoClickAnim(event)" role="link" aria-label="Aller au tableau de bord" tabindex="0">
       <img src="TheFrontHub Logo Text.png" alt="TheFrontHub" loading="eager">
     </div>
 
@@ -629,7 +629,7 @@
 <script src="i18n.js"></script>
 <script src="toast.js?v=2" defer></script>
 <script src="lenis.js?v=2"></script>
-<script src="animations.js?v=9" defer></script>
+<script src="animations.js?v=10" defer></script>
 <script src="profile.js?v=24" type="module"></script>
 
 </body>
