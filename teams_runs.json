@@ -28116,6 +28116,52 @@
       "numPlayers": 36,
       "timestamp": "2026-08-13T03:00:35.234Z",
       "url": "https://openfront.io/game/PZVJCuFL"
+    },
+    {
+      "id": "4QJm7U6f",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Jesus on top",
+          "clientID": "fK14DCbh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hyde",
+          "clientID": "6uar77Sc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "JCCD",
+          "clientID": "94tV2XTD",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 1369,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-13T03:20:56.433Z",
+      "url": "https://openfront.io/game/4QJm7U6f"
+    },
+    {
+      "id": "kTdkbrRe",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonIvory8",
+          "clientID": "g9jqz6Yv",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 965,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "timestamp": "2026-08-13T03:33:17.174Z",
+      "url": "https://openfront.io/game/kTdkbrRe"
     }
   ],
   "quads": [
@@ -49585,6 +49631,72 @@
       "numPlayers": 44,
       "timestamp": "2026-08-13T03:12:53.955Z",
       "url": "https://openfront.io/game/ZrKTqpxG"
+    },
+    {
+      "id": "sKxpyRyB",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DAR",
+          "clientID": "KXwsMXF4",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Goose",
+          "clientID": "R7eAKrVE",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Cheesy",
+          "clientID": "SJ1JLvyL",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Qing Dynasty",
+          "clientID": "nQMwJs4u",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 676,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-13T03:36:52.383Z",
+      "url": "https://openfront.io/game/sKxpyRyB"
+    },
+    {
+      "id": "66gsRWcE",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "SneedsSeedandFeed",
+          "clientID": "bmn4Qzo7",
+          "clanTag": null
+        },
+        {
+          "username": "goof",
+          "clientID": "6UTqvzpp",
+          "clanTag": null
+        },
+        {
+          "username": "BaAaAaAaAaAh",
+          "clientID": "7BqRkBHR",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "Gale",
+          "clientID": "81vBCDCa",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-13T03:23:37.584Z",
+      "url": "https://openfront.io/game/66gsRWcE"
     }
   ]
 }
