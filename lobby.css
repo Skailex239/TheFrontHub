@@ -1,0 +1,366 @@
+/* lobby.css — Lobby Preview (parties OpenFront en temps réel)
+   Design épuré, 3 colonnes (FFA / Team / Special) + section prochaine partie.
+   Inspire du minhkarl/zeldableu mais avec la palette orange TheFrontHub. */
+
+.lobby-view {
+  padding: 0 0 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Status indicator ── */
+.lobby-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.lobby-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+  animation: lobby-pulse 1.5s ease-in-out infinite;
+}
+.lobby-status.connected .lobby-status-dot {
+  background: var(--green);
+  animation: none;
+}
+.lobby-status.connected { color: var(--green); }
+.lobby-status.error .lobby-status-dot {
+  background: var(--red);
+  animation: none;
+}
+.lobby-status.error { color: var(--red); }
+@keyframes lobby-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Loading / Empty ── */
+.lobby-loading,
+.lobby-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  gap: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+.lobby-loading .spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--orange);
+  border-radius: 50%;
+  animation: dash-spin 0.8s linear infinite;
+}
+
+/* ── Next game highlight ── */
+.lobby-next {
+  background: linear-gradient(135deg, #0a0e17 0%, #111827 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.lobby-next::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 30% 50%, rgba(255, 122, 0, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.lobby-next-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+}
+.lobby-next-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+.lobby-next-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.lobby-next-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.lobby-next-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.lobby-next-thumb {
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #1f2937;
+}
+.lobby-next-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lobby-next-join {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.lobby-next-join a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)),
+              background 0.2s ease;
+}
+.lobby-next-join a:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+}
+
+/* ── 3 columns: FFA / Team / Special ── */
+.lobby-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.lobby-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.lobby-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.lobby-column-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.lobby-column-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--bg-subtle);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+.lobby-column-ffa .lobby-column-title::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+.lobby-column-team .lobby-column-title::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #06b6d4;
+}
+.lobby-column-special .lobby-column-title::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a855f7;
+}
+
+/* ── Game card ── */
+.lobby-game {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.2s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  animation: lobby-game-in 0.3s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) backwards;
+}
+.lobby-game:hover {
+  transform: translateY(-2px);
+  border-color: var(--orange);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+@keyframes lobby-game-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lobby-game-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-subtle);
+  position: relative;
+}
+.lobby-game-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lobby-game-thumb-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.lobby-game-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.lobby-game-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lobby-game-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.lobby-game-players {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text);
+}
+.lobby-game-players.full { color: var(--red); }
+.lobby-game-difficulty {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.lobby-game-difficulty.easy { background: #dcfce7; color: #166534; }
+.lobby-game-difficulty.medium { background: #fef3c7; color: #92400e; }
+.lobby-game-difficulty.hard { background: #fee2e2; color: #991b1b; }
+
+.lobby-game-join {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 8px;
+  border-left: 1px solid var(--border);
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+.lobby-game:hover .lobby-game-join { color: var(--orange); }
+
+/* ── Empty column ── */
+.lobby-column-empty {
+  text-align: center;
+  padding: 32px 16px;
+  color: var(--muted);
+  font-size: 13px;
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+/* ── Footer ── */
+.lobby-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .lobby-columns { grid-template-columns: 1fr; gap: 24px; }
+  .lobby-next {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+  .lobby-next-thumb { width: 100%; height: 120px; }
+}
+@media (max-width: 640px) {
+  .lobby-game { padding: 10px; gap: 10px; }
+  .lobby-game-thumb { width: 48px; height: 48px; }
+  .lobby-game-name { font-size: 13px; }
+  .lobby-game-meta { font-size: 11px; gap: 8px; }
+}

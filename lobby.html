@@ -4,30 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<title>TheFrontHub — Tableau de bord</title>
-<meta name="description" content="Tableau de bord — Classement par points. FFA casual +10 · FFA classé +1 · Team casual +5 · Team classé +1.">
-<meta property="og:title" content="TheFrontHub — Tableau de bord">
-<meta property="og:description" content="Classement par points des parties OpenFront — FFA + Team, casual + ranked">
-<meta property="og:image" content="https://skailex239.github.io/TheFrontHub/TheFrontHub%20Logo%20Text.png">
-<meta property="og:url" content="https://skailex239.github.io/TheFrontHub/dashboard.html">
-<meta property="og:type" content="website">
-<meta name="openfront-api-proxy" content="https://openfront-proxy.diofortnite3.workers.dev">
+<title>TheFrontHub — Lobby Preview</title>
+<meta name="description" content="Lobby Preview — Visualisez les parties OpenFront en temps réel : FFA, Team, Special.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="128x128" href="favicon-180x180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
 <link rel="stylesheet" href="styles.css?v=30">
 <link rel="stylesheet" href="auth.css?v=17">
 <link rel="stylesheet" href="toast.css">
 <link rel="stylesheet" href="animations.css?v=6">
-<link rel="stylesheet" href="dashboard.css?v=14">
+<link rel="stylesheet" href="lobby.css?v=1">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 </head>
 <body>
-<a href="#dashboard-content" class="skip-link">Aller au contenu principal</a>
+<a href="#lobby-content" class="skip-link">Aller au contenu principal</a>
 <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
 
 <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column">
@@ -42,7 +36,7 @@
     </div>
 
     <nav role="tablist">
-      <a class="nav-item tab-btn active" id="tab-btn-dashboard" role="tab" aria-selected="true" tabindex="0">
+      <a class="nav-item tab-btn" id="tab-btn-dashboard" href="dashboard.html" role="tab" aria-selected="false" tabindex="0">
         <i data-icon="home"></i> Tableau de bord
       </a>
       <a class="nav-item tab-btn" id="tab-btn-maps" href="index.html" role="tab" aria-selected="false" tabindex="0">
@@ -51,7 +45,7 @@
       <a class="nav-item tab-btn" id="tab-btn-ranked" href="index.html?tab=ranked" role="tab" aria-selected="false" tabindex="0">
         <i data-icon="swords"></i> Classé
       </a>
-      <a class="nav-item tab-btn" id="tab-btn-lobby" href="lobby.html" role="tab" aria-selected="false" tabindex="0">
+      <a class="nav-item tab-btn active" id="tab-btn-lobby" role="tab" aria-selected="true" tabindex="0">
         <i data-icon="bolt"></i> Lobby
       </a>
       <a class="nav-item tab-btn" id="tab-btn-tournois" href="tournois.html" role="tab" aria-selected="false" tabindex="0">
@@ -64,22 +58,18 @@
 
     <!-- Profile / Auth -->
     <div class="sidebar-profile">
-
-      <!-- Logged out -->
       <div class="auth-zone" id="auth-zone">
         <button class="login-btn login-btn-sidebar" onclick="toggleAuthModal()" id="login-btn-main">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span>Se connecter</span>
+          <span>Connexion</span>
         </button>
       </div>
-
-      <!-- Logged in (hidden by default) -->
       <div class="user-container" id="user-container" style="display: none;">
-        <div class="user-badge" id="user-badge-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu" onclick="toggleUserDropdown(event)">
+        <div class="user-badge" id="user-badge-btn" onclick="toggleUserDropdown(event)">
           <div class="profile-avatar" id="sidebar-avatar">—</div>
           <div class="profile-info">
             <h4 id="user-display-name">—</h4>
-            <span id="user-public-id-side">En ligne</span>
+            <span>En ligne</span>
           </div>
           <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;color:var(--muted);flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
@@ -102,54 +92,46 @@
           </button>
         </div>
       </div>
-
     </div>
-
   </aside>
 
   <!-- ═══ MAIN CONTENT ═══ -->
-  <main class="content" id="dashboard-content">
-
-    <!-- Topbar -->
+  <main class="content" id="lobby-content">
     <header class="topbar">
       <div>
-        <h1 id="topbar-title">Tableau de bord</h1>
-        <p id="topbar-subtitle">Classement par points — FFA, Team, classé et casual</p>
+        <h1 id="topbar-title">Lobby</h1>
+        <p id="topbar-subtitle">Parties OpenFront en temps réel</p>
       </div>
       <div class="topbar-right">
-        <div id="last-update" class="last-update-inline" style="margin:0;padding:0;font-size:12px"></div>
+        <div id="lobby-status" class="lobby-status">
+          <span class="lobby-status-dot"></span>
+          <span class="lobby-status-text">Connexion…</span>
+        </div>
       </div>
     </header>
 
-    <!-- Zone de rendu du tableau de bord -->
-    <section class="dash-view" id="dashboard-view">
-      <div class="dash-loading">
+    <div id="lobby-view" class="lobby-view">
+      <div class="lobby-loading">
         <div class="spinner"></div>
-        <p>Chargement du classement…</p>
+        <p>Connexion aux serveurs OpenFront…</p>
       </div>
-    </section>
+    </div>
 
+    <footer class="lobby-footer">
+      <span>TheFrontHub · Lobby Preview · Données en temps réel via OpenFront WebSocket</span>
+    </footer>
   </main>
 
 </div><!-- /.app -->
 
-<!-- ═══ STICKY FOOTER ═══ -->
-<footer class="dash-footer">
-  <div class="dash-footer-inner">
-    <span>TheFrontHub · Classement par points OpenFront</span>
-  </div>
-</footer>
-
 </div><!-- /.page-wrap -->
 
-<!-- Auth Modal (copié verbatim de index.html) -->
+<!-- Auth Modal (copié de dashboard.html) -->
 <div class="modal-overlay" id="auth-modal" onclick="toggleAuthModal()">
   <div class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" onclick="event.stopPropagation()">
-    <button class="modal-close" aria-label="Fermer" onclick="toggleAuthModal()">&times;</button>
-    <div class="auth-modal-logo">
-      <img src="TheFrontHub Logo Text.png" alt="TheFrontHub Logo" class="auth-modal-logo-img">
-    </div>
+    <button class="modal-close" aria-label="Fermer" onclick="toggleAuthModal()" style="position:absolute;top:12px;right:12px">&times;</button>
     <div class="modal-header">
+      <img src="TheFrontHub Logo Text.png" alt="TheFrontHub Logo" class="auth-modal-logo-img">
       <div class="modal-title" id="auth-modal-title">Connexion</div>
       <div class="modal-subtitle">Connectez-vous pour lier votre compte OpenFront et accéder à votre profil.</div>
     </div>
@@ -167,53 +149,11 @@
   </div>
 </div>
 
-<!-- Profile Modal (copié verbatim de index.html) -->
-<div class="modal-overlay" id="profile-modal" onclick="closeProfileModal()">
-  <div class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title" onclick="event.stopPropagation()">
-    <button class="modal-close" aria-label="Fermer" onclick="closeProfileModal()" style="position:absolute;top:12px;right:12px">&times;</button>
-    <div class="modal-header">
-      <div class="modal-title" id="profile-modal-title">Finaliser votre profil</div>
-      <div class="modal-subtitle">Liez votre compte OpenFront pour fusionner vos stats.</div>
-    </div>
-    <div class="auth-form">
-      <!-- Step 1: username + publicId -->
-      <div id="profile-setup-step1">
-        <div class="form-group">
-          <label for="profile-username">Nom d'utilisateur OpenFront</label>
-          <input type="text" id="profile-username" placeholder="Ex: Skailex">
-        </div>
-        <div class="form-group">
-          <label for="profile-public-id">Public ID OpenFront (8 caractères)</label>
-          <input type="text" id="profile-public-id" placeholder="Ex: HabCsQYR" maxlength="8">
-        </div>
-        <button class="auth-btn" onclick="startOwnershipVerification()" style="width:100%;justify-content:center;background:var(--orange);color:#fff;border-color:var(--orange)">Vérifier mon compte</button>
-      </div>
-      <!-- Step 2: ownership challenge -->
-      <div id="profile-setup-step2" style="display:none">
-        <div style="background:var(--orange-pale);border:1px solid var(--orange);border-radius:8px;padding:14px;margin-bottom:14px">
-          <div style="font-weight:600;color:var(--orange);margin-bottom:6px"><i data-icon="key"></i> Code de vérification : <span id="ownership-code" style="font-family:var(--mono);font-size:16px"></span></div>
-          <div style="font-size:13px;color:var(--text)">
-            Pour prouver que vous êtes bien ce joueur :
-          </div>
-          <ol style="font-size:13px;color:var(--text);padding-left:20px;margin:8px 0">
-            <li>Modifiez votre pseudo OpenFront dans les paramètres du jeu</li>
-            <li>Ajoutez le code ci-dessus à votre pseudo (ex: <strong id="ownership-example"></strong>)</li>
-            <li>Jouez au moins une partie (ou utilisez un pseudo déjà utilisé récemment)</li>
-            <li>Cliquez sur "Confirmer" ci-dessous</li>
-          </ol>
-        </div>
-        <button class="auth-btn" onclick="confirmOwnershipVerification()" id="confirm-ownership-btn" style="width:100%;justify-content:center;background:var(--orange);color:#fff;border-color:var(--orange)">Confirmer</button>
-        <button class="auth-btn" onclick="cancelOwnershipVerification()" style="width:100%;justify-content:center;margin-top:8px;background:transparent;color:var(--muted)">Retour</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Toast container -->
 <div id="toast-container"></div>
 
-<script type="module" src="dashboard.js?v=21"></script>
-<script type="module" src="auth.js?v=16"></script>
+<script type="module" src="lobby.js?v=1"></script>
+<script type="module" src="auth.js?v=17"></script>
 <script src="toast.js"></script>
 <script src="lenis.js?v=2"></script>
 <script src="animations.js?v=9"></script>
