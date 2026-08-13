@@ -10752,6 +10752,29 @@
       "numPlayers": 37,
       "timestamp": "2026-08-13T11:01:35.926Z",
       "url": "https://openfront.io/game/oBumEJ8w"
+    },
+    {
+      "id": "kkWPwsCu",
+      "team": "Team 38",
+      "players": [
+        {
+          "username": "AnonRelic4",
+          "clientID": "YJmoW5sX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSnail7",
+          "clientID": "LkujqfCg",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1775,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-13T11:47:26.685Z",
+      "url": "https://openfront.io/game/kkWPwsCu"
     }
   ],
   "trios": [
@@ -29068,6 +29091,80 @@
       "numPlayers": 21,
       "timestamp": "2026-08-13T11:21:12.099Z",
       "url": "https://openfront.io/game/44E4UJwY"
+    },
+    {
+      "id": "URsZcesr",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "AnonTitan7",
+          "clientID": "YTiWzeTc",
+          "clanTag": null
+        },
+        {
+          "username": "Florence",
+          "clientID": "Gb6VAV2X",
+          "clanTag": null
+        },
+        {
+          "username": "F_My_S_Up",
+          "clientID": "q6z5vP9Z",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 646,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-13T11:55:28.132Z",
+      "url": "https://openfront.io/game/URsZcesr"
+    },
+    {
+      "id": "CMotNthr",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "waterr",
+          "clientID": "EWxFezdy",
+          "clanTag": "4L"
+        },
+        {
+          "username": "zay",
+          "clientID": "FKxvdovk",
+          "clanTag": "4L"
+        },
+        {
+          "username": "DemonTime777",
+          "clientID": "RRgFm7zv",
+          "clanTag": "4L"
+        }
+      ],
+      "map": "China",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-13T11:53:41.045Z",
+      "url": "https://openfront.io/game/CMotNthr"
+    },
+    {
+      "id": "jiUuLsXT",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "mizuarare",
+          "clientID": "dRNBJbW2",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2596,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-13T11:25:42.378Z",
+      "url": "https://openfront.io/game/jiUuLsXT"
     }
   ],
   "quads": [
