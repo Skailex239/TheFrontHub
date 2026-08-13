@@ -28854,6 +28854,34 @@
       "numPlayers": 74,
       "timestamp": "2026-08-13T09:25:52.455Z",
       "url": "https://openfront.io/game/GGwrJMVc"
+    },
+    {
+      "id": "eKpxwtPE",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "AnonSteam3",
+          "clientID": "pHgiLp96",
+          "clanTag": "GERMA"
+        },
+        {
+          "username": "TrADE Partners 4EvEr",
+          "clientID": "J8V4PaLa",
+          "clanTag": null
+        },
+        {
+          "username": "888",
+          "clientID": "Bxp2azwK",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1543,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-13T09:49:29.786Z",
+      "url": "https://openfront.io/game/eKpxwtPE"
     }
   ],
   "quads": [
@@ -50718,6 +50746,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-13T09:23:12.309Z",
       "url": "https://openfront.io/game/8NwAa8vu"
+    },
+    {
+      "id": "oSxcsiDs",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "117",
+          "clientID": "eBYavL5S",
+          "clanTag": null
+        },
+        {
+          "username": "Anon244",
+          "clientID": "mXeUx5oe",
+          "clanTag": null
+        },
+        {
+          "username": "Lazar Spinola",
+          "clientID": "XWVwuE3T",
+          "clanTag": null
+        },
+        {
+          "username": "Dash",
+          "clientID": "kPjPDj66",
+          "clanTag": "LIEGE"
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 1843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "timestamp": "2026-08-13T09:46:54.633Z",
+      "url": "https://openfront.io/game/oSxcsiDs"
     }
   ]
 }
