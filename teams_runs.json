@@ -29392,6 +29392,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-13T13:00:24.836Z",
       "url": "https://openfront.io/game/LV5QbpsP"
+    },
+    {
+      "id": "6F5Yc5k3",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Sylvan",
+          "clientID": "r6qwfffR",
+          "clanTag": "AST"
+        },
+        {
+          "username": "M613",
+          "clientID": "krqg4WBv",
+          "clanTag": "AST"
+        },
+        {
+          "username": "SlopeHunter",
+          "clientID": "xcMRM5EA",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1987,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-13T12:58:44.734Z",
+      "url": "https://openfront.io/game/6F5Yc5k3"
     }
   ],
   "quads": [
@@ -51716,6 +51744,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-13T12:51:07.299Z",
       "url": "https://openfront.io/game/NF37ywXb"
+    },
+    {
+      "id": "KKc3Af7n",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Wolk",
+          "clientID": "pT1iHrBi",
+          "clanTag": null
+        },
+        {
+          "username": "zouplek",
+          "clientID": "jTV4pt4v",
+          "clanTag": "GOY"
+        },
+        {
+          "username": "Just4Fun",
+          "clientID": "L8T5N2iX",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3443,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-13T12:39:55.628Z",
+      "url": "https://openfront.io/game/KKc3Af7n"
     }
   ]
 }
