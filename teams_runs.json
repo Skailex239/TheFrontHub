@@ -29420,6 +29420,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-13T12:58:44.734Z",
       "url": "https://openfront.io/game/6F5Yc5k3"
+    },
+    {
+      "id": "eSpDdrSq",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Clayz",
+          "clientID": "6CXyJdgK",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "hehehe",
+          "clientID": "tmTGMcBf",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "Andy Fischgeiger",
+          "clientID": "J5VWmmzB",
+          "clanTag": "31ER"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1164,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-13T13:31:12.726Z",
+      "url": "https://openfront.io/game/eSpDdrSq"
     }
   ],
   "quads": [
@@ -51772,6 +51800,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-13T12:39:55.628Z",
       "url": "https://openfront.io/game/KKc3Af7n"
+    },
+    {
+      "id": "hpEN5w3F",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Kimote",
+          "clientID": "c7Dqnha6",
+          "clanTag": "GEO"
+        },
+        {
+          "username": "Blablatok",
+          "clientID": "nPjw5mib",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 1223,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-13T13:30:27.686Z",
+      "url": "https://openfront.io/game/hpEN5w3F"
     }
   ]
 }
