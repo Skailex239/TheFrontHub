@@ -28596,6 +28596,24 @@
       "numPlayers": 49,
       "timestamp": "2026-08-13T06:30:04.428Z",
       "url": "https://openfront.io/game/QVWy5ndv"
+    },
+    {
+      "id": "xBqY37jS",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "hell",
+          "clientID": "jgi6Csxj",
+          "clanTag": "SG"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1305,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "timestamp": "2026-08-13T06:32:26.566Z",
+      "url": "https://openfront.io/game/xBqY37jS"
     }
   ],
   "quads": [
@@ -50205,6 +50223,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-13T05:52:15.164Z",
       "url": "https://openfront.io/game/5DTY5Scv"
+    },
+    {
+      "id": "Pb5usvCm",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Anon802",
+          "clientID": "CQ3wjCfr",
+          "clanTag": null
+        },
+        {
+          "username": "Basileia ton Rhomaion",
+          "clientID": "P9j7tkdj",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 973,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "timestamp": "2026-08-13T06:40:26.024Z",
+      "url": "https://openfront.io/game/Pb5usvCm"
     }
   ]
 }
