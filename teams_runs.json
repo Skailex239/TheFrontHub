@@ -29701,6 +29701,34 @@
       "numPlayers": 49,
       "timestamp": "2026-08-13T15:34:26.922Z",
       "url": "https://openfront.io/game/eryC14di"
+    },
+    {
+      "id": "ZagGRutF",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Hippopanonymous",
+          "clientID": "7GsCamge",
+          "clanTag": null
+        },
+        {
+          "username": "Byzantine Empire",
+          "clientID": "WATuGa9Q",
+          "clanTag": null
+        },
+        {
+          "username": "BaCkStAbBeR67",
+          "clientID": "pmtMBHzU",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "timestamp": "2026-08-13T15:45:07.536Z",
+      "url": "https://openfront.io/game/ZagGRutF"
     }
   ],
   "quads": [
@@ -52407,6 +52435,29 @@
       "numPlayers": 123,
       "timestamp": "2026-08-13T15:27:42.526Z",
       "url": "https://openfront.io/game/Rp8yshEU"
+    },
+    {
+      "id": "Y5zyJG2d",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "dan785",
+          "clientID": "qcxfchd8",
+          "clanTag": null
+        },
+        {
+          "username": "Spazz Himself",
+          "clientID": "gJrTmWRY",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1625,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-13T15:40:57.301Z",
+      "url": "https://openfront.io/game/Y5zyJG2d"
     }
   ]
 }
