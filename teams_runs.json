@@ -11187,6 +11187,52 @@
       "numPlayers": 52,
       "timestamp": "2026-08-13T18:31:56.550Z",
       "url": "https://openfront.io/game/EtQKsftr"
+    },
+    {
+      "id": "tp9RcaSg",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Sheldorf",
+          "clientID": "hrv1zCq3",
+          "clanTag": null
+        },
+        {
+          "username": "nyd",
+          "clientID": "hVsBKG9H",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 786,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-13T19:21:45.434Z",
+      "url": "https://openfront.io/game/tp9RcaSg"
+    },
+    {
+      "id": "Fd55fd8A",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "PROUT MangeurDeSaucisson",
+          "clientID": "WYYX6KiV",
+          "clanTag": null
+        },
+        {
+          "username": "The Virginia Ascendancy",
+          "clientID": "hLE8San1",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 953,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-13T19:24:12.573Z",
+      "url": "https://openfront.io/game/Fd55fd8A"
     }
   ],
   "trios": [
@@ -30296,6 +30342,34 @@
       "numPlayers": 54,
       "timestamp": "2026-08-13T18:55:11.904Z",
       "url": "https://openfront.io/game/X7mFphAF"
+    },
+    {
+      "id": "9KTdZtdj",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "AnonHarbor",
+          "clientID": "tWndiLVa",
+          "clanTag": null
+        },
+        {
+          "username": "book",
+          "clientID": "UL5cGFLK",
+          "clanTag": null
+        },
+        {
+          "username": "anon136",
+          "clientID": "2Ysu4eUy",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1421,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-13T19:07:52.646Z",
+      "url": "https://openfront.io/game/9KTdZtdj"
     }
   ],
   "quads": [
