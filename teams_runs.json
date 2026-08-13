@@ -11233,6 +11233,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-13T19:24:12.573Z",
       "url": "https://openfront.io/game/Fd55fd8A"
+    },
+    {
+      "id": "mjczHYJV",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "p0se",
+          "clientID": "uDt7nvqq",
+          "clanTag": "RBTV"
+        },
+        {
+          "username": "Anon660",
+          "clientID": "e9r4oo9S",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1387,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-13T19:48:44.042Z",
+      "url": "https://openfront.io/game/mjczHYJV"
     }
   ],
   "trios": [
@@ -30444,6 +30467,34 @@
       "numPlayers": 51,
       "timestamp": "2026-08-13T19:42:53.686Z",
       "url": "https://openfront.io/game/9P2KgXNX"
+    },
+    {
+      "id": "h3SeeN1N",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Bojangle",
+          "clientID": "y3wRU4uL",
+          "clanTag": null
+        },
+        {
+          "username": "Wonder",
+          "clientID": "3kyZLzyv",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "Restart",
+          "clientID": "cSYupUco",
+          "clanTag": "NUB"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 89,
+      "timestamp": "2026-08-13T19:52:45.278Z",
+      "url": "https://openfront.io/game/h3SeeN1N"
     }
   ],
   "quads": [
@@ -53557,6 +53608,90 @@
       "numPlayers": 72,
       "timestamp": "2026-08-13T19:30:47.931Z",
       "url": "https://openfront.io/game/wgE7hTZW"
+    },
+    {
+      "id": "ESzyuPQu",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "La Serinisima",
+          "clientID": "c3MTyCqh",
+          "clanTag": null
+        },
+        {
+          "username": "Death",
+          "clientID": "RQZVmHUy",
+          "clanTag": null
+        },
+        {
+          "username": "Anon5",
+          "clientID": "9ZkWMZa4",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 949,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-13T19:50:45.158Z",
+      "url": "https://openfront.io/game/ESzyuPQu"
+    },
+    {
+      "id": "M4BMfVZy",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonTalisman4",
+          "clientID": "wjKXMFUZ",
+          "clanTag": null
+        },
+        {
+          "username": "Wurkus",
+          "clientID": "rFhTjEWQ",
+          "clanTag": "NEW"
+        },
+        {
+          "username": "new",
+          "clientID": "UpsvTmcy",
+          "clanTag": "NEW"
+        },
+        {
+          "username": "DDR",
+          "clientID": "i3jKD5bj",
+          "clanTag": "NEW"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 672,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-13T20:01:14.766Z",
+      "url": "https://openfront.io/game/M4BMfVZy"
+    },
+    {
+      "id": "Q13N85wW",
+      "team": "Team 28",
+      "players": [
+        {
+          "username": "Chord",
+          "clientID": "M9vy3ysE",
+          "clanTag": null
+        },
+        {
+          "username": "Swamp Puppy",
+          "clientID": "aGz6Gsdg",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1293,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 109,
+      "timestamp": "2026-08-13T19:46:25.908Z",
+      "url": "https://openfront.io/game/Q13N85wW"
     }
   ]
 }
