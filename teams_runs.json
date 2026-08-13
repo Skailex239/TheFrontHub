@@ -10665,6 +10665,24 @@
       "numPlayers": 56,
       "timestamp": "2026-08-13T07:45:43.752Z",
       "url": "https://openfront.io/game/Y7CkaamU"
+    },
+    {
+      "id": "zfLK7NWK",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Anon400",
+          "clientID": "E6aGuBou",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1358,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-13T08:38:45.780Z",
+      "url": "https://openfront.io/game/zfLK7NWK"
     }
   ],
   "trios": [
@@ -28729,6 +28747,34 @@
       "numPlayers": 62,
       "timestamp": "2026-08-13T08:27:43.165Z",
       "url": "https://openfront.io/game/WB3XVpnq"
+    },
+    {
+      "id": "32ZQ7pqr",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "Lexico",
+          "clientID": "txZ8Ns7a",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench",
+          "clientID": "hXcx4bMG",
+          "clanTag": null
+        },
+        {
+          "username": "ohhhhh ah",
+          "clientID": "rHrnwP6s",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1075,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-13T08:43:06.015Z",
+      "url": "https://openfront.io/game/32ZQ7pqr"
     }
   ],
   "quads": [
@@ -50504,6 +50550,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-13T08:34:54.568Z",
       "url": "https://openfront.io/game/DGoPDTdE"
+    },
+    {
+      "id": "xiTs2XiP",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonDusk6",
+          "clientID": "URWb2ytZ",
+          "clanTag": null
+        },
+        {
+          "username": "VulgarPotato",
+          "clientID": "9rach2BL",
+          "clanTag": null
+        },
+        {
+          "username": "Rageing",
+          "clientID": "zxXWvNoo",
+          "clanTag": "GG"
+        },
+        {
+          "username": "Myrmidon",
+          "clientID": "oqpSwD3e",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 629,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-13T08:54:52.698Z",
+      "url": "https://openfront.io/game/xiTs2XiP"
     }
   ]
 }
