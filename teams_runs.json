@@ -49231,6 +49231,62 @@
       "numPlayers": 44,
       "timestamp": "2026-08-13T01:05:50.263Z",
       "url": "https://openfront.io/game/qzvWuY1L"
+    },
+    {
+      "id": "KAeNquBJ",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Austin Reaves",
+          "clientID": "i8Lbi5zy",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Anon299",
+          "clientID": "Mw5EJHvW",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 914,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-13T01:26:32.593Z",
+      "url": "https://openfront.io/game/KAeNquBJ"
+    },
+    {
+      "id": "U85xEiZs",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Palegan",
+          "clientID": "eKweE5ZR",
+          "clanTag": null
+        },
+        {
+          "username": "sal",
+          "clientID": "Z8YpNrVF",
+          "clanTag": "MAD"
+        },
+        {
+          "username": "AnonFjord7",
+          "clientID": "CRLJ87YN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonChariot7",
+          "clientID": "nSRXpTr7",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1162,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-13T01:15:49.885Z",
+      "url": "https://openfront.io/game/U85xEiZs"
     }
   ]
 }
