@@ -51823,6 +51823,67 @@
       "numPlayers": 88,
       "timestamp": "2026-08-13T13:30:27.686Z",
       "url": "https://openfront.io/game/hpEN5w3F"
+    },
+    {
+      "id": "BFxfoeQ9",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Krasnodar",
+          "clientID": "nCTK2Q8e",
+          "clanTag": null
+        },
+        {
+          "username": "Gedeon",
+          "clientID": "xa59PQBV",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "Serlo",
+          "clientID": "y86vwzdP",
+          "clanTag": "UNT"
+        },
+        {
+          "username": "WildBurger.kjHj",
+          "clientID": "f6DRohnc",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 708,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-13T13:52:09.984Z",
+      "url": "https://openfront.io/game/BFxfoeQ9"
+    },
+    {
+      "id": "oNsTo6AM",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "striker",
+          "clientID": "t2fSrZ7j",
+          "clanTag": null
+        },
+        {
+          "username": "F10 Taormina",
+          "clientID": "9TbELkHb",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTemple7",
+          "clientID": "bQWJZRr1",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1177,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-13T13:37:59.134Z",
+      "url": "https://openfront.io/game/oNsTo6AM"
     }
   ]
 }
