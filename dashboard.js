@@ -715,6 +715,11 @@ function render() {
   view.innerHTML = `
     ${liveTag}
 
+    <div class="dash-intro">
+      <h1 class="dash-intro-title">Tableau de bord</h1>
+      <p class="dash-intro-sub">TheFrontHub synchronise automatiquement votre historique de parties et vos statistiques OpenFront, visualise vos conquêtes et classe vos performances à l'échelle mondiale.</p>
+    </div>
+
     <div class="dash-grid">
       <section class="dash-panel">
         <div class="dash-panel-header">
