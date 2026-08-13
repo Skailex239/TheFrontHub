@@ -10798,6 +10798,29 @@
       "numPlayers": 80,
       "timestamp": "2026-08-13T12:18:17.391Z",
       "url": "https://openfront.io/game/5WYMG3L9"
+    },
+    {
+      "id": "rYANkLTX",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Boosta Rhymes",
+          "clientID": "EemTAvAa",
+          "clanTag": "MD"
+        },
+        {
+          "username": "BALLZ",
+          "clientID": "jmfEc4X1",
+          "clanTag": "MD"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 871,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-13T12:44:27.900Z",
+      "url": "https://openfront.io/game/rYANkLTX"
     }
   ],
   "trios": [
@@ -29244,6 +29267,29 @@
       "numPlayers": 123,
       "timestamp": "2026-08-13T12:27:49.912Z",
       "url": "https://openfront.io/game/H8hwcebN"
+    },
+    {
+      "id": "2v5mW6Ve",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Srbska",
+          "clientID": "R4FvRgYy",
+          "clanTag": null
+        },
+        {
+          "username": "bigtimehardline",
+          "clientID": "MRzM3311",
+          "clanTag": "UA"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1263,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-13T12:48:23.136Z",
+      "url": "https://openfront.io/game/2v5mW6Ve"
     }
   ],
   "quads": [
@@ -51535,6 +51581,39 @@
       "numPlayers": 12,
       "timestamp": "2026-08-13T12:21:53.582Z",
       "url": "https://openfront.io/game/5YsK7Dd9"
+    },
+    {
+      "id": "NF37ywXb",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "m.a",
+          "clientID": "PQ8xQ3Kx",
+          "clanTag": null
+        },
+        {
+          "username": "Choroszcz",
+          "clientID": "xm6yJgpw",
+          "clanTag": "KONON"
+        },
+        {
+          "username": "Trade",
+          "clientID": "qpUovDmd",
+          "clanTag": null
+        },
+        {
+          "username": "Burge",
+          "clientID": "Ytu3Jijq",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 909,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-13T12:51:07.299Z",
+      "url": "https://openfront.io/game/NF37ywXb"
     }
   ]
 }
