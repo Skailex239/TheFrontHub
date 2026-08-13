@@ -10353,6 +10353,29 @@
       "numPlayers": 26,
       "timestamp": "2026-08-12T23:16:58.810Z",
       "url": "https://openfront.io/game/qEpR3uEh"
+    },
+    {
+      "id": "mLWpA2E9",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "TradingEmpire",
+          "clientID": "o1X2u2p3",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Woda",
+          "clientID": "ZCVzjXWX",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "France",
+      "duration_s": 1066,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-13T00:21:59.695Z",
+      "url": "https://openfront.io/game/mLWpA2E9"
     }
   ],
   "trios": [
@@ -49101,6 +49124,29 @@
       "numPlayers": 41,
       "timestamp": "2026-08-13T00:05:42.796Z",
       "url": "https://openfront.io/game/mwZdnXWP"
+    },
+    {
+      "id": "sdKUBbrA",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "SilverAflame",
+          "clientID": "yp39eSEa",
+          "clanTag": "GRA"
+        },
+        {
+          "username": "JUMBUM",
+          "clientID": "G5gWtTF8",
+          "clanTag": "GRA"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1462,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-13T00:15:08.306Z",
+      "url": "https://openfront.io/game/sdKUBbrA"
     }
   ]
 }
