@@ -723,10 +723,10 @@ function render() {
       <div class="dash-help-popover" id="dash-help-popover" role="dialog" aria-label="Barème des points">
         <div class="dash-help-popover-header">Barème des points</div>
         <ul class="dash-help-popover-list">
-          <li><span class="dash-help-mode">FFA casual</span><span class="dash-help-pts">+10 pts</span></li>
-          <li><span class="dash-help-mode">Team casual</span><span class="dash-help-pts">+5 pts</span></li>
-          <li><span class="dash-help-mode">FFA classé (1v1)</span><span class="dash-help-pts">+1 pt</span></li>
-          <li><span class="dash-help-mode">Team classé (2v2)</span><span class="dash-help-pts">+1 pt</span></li>
+          <li><span class="dash-help-mode">FFA</span><span class="dash-help-pts">+10 pts</span></li>
+          <li><span class="dash-help-mode">Team</span><span class="dash-help-pts">+5 pts</span></li>
+          <li><span class="dash-help-mode">classé (1v1)</span><span class="dash-help-pts">+1 pt</span></li>
+          <li><span class="dash-help-mode">classé (2v2)</span><span class="dash-help-pts">+1 pt</span></li>
         </ul>
         <p class="dash-help-note">Le classé rapporte juste 1 pt, pas en plus du casual.</p>
       </div>
