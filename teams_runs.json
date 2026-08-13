@@ -28938,6 +28938,34 @@
       "numPlayers": 21,
       "timestamp": "2026-08-13T10:43:08.807Z",
       "url": "https://openfront.io/game/ryaMyHVe"
+    },
+    {
+      "id": "BL7Gbv7j",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Warspit3",
+          "clientID": "PBccHnfB",
+          "clanTag": null
+        },
+        {
+          "username": "Big G Patton",
+          "clientID": "EVdL56Ut",
+          "clanTag": "ANZ"
+        },
+        {
+          "username": "Rommel",
+          "clientID": "tfHBGZ2R",
+          "clanTag": "ANZ"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 1083,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-13T10:48:09.131Z",
+      "url": "https://openfront.io/game/BL7Gbv7j"
     }
   ],
   "quads": [
@@ -50924,6 +50952,39 @@
       "numPlayers": 58,
       "timestamp": "2026-08-13T10:02:32.490Z",
       "url": "https://openfront.io/game/6zgTEVPK"
+    },
+    {
+      "id": "LuNb6948",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Guy Empire",
+          "clientID": "PKex1RUG",
+          "clanTag": "GM"
+        },
+        {
+          "username": "AnonFern5",
+          "clientID": "7uEG5FDJ",
+          "clanTag": null
+        },
+        {
+          "username": "Low",
+          "clientID": "pChMFmvW",
+          "clanTag": null
+        },
+        {
+          "username": "mhmmm",
+          "clientID": "4mdHvYTW",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 657,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-13T11:00:44.866Z",
+      "url": "https://openfront.io/game/LuNb6948"
     }
   ]
 }
