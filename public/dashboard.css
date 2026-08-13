@@ -14,17 +14,10 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* ── Intro (titre + description au-dessus des classements) ── */
+/* ── Intro (description au-dessus des classements) ── */
 .dash-intro {
   margin-bottom: 32px;
   text-align: center;
-}
-.dash-intro-title {
-  font-size: 28px;
-  font-weight: 800;
-  color: #111827;
-  letter-spacing: -0.02em;
-  margin: 0 0 8px;
 }
 .dash-intro-sub {
   font-size: 15px;
@@ -583,7 +576,6 @@
 @media (max-width: 640px) {
   .dash-view { padding: 70px 14px 60px; }
   .dash-intro { margin-bottom: 24px; }
-  .dash-intro-title { font-size: 22px; }
   .dash-intro-sub { font-size: 13px; }
   .dash-panel-header { padding-bottom: 10px; }
   .dash-panel-title { font-size: 14px; }
