@@ -29729,6 +29729,29 @@
       "numPlayers": 29,
       "timestamp": "2026-08-13T15:45:07.536Z",
       "url": "https://openfront.io/game/ZagGRutF"
+    },
+    {
+      "id": "q7pjcqPc",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Fridericus",
+          "clientID": "DreiHYuJ",
+          "clanTag": "EU"
+        },
+        {
+          "username": "IL Duce",
+          "clientID": "R9USmv2X",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1765,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-13T15:46:43.634Z",
+      "url": "https://openfront.io/game/q7pjcqPc"
     }
   ],
   "quads": [
@@ -52458,6 +52481,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-13T15:40:57.301Z",
       "url": "https://openfront.io/game/Y5zyJG2d"
+    },
+    {
+      "id": "bn6Aobqk",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "Byzantine",
+          "clientID": "wsokoAHZ",
+          "clanTag": "DOUG"
+        },
+        {
+          "username": "Viceroyalty of Bubo",
+          "clientID": "NdgGRC1d",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 992,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-13T16:03:23.671Z",
+      "url": "https://openfront.io/game/bn6Aobqk"
     }
   ]
 }
