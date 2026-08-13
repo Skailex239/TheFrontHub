@@ -10967,6 +10967,24 @@
       "numPlayers": 40,
       "timestamp": "2026-08-13T14:56:46.746Z",
       "url": "https://openfront.io/game/aKGFg9G6"
+    },
+    {
+      "id": "uCh878Tu",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "Peak Comedy",
+          "clientID": "d4ToTZg9",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1899,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-13T16:10:16.090Z",
+      "url": "https://openfront.io/game/uCh878Tu"
     }
   ],
   "trios": [
@@ -52504,6 +52522,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-13T16:03:23.671Z",
       "url": "https://openfront.io/game/bn6Aobqk"
+    },
+    {
+      "id": "XSjZ5dc2",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonGlacier5",
+          "clientID": "Q78gKXX5",
+          "clanTag": null
+        },
+        {
+          "username": "Cosmos",
+          "clientID": "NM1QKUdf",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Kalmar Union",
+          "clientID": "EeGKPNRX",
+          "clanTag": null
+        },
+        {
+          "username": "BrrbrrMarineLepen",
+          "clientID": "siSTtXHK",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1411,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-13T16:26:05.988Z",
+      "url": "https://openfront.io/game/XSjZ5dc2"
     }
   ]
 }
