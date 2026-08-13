@@ -18,6 +18,7 @@
 .dash-intro {
   margin-bottom: 32px;
   text-align: center;
+  position: relative;
 }
 .dash-intro-sub {
   font-size: 15px;
@@ -25,6 +26,95 @@
   line-height: 1.6;
   max-width: 720px;
   margin: 0 auto;
+}
+
+/* ── Bouton aide (point d'interrogation rond) ── */
+.dash-help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.2s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
+  vertical-align: middle;
+}
+.dash-help-btn:hover,
+.dash-help-btn.active {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: var(--orange-pale);
+}
+
+/* ── Popover barème ── */
+.dash-help-popover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 280px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)),
+              transform 0.2s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
+  z-index: 100;
+  margin-top: 8px;
+}
+.dash-help-popover.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.dash-help-popover-header {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.dash-help-popover-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+.dash-help-popover-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 13px;
+}
+.dash-help-popover-list li:last-child {
+  border-bottom: none;
+}
+.dash-help-mode {
+  color: var(--text);
+  font-weight: 500;
+}
+.dash-help-pts {
+  color: var(--orange);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.dash-help-note {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
 }
 
 /* ── Loading / Empty / Error ── */

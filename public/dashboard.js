@@ -717,6 +717,19 @@ function render() {
 
     <div class="dash-intro">
       <p class="dash-intro-sub">TheFrontHub synchronise automatiquement votre historique de parties et vos statistiques OpenFront, visualise vos conquêtes et classe vos performances à l'échelle mondiale.</p>
+      <button class="dash-help-btn" id="dash-help-btn" aria-label="Voir le barème des points" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </button>
+      <div class="dash-help-popover" id="dash-help-popover" role="dialog" aria-label="Barème des points">
+        <div class="dash-help-popover-header">Barème des points</div>
+        <ul class="dash-help-popover-list">
+          <li><span class="dash-help-mode">FFA casual</span><span class="dash-help-pts">+10 pts</span></li>
+          <li><span class="dash-help-mode">Team casual</span><span class="dash-help-pts">+5 pts</span></li>
+          <li><span class="dash-help-mode">FFA classé (1v1)</span><span class="dash-help-pts">+1 pt</span></li>
+          <li><span class="dash-help-mode">Team classé (2v2)</span><span class="dash-help-pts">+1 pt</span></li>
+        </ul>
+        <p class="dash-help-note">Le classé rapporte juste 1 pt, pas en plus du casual.</p>
+      </div>
     </div>
 
     <div class="dash-grid">
@@ -739,6 +752,34 @@ function render() {
 
   // Hydrate les icônes <i data-icon>
   if (window.hydrateIcons) window.hydrateIcons(view);
+
+  // Toggle la popover du barème
+  const helpBtn = document.getElementById("dash-help-btn");
+  const helpPopover = document.getElementById("dash-help-popover");
+  if (helpBtn && helpPopover) {
+    helpBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = helpPopover.classList.toggle("open");
+      helpBtn.classList.toggle("active", isOpen);
+      helpBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+    // Fermer au clic en dehors
+    document.addEventListener("click", (e) => {
+      if (!helpPopover.contains(e.target) && !helpBtn.contains(e.target)) {
+        helpPopover.classList.remove("open");
+        helpBtn.classList.remove("active");
+        helpBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+    // Fermer avec Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && helpPopover.classList.contains("open")) {
+        helpPopover.classList.remove("open");
+        helpBtn.classList.remove("active");
+        helpBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
   // Re-init scroll reveal pour les nouveaux éléments .dash-panel / .dash-row
   // qui viennent d'être injectés dans le DOM (animations.js tourne avant le
