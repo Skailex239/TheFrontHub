@@ -10463,6 +10463,29 @@
       "numPlayers": 21,
       "timestamp": "2026-08-13T03:44:44.847Z",
       "url": "https://openfront.io/game/EzvCFWHt"
+    },
+    {
+      "id": "Qg8EP63A",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Eventual",
+          "clientID": "wUPgAw4o",
+          "clanTag": "UN"
+        },
+        {
+          "username": "abubles",
+          "clientID": "8wKjrqq6",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1058,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-13T04:02:31.850Z",
+      "url": "https://openfront.io/game/Qg8EP63A"
     }
   ],
   "trios": [
@@ -28185,6 +28208,34 @@
       "numPlayers": 55,
       "timestamp": "2026-08-13T03:33:17.174Z",
       "url": "https://openfront.io/game/kTdkbrRe"
+    },
+    {
+      "id": "tKQb2XiG",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Wuh",
+          "clientID": "vbGftvU6",
+          "clanTag": null
+        },
+        {
+          "username": "anon342",
+          "clientID": "fCFJNKmY",
+          "clanTag": "GM"
+        },
+        {
+          "username": "AnonOcean5",
+          "clientID": "5Q5s6H5A",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 1869,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-13T03:57:59.594Z",
+      "url": "https://openfront.io/game/tKQb2XiG"
     }
   ],
   "quads": [
