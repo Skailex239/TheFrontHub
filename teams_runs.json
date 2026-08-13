@@ -10573,6 +10573,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-13T05:39:08.432Z",
       "url": "https://openfront.io/game/F85hUhCj"
+    },
+    {
+      "id": "bf17d7kL",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "PETEERRR",
+          "clientID": "seNrYUAg",
+          "clanTag": null
+        },
+        {
+          "username": "Tanaka",
+          "clientID": "d1Ku3y2d",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 1360,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-13T05:44:35.735Z",
+      "url": "https://openfront.io/game/bf17d7kL"
     }
   ],
   "trios": [
@@ -28420,6 +28443,52 @@
       "numPlayers": 45,
       "timestamp": "2026-08-13T05:19:19.300Z",
       "url": "https://openfront.io/game/4DT4XtR8"
+    },
+    {
+      "id": "QVLBPA9R",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "_0_factorio",
+          "clientID": "9G5Cosf1",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1565,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-13T05:35:49.229Z",
+      "url": "https://openfront.io/game/QVLBPA9R"
+    },
+    {
+      "id": "tEMeZ7tj",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Billy the Kid",
+          "clientID": "SsGDjRSj",
+          "clanTag": "WEST"
+        },
+        {
+          "username": "Annie Oakley",
+          "clientID": "LivAGJRY",
+          "clanTag": "WEST"
+        },
+        {
+          "username": "Vaquero",
+          "clientID": "HRdqH4K9",
+          "clanTag": "WEST"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1025,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 61,
+      "timestamp": "2026-08-13T05:55:20.357Z",
+      "url": "https://openfront.io/game/tEMeZ7tj"
     }
   ],
   "quads": [
