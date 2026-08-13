@@ -10985,6 +10985,24 @@
       "numPlayers": 52,
       "timestamp": "2026-08-13T16:10:16.090Z",
       "url": "https://openfront.io/game/uCh878Tu"
+    },
+    {
+      "id": "soAq5G3g",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Endgame Escalator",
+          "clientID": "xH2ysYok",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3143,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-13T16:04:29.725Z",
+      "url": "https://openfront.io/game/soAq5G3g"
     }
   ],
   "trios": [
@@ -29770,6 +29788,29 @@
       "numPlayers": 93,
       "timestamp": "2026-08-13T15:46:43.634Z",
       "url": "https://openfront.io/game/q7pjcqPc"
+    },
+    {
+      "id": "9DQTtpiW",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Aventurine",
+          "clientID": "wYC1Na2u",
+          "clanTag": "EU"
+        },
+        {
+          "username": "IL Duce",
+          "clientID": "Shgxq1JU",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1097,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-13T16:32:04.366Z",
+      "url": "https://openfront.io/game/9DQTtpiW"
     }
   ],
   "quads": [
@@ -52555,6 +52596,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-13T16:26:05.988Z",
       "url": "https://openfront.io/game/XSjZ5dc2"
+    },
+    {
+      "id": "po6zfzYm",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "TheZealousMonk",
+          "clientID": "GDtLsCyh",
+          "clanTag": null
+        },
+        {
+          "username": "Wolololo",
+          "clientID": "QU5AvAM7",
+          "clanTag": null
+        },
+        {
+          "username": "verity",
+          "clientID": "PPSGwCQV",
+          "clanTag": "ZIP"
+        },
+        {
+          "username": "Kilimanjaros",
+          "clientID": "4GkZ3VKj",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 1168,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-13T16:33:36.457Z",
+      "url": "https://openfront.io/game/po6zfzYm"
     }
   ]
 }
