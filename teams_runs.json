@@ -28989,6 +28989,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-13T10:48:09.131Z",
       "url": "https://openfront.io/game/BL7Gbv7j"
+    },
+    {
+      "id": "s8gdTdqZ",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "env",
+          "clientID": "oCgi6R3X",
+          "clanTag": null
+        },
+        {
+          "username": "Clemzer",
+          "clientID": "nZ8fFWWW",
+          "clanTag": "TRADE"
+        },
+        {
+          "username": "llllllll",
+          "clientID": "cgSmmK5c",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1232,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-13T11:12:53.618Z",
+      "url": "https://openfront.io/game/s8gdTdqZ"
     }
   ],
   "quads": [
@@ -51036,6 +51064,62 @@
       "numPlayers": 61,
       "timestamp": "2026-08-13T10:45:27.962Z",
       "url": "https://openfront.io/game/15N9wag9"
+    },
+    {
+      "id": "t45NvRH3",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "qwerty",
+          "clientID": "NH7gtqBq",
+          "clanTag": null
+        },
+        {
+          "username": "GERS",
+          "clientID": "6oZf9eag",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1314,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-13T11:02:50.020Z",
+      "url": "https://openfront.io/game/t45NvRH3"
+    },
+    {
+      "id": "o3b38GWo",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "SomeGuy",
+          "clientID": "PEzwR11P",
+          "clanTag": "VTK"
+        },
+        {
+          "username": "MeLeftURight",
+          "clientID": "zNzihgPm",
+          "clanTag": null
+        },
+        {
+          "username": "Gigio",
+          "clientID": "yMwpiqsj",
+          "clanTag": null
+        },
+        {
+          "username": "Ebola",
+          "clientID": "sj3S3mFW",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1559,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-13T10:58:45.731Z",
+      "url": "https://openfront.io/game/o3b38GWo"
     }
   ]
 }
