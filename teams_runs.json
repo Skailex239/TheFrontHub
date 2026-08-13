@@ -10596,6 +10596,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-13T05:44:35.735Z",
       "url": "https://openfront.io/game/bf17d7kL"
+    },
+    {
+      "id": "DhTEpaCJ",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "bbeWaSB8",
+          "clanTag": null
+        },
+        {
+          "username": "Zoe",
+          "clientID": "ZcN3jTCk",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1182,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-13T06:03:29.823Z",
+      "url": "https://openfront.io/game/DhTEpaCJ"
     }
   ],
   "trios": [
@@ -28489,6 +28512,34 @@
       "numPlayers": 61,
       "timestamp": "2026-08-13T05:55:20.357Z",
       "url": "https://openfront.io/game/tEMeZ7tj"
+    },
+    {
+      "id": "dGvv9Yy9",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Train Me",
+          "clientID": "GEtf4Fch",
+          "clanTag": "UNC"
+        },
+        {
+          "username": "TAD",
+          "clientID": "4WjdFde9",
+          "clanTag": null
+        },
+        {
+          "username": "Creator",
+          "clientID": "PVT693mL",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 842,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "timestamp": "2026-08-13T06:01:12.689Z",
+      "url": "https://openfront.io/game/dGvv9Yy9"
     }
   ],
   "quads": [
@@ -50047,6 +50098,39 @@
       "numPlayers": 59,
       "timestamp": "2026-08-13T04:53:02.776Z",
       "url": "https://openfront.io/game/wp2kTfBr"
+    },
+    {
+      "id": "cBFMPMHy",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "John McClane",
+          "clientID": "cWncgXTm",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MeLeftURight",
+          "clientID": "3L9gwSnV",
+          "clanTag": null
+        },
+        {
+          "username": "BOMBER",
+          "clientID": "NysUKGVC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonElephant6",
+          "clientID": "zwWosD6G",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 581,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-13T06:11:42.325Z",
+      "url": "https://openfront.io/game/cBFMPMHy"
     }
   ]
 }
