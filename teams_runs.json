@@ -30574,6 +30574,62 @@
       "numPlayers": 75,
       "timestamp": "2026-08-13T20:32:56.589Z",
       "url": "https://openfront.io/game/C2NFnLwk"
+    },
+    {
+      "id": "o62SNXvs",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Erland",
+          "clientID": "EkVJiE1m",
+          "clanTag": "EM"
+        },
+        {
+          "username": "Vindler",
+          "clientID": "Jje9t3dM",
+          "clanTag": "EM"
+        },
+        {
+          "username": "JUST THE TIP",
+          "clientID": "YEij3dfr",
+          "clanTag": "EM"
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 803,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-13T20:51:42.657Z",
+      "url": "https://openfront.io/game/o62SNXvs"
+    },
+    {
+      "id": "mmX6gc5U",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "In The Thick of It",
+          "clientID": "QAMthmHF",
+          "clanTag": "POP"
+        },
+        {
+          "username": "afk",
+          "clientID": "hpRdR95f",
+          "clanTag": null
+        },
+        {
+          "username": "Evan",
+          "clientID": "LQbMH8iQ",
+          "clanTag": "POP"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 1057,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-13T20:49:03.492Z",
+      "url": "https://openfront.io/game/mmX6gc5U"
     }
   ],
   "quads": [
@@ -53804,6 +53860,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-13T20:12:39.416Z",
       "url": "https://openfront.io/game/5xk7Dbis"
+    },
+    {
+      "id": "hzVKCtVB",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "AncientLollipop.V6Qf",
+          "clientID": "S4T5ywi1",
+          "clanTag": null
+        },
+        {
+          "username": "bruh",
+          "clientID": "UsntdSbb",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1495,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-13T20:34:05.660Z",
+      "url": "https://openfront.io/game/hzVKCtVB"
     }
   ]
 }
