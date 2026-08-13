@@ -353,20 +353,23 @@ function render() {
       colEl = document.createElement("section");
       colEl.id = `lobby-col-${col.key}`;
       colEl.className = `lobby-column lobby-column-${col.key}`;
+      colEl.innerHTML = `
+        <div class="lobby-column-header">
+          <span class="lobby-column-title">${col.label}</span>
+          <span class="lobby-column-count">0</span>
+        </div>
+        <div class="lobby-column-body"></div>
+      `;
       columnsWrap.appendChild(colEl);
     }
 
-    // Update header (count)
-    const count = col.games.length;
-    colEl.innerHTML = `
-      <div class="lobby-column-header">
-        <span class="lobby-column-title">${col.label}</span>
-        <span class="lobby-column-count">${count}</span>
-      </div>
-      <div class="lobby-column-body" id="lobby-col-body-${col.key}"></div>
-    `;
+    // Update seulement le compteur (pas de rebuild)
+    const countEl = colEl.querySelector(".lobby-column-count");
+    if (countEl) countEl.textContent = col.games.length;
 
     const body = colEl.querySelector(".lobby-column-body");
+    if (!body) continue;
+
     const liveIds = new Set(col.games.map(g => g.id));
 
     // Supprimer les cards qui ne sont plus dans le snapshot
@@ -377,17 +380,15 @@ function render() {
       }
     }
 
-    // Créer ou updater les cards
+    // Créer ou updater les cards (SANS re-order → pas de mouvement)
     col.games.slice(0, 20).forEach((game, index) => {
       let card = cardEls.get(game.id);
       if (!card) {
         card = createCard(game);
         cardEls.set(game.id, card);
-      }
-      updateCard(card, game, index);
-      if (card.parentNode !== body) {
         body.appendChild(card);
       }
+      updateCard(card, game, index);
     });
   }
 }
@@ -440,6 +441,7 @@ function createCard(game) {
   card.rel = "noopener";
   card.href = `https://openfront.io/game/${encodeURIComponent(game.id)}`;
   card.dataset.gameId = game.id;
+  // Pas d'animation d'entrée — les cards doivent être statiques
   card.innerHTML = `
     <div class="lobby-game-thumb"></div>
     <div class="lobby-game-info">
@@ -460,12 +462,6 @@ function createCard(game) {
 
 /* Met à jour le contenu d'une card existante (pas de re-create) */
 function updateCard(card, game, index) {
-  // Animation delay (juste à la création)
-  if (!card.dataset.delaySet) {
-    card.style.animationDelay = `${Math.min(index, 10) * 0.04}s`;
-    card.dataset.delaySet = "1";
-  }
-
   // Thumbnail
   const thumb = card.querySelector(".lobby-game-thumb");
   const thumbUrl = getMapThumbnailUrl(game.map);

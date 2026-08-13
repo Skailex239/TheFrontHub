@@ -222,8 +222,8 @@
 .lobby-game {
   display: flex;
   align-items: stretch;
-  gap: 14px;
-  padding: 16px;
+  gap: 16px;
+  padding: 18px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -233,21 +233,17 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  animation: lobby-game-in 0.3s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) backwards;
+  /* Pas d'animation d'entrée — les cards doivent être statiques */
 }
 .lobby-game:hover {
   transform: translateY(-2px);
   border-color: var(--orange);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-@keyframes lobby-game-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 .lobby-game-thumb {
-  width: 72px;
-  height: 72px;
+  width: 84px;
+  height: 84px;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -379,8 +375,8 @@
   .lobby-next-thumb { width: 100%; height: 120px; }
 }
 @media (max-width: 640px) {
-  .lobby-game { padding: 12px; gap: 10px; }
-  .lobby-game-thumb { width: 60px; height: 60px; }
+  .lobby-game { padding: 14px; gap: 12px; }
+  .lobby-game-thumb { width: 68px; height: 68px; }
   .lobby-game-name { font-size: 14px; }
   .lobby-game-mode { font-size: 12px; }
   .lobby-game-players { font-size: 13px; }
