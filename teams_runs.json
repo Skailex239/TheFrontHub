@@ -28540,6 +28540,62 @@
       "numPlayers": 49,
       "timestamp": "2026-08-13T06:01:12.689Z",
       "url": "https://openfront.io/game/dGvv9Yy9"
+    },
+    {
+      "id": "ckjeLKjr",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Federation of Central Usea",
+          "clientID": "CPSKyF1d",
+          "clanTag": null
+        },
+        {
+          "username": "lulu",
+          "clientID": "fTztXD2Z",
+          "clanTag": "CLOSE"
+        },
+        {
+          "username": "CrusaderWaffen",
+          "clientID": "eGnB3HkQ",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1221,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-13T06:26:32.237Z",
+      "url": "https://openfront.io/game/ckjeLKjr"
+    },
+    {
+      "id": "QVWy5ndv",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "crucifixion",
+          "clientID": "8WWQ4U3v",
+          "clanTag": "UN"
+        },
+        {
+          "username": "USSR",
+          "clientID": "pqMoGwsu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "3434343434",
+          "clientID": "Ug2oGLUr",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 963,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "timestamp": "2026-08-13T06:30:04.428Z",
+      "url": "https://openfront.io/game/QVWy5ndv"
     }
   ],
   "quads": [
@@ -50131,6 +50187,24 @@
       "numPlayers": 36,
       "timestamp": "2026-08-13T06:11:42.325Z",
       "url": "https://openfront.io/game/cBFMPMHy"
+    },
+    {
+      "id": "5DTY5Scv",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Joemamadrama",
+          "clientID": "L4B1Cnvn",
+          "clanTag": "JESUS"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 2715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-13T05:52:15.164Z",
+      "url": "https://openfront.io/game/5DTY5Scv"
     }
   ]
 }
