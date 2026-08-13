@@ -34,6 +34,8 @@ let snapshot = null;
 let renderTimer = null;
 let cardEls = new Map();
 let historyLoaded = false;
+let recentHistory = []; // games qui viennent de quitter le lobby (terminées)
+let prevGameIds = new Set(); // IDs présents au snapshot précédent
 
 /* ═══ Utilitaires ═══ */
 
@@ -218,6 +220,33 @@ function applyMessage(msg) {
       if (Array.isArray(list))
         normalized[cat] = list.filter(g => g && (g.gameID || g.id)).map(normalizeGame);
     }
+
+    // Détecter les games qui ont quitté le lobby (terminées) → historique
+    const currentIds = new Set();
+    for (const cat of Object.keys(normalized)) {
+      for (const g of normalized[cat]) currentIds.add(g.id);
+    }
+    if (prevGameIds.size > 0) {
+      for (const id of prevGameIds) {
+        if (!currentIds.has(id)) {
+          // Cette game était dans le snapshot précédent, elle n'y est plus → terminée
+          // On la cherche dans l'ancien snapshot pour récupérer ses infos
+          if (snapshot && snapshot.games) {
+            for (const cat of Object.keys(snapshot.games)) {
+              const oldGame = snapshot.games[cat].find(g => g.id === id);
+              if (oldGame) {
+                recentHistory.unshift({ ...oldGame, endedAt: serverTime });
+                break;
+              }
+            }
+          }
+        }
+      }
+    }
+    // Garder max 25 entrées
+    if (recentHistory.length > 25) recentHistory = recentHistory.slice(0, 25);
+    prevGameIds = currentIds;
+
     snapshot = { serverTime, games: normalized };
     scheduleRender();
     return;
@@ -290,13 +319,14 @@ function render() {
     const body = colEl.querySelector(".lobby-column-body");
     if (!body) continue;
 
-    // BUG FIX : nettoyer les cards qui ne sont plus dans le snapshot
-    // ET nettoyer les cards orphelines (dont le gameID n'est plus référencé)
+    // Nettoyer les cards qui ne sont plus dans cette colonne
+    // IMPORTANT: ne supprimer que les cards qui appartiennent à body (cette colonne)
+    // pas les cards des autres colonnes
     const liveIds = new Set(col.games.map(g => g.id));
     const toRemove = [];
     for (const [id, node] of cardEls) {
-      if (!liveIds.has(id)) {
-        if (node.parentNode) node.remove();
+      if (node.parentNode === body && !liveIds.has(id)) {
+        node.remove();
         toRemove.push(id);
       }
     }
@@ -314,14 +344,66 @@ function render() {
     });
   }
 
-  // Historique des 25 dernières parties (charger une seule fois)
-  if (!historyLoaded) {
-    historyLoaded = true;
-    loadHistory();
-  }
+  // Historique des 25 dernières parties (rendu à chaque update)
+  renderHistory();
 }
 
-/* Crée une card une seule fois */
+/* ═══ Rendu de l'historique (games terminées détectées en live) ═══ */
+
+function renderHistory() {
+  const container = document.getElementById("lobby-container");
+  if (!container) return;
+
+  let historyEl = document.getElementById("lobby-history");
+  if (!historyEl) {
+    historyEl = document.createElement("section");
+    historyEl.id = "lobby-history";
+    historyEl.className = "lobby-history";
+    container.appendChild(historyEl);
+  }
+
+  if (recentHistory.length === 0) {
+    historyEl.innerHTML = `
+      <div class="lobby-history-header">
+        <h2 class="lobby-history-title">Historique</h2>
+        <span class="lobby-history-sub">Parties terminées récemment</span>
+      </div>
+      <div class="lobby-history-empty">
+        <p>En attente de parties terminées…</p>
+        <p class="lobby-history-note">Les parties apparaîtront ici dès qu'elles se terminent.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const items = recentHistory.map(g => {
+    const thumbUrl = getMapThumbnailUrl(g.map);
+    const mode = modeLabel(g);
+    const date = formatDate(g.endedAt);
+    const gameUrl = `https://openfront.io/game/${encodeURIComponent(g.id)}`;
+    const diff = g.difficulty ? g.difficulty.charAt(0).toUpperCase() + g.difficulty.slice(1) : "";
+    return `
+      <a class="lobby-history-item" href="${escapeHtml(gameUrl)}" target="_blank" rel="noopener">
+        <div class="lobby-history-thumb">
+          ${thumbUrl ? `<img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(g.map)}" loading="lazy" onerror="this.style.display='none'">` : ""}
+        </div>
+        <div class="lobby-history-info">
+          <div class="lobby-history-map">${escapeHtml(g.map)}</div>
+          <div class="lobby-history-meta">${escapeHtml(mode)}${diff ? " · " + escapeHtml(diff) : ""} · ${g.players}/${g.capacity || "?"} joueurs</div>
+        </div>
+        <span class="lobby-history-date">${escapeHtml(date)}</span>
+      </a>
+    `;
+  }).join("");
+
+  historyEl.innerHTML = `
+    <div class="lobby-history-header">
+      <h2 class="lobby-history-title">Historique</h2>
+      <span class="lobby-history-sub">${recentHistory.length} partie${recentHistory.length > 1 ? "s" : ""} terminée${recentHistory.length > 1 ? "s" : ""}</span>
+    </div>
+    <div class="lobby-history-list">${items}</div>
+  `;
+}
 function createCard(game) {
   const card = document.createElement("a");
   card.className = "lobby-game";
@@ -383,57 +465,6 @@ function updateCard(card, game) {
     badgesEl.innerHTML = game.badges.length
       ? game.badges.map(b => `<span class="lobby-badge">${escapeHtml(b)}</span>`).join("")
       : "";
-  }
-}
-
-/* ═══ Historique des 25 dernières parties (via API HTTP) ═══ */
-
-async function loadHistory() {
-  const container = document.getElementById("lobby-container");
-  if (!container) return;
-
-  // Créer la section historique
-  let historyEl = document.getElementById("lobby-history");
-  if (!historyEl) {
-    historyEl = document.createElement("section");
-    historyEl.id = "lobby-history";
-    historyEl.className = "lobby-history";
-    historyEl.innerHTML = `
-      <div class="lobby-history-header">
-        <h2 class="lobby-history-title">Historique des dernières parties</h2>
-        <span class="lobby-history-sub">25 parties récentes</span>
-      </div>
-      <div class="lobby-history-list" id="lobby-history-list">
-        <div class="lobby-history-loading">Chargement…</div>
-      </div>
-    `;
-    container.appendChild(historyEl);
-  }
-
-  const listEl = document.getElementById("lobby-history-list");
-  if (!listEl) return;
-
-  try {
-    // L'API OpenFront ne propose pas d'endpoint "dernières parties" public.
-    // On utilise l'API Cloudflare Worker proxy pour récupérer le leaderboard ranked
-    // qui contient les gameIDs récents via les profils joueurs.
-    // Alternative: on affiche les parties qui viennent de disparaître du lobby
-    // (snapshot précédent) comme "historique récent".
-    //
-    // Pour une vraie implémentation, il faudrait un endpoint /public/recent-games
-    // qui n'existe pas. On utilise donc l'approche zeldableu: scraper les
-    // gameIDs terminés via l'API game/{id}.
-    //
-    // En attendant, on affiche un placeholder informatif:
-    listEl.innerHTML = `
-      <div class="lobby-history-empty">
-        <p>L'historique des parties terminées sera disponible prochainement.</p>
-        <p class="lobby-history-note">L'API OpenFront ne propose pas encore d'endpoint public pour lister les dernières parties terminées.</p>
-      </div>
-    `;
-  } catch (e) {
-    console.warn("[lobby] History load failed:", e.message);
-    listEl.innerHTML = `<div class="lobby-history-empty"><p>Impossible de charger l'historique.</p></div>`;
   }
 }
 
