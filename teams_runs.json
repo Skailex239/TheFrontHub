@@ -32032,6 +32032,24 @@
       "numPlayers": 69,
       "timestamp": "2026-08-14T14:29:57.940Z",
       "url": "https://openfront.io/game/k5hKZvHe"
+    },
+    {
+      "id": "ykCLGgqr",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "nnz",
+          "clientID": "YdukqPCz",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 2090,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 99,
+      "timestamp": "2026-08-14T14:49:33.145Z",
+      "url": "https://openfront.io/game/ykCLGgqr"
     }
   ],
   "quads": [
@@ -56264,6 +56282,39 @@
       "numPlayers": 124,
       "timestamp": "2026-08-14T14:47:26.000Z",
       "url": "https://openfront.io/game/f2PWbm2v"
+    },
+    {
+      "id": "orKdvQDT",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "karmapanther",
+          "clientID": "qEPYRbuU",
+          "clanTag": null
+        },
+        {
+          "username": "LaBWCDu73",
+          "clientID": "aUdDnvkN",
+          "clanTag": null
+        },
+        {
+          "username": "Thorondale",
+          "clientID": "5vqzLg6C",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuasar8",
+          "clientID": "czTUkysv",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1430,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-14T14:58:03.134Z",
+      "url": "https://openfront.io/game/orKdvQDT"
     }
   ]
 }
