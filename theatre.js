@@ -3,7 +3,7 @@
 
 const THEATRE_VIEW = document.getElementById("theatre-view");
 const GAME_INPUT = document.getElementById("theatre-game-input");
-const ANALYZE_BTN = document.getElementById("theatre-analyze-btn");
+const RECORD_BTN = document.getElementById("theatre-record-btn");
 const ERROR_MSG = document.getElementById("theatre-error");
 
 const API_BASE = "https://api.openfront.io";
@@ -157,7 +157,7 @@ function renderGameRecord(gameData) {
             Replay complet avec les ${fmtNum(turns.length)} tours d'inputs.<br>
             Format JSON · ${replaySizeFmt} · Commit: <code style="color:var(--orange)">${esc(gameData.gitCommit?.slice(0,12) || "?")}</code>
           </p>
-          <a href="${downloadUrl}" download="openfront-replay-${esc(info.gameID || 'game')}.json" class="theatre-analyze-btn" style="display:inline-flex;text-decoration:none">
+          <a href="${downloadUrl}" download="openfront-replay-${esc(info.gameID || 'game')}.json" class="theatre-record-btn" style="display:inline-flex;text-decoration:none">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Télécharger le replay (${replaySizeFmt})
           </a>
@@ -285,7 +285,7 @@ async function recordGame() {
     return;
   }
   ERROR_MSG.style.display = "none";
-  ANALYZE_BTN.disabled = true;
+  RECORD_BTN.disabled = true;
   showLoading("Récupération de l'enregistrement complet (tours inclus)…");
 
   try {
@@ -299,12 +299,12 @@ async function recordGame() {
     showError(e.message);
     console.error("[theatre] Error:", e);
   } finally {
-    ANALYZE_BTN.disabled = false;
+    RECORD_BTN.disabled = false;
   }
 }
 
 // Wire events
-ANALYZE_BTN.addEventListener("click", recordGame);
+RECORD_BTN.addEventListener("click", recordGame);
 GAME_INPUT.addEventListener("keydown", (e) => {
   if (e.key === "Enter") recordGame();
 });
