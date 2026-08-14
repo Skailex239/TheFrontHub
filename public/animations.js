@@ -650,3 +650,113 @@
   }
 
 })();
+
+/* ── 14. Global player search ──
+   Loads ranked.json once, then provides instant search across all
+   known players by username. Results link to profile.html. */
+window.TFH_searchData = null;
+window.TFH_searchLoading = false;
+
+window.TFH_initSearch = function () {
+  // Find the search input (added by each page's topbar)
+  const input = document.getElementById("tfh-player-search");
+  if (!input || input.dataset.initialized) return;
+  input.dataset.initialized = "1";
+
+  const results = document.getElementById("tfh-search-results");
+  if (!results) return;
+
+  // Load data lazily on first focus
+  input.addEventListener("focus", async () => {
+    if (window.TFH_searchData || window.TFH_searchLoading) return;
+    window.TFH_searchLoading = true;
+    try {
+      const res = await fetch("ranked.json", { cache: "force-cache" });
+      if (!res.ok) return;
+      const data = await res.json();
+      const players = [];
+      for (const p of (data["1v1"] || [])) {
+        players.push({ username: p.username, public_id: p.public_id, elo: p.elo, mode: "1v1", wins: p.wins, total: p.total });
+      }
+      for (const p of (data["2v2"] || [])) {
+        if (!players.find(pl => pl.public_id === p.public_id)) {
+          players.push({ username: p.username, public_id: p.public_id, elo: p.elo, mode: "2v2", wins: p.wins, total: p.total });
+        }
+      }
+      window.TFH_searchData = players;
+      console.log(`[search] ${players.length} joueurs indexés`);
+    } catch (e) {
+      console.warn("[search] Load failed:", e.message);
+    } finally {
+      window.TFH_searchLoading = false;
+    }
+  });
+
+  let debounceTimer = null;
+  input.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => doSearch(input, results), 200);
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { results.classList.remove("open"); input.blur(); }
+    if (e.key === "Enter") {
+      const first = results.querySelector(".player-search-result");
+      if (first) { window.location.href = first.getAttribute("href"); }
+    }
+  });
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !results.contains(e.target)) {
+      results.classList.remove("open");
+    }
+  });
+};
+
+function doSearch(input, results) {
+  const q = input.value.trim().toLowerCase();
+  if (q.length < 2) { results.classList.remove("open"); return; }
+  if (!window.TFH_searchData) {
+    if (window.TFH_searchLoading) {
+      results.innerHTML = '<div class="player-search-empty">Chargement…</div>';
+      results.classList.add("open");
+      setTimeout(() => doSearch(input, results), 500);
+      return;
+    }
+    return;
+  }
+
+  const matches = window.TFH_searchData
+    .filter(p => p.username && p.username.toLowerCase().includes(q))
+    .slice(0, 10);
+
+  if (matches.length === 0) {
+    results.innerHTML = '<div class="player-search-empty">Aucun joueur trouvé</div>';
+  } else {
+    results.innerHTML = matches.map(p => {
+      const initials = (p.username || "?").replace(/^\[[^\]]+\]\s*/, "").slice(0, 2).toUpperCase();
+      const wr = p.total > 0 ? ((p.wins / p.total) * 100).toFixed(0) : "—";
+      return `<a class="player-search-result" href="profile.html?pid=${encodeURIComponent(p.public_id)}&player=${encodeURIComponent(p.username)}">
+        <span class="player-search-avatar">${initials}</span>
+        <span class="player-search-info">
+          <span class="player-search-name">${escapeHtmlStr(p.username)}</span>
+          <span class="player-search-meta">ELO ${p.elo} · ${p.mode} · ${wr}% WR</span>
+        </span>
+      </a>`;
+    }).join("");
+  }
+  results.classList.add("open");
+}
+
+function escapeHtmlStr(s) {
+  if (s == null) return "";
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+// Auto-init search on DOM ready
+if (document.readyState !== "loading") {
+  window.TFH_initSearch();
+} else {
+  document.addEventListener("DOMContentLoaded", () => window.TFH_initSearch());
+}

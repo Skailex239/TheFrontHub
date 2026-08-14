@@ -1843,3 +1843,38 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
         box-shadow:8px 0 40px rgba(0,0,0,.15);
     }
 }
+
+/* ═══ Global player search ═══ */
+.player-search-wrap { position: relative; flex: 0 1 320px; }
+.player-search-input {
+  width: 100%; padding: 8px 14px 8px 36px;
+  border: 1px solid var(--border); border-radius: var(--radius-pill, 999px);
+  font-size: 13px; font-family: inherit; background: var(--bg-subtle);
+  color: var(--text); outline: none; transition: border-color 0.2s ease;
+}
+.player-search-input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-glow); }
+.player-search-input::placeholder { color: var(--dim); }
+.player-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.player-search-results {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12); max-height: 360px; overflow-y: auto;
+  z-index: 100; display: none;
+}
+.player-search-results.open { display: block; }
+.player-search-result {
+  display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+  cursor: pointer; transition: background 0.15s ease; border-bottom: 1px solid var(--border-light);
+  text-decoration: none; color: inherit;
+}
+.player-search-result:last-child { border-bottom: none; }
+.player-search-result:hover { background: var(--orange-pale); }
+.player-search-avatar {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: var(--orange-gradient-subtle); color: #fff; font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.player-search-info { flex: 1; min-width: 0; }
+.player-search-name { font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player-search-meta { font-size: 11px; color: var(--muted); }
+.player-search-empty { padding: 16px; text-align: center; color: var(--muted); font-size: 13px; }

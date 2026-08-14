@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon-32x32.png">
-<link rel="stylesheet" href="styles.css?v=31">
+<link rel="stylesheet" href="styles.css?v=32">
 <link rel="stylesheet" href="auth.css?v=17">
 <link rel="stylesheet" href="toast.css">
 <link rel="stylesheet" href="animations.css?v=6">
@@ -119,7 +119,7 @@
         <h1 id="topbar-title">Tableau de bord</h1>
         <p id="topbar-subtitle">Classement par points — FFA, Team, classé et casual</p>
       </div>
-      <div class="topbar-right">
+      <div class="topbar-right"><div class="player-search-wrap"><svg class="player-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" id="tfh-player-search" class="player-search-input" placeholder="Rechercher un joueur…" autocomplete="off" /><div id="tfh-search-results" class="player-search-results"></div></div>
         <div id="last-update" class="last-update-inline" style="margin:0;padding:0;font-size:12px"></div>
       </div>
     </header>
@@ -219,6 +219,6 @@
 <script type="module" src="auth.js?v=16"></script>
 <script src="toast.js"></script>
 <script src="lenis.js?v=2"></script>
-<script src="animations.js?v=10"></script>
+<script src="animations.js?v=11"></script>
 </body>
 </html>
