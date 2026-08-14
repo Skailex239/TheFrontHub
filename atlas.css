@@ -20,22 +20,28 @@
 .atlas-filter-btn:hover { border-color: var(--orange); color: var(--orange); }
 .atlas-filter-btn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
 
-/* World map */
-.atlas-map-wrap { margin-bottom: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #0f172a; position: relative; }
-.atlas-map { position: relative; width: 100%; aspect-ratio: 2 / 1; min-height: 300px; }
-.atlas-map-bg {
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'%3E%3Crect fill='%230f172a' width='1000' height='500'/%3E%3Cg fill='none' stroke='%23ff7a00' stroke-width='0.5' stroke-opacity='0.12'%3E%3Cpath d='M150 180 Q200 120 280 140 L320 100 Q380 80 420 120 L460 100 Q500 80 540 120 L580 140 Q620 120 660 160 L700 140 Q740 120 780 160 L820 180'/%3E%3Cpath d='M100 220 Q180 260 260 240 L340 280 Q420 300 500 280 L580 320 Q660 340 740 320 L820 300 Q880 280 920 320'/%3E%3Cpath d='M120 300 Q200 340 300 320 L400 360 Q500 380 600 360 L700 340 Q800 360 880 340'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover; background-position: center;
-}
-.atlas-pin {
-  position: absolute; width: 12px; height: 12px; border-radius: 50%;
-  background: var(--pin-color, #ff7a00); cursor: pointer; z-index: 2;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.3), 0 0 12px var(--pin-color, #ff7a00);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.atlas-pin:hover { transform: translate(-50%, -50%) scale(1.6); box-shadow: 0 0 0 3px rgba(255,255,255,0.5), 0 0 20px var(--pin-color, #ff7a00); z-index: 10; }
+/* World map (SVG real geography) */
+.atlas-map-wrap { margin-bottom: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #0a1020; position: relative; }
+.atlas-map-svg { width: 100%; height: auto; display: block; }
+.atlas-svg-pin circle { transition: r 0.2s ease, fill-opacity 0.2s ease; }
+.atlas-svg-pin:hover circle { fill-opacity: 1; }
+.atlas-svg-pin:hover circle:first-child { fill-opacity: 0.25; }
+
+.atlas-map-legend { position: absolute; bottom: 8px; left: 8px; display: flex; gap: 12px; flex-wrap: wrap; font-size: 11px; color: rgba(255,255,255,0.6); background: rgba(0,0,0,0.4); padding: 4px 10px; border-radius: 6px; }
+.atlas-legend-item { display: inline-flex; align-items: center; gap: 4px; }
+.atlas-legend-dot { width: 8px; height: 8px; border-radius: 50; }
+
+/* Fallback pins (if SVG map fails) */
+.atlas-map-fallback { margin-bottom: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #0a1020; }
+.atlas-map-pins-only { position: relative; width: 100%; aspect-ratio: 2 / 1; min-height: 300px; }
+.atlas-pin { position: absolute; width: 12px; height: 12px; border-radius: 50%; cursor: pointer; z-index: 2; transform: translate(-50%, -50%); transition: transform 0.2s ease; }
+.atlas-pin:hover { transform: translate(-50%, -50%) scale(1.6); }
+
+/* Tooltip (floating, follows cursor) */
+.atlas-tooltip { position: fixed; z-index: 1000; display: none; min-width: 200px; max-width: 240px; padding: 0; border-radius: 10px; background: rgba(9, 16, 30, 0.97); border: 1px solid rgba(119, 224, 255, 0.25); backdrop-filter: blur(16px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); overflow: hidden; pointer-events: none; }
+.atlas-tooltip img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.atlas-tooltip-name { padding: 8px 10px 2px; font-size: 14px; font-weight: 600; color: #eef4ff; }
+.atlas-tooltip-stats { padding: 0 10px 10px; display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 11px; color: #8391a9; }
 
 /* Grid */
 .atlas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
