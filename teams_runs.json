@@ -12085,6 +12085,47 @@
       "numPlayers": 52,
       "timestamp": "2026-08-14T17:33:17.987Z",
       "url": "https://openfront.io/game/n81YPkfZ"
+    },
+    {
+      "id": "ABCdp5q1",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "some",
+          "clientID": "w9UXWPGN",
+          "clanTag": "EAGLE"
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1097,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-14T18:38:18.998Z",
+      "url": "https://openfront.io/game/ABCdp5q1"
+    },
+    {
+      "id": "MGXf8ivL",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "god of war",
+          "clientID": "KcNXrAqZ",
+          "clanTag": "GOG"
+        },
+        {
+          "username": "PIRATES OF THE CARIBBEAN",
+          "clientID": "LCzpFp3a",
+          "clanTag": "GOG"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2615,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-14T18:04:06.827Z",
+      "url": "https://openfront.io/game/MGXf8ivL"
     }
   ],
   "trios": [
@@ -32487,6 +32528,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-14T17:29:06.260Z",
       "url": "https://openfront.io/game/5e8qzLV2"
+    },
+    {
+      "id": "oELnDQK1",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "Sauron",
+          "clientID": "b68fDsqq",
+          "clanTag": null
+        },
+        {
+          "username": "XDixon000156X",
+          "clientID": "hsBHnrUL",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2703,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-14T18:13:14.385Z",
+      "url": "https://openfront.io/game/oELnDQK1"
     }
   ],
   "quads": [
