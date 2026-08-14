@@ -70,7 +70,9 @@ function buildCorsProxyUrls(apiPath) {
   const path = apiPath.startsWith("/") ? apiPath : `/${apiPath}`;
   const encodedUrl = encodeURIComponent(API_BASE + path);
   const proxies = [
-    `https://corsproxy.io/?url=${encodedUrl}`,
+    // Cloudflare Worker (le plus fiable, ajoute le header x-skailex-access)
+    `https://openfront-proxy.diofortnite3.workers.dev${path}`,
+    // Fallbacks CORS gratuits
     `https://api.codetabs.com/v1/proxy/?quest=${encodedUrl}`,
     `https://api.allorigins.win/raw?url=${encodedUrl}`,
     `https://thingproxy.freeboard.io/fetch/${API_BASE}${path}`,
