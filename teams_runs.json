@@ -31373,6 +31373,24 @@
       "numPlayers": 78,
       "timestamp": "2026-08-14T11:05:26.642Z",
       "url": "https://openfront.io/game/27DFVgGH"
+    },
+    {
+      "id": "XJ57PhFe",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "AnonLobster2",
+          "clientID": "iLso5yEF",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1569,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-14T11:08:16.309Z",
+      "url": "https://openfront.io/game/XJ57PhFe"
     }
   ],
   "quads": [
@@ -55160,6 +55178,72 @@
       "numPlayers": 44,
       "timestamp": "2026-08-14T11:03:26.534Z",
       "url": "https://openfront.io/game/3wwFZTPx"
+    },
+    {
+      "id": "QQ9sKQps",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Trade",
+          "clientID": "kD4DfJfy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield2",
+          "clientID": "1XCQ1Ukd",
+          "clanTag": null
+        },
+        {
+          "username": "5W1L7",
+          "clientID": "NuNJphuX",
+          "clanTag": "PWN"
+        },
+        {
+          "username": "DooARDoo",
+          "clientID": "QuzQehU2",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1118,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-14T11:20:29.059Z",
+      "url": "https://openfront.io/game/QQ9sKQps"
+    },
+    {
+      "id": "vWLVEimP",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Brandenburger",
+          "clientID": "EknHQf7F",
+          "clanTag": null
+        },
+        {
+          "username": "Rewe Republic",
+          "clientID": "ZfZg4rN9",
+          "clanTag": "SUB"
+        },
+        {
+          "username": "just watcher",
+          "clientID": "yQoUes3k",
+          "clanTag": null
+        },
+        {
+          "username": "egerke",
+          "clientID": "mFvTHdFC",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1123,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-14T11:14:29.201Z",
+      "url": "https://openfront.io/game/vWLVEimP"
     }
   ]
 }
