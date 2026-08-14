@@ -47,10 +47,23 @@ function parseGameId(input) {
 
 async function fetchGame(gameId) {
   console.log(`[theatre] Fetching game ${gameId}…`);
-  const res = await fetch(`${API_BASE}/public/game/${gameId}?turns=false`);
-  if (!res.ok) {
-    if (res.status === 404) throw new Error("Partie introuvable. Vérifiez l'ID.");
-    throw new Error(`Erreur API: HTTP ${res.status}`);
+  const gameUrl = `${API_BASE}/public/game/${gameId}?turns=false`;
+  const encodedUrl = encodeURIComponent(gameUrl);
+  const proxies = [
+    `https://corsproxy.io/?url=${encodedUrl}`,
+    `https://api.codetabs.com/v1/proxy/?quest=${encodedUrl}`,
+    `https://api.allorigins.win/raw?url=${encodedUrl}`,
+    gameUrl,
+  ];
+  let res = null;
+  for (const proxyUrl of proxies) {
+    try {
+      res = await fetch(proxyUrl);
+      if (res && res.ok) break;
+    } catch { continue; }
+  }
+  if (!res || !res.ok) {
+    throw new Error("Partie introuvable ou API inaccessible. Vérifiez l'ID.");
   }
   const data = await res.json();
   if (data.error) throw new Error(data.error);
@@ -536,8 +549,19 @@ async function loadRecentGames() {
   if (!listEl) return;
   try {
     // Fetch a known active player's recent games
-    const res = await fetch(`${API_BASE}/public/player/CpomD1Nt/games?limit=6`);
-    if (!res.ok) throw new Error("API error");
+    // Fetch via CORS proxy (API doesn't allow cross-origin)
+    const gameUrl = `${API_BASE}/public/player/CpomD1Nt/games?limit=6`;
+    const encodedUrl = encodeURIComponent(gameUrl);
+    const proxies = [
+      `https://corsproxy.io/?url=${encodedUrl}`,
+      `https://api.codetabs.com/v1/proxy/?quest=${encodedUrl}`,
+      `https://api.allorigins.win/raw?url=${encodedUrl}`,
+    ];
+    let res = null;
+    for (const proxyUrl of proxies) {
+      try { res = await fetch(proxyUrl); if (res && res.ok) break; } catch { continue; }
+    }
+    if (!res || !res.ok) throw new Error("API error");
     const data = await res.json();
     const games = data.results || data.games || [];
     if (!games.length) {
