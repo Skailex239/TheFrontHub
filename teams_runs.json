@@ -12295,6 +12295,47 @@
       "numPlayers": 74,
       "timestamp": "2026-08-14T22:08:02.446Z",
       "url": "https://openfront.io/game/ciPxfQrD"
+    },
+    {
+      "id": "k25MNkL6",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "npm install",
+          "clientID": "BTJ3xCem",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 5421,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-14T21:46:27.190Z",
+      "url": "https://openfront.io/game/k25MNkL6"
+    },
+    {
+      "id": "S7HovgAW",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "Aelfric",
+          "clientID": "dwkFusQ3",
+          "clanTag": null
+        },
+        {
+          "username": "SUNBELT",
+          "clientID": "2AEpC9Kw",
+          "clanTag": "FINE"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 4285,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "timestamp": "2026-08-14T22:03:12.638Z",
+      "url": "https://openfront.io/game/S7HovgAW"
     }
   ],
   "trios": [
@@ -33189,6 +33230,62 @@
       "numPlayers": 59,
       "timestamp": "2026-08-14T22:24:17.394Z",
       "url": "https://openfront.io/game/2WSxSMB9"
+    },
+    {
+      "id": "oqsm5QVf",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Mex",
+          "clientID": "SyK8YEUa",
+          "clanTag": "NHAND"
+        },
+        {
+          "username": "ezclap",
+          "clientID": "NhUAe6Q5",
+          "clanTag": "NHAND"
+        },
+        {
+          "username": "Captain Crunch",
+          "clientID": "HQyRebEe",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1095,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-14T22:50:33.982Z",
+      "url": "https://openfront.io/game/oqsm5QVf"
+    },
+    {
+      "id": "Nm8QHQCD",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Anon061",
+          "clientID": "9AU9kXJZ",
+          "clanTag": null
+        },
+        {
+          "username": "Rabbitt",
+          "clientID": "8JAXpXkn",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench1",
+          "clientID": "SkMRtmNS",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1242,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-14T22:53:16.154Z",
+      "url": "https://openfront.io/game/Nm8QHQCD"
     }
   ],
   "quads": [
