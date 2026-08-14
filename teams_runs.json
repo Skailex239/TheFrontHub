@@ -11361,6 +11361,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-14T08:41:23.264Z",
       "url": "https://openfront.io/game/JS7uuMR1"
+    },
+    {
+      "id": "3WV4b3aQ",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Cordyceps",
+          "clientID": "4fp9tWNu",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "AnonWaterfall",
+          "clientID": "j4cvN3E8",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 1251,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "timestamp": "2026-08-14T09:04:45.621Z",
+      "url": "https://openfront.io/game/3WV4b3aQ"
     }
   ],
   "trios": [
@@ -31000,6 +31023,29 @@
       "numPlayers": 69,
       "timestamp": "2026-08-14T08:55:15.048Z",
       "url": "https://openfront.io/game/hEf6Kp6B"
+    },
+    {
+      "id": "Crw3vRU5",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonBlizzard4",
+          "clientID": "ZFdit3PB",
+          "clanTag": null
+        },
+        {
+          "username": "corgi",
+          "clientID": "1ndQidNZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1059,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-14T09:08:54.867Z",
+      "url": "https://openfront.io/game/Crw3vRU5"
     }
   ],
   "quads": [
@@ -54548,6 +54594,72 @@
       "numPlayers": 79,
       "timestamp": "2026-08-14T08:30:07.593Z",
       "url": "https://openfront.io/game/W1iwx4kp"
+    },
+    {
+      "id": "52N9YuPM",
+      "team": "Red",
+      "players": [
+        {
+          "username": "KingCNMMD",
+          "clientID": "wZUjARdw",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PowerPotato.G0yi",
+          "clientID": "CqDMhiEf",
+          "clanTag": null
+        },
+        {
+          "username": "Tutorial",
+          "clientID": "VG9MYTPk",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonUnicorn7",
+          "clientID": "SyFP5KHW",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 699,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-14T09:18:16.400Z",
+      "url": "https://openfront.io/game/52N9YuPM"
+    },
+    {
+      "id": "eSudshUi",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JEAN MOULIN",
+          "clientID": "XhU558Xz",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Jules",
+          "clientID": "Sxtfa6TW",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "samsung",
+          "clientID": "K6qMRLAL",
+          "clanTag": null
+        },
+        {
+          "username": "Gojira",
+          "clientID": "LTLStQGh",
+          "clanTag": "WHALE"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 591,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-14T09:21:20.567Z",
+      "url": "https://openfront.io/game/eSudshUi"
     }
   ]
 }
