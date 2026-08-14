@@ -11512,6 +11512,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-14T11:20:20.054Z",
       "url": "https://openfront.io/game/B7wyVJfL"
+    },
+    {
+      "id": "k5KALmqL",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Kornel",
+          "clientID": "S729gmCt",
+          "clanTag": null
+        },
+        {
+          "username": "Anon128",
+          "clientID": "ymfJDTKQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 814,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-14T12:05:12.249Z",
+      "url": "https://openfront.io/game/k5KALmqL"
     }
   ],
   "trios": [
@@ -31460,6 +31483,29 @@
       "numPlayers": 75,
       "timestamp": "2026-08-14T11:47:25.702Z",
       "url": "https://openfront.io/game/kSxT6s1A"
+    },
+    {
+      "id": "UfwNPurc",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "mnm",
+          "clientID": "S3J1Hhqv",
+          "clanTag": "R2D2"
+        },
+        {
+          "username": "TRADE",
+          "clientID": "9mMZawdc",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 1600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 61,
+      "timestamp": "2026-08-14T12:01:04.016Z",
+      "url": "https://openfront.io/game/UfwNPurc"
     }
   ],
   "quads": [
@@ -55369,6 +55415,39 @@
       "numPlayers": 68,
       "timestamp": "2026-08-14T11:24:21.809Z",
       "url": "https://openfront.io/game/xwh3t5rE"
+    },
+    {
+      "id": "uF2987Hf",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Papapoes",
+          "clientID": "jJxsqWzb",
+          "clanTag": "DOEK"
+        },
+        {
+          "username": "Creature",
+          "clientID": "8mrKhabH",
+          "clanTag": null
+        },
+        {
+          "username": "Mamapoes",
+          "clientID": "nsBBSdZQ",
+          "clanTag": "DOEK"
+        },
+        {
+          "username": "Travis",
+          "clientID": "Sz9JSyd4",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 848,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-14T12:06:01.312Z",
+      "url": "https://openfront.io/game/uF2987Hf"
     }
   ]
 }
