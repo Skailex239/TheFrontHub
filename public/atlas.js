@@ -40,7 +40,8 @@ function createProjection(width, height) {
   if (window.d3 && window.d3.geoEquirectangular) {
     return window.d3.geoEquirectangular()
       .scale(width / 6.283)
-      .translate([width / 2, height / 2]);
+      .translate([width / 2, height / 2])
+      .clipExtent([[0, 0], [width, height]]);
   }
   return null;
 }
