@@ -12162,6 +12162,24 @@
       "numPlayers": 48,
       "timestamp": "2026-08-14T19:01:27.498Z",
       "url": "https://openfront.io/game/9riVX422"
+    },
+    {
+      "id": "6Bo5tLZV",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "La Castagne",
+          "clientID": "F4RWyNBX",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1427,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "timestamp": "2026-08-14T19:19:03.550Z",
+      "url": "https://openfront.io/game/6Bo5tLZV"
     }
   ],
   "trios": [
@@ -57335,6 +57353,39 @@
       "numPlayers": 59,
       "timestamp": "2026-08-14T19:16:24.382Z",
       "url": "https://openfront.io/game/1QAnma5n"
+    },
+    {
+      "id": "NYm6P3CB",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonSnail3",
+          "clientID": "yWLYceoE",
+          "clanTag": null
+        },
+        {
+          "username": "Ira",
+          "clientID": "B4oiLFvA",
+          "clanTag": "NU"
+        },
+        {
+          "username": "France",
+          "clientID": "3RMHnauz",
+          "clanTag": "PEACE"
+        },
+        {
+          "username": "AnonSkunk1",
+          "clientID": "9cqYgn9J",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 824,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-14T19:29:19.225Z",
+      "url": "https://openfront.io/game/NYm6P3CB"
     }
   ]
 }
