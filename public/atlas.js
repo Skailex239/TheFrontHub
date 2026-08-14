@@ -188,8 +188,8 @@ function render() {
     ${geoMaps.length > 0 && worldPaths ? `
     <div class="atlas-map-wrap">
       <svg class="atlas-map-svg" viewBox="0 0 ${MAP_W} ${MAP_H}" preserveAspectRatio="xMidYMid meet">
-        <rect width="${MAP_W}" height="${MAP_H}" fill="var(--map-ocean, #0a1020)" />
-        <path d="${worldPaths}" fill="var(--map-land, rgba(30,45,70,0.8))" stroke="var(--map-stroke, rgba(119,224,255,0.1))" stroke-width="0.5" />
+        <rect width="${MAP_W}" height="${MAP_H}" fill="#1a1410" />
+        <path d="${worldPaths}" fill="rgba(255, 140, 50, 0.15)" stroke="rgba(255, 165, 80, 0.5)" stroke-width="0.6" stroke-linejoin="round" />
         ${geoMaps.map(m => {
           const [x, y] = projectEq(m.geo_lng, m.geo_lat, MAP_W, MAP_H);
           const color = CAT_COLORS[m.category] || "#ff7a00";
