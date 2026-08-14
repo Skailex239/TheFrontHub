@@ -11604,6 +11604,98 @@
       "numPlayers": 94,
       "timestamp": "2026-08-14T12:42:24.141Z",
       "url": "https://openfront.io/game/nfi1SA8P"
+    },
+    {
+      "id": "YTP5QWu5",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Russia",
+          "clientID": "M8g7dkLn",
+          "clanTag": null
+        },
+        {
+          "username": "Dvusi",
+          "clientID": "T5AfqhLt",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 1075,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-14T13:42:43.191Z",
+      "url": "https://openfront.io/game/YTP5QWu5"
+    },
+    {
+      "id": "wqH4zsVX",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Samcon",
+          "clientID": "9GybQ8Bw",
+          "clanTag": "WINT"
+        },
+        {
+          "username": "Diamondn",
+          "clientID": "jk8EKHHn",
+          "clanTag": "WINT"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1536,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "timestamp": "2026-08-14T13:38:03.908Z",
+      "url": "https://openfront.io/game/wqH4zsVX"
+    },
+    {
+      "id": "uF8V8ZS1",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Predetor kralon",
+          "clientID": "LohPWirJ",
+          "clanTag": "TRK"
+        },
+        {
+          "username": "Gokturk",
+          "clientID": "1M9QbqEn",
+          "clanTag": "TRK"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 4338,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-14T12:56:55.458Z",
+      "url": "https://openfront.io/game/uF8V8ZS1"
+    },
+    {
+      "id": "i4qHmRyN",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Upox",
+          "clientID": "idmnTXoz",
+          "clanTag": "SWE"
+        },
+        {
+          "username": "Vilka555",
+          "clientID": "JSb8EiAj",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier France",
+      "duration_s": 977,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-14T13:53:18.820Z",
+      "url": "https://openfront.io/game/i4qHmRyN"
     }
   ],
   "trios": [
@@ -55749,6 +55841,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-14T13:21:46.959Z",
       "url": "https://openfront.io/game/ku3auafb"
+    },
+    {
+      "id": "a13x6vkN",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Dex",
+          "clientID": "eDo8Bm2u",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "DefNotEddie",
+          "clientID": "kr5pCk1i",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "ClassyKazza",
+          "clientID": "AjfrzLvV",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "pivod",
+          "clientID": "2TGerDm1",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 872,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-14T13:44:34.305Z",
+      "url": "https://openfront.io/game/a13x6vkN"
     }
   ]
 }
