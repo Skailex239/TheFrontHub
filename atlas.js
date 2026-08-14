@@ -51,20 +51,21 @@ function geoToPath(feature, width, height) {
     const projection = createProjection(width, height);
     if (projection) {
       const pathGen = window.d3.geoPath(projection);
+      // Use the full geometry (all rings) not just the outer ring
       const d = pathGen(feature);
       return d || "";
     }
   }
-  // Fallback: manual equirectangular
+  // Fallback: manual equirectangular — process ALL rings (outer + holes)
   const coords = feature.geometry.coordinates;
   const projectRing = (ring) => ring.map(([lng, lat]) => {
     const [x, y] = projectEq(lng, lat, width, height);
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   });
   if (feature.geometry.type === "Polygon")
-    return "M" + projectRing(coords[0]).join(" L") + "Z";
+    return coords.map(ring => "M" + projectRing(ring).join(" L") + "Z").join(" ");
   if (feature.geometry.type === "MultiPolygon")
-    return coords.map(poly => "M" + projectRing(poly[0]).join(" L") + "Z").join(" ");
+    return coords.map(poly => poly.map(ring => "M" + projectRing(ring).join(" L") + "Z").join(" ")).join(" ");
   return "";
 }
 
@@ -132,7 +133,7 @@ function render() {
     ${geoMaps.length > 0 && countryPaths ? `
     <div class="atlas-map-wrap">
       <svg class="atlas-map-svg" viewBox="0 0 ${MAP_W} ${MAP_H}" preserveAspectRatio="xMidYMid meet">
-        <rect width="${MAP_W}" height="${MAP_H}" fill="#1a1410" />
+        <rect width="${MAP_W}" height="${MAP_H}" fill="#0a1929" />
         <g class="atlas-countries">${countryPaths}</g>
         <g class="atlas-pins">
           ${geoMaps.map(m => {

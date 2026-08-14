@@ -20,29 +20,29 @@
 .atlas-filter-btn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
 
 /* ═══ World map ═══ */
-.atlas-map-wrap { margin-bottom: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #1a1410; position: relative; }
+.atlas-map-wrap { margin-bottom: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #0a1929; position: relative; }
 .atlas-map-svg { width: 100%; height: auto; display: block; }
 /* Each country = separate <path>, subtle borders */
 .atlas-countries path {
-  fill: rgba(255, 140, 50, 0.35);
-  stroke: rgba(255, 165, 80, 0.6);
-  stroke-width: 0.8;
+  fill: #ff8c1a;
+  stroke: rgba(255, 200, 100, 0.8);
+  stroke-width: 0.5;
   stroke-linejoin: round;
   transition: fill 0.2s ease;
 }
-.atlas-countries path:hover { fill: rgba(255, 165, 80, 0.5); }
+.atlas-countries path:hover { fill: #ffaa44; }
 .atlas-svg-pin circle { transition: fill-opacity 0.2s ease; }
 .atlas-svg-pin:hover circle { fill-opacity: 1; }
 .atlas-svg-pin:hover circle:first-child { fill-opacity: 0.3; }
-.atlas-map-legend { position: absolute; bottom: 8px; left: 8px; display: flex; gap: 12px; flex-wrap: wrap; font-size: 11px; color: rgba(255, 220, 180, 0.7); background: rgba(26, 20, 16, 0.85); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255, 165, 80, 0.15); }
+.atlas-map-legend { position: absolute; bottom: 8px; left: 8px; display: flex; gap: 12px; flex-wrap: wrap; font-size: 11px; color: rgba(200, 220, 255, 0.7); background: rgba(10, 25, 41, 0.85); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(100, 150, 200, 0.2); }
 .atlas-legend-item { display: inline-flex; align-items: center; gap: 4px; }
 .atlas-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
 
 /* Tooltip */
-.atlas-tooltip { position: fixed; z-index: 1000; display: none; min-width: 200px; max-width: 240px; border-radius: 10px; background: rgba(26, 20, 16, 0.97); border: 1px solid rgba(255, 165, 80, 0.3); backdrop-filter: blur(16px); box-shadow: 0 16px 48px rgba(0,0,0,0.5); overflow: hidden; pointer-events: none; }
+.atlas-tooltip { position: fixed; z-index: 1000; display: none; min-width: 200px; max-width: 240px; border-radius: 10px; background: rgba(10, 25, 41, 0.97); border: 1px solid rgba(255, 165, 80, 0.3); backdrop-filter: blur(16px); box-shadow: 0 16px 48px rgba(0,0,0,0.5); overflow: hidden; pointer-events: none; }
 .atlas-tooltip img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
-.atlas-tooltip-name { padding: 8px 10px 2px; font-size: 14px; font-weight: 600; color: #ffd9b3; }
-.atlas-tooltip-stats { padding: 0 10px 10px; display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 11px; color: #a89480; }
+.atlas-tooltip-name { padding: 8px 10px 2px; font-size: 14px; font-weight: 600; color: #cce0ff; }
+.atlas-tooltip-stats { padding: 0 10px 10px; display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 11px; color: #8094a8; }
 
 /* ═══ Card grid ═══ */
 .atlas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
