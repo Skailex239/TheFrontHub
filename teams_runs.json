@@ -11696,6 +11696,52 @@
       "numPlayers": 63,
       "timestamp": "2026-08-14T13:53:18.820Z",
       "url": "https://openfront.io/game/i4qHmRyN"
+    },
+    {
+      "id": "oNZG5fhM",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "_Filipos_",
+          "clientID": "4ptitG34",
+          "clanTag": "CZSK"
+        },
+        {
+          "username": "KING",
+          "clientID": "CaoHVkmZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1592,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-14T13:56:15.995Z",
+      "url": "https://openfront.io/game/oNZG5fhM"
+    },
+    {
+      "id": "EUyLLR8r",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "bancbofou",
+          "clientID": "JaypE8UY",
+          "clanTag": "RSCL"
+        },
+        {
+          "username": "AnonGecko6",
+          "clientID": "Smd8fiDj",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-14T14:14:40.054Z",
+      "url": "https://openfront.io/game/EUyLLR8r"
     }
   ],
   "trios": [
@@ -31741,6 +31787,34 @@
       "numPlayers": 78,
       "timestamp": "2026-08-14T13:08:32.670Z",
       "url": "https://openfront.io/game/QF3zaWnA"
+    },
+    {
+      "id": "19D257TN",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "puma",
+          "clientID": "ST5oAyAQ",
+          "clanTag": "HBW"
+        },
+        {
+          "username": "AnonLion1",
+          "clientID": "wBjYQnof",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTuba7",
+          "clientID": "esC3FhzS",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1053,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-14T14:15:08.074Z",
+      "url": "https://openfront.io/game/19D257TN"
     }
   ],
   "quads": [
@@ -55874,6 +55948,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-14T13:44:34.305Z",
       "url": "https://openfront.io/game/a13x6vkN"
+    },
+    {
+      "id": "E3VHKhwa",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "appareilatarte",
+          "clientID": "AC5oBSzo",
+          "clanTag": "BEA"
+        },
+        {
+          "username": "AnonZenith1",
+          "clientID": "DvjBkQvu",
+          "clanTag": "BEA"
+        },
+        {
+          "username": "Jordan",
+          "clientID": "7p2BUAh7",
+          "clanTag": "BEA"
+        },
+        {
+          "username": "Zoubidouf",
+          "clientID": "g8PhE96j",
+          "clanTag": "BEA"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1352,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-14T13:58:09.099Z",
+      "url": "https://openfront.io/game/E3VHKhwa"
     }
   ]
 }
