@@ -109,9 +109,27 @@ function render() {
   const MAP_W = 980, MAP_H = 490;
 
   // Each country = separate <path> (fixes the border issue)
+  // Filter out countries that cause horizontal lines (span the full longitude range)
   let countryPaths = "";
   if (worldFeatures) {
     countryPaths = worldFeatures.map(f => {
+      // Skip Antarctica (causes a line at the bottom)
+      if (f.id === "ATA" || (f.properties && f.properties.name === "Antarctica")) return "";
+      // Check if the geometry spans an unreasonable longitude range
+      let minLng = 180, maxLng = -180;
+      const checkCoords = (ring) => {
+        for (const [lng] of ring) {
+          if (lng < minLng) minLng = lng;
+          if (lng > maxLng) maxLng = lng;
+        }
+      };
+      try {
+        if (f.geometry.type === "Polygon") f.geometry.coordinates.forEach(checkCoords);
+        else if (f.geometry.type === "MultiPolygon") f.geometry.coordinates.forEach(poly => poly.forEach(checkCoords));
+      } catch {}
+      // Skip countries spanning >350° longitude (causes horizontal lines)
+      if (maxLng - minLng > 350) return "";
+
       const d = geoToPath(f, MAP_W, MAP_H);
       return d ? `<path d="${d}" />` : "";
     }).join("");
