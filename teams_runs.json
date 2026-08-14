@@ -11407,6 +11407,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-14T09:15:10.228Z",
       "url": "https://openfront.io/game/nNsgwxZy"
+    },
+    {
+      "id": "48xyv5yp",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "AnonTalisman8",
+          "clientID": "m9uz3FRc",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1388,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-14T09:28:32.952Z",
+      "url": "https://openfront.io/game/48xyv5yp"
     }
   ],
   "trios": [
@@ -31097,6 +31115,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-14T09:05:41.665Z",
       "url": "https://openfront.io/game/tVrtwV2m"
+    },
+    {
+      "id": "d6idV47S",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "doparounesuto",
+          "clientID": "kxabbah3",
+          "clanTag": "SATO"
+        },
+        {
+          "username": "kuroneko",
+          "clientID": "MFYh5jKk",
+          "clanTag": "SATO"
+        },
+        {
+          "username": "france",
+          "clientID": "qFNjAuiX",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1292,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-14T09:30:11.034Z",
+      "url": "https://openfront.io/game/d6idV47S"
     }
   ],
   "quads": [
@@ -54711,6 +54757,67 @@
       "numPlayers": 12,
       "timestamp": "2026-08-14T09:21:20.567Z",
       "url": "https://openfront.io/game/eSudshUi"
+    },
+    {
+      "id": "sJrCnbKq",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SAS",
+          "clientID": "LG1xFrRV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Yeman is a country in Asia",
+          "clientID": "UFZDYWAR",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLocket4",
+          "clientID": "fWbccSXe",
+          "clanTag": null
+        },
+        {
+          "username": "floetus",
+          "clientID": "2dYngBoW",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1111,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-14T09:26:50.857Z",
+      "url": "https://openfront.io/game/sJrCnbKq"
+    },
+    {
+      "id": "wUWbQ24u",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Ukrainian",
+          "clientID": "oAa1pZow",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "Decabo",
+          "clientID": "N5iVeqTA",
+          "clanTag": null
+        },
+        {
+          "username": "Sargon IV",
+          "clientID": "iQjpPS3N",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-14T09:32:53.211Z",
+      "url": "https://openfront.io/game/wUWbQ24u"
     }
   ]
 }
