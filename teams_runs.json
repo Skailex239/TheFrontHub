@@ -11443,6 +11443,29 @@
       "numPlayers": 65,
       "timestamp": "2026-08-14T09:39:23.612Z",
       "url": "https://openfront.io/game/WftsAX1H"
+    },
+    {
+      "id": "Bb2mbyaR",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Ravioli",
+          "clientID": "ciq2pwE7",
+          "clanTag": "OUI"
+        },
+        {
+          "username": "Yokies",
+          "clientID": "4GSMMB7k",
+          "clanTag": "OUI"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 978,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-14T10:32:26.879Z",
+      "url": "https://openfront.io/game/Bb2mbyaR"
     }
   ],
   "trios": [
@@ -31230,6 +31253,47 @@
       "numPlayers": 17,
       "timestamp": "2026-08-14T10:02:22.963Z",
       "url": "https://openfront.io/game/rhyScbA2"
+    },
+    {
+      "id": "yovBe9fU",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Phoenix",
+          "clientID": "RvqTbmY1",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1467,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-14T10:35:13.907Z",
+      "url": "https://openfront.io/game/yovBe9fU"
+    },
+    {
+      "id": "FH7ZCRtQ",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Dex",
+          "clientID": "fpxTnV3s",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "DefNotEddie",
+          "clientID": "XRY7HDJ2",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 1078,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-14T10:37:14.530Z",
+      "url": "https://openfront.io/game/FH7ZCRtQ"
     }
   ],
   "quads": [
@@ -54933,6 +54997,57 @@
       "numPlayers": 60,
       "timestamp": "2026-08-14T09:49:42.178Z",
       "url": "https://openfront.io/game/DUGxcaqA"
+    },
+    {
+      "id": "SSVVV4Qi",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "AnonSloth6",
+          "clientID": "jYzxDc9k",
+          "clanTag": null
+        },
+        {
+          "username": "SamE",
+          "clientID": "yhdVU89z",
+          "clanTag": "BG"
+        },
+        {
+          "username": "BouncyMonster.O9tC",
+          "clientID": "ek7y1BtG",
+          "clanTag": null
+        },
+        {
+          "username": "Shibaryo",
+          "clientID": "njnThPfS",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 807,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-14T10:45:38.494Z",
+      "url": "https://openfront.io/game/SSVVV4Qi"
+    },
+    {
+      "id": "fX6h7eWp",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "attack and die",
+          "clientID": "8Ty36N91",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 2085,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-14T10:24:59.822Z",
+      "url": "https://openfront.io/game/fX6h7eWp"
     }
   ]
 }
