@@ -32372,6 +32372,34 @@
       "numPlayers": 84,
       "timestamp": "2026-08-14T17:09:09.089Z",
       "url": "https://openfront.io/game/kjtT7nst"
+    },
+    {
+      "id": "5e8qzLV2",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Gigachad",
+          "clientID": "1jeAbHzk",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Eter Maste Trader",
+          "clientID": "vUvAJadx",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MCshangus",
+          "clientID": "7zHgZVb5",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 977,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-14T17:29:06.260Z",
+      "url": "https://openfront.io/game/5e8qzLV2"
     }
   ],
   "quads": [
@@ -56980,6 +57008,57 @@
       "numPlayers": 20,
       "timestamp": "2026-08-14T17:17:04.059Z",
       "url": "https://openfront.io/game/cj9oMBFa"
+    },
+    {
+      "id": "wjMxxqkA",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "MASIBA",
+          "clientID": "ZYgCSNmN",
+          "clanTag": "SYR"
+        },
+        {
+          "username": "Alsure",
+          "clientID": "eCjZ1tXd",
+          "clanTag": "SYR"
+        },
+        {
+          "username": "AKIF",
+          "clientID": "9z6AZqSk",
+          "clanTag": "SYR"
+        },
+        {
+          "username": "syria",
+          "clientID": "PqNViSSi",
+          "clanTag": "SYR"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-14T17:29:37.775Z",
+      "url": "https://openfront.io/game/wjMxxqkA"
+    },
+    {
+      "id": "E4SuVq4Y",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "SupremeDoug",
+          "clientID": "BXQEQUma",
+          "clanTag": "WWRS"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1866,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-14T17:20:51.268Z",
+      "url": "https://openfront.io/game/E4SuVq4Y"
     }
   ]
 }
