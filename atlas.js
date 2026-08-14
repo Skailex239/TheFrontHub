@@ -113,22 +113,8 @@ function render() {
   let countryPaths = "";
   if (worldFeatures) {
     countryPaths = worldFeatures.map(f => {
-      // Skip Antarctica (causes a line at the bottom)
+      // Only skip Antarctica (causes a line at the bottom wrapping -90°)
       if (f.id === "ATA" || (f.properties && f.properties.name === "Antarctica")) return "";
-      // Check if the geometry spans an unreasonable longitude range
-      let minLng = 180, maxLng = -180;
-      const checkCoords = (ring) => {
-        for (const [lng] of ring) {
-          if (lng < minLng) minLng = lng;
-          if (lng > maxLng) maxLng = lng;
-        }
-      };
-      try {
-        if (f.geometry.type === "Polygon") f.geometry.coordinates.forEach(checkCoords);
-        else if (f.geometry.type === "MultiPolygon") f.geometry.coordinates.forEach(poly => poly.forEach(checkCoords));
-      } catch {}
-      // Skip countries spanning >350° longitude (causes horizontal lines)
-      if (maxLng - minLng > 350) return "";
 
       const d = geoToPath(f, MAP_W, MAP_H);
       return d ? `<path d="${d}" />` : "";
@@ -151,7 +137,7 @@ function render() {
     ${geoMaps.length > 0 && countryPaths ? `
     <div class="atlas-map-wrap">
       <svg class="atlas-map-svg" viewBox="0 0 ${MAP_W} ${MAP_H}" preserveAspectRatio="xMidYMid meet">
-        <rect width="${MAP_W}" height="${MAP_H}" fill="#0a1929" />
+        <rect width="${MAP_W}" height="${MAP_H}" fill="#a8d5e8" />
         <g class="atlas-countries">${countryPaths}</g>
         <g class="atlas-pins">
           ${geoMaps.map(m => {
