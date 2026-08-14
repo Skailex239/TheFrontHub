@@ -11975,6 +11975,29 @@
       "numPlayers": 66,
       "timestamp": "2026-08-14T16:43:41.572Z",
       "url": "https://openfront.io/game/XnZFogxQ"
+    },
+    {
+      "id": "r2xaRcWq",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "SSS",
+          "clientID": "a2BxduBb",
+          "clanTag": "TR"
+        },
+        {
+          "username": "PreciousBubbles",
+          "clientID": "ZFGYzs3c",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1334,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-14T17:11:58.775Z",
+      "url": "https://openfront.io/game/r2xaRcWq"
     }
   ],
   "trios": [
@@ -32321,6 +32344,34 @@
       "numPlayers": 66,
       "timestamp": "2026-08-14T17:03:02.223Z",
       "url": "https://openfront.io/game/Zy1LVUyx"
+    },
+    {
+      "id": "kjtT7nst",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Anon235",
+          "clientID": "vx1KHBhG",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "Anon997",
+          "clientID": "8n41BTmn",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "Geez",
+          "clientID": "fyoKcFXD",
+          "clanTag": "LAW"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1855,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "timestamp": "2026-08-14T17:09:09.089Z",
+      "url": "https://openfront.io/game/kjtT7nst"
     }
   ],
   "quads": [
@@ -56896,6 +56947,39 @@
       "numPlayers": 65,
       "timestamp": "2026-08-14T16:46:04.715Z",
       "url": "https://openfront.io/game/YsBicbtU"
+    },
+    {
+      "id": "cj9oMBFa",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Balls",
+          "clientID": "Hv7UQ72i",
+          "clanTag": "EU"
+        },
+        {
+          "username": "WhootieWho",
+          "clientID": "XwBhb9Wt",
+          "clanTag": null
+        },
+        {
+          "username": "___",
+          "clientID": "V84Au7cA",
+          "clanTag": null
+        },
+        {
+          "username": "Youp",
+          "clientID": "WEg5Aj8u",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1036,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-14T17:17:04.059Z",
+      "url": "https://openfront.io/game/cj9oMBFa"
     }
   ]
 }
