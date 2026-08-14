@@ -32934,6 +32934,80 @@
       "numPlayers": 36,
       "timestamp": "2026-08-14T20:37:28.584Z",
       "url": "https://openfront.io/game/DrjcJL8g"
+    },
+    {
+      "id": "EjyKk21L",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "In The Thick Of It",
+          "clientID": "u9ELCqc7",
+          "clanTag": "POP"
+        },
+        {
+          "username": "Evan",
+          "clientID": "mvKY3HKC",
+          "clanTag": "POP"
+        },
+        {
+          "username": "TurboFury.i5D1",
+          "clientID": "ExfpdSrM",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 1362,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-14T20:53:31.740Z",
+      "url": "https://openfront.io/game/EjyKk21L"
+    },
+    {
+      "id": "ERgZ3SSn",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Quill",
+          "clientID": "QL6MmHL5",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 2061,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-14T20:33:38.813Z",
+      "url": "https://openfront.io/game/ERgZ3SSn"
+    },
+    {
+      "id": "Xk1phdvt",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonChicken6",
+          "clientID": "P5ETqQ3W",
+          "clanTag": null
+        },
+        {
+          "username": "Goy Destroyer",
+          "clientID": "JXaLE4uH",
+          "clanTag": null
+        },
+        {
+          "username": "Tournai",
+          "clientID": "TgtR8eDV",
+          "clanTag": "BEL"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 782,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-14T21:01:04.208Z",
+      "url": "https://openfront.io/game/Xk1phdvt"
     }
   ],
   "quads": [
@@ -57725,6 +57799,39 @@
       "numPlayers": 101,
       "timestamp": "2026-08-14T19:27:50.154Z",
       "url": "https://openfront.io/game/R2PWdBjp"
+    },
+    {
+      "id": "ixwim3Fb",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Restart",
+          "clientID": "7igoz4Uu",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "Temujin",
+          "clientID": "6QowdDmU",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "Wonder",
+          "clientID": "Qyv8PK3H",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "MRmaudib",
+          "clientID": "8QjYnLtK",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 1037,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 61,
+      "timestamp": "2026-08-14T20:51:15.585Z",
+      "url": "https://openfront.io/game/ixwim3Fb"
     }
   ]
 }
