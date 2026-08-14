@@ -11425,6 +11425,24 @@
       "numPlayers": 54,
       "timestamp": "2026-08-14T09:28:32.952Z",
       "url": "https://openfront.io/game/48xyv5yp"
+    },
+    {
+      "id": "WftsAX1H",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Lazar Spinola",
+          "clientID": "zYeFNkc7",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1045,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-14T09:39:23.612Z",
+      "url": "https://openfront.io/game/WftsAX1H"
     }
   ],
   "trios": [
@@ -31143,6 +31161,47 @@
       "numPlayers": 33,
       "timestamp": "2026-08-14T09:30:11.034Z",
       "url": "https://openfront.io/game/d6idV47S"
+    },
+    {
+      "id": "922oiJCu",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "abubles",
+          "clientID": "w3soKVx3",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1216,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "timestamp": "2026-08-14T09:41:49.762Z",
+      "url": "https://openfront.io/game/922oiJCu"
+    },
+    {
+      "id": "ZUMzExk3",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "No Fight Just Trade",
+          "clientID": "8oVttCaX",
+          "clanTag": null
+        },
+        {
+          "username": "GrumpyBobby",
+          "clientID": "7fSGFdiK",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1653,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-14T09:37:22.993Z",
+      "url": "https://openfront.io/game/ZUMzExk3"
     }
   ],
   "quads": [
