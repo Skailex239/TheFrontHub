@@ -50,7 +50,8 @@ function projectEq(lng, lat, width, height) {
   return [x, y];
 }
 
-/* ═══ Chargement TopoJSON → GeoJSON → SVG paths ═══ */
+/* ═══ Chargement TopoJSON → GeoJSON → SVG paths ═══
+   Utilise topojson-client (chargé via CDN dans atlas.html) */
 
 async function loadWorldMap() {
   try {
@@ -58,7 +59,14 @@ async function loadWorldMap() {
     if (!res.ok) throw new Error("Cannot load world map");
     const topo = await res.json();
 
-    // Convert TopoJSON → GeoJSON (minimal converter)
+    // Use topojson-client if available, otherwise manual decode
+    if (window.topojson && window.topojson.feature) {
+      const fc = window.topojson.feature(topo, topo.objects.countries || Object.values(topo.objects)[0]);
+      return fc.features || [fc];
+    }
+
+    // Fallback: manual TopoJSON decode
+    console.warn("[atlas] topojson-client not loaded, using manual decoder");
     const objects = topo.objects;
     const firstKey = Object.keys(objects)[0];
     if (!firstKey) return null;
@@ -67,22 +75,8 @@ async function loadWorldMap() {
     const transform = topo.transform;
     const geom = objects[firstKey];
 
-    // Decode arcs
     function decodeArc(arcIndex) {
       const arc = arcs[arcIndex < 0 ? ~arcIndex : arcIndex];
-      let x = 0, y = 0;
-      const coords = [];
-      for (let i = 0; i < arc.length; i += 2) {
-        x += arc[i];
-        y += arc[i + 1];
-      }
-      // Redo (need cumulative)
-      x = 0; y = 0;
-      for (let i = 0; i < arc.length; i += 2) {
-        x += arc[i] * transform.scale[0] + (i === 0 ? transform.translate[0] : 0);
-        y += arc[i + 1] * transform.scale[1] + (i === 1 ? transform.translate[1] : 0);
-      }
-      // Actually let's just use the proper cumulative decode
       const pts = [];
       let dx = 0, dy = 0;
       for (let i = 0; i < arc.length; i += 2) {
@@ -98,17 +92,17 @@ async function loadWorldMap() {
 
     function decodeGeometry(g) {
       if (g.type === "Polygon") {
-        return g.arcs.map(ring => Array.isArray(ring[0]) ? ring.flatMap(decodeArc) : ring.map(decodeArc));
+        return { type: "Polygon", coordinates: g.arcs.map(ring => Array.isArray(ring[0]) ? ring.flatMap(decodeArc) : ring.map(decodeArc)) };
       } else if (g.type === "MultiPolygon") {
-        return g.arcs.map(poly => poly.map(ring => Array.isArray(ring[0]) ? ring.flatMap(decodeArc) : ring.map(decodeArc)));
+        return { type: "MultiPolygon", coordinates: g.arcs.map(poly => poly.map(ring => Array.isArray(ring[0]) ? ring.flatMap(decodeArc) : ring.map(decodeArc))) };
       }
-      return [];
+      return null;
     }
 
-    const features = (geom.geometries || []).map(g => ({
+    const features = (geom.geometries || []).filter(g => g).map(g => ({
       type: "Feature",
-      geometry: { type: g.type, coordinates: decodeGeometry(g) },
-    }));
+      geometry: decodeGeometry(g),
+    })).filter(f => f.geometry);
 
     return features;
   } catch (e) {
