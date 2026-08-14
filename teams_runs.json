@@ -12226,6 +12226,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-14T20:21:04.018Z",
       "url": "https://openfront.io/game/WagnY6uz"
+    },
+    {
+      "id": "jbadprUo",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Montmartre",
+          "clientID": "D6ABefTZ",
+          "clanTag": "FR"
+        },
+        {
+          "username": "AnonBonfire4",
+          "clientID": "WfsrYK8s",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1011,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-14T20:46:47.256Z",
+      "url": "https://openfront.io/game/jbadprUo"
     }
   ],
   "trios": [
@@ -32865,6 +32888,52 @@
       "numPlayers": 78,
       "timestamp": "2026-08-14T20:27:44.932Z",
       "url": "https://openfront.io/game/QamEQHP5"
+    },
+    {
+      "id": "bj9sxERs",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Physott",
+          "clientID": "3VC3Kxd7",
+          "clanTag": null
+        },
+        {
+          "username": "Nicola Sturgeons camper van",
+          "clientID": "h2NZ5aR1",
+          "clanTag": "DYT"
+        },
+        {
+          "username": "Pater Baviaan",
+          "clientID": "EMiyEAjk",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 749,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-14T20:44:02.080Z",
+      "url": "https://openfront.io/game/bj9sxERs"
+    },
+    {
+      "id": "DrjcJL8g",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "AnonZeppelin",
+          "clientID": "xxGbQzCT",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 1480,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-14T20:37:28.584Z",
+      "url": "https://openfront.io/game/DrjcJL8g"
     }
   ],
   "quads": [
