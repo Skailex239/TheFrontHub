@@ -1,0 +1,102 @@
+/* atlas.css — Atlas des cartes OpenFront
+   Carte mondiale interactive + grille de cartes filtrable
+   Style TheFrontHub (orange, épuré, premium) */
+
+.atlas-view { padding: 0 0 24px; max-width: 1280px; margin: 0 auto; }
+
+/* Intro */
+.atlas-intro { margin-bottom: 24px; text-align: center; }
+.atlas-intro-sub { font-size: 15px; color: var(--muted); line-height: 1.6; max-width: 720px; margin: 0 auto; }
+
+/* Stats */
+.atlas-stats { display: flex; gap: 16px; justify-content: center; margin-bottom: 28px; flex-wrap: wrap; }
+.atlas-stat { text-align: center; padding: 12px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; min-width: 100px; }
+.atlas-stat-val { display: block; font-size: 24px; font-weight: 800; color: var(--orange); font-variant-numeric: tabular-nums; }
+.atlas-stat-label { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+
+/* Filters */
+.atlas-filters { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; justify-content: center; }
+.atlas-filter-btn { padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s var(--ease-out, cubic-bezier(0.22,1,0.36,1)); font-family: inherit; }
+.atlas-filter-btn:hover { border-color: var(--orange); color: var(--orange); }
+.atlas-filter-btn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+/* World map */
+.atlas-map-wrap { margin-bottom: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: #0f172a; position: relative; }
+.atlas-map { position: relative; width: 100%; aspect-ratio: 2 / 1; min-height: 300px; }
+.atlas-map-bg {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'%3E%3Crect fill='%230f172a' width='1000' height='500'/%3E%3Cg fill='none' stroke='%23ff7a00' stroke-width='0.5' stroke-opacity='0.12'%3E%3Cpath d='M150 180 Q200 120 280 140 L320 100 Q380 80 420 120 L460 100 Q500 80 540 120 L580 140 Q620 120 660 160 L700 140 Q740 120 780 160 L820 180'/%3E%3Cpath d='M100 220 Q180 260 260 240 L340 280 Q420 300 500 280 L580 320 Q660 340 740 320 L820 300 Q880 280 920 320'/%3E%3Cpath d='M120 300 Q200 340 300 320 L400 360 Q500 380 600 360 L700 340 Q800 360 880 340'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover; background-position: center;
+}
+.atlas-pin {
+  position: absolute; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--pin-color, #ff7a00); cursor: pointer; z-index: 2;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.3), 0 0 12px var(--pin-color, #ff7a00);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.atlas-pin:hover { transform: translate(-50%, -50%) scale(1.6); box-shadow: 0 0 0 3px rgba(255,255,255,0.5), 0 0 20px var(--pin-color, #ff7a00); z-index: 10; }
+
+/* Grid */
+.atlas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+
+/* Card */
+.atlas-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s var(--ease-out, cubic-bezier(0.22,1,0.36,1)), border-color 0.2s ease, box-shadow 0.2s ease; text-decoration: none; color: inherit; }
+.atlas-card:hover { transform: translateY(-3px); border-color: var(--orange); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.atlas-card.flash { animation: atlasFlash 0.8s ease; }
+@keyframes atlasFlash { 0%,100% { border-color: var(--border); } 50% { border-color: var(--orange); box-shadow: 0 0 24px var(--orange-glow); } }
+
+.atlas-card-thumb { position: relative; aspect-ratio: 3 / 2; background: var(--bg-subtle); overflow: hidden; }
+.atlas-card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.atlas-card-cat { position: absolute; top: 8px; left: 8px; padding: 2px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; background: var(--cat-color, var(--orange)); color: #fff; }
+
+.atlas-card-body { padding: 12px 14px; }
+.atlas-card-name { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.atlas-card-meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: 11px; color: var(--muted); }
+.atlas-card-land { font-size: 11px; color: var(--dim); margin-top: 4px; }
+
+/* Modal */
+.atlas-modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.6); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 20px; animation: atlasFadeIn 0.2s ease; }
+@keyframes atlasFadeIn { from { opacity: 0; } to { opacity: 1; } }
+.atlas-modal { background: var(--card); border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; }
+.atlas-modal-close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: none; border-radius: 50%; background: rgba(0,0,0,0.1); font-size: 20px; cursor: pointer; z-index: 10; color: var(--text); }
+.atlas-modal-close:hover { background: rgba(0,0,0,0.2); }
+.atlas-modal-thumb { width: 100%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 16px 16px 0 0; background: var(--bg-subtle); }
+.atlas-modal-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.atlas-modal-body { padding: 24px; }
+.atlas-modal-cat { display: inline-block; padding: 3px 10px; border-radius: 5px; font-size: 11px; font-weight: 700; text-transform: uppercase; background: var(--cat-color, var(--orange)); color: #fff; margin-bottom: 8px; }
+.atlas-modal-name { font-size: 24px; font-weight: 800; color: var(--text); margin: 0 0 16px; }
+.atlas-modal-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.atlas-modal-stat { text-align: center; padding: 10px; background: var(--bg-subtle); border-radius: 8px; }
+.atlas-modal-stat span { display: block; font-size: 18px; font-weight: 700; color: var(--orange); font-variant-numeric: tabular-nums; }
+.atlas-modal-stat label { display: block; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; margin-top: 2px; }
+.atlas-modal-nations { margin-bottom: 20px; }
+.atlas-modal-nations h3 { font-size: 14px; font-weight: 700; color: var(--text); margin: 0 0 10px; }
+.atlas-nations-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+.atlas-nation { padding: 3px 10px; border-radius: 6px; font-size: 12px; background: var(--orange-pale); color: var(--orange-deep); border: 1px solid rgba(255,122,0,0.15); }
+.atlas-nations-more { font-size: 12px; color: var(--muted); margin-top: 8px; }
+.atlas-modal-play { display: inline-block; padding: 10px 20px; background: var(--orange); color: #fff; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background 0.2s ease; }
+.atlas-modal-play:hover { background: var(--orange-hover); }
+
+/* Loading / Error */
+.atlas-loading, .atlas-error { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 300px; gap: 12px; color: var(--muted); text-align: center; }
+.atlas-loading .spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--orange); border-radius: 50%; animation: dash-spin 0.8s linear infinite; }
+
+/* Footer */
+.atlas-footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--muted); }
+.atlas-footer a { text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .atlas-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+  .atlas-map { min-height: 200px; }
+  .atlas-pin { width: 10px; height: 10px; }
+}
+@media (max-width: 640px) {
+  .atlas-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .atlas-card-name { font-size: 13px; }
+  .atlas-card-meta { font-size: 10px; gap: 6px; }
+  .atlas-stats { gap: 8px; }
+  .atlas-stat { padding: 8px 12px; min-width: 80px; }
+  .atlas-stat-val { font-size: 20px; }
+}
