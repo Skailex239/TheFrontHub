@@ -11829,6 +11829,29 @@
       "numPlayers": 74,
       "timestamp": "2026-08-14T14:41:41.654Z",
       "url": "https://openfront.io/game/ERRLZuWy"
+    },
+    {
+      "id": "mKQynxwB",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "VarXard",
+          "clientID": "uAGtFRdy",
+          "clanTag": "LBU"
+        },
+        {
+          "username": "Skailex",
+          "clientID": "cNn4DggZ",
+          "clanTag": "LBU"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1016,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-14T15:57:06.215Z",
+      "url": "https://openfront.io/game/mKQynxwB"
     }
   ],
   "trios": [
@@ -32050,6 +32073,52 @@
       "numPlayers": 99,
       "timestamp": "2026-08-14T14:49:33.145Z",
       "url": "https://openfront.io/game/ykCLGgqr"
+    },
+    {
+      "id": "EmUkgJsN",
+      "team": "Team 26",
+      "players": [
+        {
+          "username": "AnonLighthouse9",
+          "clientID": "8PD41he4",
+          "clanTag": null
+        },
+        {
+          "username": "Anon957",
+          "clientID": "YD3RR82L",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAmethyst8",
+          "clientID": "DDToizUV",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 2259,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-14T15:40:22.201Z",
+      "url": "https://openfront.io/game/EmUkgJsN"
+    },
+    {
+      "id": "G4fdeVCR",
+      "team": "Team 26",
+      "players": [
+        {
+          "username": "AnonFlamingo3",
+          "clientID": "Eee1jJpL",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 2097,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 106,
+      "timestamp": "2026-08-14T15:43:44.398Z",
+      "url": "https://openfront.io/game/G4fdeVCR"
     }
   ],
   "quads": [
@@ -56465,6 +56534,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-14T15:34:41.850Z",
       "url": "https://openfront.io/game/g1LebVNo"
+    },
+    {
+      "id": "VaF5a6R2",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Balls",
+          "clientID": "886ByzYL",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AnonBicycle2",
+          "clientID": "cabEJxBx",
+          "clanTag": null
+        },
+        {
+          "username": "Anon843",
+          "clientID": "Uyvra3X9",
+          "clanTag": null
+        },
+        {
+          "username": "MelodyMitrooo",
+          "clientID": "SBX46fzL",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1146,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-14T16:01:04.455Z",
+      "url": "https://openfront.io/game/VaF5a6R2"
     }
   ]
 }
