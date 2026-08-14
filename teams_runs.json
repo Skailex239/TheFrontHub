@@ -12203,6 +12203,29 @@
       "numPlayers": 14,
       "timestamp": "2026-08-14T20:00:20.601Z",
       "url": "https://openfront.io/game/xfQsyG58"
+    },
+    {
+      "id": "WagnY6uz",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Suchy Pies",
+          "clientID": "c9essBJZ",
+          "clanTag": "XD"
+        },
+        {
+          "username": "TheBigYosh",
+          "clientID": "9aYSUAn8",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1095,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-14T20:21:04.018Z",
+      "url": "https://openfront.io/game/WagnY6uz"
     }
   ],
   "trios": [
@@ -32786,6 +32809,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-14T19:50:58.031Z",
       "url": "https://openfront.io/game/ZPGwQzm3"
+    },
+    {
+      "id": "D1neyUDC",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "tom",
+          "clientID": "zDb8FxsX",
+          "clanTag": "LABUB"
+        },
+        {
+          "username": "Picho1",
+          "clientID": "N9Y5XUZk",
+          "clanTag": "LABUB"
+        },
+        {
+          "username": "ape nuker",
+          "clientID": "XSfhNqBC",
+          "clanTag": "LABUB"
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 1282,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-14T20:13:28.006Z",
+      "url": "https://openfront.io/game/D1neyUDC"
     }
   ],
   "quads": [
