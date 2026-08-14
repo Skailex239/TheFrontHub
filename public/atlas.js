@@ -35,10 +35,30 @@ function projectEq(lng, lat, w, h) {
   return [((lng + 180) / 360) * w, ((90 - lat) / 180) * h];
 }
 
-function geoToPath(feature, w, h) {
+// Use d3-geo for proper projection (handles antimeridian, etc.)
+function createProjection(width, height) {
+  if (window.d3 && window.d3.geoEquirectangular) {
+    return window.d3.geoEquirectangular()
+      .scale(width / 6.283)
+      .translate([width / 2, height / 2]);
+  }
+  return null;
+}
+
+function geoToPath(feature, width, height) {
+  // Use d3.geoPath if available (proper projection)
+  if (window.d3 && window.d3.geoPath) {
+    const projection = createProjection(width, height);
+    if (projection) {
+      const pathGen = window.d3.geoPath(projection);
+      const d = pathGen(feature);
+      return d || "";
+    }
+  }
+  // Fallback: manual equirectangular
   const coords = feature.geometry.coordinates;
   const projectRing = (ring) => ring.map(([lng, lat]) => {
-    const [x, y] = projectEq(lng, lat, w, h);
+    const [x, y] = projectEq(lng, lat, width, height);
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   });
   if (feature.geometry.type === "Polygon")
@@ -116,7 +136,10 @@ function render() {
         <g class="atlas-countries">${countryPaths}</g>
         <g class="atlas-pins">
           ${geoMaps.map(m => {
-            const [x, y] = projectEq(m.geo_lng, m.geo_lat, MAP_W, MAP_H);
+            const _proj = createProjection(MAP_W, MAP_H);
+            let x, y;
+            if (_proj) { [x, y] = _proj([m.geo_lng, m.geo_lat]); }
+            else { [x, y] = projectEq(m.geo_lng, m.geo_lat, MAP_W, MAP_H); }
             const color = CAT_COLORS[m.category] || "#ff7a00";
             const isContinent = m.geo_type === "continent";
             const r = isContinent ? 7 : 4;
