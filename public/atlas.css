@@ -24,13 +24,13 @@
 .atlas-map-svg { width: 100%; height: auto; display: block; }
 /* Each country = separate <path>, subtle borders */
 .atlas-countries path {
-  fill: rgba(255, 140, 50, 0.12);
-  stroke: rgba(255, 165, 80, 0.25);
-  stroke-width: 0.4;
+  fill: rgba(255, 140, 50, 0.35);
+  stroke: rgba(255, 165, 80, 0.6);
+  stroke-width: 0.8;
   stroke-linejoin: round;
   transition: fill 0.2s ease;
 }
-.atlas-countries path:hover { fill: rgba(255, 165, 80, 0.25); }
+.atlas-countries path:hover { fill: rgba(255, 165, 80, 0.5); }
 .atlas-svg-pin circle { transition: fill-opacity 0.2s ease; }
 .atlas-svg-pin:hover circle { fill-opacity: 1; }
 .atlas-svg-pin:hover circle:first-child { fill-opacity: 0.3; }
