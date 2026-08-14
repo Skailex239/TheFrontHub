@@ -32009,6 +32009,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-14T14:35:47.263Z",
       "url": "https://openfront.io/game/oMHqEwew"
+    },
+    {
+      "id": "k5hKZvHe",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonChariot1",
+          "clientID": "ccmxZpaf",
+          "clanTag": null
+        },
+        {
+          "username": "Nothing But Mammals",
+          "clientID": "ATwqF6VG",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 2371,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-14T14:29:57.940Z",
+      "url": "https://openfront.io/game/k5hKZvHe"
     }
   ],
   "quads": [
@@ -56175,6 +56198,72 @@
       "numPlayers": 20,
       "timestamp": "2026-08-14T13:58:09.099Z",
       "url": "https://openfront.io/game/E3VHKhwa"
+    },
+    {
+      "id": "K7CorckN",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "DefNotEddie",
+          "clientID": "88qfuGqa",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "pivod",
+          "clientID": "dqnFgMw1",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "Dex",
+          "clientID": "24Z8Qqgc",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "ClassyKazza",
+          "clientID": "QPZpAB7h",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 1328,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-14T14:53:47.385Z",
+      "url": "https://openfront.io/game/K7CorckN"
+    },
+    {
+      "id": "f2PWbm2v",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "THOMX",
+          "clientID": "2ugMUTdT",
+          "clanTag": "ALT"
+        },
+        {
+          "username": "WHATSIT",
+          "clientID": "QJidJxmP",
+          "clanTag": "ALT"
+        },
+        {
+          "username": "Anon",
+          "clientID": "y2jn2iMZ",
+          "clanTag": null
+        },
+        {
+          "username": "Republic of Kawai",
+          "clientID": "pqqPxfaA",
+          "clanTag": null
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1365,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "timestamp": "2026-08-14T14:47:26.000Z",
+      "url": "https://openfront.io/game/f2PWbm2v"
     }
   ]
 }
