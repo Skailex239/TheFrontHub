@@ -11852,6 +11852,29 @@
       "numPlayers": 74,
       "timestamp": "2026-08-14T15:57:06.215Z",
       "url": "https://openfront.io/game/mKQynxwB"
+    },
+    {
+      "id": "VuWQwCN1",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Anon",
+          "clientID": "LEb9df5Y",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "5uog5BCC",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 926,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-14T16:20:32.682Z",
+      "url": "https://openfront.io/game/VuWQwCN1"
     }
   ],
   "trios": [
@@ -56567,6 +56590,34 @@
       "numPlayers": 28,
       "timestamp": "2026-08-14T16:01:04.455Z",
       "url": "https://openfront.io/game/VaF5a6R2"
+    },
+    {
+      "id": "LKoHhnm1",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonUnicorn6",
+          "clientID": "vWTQkPyB",
+          "clanTag": null
+        },
+        {
+          "username": "Empire",
+          "clientID": "w8qrtbVN",
+          "clanTag": null
+        },
+        {
+          "username": "The Temple",
+          "clientID": "bHyQUFcQ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 19,
+      "timestamp": "2026-08-14T16:24:37.957Z",
+      "url": "https://openfront.io/game/LKoHhnm1"
     }
   ]
 }
