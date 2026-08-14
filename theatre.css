@@ -1,0 +1,152 @@
+/* theatre.css — THEATRE: OpenFront replay analyzer
+   Dark blue/orange theme like OpenFront.io in-game */
+
+.theatre-view { padding: 0 0 24px; max-width: 1280px; margin: 0 auto; }
+
+/* ═══ Landing ═══ */
+.theatre-landing { display: flex; flex-direction: column; gap: 40px; }
+
+.theatre-hero { text-align: center; padding: 40px 20px 20px; }
+.theatre-hero-title { font-size: 42px; font-weight: 900; letter-spacing: -0.02em; margin: 0 0 12px; background: linear-gradient(135deg, #ff7a00, #ffb15d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.theatre-hero-sub { font-size: 15px; color: var(--muted); line-height: 1.6; max-width: 600px; margin: 0 auto 28px; }
+
+.theatre-input-wrap { display: flex; gap: 10px; max-width: 560px; margin: 0 auto; }
+.theatre-input { flex: 1; padding: 14px 18px; border: 1px solid var(--border); border-radius: 10px; font-size: 15px; font-family: inherit; background: var(--card); color: var(--text); outline: none; transition: border-color 0.2s ease; }
+.theatre-input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-glow); }
+.theatre-input::placeholder { color: var(--dim); }
+.theatre-analyze-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: var(--orange); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; transition: background 0.2s ease, transform 0.1s ease; white-space: nowrap; }
+.theatre-analyze-btn:hover { background: var(--orange-hover); }
+.theatre-analyze-btn:active { transform: scale(0.98); }
+.theatre-analyze-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.theatre-error-msg { margin: 12px auto 0; max-width: 560px; padding: 10px 14px; border-radius: 8px; background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; font-size: 13px; font-weight: 600; text-align: center; }
+.theatre-hint { margin-top: 10px; font-size: 12px; color: var(--dim); text-align: center; }
+
+/* Recent games */
+.theatre-recent { }
+.theatre-recent-title { font-size: 16px; font-weight: 700; color: var(--text); margin: 0 0 14px; }
+.theatre-recent-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.theatre-recent-loading { color: var(--muted); font-size: 14px; padding: 20px; text-align: center; }
+.theatre-recent-item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: border-color 0.2s ease, transform 0.2s ease; }
+.theatre-recent-item:hover { border-color: var(--orange); transform: translateY(-2px); }
+.theatre-recent-info { flex: 1; min-width: 0; }
+.theatre-recent-map { font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.theatre-recent-meta { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.theatre-recent-result { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 5px; flex-shrink: 0; }
+.theatre-recent-result.victory { background: #dcfce7; color: #166534; }
+.theatre-recent-result.defeat { background: #fee2e2; color: #991b1b; }
+
+/* Features */
+.theatre-features { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.theatre-feature { padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+.theatre-feature-icon { font-size: 32px; margin-bottom: 8px; }
+.theatre-feature h4 { font-size: 15px; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+.theatre-feature p { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0; }
+
+/* ═══ Loading ═══ */
+.theatre-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; gap: 16px; }
+.theatre-loading .spinner { width: 40px; height: 40px; border: 3px solid var(--border); border-top-color: var(--orange); border-radius: 50%; animation: dash-spin 0.8s linear infinite; }
+.theatre-loading-text { font-size: 14px; color: var(--muted); text-align: center; }
+.theatre-loading-step { font-size: 12px; color: var(--dim); margin-top: 4px; }
+
+/* ═══ Game Analysis Dashboard ═══ */
+.theatre-dashboard { display: flex; flex-direction: column; gap: 24px; }
+
+/* Header bar */
+.theatre-game-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+.theatre-game-title { font-size: 20px; font-weight: 800; color: var(--text); margin: 0; }
+.theatre-game-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.theatre-game-meta-item { display: inline-flex; align-items: center; gap: 4px; }
+.theatre-back-btn { padding: 8px 16px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: 8px; color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: all 0.2s ease; }
+.theatre-back-btn:hover { border-color: var(--orange); color: var(--orange); }
+
+/* Winner banner */
+.theatre-winner { display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: linear-gradient(135deg, rgba(255,122,0,0.08), transparent); border: 1px solid rgba(255,122,0,0.2); border-radius: 12px; }
+.theatre-winner-trophy { font-size: 32px; }
+.theatre-winner-info { flex: 1; }
+.theatre-winner-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange); }
+.theatre-winner-name { font-size: 18px; font-weight: 700; color: var(--text); }
+
+/* Stats grid */
+.theatre-stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+.theatre-stat-box { text-align: center; padding: 14px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+.theatre-stat-box span { display: block; font-size: 22px; font-weight: 800; color: var(--orange); font-variant-numeric: tabular-nums; }
+.theatre-stat-box label { display: block; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+
+/* Player table */
+.theatre-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.theatre-section-header { padding: 14px 18px; border-bottom: 1px solid var(--border); font-size: 14px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.04em; display: flex; align-items: center; justify-content: space-between; }
+.theatre-section-body { padding: 0; }
+
+/* Player table */
+.theatre-player-table { width: 100%; border-collapse: collapse; }
+.theatre-player-table th { padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid var(--border); }
+.theatre-player-table td { padding: 10px 14px; font-size: 13px; color: var(--text); border-bottom: 1px solid var(--border-light); }
+.theatre-player-table tr:last-child td { border-bottom: none; }
+.theatre-player-table tr:hover td { background: var(--orange-pale); }
+.theatre-player-table .num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono, monospace); }
+.theatre-player-rank { font-weight: 700; color: var(--orange); }
+.theatre-player-name { font-weight: 600; }
+.theatre-player-dead { opacity: 0.5; text-decoration: line-through; }
+.theatre-player-clan { font-size: 11px; color: var(--muted); }
+
+/* Timeline */
+.theatre-timeline { padding: 16px 18px; }
+.theatre-timeline-track { position: relative; height: 60px; background: var(--bg-subtle); border-radius: 8px; overflow: hidden; cursor: pointer; }
+.theatre-timeline-progress { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(255,122,0,0.1); border-right: 2px solid var(--orange); transition: width 0.1s linear; }
+.theatre-timeline-event { position: absolute; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; border-radius: 50%; cursor: pointer; z-index: 2; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
+.theatre-timeline-event:hover { transform: translateY(-50%) scale(1.4); z-index: 10; }
+.theatre-timeline-event.attack { background: #ef4444; }
+.theatre-timeline-event.nuke { background: #facc15; }
+.theatre-timeline-event.alliance { background: #34d399; }
+.theatre-timeline-event.betrayal { background: #a855f7; }
+.theatre-timeline-event.elimination { background: #6b7280; }
+.theatre-timeline-event.victory { background: var(--orange); }
+.theatre-timeline-labels { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Timeline legend */
+.theatre-timeline-legend { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+.theatre-legend-item { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); }
+.theatre-legend-dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #fff; }
+
+/* Expansion chart (canvas) */
+.theatre-chart-wrap { padding: 16px 18px; }
+.theatre-chart-canvas { width: 100%; height: 300px; display: block; }
+
+/* Diplomacy graph */
+.theatre-diplomacy { padding: 16px 18px; }
+.theatre-diplomacy-canvas { width: 100%; height: 350px; display: block; }
+
+/* Nuke tracker */
+.theatre-nuke-list { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; }
+.theatre-nuke-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg-subtle); border-radius: 8px; border-left: 3px solid #facc15; }
+.theatre-nuke-from { font-size: 13px; font-weight: 600; color: var(--text); }
+.theatre-nuke-arrow { color: var(--muted); font-size: 16px; }
+.theatre-nuke-to { font-size: 13px; font-weight: 600; color: var(--text); }
+.theatre-nuke-time { margin-left: auto; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Tabs */
+.theatre-tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--border); margin-bottom: 0; }
+.theatre-tab { padding: 10px 20px; border: none; background: transparent; color: var(--muted); font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; transition: color 0.2s ease; position: relative; }
+.theatre-tab:hover { color: var(--text); }
+.theatre-tab.active { color: var(--orange); }
+.theatre-tab.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: var(--orange); }
+.theatre-tab-content { display: none; }
+.theatre-tab-content.active { display: block; }
+
+/* Footer */
+.theatre-footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--muted); }
+.theatre-footer a { text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .theatre-hero-title { font-size: 32px; }
+  .theatre-input-wrap { flex-direction: column; }
+  .theatre-features { grid-template-columns: 1fr 1fr; }
+  .theatre-stats-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .theatre-features { grid-template-columns: 1fr; }
+  .theatre-stats-grid { grid-template-columns: 1fr; }
+  .theatre-game-header { flex-direction: column; align-items: flex-start; }
+}
