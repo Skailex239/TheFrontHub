@@ -380,20 +380,48 @@ async function loadStats(publicId) {
   const games = [];
   const stats = computeStats(games, playerData.stats || {});
 
-  // Compute week stats (games in last 7 days)
-  const now = Date.now();
-  const weekAgo = now - 7 * 24 * 60 * 60 * 1000;
-  const weekGames = games.filter(g => {
-    const t = new Date(g.start || 0).getTime();
-    return !isNaN(t) && t >= weekAgo && t <= now;
-  });
-  const weekWins = weekGames.length; // approximate: count week games as "score"
-  const weekRank = "—"; // not available without global calc
+  // ── Week stats from dashboard_scores.json (official data) ──
+  let weekScore = 0, weekRank = "—", weekFFA = 0, weekTeam = 0, weekTotalPoints = 0;
+  try {
+    const scoresRes = await fetch("dashboard_scores.json.gz", { cache: "force-cache" });
+    let scoresData = null;
+    if (scoresRes.ok) {
+      const ds = new DecompressionStream("gzip");
+      scoresData = await new Response(scoresRes.body.pipeThrough(ds)).json();
+    } else {
+      const fallback = await fetch("dashboard_scores.json");
+      if (fallback.ok) scoresData = await fallback.json();
+    }
+    if (scoresData && scoresData.players) {
+      const entry = scoresData.players.find(p => p.publicId === publicId);
+      if (entry) {
+        weekFFA = (entry.weekly_ffa_casual || 0) + (entry.weekly_ffa_ranked || 0);
+        weekTeam = (entry.weekly_team_casual || 0) + (entry.weekly_team_ranked || 0);
+        weekScore = entry.weekly_points || 0;
+        weekTotalPoints = entry.points || 0;
+        // Compute rank: position in the sorted weekly leaderboard
+        const weeklySorted = [...scoresData.players].sort((a, b) => (b.weekly_points || 0) - (a.weekly_points || 0));
+        const rankIdx = weeklySorted.findIndex(p => p.publicId === publicId);
+        weekRank = rankIdx >= 0 ? rankIdx + 1 : "—";
 
-  // All-time score: wins * 1 + games played (simple heuristic)
+        // Store for the chart
+        window._profileWeekData = {
+          ffa: weekFFA,
+          team: weekTeam,
+          total: weekScore,
+          rank: weekRank,
+          weekStart: scoresData.weekStart,
+        };
+      }
+    }
+  } catch (e) {
+    console.warn("[profile] Week stats load failed:", e.message);
+  }
+
+  // All-time score
   const allTimeScore = stats.wins * 4 + (stats.total - stats.wins);
 
-  // Breakdown by mode (from stats tree)
+  // Breakdown by mode
   const breakdown = computeModeBreakdown(playerData.stats || {});
   const detail = [];
   if (breakdown.FFA) detail.push("FFA: " + breakdown.FFA);
@@ -404,8 +432,8 @@ async function loadStats(publicId) {
   const detailStr = detail.length ? " (" + detail.join(", ") + ")" : "";
 
   setText("stat-week-rank", `This week rank: #${weekRank}`);
-  setText("stat-week-score", `This week score: ${weekWins}`);
-  setText("stat-alltime", `All-time score: ${allTimeScore} (${stats.wins} wins${detailStr})`);
+  setText("stat-week-score", `This week score: ${weekScore} pts (FFA: ${weekFFA} · Team: ${weekTeam})`);
+  setText("stat-alltime", `All-time score: ${weekTotalPoints || allTimeScore} (${stats.wins} wins${detailStr})`);
 
   // ELO from ranked.json (1v1)
   const ranked1v1 = await eloPromise;
@@ -436,8 +464,7 @@ async function loadStats(publicId) {
   try {
     const recentGames = await recentGamesPromise;
     renderRecentGames(recentGames, publicId);
-
-    // Activity chart + playtime estimation
+    renderWeeklyChart();
   } catch (e) {
     console.error("[profile] recent games fetch failed:", e);
     const c = document.getElementById("profile-recent-games");
@@ -890,3 +917,170 @@ document.addEventListener("click", (e) => {
 /* ═══ Activity chart + playtime estimation ═══ */
 
 
+
+/* ═══ Weekly Performance Chart ═══
+   Canvas chart with colored lines per mode (FFA=red, Team=blue, etc.)
+   and circles showing the rank number. Inspired by the reference image. */
+
+function renderWeeklyChart() {
+  const data = window._profileWeekData;
+  if (!data) return;
+
+  // Find or create container
+  let wrap = document.getElementById("weekly-chart-card");
+  if (!wrap) {
+    const recent = document.getElementById("profile-recent-games");
+    if (!recent) return;
+    wrap = document.createElement("div");
+    wrap.id = "weekly-chart-card";
+    wrap.className = "pf-card";
+    wrap.style.marginTop = "16px";
+    wrap.innerHTML = `
+      <div class="pf-card-header">
+        <span class="pf-card-title">Weekly Performance</span>
+        <span class="pf-card-sub">Points et position par mode</span>
+      </div>
+      <div class="pf-card-body" style="padding:16px">
+        <canvas id="weekly-chart-canvas" style="width:100%;height:280px;display:block"></canvas>
+      </div>
+    `;
+    recent.parentNode.after(wrap);
+  }
+
+  const canvas = document.getElementById("weekly-chart-canvas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+  const W = canvas.offsetWidth;
+  const H = 280;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  // Data series (this week only — will expand as history accumulates)
+  const weekLabel = data.weekStart
+    ? "S" + new Date(data.weekStart).toLocaleDateString("fr-FR", { week: "numeric" })
+    : "Cette semaine";
+
+  // For now we have 1 data point per mode. Show as bar chart with values.
+  const modes = [
+    { label: "FFA", value: data.ffa, color: "#ef4444", rank: data.rank },
+    { label: "Team", value: data.team, color: "#2196f3", rank: data.rank },
+    { label: "Total", value: data.total, color: "#111827", rank: data.rank },
+  ];
+
+  const maxVal = Math.max(...modes.map(m => m.value), 1);
+  const padding = { top: 30, right: 60, bottom: 40, left: 50 };
+  const chartW = W - padding.left - padding.right;
+  const chartH = H - padding.top - padding.bottom;
+
+  // Title
+  ctx.fillStyle = "#111827";
+  ctx.font = "700 14px Inter, sans-serif";
+  ctx.textAlign = "left";
+  ctx.fillText("Weekly Performance", padding.left, 20);
+
+  // Y-axis (Score)
+  ctx.fillStyle = "#6b7280";
+  ctx.font = "10px Inter, sans-serif";
+  ctx.textAlign = "right";
+  for (let i = 0; i <= 5; i++) {
+    const val = Math.round((maxVal / 5) * i);
+    const y = padding.top + chartH - (i / 5) * chartH;
+    ctx.fillText(val, padding.left - 6, y + 3);
+    // Grid line
+    ctx.strokeStyle = "#f3f4f6";
+    ctx.beginPath();
+    ctx.moveTo(padding.left, y);
+    ctx.lineTo(W - padding.right, y);
+    ctx.stroke();
+  }
+  // Y-axis label
+  ctx.save();
+  ctx.translate(14, padding.top + chartH / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#6b7280";
+  ctx.font = "11px Inter, sans-serif";
+  ctx.fillText("Score", 0, 0);
+  ctx.restore();
+
+  // Right Y-axis (Position, inverted)
+  ctx.save();
+  ctx.translate(W - 10, padding.top + chartH / 2);
+  ctx.rotate(Math.PI / 2);
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#6b7280";
+  ctx.font = "11px Inter, sans-serif";
+  ctx.fillText("Position", 0, 0);
+  ctx.restore();
+
+  // Bars
+  const barW = chartW / modes.length * 0.6;
+  const gap = chartW / modes.length * 0.4;
+
+  modes.forEach((m, i) => {
+    const x = padding.left + i * (chartW / modes.length) + gap / 2;
+    const barH = (m.value / maxVal) * chartH;
+    const y = padding.top + chartH - barH;
+
+    // Bar
+    ctx.fillStyle = m.color;
+    ctx.fillRect(x, y, barW, Math.max(barH, 2));
+
+    // Value on top
+    ctx.fillStyle = "#111827";
+    ctx.font = "700 13px Inter, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText(m.value, x + barW / 2, y - 6);
+
+    // Rank circle on top of bar
+    if (m.rank && m.rank !== "—") {
+      const cx = x + barW / 2;
+      const cy = y - 24;
+      const r = 14;
+      // Circle background
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+      ctx.strokeStyle = m.color;
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+      // Rank number inside
+      ctx.fillStyle = "#111827";
+      ctx.font = "700 11px Inter, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("#" + m.rank, cx, cy);
+      ctx.textBaseline = "alphabetic";
+    }
+
+    // X-axis label
+    ctx.fillStyle = "#6b7280";
+    ctx.font = "11px Inter, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText(m.label, x + barW / 2, padding.top + chartH + 18);
+  });
+
+  // Week label on X-axis
+  ctx.fillStyle = "#9ca3af";
+  ctx.font = "10px Inter, sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText(weekLabel, padding.left + chartW / 2, H - 6);
+
+  // Legend
+  const legendY = 22;
+  let legendX = W - padding.right - 100;
+  modes.forEach(m => {
+    ctx.fillStyle = m.color;
+    ctx.fillRect(legendX, legendY - 8, 12, 12);
+    ctx.fillStyle = "#6b7280";
+    ctx.font = "10px Inter, sans-serif";
+    ctx.textAlign = "left";
+    ctx.fillText(m.label, legendX + 16, legendY);
+    legendX += 50;
+  });
+}
