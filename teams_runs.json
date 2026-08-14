@@ -11466,6 +11466,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-14T10:32:26.879Z",
       "url": "https://openfront.io/game/Bb2mbyaR"
+    },
+    {
+      "id": "sqsM5c49",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Dex",
+          "clientID": "qcd4VcLj",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "DefNotEddie",
+          "clientID": "XLmekJ7t",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 963,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-14T11:02:40.490Z",
+      "url": "https://openfront.io/game/sqsM5c49"
     }
   ],
   "trios": [
@@ -31322,6 +31345,34 @@
       "numPlayers": 70,
       "timestamp": "2026-08-14T10:50:03.742Z",
       "url": "https://openfront.io/game/QAcWmVMU"
+    },
+    {
+      "id": "27DFVgGH",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Patanek",
+          "clientID": "e5tWUWTZ",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Taya",
+          "clientID": "zhLA82AM",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "cazi",
+          "clientID": "t744CXf9",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 962,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-14T11:05:26.642Z",
+      "url": "https://openfront.io/game/27DFVgGH"
     }
   ],
   "quads": [
@@ -55076,6 +55127,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-14T10:24:59.822Z",
       "url": "https://openfront.io/game/fX6h7eWp"
+    },
+    {
+      "id": "3wwFZTPx",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "upamecano",
+          "clientID": "VimM2MeR",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "noea",
+          "clientID": "N7hRQwaR",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "private lender",
+          "clientID": "S7ENmkCQ",
+          "clanTag": "BOGOR"
+        },
+        {
+          "username": "MrGemini",
+          "clientID": "c5qkJa4X",
+          "clanTag": "BOGOR"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 921,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-14T11:03:26.534Z",
+      "url": "https://openfront.io/game/3wwFZTPx"
     }
   ]
 }
