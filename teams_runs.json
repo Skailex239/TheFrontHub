@@ -11489,6 +11489,29 @@
       "numPlayers": 57,
       "timestamp": "2026-08-14T11:02:40.490Z",
       "url": "https://openfront.io/game/sqsM5c49"
+    },
+    {
+      "id": "B7wyVJfL",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "Europeunited",
+          "clientID": "oYYdkUD1",
+          "clanTag": null
+        },
+        {
+          "username": "Donesia",
+          "clientID": "J4ETGGFE",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 2483,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-14T11:20:20.054Z",
+      "url": "https://openfront.io/game/B7wyVJfL"
     }
   ],
   "trios": [
@@ -31391,6 +31414,24 @@
       "numPlayers": 75,
       "timestamp": "2026-08-14T11:08:16.309Z",
       "url": "https://openfront.io/game/XJ57PhFe"
+    },
+    {
+      "id": "M2AWXVTG",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Friendly Trader",
+          "clientID": "vJBSw4yy",
+          "clanTag": "TN"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 2380,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-14T11:19:32.499Z",
+      "url": "https://openfront.io/game/M2AWXVTG"
     }
   ],
   "quads": [
@@ -55244,6 +55285,62 @@
       "numPlayers": 44,
       "timestamp": "2026-08-14T11:14:29.201Z",
       "url": "https://openfront.io/game/vWLVEimP"
+    },
+    {
+      "id": "Xz7mL6Pv",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonWrench6",
+          "clientID": "yTJ3gxf3",
+          "clanTag": null
+        },
+        {
+          "username": "Batti",
+          "clientID": "CVJvbhjX",
+          "clanTag": "ITALY"
+        },
+        {
+          "username": "Ciccian",
+          "clientID": "mmYPLE6m",
+          "clanTag": "ITALY"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1233,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-14T11:36:12.541Z",
+      "url": "https://openfront.io/game/Xz7mL6Pv"
+    },
+    {
+      "id": "xwh3t5rE",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Biteof74",
+          "clientID": "j5VoEXBq",
+          "clanTag": null
+        },
+        {
+          "username": "67 Cringelord",
+          "clientID": "1vVPwVgz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGorilla7",
+          "clientID": "gp8rFMEF",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 2072,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-14T11:24:21.809Z",
+      "url": "https://openfront.io/game/xwh3t5rE"
     }
   ]
 }
