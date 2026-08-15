@@ -12556,6 +12556,29 @@
       "numPlayers": 39,
       "timestamp": "2026-08-15T07:36:56.187Z",
       "url": "https://openfront.io/game/baKqzKZG"
+    },
+    {
+      "id": "uhSxM3AE",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Sadra",
+          "clientID": "q4mqumxS",
+          "clanTag": null
+        },
+        {
+          "username": "TheRulerofAll",
+          "clientID": "GDvrMVYX",
+          "clanTag": "UNL"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1025,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "timestamp": "2026-08-15T07:44:49.944Z",
+      "url": "https://openfront.io/game/uhSxM3AE"
     }
   ],
   "trios": [
@@ -34218,6 +34241,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-15T06:53:56.450Z",
       "url": "https://openfront.io/game/HYbHA68e"
+    },
+    {
+      "id": "Sp1A8LEw",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "cantplayfullgame",
+          "clientID": "uoAFVvVL",
+          "clanTag": null
+        },
+        {
+          "username": "Eel Ground",
+          "clientID": "eEMNqhBU",
+          "clanTag": "DOUG"
+        },
+        {
+          "username": "MrBeast",
+          "clientID": "kHd82yBX",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 778,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-15T07:38:57.310Z",
+      "url": "https://openfront.io/game/Sp1A8LEw"
     }
   ],
   "quads": [
