@@ -13198,6 +13198,24 @@
       "numPlayers": 59,
       "timestamp": "2026-08-15T19:24:32.922Z",
       "url": "https://openfront.io/game/34bsVtRL"
+    },
+    {
+      "id": "MN7td9Vk",
+      "team": "Team 28",
+      "players": [
+        {
+          "username": "Napoleon",
+          "clientID": "XQZY3ywC",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 2146,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 83,
+      "timestamp": "2026-08-15T20:07:37.740Z",
+      "url": "https://openfront.io/game/MN7td9Vk"
     }
   ],
   "trios": [
@@ -62219,6 +62237,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-15T19:11:02.063Z",
       "url": "https://openfront.io/game/QLWWwYS1"
+    },
+    {
+      "id": "SaM7HUj9",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonChariot7",
+          "clientID": "BviKTzXY",
+          "clanTag": null
+        },
+        {
+          "username": "Persia",
+          "clientID": "maeMXud3",
+          "clanTag": null
+        },
+        {
+          "username": "Ehsan",
+          "clientID": "ATRodQv4",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Jan Bloukaas",
+          "clientID": "pLbZ5MTD",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1422,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-15T20:14:35.249Z",
+      "url": "https://openfront.io/game/SaM7HUj9"
     }
   ]
 }
