@@ -61554,6 +61554,62 @@
       "numPlayers": 64,
       "timestamp": "2026-08-15T16:57:24.980Z",
       "url": "https://openfront.io/game/QJYDChFc"
+    },
+    {
+      "id": "a1abMYF5",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "fr000",
+          "clientID": "x38qbr6W",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZebra7",
+          "clientID": "5N9Nbg5M",
+          "clanTag": null
+        },
+        {
+          "username": "CosenzaDelNord",
+          "clientID": "QenJAqQX",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1422,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 103,
+      "timestamp": "2026-08-15T17:32:41.659Z",
+      "url": "https://openfront.io/game/a1abMYF5"
+    },
+    {
+      "id": "UPWwCt35",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "JeMudder",
+          "clientID": "CkrLsDwh",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "Harfa",
+          "clientID": "n8QuNYPV",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "Hugin Munin",
+          "clientID": "r64rLXrz",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1413,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 106,
+      "timestamp": "2026-08-15T17:38:11.490Z",
+      "url": "https://openfront.io/game/UPWwCt35"
     }
   ]
 }
