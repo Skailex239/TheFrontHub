@@ -35321,6 +35321,29 @@
       "numPlayers": 21,
       "timestamp": "2026-08-15T17:01:15.724Z",
       "url": "https://openfront.io/game/U6mFU74j"
+    },
+    {
+      "id": "r6m9o9V5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Coopd0g",
+          "clientID": "QFdBNLgt",
+          "clanTag": null
+        },
+        {
+          "username": "Lumen Santurs",
+          "clientID": "P1QdTA1k",
+          "clanTag": "RUSK"
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1301,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T17:57:15.657Z",
+      "url": "https://openfront.io/game/r6m9o9V5"
     }
   ],
   "quads": [
@@ -61610,6 +61633,34 @@
       "numPlayers": 106,
       "timestamp": "2026-08-15T17:38:11.490Z",
       "url": "https://openfront.io/game/UPWwCt35"
+    },
+    {
+      "id": "98HTYALF",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Geez",
+          "clientID": "z4AQsvzF",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "order trains",
+          "clientID": "k6kq9144",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "micro",
+          "clientID": "eE5kctRC",
+          "clanTag": "LAW"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1228,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-15T17:53:44.932Z",
+      "url": "https://openfront.io/game/98HTYALF"
     }
   ]
 }
