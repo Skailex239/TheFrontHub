@@ -12771,6 +12771,52 @@
       "numPlayers": 43,
       "timestamp": "2026-08-15T11:26:42.564Z",
       "url": "https://openfront.io/game/SKfrzaHh"
+    },
+    {
+      "id": "9kajwryH",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "BulgariaMAZNA",
+          "clientID": "L7ZKtEwo",
+          "clanTag": "MAZNA"
+        },
+        {
+          "username": "Player",
+          "clientID": "nZHAUUYk",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1434,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-15T12:08:18.691Z",
+      "url": "https://openfront.io/game/9kajwryH"
+    },
+    {
+      "id": "X3HLFiLc",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "CaughtByUsernamePolice",
+          "clientID": "ofbnquY9",
+          "clanTag": "1984"
+        },
+        {
+          "username": "OpenFrontCensorshipVictim",
+          "clientID": "aiSrpj3o",
+          "clanTag": "1984"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1172,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-15T12:23:32.158Z",
+      "url": "https://openfront.io/game/X3HLFiLc"
     }
   ],
   "trios": [
@@ -60476,6 +60522,67 @@
       "numPlayers": 48,
       "timestamp": "2026-08-15T11:29:52.753Z",
       "url": "https://openfront.io/game/6vUcN1Pa"
+    },
+    {
+      "id": "NLczSiGd",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Friendly Pixel",
+          "clientID": "1UFktTTu",
+          "clanTag": "NU"
+        },
+        {
+          "username": "TREXXED",
+          "clientID": "aathPP47",
+          "clanTag": "NU"
+        },
+        {
+          "username": "loggy",
+          "clientID": "xKRmGP3v",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 970,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-15T12:25:22.766Z",
+      "url": "https://openfront.io/game/NLczSiGd"
+    },
+    {
+      "id": "Bi6qYgdK",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonBadger4",
+          "clientID": "8En8v5bE",
+          "clanTag": null
+        },
+        {
+          "username": "Timocrat",
+          "clientID": "Akz7uJhq",
+          "clanTag": null
+        },
+        {
+          "username": "Anon536",
+          "clientID": "D7VEEiGx",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCrab1",
+          "clientID": "Nd3wYkGD",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 677,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-15T12:28:59.980Z",
+      "url": "https://openfront.io/game/Bi6qYgdK"
     }
   ]
 }
