@@ -1057,23 +1057,63 @@ function renderWeeklyChart() {
       ctx.stroke();
     }
 
-    // Points (just dots, no rank circle, no score text on chart)
+    // Points — dots only, except Total which gets a rank circle
     s.points.forEach((p, i) => {
       const x = xForIndex(i);
       const y = yForScore(p.score);
 
-      // Filled dot on the point
-      ctx.beginPath();
-      ctx.arc(x, y, 5, 0, Math.PI * 2);
-      ctx.fillStyle = s.color;
-      ctx.fill();
-      // White border for visibility
-      ctx.strokeStyle = "#fff";
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
+      if (s.label === "Total" && p.rank && p.rank !== "—") {
+        // Total point: rank circle with "#X" inside
+        const r = 16;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
 
-      // Store position for hover detection (larger hit radius)
-      pointPositions.push({ x, y, r: 12, series: s, point: p, weekIndex: i });
+        ctx.fillStyle = "#111827";
+        ctx.font = "700 11px Inter, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("#" + p.rank, x, y);
+        ctx.textBaseline = "alphabetic";
+
+        // Movement arrow (up/down) compared to previous week
+        if (i > 0) {
+          const prev = s.points[i - 1];
+          if (prev.rank && prev.rank !== "—") {
+            const prevRank = parseInt(prev.rank);
+            const currRank = parseInt(p.rank);
+            if (currRank < prevRank) {
+              // Better rank (lower number) → green up arrow
+              ctx.fillStyle = "#10b981";
+              ctx.font = "700 14px Inter, sans-serif";
+              ctx.textAlign = "center";
+              ctx.fillText("\u2191", x + r + 4, y - 4);
+            } else if (currRank > prevRank) {
+              // Worse rank (higher number) → red down arrow
+              ctx.fillStyle = "#ef4444";
+              ctx.font = "700 14px Inter, sans-serif";
+              ctx.textAlign = "center";
+              ctx.fillText("\u2193", x + r + 4, y - 4);
+            }
+          }
+        }
+      } else {
+        // Other series: simple filled dot
+        ctx.beginPath();
+        ctx.arc(x, y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = s.color;
+        ctx.fill();
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+
+      // Store position for hover detection
+      pointPositions.push({ x, y, r: s.label === "Total" ? 18 : 12, series: s, point: p, weekIndex: i });
     });
   });
 
