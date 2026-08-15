@@ -35821,6 +35821,29 @@
       "numPlayers": 73,
       "timestamp": "2026-08-15T22:06:11.036Z",
       "url": "https://openfront.io/game/oxjnzQZi"
+    },
+    {
+      "id": "d1Pa2iY5",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Nothing But Mammals",
+          "clientID": "GNLrzeE2",
+          "clanTag": null
+        },
+        {
+          "username": "EJE",
+          "clientID": "gsdxZJ2r",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1147,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "timestamp": "2026-08-15T22:09:25.224Z",
+      "url": "https://openfront.io/game/d1Pa2iY5"
     }
   ],
   "quads": [
@@ -62418,6 +62441,24 @@
       "numPlayers": 72,
       "timestamp": "2026-08-15T21:27:47.437Z",
       "url": "https://openfront.io/game/WyJNDSwn"
+    },
+    {
+      "id": "6UicuyfF",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "1555",
+          "clientID": "9QfpgFme",
+          "clanTag": null
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 2602,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-15T21:54:18.862Z",
+      "url": "https://openfront.io/game/6UicuyfF"
     }
   ]
 }
