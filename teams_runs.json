@@ -35451,6 +35451,57 @@
       "numPlayers": 75,
       "timestamp": "2026-08-15T18:27:48.413Z",
       "url": "https://openfront.io/game/Tzfj9zs5"
+    },
+    {
+      "id": "RUGWk9gB",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Los",
+          "clientID": "Xeut2uep",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "Ros",
+          "clientID": "YZnt3FKG",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "FreezyScorpion.tFze",
+          "clientID": "Et6MMTjb",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 2366,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-15T18:31:14.642Z",
+      "url": "https://openfront.io/game/RUGWk9gB"
+    },
+    {
+      "id": "e6kDoqFw",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "FrEe PaLesTinE",
+          "clientID": "bGgxwajd",
+          "clanTag": "JK"
+        },
+        {
+          "username": "JlZK",
+          "clientID": "FfvMBo2q",
+          "clanTag": "JK"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1056,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-15T18:45:34.522Z",
+      "url": "https://openfront.io/game/e6kDoqFw"
     }
   ],
   "quads": [
@@ -61768,6 +61819,39 @@
       "numPlayers": 32,
       "timestamp": "2026-08-15T17:53:44.932Z",
       "url": "https://openfront.io/game/98HTYALF"
+    },
+    {
+      "id": "5d72oRnP",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "judom",
+          "clientID": "7ujjirsP",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "r3ukyL4R",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Okinawa",
+          "clientID": "SwRG5TUF",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "trotinette",
+          "clientID": "2qcNcpNV",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 768,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T18:53:39.512Z",
+      "url": "https://openfront.io/game/5d72oRnP"
     }
   ]
 }
