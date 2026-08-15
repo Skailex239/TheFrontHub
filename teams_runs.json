@@ -35655,6 +35655,85 @@
       "numPlayers": 71,
       "timestamp": "2026-08-15T18:58:46.344Z",
       "url": "https://openfront.io/game/MH3JS9Xa"
+    },
+    {
+      "id": "aks6zd8h",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "KAINZLY",
+          "clientID": "bq7kFZg6",
+          "clanTag": "AST"
+        },
+        {
+          "username": "abba",
+          "clientID": "Xe8fnhtP",
+          "clanTag": "AST"
+        },
+        {
+          "username": "MOnkeyDoG",
+          "clientID": "Z12PzCSR",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 970,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-15T20:08:57.826Z",
+      "url": "https://openfront.io/game/aks6zd8h"
+    },
+    {
+      "id": "SiK3qMUm",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "LMAO_1",
+          "clientID": "rbF7koJf",
+          "clanTag": null
+        },
+        {
+          "username": "SaveTheWorl",
+          "clientID": "GmW31Tpv",
+          "clanTag": "NOTAG"
+        },
+        {
+          "username": "Harry",
+          "clientID": "4RirtjXr",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2948,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T19:31:46.430Z",
+      "url": "https://openfront.io/game/SiK3qMUm"
+    },
+    {
+      "id": "1mkLb6LR",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "nognegneg",
+          "clientID": "BfwogNhm",
+          "clanTag": "OILED"
+        },
+        {
+          "username": "Nust a But",
+          "clientID": "Hk6tdJur",
+          "clanTag": "OILED"
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 1288,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-15T19:59:00.143Z",
+      "url": "https://openfront.io/game/1mkLb6LR"
     }
   ],
   "quads": [
@@ -62122,6 +62201,24 @@
       "numPlayers": 86,
       "timestamp": "2026-08-15T19:36:13.705Z",
       "url": "https://openfront.io/game/7DrJjCDQ"
+    },
+    {
+      "id": "QLWWwYS1",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Mango",
+          "clientID": "vvrbYA3q",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 4305,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-15T19:11:02.063Z",
+      "url": "https://openfront.io/game/QLWWwYS1"
     }
   ]
 }
