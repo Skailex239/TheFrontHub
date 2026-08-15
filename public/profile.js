@@ -918,15 +918,16 @@ document.addEventListener("click", (e) => {
 
 
 
-/* ═══ Weekly Performance Chart ═══
-   Canvas chart with colored lines per mode (FFA=red, Team=blue, etc.)
-   and circles showing the rank number. Inspired by the reference image. */
+/* ═══ Weekly Performance Chart — Line chart ═══
+   Graphique en lignes: semaines sur l'axe X (horizontal), score sur
+   l'axe Y gauche, position sur l'axe Y droite (inversé).
+   Lignes colorées par mode: FFA=rouge, Team=bleu, Total=noir.
+   Points avec cercle contenant le rang (#X). */
 
 function renderWeeklyChart() {
   const data = window._profileWeekData;
   if (!data) return;
 
-  // Find or create container
   let wrap = document.getElementById("weekly-chart-card");
   if (!wrap) {
     const recent = document.getElementById("profile-recent-games");
@@ -938,10 +939,10 @@ function renderWeeklyChart() {
     wrap.innerHTML = `
       <div class="pf-card-header">
         <span class="pf-card-title">Weekly Performance</span>
-        <span class="pf-card-sub">Points et position par mode</span>
+        <span class="pf-card-sub">Points et position par semaine</span>
       </div>
       <div class="pf-card-body" style="padding:16px">
-        <canvas id="weekly-chart-canvas" style="width:100%;height:280px;display:block"></canvas>
+        <canvas id="weekly-chart-canvas" style="width:100%;height:320px;display:block"></canvas>
       </div>
     `;
     recent.parentNode.after(wrap);
@@ -952,52 +953,55 @@ function renderWeeklyChart() {
 
   const ctx = canvas.getContext("2d");
   const W = canvas.offsetWidth;
-  const H = 280;
+  const H = 320;
   const dpr = window.devicePixelRatio || 1;
   canvas.width = W * dpr;
   canvas.height = H * dpr;
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, W, H);
 
-  // Data series (this week only — will expand as history accumulates)
-  const weekLabel = data.weekStart
-    ? "S" + new Date(data.weekStart).toLocaleDateString("fr-FR", { week: "numeric" })
+  // ── Data: build weeks array ──
+  const weekNum = data.weekStart
+    ? "S" + new Date(data.weekStart).toLocaleDateString("fr-FR", { week: "numeric" }) + " \'26"
     : "Cette semaine";
 
-  // For now we have 1 data point per mode. Show as bar chart with values.
-  const modes = [
-    { label: "FFA", value: data.ffa, color: "#ef4444", rank: data.rank },
-    { label: "Team", value: data.team, color: "#2196f3", rank: data.rank },
-    { label: "Total", value: data.total, color: "#111827", rank: data.rank },
+  const weeks = [weekNum];
+  const series = [
+    { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank }] },
+    { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank }] },
+    { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank }] },
   ];
 
-  const maxVal = Math.max(...modes.map(m => m.value), 1);
-  const padding = { top: 30, right: 60, bottom: 40, left: 50 };
+  // ── Layout ──
+  const padding = { top: 40, right: 70, bottom: 50, left: 55 };
   const chartW = W - padding.left - padding.right;
   const chartH = H - padding.top - padding.bottom;
 
-  // Title
-  ctx.fillStyle = "#111827";
-  ctx.font = "700 14px Inter, sans-serif";
-  ctx.textAlign = "left";
-  ctx.fillText("Weekly Performance", padding.left, 20);
+  // ── Scale ──
+  const allScores = series.flatMap(s => s.points.map(p => p.score));
+  const maxScore = Math.max(...allScores, 10);
+  const niceMax = Math.ceil(maxScore / 5) * 5 || 5;
 
-  // Y-axis (Score)
+  const xForIndex = (i) => weeks.length === 1 ? padding.left + chartW / 2 : padding.left + i * (chartW / (weeks.length - 1));
+  const yForScore = (score) => padding.top + chartH - (score / niceMax) * chartH;
+
+  // ── Grid + Y-axis (Score, left) ──
   ctx.fillStyle = "#6b7280";
   ctx.font = "10px Inter, sans-serif";
   ctx.textAlign = "right";
   for (let i = 0; i <= 5; i++) {
-    const val = Math.round((maxVal / 5) * i);
+    const val = Math.round((niceMax / 5) * i);
     const y = padding.top + chartH - (i / 5) * chartH;
-    ctx.fillText(val, padding.left - 6, y + 3);
-    // Grid line
+    ctx.fillText(val, padding.left - 8, y + 3);
     ctx.strokeStyle = "#f3f4f6";
+    ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(padding.left, y);
     ctx.lineTo(W - padding.right, y);
     ctx.stroke();
   }
-  // Y-axis label
+
+  // Y-axis label "Score"
   ctx.save();
   ctx.translate(14, padding.top + chartH / 2);
   ctx.rotate(-Math.PI / 2);
@@ -1007,9 +1011,9 @@ function renderWeeklyChart() {
   ctx.fillText("Score", 0, 0);
   ctx.restore();
 
-  // Right Y-axis (Position, inverted)
+  // Right Y-axis label "Position"
   ctx.save();
-  ctx.translate(W - 10, padding.top + chartH / 2);
+  ctx.translate(W - 8, padding.top + chartH / 2);
   ctx.rotate(Math.PI / 2);
   ctx.textAlign = "center";
   ctx.fillStyle = "#6b7280";
@@ -1017,70 +1021,98 @@ function renderWeeklyChart() {
   ctx.fillText("Position", 0, 0);
   ctx.restore();
 
-  // Bars
-  const barW = chartW / modes.length * 0.6;
-  const gap = chartW / modes.length * 0.4;
-
-  modes.forEach((m, i) => {
-    const x = padding.left + i * (chartW / modes.length) + gap / 2;
-    const barH = (m.value / maxVal) * chartH;
-    const y = padding.top + chartH - barH;
-
-    // Bar
-    ctx.fillStyle = m.color;
-    ctx.fillRect(x, y, barW, Math.max(barH, 2));
-
-    // Value on top
-    ctx.fillStyle = "#111827";
-    ctx.font = "700 13px Inter, sans-serif";
-    ctx.textAlign = "center";
-    ctx.fillText(m.value, x + barW / 2, y - 6);
-
-    // Rank circle on top of bar
-    if (m.rank && m.rank !== "—") {
-      const cx = x + barW / 2;
-      const cy = y - 24;
-      const r = 14;
-      // Circle background
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, 0, Math.PI * 2);
-      ctx.fillStyle = "#fff";
-      ctx.fill();
-      ctx.strokeStyle = m.color;
-      ctx.lineWidth = 2.5;
-      ctx.stroke();
-      // Rank number inside
-      ctx.fillStyle = "#111827";
-      ctx.font = "700 11px Inter, sans-serif";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText("#" + m.rank, cx, cy);
-      ctx.textBaseline = "alphabetic";
+  // Right Y-axis ticks (position, inverted: 1 at top)
+  ctx.fillStyle = "#9ca3af";
+  ctx.font = "9px Inter, sans-serif";
+  ctx.textAlign = "left";
+  [1, 50, 100, 150, 200].forEach(pos => {
+    const y = padding.top + chartH - (1 - pos / 200) * chartH;
+    if (y >= padding.top && y <= padding.top + chartH) {
+      ctx.fillText(pos, W - padding.right + 8, y + 3);
     }
-
-    // X-axis label
-    ctx.fillStyle = "#6b7280";
-    ctx.font = "11px Inter, sans-serif";
-    ctx.textAlign = "center";
-    ctx.fillText(m.label, x + barW / 2, padding.top + chartH + 18);
   });
 
-  // Week label on X-axis
+  // ── X-axis labels (weeks) ──
+  ctx.fillStyle = "#6b7280";
+  ctx.font = "11px Inter, sans-serif";
+  ctx.textAlign = "center";
+  weeks.forEach((label, i) => {
+    ctx.fillText(label, xForIndex(i), padding.top + chartH + 20);
+  });
+
+  // ── Draw lines + points for each series ──
+  series.forEach(s => {
+    if (s.points.length === 0) return;
+
+    // Line
+    ctx.strokeStyle = s.color;
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    s.points.forEach((p, i) => {
+      const x = xForIndex(i);
+      const y = yForScore(p.score);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+
+    // Points + circles with rank
+    s.points.forEach((p, i) => {
+      const x = xForIndex(i);
+      const y = yForScore(p.score);
+
+      // Score value next to point
+      ctx.fillStyle = s.color;
+      ctx.font = "700 12px Inter, sans-serif";
+      ctx.textAlign = "left";
+      ctx.fillText(p.score, x + 8, y - 4);
+
+      // Rank circle (white bg + colored border)
+      if (p.rank && p.rank !== "—") {
+        const r = 16;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+
+        // Rank number inside circle
+        ctx.fillStyle = "#111827";
+        ctx.font = "700 11px Inter, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("#" + p.rank, x, y);
+        ctx.textBaseline = "alphabetic";
+      }
+
+      // Filled dot on the point
+      ctx.beginPath();
+      ctx.arc(x, y, 4, 0, Math.PI * 2);
+      ctx.fillStyle = s.color;
+      ctx.fill();
+    });
+  });
+
+  // ── Legend (top right) ──
+  const legendY = 20;
+  let legendX = W - padding.right - 120;
+  ctx.font = "11px Inter, sans-serif";
+  ctx.textAlign = "left";
+  series.forEach(s => {
+    ctx.beginPath();
+    ctx.arc(legendX, legendY - 3, 5, 0, Math.PI * 2);
+    ctx.fillStyle = s.color;
+    ctx.fill();
+    ctx.fillStyle = "#6b7280";
+    ctx.fillText(s.label, legendX + 10, legendY);
+    legendX += 50;
+  });
+
+  // ── "Week" label on X-axis ──
   ctx.fillStyle = "#9ca3af";
   ctx.font = "10px Inter, sans-serif";
   ctx.textAlign = "center";
-  ctx.fillText(weekLabel, padding.left + chartW / 2, H - 6);
-
-  // Legend
-  const legendY = 22;
-  let legendX = W - padding.right - 100;
-  modes.forEach(m => {
-    ctx.fillStyle = m.color;
-    ctx.fillRect(legendX, legendY - 8, 12, 12);
-    ctx.fillStyle = "#6b7280";
-    ctx.font = "10px Inter, sans-serif";
-    ctx.textAlign = "left";
-    ctx.fillText(m.label, legendX + 16, legendY);
-    legendX += 50;
-  });
+  ctx.fillText("Week", padding.left + chartW / 2, H - 8);
 }
