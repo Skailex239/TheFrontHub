@@ -34573,6 +34573,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-15T09:45:32.320Z",
       "url": "https://openfront.io/game/KLV8inYy"
+    },
+    {
+      "id": "KS3K6MYZ",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Fl0r1an",
+          "clientID": "1PRz7JLz",
+          "clanTag": "FR"
+        },
+        {
+          "username": "tommsen",
+          "clientID": "TXL43u3S",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1182,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-15T10:56:31.799Z",
+      "url": "https://openfront.io/game/KS3K6MYZ"
     }
   ],
   "quads": [
@@ -60259,6 +60282,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-15T10:27:59.980Z",
       "url": "https://openfront.io/game/vz215tr7"
+    },
+    {
+      "id": "MCFSFrta",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "eraprontoatavola",
+          "clientID": "aCMDf3h3",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Michelin",
+          "clientID": "x2TxDt5q",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1755,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-15T10:37:22.562Z",
+      "url": "https://openfront.io/game/MCFSFrta"
     }
   ]
 }
