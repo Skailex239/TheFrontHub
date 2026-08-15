@@ -411,6 +411,14 @@ async function loadStats(publicId) {
           total: weekScore,
           rank: weekRank,
           weekStart: scoresData.weekStart,
+          // Detailed breakdown for tooltip
+          ffaCasual: entry.weekly_ffa_casual || 0,
+          ffaRanked: entry.weekly_ffa_ranked || 0,
+          teamCasual: entry.weekly_team_casual || 0,
+          teamRanked: entry.weekly_team_ranked || 0,
+          allTimePoints: entry.points || 0,
+          allTimeFfa: entry.ffa_casual || 0,
+          allTimeTeam: entry.team_casual || 0,
         };
       }
     }
@@ -967,10 +975,13 @@ function renderWeeklyChart() {
 
   const weeks = [weekNum];
   const series = [
-    { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank }] },
-    { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank }] },
-    { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank }] },
+    { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank, detail: { casual: data.ffaCasual, ranked: data.ffaRanked, total: data.ffa } }] },
+    { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank, detail: { casual: data.teamCasual, ranked: data.teamRanked, total: data.team } }] },
+    { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank, detail: { ffa: data.ffa, team: data.team, total: data.total, allTime: data.allTimePoints } }] },
   ];
+
+  // Store point positions for hover detection
+  const pointPositions = [];
 
   // ── Layout ──
   const padding = { top: 40, right: 70, bottom: 50, left: 55 };
@@ -1092,7 +1103,82 @@ function renderWeeklyChart() {
       ctx.arc(x, y, 4, 0, Math.PI * 2);
       ctx.fillStyle = s.color;
       ctx.fill();
+
+      // Store position for hover detection
+      pointPositions.push({ x, y, r: 16, series: s, point: p, weekIndex: i });
     });
+  });
+
+  // ── Hover tooltip ──
+  // Create tooltip element if not exists
+  let tooltip = document.getElementById("weekly-chart-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.id = "weekly-chart-tooltip";
+    tooltip.style.cssText = "position:fixed;z-index:1000;display:none;pointer-events:none;background:rgba(26,20,16,0.97);border:1px solid rgba(255,165,80,0.3);border-radius:10px;padding:10px 14px;font-size:12px;color:#ffd9b3;box-shadow:0 8px 24px rgba(0,0,0,0.3);backdrop-filter:blur(12px);max-width:220px;line-height:1.6";
+    document.body.appendChild(tooltip);
+  }
+
+  // Remove old listeners (avoid duplicates on re-render)
+  const newCanvas = canvas.cloneNode(true);
+  canvas.parentNode.replaceChild(newCanvas, canvas);
+  const ctx2 = newCanvas.getContext("2d");
+  // Redraw everything on the new canvas
+  ctx2.drawImage(canvas, 0, 0, W, H);
+
+  const hoverHandler = (e) => {
+    const rect = newCanvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    let found = null;
+    for (const pp of pointPositions) {
+      const dx = mx - pp.x;
+      const dy = my - pp.y;
+      if (Math.sqrt(dx * dx + dy * dy) <= pp.r + 4) {
+        found = pp;
+        break;
+      }
+    }
+
+    if (found) {
+      const d = found.point.detail || {};
+      const wk = weeks[found.weekIndex] || "";
+      let html = `<div style="font-weight:700;color:#fff;margin-bottom:4px">${found.series.label} — ${wk}</div>`;
+      html += `<div style="color:#9ca3af;font-size:11px;margin-bottom:6px">Score: <span style="color:${found.series.color};font-weight:700">${found.point.score} pts</span> · Rang: <span style="color:#fff;font-weight:700">#${found.point.rank}</span></div>`;
+
+      if (found.series.label === "FFA") {
+        html += `<div style="font-size:11px;color:#a89480">Casual: ${d.casual || 0} wins</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Classé: ${d.ranked || 0} wins</div>`;
+      } else if (found.series.label === "Team") {
+        html += `<div style="font-size:11px;color:#a89480">Casual: ${d.casual || 0} wins</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Classé: ${d.ranked || 0} wins</div>`;
+      } else if (found.series.label === "Total") {
+        html += `<div style="font-size:11px;color:#a89480">FFA: ${d.ffa || 0} pts</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Team: ${d.team || 0} pts</div>`;
+        html += `<div style="font-size:11px;color:#a89480;margin-top:4px;padding-top:4px;border-top:1px solid rgba(255,255,255,0.1)">All-time: ${d.allTime || 0} pts</div>`;
+      }
+
+      tooltip.innerHTML = html;
+      tooltip.style.display = "block";
+
+      let tx = e.clientX + 14;
+      let ty = e.clientY - 10;
+      if (tx > window.innerWidth - 250) tx = e.clientX - 240;
+      tooltip.style.left = tx + "px";
+      tooltip.style.top = ty + "px";
+
+      newCanvas.style.cursor = "pointer";
+    } else {
+      tooltip.style.display = "none";
+      newCanvas.style.cursor = "default";
+    }
+  };
+
+  newCanvas.addEventListener("mousemove", hoverHandler);
+  newCanvas.addEventListener("mouseleave", () => {
+    tooltip.style.display = "none";
+    newCanvas.style.cursor = "default";
   });
 
   // ── Legend (top right) ──
