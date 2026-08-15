@@ -947,7 +947,7 @@ function renderWeeklyChart() {
     wrap.innerHTML = `
       <div class="pf-card-header">
         <span class="pf-card-title">Weekly Performance</span>
-        <span class="pf-card-sub">Points et position par semaine</span>
+        <span class="pf-card-sub">Points par semaine</span>
       </div>
       <div class="pf-card-body" style="padding:16px">
         <canvas id="weekly-chart-canvas" style="width:100%;height:320px;display:block"></canvas>
@@ -968,17 +968,13 @@ function renderWeeklyChart() {
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, W, H);
 
-  // ── Data: build weeks array ──
-  const weekNum = data.weekStart
-    ? "S" + new Date(data.weekStart).toLocaleDateString("fr-FR", { week: "numeric" }) + " \'26"
-    : "Cette semaine";
-
-  const weeks = [weekNum];
+  // ── Data: 1 week for now (Week 1). Will expand as history accumulates. ──
+  const weeks = ["Week 1"];
   const rankedScore = data.ffaRanked + data.teamRanked;
   const series = [
     { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank, detail: { wins: data.ffaCasual } }] },
     { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank, detail: { wins: data.teamCasual } }] },
-    { label: "Classé", color: "#9333ea", points: [{ score: rankedScore, rank: data.rank, detail: { ffa1v1: data.ffaRanked, team2v2: data.teamRanked } }] },
+    { label: "Class\u00e9", color: "#9333ea", points: [{ score: rankedScore, rank: data.rank, detail: { ffa1v1: data.ffaRanked, team2v2: data.teamRanked } }] },
     { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank, detail: { ffa: data.ffa, team: data.team, ranked: rankedScore, allTime: data.allTimePoints } }] },
   ];
 
@@ -986,7 +982,7 @@ function renderWeeklyChart() {
   const pointPositions = [];
 
   // ── Layout ──
-  const padding = { top: 40, right: 70, bottom: 50, left: 55 };
+  const padding = { top: 40, right: 30, bottom: 50, left: 55 };
   const chartW = W - padding.left - padding.right;
   const chartH = H - padding.top - padding.bottom;
 
@@ -995,7 +991,13 @@ function renderWeeklyChart() {
   const maxScore = Math.max(...allScores, 10);
   const niceMax = Math.ceil(maxScore / 5) * 5 || 5;
 
-  const xForIndex = (i) => weeks.length === 1 ? padding.left + chartW / 2 : padding.left + i * (chartW / (weeks.length - 1));
+  // X positions: Week 1 at far left, subsequent weeks spread right
+  // For 1 week: place at left + small offset (not centered)
+  // For multiple weeks: spread across full width
+  const xForIndex = (i) => {
+    if (weeks.length === 1) return padding.left + 20;
+    return padding.left + (i / (weeks.length - 1)) * chartW;
+  };
   const yForScore = (score) => padding.top + chartH - (score / niceMax) * chartH;
 
   // ── Grid + Y-axis (Score, left) ──
@@ -1024,27 +1026,6 @@ function renderWeeklyChart() {
   ctx.fillText("Score", 0, 0);
   ctx.restore();
 
-  // Right Y-axis label "Position"
-  ctx.save();
-  ctx.translate(W - 8, padding.top + chartH / 2);
-  ctx.rotate(Math.PI / 2);
-  ctx.textAlign = "center";
-  ctx.fillStyle = "#6b7280";
-  ctx.font = "11px Inter, sans-serif";
-  ctx.fillText("Position", 0, 0);
-  ctx.restore();
-
-  // Right Y-axis ticks (position, inverted: 1 at top)
-  ctx.fillStyle = "#9ca3af";
-  ctx.font = "9px Inter, sans-serif";
-  ctx.textAlign = "left";
-  [1, 50, 100, 150, 200].forEach(pos => {
-    const y = padding.top + chartH - (1 - pos / 200) * chartH;
-    if (y >= padding.top && y <= padding.top + chartH) {
-      ctx.fillText(pos, W - padding.right + 8, y + 3);
-    }
-  });
-
   // ── X-axis labels (weeks) ──
   ctx.fillStyle = "#6b7280";
   ctx.font = "11px Inter, sans-serif";
@@ -1053,66 +1034,68 @@ function renderWeeklyChart() {
     ctx.fillText(label, xForIndex(i), padding.top + chartH + 20);
   });
 
+  // "Week" label centered
+  ctx.fillStyle = "#9ca3af";
+  ctx.font = "10px Inter, sans-serif";
+  ctx.fillText("Week", padding.left + chartW / 2, H - 8);
+
   // ── Draw lines + points for each series ──
   series.forEach(s => {
     if (s.points.length === 0) return;
 
-    // Line
-    ctx.strokeStyle = s.color;
-    ctx.lineWidth = 2.5;
-    ctx.beginPath();
+    // Line connecting points (only if 2+ weeks)
+    if (s.points.length >= 2) {
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      s.points.forEach((p, i) => {
+        const x = xForIndex(i);
+        const y = yForScore(p.score);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+
+    // Points (just dots, no rank circle, no score text on chart)
     s.points.forEach((p, i) => {
       const x = xForIndex(i);
       const y = yForScore(p.score);
-      if (i === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
-    });
-    ctx.stroke();
-
-    // Points + circles with rank
-    s.points.forEach((p, i) => {
-      const x = xForIndex(i);
-      const y = yForScore(p.score);
-
-      // Score value next to point
-      ctx.fillStyle = s.color;
-      ctx.font = "700 12px Inter, sans-serif";
-      ctx.textAlign = "left";
-      ctx.fillText(p.score, x + 8, y - 4);
-
-      // Rank circle (white bg + colored border)
-      if (p.rank && p.rank !== "—") {
-        const r = 16;
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, Math.PI * 2);
-        ctx.fillStyle = "#fff";
-        ctx.fill();
-        ctx.strokeStyle = s.color;
-        ctx.lineWidth = 2.5;
-        ctx.stroke();
-
-        // Rank number inside circle
-        ctx.fillStyle = "#111827";
-        ctx.font = "700 11px Inter, sans-serif";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText("#" + p.rank, x, y);
-        ctx.textBaseline = "alphabetic";
-      }
 
       // Filled dot on the point
       ctx.beginPath();
-      ctx.arc(x, y, 4, 0, Math.PI * 2);
+      ctx.arc(x, y, 5, 0, Math.PI * 2);
       ctx.fillStyle = s.color;
       ctx.fill();
+      // White border for visibility
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
 
-      // Store position for hover detection
-      pointPositions.push({ x, y, r: 16, series: s, point: p, weekIndex: i });
+      // Store position for hover detection (larger hit radius)
+      pointPositions.push({ x, y, r: 12, series: s, point: p, weekIndex: i });
     });
   });
 
+  // ── Legend (top right) ──
+  const legendY = 20;
+  let legendX = W - padding.right - 180;
+  ctx.font = "11px Inter, sans-serif";
+  ctx.textAlign = "left";
+  series.forEach(s => {
+    ctx.beginPath();
+    ctx.arc(legendX, legendY - 3, 5, 0, Math.PI * 2);
+    ctx.fillStyle = s.color;
+    ctx.fill();
+    ctx.strokeStyle = "#fff";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.fillStyle = "#6b7280";
+    ctx.fillText(s.label, legendX + 10, legendY);
+    legendX += 45;
+  });
+
   // ── Hover tooltip ──
-  // Create tooltip element if not exists
   let tooltip = document.getElementById("weekly-chart-tooltip");
   if (!tooltip) {
     tooltip = document.createElement("div");
@@ -1121,11 +1104,10 @@ function renderWeeklyChart() {
     document.body.appendChild(tooltip);
   }
 
-  // Remove old listeners (avoid duplicates on re-render)
+  // Clone canvas to remove old event listeners
   const newCanvas = canvas.cloneNode(true);
   canvas.parentNode.replaceChild(newCanvas, canvas);
   const ctx2 = newCanvas.getContext("2d");
-  // Redraw everything on the new canvas
   ctx2.drawImage(canvas, 0, 0, W, H);
 
   const hoverHandler = (e) => {
@@ -1137,7 +1119,7 @@ function renderWeeklyChart() {
     for (const pp of pointPositions) {
       const dx = mx - pp.x;
       const dy = my - pp.y;
-      if (Math.sqrt(dx * dx + dy * dy) <= pp.r + 4) {
+      if (Math.sqrt(dx * dx + dy * dy) <= pp.r) {
         found = pp;
         break;
       }
@@ -1146,20 +1128,21 @@ function renderWeeklyChart() {
     if (found) {
       const d = found.point.detail || {};
       const wk = weeks[found.weekIndex] || "";
-      let html = `<div style="font-weight:700;color:#fff;margin-bottom:4px">${found.series.label} — ${wk}</div>`;
-      html += `<div style="color:#9ca3af;font-size:11px;margin-bottom:6px">Score: <span style="color:${found.series.color};font-weight:700">${found.point.score} pts</span> · Rang: <span style="color:#fff;font-weight:700">#${found.point.rank}</span></div>`;
+      let html = `<div style="font-weight:700;color:#fff;margin-bottom:4px">${found.series.label} \u2014 ${wk}</div>`;
+      html += `<div style="color:#9ca3af;font-size:11px;margin-bottom:6px">Score: <span style="color:${found.series.color};font-weight:700">${found.point.score} pts</span></div>`;
 
       if (found.series.label === "FFA") {
         html += `<div style="font-size:11px;color:#a89480">Wins FFA: ${d.wins || 0}</div>`;
       } else if (found.series.label === "Team") {
         html += `<div style="font-size:11px;color:#a89480">Wins Team: ${d.wins || 0}</div>`;
-      } else if (found.series.label === "Classé") {
+      } else if (found.series.label === "Class\u00e9") {
         html += `<div style="font-size:11px;color:#a89480">1v1: ${d.ffa1v1 || 0} wins</div>`;
         html += `<div style="font-size:11px;color:#a89480">2v2: ${d.team2v2 || 0} wins</div>`;
       } else if (found.series.label === "Total") {
         html += `<div style="font-size:11px;color:#a89480">FFA: ${d.ffa || 0} pts</div>`;
         html += `<div style="font-size:11px;color:#a89480">Team: ${d.team || 0} pts</div>`;
-        html += `<div style="font-size:11px;color:#a89480">Classé: ${d.ranked || 0} pts</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Class\u00e9: ${d.ranked || 0} pts</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Rang: #${found.point.rank}</div>`;
         html += `<div style="font-size:11px;color:#a89480;margin-top:4px;padding-top:4px;border-top:1px solid rgba(255,255,255,0.1)">All-time: ${d.allTime || 0} pts</div>`;
       }
 
@@ -1184,25 +1167,4 @@ function renderWeeklyChart() {
     tooltip.style.display = "none";
     newCanvas.style.cursor = "default";
   });
-
-  // ── Legend (top right) ──
-  const legendY = 20;
-  let legendX = W - padding.right - 120;
-  ctx.font = "11px Inter, sans-serif";
-  ctx.textAlign = "left";
-  series.forEach(s => {
-    ctx.beginPath();
-    ctx.arc(legendX, legendY - 3, 5, 0, Math.PI * 2);
-    ctx.fillStyle = s.color;
-    ctx.fill();
-    ctx.fillStyle = "#6b7280";
-    ctx.fillText(s.label, legendX + 10, legendY);
-    legendX += 55;
-  });
-
-  // ── "Week" label on X-axis ──
-  ctx.fillStyle = "#9ca3af";
-  ctx.font = "10px Inter, sans-serif";
-  ctx.textAlign = "center";
-  ctx.fillText("Week", padding.left + chartW / 2, H - 8);
 }
