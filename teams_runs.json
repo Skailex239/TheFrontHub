@@ -12423,6 +12423,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-14T23:17:06.597Z",
       "url": "https://openfront.io/game/u4t9tBpb"
+    },
+    {
+      "id": "1qVRxaiv",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "ouiii",
+          "clientID": "8g6vuDtZ",
+          "clanTag": null
+        },
+        {
+          "username": "Miaou KING",
+          "clientID": "FQn29okA",
+          "clanTag": "MK"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2994,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-15T01:08:28.905Z",
+      "url": "https://openfront.io/game/1qVRxaiv"
     }
   ],
   "trios": [
@@ -33641,6 +33664,34 @@
       "numPlayers": 41,
       "timestamp": "2026-08-15T01:24:57.897Z",
       "url": "https://openfront.io/game/ywEnsLwS"
+    },
+    {
+      "id": "m5CiJWjo",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "sparrows dream",
+          "clientID": "GvtG8njZ",
+          "clanTag": null
+        },
+        {
+          "username": "armchair general",
+          "clientID": "3P42bdJE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "iSanti",
+          "clientID": "fmQHbaAU",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 869,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-15T01:31:26.263Z",
+      "url": "https://openfront.io/game/m5CiJWjo"
     }
   ],
   "quads": [
@@ -58671,6 +58722,39 @@
       "numPlayers": 32,
       "timestamp": "2026-08-15T00:41:28.354Z",
       "url": "https://openfront.io/game/mgBeWDi7"
+    },
+    {
+      "id": "sdnazQtf",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "AnonMonkey7",
+          "clientID": "xLwn6WHu",
+          "clanTag": null
+        },
+        {
+          "username": "chud",
+          "clientID": "4sM6hCDa",
+          "clanTag": null
+        },
+        {
+          "username": "Vinyl",
+          "clientID": "Q6HGUYJ3",
+          "clanTag": "RAT"
+        },
+        {
+          "username": "Madik Itzichi",
+          "clientID": "yyRSwPgg",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 879,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-15T01:42:08.848Z",
+      "url": "https://openfront.io/game/sdnazQtf"
     }
   ]
 }
