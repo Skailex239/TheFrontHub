@@ -12748,6 +12748,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-15T10:47:03.671Z",
       "url": "https://openfront.io/game/gSzhff4D"
+    },
+    {
+      "id": "SKfrzaHh",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Nexz",
+          "clientID": "cxVL8EmP",
+          "clanTag": "OZT"
+        },
+        {
+          "username": "Fleug",
+          "clientID": "dsTZVPYV",
+          "clanTag": "OZT"
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 967,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-15T11:26:42.564Z",
+      "url": "https://openfront.io/game/SKfrzaHh"
     }
   ],
   "trios": [
@@ -60379,6 +60402,29 @@
       "numPlayers": 64,
       "timestamp": "2026-08-15T10:49:05.292Z",
       "url": "https://openfront.io/game/WwNvaW8E"
+    },
+    {
+      "id": "6vUcN1Pa",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Captain",
+          "clientID": "u1mb7Bfz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "666",
+          "clientID": "5jqwcZVk",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1243,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-15T11:29:52.753Z",
+      "url": "https://openfront.io/game/6vUcN1Pa"
     }
   ]
 }
