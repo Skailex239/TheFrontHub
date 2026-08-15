@@ -12446,6 +12446,29 @@
       "numPlayers": 82,
       "timestamp": "2026-08-15T01:08:28.905Z",
       "url": "https://openfront.io/game/1qVRxaiv"
+    },
+    {
+      "id": "AtKesKUU",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "X9393",
+          "clientID": "qNnfRQ35",
+          "clanTag": null
+        },
+        {
+          "username": "Odysseus",
+          "clientID": "H1hpYv2X",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1181,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-15T01:57:43.702Z",
+      "url": "https://openfront.io/game/AtKesKUU"
     }
   ],
   "trios": [
@@ -58783,6 +58806,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-15T01:42:08.848Z",
       "url": "https://openfront.io/game/sdnazQtf"
+    },
+    {
+      "id": "ui9hmSPA",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Michael",
+          "clientID": "Rs8B4ReN",
+          "clanTag": "NLD"
+        },
+        {
+          "username": "Yeetyoot",
+          "clientID": "qBhEoqjJ",
+          "clanTag": null
+        },
+        {
+          "username": "mikrotik bridge port",
+          "clientID": "Hk1yYqTU",
+          "clanTag": null
+        },
+        {
+          "username": "idiotkitten",
+          "clientID": "k6SWUCaM",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 2632,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-15T01:27:49.050Z",
+      "url": "https://openfront.io/game/ui9hmSPA"
     }
   ]
 }
