@@ -12648,6 +12648,24 @@
       "numPlayers": 24,
       "timestamp": "2026-08-15T08:18:21.357Z",
       "url": "https://openfront.io/game/ejKQMrE6"
+    },
+    {
+      "id": "hdFCMjbZ",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "bibi",
+          "clientID": "J8VcarAk",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 1303,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-15T09:37:56.424Z",
+      "url": "https://openfront.io/game/hdFCMjbZ"
     }
   ],
   "trios": [
@@ -34440,6 +34458,62 @@
       "numPlayers": 52,
       "timestamp": "2026-08-15T09:30:45.438Z",
       "url": "https://openfront.io/game/sRMpGkkW"
+    },
+    {
+      "id": "T9e1FKDq",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "poopFART",
+          "clientID": "kbgLdcVU",
+          "clanTag": null
+        },
+        {
+          "username": "GreaterTurkey",
+          "clientID": "dSiTpc4X",
+          "clanTag": "TUR"
+        },
+        {
+          "username": "AnonCrab3",
+          "clientID": "rD5HnuBD",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 806,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T09:42:38.177Z",
+      "url": "https://openfront.io/game/T9e1FKDq"
+    },
+    {
+      "id": "KLV8inYy",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonTopaz8",
+          "clientID": "bY82VWyh",
+          "clanTag": null
+        },
+        {
+          "username": "Noguys",
+          "clientID": "kcMra6s4",
+          "clanTag": null
+        },
+        {
+          "username": "UwUstan",
+          "clientID": "FAZUtCTs",
+          "clanTag": "CZ"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 595,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-15T09:45:32.320Z",
+      "url": "https://openfront.io/game/KLV8inYy"
     }
   ],
   "quads": [
@@ -60037,6 +60111,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-15T09:09:49.634Z",
       "url": "https://openfront.io/game/we6eDhZN"
+    },
+    {
+      "id": "DC2DfEst",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "wybb",
+          "clientID": "P2DVKMJF",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "hd9KXesp",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nonex",
+          "clientID": "Dt1fD5gX",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Okinawa",
+          "clientID": "MJvYcvP8",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 905,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-15T09:45:10.806Z",
+      "url": "https://openfront.io/game/DC2DfEst"
     }
   ]
 }
