@@ -12991,6 +12991,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-15T13:36:19.673Z",
       "url": "https://openfront.io/game/wu6tHCnL"
+    },
+    {
+      "id": "TPNb1bbt",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "SilentPrincess.6tyW",
+          "clientID": "E4ygFkkj",
+          "clanTag": null
+        },
+        {
+          "username": "Mr.Geilo",
+          "clientID": "W8iMCiQf",
+          "clanTag": "GOD"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 807,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-15T15:16:25.962Z",
+      "url": "https://openfront.io/game/TPNb1bbt"
     }
   ],
   "trios": [
@@ -35025,6 +35048,34 @@
       "numPlayers": 18,
       "timestamp": "2026-08-15T14:59:41.390Z",
       "url": "https://openfront.io/game/X69gtD6b"
+    },
+    {
+      "id": "x4jhdR48",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "regreg",
+          "clientID": "X7Pnc3k4",
+          "clanTag": "JUICE"
+        },
+        {
+          "username": "BIG_BARCH",
+          "clientID": "e2X91B3t",
+          "clanTag": "JUICE"
+        },
+        {
+          "username": "Pin Rhahrman",
+          "clientID": "nEbGodFA",
+          "clanTag": "JUICE"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1066,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-15T15:03:52.660Z",
+      "url": "https://openfront.io/game/x4jhdR48"
     }
   ],
   "quads": [
@@ -61009,6 +61060,72 @@
       "numPlayers": 60,
       "timestamp": "2026-08-15T14:30:55.023Z",
       "url": "https://openfront.io/game/CCBxTZ93"
+    },
+    {
+      "id": "6bog4zKK",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Ai slopper",
+          "clientID": "j2u34WLV",
+          "clanTag": "PIROK"
+        },
+        {
+          "username": "Anon114514",
+          "clientID": "zf1hiSBj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMist9",
+          "clientID": "d5oy6KPv",
+          "clanTag": null
+        },
+        {
+          "username": "Fettmaus",
+          "clientID": "Z65GkiAa",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1089,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-15T15:04:29.692Z",
+      "url": "https://openfront.io/game/6bog4zKK"
+    },
+    {
+      "id": "QeC4ukv2",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Caliecjo",
+          "clientID": "zjMDGAjK",
+          "clanTag": null
+        },
+        {
+          "username": "Rome",
+          "clientID": "wvsCoAEQ",
+          "clanTag": "IV"
+        },
+        {
+          "username": "Parry",
+          "clientID": "G1zDrbrk",
+          "clanTag": null
+        },
+        {
+          "username": "ur bes fren",
+          "clientID": "XWzeLQ2P",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1437,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T14:59:16.860Z",
+      "url": "https://openfront.io/game/QeC4ukv2"
     }
   ]
 }
