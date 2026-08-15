@@ -12702,6 +12702,29 @@
       "numPlayers": 59,
       "timestamp": "2026-08-15T09:42:04.651Z",
       "url": "https://openfront.io/game/Gj3GHJPY"
+    },
+    {
+      "id": "2YGLpzgQ",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Arski",
+          "clientID": "jUkDgu7C",
+          "clanTag": "FIN"
+        },
+        {
+          "username": "Christmas",
+          "clientID": "cMsxpAUX",
+          "clanTag": "FIN"
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1510,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-15T10:26:55.923Z",
+      "url": "https://openfront.io/game/2YGLpzgQ"
     }
   ],
   "trios": [
@@ -60208,6 +60231,34 @@
       "numPlayers": 64,
       "timestamp": "2026-08-15T10:08:03.266Z",
       "url": "https://openfront.io/game/NdvL3pmx"
+    },
+    {
+      "id": "vz215tr7",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "AnonSupport",
+          "clientID": "PdeSZB77",
+          "clanTag": "UN"
+        },
+        {
+          "username": "tungtungtungsahur",
+          "clientID": "yvmW5Y2P",
+          "clanTag": "UN"
+        },
+        {
+          "username": "floetus",
+          "clientID": "BaqizTCF",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1054,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-15T10:27:59.980Z",
+      "url": "https://openfront.io/game/vz215tr7"
     }
   ]
 }
