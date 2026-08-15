@@ -35076,6 +35076,29 @@
       "numPlayers": 32,
       "timestamp": "2026-08-15T15:03:52.660Z",
       "url": "https://openfront.io/game/x4jhdR48"
+    },
+    {
+      "id": "gicSX51n",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Omega Corporation",
+          "clientID": "5ubEWkjM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonDuck7",
+          "clientID": "akz1fYk1",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 957,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T15:34:55.578Z",
+      "url": "https://openfront.io/game/gicSX51n"
     }
   ],
   "quads": [
@@ -61126,6 +61149,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-15T14:59:16.860Z",
       "url": "https://openfront.io/game/QeC4ukv2"
+    },
+    {
+      "id": "9dfaf7CU",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Karabas Barabas",
+          "clientID": "3qp3TVF4",
+          "clanTag": null
+        },
+        {
+          "username": "ARGENTUMEN",
+          "clientID": "e9GaveiJ",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-15T15:18:08.061Z",
+      "url": "https://openfront.io/game/9dfaf7CU"
     }
   ]
 }
