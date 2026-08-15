@@ -1,5 +1,5 @@
 // sw.js — Service Worker for TheFrontHub offline support
-const CACHE_NAME = 'thefrontstats-v5';
+const CACHE_NAME = 'thefrontstats-v6';
 const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
 
 // Static assets to cache on install
@@ -16,6 +16,10 @@ const STATIC_ASSETS = [
   '/auth.js',
   '/runs.js',
   '/profile.js',
+  '/skins.js',
+  '/skins.css',
+  '/reward-codes.js',
+  '/playtime-stats.js',
   '/i18n.js',
   '/animations.js',
   '/openfront-client.js',
