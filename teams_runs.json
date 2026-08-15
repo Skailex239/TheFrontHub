@@ -62584,6 +62584,67 @@
       "numPlayers": 71,
       "timestamp": "2026-08-15T23:14:33.006Z",
       "url": "https://openfront.io/game/Q6cL5Dhc"
+    },
+    {
+      "id": "PKuDr3MX",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Hyde",
+          "clientID": "WmhB7Nfo",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Crusader",
+          "clientID": "nSehGhwq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "COW",
+          "clientID": "xrXYEcbH",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1278,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-15T23:20:34.884Z",
+      "url": "https://openfront.io/game/PKuDr3MX"
+    },
+    {
+      "id": "d5GgeJMx",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "can",
+          "clientID": "gR1jxQXH",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Who",
+          "clientID": "Vi3qvxJy",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hyakobo",
+          "clientID": "3ngcyKFc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonShark1",
+          "clientID": "zon2CskD",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 769,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-15T23:39:01.515Z",
+      "url": "https://openfront.io/game/d5GgeJMx"
     }
   ]
 }
