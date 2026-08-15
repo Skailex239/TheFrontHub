@@ -12469,6 +12469,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-15T01:57:43.702Z",
       "url": "https://openfront.io/game/AtKesKUU"
+    },
+    {
+      "id": "8S1sLkQv",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "UglyLettuce.RDDD",
+          "clientID": "2xuQoi5f",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCitadel2",
+          "clientID": "pjicZkPS",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1846,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-15T04:17:16.625Z",
+      "url": "https://openfront.io/game/8S1sLkQv"
     }
   ],
   "trios": [
@@ -33914,6 +33937,34 @@
       "numPlayers": 46,
       "timestamp": "2026-08-15T04:11:50.514Z",
       "url": "https://openfront.io/game/cMt9TjUs"
+    },
+    {
+      "id": "uv8FcWap",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Boombastic",
+          "clientID": "4GPrWLJi",
+          "clanTag": null
+        },
+        {
+          "username": "mi2am",
+          "clientID": "TcCBuHuw",
+          "clanTag": "TMP"
+        },
+        {
+          "username": "AnonAnvil8",
+          "clientID": "T3TGbqhG",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1343,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 23,
+      "timestamp": "2026-08-15T04:16:00.787Z",
+      "url": "https://openfront.io/game/uv8FcWap"
     }
   ],
   "quads": [
@@ -59137,6 +59188,34 @@
       "numPlayers": 51,
       "timestamp": "2026-08-15T03:45:42.954Z",
       "url": "https://openfront.io/game/T8Mkse2X"
+    },
+    {
+      "id": "Bje1FuFg",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Burp 3 The Reckoning",
+          "clientID": "4TEQpED2",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Free Luigi",
+          "clientID": "gh9v4mJu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "The Divine Presence",
+          "clientID": "bzDngbzc",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 2278,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-15T04:08:08.238Z",
+      "url": "https://openfront.io/game/Bje1FuFg"
     }
   ]
 }
