@@ -59958,6 +59958,62 @@
       "numPlayers": 67,
       "timestamp": "2026-08-15T09:00:00.551Z",
       "url": "https://openfront.io/game/jLhdyXjZ"
+    },
+    {
+      "id": "oQKM6gE9",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Roman Empire",
+          "clientID": "pza6Kupv",
+          "clanTag": null
+        },
+        {
+          "username": "uyvjhv",
+          "clientID": "PSyK7zvw",
+          "clanTag": null
+        },
+        {
+          "username": "yop",
+          "clientID": "G5TyU2PJ",
+          "clanTag": null
+        },
+        {
+          "username": "TacticalNuke",
+          "clientID": "8Phj4gd4",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 680,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-15T09:18:43.665Z",
+      "url": "https://openfront.io/game/oQKM6gE9"
+    },
+    {
+      "id": "we6eDhZN",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "ASHE",
+          "clientID": "JmkrE6dm",
+          "clanTag": "999"
+        },
+        {
+          "username": "leninland",
+          "clientID": "1kcRYay9",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1336,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-15T09:09:49.634Z",
+      "url": "https://openfront.io/game/we6eDhZN"
     }
   ]
 }
