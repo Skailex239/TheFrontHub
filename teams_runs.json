@@ -33845,6 +33845,29 @@
       "numPlayers": 29,
       "timestamp": "2026-08-15T03:04:35.088Z",
       "url": "https://openfront.io/game/GT31BvYA"
+    },
+    {
+      "id": "i7UJFGak",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Anon472",
+          "clientID": "jxPQFkPR",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGoblin",
+          "clientID": "GYJM3ua2",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1589,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-15T03:20:36.295Z",
+      "url": "https://openfront.io/game/i7UJFGak"
     }
   ],
   "quads": [
@@ -59007,6 +59030,34 @@
       "numPlayers": 28,
       "timestamp": "2026-08-15T02:55:37.033Z",
       "url": "https://openfront.io/game/ecNwRxAt"
+    },
+    {
+      "id": "ETqGNn5f",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Connie",
+          "clientID": "cnqzzPN6",
+          "clanTag": "TAMU"
+        },
+        {
+          "username": "Z08",
+          "clientID": "VTacEfrz",
+          "clanTag": "TAMU"
+        },
+        {
+          "username": "Daweed",
+          "clientID": "pYfBEu6k",
+          "clanTag": "TAMU"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 4362,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-15T02:34:41.344Z",
+      "url": "https://openfront.io/game/ETqGNn5f"
     }
   ]
 }
