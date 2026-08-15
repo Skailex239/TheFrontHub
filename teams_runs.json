@@ -12510,6 +12510,29 @@
       "numPlayers": 17,
       "timestamp": "2026-08-15T06:20:22.897Z",
       "url": "https://openfront.io/game/heSiYUZU"
+    },
+    {
+      "id": "veM1Yj2h",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ItsMuffin",
+          "clientID": "a7D5viFR",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "Dex",
+          "clientID": "BMQ162jc",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 756,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-15T06:51:08.788Z",
+      "url": "https://openfront.io/game/veM1Yj2h"
     }
   ],
   "trios": [
@@ -34108,6 +34131,52 @@
       "numPlayers": 27,
       "timestamp": "2026-08-15T06:05:25.143Z",
       "url": "https://openfront.io/game/ckRLaqzF"
+    },
+    {
+      "id": "KcPtXUrL",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Billy the Kid",
+          "clientID": "tQCVdgEi",
+          "clanTag": "WEST"
+        },
+        {
+          "username": "Spongebob",
+          "clientID": "aKv5Xtnu",
+          "clanTag": null
+        },
+        {
+          "username": "Vaquero",
+          "clientID": "4jf7uCoh",
+          "clanTag": "WEST"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1947,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-15T06:39:37.614Z",
+      "url": "https://openfront.io/game/KcPtXUrL"
+    },
+    {
+      "id": "64apagYW",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Good Neighbor",
+          "clientID": "tpraHRXN",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 2789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-15T06:27:05.821Z",
+      "url": "https://openfront.io/game/64apagYW"
     }
   ],
   "quads": [
@@ -59499,6 +59568,67 @@
       "numPlayers": 25,
       "timestamp": "2026-08-15T06:32:02.687Z",
       "url": "https://openfront.io/game/ZbUdvMUc"
+    },
+    {
+      "id": "VbXBfcsa",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "card hock",
+          "clientID": "u94sGAmG",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Anon396",
+          "clientID": "9uNucQPB",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFern1",
+          "clientID": "kSCqN4YZ",
+          "clanTag": null
+        },
+        {
+          "username": "fish",
+          "clientID": "LoRP4Qe3",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 762,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-15T06:45:29.947Z",
+      "url": "https://openfront.io/game/VbXBfcsa"
+    },
+    {
+      "id": "skqFSzkQ",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Nexz",
+          "clientID": "CTjY9sJZ",
+          "clanTag": "OZT"
+        },
+        {
+          "username": "Fleug",
+          "clientID": "x8FEF8rV",
+          "clanTag": "OZT"
+        },
+        {
+          "username": "AnonLotus2",
+          "clientID": "PZQP6VjK",
+          "clanTag": "OZT"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-15T06:42:40.282Z",
+      "url": "https://openfront.io/game/skqFSzkQ"
     }
   ]
 }
