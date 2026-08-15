@@ -34039,6 +34039,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-15T05:45:30.135Z",
       "url": "https://openfront.io/game/g2DxsYZd"
+    },
+    {
+      "id": "CZTbcPxn",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "John",
+          "clientID": "VwgqyRCQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ABG",
+          "clientID": "4JvkV5sF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "aussie on ice",
+          "clientID": "E7gc8mSv",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1060,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-15T06:15:31.584Z",
+      "url": "https://openfront.io/game/CZTbcPxn"
     }
   ],
   "quads": [
@@ -59364,6 +59392,39 @@
       "numPlayers": 53,
       "timestamp": "2026-08-15T05:36:51.677Z",
       "url": "https://openfront.io/game/bbvrNv8z"
+    },
+    {
+      "id": "UxzvmLpN",
+      "team": "Red",
+      "players": [
+        {
+          "username": "MANOTICK",
+          "clientID": "8owJmaHe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SpiderWings",
+          "clientID": "Bjv818kG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "island",
+          "clientID": "SARAMf1t",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Max",
+          "clientID": "QtjVXgMP",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1540,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 23,
+      "timestamp": "2026-08-15T06:03:24.174Z",
+      "url": "https://openfront.io/game/UxzvmLpN"
     }
   ]
 }
