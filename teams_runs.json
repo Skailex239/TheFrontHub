@@ -13216,6 +13216,29 @@
       "numPlayers": 83,
       "timestamp": "2026-08-15T20:07:37.740Z",
       "url": "https://openfront.io/game/MN7td9Vk"
+    },
+    {
+      "id": "LBcgMnbq",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Noobteam",
+          "clientID": "cn5rbUfi",
+          "clanTag": "TEST"
+        },
+        {
+          "username": "AnonWrench6",
+          "clientID": "RmZB65eC",
+          "clanTag": "TEST"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 2936,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-15T20:58:16.054Z",
+      "url": "https://openfront.io/game/LBcgMnbq"
     }
   ],
   "trios": [
@@ -62293,6 +62316,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-15T20:59:21.120Z",
       "url": "https://openfront.io/game/u2McWUc7"
+    },
+    {
+      "id": "GoP7m35R",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "pasha dankov",
+          "clientID": "zSecUffA",
+          "clanTag": "POL"
+        },
+        {
+          "username": "Wikol",
+          "clientID": "z2ZoJbbo",
+          "clanTag": "POL"
+        },
+        {
+          "username": "MuSi",
+          "clientID": "sfoKNw9e",
+          "clanTag": "POL"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1228,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-15T21:26:16.838Z",
+      "url": "https://openfront.io/game/GoP7m35R"
     }
   ]
 }
