@@ -12625,6 +12625,29 @@
       "numPlayers": 59,
       "timestamp": "2026-08-15T08:01:47.356Z",
       "url": "https://openfront.io/game/7wgcRfvz"
+    },
+    {
+      "id": "ejKQMrE6",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Taya",
+          "clientID": "Fu7E3hHr",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "DioxFrost",
+          "clientID": "h2PkpQQW",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1209,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-15T08:18:21.357Z",
+      "url": "https://openfront.io/game/ejKQMrE6"
     }
   ],
   "trios": [
@@ -34315,6 +34338,29 @@
       "numPlayers": 33,
       "timestamp": "2026-08-15T07:38:57.310Z",
       "url": "https://openfront.io/game/Sp1A8LEw"
+    },
+    {
+      "id": "HayEr7Qv",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon514",
+          "clientID": "F831LvPg",
+          "clanTag": null
+        },
+        {
+          "username": "UMUDQ346",
+          "clientID": "zxy1Tu2X",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 673,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-15T08:28:24.053Z",
+      "url": "https://openfront.io/game/HayEr7Qv"
     }
   ],
   "quads": [
