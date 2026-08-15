@@ -33572,6 +33572,29 @@
       "numPlayers": 66,
       "timestamp": "2026-08-15T00:08:26.509Z",
       "url": "https://openfront.io/game/v4TQH2GV"
+    },
+    {
+      "id": "pQ8XCBRq",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "CaoBao",
+          "clientID": "BVCzqy91",
+          "clanTag": "RTK"
+        },
+        {
+          "username": "dogwater",
+          "clientID": "WTdFMKrX",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1569,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "timestamp": "2026-08-15T00:21:58.234Z",
+      "url": "https://openfront.io/game/pQ8XCBRq"
     }
   ],
   "quads": [
@@ -58508,6 +58531,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-14T23:51:13.508Z",
       "url": "https://openfront.io/game/a9cQwpXj"
+    },
+    {
+      "id": "za3tcKMj",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "KAINZLY",
+          "clientID": "Rjc8ip1q",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "Lpo8NzCX",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Magellan",
+          "clientID": "43dSdo2d",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Patanek",
+          "clientID": "pQhS2R8f",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-15T00:28:44.634Z",
+      "url": "https://openfront.io/game/za3tcKMj"
     }
   ]
 }
