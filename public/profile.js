@@ -974,10 +974,12 @@ function renderWeeklyChart() {
     : "Cette semaine";
 
   const weeks = [weekNum];
+  const rankedScore = data.ffaRanked + data.teamRanked;
   const series = [
-    { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank, detail: { casual: data.ffaCasual, ranked: data.ffaRanked, total: data.ffa } }] },
-    { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank, detail: { casual: data.teamCasual, ranked: data.teamRanked, total: data.team } }] },
-    { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank, detail: { ffa: data.ffa, team: data.team, total: data.total, allTime: data.allTimePoints } }] },
+    { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank, detail: { wins: data.ffaCasual } }] },
+    { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank, detail: { wins: data.teamCasual } }] },
+    { label: "Classé", color: "#9333ea", points: [{ score: rankedScore, rank: data.rank, detail: { ffa1v1: data.ffaRanked, team2v2: data.teamRanked } }] },
+    { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank, detail: { ffa: data.ffa, team: data.team, ranked: rankedScore, allTime: data.allTimePoints } }] },
   ];
 
   // Store point positions for hover detection
@@ -1148,14 +1150,16 @@ function renderWeeklyChart() {
       html += `<div style="color:#9ca3af;font-size:11px;margin-bottom:6px">Score: <span style="color:${found.series.color};font-weight:700">${found.point.score} pts</span> · Rang: <span style="color:#fff;font-weight:700">#${found.point.rank}</span></div>`;
 
       if (found.series.label === "FFA") {
-        html += `<div style="font-size:11px;color:#a89480">Casual: ${d.casual || 0} wins</div>`;
-        html += `<div style="font-size:11px;color:#a89480">Classé: ${d.ranked || 0} wins</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Wins FFA: ${d.wins || 0}</div>`;
       } else if (found.series.label === "Team") {
-        html += `<div style="font-size:11px;color:#a89480">Casual: ${d.casual || 0} wins</div>`;
-        html += `<div style="font-size:11px;color:#a89480">Classé: ${d.ranked || 0} wins</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Wins Team: ${d.wins || 0}</div>`;
+      } else if (found.series.label === "Classé") {
+        html += `<div style="font-size:11px;color:#a89480">1v1: ${d.ffa1v1 || 0} wins</div>`;
+        html += `<div style="font-size:11px;color:#a89480">2v2: ${d.team2v2 || 0} wins</div>`;
       } else if (found.series.label === "Total") {
         html += `<div style="font-size:11px;color:#a89480">FFA: ${d.ffa || 0} pts</div>`;
         html += `<div style="font-size:11px;color:#a89480">Team: ${d.team || 0} pts</div>`;
+        html += `<div style="font-size:11px;color:#a89480">Classé: ${d.ranked || 0} pts</div>`;
         html += `<div style="font-size:11px;color:#a89480;margin-top:4px;padding-top:4px;border-top:1px solid rgba(255,255,255,0.1)">All-time: ${d.allTime || 0} pts</div>`;
       }
 
@@ -1193,7 +1197,7 @@ function renderWeeklyChart() {
     ctx.fill();
     ctx.fillStyle = "#6b7280";
     ctx.fillText(s.label, legendX + 10, legendY);
-    legendX += 50;
+    legendX += 55;
   });
 
   // ── "Week" label on X-axis ──
