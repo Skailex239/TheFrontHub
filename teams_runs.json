@@ -34905,6 +34905,34 @@
       "numPlayers": 70,
       "timestamp": "2026-08-15T14:07:25.068Z",
       "url": "https://openfront.io/game/BUjKj3X4"
+    },
+    {
+      "id": "zQMJHHwL",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "GrandChamallow",
+          "clientID": "AJYtacGz",
+          "clanTag": null
+        },
+        {
+          "username": "SS61",
+          "clientID": "XXE1Cwa9",
+          "clanTag": "67"
+        },
+        {
+          "username": "ESS",
+          "clientID": "Y73HXJzC",
+          "clanTag": "67"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 809,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-15T14:35:19.289Z",
+      "url": "https://openfront.io/game/zQMJHHwL"
     }
   ],
   "quads": [
@@ -60856,6 +60884,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-15T14:10:51.290Z",
       "url": "https://openfront.io/game/VTg3Pg8y"
+    },
+    {
+      "id": "CCBxTZ93",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "book",
+          "clientID": "TLT3SScS",
+          "clanTag": null
+        },
+        {
+          "username": "Yaroke",
+          "clientID": "njAmYsNq",
+          "clanTag": "MOSSD"
+        },
+        {
+          "username": "Nakash",
+          "clientID": "GFiCoP6W",
+          "clanTag": "MOSSD"
+        },
+        {
+          "username": "parsa1394",
+          "clientID": "oimPuPg3",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1008,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-15T14:30:55.023Z",
+      "url": "https://openfront.io/game/CCBxTZ93"
     }
   ]
 }
