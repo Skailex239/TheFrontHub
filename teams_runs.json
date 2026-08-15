@@ -12725,6 +12725,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-15T10:26:55.923Z",
       "url": "https://openfront.io/game/2YGLpzgQ"
+    },
+    {
+      "id": "gSzhff4D",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "huh",
+          "clientID": "vqGn1q3v",
+          "clanTag": "TRADE"
+        },
+        {
+          "username": "Indo Europeans",
+          "clientID": "682GS5sj",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-15T10:47:03.671Z",
+      "url": "https://openfront.io/game/gSzhff4D"
     }
   ],
   "trios": [
@@ -60305,6 +60328,29 @@
       "numPlayers": 80,
       "timestamp": "2026-08-15T10:37:22.562Z",
       "url": "https://openfront.io/game/MCFSFrta"
+    },
+    {
+      "id": "WwNvaW8E",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Kawa",
+          "clientID": "jErwsV21",
+          "clanTag": null
+        },
+        {
+          "username": "Anon991",
+          "clientID": "xZ4zYXdm",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1860,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-15T10:49:05.292Z",
+      "url": "https://openfront.io/game/WwNvaW8E"
     }
   ]
 }
