@@ -63140,6 +63140,57 @@
       "numPlayers": 36,
       "timestamp": "2026-08-16T00:34:52.386Z",
       "url": "https://openfront.io/game/7YJ3rX99"
+    },
+    {
+      "id": "kkZFYeZa",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "AnonAnt3",
+          "clientID": "c9oJUkR2",
+          "clanTag": null
+        },
+        {
+          "username": "Train Me",
+          "clientID": "BvhwHoA4",
+          "clanTag": "UNC"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 1027,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-16T01:47:28.718Z",
+      "url": "https://openfront.io/game/kkZFYeZa"
+    },
+    {
+      "id": "o9Sc2F9t",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonPumpkin5",
+          "clientID": "uHqdqApj",
+          "clanTag": null
+        },
+        {
+          "username": "Volaryus",
+          "clientID": "NQj7ikbZ",
+          "clanTag": null
+        },
+        {
+          "username": "Jongus Pooter",
+          "clientID": "QXgDkg5e",
+          "clanTag": "NRW"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1980,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 26,
+      "timestamp": "2026-08-16T01:31:47.287Z",
+      "url": "https://openfront.io/game/o9Sc2F9t"
     }
   ]
 }
