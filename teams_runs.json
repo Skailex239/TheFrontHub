@@ -67058,6 +67058,72 @@
       "numPlayers": 72,
       "timestamp": "2026-08-16T20:19:19.202Z",
       "url": "https://openfront.io/game/mGUvCsRX"
+    },
+    {
+      "id": "QqpBt1y2",
+      "team": "Red",
+      "players": [
+        {
+          "username": "kdr72",
+          "clientID": "e8KCuHBk",
+          "clanTag": "KAR"
+        },
+        {
+          "username": "YvngScorp1on",
+          "clientID": "4iPDXJtd",
+          "clanTag": "KAR"
+        },
+        {
+          "username": "TestMan",
+          "clientID": "rndmWfxC",
+          "clanTag": "KAR"
+        },
+        {
+          "username": "Ezbaze",
+          "clientID": "ZvemvLnX",
+          "clanTag": "KAR"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 812,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-16T20:56:51.924Z",
+      "url": "https://openfront.io/game/QqpBt1y2"
+    },
+    {
+      "id": "T7sDPDEw",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "turcomen",
+          "clientID": "NRZRYuPJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin9",
+          "clientID": "ZosdmrHP",
+          "clanTag": null
+        },
+        {
+          "username": "skurwysyn",
+          "clientID": "picTBujq",
+          "clanTag": "PL"
+        },
+        {
+          "username": "WHO ART THOU",
+          "clientID": "9ehqUYfa",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1121,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-16T20:49:24.484Z",
+      "url": "https://openfront.io/game/T7sDPDEw"
     }
   ]
 }
