@@ -37430,6 +37430,29 @@
       "numPlayers": 33,
       "timestamp": "2026-08-16T14:42:42.578Z",
       "url": "https://openfront.io/game/Q6TjBvPH"
+    },
+    {
+      "id": "2aMztA8L",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "3ZWu4hWG",
+          "clanTag": null
+        },
+        {
+          "username": "anotherhuman",
+          "clientID": "dFh5cvZN",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1138,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "timestamp": "2026-08-16T14:51:51.641Z",
+      "url": "https://openfront.io/game/2aMztA8L"
     }
   ],
   "quads": [
@@ -65495,6 +65518,39 @@
       "numPlayers": 67,
       "timestamp": "2026-08-16T14:35:24.642Z",
       "url": "https://openfront.io/game/p1yGUm78"
+    },
+    {
+      "id": "oFaWnsTb",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "CaughtByUsernamePolice",
+          "clientID": "3bBasVyH",
+          "clanTag": "1984"
+        },
+        {
+          "username": "MinistryOfCensorship",
+          "clientID": "SFZ2A9EX",
+          "clanTag": "1984"
+        },
+        {
+          "username": "BigBrotherCensoredMe",
+          "clientID": "fZe2k6Kn",
+          "clanTag": "1984"
+        },
+        {
+          "username": "RAW541K",
+          "clientID": "nrCBmYML",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 698,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 27,
+      "timestamp": "2026-08-16T14:56:23.928Z",
+      "url": "https://openfront.io/game/oFaWnsTb"
     }
   ]
 }
