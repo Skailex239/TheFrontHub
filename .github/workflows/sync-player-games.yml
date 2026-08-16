@@ -1,30 +1,24 @@
 name: Sync Player Games
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Sync continue des parties par joueur.
+# Sync continue des parties par joueur + calcul des stats pré-calculées.
 #
-# Pour chaque joueur dans sync-players.json:
-#   - Première sync: récupère TOUTES les parties (full, lent)
-#   - Syncs suivantes: ne récupère que les nouvelles (incremental, rapide)
-#   - Stocke dans player-data/<publicId>.json
+# Étapes:
+#   1. detect-new-players.js: détecte les nouveaux joueurs depuis Firebase
+#      public-aliases, les ajoute à sync-players.json
+#   2. sync-player-games.js: sync les parties (full ou incremental)
+#   3. compute-player-stats.js: calcule toutes les stats, écrit player-stats/<pid>.json
 #
-# Boucle continue via self-retrigger (comme sync.yml):
-#   - Le job retrigger relance ce workflow à la fin → 24/7
-#   - cancel-in-progress: true évite l'accumulation
-#   - cron */15 est un filet de sécurité
-#
-# Déclenchement manuel:
-#   - Paramètre player-public-id pour sync un joueur spécifique
-#   - Paramètre force-full pour forcer une sync complète
+# Boucle continue via self-retrigger (comme sync.yml).
 # ─────────────────────────────────────────────────────────────────────────────
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # safety net every 15 min
+    - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
       player-public-id:
-        description: "Public ID d'un joueur à sync (ex: tqMGOI2Q). Vide = tous les joueurs de sync-players.json"
+        description: "Public ID d'un joueur à sync (ex: tqMGOI2Q). Vide = tous les joueurs"
         required: false
         type: string
       force-full:
@@ -54,7 +48,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run player games sync
+      - name: Detect new players from Firebase
+        run: |
+          echo "[workflow] Detecting new players..."
+          node detect-new-players.js || true
+
+      - name: Sync player games
         run: |
           ARGS=""
           if [ -n "${{ inputs.player-public-id }}" ]; then
@@ -68,15 +67,22 @@ jobs:
         env:
           SKAILEX_ACCESS_TOKEN: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
 
-      - name: Commit and push player data
+      - name: Compute player stats
+        run: |
+          echo "[workflow] Computing pre-calculated stats..."
+          if [ -n "${{ inputs.player-public-id }}" ]; then
+            node compute-player-stats.js ${{ inputs.player-public-id }}
+          else
+            node compute-player-stats.js
+          fi
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p player-data
-          # Add all player data files (JSON)
-          git add player-data/*.json 2>/dev/null || true
-          git diff --cached --quiet && { echo "[workflow] No changes to commit"; exit 0; }
-          git commit -m "[auto] sync player games"
+          git add sync-players.json player-data/*.json player-stats/*.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "[workflow] No changes"; exit 0; }
+          git commit -m "[auto] sync player games + stats"
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main && git push && echo "[workflow] Pushed!" && exit 0
             echo "[workflow] Retrying push ($i)..."
@@ -91,14 +97,12 @@ jobs:
       actions: write
     if: always()
     steps:
-      - name: Retrigger this workflow (continuous loop)
+      - name: Retrigger (continuous loop)
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            // Only retrigger if this wasn't a manual dispatch (avoid infinite manual loops)
-            const event = context.eventName;
-            if (event === 'workflow_dispatch') {
+            if (context.eventName === 'workflow_dispatch') {
               console.log('Manual dispatch — not retriggering');
               return;
             }
