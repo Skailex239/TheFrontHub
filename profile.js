@@ -1242,8 +1242,6 @@ function renderWeeklyChart() {
    REWARD CODE CARD (skins)
    ════════════════════════════════════════════════════════════════ */
 
-let _rewardCardState = { publicId: null, ownedSkins: [], activeSkinId: null };
-
 function renderRewardCodeCard(publicId) {
   _rewardCardState.publicId = publicId;
   const container = document.getElementById("reward-code-section");
@@ -1883,9 +1881,6 @@ function renderActivityStats(games) {
 /* ════════════════════════════════════════════════════════════════
    MAP STATS TABLE
    ════════════════════════════════════════════════════════════════ */
-
-let _mapStatsSortBy = "count";
-let _mapStatsShowAll = false;
 
 function renderMapStatsTable(games) {
   const mount = document.getElementById("map-stats-section-mount");
