@@ -13641,6 +13641,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-16T12:00:04.320Z",
       "url": "https://openfront.io/game/QfTWnuaJ"
+    },
+    {
+      "id": "fSHxvPne",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "kekleak",
+          "clientID": "bq3KUMg5",
+          "clanTag": "HAK"
+        },
+        {
+          "username": "Anomaly",
+          "clientID": "qPxD9sij",
+          "clanTag": "HAK"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1165,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-16T12:14:35.181Z",
+      "url": "https://openfront.io/game/fSHxvPne"
     }
   ],
   "trios": [
@@ -37154,6 +37177,34 @@
       "numPlayers": 21,
       "timestamp": "2026-08-16T11:36:49.975Z",
       "url": "https://openfront.io/game/NzJtCiQQ"
+    },
+    {
+      "id": "vPfUR2xm",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Marten",
+          "clientID": "3Dz1RkzF",
+          "clanTag": "MICRO"
+        },
+        {
+          "username": "MICROBODY",
+          "clientID": "uh754S3e",
+          "clanTag": "MICRO"
+        },
+        {
+          "username": "Dhhhhhhh",
+          "clientID": "MWWgUwqb",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 753,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-16T12:26:07.845Z",
+      "url": "https://openfront.io/game/vPfUR2xm"
     }
   ],
   "quads": [
@@ -64990,6 +65041,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-16T12:07:56.294Z",
       "url": "https://openfront.io/game/c2K7G3yS"
+    },
+    {
+      "id": "amWpqv5b",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Genije",
+          "clientID": "yVsd2mw8",
+          "clanTag": null
+        },
+        {
+          "username": "mme.gamer",
+          "clientID": "QsrVRxGG",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1325,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-16T12:12:34.063Z",
+      "url": "https://openfront.io/game/amWpqv5b"
     }
   ]
 }
