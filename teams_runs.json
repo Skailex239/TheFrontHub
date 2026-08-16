@@ -13746,6 +13746,29 @@
       "numPlayers": 90,
       "timestamp": "2026-08-16T13:23:27.319Z",
       "url": "https://openfront.io/game/E9UfZDex"
+    },
+    {
+      "id": "9Hw1vfgT",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "DeLoVaN",
+          "clientID": "WyYzEDtL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Shox",
+          "clientID": "aFaLNDtt",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 721,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-16T15:06:42.542Z",
+      "url": "https://openfront.io/game/9Hw1vfgT"
     }
   ],
   "trios": [
@@ -65551,6 +65574,39 @@
       "numPlayers": 27,
       "timestamp": "2026-08-16T14:56:23.928Z",
       "url": "https://openfront.io/game/oFaWnsTb"
+    },
+    {
+      "id": "P6M8kBYv",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Ingrid",
+          "clientID": "VRBVoN88",
+          "clanTag": "GOOSE"
+        },
+        {
+          "username": "OUI",
+          "clientID": "wFA6crJG",
+          "clanTag": "GOOSE"
+        },
+        {
+          "username": "Anon139",
+          "clientID": "xE4fg4uS",
+          "clanTag": null
+        },
+        {
+          "username": "J te graille",
+          "clientID": "uHnEj1o2",
+          "clanTag": "GOOSE"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 905,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-16T15:07:13.065Z",
+      "url": "https://openfront.io/game/P6M8kBYv"
     }
   ]
 }
