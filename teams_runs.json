@@ -35992,6 +35992,57 @@
       "numPlayers": 63,
       "timestamp": "2026-08-15T23:34:31.729Z",
       "url": "https://openfront.io/game/WWoakF4j"
+    },
+    {
+      "id": "Udi9pN2B",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "degdeg123",
+          "clientID": "WjDf3hQ2",
+          "clanTag": null
+        },
+        {
+          "username": "yerk",
+          "clientID": "jzyE6WED",
+          "clanTag": null
+        },
+        {
+          "username": "Ruska Roma",
+          "clientID": "WJHnA9gu",
+          "clanTag": "KGB"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 982,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-16T00:00:50.343Z",
+      "url": "https://openfront.io/game/Udi9pN2B"
+    },
+    {
+      "id": "BgTCnAGz",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Wyatt",
+          "clientID": "1otdsj8A",
+          "clanTag": "ZAB"
+        },
+        {
+          "username": "Argylemaxx",
+          "clientID": "hNyeuMLB",
+          "clanTag": "ZAB"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1304,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-15T23:52:21.320Z",
+      "url": "https://openfront.io/game/BgTCnAGz"
     }
   ],
   "quads": [
@@ -62729,6 +62780,72 @@
       "numPlayers": 40,
       "timestamp": "2026-08-15T23:44:50.879Z",
       "url": "https://openfront.io/game/6SWNgNaw"
+    },
+    {
+      "id": "j3vreGT8",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "North Macedonia",
+          "clientID": "f94WK5RE",
+          "clanTag": null
+        },
+        {
+          "username": "Fan",
+          "clientID": "DoeLLhif",
+          "clanTag": "REX"
+        },
+        {
+          "username": "AnonMoss6",
+          "clientID": "X4LQqqCg",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "9FJsAsdo",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-15T23:55:18.015Z",
+      "url": "https://openfront.io/game/j3vreGT8"
+    },
+    {
+      "id": "obnBMjps",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Support",
+          "clientID": "B7RKJt61",
+          "clanTag": "PAX"
+        },
+        {
+          "username": "Latveria",
+          "clientID": "KwbUxJGy",
+          "clanTag": "PAX"
+        },
+        {
+          "username": "Papa",
+          "clientID": "q26eZmBn",
+          "clanTag": "PAX"
+        },
+        {
+          "username": "totoro",
+          "clientID": "cquP22R2",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1184,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-15T23:47:07.509Z",
+      "url": "https://openfront.io/game/obnBMjps"
     }
   ]
 }
