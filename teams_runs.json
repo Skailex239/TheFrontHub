@@ -13723,6 +13723,29 @@
       "numPlayers": 14,
       "timestamp": "2026-08-16T13:24:38.388Z",
       "url": "https://openfront.io/game/j9AsbwN2"
+    },
+    {
+      "id": "E9UfZDex",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "medium h",
+          "clientID": "n9AsyosT",
+          "clanTag": "GOLD"
+        },
+        {
+          "username": "Grand P",
+          "clientID": "KkE8PDjm",
+          "clanTag": "GOLD"
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 1373,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-16T13:23:27.319Z",
+      "url": "https://openfront.io/game/E9UfZDex"
     }
   ],
   "trios": [
@@ -37300,6 +37323,34 @@
       "numPlayers": 90,
       "timestamp": "2026-08-16T12:46:27.077Z",
       "url": "https://openfront.io/game/3KASUoxf"
+    },
+    {
+      "id": "RQ1eJXBU",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "dragon",
+          "clientID": "uqHhJxXg",
+          "clanTag": null
+        },
+        {
+          "username": "Anon231",
+          "clientID": "u1zGMuvo",
+          "clanTag": null
+        },
+        {
+          "username": "GoodPlayer318",
+          "clientID": "nxjVKoUz",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1760,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-16T13:09:44.501Z",
+      "url": "https://openfront.io/game/RQ1eJXBU"
     }
   ],
   "quads": [
