@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-16T12:46:33.093Z",
-  "syncMode": "full",
-  "syncDurationSec": 18,
-  "totalGames": 2138,
-  "newGamesThisSync": 2138,
+  "lastSyncedAt": "2026-08-16T13:06:25.556Z",
+  "syncMode": "incremental",
+  "syncDurationSec": 0.1,
+  "totalGames": 2139,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "ouM4pTAD",
+      "start": "2026-08-16T13:02:34.085Z",
+      "durationSeconds": 31,
+      "map": "Asia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "defeat",
+      "totalPlayers": 1,
+      "username": "Black Hole",
+      "clanTag": null
+    },
     {
       "gameId": "PHVfvDXA",
       "start": "2026-08-16T12:13:36.111Z",

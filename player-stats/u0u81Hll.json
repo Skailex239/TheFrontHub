@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-16T12:46:35.453Z",
-  "lastSyncedAt": "2026-08-16T12:46:33.093Z",
-  "totalGames": 2138,
+  "computedAt": "2026-08-16T13:06:28.436Z",
+  "lastSyncedAt": "2026-08-16T13:06:25.556Z",
+  "totalGames": 2139,
   "careerWins": {
     "ffaCasual": 371,
     "ffaRanked": 325,
@@ -15,20 +15,20 @@
   "formatted": {
     "points": "4 311",
     "totalWins": "792",
-    "totalGames": "2 138",
+    "totalGames": "2 139",
     "totalPlaytime": "22j 13h",
     "totalPlaytimeCompact": "22j 13h",
-    "avgGameDuration": "15m 12s",
+    "avgGameDuration": "15m 11s",
     "longestGame": "2h 40m",
     "winrate": "44%"
   },
   "playtime": {
-    "totalSec": 1950430,
-    "avgGameSec": 912.268475210477,
+    "totalSec": 1950461,
+    "avgGameSec": 911.8564749883122,
     "longestSec": 9640,
     "shortestSec": 1,
     "byVisibility": {
-      "public": 2138,
+      "public": 2139,
       "private": 0,
       "singleplayer": 0
     },
@@ -39,8 +39,8 @@
         "wins": 371
       },
       "ffaRanked": {
-        "games": 493,
-        "playtimeSec": 166201,
+        "games": 494,
+        "playtimeSec": 166232,
         "wins": 325
       },
       "teamCasual": {
@@ -57,7 +57,7 @@
   },
   "results": {
     "victory": 792,
-    "defeat": 1026,
+    "defeat": 1027,
     "incomplete": 320,
     "other": 0
   },
@@ -98,19 +98,19 @@
     },
     {
       "map": "Asia",
-      "count": 109,
+      "count": 110,
       "wins": 63,
-      "losses": 46,
+      "losses": 47,
       "incompletes": 0,
-      "playtimeSec": 51118,
-      "avgDuration": 468.9724770642202,
-      "winRate": 0.5779816513761468,
-      "lastPlayed": 1786731176364,
+      "playtimeSec": 51149,
+      "avgDuration": 464.9909090909091,
+      "winRate": 0.5727272727272728,
+      "lastPlayed": 1786885354085,
       "formatted": {
-        "playtime": "14h 11m",
+        "playtime": "14h 12m",
         "avgDuration": "7m",
-        "winRate": "58%",
-        "lastPlayed": "14/08/26"
+        "winRate": "57%",
+        "lastPlayed": "16/08/26"
       }
     },
     {
@@ -1712,7 +1712,7 @@
       70,
       124,
       130,
-      139,
+      140,
       136,
       199,
       194,
@@ -1729,7 +1729,7 @@
       325,
       346,
       364,
-      316
+      317
     ],
     "byDay": [
       {
@@ -1844,8 +1844,8 @@
       },
       {
         "date": "16/08/2026",
-        "count": 4,
-        "playtimeSec": 4181
+        "count": 5,
+        "playtimeSec": 4212
       },
       {
         "date": "17/03/2026",
@@ -2188,7 +2188,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 3,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2264,6 +2264,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "ouM4pTAD",
+      "start": "2026-08-16T13:02:34.085Z",
+      "map": "Asia",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 31,
+      "totalPlayers": 1,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
     {
       "gameId": "PHVfvDXA",
       "start": "2026-08-16T12:13:36.111Z",
@@ -2469,17 +2480,6 @@
       "mode": "Team",
       "result": "defeat",
       "durationSeconds": 535,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "3vHs98Vj",
-      "start": "2026-08-14T19:04:14.151Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 447,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
