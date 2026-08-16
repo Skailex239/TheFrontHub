@@ -14229,6 +14229,29 @@
       "numPlayers": 67,
       "timestamp": "2026-08-16T22:36:41.462Z",
       "url": "https://openfront.io/game/h4A8P2V2"
+    },
+    {
+      "id": "QJyuJAyj",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "mack",
+          "clientID": "qyZ15uk4",
+          "clanTag": null
+        },
+        {
+          "username": "ENDz",
+          "clientID": "ndtV7VCD",
+          "clanTag": "ABC"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1194,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-16T22:47:22.063Z",
+      "url": "https://openfront.io/game/QJyuJAyj"
     }
   ],
   "trios": [
@@ -38696,6 +38719,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-16T22:12:49.955Z",
       "url": "https://openfront.io/game/hQ6hHDfJ"
+    },
+    {
+      "id": "P7ma9ca8",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Nardo RS",
+          "clientID": "Yf3m1c5r",
+          "clanTag": "AST"
+        },
+        {
+          "username": "tung tung sahur",
+          "clientID": "5oXbsk5T",
+          "clanTag": "AST"
+        },
+        {
+          "username": "pouet",
+          "clientID": "mwoZ6cc7",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "France",
+      "duration_s": 1481,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-16T22:54:35.495Z",
+      "url": "https://openfront.io/game/P7ma9ca8"
     }
   ],
   "quads": [
