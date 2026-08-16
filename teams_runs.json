@@ -37624,6 +37624,57 @@
       "numPlayers": 66,
       "timestamp": "2026-08-16T15:32:12.628Z",
       "url": "https://openfront.io/game/MJieb8k7"
+    },
+    {
+      "id": "EqyahCAc",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "brrk",
+          "clientID": "6FovhKuK",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LapinG0D",
+          "clientID": "e5D7zrDb",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1206,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-16T16:14:40.705Z",
+      "url": "https://openfront.io/game/EqyahCAc"
+    },
+    {
+      "id": "TAgKjhQF",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Kukkaro",
+          "clientID": "cAT2Dys3",
+          "clanTag": "KALU"
+        },
+        {
+          "username": "AnonShovel2",
+          "clientID": "Am93uTKi",
+          "clanTag": null
+        },
+        {
+          "username": "manbeast",
+          "clientID": "kLsEfYr9",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1506,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-16T16:11:37.527Z",
+      "url": "https://openfront.io/game/TAgKjhQF"
     }
   ],
   "quads": [
@@ -65844,6 +65895,34 @@
       "numPlayers": 72,
       "timestamp": "2026-08-16T15:41:35.670Z",
       "url": "https://openfront.io/game/MignHMVB"
+    },
+    {
+      "id": "kyxyqXVH",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "LordSwinka",
+          "clientID": "TEnU2Ms3",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCipher5",
+          "clientID": "unFNq2up",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMagenta1",
+          "clientID": "Kjj6pzEi",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 2084,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "timestamp": "2026-08-16T16:07:52.320Z",
+      "url": "https://openfront.io/game/kyxyqXVH"
     }
   ]
 }
