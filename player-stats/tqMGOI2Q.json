@@ -1,8 +1,8 @@
 {
   "publicId": "tqMGOI2Q",
   "username": "Zwiper.2734",
-  "computedAt": "2026-08-16T19:32:23.927Z",
-  "lastSyncedAt": "2026-08-16T19:32:20.848Z",
+  "computedAt": "2026-08-16T19:51:13.915Z",
+  "lastSyncedAt": "2026-08-16T19:51:10.088Z",
   "totalGames": 1980,
   "careerWins": {
     "ffaCasual": 239,
@@ -12,6 +12,32 @@
   },
   "totalWins": 675,
   "points": 3854,
+  "level": 38,
+  "levelProgress": 54,
+  "levelNextAt": 3900,
+  "nextMilestones": {
+    "wins": {
+      "current": 675,
+      "target": 1000
+    },
+    "playtime": {
+      "current": 460,
+      "target": 500
+    },
+    "maps": {
+      "current": 85,
+      "target": 100
+    }
+  },
+  "sparkline7d": [
+    43,
+    9,
+    17,
+    9,
+    30,
+    9,
+    5
+  ],
   "formatted": {
     "points": "3 854",
     "totalWins": "675",
@@ -20,7 +46,8 @@
     "totalPlaytimeCompact": "19j 4h",
     "avgGameDuration": "13m 57s",
     "longestGame": "2h 47m",
-    "winrate": "41%"
+    "winrate": "41%",
+    "totalPlaytimeHours": "460h"
   },
   "playtime": {
     "totalSec": 1657808,

@@ -1,8 +1,8 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-16T19:32:23.614Z",
-  "lastSyncedAt": "2026-08-16T19:32:21.684Z",
+  "computedAt": "2026-08-16T19:51:13.336Z",
+  "lastSyncedAt": "2026-08-16T19:51:11.104Z",
   "totalGames": 3695,
   "careerWins": {
     "ffaCasual": 261,
@@ -12,6 +12,32 @@
   },
   "totalWins": 1917,
   "points": 4870,
+  "level": 48,
+  "levelProgress": 70,
+  "levelNextAt": 4900,
+  "nextMilestones": {
+    "wins": {
+      "current": 1917,
+      "target": 2000
+    },
+    "playtime": {
+      "current": 724,
+      "target": 1000
+    },
+    "maps": {
+      "current": 94,
+      "target": 100
+    }
+  },
+  "sparkline7d": [
+    3,
+    7,
+    2,
+    14,
+    14,
+    17,
+    6
+  ],
   "formatted": {
     "points": "4 870",
     "totalWins": "1 917",
@@ -20,7 +46,8 @@
     "totalPlaytimeCompact": "30j 4h",
     "avgGameDuration": "11m 46s",
     "longestGame": "2h 53m",
-    "winrate": "57%"
+    "winrate": "57%",
+    "totalPlaytimeHours": "724h"
   },
   "playtime": {
     "totalSec": 2609081,

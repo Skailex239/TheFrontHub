@@ -1,8 +1,8 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-16T19:32:24.274Z",
-  "lastSyncedAt": "2026-08-16T19:32:21.939Z",
+  "computedAt": "2026-08-16T19:51:14.366Z",
+  "lastSyncedAt": "2026-08-16T19:51:11.399Z",
   "totalGames": 2143,
   "careerWins": {
     "ffaCasual": 371,
@@ -12,6 +12,32 @@
   },
   "totalWins": 794,
   "points": 4321,
+  "level": 43,
+  "levelProgress": 21,
+  "levelNextAt": 4400,
+  "nextMilestones": {
+    "wins": {
+      "current": 794,
+      "target": 1000
+    },
+    "playtime": {
+      "current": 542,
+      "target": 1000
+    },
+    "maps": {
+      "current": 93,
+      "target": 100
+    }
+  },
+  "sparkline7d": [
+    20,
+    9,
+    6,
+    17,
+    2,
+    7,
+    10
+  ],
   "formatted": {
     "points": "4 321",
     "totalWins": "794",
@@ -20,7 +46,8 @@
     "totalPlaytimeCompact": "22j 14h",
     "avgGameDuration": "15m 11s",
     "longestGame": "2h 40m",
-    "winrate": "44%"
+    "winrate": "44%",
+    "totalPlaytimeHours": "542h"
   },
   "playtime": {
     "totalSec": 1952545,

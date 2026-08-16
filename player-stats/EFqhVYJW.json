@@ -1,8 +1,8 @@
 {
   "publicId": "EFqhVYJW",
   "username": "EFqhVYJW",
-  "computedAt": "2026-08-16T19:32:22.097Z",
-  "lastSyncedAt": "2026-08-16T19:32:21.064Z",
+  "computedAt": "2026-08-16T19:51:11.552Z",
+  "lastSyncedAt": "2026-08-16T19:51:10.357Z",
   "totalGames": 337,
   "careerWins": {
     "ffaCasual": 14,
@@ -12,6 +12,32 @@
   },
   "totalWins": 150,
   "points": 348,
+  "level": 3,
+  "levelProgress": 48,
+  "levelNextAt": 400,
+  "nextMilestones": {
+    "wins": {
+      "current": 150,
+      "target": 250
+    },
+    "playtime": {
+      "current": 64,
+      "target": 100
+    },
+    "maps": {
+      "current": 47,
+      "target": 50
+    }
+  },
+  "sparkline7d": [
+    13,
+    6,
+    1,
+    2,
+    7,
+    1,
+    11
+  ],
   "formatted": {
     "points": "348",
     "totalWins": "150",
@@ -20,7 +46,8 @@
     "totalPlaytimeCompact": "2j 16h",
     "avgGameDuration": "11m 32s",
     "longestGame": "2h 13m",
-    "winrate": "53%"
+    "winrate": "53%",
+    "totalPlaytimeHours": "64h"
   },
   "playtime": {
     "totalSec": 233320,

@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-16T19:32:22.716Z",
-  "lastSyncedAt": "2026-08-16T19:32:21.394Z",
-  "totalGames": 3032,
+  "computedAt": "2026-08-16T19:51:12.352Z",
+  "lastSyncedAt": "2026-08-16T19:51:10.737Z",
+  "totalGames": 3033,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 260,
@@ -12,19 +12,46 @@
   },
   "totalWins": 1200,
   "points": 6952,
+  "level": 69,
+  "levelProgress": 52,
+  "levelNextAt": 7000,
+  "nextMilestones": {
+    "wins": {
+      "current": 1200,
+      "target": 2000
+    },
+    "playtime": {
+      "current": 739,
+      "target": 1000
+    },
+    "maps": {
+      "current": 82,
+      "target": 100
+    }
+  },
+  "sparkline7d": [
+    7,
+    2,
+    16,
+    8,
+    3,
+    12,
+    4
+  ],
   "formatted": {
     "points": "6 952",
     "totalWins": "1 200",
-    "totalGames": "3 032",
-    "totalPlaytime": "30j 18h",
-    "totalPlaytimeCompact": "30j 18h",
-    "avgGameDuration": "14m 36s",
+    "totalGames": "3 033",
+    "totalPlaytime": "30j 19h",
+    "totalPlaytimeCompact": "30j 19h",
+    "avgGameDuration": "14m 37s",
     "longestGame": "9h 22m",
-    "winrate": "49%"
+    "winrate": "49%",
+    "totalPlaytimeHours": "739h"
   },
   "playtime": {
-    "totalSec": 2657588,
-    "avgGameSec": 876.5131926121372,
+    "totalSec": 2660712,
+    "avgGameSec": 877.2542037586549,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
@@ -39,8 +66,8 @@
         "wins": 260
       },
       "teamCasual": {
-        "games": 890,
-        "playtimeSec": 914861,
+        "games": 891,
+        "playtimeSec": 917985,
         "wins": 331
       },
       "teamRanked": {
@@ -1390,7 +1417,7 @@
       283,
       400,
       157,
-      246,
+      247,
       138,
       126,
       59
@@ -1402,7 +1429,7 @@
       386,
       360,
       523,
-      647
+      648
     ],
     "byDay": [
       {
@@ -1938,6 +1965,17 @@
   },
   "recentGames": [
     {
+      "gameId": "ELe3Fe21",
+      "start": "2026-08-16T18:41:25.259Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "incomplete",
+      "durationSeconds": 3124,
+      "totalPlayers": null,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
       "gameId": "ECpnRykU",
       "start": "2026-08-16T18:36:52.988Z",
       "map": "Australia",
@@ -2145,17 +2183,6 @@
       "totalPlayers": 49,
       "rankedType": "unranked",
       "category": "teamCasual"
-    },
-    {
-      "gameId": "y2o565T6",
-      "start": "2026-08-12T08:19:22.047Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 135,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }
