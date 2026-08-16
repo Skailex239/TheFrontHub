@@ -13618,6 +13618,29 @@
       "numPlayers": 63,
       "timestamp": "2026-08-16T11:05:03.059Z",
       "url": "https://openfront.io/game/xMicJfuM"
+    },
+    {
+      "id": "QfTWnuaJ",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "YAHUNEQUATREHILE",
+          "clientID": "9q8MbFoJ",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "JeanMarie",
+          "clientID": "pWuTphqg",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 985,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-16T12:00:04.320Z",
+      "url": "https://openfront.io/game/QfTWnuaJ"
     }
   ],
   "trios": [
@@ -64855,6 +64878,62 @@
       "numPlayers": 80,
       "timestamp": "2026-08-16T10:56:07.510Z",
       "url": "https://openfront.io/game/6rx9TZ7z"
+    },
+    {
+      "id": "EipfWKjd",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RobbertBobbert",
+          "clientID": "4ZN2hETc",
+          "clanTag": "CEO"
+        },
+        {
+          "username": "Ezio",
+          "clientID": "zrFFC18Z",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1178,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-16T11:41:28.256Z",
+      "url": "https://openfront.io/game/EipfWKjd"
+    },
+    {
+      "id": "G5DCgcjy",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kosmi",
+          "clientID": "JbdNw4sP",
+          "clanTag": "BRP"
+        },
+        {
+          "username": "SOUTH KOREA",
+          "clientID": "6nHmvTbQ",
+          "clanTag": null
+        },
+        {
+          "username": "OliwierG0",
+          "clientID": "HyH2w1MN",
+          "clanTag": "BRP"
+        },
+        {
+          "username": "donwiktorb",
+          "clientID": "yGeWtYSY",
+          "clanTag": "BRP"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1417,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-16T11:50:26.762Z",
+      "url": "https://openfront.io/game/G5DCgcjy"
     }
   ]
 }
