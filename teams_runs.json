@@ -36309,6 +36309,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T00:46:53.586Z",
       "url": "https://openfront.io/game/gRdU4urT"
+    },
+    {
+      "id": "5H6Zbh5q",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Missouri",
+          "clientID": "mUmngyRo",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "Ezbaze",
+          "clientID": "k7XBYTiN",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "I did it for love",
+          "clientID": "dVExxPGK",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 989,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-16T02:16:55.587Z",
+      "url": "https://openfront.io/game/5H6Zbh5q"
     }
   ],
   "quads": [
@@ -63191,6 +63219,29 @@
       "numPlayers": 26,
       "timestamp": "2026-08-16T01:31:47.287Z",
       "url": "https://openfront.io/game/o9Sc2F9t"
+    },
+    {
+      "id": "NMqVGXLT",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "CommieKaze",
+          "clientID": "ZWQPTiHv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonkey7",
+          "clientID": "rssyNMsh",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1616,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 46,
+      "timestamp": "2026-08-16T02:06:53.376Z",
+      "url": "https://openfront.io/game/NMqVGXLT"
     }
   ]
 }
