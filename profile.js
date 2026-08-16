@@ -403,113 +403,111 @@ async function loadStats(publicId) {
   const games = [];
   const stats = computeStats(games, playerData.stats || {});
 
-  // ── Week stats from dashboard_scores.json (official data) ──
-  let weekScore = 0, weekRank = "—", weekFFA = 0, weekTeam = 0, weekTotalPoints = 0;
-  try {
-    const scoresRes = await fetch("dashboard_scores.json.gz", { cache: "force-cache" });
-    let scoresData = null;
-    if (scoresRes.ok) {
-      const ds = new DecompressionStream("gzip");
-      scoresData = await new Response(scoresRes.body.pipeThrough(ds)).json();
-    } else {
-      const fallback = await fetch("dashboard_scores.json");
-      if (fallback.ok) scoresData = await fallback.json();
-    }
-    if (scoresData && scoresData.players) {
-      const entry = scoresData.players.find(p => p.publicId === publicId);
-      if (entry) {
-        weekFFA = (entry.weekly_ffa_casual || 0) + (entry.weekly_ffa_ranked || 0);
-        weekTeam = (entry.weekly_team_casual || 0) + (entry.weekly_team_ranked || 0);
-        weekScore = entry.weekly_points || 0;
-        weekTotalPoints = entry.points || 0;
-        // Compute rank: position in the sorted weekly leaderboard
-        const weeklySorted = [...scoresData.players].sort((a, b) => (b.weekly_points || 0) - (a.weekly_points || 0));
-        const rankIdx = weeklySorted.findIndex(p => p.publicId === publicId);
-        weekRank = rankIdx >= 0 ? rankIdx + 1 : "—";
+  // ── Render reward card + career stats + start games loading IMMEDIATELY ──
+  // Don't wait for dashboard_scores, ELO, or recent games — those are secondary.
+  renderRewardCodeCard(publicId);
+  renderCareerStats(playerData.stats || {}, publicId);
+  loadAllGamesForStats(publicId);
 
-        // Store for the chart
-        window._profileWeekData = {
-          ffa: weekFFA,
-          team: weekTeam,
-          total: weekScore,
-          rank: weekRank,
-          weekStart: scoresData.weekStart,
-          // Detailed breakdown for tooltip
-          ffaCasual: entry.weekly_ffa_casual || 0,
-          ffaRanked: entry.weekly_ffa_ranked || 0,
-          teamCasual: entry.weekly_team_casual || 0,
-          teamRanked: entry.weekly_team_ranked || 0,
-          allTimePoints: entry.points || 0,
-          allTimeFfa: entry.ffa_casual || 0,
-          allTimeTeam: entry.team_casual || 0,
-        };
+  // ── Week stats from dashboard_scores.json (official data) — non-blocking ──
+  (async () => {
+    let weekScore = 0, weekRank = "—", weekFFA = 0, weekTeam = 0, weekTotalPoints = 0;
+    try {
+      const scoresRes = await fetch("dashboard_scores.json.gz", { cache: "force-cache" });
+      let scoresData = null;
+      if (scoresRes.ok) {
+        const ds = new DecompressionStream("gzip");
+        scoresData = await new Response(scoresRes.body.pipeThrough(ds)).json();
+      } else {
+        const fallback = await fetch("dashboard_scores.json");
+        if (fallback.ok) scoresData = await fallback.json();
+      }
+      if (scoresData && scoresData.players) {
+        const entry = scoresData.players.find(p => p.publicId === publicId);
+        if (entry) {
+          weekFFA = (entry.weekly_ffa_casual || 0) + (entry.weekly_ffa_ranked || 0);
+          weekTeam = (entry.weekly_team_casual || 0) + (entry.weekly_team_ranked || 0);
+          weekScore = entry.weekly_points || 0;
+          weekTotalPoints = entry.points || 0;
+          // Compute rank: position in the sorted weekly leaderboard
+          const weeklySorted = [...scoresData.players].sort((a, b) => (b.weekly_points || 0) - (a.weekly_points || 0));
+          const rankIdx = weeklySorted.findIndex(p => p.publicId === publicId);
+          weekRank = rankIdx >= 0 ? rankIdx + 1 : "—";
+
+          // Store for the chart
+          window._profileWeekData = {
+            ffa: weekFFA,
+            team: weekTeam,
+            total: weekScore,
+            rank: weekRank,
+            weekStart: scoresData.weekStart,
+            // Detailed breakdown for tooltip
+            ffaCasual: entry.weekly_ffa_casual || 0,
+            ffaRanked: entry.weekly_ffa_ranked || 0,
+            teamCasual: entry.weekly_team_casual || 0,
+            teamRanked: entry.weekly_team_ranked || 0,
+            allTimePoints: entry.points || 0,
+            allTimeFfa: entry.ffa_casual || 0,
+            allTimeTeam: entry.team_casual || 0,
+          };
+        }
+      }
+    } catch (e) {
+      console.warn("[profile] Week stats load failed:", e.message);
+    }
+
+    // All-time score
+    const allTimeScore = stats.wins * 4 + (stats.total - stats.wins);
+
+    // Breakdown by mode
+    const breakdown = computeModeBreakdown(playerData.stats || {});
+    const detail = [];
+    if (breakdown.FFA) detail.push("FFA: " + breakdown.FFA);
+    if (breakdown.Team) detail.push("Team: " + breakdown.Team);
+    if (breakdown.Duos) detail.push("Duos: " + breakdown.Duos);
+    if (breakdown.Trios) detail.push("Trios: " + breakdown.Trios);
+    if (breakdown.Quads) detail.push("Quads: " + breakdown.Quads);
+    const detailStr = detail.length ? " (" + detail.join(", ") + ")" : "";
+
+    setText("stat-week-rank", `This week rank: #${weekRank}`);
+    setText("stat-week-score", `This week score: ${weekScore} pts (FFA: ${weekFFA} · Team: ${weekTeam})`);
+    setText("stat-alltime", `All-time score: ${weekTotalPoints || allTimeScore} (${stats.wins} wins${detailStr})`);
+
+    // ELO from ranked.json (1v1)
+    const ranked1v1 = await eloPromise;
+    const eloLine = document.getElementById("stat-elo-line");
+    if (eloLine) {
+      if (ranked1v1 && ranked1v1.elo != null) {
+        eloLine.textContent = `ELO 1v1: ${ranked1v1.elo} (Peak: ${ranked1v1.peakElo ?? '—'}) — Rank #${ranked1v1.rank}`;
+        eloLine.style.display = "list-item";
+      } else {
+        eloLine.style.display = "none";
       }
     }
-  } catch (e) {
-    console.warn("[profile] Week stats load failed:", e.message);
-  }
 
-  // All-time score
-  const allTimeScore = stats.wins * 4 + (stats.total - stats.wins);
-
-  // Breakdown by mode
-  const breakdown = computeModeBreakdown(playerData.stats || {});
-  const detail = [];
-  if (breakdown.FFA) detail.push("FFA: " + breakdown.FFA);
-  if (breakdown.Team) detail.push("Team: " + breakdown.Team);
-  if (breakdown.Duos) detail.push("Duos: " + breakdown.Duos);
-  if (breakdown.Trios) detail.push("Trios: " + breakdown.Trios);
-  if (breakdown.Quads) detail.push("Quads: " + breakdown.Quads);
-  const detailStr = detail.length ? " (" + detail.join(", ") + ")" : "";
-
-  setText("stat-week-rank", `This week rank: #${weekRank}`);
-  setText("stat-week-score", `This week score: ${weekScore} pts (FFA: ${weekFFA} · Team: ${weekTeam})`);
-  setText("stat-alltime", `All-time score: ${weekTotalPoints || allTimeScore} (${stats.wins} wins${detailStr})`);
-
-  // ELO from ranked.json (1v1)
-  const ranked1v1 = await eloPromise;
-  const eloLine = document.getElementById("stat-elo-line");
-  if (eloLine) {
-    if (ranked1v1 && ranked1v1.elo != null) {
-      eloLine.textContent = `ELO 1v1: ${ranked1v1.elo} (Peak: ${ranked1v1.peakElo ?? '—'}) — Rank #${ranked1v1.rank}`;
-      eloLine.style.display = "list-item";
-    } else {
-      eloLine.style.display = "none";
+    // ELO 2v2 from ranked.json
+    const ranked2v2 = await getRankedEntry(publicId, "2v2");
+    const elo2v2Line = document.getElementById("stat-elo-2v2-line");
+    if (elo2v2Line) {
+      if (ranked2v2 && ranked2v2.elo != null) {
+        elo2v2Line.textContent = `ELO 2v2: ${ranked2v2.elo} (Peak: ${ranked2v2.peakElo ?? '—'}) — Rank #${ranked2v2.rank}`;
+        elo2v2Line.style.display = "list-item";
+      } else {
+        elo2v2Line.style.display = "none";
+      }
     }
-  }
-  
-  // ELO 2v2 from ranked.json
-  const ranked2v2 = await getRankedEntry(publicId, "2v2");
-  const elo2v2Line = document.getElementById("stat-elo-2v2-line");
-  if (elo2v2Line) {
-    if (ranked2v2 && ranked2v2.elo != null) {
-      elo2v2Line.textContent = `ELO 2v2: ${ranked2v2.elo} (Peak: ${ranked2v2.peakElo ?? '—'}) — Rank #${ranked2v2.rank}`;
-      elo2v2Line.style.display = "list-item";
-    } else {
-      elo2v2Line.style.display = "none";
+
+    // Recent games — fetched from /public/player/{id}/games (separate endpoint).
+    try {
+      const recentGames = await recentGamesPromise;
+      renderRecentGames(recentGames, publicId);
+      renderWeeklyChart();
+    } catch (e) {
+      console.error("[profile] recent games fetch failed:", e);
+      const c = document.getElementById("profile-recent-games");
+      if (c) c.innerHTML = `<div class="pf-empty">Impossible de charger les parties récentes.</div>`;
     }
-  }
-
-  // Recent games — fetched from /public/player/{id}/games (separate endpoint).
-  // The result field (victory/defeat) is already included, no per-game fetch needed.
-  try {
-    const recentGames = await recentGamesPromise;
-    renderRecentGames(recentGames, publicId);
-    renderWeeklyChart();
-  } catch (e) {
-    console.error("[profile] recent games fetch failed:", e);
-    const c = document.getElementById("profile-recent-games");
-    if (c) c.innerHTML = `<div class="pf-empty">Impossible de charger les parties récentes.</div>`;
-  }
-
-  // Reward code card (skins)
-  renderRewardCodeCard(publicId);
-
-  // Career stats overview + charts
-  renderCareerStats(playerData.stats || {}, publicId);
-
-  // Playtime + map stats + activity (needs ALL games, paginated)
-  loadAllGamesForStats(publicId);
+  })();
 }
 
 /**
@@ -1524,26 +1522,59 @@ function renderWinsChart(careerWins) {
 async function loadAllGamesForStats(publicId) {
   if (_allGamesLoading) return;
   _allGamesLoading = true;
-  _allGamesCache = null;
 
   const mount = document.getElementById("playtime-section-mount");
+  const CACHE_KEY = `tfs_games_v1_${publicId}`;
+  const CACHE_TTL = 60 * 60 * 1000; // 1 hour
+
+  // 1. Check localStorage cache first — instant for returning visitors
+  try {
+    const cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (parsed && parsed.fetchedAt && Date.now() - parsed.fetchedAt < CACHE_TTL && Array.isArray(parsed.games)) {
+        _allGamesCache = parsed.games;
+        if (mount) mount.innerHTML = "";
+        renderPlaytimeStats(parsed.games);
+        renderActivityStats(parsed.games);
+        renderMapStatsTable(parsed.games);
+        renderAchievements(parsed.games);
+        renderRecentGamesFull(parsed.games);
+        _allGamesLoading = false;
+        return;
+      }
+    }
+  } catch { /* ignore cache read errors */ }
+
+  // 2. Show skeleton loading with skip button
   if (mount) {
     mount.innerHTML = `
       <div class="games-loading-banner">
         <div class="games-loading-spinner"></div>
-        <div>
-          <div class="games-loading-text">Chargement de l'historique des parties…</div>
+        <div style="flex:1">
+          <div class="games-loading-text">Chargement du temps de jeu et des stats…</div>
           <div class="games-loading-sub" id="games-load-count">0 parties chargées</div>
         </div>
+        <button id="games-skip-btn" style="padding:6px 12px;background:transparent;border:1px solid var(--border,#E5E7EB);border-radius:6px;font-size:11px;font-weight:600;color:var(--text2,#6B7280);cursor:pointer;font-family:var(--f,inherit)">Skip</button>
       </div>
     `;
+    const skipBtn = document.getElementById("games-skip-btn");
+    if (skipBtn) {
+      skipBtn.addEventListener("click", () => {
+        _allGamesLoading = false;
+        if (mount) mount.innerHTML = `<div style="padding:14px;background:var(--bg,#FAFAFA);border:1px solid var(--border,#F3F4F6);border-radius:10px;font-size:13px;color:var(--text3,#9CA3AF);text-align:center">Stats détaillées ignorées. Recharge la page pour réessayer.</div>`;
+      });
+    }
   }
 
   try {
     const allGames = [];
     let cursor = null;
-    // Hard cap 500 pages = 5000 games
-    for (let page = 0; page < 500; page++) {
+    // Cap at 30 pages = 300 games (plenty for stats, 17x faster than 500 pages)
+    const MAX_PAGES = 30;
+    let lastRenderAt = 0;
+
+    for (let page = 0; page < MAX_PAGES; page++) {
       let path = `/public/player/${encodeURIComponent(publicId)}/games`;
       if (cursor) path += `?cursor=${encodeURIComponent(cursor)}`;
       let data;
@@ -1557,14 +1588,28 @@ async function loadAllGamesForStats(publicId) {
       if (results.length === 0) break;
       for (const g of results) allGames.push(g);
       const countEl = document.getElementById("games-load-count");
-      if (countEl) countEl.textContent = `${allGames.length} parties chargées`;
+      if (countEl) countEl.textContent = `${allGames.length} parties chargées${page >= MAX_PAGES - 1 ? " (limite)" : ""}`;
       if (!data.nextCursor) break;
       cursor = data.nextCursor;
+
+      // Incremental render every 5 pages — user sees progress
+      if (page > 0 && page % 5 === 0 && Date.now() - lastRenderAt > 1000) {
+        renderPlaytimeStats(allGames);
+        renderActivityStats(allGames);
+        renderMapStatsTable(allGames);
+        renderAchievements(allGames);
+        renderRecentGamesFull(allGames);
+        lastRenderAt = Date.now();
+      }
     }
     _allGamesCache = allGames;
+    // Save to cache
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ games: allGames, fetchedAt: Date.now() }));
+    } catch { /* quota exceeded */ }
     // Hide loading banner
     if (mount) mount.innerHTML = "";
-    // Render all stats sections
+    // Final render of all stats sections
     renderPlaytimeStats(allGames);
     renderActivityStats(allGames);
     renderMapStatsTable(allGames);
