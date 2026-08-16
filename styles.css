@@ -1872,6 +1872,12 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
    le vert dans le fond de la ligne.
    ════════════════════════════════════════════════════════════════ */
 
+/* ════════════════════════════════════════════════════════════════
+   PLAYER OVERLAY (plaque nominative style Discord)
+   L'overlay part de la droite et couvre jusqu'au milieu de la ligne.
+   Image: lave pixel art orange (overlay-v2-alpha.webp)
+   ════════════════════════════════════════════════════════════════ */
+
 /* Speedruns leaderboard — .run-player.has-overlay */
 .run-player.has-overlay {
   position: relative;
@@ -1883,12 +1889,12 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
   right: 0;
   top: 0;
   bottom: 0;
-  width: 48px;
+  width: 50%;
   background-image: var(--overlay-img);
-  background-size: contain;
+  background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
-  opacity: 0.6;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
 }
@@ -1900,39 +1906,36 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
 /* Global leaderboard — .global-player.has-overlay (span inside td) */
 .global-player.has-overlay {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding-right: 40px;
+  display: inline-block;
+  padding-right: 0;
 }
 .global-player.has-overlay::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 24px;
+  top: 0;
+  bottom: 0;
+  width: 120px;
   background-image: var(--overlay-img);
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: right center;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 1;
   pointer-events: none;
+  z-index: 0;
+  border-radius: 0 6px 6px 0;
+}
+.global-player.has-overlay > * {
+  position: relative;
+  z-index: 1;
 }
 
-/* Mobile: smaller overlay */
+/* Mobile: slightly smaller but still visible */
 @media (max-width: 768px) {
   .run-player.has-overlay::after {
-    width: 28px;
-    opacity: 0.4;
+    width: 60%;
   }
   .global-player.has-overlay::after {
-    width: 24px;
-    height: 18px;
-    opacity: 0.5;
-  }
-  .global-player.has-overlay {
-    padding-right: 30px;
+    width: 80px;
   }
 }

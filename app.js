@@ -1424,7 +1424,7 @@ function selectMap(name){
 // Returns overlay image path if the player has one, null otherwise.
 // Currently hardcoded for Skailex (testing). Later: drive from Firestore.
 const PLAYER_OVERLAYS = [
-  { match: /skailex/i, image: "overlay-alpha.webp" },
+  { match: /skailex/i, image: "overlay-v2-alpha.webp" },
 ];
 function getPlayerOverlay(username) {
   if (!username) return null;
