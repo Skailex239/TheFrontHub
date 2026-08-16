@@ -13449,6 +13449,42 @@
       "numPlayers": 40,
       "timestamp": "2026-08-16T06:21:20.868Z",
       "url": "https://openfront.io/game/jgdon9oy"
+    },
+    {
+      "id": "FVnYcYYm",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Grandma Gary",
+          "clientID": "4obNfRHQ",
+          "clanTag": "BRAVE"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-16T06:38:22.315Z",
+      "url": "https://openfront.io/game/FVnYcYYm"
+    },
+    {
+      "id": "cTFC9M2f",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Communism",
+          "clientID": "eMZHRUhs",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 6232,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "timestamp": "2026-08-16T05:08:37.085Z",
+      "url": "https://openfront.io/game/cTFC9M2f"
     }
   ],
   "trios": [
@@ -63861,6 +63897,29 @@
       "numPlayers": 52,
       "timestamp": "2026-08-16T05:53:51.249Z",
       "url": "https://openfront.io/game/djsbHKEn"
+    },
+    {
+      "id": "4vPLf5qv",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "check out the release notes",
+          "clientID": "NBuNPgHN",
+          "clanTag": "DD"
+        },
+        {
+          "username": "Spiceking",
+          "clientID": "7Fan74CW",
+          "clanTag": "DD"
+        }
+      ],
+      "map": "World",
+      "duration_s": 2267,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-16T06:16:38.109Z",
+      "url": "https://openfront.io/game/4vPLf5qv"
     }
   ]
 }
