@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-16T16:43:29.907Z",
-  "lastSyncedAt": "2026-08-16T16:43:27.052Z",
-  "totalGames": 2142,
+  "computedAt": "2026-08-16T16:59:42.743Z",
+  "lastSyncedAt": "2026-08-16T16:59:40.935Z",
+  "totalGames": 2143,
   "careerWins": {
     "ffaCasual": 371,
     "ffaRanked": 325,
@@ -15,7 +15,7 @@
   "formatted": {
     "points": "4 321",
     "totalWins": "794",
-    "totalGames": "2 142",
+    "totalGames": "2 143",
     "totalPlaytime": "22j 14h",
     "totalPlaytimeCompact": "22j 14h",
     "avgGameDuration": "15m 11s",
@@ -23,19 +23,19 @@
     "winrate": "44%"
   },
   "playtime": {
-    "totalSec": 1951673,
-    "avgGameSec": 911.1451914098973,
+    "totalSec": 1952545,
+    "avgGameSec": 911.1269248716752,
     "longestSec": 9640,
     "shortestSec": 1,
     "byVisibility": {
-      "public": 2142,
+      "public": 2143,
       "private": 0,
       "singleplayer": 0
     },
     "byCategory": {
       "ffaCasual": {
-        "games": 1370,
-        "playtimeSec": 1580551,
+        "games": 1371,
+        "playtimeSec": 1581423,
         "wins": 371
       },
       "ffaRanked": {
@@ -57,7 +57,7 @@
   },
   "results": {
     "victory": 794,
-    "defeat": 1027,
+    "defeat": 1028,
     "incomplete": 321,
     "other": 0
   },
@@ -250,6 +250,23 @@
       }
     },
     {
+      "map": "Pluto",
+      "count": 31,
+      "wins": 12,
+      "losses": 19,
+      "incompletes": 0,
+      "playtimeSec": 38381,
+      "avgDuration": 1238.0967741935483,
+      "winRate": 0.3870967741935484,
+      "lastPlayed": 1786898127973,
+      "formatted": {
+        "playtime": "10h 39m",
+        "avgDuration": "20m",
+        "winRate": "39%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
       "map": "The Box",
       "count": 30,
       "wins": 3,
@@ -264,23 +281,6 @@
         "avgDuration": "16m",
         "winRate": "17%",
         "lastPlayed": "14/08/26"
-      }
-    },
-    {
-      "map": "Pluto",
-      "count": 30,
-      "wins": 12,
-      "losses": 18,
-      "incompletes": 0,
-      "playtimeSec": 37509,
-      "avgDuration": 1250.3,
-      "winRate": 0.4,
-      "lastPlayed": 1785175369799,
-      "formatted": {
-        "playtime": "10h 25m",
-        "avgDuration": "20m",
-        "winRate": "40%",
-        "lastPlayed": "27/07/26"
       }
     },
     {
@@ -1715,7 +1715,7 @@
       143,
       136,
       199,
-      194,
+      195,
       222,
       190,
       148,
@@ -1729,7 +1729,7 @@
       325,
       346,
       364,
-      320
+      321
     ],
     "byDay": [
       {
@@ -1844,8 +1844,8 @@
       },
       {
         "date": "16/08/2026",
-        "count": 8,
-        "playtimeSec": 5424
+        "count": 9,
+        "playtimeSec": 6296
       },
       {
         "date": "17/03/2026",
@@ -2188,7 +2188,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 2,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2264,6 +2264,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "j7KJcasr",
+      "start": "2026-08-16T16:35:27.973Z",
+      "map": "Pluto",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 872,
+      "totalPlayers": 48,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "Y2rWP49j",
       "start": "2026-08-16T13:29:52.174Z",
@@ -2470,17 +2481,6 @@
       "result": "defeat",
       "durationSeconds": 1532,
       "totalPlayers": 55,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "jMQa9W6N",
-      "start": "2026-08-15T13:36:13.168Z",
-      "map": "South America",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1533,
-      "totalPlayers": 58,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }

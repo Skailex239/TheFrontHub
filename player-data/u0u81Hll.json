@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-16T16:43:27.052Z",
+  "lastSyncedAt": "2026-08-16T16:59:40.935Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 2142,
-  "newGamesThisSync": 0,
+  "totalGames": 2143,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "j7KJcasr",
+      "start": "2026-08-16T16:35:27.973Z",
+      "durationSeconds": 872,
+      "map": "Pluto",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 48,
+      "username": "_0_0_0_0_0_0_0_0",
+      "clanTag": null
+    },
     {
       "gameId": "Y2rWP49j",
       "start": "2026-08-16T13:29:52.174Z",
