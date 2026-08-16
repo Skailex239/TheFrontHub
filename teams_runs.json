@@ -37772,6 +37772,62 @@
       "numPlayers": 114,
       "timestamp": "2026-08-16T16:26:03.411Z",
       "url": "https://openfront.io/game/Z68iuxmP"
+    },
+    {
+      "id": "iMCBJhtF",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Captain",
+          "clientID": "cJEN1nEX",
+          "clanTag": "UN"
+        },
+        {
+          "username": "wack",
+          "clientID": "irwvNyDL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Major",
+          "clientID": "CAB7tVAn",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 989,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-16T17:03:43.249Z",
+      "url": "https://openfront.io/game/iMCBJhtF"
+    },
+    {
+      "id": "58cyrFWN",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "mitochondria",
+          "clientID": "6NYfERXf",
+          "clanTag": null
+        },
+        {
+          "username": "MAGAKYS",
+          "clientID": "zT8vrCK5",
+          "clanTag": null
+        },
+        {
+          "username": "LEPEN",
+          "clientID": "V3HWDCZa",
+          "clanTag": "EU4"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1381,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-16T16:48:53.851Z",
+      "url": "https://openfront.io/game/58cyrFWN"
     }
   ],
   "quads": [
@@ -66081,6 +66137,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-16T16:30:17.669Z",
       "url": "https://openfront.io/game/ZYd5C5ux"
+    },
+    {
+      "id": "BtjP2oM3",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "TRIPODE",
+          "clientID": "SKXxfRWg",
+          "clanTag": null
+        },
+        {
+          "username": "AnonnaTua",
+          "clientID": "GxGooDUk",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1164,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-16T16:57:42.383Z",
+      "url": "https://openfront.io/game/BtjP2oM3"
     }
   ]
 }
