@@ -405,7 +405,11 @@ async function loadStats(publicId) {
 
   // ── Render reward card + career stats + start games loading IMMEDIATELY ──
   // Don't wait for dashboard_scores, ELO, or recent games — those are secondary.
-  renderRewardCodeCard(publicId);
+  // Only show reward code card on OWN profile (not when viewing someone else's public profile)
+  const isOwnProfile = !viewingPublicId || (currentProfile && currentProfile.publicId === publicId);
+  if (isOwnProfile) {
+    renderRewardCodeCard(publicId);
+  }
   renderCareerStats(playerData.stats || {}, publicId);
   loadAllGamesForStats(publicId);
 
@@ -1428,11 +1432,11 @@ function renderCareerStats(statsTree, publicId) {
   const r2Total = ranked2v2 + ranked2v2Losses;
 
   const tiles = [
-    { label: "Points", value: formatPoints(points), icon: "⭐", color: "#c25700", bg: "rgba(255,122,0,0.12)" },
-    { label: "Wins FFA Casual", value: formatPoints(careerWins.ffaCasual), icon: "⚔️", color: "#ff7a00", bg: "rgba(255,122,0,0.12)" },
-    { label: "Wins Team Casual", value: formatPoints(careerWins.teamCasual), icon: "🛡️", color: "#10b981", bg: "rgba(16,185,129,0.12)" },
-    { label: "Wins Classé 1v1", value: formatPoints(ranked1v1), sub: r1Total > 0 ? `${formatPct(ranked1v1 / r1Total)} (${r1Total} games)` : "—", icon: "🏆", color: "#d97706", bg: "rgba(217,119,6,0.12)" },
-    { label: "Wins Classé 2v2", value: formatPoints(ranked2v2), sub: r2Total > 0 ? `${formatPct(ranked2v2 / r2Total)} (${r2Total} games)` : "—", icon: "🎖️", color: "#a855f7", bg: "rgba(168,85,247,0.12)" },
+    { label: "Points", value: formatPoints(points), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', color: "#c25700", bg: "rgba(255,122,0,0.12)" },
+    { label: "Wins FFA Casual", value: formatPoints(careerWins.ffaCasual), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/><path d="M16 16l4 4"/><path d="M19 21l2-2"/></svg>', color: "#ff7a00", bg: "rgba(255,122,0,0.12)" },
+    { label: "Wins Team Casual", value: formatPoints(careerWins.teamCasual), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', color: "#10b981", bg: "rgba(16,185,129,0.12)" },
+    { label: "Wins Classé 1v1", value: formatPoints(ranked1v1), sub: r1Total > 0 ? `${formatPct(ranked1v1 / r1Total)} (${r1Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>', color: "#d97706", bg: "rgba(217,119,6,0.12)" },
+    { label: "Wins Classé 2v2", value: formatPoints(ranked2v2), sub: r2Total > 0 ? `${formatPct(ranked2v2 / r2Total)} (${r2Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', color: "#a855f7", bg: "rgba(168,85,247,0.12)" },
   ];
 
   container.innerHTML = `
@@ -1760,15 +1764,15 @@ function renderPlaytimeStats(games) {
       </div>
       <div class="stats-grid" style="margin-top:14px">
         <div class="stat-tile">
-          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6">⏱️</span><span class="stat-tile-label">Durée moyenne</span></div>
+          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="stat-tile-label">Durée moyenne</span></div>
           <div class="stat-tile-value">${formatDuration(pt.avgGameDurationSec)}</div>
         </div>
         <div class="stat-tile">
-          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444">📈</span><span class="stat-tile-label">Partie la plus longue</span></div>
+          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><span class="stat-tile-label">Partie la plus longue</span></div>
           <div class="stat-tile-value">${formatDuration(pt.longestGameSec)}</div>
         </div>
         <div class="stat-tile">
-          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981">🎯</span><span class="stat-tile-label">Winrate global</span></div>
+          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div>
           <div class="stat-tile-value">${formatPct(pt.results.victory / Math.max(1, pt.results.victory + pt.results.defeat))}</div>
           <div class="stat-tile-sub">${pt.results.victory}V / ${pt.results.defeat}D / ${pt.results.incomplete} incomplètes</div>
         </div>
@@ -1856,12 +1860,6 @@ function renderActivityStats(games) {
         </div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px">
-        <div class="activity-chart-card">
-          <h3 class="activity-chart-title">Activité par heure</h3>
-          <p class="activity-chart-subtitle">Heure de Paris</p>
-          <div class="activity-bars">${hourBars}</div>
-          <p class="activity-chart-footer">Heure de pointe: <strong>${peakHour}h</strong> (${maxHour} parties)</p>
-        </div>
         <div class="activity-chart-card">
           <h3 class="activity-chart-title">Activité par jour</h3>
           <p class="activity-chart-subtitle">Répartition par jour de la semaine</p>
@@ -2027,16 +2025,16 @@ function renderAchievements(games) {
   const playtimeHours = pt.totalPlaytimeSec / 3600;
 
   const achievements = [
-    { id: "first-win", name: "Première victoire", desc: "Remporte ta 1ère partie", icon: "🏆", unlocked: totalW >= 1 },
-    { id: "ten-wins", name: "Décathlon", desc: "Remporte 10 parties", icon: "⭐", unlocked: totalW >= 10, progress: totalW >= 10 ? null : { current: totalW, target: 10 } },
-    { id: "hundred-wins", name: "Centurion", desc: "Remporte 100 parties", icon: "🎖️", unlocked: totalW >= 100, progress: totalW >= 100 ? null : { current: totalW, target: 100 } },
-    { id: "marathon", name: "Marathonien", desc: "Joue plus de 24h au total", icon: "⏱️", unlocked: playtimeHours >= 24, progress: playtimeHours >= 24 ? null : { current: Math.floor(playtimeHours), target: 24 } },
-    { id: "weekend", name: "Assidu", desc: "Joue 7 jours différents", icon: "📅", unlocked: activeDays >= 7, progress: activeDays >= 7 ? null : { current: activeDays, target: 7 } },
-    { id: "cartographer", name: "Cartographe", desc: "Joue 10 cartes différentes", icon: "🗺️", unlocked: distinctMaps >= 10, progress: distinctMaps >= 10 ? null : { current: distinctMaps, target: 10 } },
-    { id: "streak5", name: "En feu", desc: "Fais une série de 5 victoires", icon: "🔥", unlocked: pt.bestStreak >= 5, progress: pt.bestStreak >= 5 ? null : { current: pt.bestStreak, target: 5 } },
-    { id: "streak10", name: "Intouchable", desc: "Fais une série de 10 victoires", icon: "⚡", unlocked: pt.bestStreak >= 10, progress: pt.bestStreak >= 10 ? null : { current: pt.bestStreak, target: 10 } },
-    { id: "polyvalent", name: "Polyvalent", desc: "Gagne dans les 4 catégories", icon: "🎖️", unlocked: careerWins.ffaCasual > 0 && careerWins.ffaRanked > 0 && careerWins.teamCasual > 0 && careerWins.teamRanked > 0 },
-    { id: "night-owl", name: "Oiseau de nuit", desc: "Joue après minuit (0h-4h)", icon: "🌙", unlocked: pt.byHour.slice(0, 4).some((c) => c > 0) },
+    { id: "first-win", name: "Première victoire", desc: "Remporte ta 1ère partie", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>', unlocked: totalW >= 1 },
+    { id: "ten-wins", name: "Décathlon", desc: "Remporte 10 parties", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', unlocked: totalW >= 10, progress: totalW >= 10 ? null : { current: totalW, target: 10 } },
+    { id: "hundred-wins", name: "Centurion", desc: "Remporte 100 parties", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', unlocked: totalW >= 100, progress: totalW >= 100 ? null : { current: totalW, target: 100 } },
+    { id: "marathon", name: "Marathonien", desc: "Joue plus de 24h au total", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>', unlocked: playtimeHours >= 24, progress: playtimeHours >= 24 ? null : { current: Math.floor(playtimeHours), target: 24 } },
+    { id: "weekend", name: "Assidu", desc: "Joue 7 jours différents", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>', unlocked: activeDays >= 7, progress: activeDays >= 7 ? null : { current: activeDays, target: 7 } },
+    { id: "cartographer", name: "Cartographe", desc: "Joue 10 cartes différentes", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>', unlocked: distinctMaps >= 10, progress: distinctMaps >= 10 ? null : { current: distinctMaps, target: 10 } },
+    { id: "streak5", name: "En feu", desc: "Fais une série de 5 victoires", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>', unlocked: pt.bestStreak >= 5, progress: pt.bestStreak >= 5 ? null : { current: pt.bestStreak, target: 5 } },
+    { id: "streak10", name: "Intouchable", desc: "Fais une série de 10 victoires", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>', unlocked: pt.bestStreak >= 10, progress: pt.bestStreak >= 10 ? null : { current: pt.bestStreak, target: 10 } },
+    { id: "polyvalent", name: "Polyvalent", desc: "Gagne dans les 4 catégories", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', unlocked: careerWins.ffaCasual > 0 && careerWins.ffaRanked > 0 && careerWins.teamCasual > 0 && careerWins.teamRanked > 0 },
+    { id: "night-owl", name: "Oiseau de nuit", desc: "Joue après minuit (0h-4h)", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>', unlocked: pt.byHour.slice(0, 4).some((c) => c > 0) },
   ];
 
   const unlockedCount = achievements.filter((a) => a.unlocked).length;
@@ -2054,12 +2052,12 @@ function renderAchievements(games) {
       </div>
       <div class="streak-cards">
         <div class="streak-card ${pt.currentStreak > 0 ? 'active' : ''}">
-          <div style="font-size:22px;margin-bottom:4px">🔥</div>
+          <div style="font-size:22px;margin-bottom:4px;color:#ff7a00"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
           <div class="streak-card-value">${pt.currentStreak}</div>
           <div class="streak-card-label">Série actuelle</div>
         </div>
         <div class="streak-card">
-          <div style="font-size:22px;margin-bottom:4px">🏆</div>
+          <div style="font-size:22px;margin-bottom:4px;color:#d97706"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
           <div class="streak-card-value" style="color:#d97706">${pt.bestStreak}</div>
           <div class="streak-card-label">Meilleure série</div>
         </div>
@@ -2226,9 +2224,9 @@ function renderPrecomputedStats(stats, mount) {
       </div>
     </div>
     <div class="stats-grid" style="margin-top:14px">
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6">⏱️</span><span class="stat-tile-label">Durée moyenne</span></div><div class="stat-tile-value">${stats.formatted.avgGameDuration}</div></div>
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444">📈</span><span class="stat-tile-label">Partie la plus longue</span></div><div class="stat-tile-value">${stats.formatted.longestGame}</div></div>
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981">🎯</span><span class="stat-tile-label">Winrate global</span></div><div class="stat-tile-value">${stats.formatted.winrate}</div><div class="stat-tile-sub">${stats.results.victory}V / ${stats.results.defeat}D / ${stats.results.incomplete} incomplètes</div></div>
+      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="stat-tile-label">Durée moyenne</span></div><div class="stat-tile-value">${stats.formatted.avgGameDuration}</div></div>
+      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><span class="stat-tile-label">Partie la plus longue</span></div><div class="stat-tile-value">${stats.formatted.longestGame}</div></div>
+      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div><div class="stat-tile-value">${stats.formatted.winrate}</div><div class="stat-tile-sub">${stats.results.victory}V / ${stats.results.defeat}D / ${stats.results.incomplete} incomplètes</div></div>
     </div>
   `;
   mount.appendChild(playtimeSection);
@@ -2247,12 +2245,6 @@ function renderPrecomputedStats(stats, mount) {
       <div><h2>Activité</h2><p>Quand le joueur joue le plus</p></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px">
-      <div class="activity-chart-card">
-        <h3 class="activity-chart-title">Activité par heure</h3>
-        <p class="activity-chart-subtitle">Heure de Paris</p>
-        <div class="activity-bars">${act.byHour.map((count, hour) => { const h = Math.max(1, (count / maxHour) * 100); return `<div class="activity-bar-row" title="${hour}h — ${count} parties"><div class="activity-bars-row" style="height:80px;align-items:flex-end"><div class="activity-bar" style="height:${h}%;width:100%"></div></div><div class="activity-bar-label">${hour % 3 === 0 ? hour + 'h' : ''}</div></div>`; }).join("")}</div>
-        <p class="activity-chart-footer">Heure de pointe: <strong>${act.peakHour}h</strong> (${maxHour} parties)</p>
-      </div>
       <div class="activity-chart-card">
         <h3 class="activity-chart-title">Activité par jour</h3>
         <p class="activity-chart-subtitle">Répartition par jour de la semaine</p>
@@ -2333,13 +2325,13 @@ function renderPrecomputedStats(stats, mount) {
       <div><h2>Succès & séries</h2><p>Récompenses débloquées et séries de victoires</p></div>
     </div>
     <div class="streak-cards">
-      <div class="streak-card ${stats.streaks.current > 0 ? 'active' : ''}"><div style="font-size:22px;margin-bottom:4px">🔥</div><div class="streak-card-value">${stats.streaks.current}</div><div class="streak-card-label">Série actuelle</div></div>
-      <div class="streak-card"><div style="font-size:22px;margin-bottom:4px">🏆</div><div class="streak-card-value" style="color:#d97706">${stats.streaks.best}</div><div class="streak-card-label">Meilleure série</div></div>
+      <div class="streak-card ${stats.streaks.current > 0 ? 'active' : ''}"><div style="font-size:22px;margin-bottom:4px;color:#ff7a00"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div class="streak-card-value">${stats.streaks.current}</div><div class="streak-card-label">Série actuelle</div></div>
+      <div class="streak-card"><div style="font-size:22px;margin-bottom:4px;color:#d97706"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="streak-card-value" style="color:#d97706">${stats.streaks.best}</div><div class="streak-card-label">Meilleure série</div></div>
     </div>
     <div class="chart-card">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h3 style="margin:0;font-size:14px;font-weight:700">Succès</h3><span style="font-size:12px;color:var(--text3)">${ach.unlockedCount}/${ach.list.length} débloqués</span></div>
       <div class="achievements-grid">
-        ${ach.list.map((a) => `<div class="achievement-card ${a.unlocked ? 'unlocked' : ''}">${a.unlocked ? `<div class="achievement-icon">🏆</div>` : `<div class="achievement-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>`}<div class="achievement-name">${esc(a.name)}</div><div class="achievement-desc">${esc(a.desc)}</div>${a.progress && !a.unlocked ? `<div class="achievement-progress">${a.progress.current}/${a.progress.target}</div>` : ''}</div>`).join("")}
+        ${ach.list.map((a) => `<div class="achievement-card ${a.unlocked ? 'unlocked' : ''}">${a.unlocked ? `<div class="achievement-icon">${a.icon}</div>` : `<div class="achievement-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>`}<div class="achievement-name">${esc(a.name)}</div><div class="achievement-desc">${esc(a.desc)}</div>${a.progress && !a.unlocked ? `<div class="achievement-progress">${a.progress.current}/${a.progress.target}</div>` : ''}</div>`).join("")}
       </div>
     </div>
   `;
