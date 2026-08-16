@@ -13838,6 +13838,29 @@
       "numPlayers": 94,
       "timestamp": "2026-08-16T16:29:24.624Z",
       "url": "https://openfront.io/game/jr62BZkt"
+    },
+    {
+      "id": "R9AEP6Nw",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "bchot",
+          "clientID": "poyssVyt",
+          "clanTag": null
+        },
+        {
+          "username": "ezclap",
+          "clientID": "RgpraTnA",
+          "clanTag": "NHAND"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1307,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-16T16:42:55.451Z",
+      "url": "https://openfront.io/game/R9AEP6Nw"
     }
   ],
   "trios": [
@@ -66030,6 +66053,34 @@
       "numPlayers": 36,
       "timestamp": "2026-08-16T16:22:19.197Z",
       "url": "https://openfront.io/game/ffHSzJd3"
+    },
+    {
+      "id": "ZYd5C5ux",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Him",
+          "clientID": "FriUk3s5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonWindmill3",
+          "clientID": "RT8Q7Z5v",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScepter3",
+          "clientID": "3W3nSA9r",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 2374,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-16T16:30:17.669Z",
+      "url": "https://openfront.io/game/ZYd5C5ux"
     }
   ]
 }
