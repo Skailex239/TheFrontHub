@@ -28,7 +28,7 @@ import {
 } from "./reward-codes.js?v=1";
 import {
   computePlaytimeStats, extractCareerWins, totalWins, pointsFor,
-  formatDuration, formatDurationCompact, formatPct, formatFrenchDate,
+  formatDurationCompact, formatPct, formatFrenchDate,
   formatPoints, classifyGame,
 } from "./playtime-stats.js?v=1";
 
