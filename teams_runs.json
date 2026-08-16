@@ -13769,6 +13769,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-16T15:06:42.542Z",
       "url": "https://openfront.io/game/9Hw1vfgT"
+    },
+    {
+      "id": "uf6yGza3",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "StinkyCloud.QkjJ",
+          "clientID": "CgrGdoqo",
+          "clanTag": null
+        },
+        {
+          "username": "Enderia",
+          "clientID": "Zg7JUhSa",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1895,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-16T15:12:13.869Z",
+      "url": "https://openfront.io/game/uf6yGza3"
     }
   ],
   "trios": [
@@ -37476,6 +37499,52 @@
       "numPlayers": 76,
       "timestamp": "2026-08-16T14:51:51.641Z",
       "url": "https://openfront.io/game/2aMztA8L"
+    },
+    {
+      "id": "DRQD3L6j",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "cazi",
+          "clientID": "yCzY9BHw",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "JV3GhZjt",
+          "clanTag": "AST"
+        },
+        {
+          "username": "bananaJC",
+          "clientID": "MmVbqHhc",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 776,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-16T15:25:28.682Z",
+      "url": "https://openfront.io/game/DRQD3L6j"
+    },
+    {
+      "id": "GE6NztdG",
+      "team": "Team 35",
+      "players": [
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "nCn5vEfA",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 4249,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-16T14:32:40.451Z",
+      "url": "https://openfront.io/game/GE6NztdG"
     }
   ],
   "quads": [
@@ -65640,6 +65709,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-16T15:15:48.077Z",
       "url": "https://openfront.io/game/7dqgZgwM"
+    },
+    {
+      "id": "dr8esf4K",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "GargantuanNoser",
+          "clientID": "Lm5wqBdU",
+          "clanTag": null
+        },
+        {
+          "username": "Peaceful Fisherman",
+          "clientID": "pRakUK7X",
+          "clanTag": "FISH"
+        },
+        {
+          "username": "Leo",
+          "clientID": "BMaZbmnd",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 4175,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 118,
+      "timestamp": "2026-08-16T14:37:25.753Z",
+      "url": "https://openfront.io/game/dr8esf4K"
     }
   ]
 }
