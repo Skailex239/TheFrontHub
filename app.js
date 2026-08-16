@@ -2064,6 +2064,11 @@ function renderRankedTable(players) {
     const cosmeticRowClass = isVip ? ` is-${rewardType}` : '';
     const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
 
+    // Player overlay (plaque nominative)
+    const overlayImg = getPlayerOverlay(p.username);
+    const overlayClass = overlayImg ? ' has-overlay' : '';
+    const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
+
     html += `
       <tr data-pid="${esc(p.public_id)}" class="${cosmeticRowClass}" style="border-bottom: 1px solid var(--border); transition: background 0.2s; cursor:pointer;"
           onmouseover="this.style.background='var(--bg2)'"
@@ -2073,7 +2078,7 @@ function renderRankedTable(players) {
         <td style="padding: 12px 8px;">
           <div style="display:flex;align-items:center;gap:6px">
             ${favBtn}
-            <span class="${cosmeticNameClass}" style="color: var(--text); text-decoration: none; font-weight: 500;">
+            <span class="${cosmeticNameClass} ranked-player-name${overlayClass}"${overlayStyle} style="color: var(--text); text-decoration: none; font-weight: 500; position: relative; display: inline-block; padding-right: ${overlayImg ? '120px' : '0'};">
               ${p.clanTag ? `<span style="color:var(--text3);font-size:0.9em;margin-right:4px;">[${esc(p.clanTag)}]</span>` : ''}${esc(p.username)}
             </span>
           </div>

@@ -32,6 +32,18 @@ import {
   formatPoints, classifyGame,
 } from "./playtime-stats.js?v=1";
 
+/* ── Player overlays (plaque nominative) ── */
+const PLAYER_OVERLAYS = [
+  { match: /skailex/i, image: "overlay-v2-alpha.webp" },
+];
+function getPlayerOverlay(username) {
+  if (!username) return null;
+  for (const o of PLAYER_OVERLAYS) {
+    if (o.match.test(username)) return o.image;
+  }
+  return null;
+}
+
 /* ── State ── */
 let currentUser = null;
 let currentProfile = null;
@@ -258,7 +270,19 @@ onAuthStateChanged(auth, async (user) => {
  */
 function renderPublicProfile(username, publicId) {
   const nameEl = document.getElementById("profile-title-name");
-  if (nameEl) nameEl.textContent = username;
+  if (nameEl) {
+    nameEl.innerHTML = "";
+    const skinSpan = document.createElement("span");
+    skinSpan.textContent = username;
+    // Apply overlay if the player has one
+    const overlayImg = getPlayerOverlay(username);
+    if (overlayImg) {
+      skinSpan.classList.add("has-overlay");
+      skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
+    }
+    nameEl.appendChild(skinSpan);
+    applySkinToElement(skinSpan, publicId, true);
+  }
 
   const badgeEl = document.getElementById("profile-public-badge");
   if (badgeEl) badgeEl.textContent = "Public ID : " + publicId;
@@ -324,6 +348,12 @@ function renderHero(user, profile) {
     nameEl.innerHTML = "";
     const skinSpan = document.createElement("span");
     skinSpan.textContent = profile.username || user.displayName || "Joueur";
+    // Apply overlay if the player has one
+    const overlayImg = getPlayerOverlay(profile.username || user.displayName);
+    if (overlayImg) {
+      skinSpan.classList.add("has-overlay");
+      skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
+    }
     nameEl.appendChild(skinSpan);
     applySkinToElement(skinSpan, profile.publicId, true);
   }
