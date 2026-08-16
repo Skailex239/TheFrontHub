@@ -36089,6 +36089,62 @@
       "numPlayers": 53,
       "timestamp": "2026-08-15T23:52:21.320Z",
       "url": "https://openfront.io/game/BgTCnAGz"
+    },
+    {
+      "id": "fvfoSCbA",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "RedBlack",
+          "clientID": "tywJbbcU",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "WOLF",
+          "clientID": "sEcu5wQD",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "AnonCompass2",
+          "clientID": "GpbViV5j",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1614,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 46,
+      "timestamp": "2026-08-16T00:18:00.868Z",
+      "url": "https://openfront.io/game/fvfoSCbA"
+    },
+    {
+      "id": "taWQugfA",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Anon69",
+          "clientID": "FKuFxh9g",
+          "clanTag": null
+        },
+        {
+          "username": "Zhaw",
+          "clientID": "1tUstn9i",
+          "clanTag": null
+        },
+        {
+          "username": "Powerhouse of the cell",
+          "clientID": "D4MSZ5dN",
+          "clanTag": "OG"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-16T00:35:57.455Z",
+      "url": "https://openfront.io/game/taWQugfA"
     }
   ],
   "quads": [
@@ -62892,6 +62948,34 @@
       "numPlayers": 67,
       "timestamp": "2026-08-15T23:47:07.509Z",
       "url": "https://openfront.io/game/obnBMjps"
+    },
+    {
+      "id": "7YJ3rX99",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Fiber Optic FPVs",
+          "clientID": "Q9nEy3VB",
+          "clanTag": "RU"
+        },
+        {
+          "username": "rohos",
+          "clientID": "FFptZNPx",
+          "clanTag": null
+        },
+        {
+          "username": "Ice Bear",
+          "clientID": "jcRmkNuk",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 854,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-16T00:34:52.386Z",
+      "url": "https://openfront.io/game/7YJ3rX99"
     }
   ]
 }
