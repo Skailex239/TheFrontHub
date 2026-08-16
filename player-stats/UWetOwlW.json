@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-16T18:12:20.846Z",
-  "lastSyncedAt": "2026-08-16T18:12:19.071Z",
-  "totalGames": 3031,
+  "computedAt": "2026-08-16T18:45:31.376Z",
+  "lastSyncedAt": "2026-08-16T18:45:29.983Z",
+  "totalGames": 3032,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 260,
@@ -15,7 +15,7 @@
   "formatted": {
     "points": "6 952",
     "totalWins": "1 200",
-    "totalGames": "3 031",
+    "totalGames": "3 032",
     "totalPlaytime": "30j 18h",
     "totalPlaytimeCompact": "30j 18h",
     "avgGameDuration": "14m 36s",
@@ -23,12 +23,12 @@
     "winrate": "49%"
   },
   "playtime": {
-    "totalSec": 2657369,
-    "avgGameSec": 876.7301220719235,
+    "totalSec": 2657588,
+    "avgGameSec": 876.5131926121372,
     "longestSec": 33773,
     "shortestSec": 1,
     "byVisibility": {
-      "public": 3031,
+      "public": 3032,
       "private": 0,
       "singleplayer": 0
     },
@@ -44,8 +44,8 @@
         "wins": 260
       },
       "teamCasual": {
-        "games": 889,
-        "playtimeSec": 914642,
+        "games": 890,
+        "playtimeSec": 914861,
         "wins": 331
       },
       "teamRanked": {
@@ -58,25 +58,25 @@
   "results": {
     "victory": 1200,
     "defeat": 1242,
-    "incomplete": 589,
+    "incomplete": 590,
     "other": 0
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 772,
+      "count": 773,
       "wins": 315,
       "losses": 176,
-      "incompletes": 281,
-      "playtimeSec": 458191,
-      "avgDuration": 593.5116580310881,
+      "incompletes": 282,
+      "playtimeSec": 458410,
+      "avgDuration": 593.0271668822768,
       "winRate": 0.6415478615071283,
-      "lastPlayed": 1786783220824,
+      "lastPlayed": 1786905412988,
       "formatted": {
         "playtime": "5j 7h",
         "avgDuration": "9m",
         "winRate": "64%",
-        "lastPlayed": "15/08/26"
+        "lastPlayed": "16/08/26"
       }
     },
     {
@@ -1564,7 +1564,7 @@
       283,
       400,
       157,
-      245,
+      246,
       138,
       126,
       59
@@ -1576,7 +1576,7 @@
       386,
       360,
       523,
-      646
+      647
     ],
     "byDay": [
       {
@@ -2112,6 +2112,17 @@
   },
   "recentGames": [
     {
+      "gameId": "ECpnRykU",
+      "start": "2026-08-16T18:36:52.988Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "incomplete",
+      "durationSeconds": 219,
+      "totalPlayers": null,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
       "gameId": "esbvtmwD",
       "start": "2026-08-15T08:40:20.824Z",
       "map": "Australia",
@@ -2317,17 +2328,6 @@
       "result": "incomplete",
       "durationSeconds": 135,
       "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "e1pKkpUq",
-      "start": "2026-08-11T21:02:30.863Z",
-      "map": "Irish Sea",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 36,
-      "totalPlayers": 1,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
