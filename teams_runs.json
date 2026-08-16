@@ -13572,6 +13572,29 @@
       "numPlayers": 51,
       "timestamp": "2026-08-16T10:16:34.654Z",
       "url": "https://openfront.io/game/69M9brnn"
+    },
+    {
+      "id": "HheQ21MP",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "cazi",
+          "clientID": "ks3odwAD",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "SPoS",
+          "clientID": "UimwqSVD",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 601,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-16T10:39:31.517Z",
+      "url": "https://openfront.io/game/HheQ21MP"
     }
   ],
   "trios": [
@@ -36909,6 +36932,57 @@
       "numPlayers": 15,
       "timestamp": "2026-08-16T10:02:25.301Z",
       "url": "https://openfront.io/game/DdHPeFf7"
+    },
+    {
+      "id": "ViCdx6oP",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "i revenge every attack",
+          "clientID": "Chn3xmm7",
+          "clanTag": null
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "tKUNjboB",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 2434,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-16T10:17:43.226Z",
+      "url": "https://openfront.io/game/ViCdx6oP"
+    },
+    {
+      "id": "ZkfoAFcV",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Kotnaschersfaust",
+          "clientID": "wZ96MnzZ",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Markus",
+          "clientID": "nnc5DyyR",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "doomsday",
+          "clientID": "Dtxgx3CY",
+          "clanTag": "GREG"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1056,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-16T10:35:16.262Z",
+      "url": "https://openfront.io/game/ZkfoAFcV"
     }
   ],
   "quads": [
