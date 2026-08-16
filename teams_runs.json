@@ -14275,6 +14275,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-16T23:13:03.149Z",
       "url": "https://openfront.io/game/qUfWmCpF"
+    },
+    {
+      "id": "uXxJFi4H",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "feuj2luxe anti benoit",
+          "clientID": "GbLqxPqJ",
+          "clanTag": "TDC"
+        },
+        {
+          "username": "FROMAGEDEBIX",
+          "clientID": "63dqLQiD",
+          "clanTag": "TDC"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1147,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-16T23:35:00.090Z",
+      "url": "https://openfront.io/game/uXxJFi4H"
     }
   ],
   "trios": [
@@ -67725,6 +67748,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-16T23:14:40.771Z",
       "url": "https://openfront.io/game/m9prq6sv"
+    },
+    {
+      "id": "RFtwpiqF",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Markus",
+          "clientID": "iqpGUCR6",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Gamer",
+          "clientID": "kzHZK5rZ",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Kotnaschersfaust",
+          "clientID": "gMPsHti8",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Chill dude",
+          "clientID": "pdn9Lxtq",
+          "clanTag": "GREG"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2923,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-16T22:57:59.202Z",
+      "url": "https://openfront.io/game/RFtwpiqF"
     }
   ]
 }
