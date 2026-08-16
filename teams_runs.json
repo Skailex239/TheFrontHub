@@ -13815,6 +13815,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-16T16:00:47.878Z",
       "url": "https://openfront.io/game/TfKy73w6"
+    },
+    {
+      "id": "jr62BZkt",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "OrbOfJudgement",
+          "clientID": "MbMveSYf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BRUHBRUHBRUH",
+          "clientID": "b7SE4uGy",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1168,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "timestamp": "2026-08-16T16:29:24.624Z",
+      "url": "https://openfront.io/game/jr62BZkt"
     }
   ],
   "trios": [
@@ -37675,6 +37698,57 @@
       "numPlayers": 60,
       "timestamp": "2026-08-16T16:11:37.527Z",
       "url": "https://openfront.io/game/TAgKjhQF"
+    },
+    {
+      "id": "7sJUdwCr",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Captain",
+          "clientID": "5qjPy3Cq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Iceman",
+          "clientID": "WBEdcztq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Major",
+          "clientID": "To97WgA4",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1486,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-16T16:32:53.812Z",
+      "url": "https://openfront.io/game/7sJUdwCr"
+    },
+    {
+      "id": "Z68iuxmP",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Train Me",
+          "clientID": "C9HdTM2X",
+          "clanTag": "UNC"
+        },
+        {
+          "username": "Kake",
+          "clientID": "3J79r7hP",
+          "clanTag": "UNC"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1259,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-16T16:26:03.411Z",
+      "url": "https://openfront.io/game/Z68iuxmP"
     }
   ],
   "quads": [
@@ -65923,6 +65997,39 @@
       "numPlayers": 96,
       "timestamp": "2026-08-16T16:07:52.320Z",
       "url": "https://openfront.io/game/kyxyqXVH"
+    },
+    {
+      "id": "ffHSzJd3",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Gubi Fortnite",
+          "clientID": "pgo6bNck",
+          "clanTag": "CCM"
+        },
+        {
+          "username": "Fettwanst",
+          "clientID": "CD7SoMq1",
+          "clanTag": "CCM"
+        },
+        {
+          "username": "hugo",
+          "clientID": "sjbJe4ZZ",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "izTGj879",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 1659,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-16T16:22:19.197Z",
+      "url": "https://openfront.io/game/ffHSzJd3"
     }
   ]
 }
