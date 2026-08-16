@@ -1863,3 +1863,88 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
   background: var(--orange-gradient-subtle); color: #fff; font-size: 12px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
 }
+
+/* ════════════════════════════════════════════════════════════════
+   PLAYER OVERLAY (plaque nominative style Discord)
+   Image décorative en transparence à droite du pseudo.
+   L'image "Overlays 1 test !!!.webp" est une texture pixel art de
+   nénuphars sur fond vert. On utilise mix-blend-mode pour fondre
+   le vert dans le fond de la ligne.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Speedruns leaderboard — .run-player.has-overlay */
+.run-player.has-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.run-player.has-overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  background-image: var(--overlay-img);
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+.run-player.has-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Global leaderboard — .global-player.has-overlay */
+.global-player.has-overlay {
+  position: relative;
+  overflow: hidden;
+  padding-right: 52px;
+}
+.global-player.has-overlay::after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 32px;
+  background-image: var(--overlay-img);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+.global-player.has-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark theme: use screen blend mode instead of multiply */
+.dark .run-player.has-overlay::after,
+.dark .global-player.has-overlay::after {
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}
+
+/* Mobile: smaller overlay */
+@media (max-width: 768px) {
+  .run-player.has-overlay::after {
+    width: 36px;
+    opacity: 0.25;
+  }
+  .global-player.has-overlay::after {
+    width: 32px;
+    height: 24px;
+    opacity: 0.25;
+  }
+  .global-player.has-overlay {
+    padding-right: 40px;
+  }
+}

@@ -1420,6 +1420,19 @@ function selectMap(name){
   document.getElementById("share-btn").style.display='inline-flex';
   renderLeaderboard(d);updateURL();
 }
+// ── Player overlays (plaque nominative style Discord) ──
+// Returns overlay image path if the player has one, null otherwise.
+// Currently hardcoded for Skailex (testing). Later: drive from Firestore.
+const PLAYER_OVERLAYS = [
+  { match: /skailex/i, image: "Overlays 1 test !!!.webp" },
+];
+function getPlayerOverlay(username) {
+  if (!username) return null;
+  for (const o of PLAYER_OVERLAYS) {
+    if (o.match.test(username)) return o.image;
+  }
+  return null;
+}
 function renderLeaderboard(d){
   const show=mapShowCount[d.map]||10;const best=d.runs[0]?.duration_s||0;
   const now=Date.now();
@@ -1452,7 +1465,10 @@ function renderLeaderboard(d){
       <span id="gg-count-${r.id}">${ggCount > 0 ? ggCount : ''}</span>
     </button>`;
 
-    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+'" onclick="showPlayer(\''+esc(r.player)+'\')">'+r.player+diff+isNew+'</div><a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
+    const overlayImg = getPlayerOverlay(r.player);
+    const overlayClass = overlayImg ? ' has-overlay' : '';
+    const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
+    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+r.player+diff+isNew+'</div><a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
   }).join("");
   if(d.runs.length>show)html+='<button class="see-more-btn" onclick="seeMore(\''+esc(d.map)+'\')">Voir plus ('+(d.runs.length-show)+' restants)</button>';
   document.getElementById("leaderboard").innerHTML=html;
@@ -1577,7 +1593,10 @@ function renderGlobal(){
       const isNewSkinType = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'].includes(rewardType);
       const cosmeticClass = isVip ? ` is-${rewardType}` : '';
       const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
-      const playerInner = isNewSkinType ? '<span class="global-player'+cosmeticNameClass+'" onclick="showPlayer(\''+esc(p.player)+'\')">'+p.player+'</span>' : '<span class="global-player'+cosmeticNameClass+'" onclick="showPlayer(\''+esc(p.player)+'\')">'+p.player+'</span>';
+      const overlayImg = getPlayerOverlay(p.player);
+      const overlayClass = overlayImg ? ' has-overlay' : '';
+      const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
+      const playerInner = '<span class="global-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(p.player)+'\')">'+p.player+'</span>';
       return '<tr class="'+isMeClass+cosmeticClass+'"><td class="global-rank '+rc+'">'+(i+1)+'</td><td class="global-player-cell" onclick="showPlayer(\''+esc(p.player)+'\')">'+playerInner+'</td><td class="global-points">'+p.points+'</td><td class="global-wins">'+p.wins+'</td></tr>';
     }).join("")+'</tbody></table>';
 }
