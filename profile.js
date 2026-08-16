@@ -1527,6 +1527,38 @@ async function loadAllGamesForStats(publicId) {
   const CACHE_KEY = `tfs_games_v1_${publicId}`;
   const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
+  // 0. Try the SYNCED player-data file first — instant for synced players!
+  //    This file is maintained by sync-player-games.js (GitHub Actions, continuous loop).
+  //    It contains ALL games for the player, refreshed every few minutes.
+  try {
+    const syncRes = await fetch(`player-data/${encodeURIComponent(publicId)}.json`, { cache: "no-store" });
+    if (syncRes.ok) {
+      const syncData = await syncRes.json();
+      if (syncData && Array.isArray(syncData.games) && syncData.games.length > 0) {
+        _allGamesCache = syncData.games;
+        if (mount) mount.innerHTML = "";
+        renderPlaytimeStats(syncData.games);
+        renderActivityStats(syncData.games);
+        renderMapStatsTable(syncData.games);
+        renderAchievements(syncData.games);
+        renderRecentGamesFull(syncData.games);
+        // Show a small "synced data" badge
+        if (mount) {
+          const badge = document.createElement("div");
+          badge.style.cssText = "padding:8px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:8px;font-size:11px;color:#10b981;margin-bottom:12px;display:flex;align-items:center;gap:6px";
+          const syncedDate = syncData.lastSyncedAt ? new Date(syncData.lastSyncedAt) : null;
+          const syncedStr = syncedDate ? syncedDate.toLocaleString("fr-FR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) : "récemment";
+          badge.innerHTML = `<span>✓</span> Données synchronisées (${syncData.totalGames} parties · MAJ ${syncedStr})`;
+          mount.insertBefore(badge, mount.firstChild);
+        }
+        _allGamesLoading = false;
+        return;
+      }
+    }
+  } catch (e) {
+    console.warn("[profile] Could not load synced player-data file:", e.message);
+  }
+
   // 1. Check localStorage cache first — instant for returning visitors
   try {
     const cached = localStorage.getItem(CACHE_KEY);
