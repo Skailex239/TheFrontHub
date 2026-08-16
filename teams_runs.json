@@ -13884,6 +13884,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-16T17:22:32.977Z",
       "url": "https://openfront.io/game/mpbD1doQ"
+    },
+    {
+      "id": "MCMxwmUW",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Bob",
+          "clientID": "54MXYbmd",
+          "clanTag": "JKZ"
+        },
+        {
+          "username": "Mugiwara",
+          "clientID": "kKnXe6Q7",
+          "clanTag": "JKZ"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1459,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-16T17:27:19.280Z",
+      "url": "https://openfront.io/game/MCMxwmUW"
     }
   ],
   "trios": [
@@ -66247,6 +66270,34 @@
       "numPlayers": 20,
       "timestamp": "2026-08-16T16:57:42.383Z",
       "url": "https://openfront.io/game/BtjP2oM3"
+    },
+    {
+      "id": "RWoMvbQK",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonCastle8",
+          "clientID": "F26W4D3a",
+          "clanTag": null
+        },
+        {
+          "username": "Alipasha",
+          "clientID": "oW2saG8K",
+          "clanTag": "AP"
+        },
+        {
+          "username": "Folkvangr",
+          "clientID": "bwuaw6cU",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-16T17:29:24.936Z",
+      "url": "https://openfront.io/game/RWoMvbQK"
     }
   ]
 }
