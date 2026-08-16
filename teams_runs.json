@@ -13953,6 +13953,52 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T18:04:10.568Z",
       "url": "https://openfront.io/game/3af3zVwU"
+    },
+    {
+      "id": "QdJN6wjZ",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Uriel",
+          "clientID": "45QWrU59",
+          "clanTag": "AURA"
+        },
+        {
+          "username": "ColuiCheKilla",
+          "clientID": "QVKdgHXM",
+          "clanTag": "AURA"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1105,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-16T19:02:24.061Z",
+      "url": "https://openfront.io/game/QdJN6wjZ"
+    },
+    {
+      "id": "4qKEEQYB",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Karibil Watar",
+          "clientID": "9C163uiV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LapinG0D",
+          "clientID": "o3RDmHDs",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 1705,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-16T18:54:05.057Z",
+      "url": "https://openfront.io/game/4qKEEQYB"
     }
   ],
   "trios": [
@@ -38040,6 +38086,52 @@
       "numPlayers": 54,
       "timestamp": "2026-08-16T18:39:58.677Z",
       "url": "https://openfront.io/game/EYPzfVcE"
+    },
+    {
+      "id": "ZNs5KaaH",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "bananaJC",
+          "clientID": "QELW3Loq",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "rqz2T3FH",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonSpider9",
+          "clientID": "UiNMSYV7",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 564,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-16T19:11:32.102Z",
+      "url": "https://openfront.io/game/ZNs5KaaH"
+    },
+    {
+      "id": "gRx6BJo7",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "RANCID",
+          "clientID": "fpTNR3it",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1475,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-16T18:51:30.394Z",
+      "url": "https://openfront.io/game/gRx6BJo7"
     }
   ],
   "quads": [
@@ -66527,6 +66619,57 @@
       "numPlayers": 52,
       "timestamp": "2026-08-16T18:27:35.925Z",
       "url": "https://openfront.io/game/Z8B64UFf"
+    },
+    {
+      "id": "5ijsZZSx",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "67 Cringelord",
+          "clientID": "qDYKsG6Z",
+          "clanTag": null
+        },
+        {
+          "username": "usa",
+          "clientID": "1Mr4wWRb",
+          "clanTag": "TURK"
+        },
+        {
+          "username": "zen",
+          "clientID": "i6QioUEa",
+          "clanTag": null
+        },
+        {
+          "username": "Istan",
+          "clientID": "QhsGFmqG",
+          "clanTag": "TURK"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1526,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-16T18:49:29.245Z",
+      "url": "https://openfront.io/game/5ijsZZSx"
+    },
+    {
+      "id": "kTWSfpRX",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "But Why",
+          "clientID": "1YSe4nGu",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 957,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-16T18:57:13.241Z",
+      "url": "https://openfront.io/game/kTWSfpRX"
     }
   ]
 }
