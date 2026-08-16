@@ -2125,3 +2125,29 @@ function renderRecentGamesFull(games) {
     </div>
   `;
 }
+
+/* ════════════════════════════════════════════════════════════════
+   FALLBACK: si onAuthStateChanged ne se déclenche pas (Firebase CDN
+   bloqué ou lent), force le rendu du profil public après 8s.
+   ════════════════════════════════════════════════════════════════ */
+setTimeout(() => {
+  const loading = document.getElementById("profile-loading");
+  if (loading && loading.classList.contains("is-active")) {
+    const pubReq = getPublicProfileRequest();
+    if (pubReq) {
+      console.warn("[profile] Auth state timeout — forcing public profile render");
+      currentUser = null;
+      currentProfile = null;
+      updateSidebarUI(null);
+      viewingPublicId = pubReq.publicId;
+      viewingUsername = pubReq.username;
+      showView("profile-main");
+      renderPublicProfile(pubReq.username, pubReq.publicId);
+      loadVipForProfile();
+      loadStats(pubReq.publicId);
+    } else {
+      console.warn("[profile] Auth state timeout — showing gate");
+      showView("profile-gate");
+    }
+  }
+}, 8000);
