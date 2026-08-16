@@ -37351,6 +37351,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T13:09:44.501Z",
       "url": "https://openfront.io/game/RQ1eJXBU"
+    },
+    {
+      "id": "E8fVsQot",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "TRADEnPEACE",
+          "clientID": "mpbwxNxH",
+          "clanTag": "MAR"
+        },
+        {
+          "username": "zoo",
+          "clientID": "G5xKjbhy",
+          "clanTag": null
+        },
+        {
+          "username": "La Provence",
+          "clientID": "XmLJQjZs",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 878,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 23,
+      "timestamp": "2026-08-16T14:18:00.588Z",
+      "url": "https://openfront.io/game/E8fVsQot"
     }
   ],
   "quads": [
@@ -65332,6 +65360,24 @@
       "numPlayers": 40,
       "timestamp": "2026-08-16T14:09:21.087Z",
       "url": "https://openfront.io/game/TiotKqqS"
+    },
+    {
+      "id": "Xe1Zqc95",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Le Lavabo",
+          "clientID": "at3P9hSh",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1378,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-16T14:09:39.103Z",
+      "url": "https://openfront.io/game/Xe1Zqc95"
     }
   ]
 }
