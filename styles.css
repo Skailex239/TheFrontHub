@@ -1897,48 +1897,42 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
   z-index: 1;
 }
 
-/* Global leaderboard — .global-player.has-overlay */
+/* Global leaderboard — .global-player.has-overlay (span inside td) */
 .global-player.has-overlay {
   position: relative;
-  overflow: hidden;
-  padding-right: 52px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 40px;
 }
 .global-player.has-overlay::after {
   content: "";
   position: absolute;
-  right: 4px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 32px;
+  width: 32px;
+  height: 24px;
   background-image: var(--overlay-img);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.55;
+  opacity: 0.7;
   pointer-events: none;
-  z-index: 0;
 }
-.global-player.has-overlay > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Dark theme: use screen blend mode instead of multiply */
-
 
 /* Mobile: smaller overlay */
 @media (max-width: 768px) {
   .run-player.has-overlay::after {
-    width: 36px;
-    opacity: 0.25;
+    width: 28px;
+    opacity: 0.4;
   }
   .global-player.has-overlay::after {
-    width: 32px;
-    height: 24px;
-    opacity: 0.25;
+    width: 24px;
+    height: 18px;
+    opacity: 0.5;
   }
   .global-player.has-overlay {
-    padding-right: 40px;
+    padding-right: 30px;
   }
 }
