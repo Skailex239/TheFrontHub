@@ -13526,6 +13526,29 @@
       "numPlayers": 47,
       "timestamp": "2026-08-16T09:05:03.900Z",
       "url": "https://openfront.io/game/4eMzdZX5"
+    },
+    {
+      "id": "LaTEUVGc",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Anon1000",
+          "clientID": "3b85v4cf",
+          "clanTag": null
+        },
+        {
+          "username": "Hetman",
+          "clientID": "EKR6GNih",
+          "clanTag": "POL"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 852,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-16T09:38:14.834Z",
+      "url": "https://openfront.io/game/LaTEUVGc"
     }
   ],
   "trios": [
@@ -36710,6 +36733,57 @@
       "numPlayers": 21,
       "timestamp": "2026-08-16T09:17:47.665Z",
       "url": "https://openfront.io/game/ZamyaKKx"
+    },
+    {
+      "id": "2CijVTbR",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Adomeso",
+          "clientID": "aVfxnmY2",
+          "clanTag": "IND"
+        },
+        {
+          "username": "Anon754",
+          "clientID": "E3c9HXyz",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1169,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-16T09:38:37.855Z",
+      "url": "https://openfront.io/game/2CijVTbR"
+    },
+    {
+      "id": "r8i8VgSC",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "PeesALittle",
+          "clientID": "xkmSRxtt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHelmet",
+          "clientID": "PFF5WH6A",
+          "clanTag": null
+        },
+        {
+          "username": "You look lonely I can fix U",
+          "clientID": "uMLvNm6w",
+          "clanTag": "SHH"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1420,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-16T09:36:41.721Z",
+      "url": "https://openfront.io/game/r8i8VgSC"
     }
   ],
   "quads": [
@@ -64246,6 +64320,39 @@
       "numPlayers": 64,
       "timestamp": "2026-08-16T09:30:40.367Z",
       "url": "https://openfront.io/game/hgJueksC"
+    },
+    {
+      "id": "vePpMB4F",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Kiram to sepahi",
+          "clientID": "pGWwhnwz",
+          "clanTag": "UNION"
+        },
+        {
+          "username": "Trader",
+          "clientID": "jXXVnHbf",
+          "clanTag": "UNION"
+        },
+        {
+          "username": "Forward",
+          "clientID": "zqR14uGU",
+          "clanTag": "UNION"
+        },
+        {
+          "username": "Alysara",
+          "clientID": "gbi1Gp3a",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 975,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-16T09:44:39.221Z",
+      "url": "https://openfront.io/game/vePpMB4F"
     }
   ]
 }
