@@ -67226,6 +67226,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-16T20:49:24.484Z",
       "url": "https://openfront.io/game/T7sDPDEw"
+    },
+    {
+      "id": "DFqU4o8K",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Evil Mitochondria",
+          "clientID": "9nUKh4g6",
+          "clanTag": null
+        },
+        {
+          "username": "Pirate Republic of Hank",
+          "clientID": "7rjLZdJg",
+          "clanTag": "YOLI"
+        },
+        {
+          "username": "I.B.BouncinOnIt",
+          "clientID": "QnSTeD55",
+          "clanTag": "YOLI"
+        },
+        {
+          "username": "Hamilton",
+          "clientID": "iqT1sAnC",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 1220,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-16T21:24:11.695Z",
+      "url": "https://openfront.io/game/DFqU4o8K"
     }
   ]
 }
