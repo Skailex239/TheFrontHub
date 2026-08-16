@@ -14045,6 +14045,29 @@
       "numPlayers": 74,
       "timestamp": "2026-08-16T19:01:43.016Z",
       "url": "https://openfront.io/game/ev4sa9nn"
+    },
+    {
+      "id": "cpNZL6mv",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "LEPEN",
+          "clientID": "bwDUW88P",
+          "clanTag": "1900"
+        },
+        {
+          "username": "URSS",
+          "clientID": "zUJpFDw1",
+          "clanTag": "1900"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 2235,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-16T19:14:54.823Z",
+      "url": "https://openfront.io/game/cpNZL6mv"
     }
   ],
   "trios": [
@@ -38206,6 +38229,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T19:10:19.539Z",
       "url": "https://openfront.io/game/FQsqGwYB"
+    },
+    {
+      "id": "3dArMVjv",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SwampKing",
+          "clientID": "Dd8m8cGm",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "GVM",
+          "clientID": "oEpaN6xF",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Saqdi",
+          "clientID": "2dqSN6cM",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 690,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-16T19:31:02.791Z",
+      "url": "https://openfront.io/game/3dArMVjv"
     }
   ],
   "quads": [
