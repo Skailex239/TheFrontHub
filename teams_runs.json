@@ -36682,6 +36682,34 @@
       "numPlayers": 15,
       "timestamp": "2026-08-16T08:55:57.824Z",
       "url": "https://openfront.io/game/Z8W7ppaW"
+    },
+    {
+      "id": "ZamyaKKx",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "ifs",
+          "clientID": "AHSuVNd7",
+          "clanTag": null
+        },
+        {
+          "username": "loempia",
+          "clientID": "wNdCyZzu",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "AnonGiraffe6",
+          "clientID": "8noY92MY",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 777,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-16T09:17:47.665Z",
+      "url": "https://openfront.io/game/ZamyaKKx"
     }
   ],
   "quads": [
@@ -64124,6 +64152,67 @@
       "numPlayers": 88,
       "timestamp": "2026-08-16T08:55:23.303Z",
       "url": "https://openfront.io/game/zVW56TLq"
+    },
+    {
+      "id": "QrX9uc7V",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Jean Le Luc",
+          "clientID": "5Z8Nac8g",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Italian Empire",
+          "clientID": "mgEexwwh",
+          "clanTag": null
+        },
+        {
+          "username": "NBK",
+          "clientID": "dWhRoBU7",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1260,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-16T09:12:37.837Z",
+      "url": "https://openfront.io/game/QrX9uc7V"
+    },
+    {
+      "id": "jg5XdMyS",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Forex",
+          "clientID": "mBLCUR9R",
+          "clanTag": "CZ"
+        },
+        {
+          "username": "JollyCocktail.7wX4",
+          "clientID": "19aWhVro",
+          "clanTag": null
+        },
+        {
+          "username": "Gigi",
+          "clientID": "bi3Hdjgn",
+          "clanTag": null
+        },
+        {
+          "username": "feEEda",
+          "clientID": "EFNmgNr9",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 812,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-16T09:13:20.884Z",
+      "url": "https://openfront.io/game/jg5XdMyS"
     }
   ]
 }
