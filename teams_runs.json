@@ -13907,6 +13907,52 @@
       "numPlayers": 90,
       "timestamp": "2026-08-16T17:27:19.280Z",
       "url": "https://openfront.io/game/MCMxwmUW"
+    },
+    {
+      "id": "AuBmH6ty",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Heywood Jablome",
+          "clientID": "qqEVjZr5",
+          "clanTag": "RARI"
+        },
+        {
+          "username": "Colmy",
+          "clientID": "ewP4DxBC",
+          "clanTag": "RARI"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 842,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-16T18:26:55.890Z",
+      "url": "https://openfront.io/game/AuBmH6ty"
+    },
+    {
+      "id": "3af3zVwU",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "blake",
+          "clientID": "MuVd7wXu",
+          "clanTag": "BEAST"
+        },
+        {
+          "username": "ICKE",
+          "clientID": "j9rKcXD3",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 2141,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-16T18:04:10.568Z",
+      "url": "https://openfront.io/game/3af3zVwU"
     }
   ],
   "trios": [
@@ -66420,6 +66466,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-16T18:23:35.196Z",
       "url": "https://openfront.io/game/FAtQJR9d"
+    },
+    {
+      "id": "Z8B64UFf",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Gubi Fortnite",
+          "clientID": "vmcgpxwp",
+          "clanTag": "CCM"
+        },
+        {
+          "username": "Fettwanst",
+          "clientID": "BaHmjX55",
+          "clanTag": "CCM"
+        },
+        {
+          "username": "BaranKirk",
+          "clientID": "BN3tkQHw",
+          "clanTag": "CCM"
+        },
+        {
+          "username": "Val",
+          "clientID": "BfSTxGqx",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 875,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-16T18:27:35.925Z",
+      "url": "https://openfront.io/game/Z8B64UFf"
     }
   ]
 }
