@@ -36337,6 +36337,34 @@
       "numPlayers": 43,
       "timestamp": "2026-08-16T02:16:55.587Z",
       "url": "https://openfront.io/game/5H6Zbh5q"
+    },
+    {
+      "id": "3U86cbNu",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "YEFmnebG",
+          "clanTag": null
+        },
+        {
+          "username": "WEDGE",
+          "clientID": "1aF4iihg",
+          "clanTag": "CPT"
+        },
+        {
+          "username": "nepthys",
+          "clientID": "aw3ENDAG",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 609,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 37,
+      "timestamp": "2026-08-16T02:59:27.288Z",
+      "url": "https://openfront.io/game/3U86cbNu"
     }
   ],
   "quads": [
@@ -63265,6 +63293,52 @@
       "numPlayers": 51,
       "timestamp": "2026-08-16T02:03:48.211Z",
       "url": "https://openfront.io/game/V8J4ZyDG"
+    },
+    {
+      "id": "zxAdx9a1",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "BEEF LINDSAY SARA",
+          "clientID": "Vg75Q2nG",
+          "clanTag": "LATTE"
+        },
+        {
+          "username": "AnonNebula3",
+          "clientID": "Hgns2U9P",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1249,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-16T02:50:46.792Z",
+      "url": "https://openfront.io/game/zxAdx9a1"
+    },
+    {
+      "id": "VYhrJwLi",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Tom Tom et Nana",
+          "clientID": "RezDeLbj",
+          "clanTag": null
+        },
+        {
+          "username": "Sharicc",
+          "clientID": "vCrzc6k5",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1587,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-16T02:44:00.838Z",
+      "url": "https://openfront.io/game/VYhrJwLi"
     }
   ]
 }
