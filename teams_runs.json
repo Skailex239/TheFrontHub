@@ -66326,6 +66326,67 @@
       "numPlayers": 80,
       "timestamp": "2026-08-16T17:29:24.936Z",
       "url": "https://openfront.io/game/RWoMvbQK"
+    },
+    {
+      "id": "VZ5wSDiA",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Pato",
+          "clientID": "zUtQTkq2",
+          "clanTag": "CBA"
+        },
+        {
+          "username": "AnonOrca5",
+          "clientID": "sWQGnqAn",
+          "clanTag": null
+        },
+        {
+          "username": "Ka1ro",
+          "clientID": "J5L3vwRa",
+          "clanTag": null
+        },
+        {
+          "username": "Amie",
+          "clientID": "KcSHhtnn",
+          "clanTag": "FRIEN"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1148,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-16T17:58:38.231Z",
+      "url": "https://openfront.io/game/VZ5wSDiA"
+    },
+    {
+      "id": "NKjou3HV",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Barbaria",
+          "clientID": "N2Cb5WzK",
+          "clanTag": null
+        },
+        {
+          "username": "Big cat",
+          "clientID": "Wk75gyrC",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "Yacobro9",
+          "clientID": "ACPTvmA5",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1434,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-16T17:55:47.078Z",
+      "url": "https://openfront.io/game/NKjou3HV"
     }
   ]
 }
