@@ -123,6 +123,42 @@ function pointsFor(w) {
          (w.teamRanked || 0) * PTS_TEAM_RANKED;
 }
 
+/* ── Cockpit: level + milestones + sparkline helpers ── */
+
+/** Level system: 1 level per 100 points (e.g. 3854 pts → level 38, progress 54/100). */
+function computeLevel(points) {
+  const p = Math.max(0, Math.floor(points || 0));
+  return {
+    level: Math.floor(p / 100),
+    levelProgress: p % 100,
+    levelNextAt: (Math.floor(p / 100) + 1) * 100,
+  };
+}
+
+/**
+ * Next milestone: returns { current, target } where target is the smallest
+ * value in `milestones` strictly greater than `current`. If past all
+ * predefined milestones, falls back to the next multiple of the last one.
+ */
+function nextMilestone(current, milestones) {
+  const c = Math.max(0, Math.floor(current || 0));
+  for (const m of milestones) {
+    if (c < m) return { current: c, target: m };
+  }
+  const last = milestones[milestones.length - 1] || 100;
+  const step = last >= 1000 ? 1000 : last;
+  return { current: c, target: Math.ceil((c + 1) / step) * step };
+}
+
+/** Build last-7-days sparkline from byDay (already sorted ascending, ≤90 entries). */
+function buildSparkline7d(byDay) {
+  if (!Array.isArray(byDay) || byDay.length === 0) return [0, 0, 0, 0, 0, 0, 0];
+  const last7 = byDay.slice(-7);
+  // Pad with zeros if fewer than 7 entries (e.g. very new player)
+  while (last7.length < 7) last7.unshift({ count: 0 });
+  return last7.map((d) => Number(d?.count) || 0);
+}
+
 /* ── Main stats computation ── */
 
 function computeStats(games, statsTree) {
@@ -340,6 +376,12 @@ function computePlayerStats(publicId) {
   const achievements = computeAchievements(pt);
   const recentGames = getRecentGames(games, 20);
 
+  // Cockpit: level + milestones + sparkline (pre-computed for instant display)
+  const points = pointsFor(pt.careerWins);
+  const lvl = computeLevel(points);
+  const totalPlaytimeHours = pt.totalPlaytimeSec / 3600;
+  const distinctMaps = pt.byMap.length;
+
   // Build the final summary — everything pre-formatted for instant display
   const summary = {
     publicId,
@@ -351,11 +393,26 @@ function computePlayerStats(publicId) {
     // Career wins (from aggregated stats, accurate)
     careerWins: pt.careerWins,
     totalWins: totalWins(pt.careerWins),
-    points: pointsFor(pt.careerWins),
+    points: points,
+
+    // Cockpit: level system (1 level = 100 points)
+    level: lvl.level,
+    levelProgress: lvl.levelProgress,
+    levelNextAt: lvl.levelNextAt,
+
+    // Cockpit: next milestones for progress rings
+    nextMilestones: {
+      wins: nextMilestone(totalWins(pt.careerWins), [25, 50, 100, 250, 500, 1000, 2000, 5000]),
+      playtime: nextMilestone(Math.floor(totalPlaytimeHours), [10, 25, 50, 100, 200, 500, 1000]),
+      maps: nextMilestone(distinctMaps, [10, 20, 30, 50, 75, 100, 150]),
+    },
+
+    // Cockpit: last 7 days games count (for sparkline)
+    sparkline7d: buildSparkline7d(pt.byDay),
 
     // Pre-formatted strings (ready to display)
     formatted: {
-      points: formatPoints(pointsFor(pt.careerWins)),
+      points: formatPoints(points),
       totalWins: formatPoints(totalWins(pt.careerWins)),
       totalGames: formatPoints(pt.totalGames),
       totalPlaytime: formatDuration(pt.totalPlaytimeSec),
@@ -363,6 +420,7 @@ function computePlayerStats(publicId) {
       avgGameDuration: formatDuration(pt.avgGameDurationSec),
       longestGame: formatDuration(pt.longestGameSec),
       winrate: formatPct(pt.results.victory / Math.max(1, pt.results.victory + pt.results.defeat)),
+      totalPlaytimeHours: `${Math.floor(totalPlaytimeHours)}h`,
     },
 
     // Playtime

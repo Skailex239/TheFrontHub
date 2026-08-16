@@ -1324,6 +1324,735 @@
 }
 
 /* ════════════════════════════════════════════════════════════════
+   COCKPIT — Linear/Superhuman inspired profile dashboard
+   Premium, dense, glass-status-bar + 2-col grid + animated rings
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  --cockpit-orange: #ff7a00;
+  --cockpit-orange-deep: #c25700;
+  --cockpit-orange-soft: #ffa14d;
+  --cockpit-orange-pale: #fff4e9;
+  --cockpit-glass: rgba(255, 255, 255, 0.72);
+  --cockpit-glass-border: rgba(255, 122, 0, 0.14);
+  --cockpit-card-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.04);
+  --cockpit-card-shadow-hover: 0 2px 6px rgba(16, 24, 40, 0.06), 0 12px 28px rgba(255, 122, 0, 0.10);
+}
+
+/* ── Sticky status bar: the header card becomes a glass-topped bar on
+   desktop (avatar + name + rank + playtime + skin + streak + level
+   all live inside .pf-header-card via renderHero + #cockpit-status-meta).
+   On mobile the blur is removed (solid bg) for rendering safety. ── */
+.pf-header-card {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--cockpit-glass);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-color: var(--cockpit-glass-border);
+  box-shadow: 0 2px 12px rgba(16, 24, 40, 0.06);
+}
+
+.pf-header-card .pf-stats-list {
+  margin: 6px 0 0;
+}
+
+/* ── Synced data badge ── */
+.cockpit-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  margin: 0 0 14px 0;
+  background: var(--cockpit-orange-pale);
+  color: var(--cockpit-orange-deep);
+  border: 1px solid var(--cockpit-glass-border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.cockpit-sync-badge svg {
+  color: var(--cockpit-orange);
+}
+
+/* ── Status bar meta (level + playtime + streak chips in header) ── */
+.cockpit-status-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 4px;
+}
+
+.cockpit-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text2, #6B7280);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 1.4;
+}
+
+.cockpit-chip svg {
+  flex-shrink: 0;
+}
+
+.cockpit-chip-level {
+  background: linear-gradient(135deg, var(--cockpit-orange) 0%, var(--cockpit-orange-deep) 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 1px 4px rgba(255, 122, 0, 0.22);
+}
+
+.cockpit-chip-level svg {
+  color: #fff;
+}
+
+.cockpit-chip-playtime {
+  background: var(--cockpit-orange-pale);
+  color: var(--cockpit-orange-deep);
+  border-color: var(--cockpit-glass-border);
+}
+
+.cockpit-chip-playtime svg {
+  color: var(--cockpit-orange);
+}
+
+.cockpit-chip-streak.is-active {
+  background: linear-gradient(135deg, #ff7a00 0%, #ef4444 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 1px 4px rgba(239, 68, 68, 0.25);
+}
+
+.cockpit-chip-streak.is-active svg {
+  color: #fff;
+}
+
+/* ── Loading + fallback states ── */
+.cockpit-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 24px;
+  color: var(--text2, #6B7280);
+  font-size: 14px;
+}
+
+.cockpit-loading-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--cockpit-orange-pale);
+  border-top-color: var(--cockpit-orange);
+  border-radius: 50%;
+  animation: cockpit-spin 0.9s linear infinite;
+}
+
+@keyframes cockpit-spin {
+  to { transform: rotate(360deg); }
+}
+
+.cockpit-fallback {
+  text-align: center;
+  padding: 56px 24px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.cockpit-fallback-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--cockpit-orange-pale);
+  color: var(--cockpit-orange-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cockpit-fallback h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text, #111);
+}
+
+.cockpit-fallback p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: var(--text2, #6B7280);
+  line-height: 1.5;
+}
+
+.cockpit-fallback-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--cockpit-orange) 0%, var(--cockpit-orange-deep) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.14s, box-shadow 0.14s;
+  box-shadow: 0 2px 8px rgba(255, 122, 0, 0.25);
+}
+
+.cockpit-fallback-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 122, 0, 0.32);
+}
+
+/* ── Main cockpit grid (left wide + right sidebar) ── */
+.cockpit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 16px;
+  align-items: start;
+}
+
+.cockpit-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.cockpit-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  position: sticky;
+  top: 16px;
+}
+
+/* ── Cards (shared) ── */
+.cockpit-card {
+  background: var(--card, #fff);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: var(--cockpit-card-shadow);
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.cockpit-card:hover {
+  box-shadow: var(--cockpit-card-shadow-hover);
+}
+
+.cockpit-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cockpit-card-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--text, #111);
+}
+
+.cockpit-card-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text3, #9CA3AF);
+  letter-spacing: 0.01em;
+}
+
+/* ── Metric cards (2x2 grid) ── */
+.cockpit-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.metric-card {
+  position: relative;
+  background: var(--card, #fff);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+}
+
+.metric-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--cockpit-orange) 0%, var(--cockpit-orange-deep) 100%);
+  opacity: 0;
+  transition: opacity 0.16s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--cockpit-glass-border);
+  box-shadow: 0 4px 14px rgba(255, 122, 0, 0.10);
+}
+
+.metric-card:hover::before {
+  opacity: 1;
+}
+
+.metric-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text3, #9CA3AF);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.metric-card-value {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--cockpit-orange-deep);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Progress rings (Apple Watch style) ── */
+.cockpit-rings {
+  /* uses .cockpit-card base */
+}
+
+.cockpit-rings-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cockpit-rings-svg-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-rings-svg {
+  display: block;
+}
+
+.progress-rings-svg .ring-arc {
+  filter: drop-shadow(0 1px 2px rgba(255, 122, 0, 0.18));
+}
+
+.progress-rings-center-pct {
+  font-size: 22px;
+  font-weight: 800;
+  fill: var(--text, #111);
+  font-variant-numeric: tabular-nums;
+}
+
+.progress-rings-center-sub {
+  font-size: 9px;
+  font-weight: 600;
+  fill: var(--text3, #9CA3AF);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cockpit-rings-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.ring-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text2, #6B7280);
+}
+
+.ring-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ring-legend-label {
+  font-weight: 600;
+  color: var(--text, #111);
+  min-width: 56px;
+}
+
+.ring-legend-value {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text2, #6B7280);
+}
+
+/* ── Category bars (horizontal) ── */
+.cockpit-cat-bars {
+  /* base card */
+}
+
+.cat-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cat-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cat-bar-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text, #111);
+}
+
+.cat-bar-hours {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text3, #9CA3AF);
+  font-variant-numeric: tabular-nums;
+}
+
+.cat-bar-track {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.cat-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cat-bar-sub {
+  font-size: 11px;
+  color: var(--text3, #9CA3AF);
+}
+
+/* ── Weekday bars (vertical, 7 days) ── */
+.weekday-bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  align-items: end;
+  height: 120px;
+}
+
+.weekday-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  cursor: default;
+}
+
+.weekday-bar-track {
+  flex: 1;
+  width: 100%;
+  max-width: 28px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.weekday-bar-fill {
+  width: 100%;
+  background: linear-gradient(180deg, var(--cockpit-orange) 0%, var(--cockpit-orange-deep) 100%);
+  border-radius: 6px 6px 4px 4px;
+  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 2px;
+}
+
+.weekday-bar-col.is-peak .weekday-bar-fill {
+  background: linear-gradient(180deg, #ffa14d 0%, #ff7a00 100%);
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.16);
+}
+
+.weekday-bar-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text3, #9CA3AF);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.weekday-bar-col.is-peak .weekday-bar-label {
+  color: var(--cockpit-orange-deep);
+}
+
+/* ── Next action panel ── */
+.cockpit-actions {
+  /* base card */
+}
+
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 -8px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text, #111);
+  font: inherit;
+  transition: background 0.14s;
+}
+
+.action-item:hover {
+  background: var(--cockpit-orange-pale);
+}
+
+.action-arrow {
+  color: var(--text3, #9CA3AF);
+  flex-shrink: 0;
+  transition: transform 0.14s, color 0.14s;
+}
+
+.action-item:hover .action-arrow {
+  color: var(--cockpit-orange);
+  transform: translateX(2px);
+}
+
+.action-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--cockpit-orange-pale);
+  color: var(--cockpit-orange-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.action-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  flex: 1;
+}
+
+.action-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text, #111);
+  line-height: 1.2;
+}
+
+.action-sub {
+  font-size: 11px;
+  color: var(--text3, #9CA3AF);
+  line-height: 1.3;
+}
+
+/* ── Level bar ── */
+.cockpit-level {
+  /* base card */
+}
+
+.level-bar-track {
+  height: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 4px 0 10px;
+  position: relative;
+}
+
+.level-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cockpit-orange) 0%, var(--cockpit-orange-deep) 100%);
+  border-radius: 999px;
+  transition: width 1.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.32);
+}
+
+.level-bar-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text3, #9CA3AF);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Sparkline ── */
+.cockpit-sparkline {
+  /* base card */
+}
+
+.sparkline-wrap {
+  margin: 4px 0 8px;
+  display: block;
+}
+
+.sparkline-svg {
+  display: block;
+  width: 100%;
+  height: 64px;
+}
+
+.sparkline-path {
+  filter: drop-shadow(0 1px 3px rgba(255, 122, 0, 0.18));
+}
+
+.sparkline-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--text3, #9CA3AF);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Streaks (cockpit variant) ── */
+.cockpit-streaks {
+  /* base card */
+}
+
+.streaks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.streak-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: border-color 0.14s, background 0.14s;
+}
+
+.streak-item.is-active {
+  background: var(--cockpit-orange-pale);
+  border-color: var(--cockpit-glass-border);
+}
+
+.streak-icon {
+  color: var(--text3, #9CA3AF);
+  display: flex;
+}
+
+.streak-item.is-active .streak-icon {
+  color: var(--cockpit-orange-deep);
+}
+
+.streak-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text3, #9CA3AF);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.streak-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text, #111);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.streak-item.is-active .streak-value {
+  color: var(--cockpit-orange-deep);
+}
+
+/* ── Recent games list (cockpit) ── */
+.cockpit-recent-games {
+  /* base card */
+}
+
+.cockpit-recent-list {
+  max-height: 480px;
+  border-radius: 12px;
+}
+
+/* ── Map stats (cockpit variant) ── */
+.cockpit-maps {
+  /* base card */
+}
+
+.cockpit-maps-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  margin: 0 0 12px;
+  background: transparent;
+  border: 1px solid var(--cockpit-orange);
+  color: var(--cockpit-orange-deep);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s;
+}
+
+.cockpit-maps-toggle:hover {
+  background: var(--cockpit-orange);
+  color: #fff;
+}
+
+.cockpit-maps-body {
+  display: none;
+}
+
+.cockpit-maps-body.is-open {
+  display: block;
+}
+
+/* ════════════════════════════════════════════════════════════════
    RESPONSIVE / MOBILE FIXES
    - Remove backdrop-filter on mobile (causes rendering issues)
    - Force 1-column grids
@@ -1339,10 +2068,17 @@
   .user-badge,
   .user-dropdown-menu,
   .modal-overlay,
-  .auth-modal {
+  .auth-modal,
+  .pf-header-card {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     background: var(--card, #fff) !important;
+  }
+
+  .pf-header-card {
+    position: relative !important;
+    top: auto !important;
+    border-color: var(--border, #F3F4F6) !important;
   }
 
   .sidebar {
@@ -1478,6 +2214,100 @@
 
   .activity-bars-row {
     height: 70px;
+  }
+
+  /* ── Cockpit mobile fixes: 1-col layout, 44px tap targets, no glass ── */
+  .cockpit-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .cockpit-right {
+    position: static;
+    top: auto;
+  }
+
+  .cockpit-card,
+  .metric-card {
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+
+  .metric-card {
+    min-height: 44px;
+    padding: 14px 16px;
+  }
+
+  .metric-card-value {
+    font-size: 26px;
+  }
+
+  .cockpit-metrics {
+    gap: 10px;
+  }
+
+  .cockpit-status-meta {
+    gap: 6px;
+  }
+
+  .cockpit-chip {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+
+  .cockpit-sync-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  /* Action items: 44px tap target */
+  .action-item {
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  /* Weekday bars: shorter, less wide */
+  .weekday-bars {
+    height: 90px;
+    gap: 6px;
+  }
+
+  .weekday-bar-track {
+    max-width: 22px;
+  }
+
+  .weekday-bar-label {
+    font-size: 9px;
+  }
+
+  /* Rings: stack SVG above legend on small screens */
+  .cockpit-rings-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cockpit-rings-legend {
+    width: 100%;
+  }
+
+  .ring-legend-item {
+    justify-content: flex-start;
+  }
+
+  /* Recent games: taller list, tighter rows */
+  .cockpit-recent-list {
+    max-height: 380px;
+  }
+
+  /* Streaks: keep 2-col but smaller */
+  .streaks-grid {
+    gap: 8px;
+  }
+
+  .streak-value {
+    font-size: 18px;
   }
 }
 

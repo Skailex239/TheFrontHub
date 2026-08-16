@@ -345,6 +345,18 @@ function renderHero(user, profile) {
     avatarEl.innerHTML = `<img src="PDP.png" alt="${esc(profile.username || 'avatar')}" style="width:100%;height:100%;object-fit:cover">`;
   }
 
+  // Cockpit: ensure #cockpit-status-meta exists inside the header card.
+  // Populated later by renderPrecomputedStats with level/playtime/streak chips.
+  const headerCard = document.querySelector(".pf-header-card");
+  if (headerCard && !document.getElementById("cockpit-status-meta")) {
+    const meta = document.createElement("div");
+    meta.id = "cockpit-status-meta";
+    meta.className = "cockpit-status-meta";
+    const statsList = headerCard.querySelector(".pf-stats-list");
+    if (statsList) headerCard.insertBefore(meta, statsList);
+    else headerCard.appendChild(meta);
+  }
+
   // Applique le skin VIP résolu par publicId (le listener VIP re-appliquera quand
   // les rewards arriveront). Fallback username = null ici car pas encore chargé.
   applyProfileSkin(profile, null);
@@ -1365,103 +1377,15 @@ async function handleActivate(skinId) {
    ════════════════════════════════════════════════════════════════ */
 
 function renderCareerStats(statsTree, publicId) {
+  // Cockpit redesign: the full career overview (metrics, rings, cat bars,
+  // activity, recent games, map stats) is now rendered by renderPrecomputedStats
+  // once the pre-computed stats file (player-stats/<pid>.json) is loaded by
+  // loadAllGamesForStats(). This function is kept as a no-op placeholder so the
+  // existing loadStats flow doesn't break — the container shows a loading state
+  // until the cockpit data arrives.
   const container = document.getElementById("career-stats-section");
   if (!container) return;
-
-  const careerWins = extractCareerWins(statsTree);
-  const totalW = totalWins(careerWins);
-  const points = pointsFor(careerWins);
-
-  const ranked1v1 = Number(statsTree.Ranked?.["1v1"]?.wins ?? 0) || 0;
-  const ranked1v1Losses = Number(statsTree.Ranked?.["1v1"]?.losses ?? 0) || 0;
-  const ranked2v2 = Number(statsTree.Ranked?.["2v2"]?.wins ?? 0) || 0;
-  const ranked2v2Losses = Number(statsTree.Ranked?.["2v2"]?.losses ?? 0) || 0;
-  const r1Total = ranked1v1 + ranked1v1Losses;
-  const r2Total = ranked2v2 + ranked2v2Losses;
-
-  const tiles = [
-    { label: "Points", value: formatPoints(points), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', color: "#c25700", bg: "rgba(255,122,0,0.12)" },
-    { label: "Wins FFA Casual", value: formatPoints(careerWins.ffaCasual), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/><path d="M16 16l4 4"/><path d="M19 21l2-2"/></svg>', color: "#ff7a00", bg: "rgba(255,122,0,0.12)" },
-    { label: "Wins Team Casual", value: formatPoints(careerWins.teamCasual), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', color: "#10b981", bg: "rgba(16,185,129,0.12)" },
-    { label: "Wins 1v1", value: formatPoints(ranked1v1), sub: r1Total > 0 ? `${formatPct(ranked1v1 / r1Total)} (${r1Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>', color: "#d97706", bg: "rgba(217,119,6,0.12)" },
-    { label: "Wins 2v2", value: formatPoints(ranked2v2), sub: r2Total > 0 ? `${formatPct(ranked2v2 / r2Total)} (${r2Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', color: "#a855f7", bg: "rgba(168,85,247,0.12)" },
-  ];
-
-  container.innerHTML = `
-    <div class="stats-section">
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        </span>
-        <div>
-          <h2>Statistiques générales</h2>
-          <p>Vue d'ensemble de la carrière</p>
-        </div>
-      </div>
-      <div class="stats-grid">
-        ${tiles.map((t) => `
-          <div class="stat-tile">
-            <div class="stat-tile-header">
-              <span class="stat-tile-icon" style="background:${t.bg};color:${t.color}">${t.icon}</span>
-              <span class="stat-tile-label">${esc(t.label)}</span>
-            </div>
-            <div class="stat-tile-value">${t.value}</div>
-            ${t.sub ? `<div class="stat-tile-sub">${t.sub}</div>` : ''}
-          </div>
-        `).join("")}
-      </div>
-    </div>
-    <div class="charts-grid">
-      <div class="chart-card">
-        <h3>Répartition des wins</h3>
-        <p>Par catégorie</p>
-        <div id="wins-chart"></div>
-      </div>
-    </div>
-    <div id="playtime-section-mount"></div>
-    <div id="activity-section-mount"></div>
-    <div id="map-stats-section-mount"></div>
-    <div id="recent-games-full-section-mount"></div>
-  `;
-
-  // Render wins chart (simple CSS bars)
-  renderWinsChart(careerWins);
-}
-
-function renderWinsChart(careerWins) {
-  const el = document.getElementById("wins-chart");
-  if (!el) return;
-
-  const data = [
-    { name: "FFA Casual", value: careerWins.ffaCasual, color: "#ff7a00" },
-    { name: "Team Casual", value: careerWins.teamCasual, color: "#10b981" },
-    { name: "1v1", value: careerWins.ffaRanked, color: "#d97706" },
-    { name: "2v2", value: careerWins.teamRanked, color: "#a855f7" },
-  ].filter((d) => d.value > 0);
-
-  if (data.length === 0) {
-    el.innerHTML = `<div style="height:120px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:13px">Aucune win enregistrée</div>`;
-    return;
-  }
-
-  const max = Math.max(...data.map((d) => d.value), 1);
-  const total = data.reduce((s, d) => s + d.value, 0);
-
-  el.innerHTML = `
-    <div style="display:flex;flex-direction:column;gap:8px">
-      ${data.map((d) => `
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px">
-            <span style="color:var(--text2)">${esc(d.name)}</span>
-            <span style="font-weight:600;font-family:var(--mono,monospace)">${d.value} (${formatPct(d.value / total)})</span>
-          </div>
-          <div style="height:8px;background:var(--border,#F3F4F6);border-radius:999px;overflow:hidden">
-            <div style="height:100%;width:${(d.value / max) * 100}%;background:${d.color};border-radius:999px;transition:width 0.3s"></div>
-          </div>
-        </div>
-      `).join("")}
-    </div>
-  `;
+  container.innerHTML = `<div class="cockpit-loading"><div class="cockpit-loading-spinner"></div><span>Chargement du cockpit…</span></div>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -1472,11 +1396,11 @@ async function loadAllGamesForStats(publicId) {
   if (_allGamesLoading) return;
   _allGamesLoading = true;
 
-  const mount = document.getElementById("playtime-section-mount");
-  if (mount) mount.innerHTML = `<div class="games-loading-banner"><div class="games-loading-spinner"></div><div class="games-loading-text">Chargement des stats…</div></div>`;
+  const mount = document.getElementById("career-stats-section");
+  if (mount) mount.innerHTML = `<div class="cockpit-loading"><div class="cockpit-loading-spinner"></div><span>Chargement du cockpit…</span></div>`;
 
-  // 0. Load the PRE-CALCULATED stats file FIRST — instant, zero calculation!
-  //    Generated by compute-player-stats.js (GitHub Actions workflow).
+  // Load the PRE-CALCULATED stats file — instant, zero calculation!
+  // Generated by compute-player-stats.js (GitHub Actions workflow, continuous loop).
   try {
     const statsRes = await fetch(`player-stats/${encodeURIComponent(publicId)}.json`, { cache: "no-store" });
     if (statsRes.ok) {
@@ -1492,434 +1416,33 @@ async function loadAllGamesForStats(publicId) {
     console.warn("[profile] Could not load pre-computed stats file:", e.message);
   }
 
-  const CACHE_KEY = `tfs_games_v1_${publicId}`;
-  const CACHE_TTL = 60 * 60 * 1000; // 1 hour
-
-  // 1. Fallback: load the raw games file and calculate client-side
-  //    This file is maintained by sync-player-games.js (GitHub Actions, continuous loop).
-  //    It contains ALL games for the player, refreshed every few minutes.
-  try {
-    const syncRes = await fetch(`player-data/${encodeURIComponent(publicId)}.json`, { cache: "no-store" });
-    if (syncRes.ok) {
-      const syncData = await syncRes.json();
-      if (syncData && Array.isArray(syncData.games) && syncData.games.length > 0) {
-        _allGamesCache = syncData.games;
-        if (mount) mount.innerHTML = "";
-        renderPlaytimeStats(syncData.games);
-        renderActivityStats(syncData.games);
-        renderMapStatsTable(syncData.games);
-        renderRecentGamesFull(syncData.games);
-        // Show a small "synced data" badge
-        if (mount) {
-          const badge = document.createElement("div");
-          badge.style.cssText = "padding:8px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:8px;font-size:11px;color:#10b981;margin-bottom:12px;display:flex;align-items:center;gap:6px";
-          const syncedDate = syncData.lastSyncedAt ? new Date(syncData.lastSyncedAt) : null;
-          const syncedStr = syncedDate ? syncedDate.toLocaleString("fr-FR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) : "récemment";
-          badge.innerHTML = `<span>✓</span> Données synchronisées (${syncData.totalGames} parties · MAJ ${syncedStr})`;
-          mount.insertBefore(badge, mount.firstChild);
-        }
-        _allGamesLoading = false;
-        return;
-      }
-    }
-  } catch (e) {
-    console.warn("[profile] Could not load synced player-data file:", e.message);
-  }
-
-  // 1. Check localStorage cache first — instant for returning visitors
-  try {
-    const cached = localStorage.getItem(CACHE_KEY);
-    if (cached) {
-      const parsed = JSON.parse(cached);
-      if (parsed && parsed.fetchedAt && Date.now() - parsed.fetchedAt < CACHE_TTL && Array.isArray(parsed.games)) {
-        _allGamesCache = parsed.games;
-        if (mount) mount.innerHTML = "";
-        renderPlaytimeStats(parsed.games);
-        renderActivityStats(parsed.games);
-        renderMapStatsTable(parsed.games);
-        renderRecentGamesFull(parsed.games);
-        _allGamesLoading = false;
-        return;
-      }
-    }
-  } catch { /* ignore cache read errors */ }
-
-  // 2. Show skeleton loading with skip button
+  // Fallback: no pre-computed stats available. The CI pipeline generates them
+  // within a few minutes of the first sync. Show a friendly message instead of
+  // duplicating the heavy compute logic client-side (the cockpit relies on
+  // pre-computed fields: level, nextMilestones, sparkline7d, etc.).
   if (mount) {
     mount.innerHTML = `
-      <div class="games-loading-banner">
-        <div class="games-loading-spinner"></div>
-        <div style="flex:1">
-          <div class="games-loading-text">Chargement du temps de jeu et des stats…</div>
-          <div class="games-loading-sub" id="games-load-count">0 parties chargées</div>
+      <div class="cockpit-fallback">
+        <div class="cockpit-fallback-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <button id="games-skip-btn" style="padding:6px 12px;background:transparent;border:1px solid var(--border,#E5E7EB);border-radius:6px;font-size:11px;font-weight:600;color:var(--text2,#6B7280);cursor:pointer;font-family:var(--f,inherit)">Skip</button>
+        <h3>Stats en cours de calcul</h3>
+        <p>Notre serveur prépare ton cockpit. Recharge la page dans 1-2 minutes.</p>
+        <button type="button" class="cockpit-fallback-btn" onclick="location.reload()">Recharger</button>
       </div>
     `;
-    const skipBtn = document.getElementById("games-skip-btn");
-    if (skipBtn) {
-      skipBtn.addEventListener("click", () => {
-        _allGamesLoading = false;
-        if (mount) mount.innerHTML = `<div style="padding:14px;background:var(--bg,#FAFAFA);border:1px solid var(--border,#F3F4F6);border-radius:10px;font-size:13px;color:var(--text3,#9CA3AF);text-align:center">Stats détaillées ignorées. Recharge la page pour réessayer.</div>`;
-      });
-    }
   }
-
-  try {
-    const allGames = [];
-    let cursor = null;
-    // Cap at 30 pages = 300 games (plenty for stats, 17x faster than 500 pages)
-    const MAX_PAGES = 30;
-    let lastRenderAt = 0;
-
-    for (let page = 0; page < MAX_PAGES; page++) {
-      let path = `/public/player/${encodeURIComponent(publicId)}/games`;
-      if (cursor) path += `?cursor=${encodeURIComponent(cursor)}`;
-      let data;
-      try {
-        data = await fetchOpenFront(path);
-      } catch (e) {
-        console.warn(`[profile] games page ${page} failed:`, e.message);
-        break;
-      }
-      const results = data?.results || [];
-      if (results.length === 0) break;
-      for (const g of results) allGames.push(g);
-      const countEl = document.getElementById("games-load-count");
-      if (countEl) countEl.textContent = `${allGames.length} parties chargées${page >= MAX_PAGES - 1 ? " (limite)" : ""}`;
-      if (!data.nextCursor) break;
-      cursor = data.nextCursor;
-
-      // Incremental render every 5 pages — user sees progress
-      if (page > 0 && page % 5 === 0 && Date.now() - lastRenderAt > 1000) {
-        renderPlaytimeStats(allGames);
-        renderActivityStats(allGames);
-        renderMapStatsTable(allGames);
-        renderRecentGamesFull(allGames);
-        lastRenderAt = Date.now();
-      }
-    }
-    _allGamesCache = allGames;
-    // Save to cache
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify({ games: allGames, fetchedAt: Date.now() }));
-    } catch { /* quota exceeded */ }
-    // Hide loading banner
-    if (mount) mount.innerHTML = "";
-    // Final render of all stats sections
-    renderPlaytimeStats(allGames);
-    renderActivityStats(allGames);
-    renderMapStatsTable(allGames);
-    renderRecentGamesFull(allGames);
-  } catch (e) {
-    console.error("[profile] loadAllGamesForStats error:", e);
-    if (mount) mount.innerHTML = `<div class="pf-error-banner">Erreur: ${esc(e.message)}</div>`;
-  } finally {
-    _allGamesLoading = false;
-  }
+  _allGamesLoading = false;
 }
 
 /* ════════════════════════════════════════════════════════════════
-   PLAYTIME STATS
+   [COCKPIT-REDESIGN] The 4 functions below (renderPlaytimeStats,
+   renderActivityStats, renderMapStatsTable, renderRecentGamesFull) were
+   removed and merged into the new renderPrecomputedStats() which builds
+   the Cockpit layout from the pre-computed stats file.
+   The map stats table + recent games list are kept inside the cockpit,
+   just restyled and rendered inline by renderPrecomputedStats.
    ════════════════════════════════════════════════════════════════ */
-
-function renderPlaytimeStats(games) {
-  const mount = document.getElementById("playtime-section-mount");
-  if (!mount) return;
-  if (games.length === 0) {
-    mount.innerHTML = "";
-    return;
-  }
-
-  const pt = computePlaytimeStats(games);
-  const cat = pt.byCategory;
-
-  const playtimeByCat = [
-    { name: "FFA Casual", sec: cat.ffaCasual.playtimeSec, games: cat.ffaCasual.games, color: "#ff7a00" },
-    { name: "1v1", sec: cat.ffaRanked.playtimeSec, games: cat.ffaRanked.games, color: "#d97706" },
-    { name: "Team Casual", sec: cat.teamCasual.playtimeSec, games: cat.teamCasual.games, color: "#10b981" },
-    { name: "2v2", sec: cat.teamRanked.playtimeSec, games: cat.teamRanked.games, color: "#a855f7" },
-  ];
-
-  mount.innerHTML = `
-    <div class="stats-section">
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </span>
-        <div>
-          <h2>Temps de jeu</h2>
-          <p>Toutes parties confondues (publiques, privées, solo)</p>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
-        <div class="playtime-hero">
-          <div class="playtime-hero-label">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Temps de jeu total
-          </div>
-          <div class="playtime-hero-value">${formatDuration(pt.totalPlaytimeSec)}</div>
-          <div class="playtime-hero-sub">${pt.totalGames} parties · moyenne ${formatDuration(pt.avgGameDurationSec)} / partie</div>
-        </div>
-        <div class="chart-card">
-          <h3>Temps par catégorie</h3>
-          <p>Heures jouées par mode</p>
-          <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
-            ${playtimeByCat.map((c) => `
-              <div>
-                <div class="playtime-breakdown-label">
-                  <span>${esc(c.name)}</span>
-                  <span>${c.sec > 0 ? formatDurationCompact(c.sec) : "—"}</span>
-                </div>
-                <div class="playtime-breakdown-bar">
-                  <div class="playtime-breakdown-fill" style="width:${pt.totalPlaytimeSec > 0 ? (c.sec / pt.totalPlaytimeSec) * 100 : 0}%;background:${c.color}"></div>
-                </div>
-                <div class="playtime-breakdown-sub">${c.games} parties</div>
-              </div>
-            `).join("")}
-          </div>
-        </div>
-      </div>
-      <div class="stats-grid" style="margin-top:14px">
-        <div class="stat-tile">
-          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="stat-tile-label">Durée moyenne</span></div>
-          <div class="stat-tile-value">${formatDuration(pt.avgGameDurationSec)}</div>
-        </div>
-        <div class="stat-tile">
-          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><span class="stat-tile-label">Partie la plus longue</span></div>
-          <div class="stat-tile-value">${formatDuration(pt.longestGameSec)}</div>
-        </div>
-        <div class="stat-tile">
-          <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div>
-          <div class="stat-tile-value">${formatPct(pt.results.victory / Math.max(1, pt.results.victory + pt.results.defeat))}</div>
-          <div class="stat-tile-sub">${pt.results.victory}V / ${pt.results.defeat}D</div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-/* ════════════════════════════════════════════════════════════════
-   ACTIVITY STATS (heatmap + by hour + by weekday)
-   ════════════════════════════════════════════════════════════════ */
-
-function renderActivityStats(games) {
-  const mount = document.getElementById("activity-section-mount");
-  if (!mount || games.length === 0) { if (mount) mount.innerHTML = ""; return; }
-
-  const pt = computePlaytimeStats(games);
-
-  // Build 90-day heatmap
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const days = [];
-  for (let i = 90; i >= 0; i--) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
-    const key = new Intl.DateTimeFormat("fr-FR", {
-      timeZone: "Europe/Paris", day: "2-digit", month: "2-digit", year: "numeric",
-    }).format(d);
-    const entry = pt.byDay.find((b) => b.date === key);
-    days.push({ date: d, count: entry?.count ?? 0, playtimeSec: entry?.playtimeSec ?? 0 });
-  }
-  const maxCount = Math.max(...days.map((d) => d.count), 1);
-  const totalGames = days.reduce((s, d) => s + d.count, 0);
-  const activeDays = days.filter((d) => d.count > 0).length;
-
-  const colorFor = (count) => {
-    if (count === 0) return "var(--border, #F3F4F6)";
-    const ratio = count / maxCount;
-    if (ratio < 0.25) return "#ffe8d1";
-    if (ratio < 0.5) return "#ffc88a";
-    if (ratio < 0.75) return "#ffa14d";
-    return "#ff7a00";
-  };
-
-  // Group into weeks
-  const weeks = [];
-  for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
-
-  // By hour bars
-  const maxHour = Math.max(...pt.byHour, 1);
-  const peakHour = pt.byHour.indexOf(maxHour);
-  const hourBars = pt.byHour.map((count, hour) => {
-    const h = Math.max(1, (count / maxHour) * 100);
-    return `<div class="activity-bar-row" title="${hour}h — ${count} parties">
-      <div class="activity-bars-row" style="height:80px;align-items:flex-end">
-        <div class="activity-bar" style="height:${h}%;width:100%"></div>
-      </div>
-      <div class="activity-bar-label">${hour % 3 === 0 ? hour + 'h' : ''}</div>
-    </div>`;
-  }).join("");
-
-  // By weekday bars
-  const wdLabels = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
-  const maxWd = Math.max(...pt.byWeekday, 1);
-  const peakDay = wdLabels[pt.byWeekday.indexOf(maxWd)];
-  const wdBars = pt.byWeekday.map((count, i) => {
-    const h = Math.max(1, (count / maxWd) * 100);
-    return `<div class="activity-bar-row" title="${wdLabels[i]} — ${count} parties">
-      <div class="activity-bars-row" style="height:80px;align-items:flex-end">
-        <div class="activity-bar" style="height:${h}%;width:100%;background:#10b981"></div>
-      </div>
-      <div class="activity-bar-label">${wdLabels[i]}</div>
-    </div>`;
-  }).join("");
-
-  mount.innerHTML = `
-    <div class="stats-section">
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </span>
-        <div>
-          <h2>Activité</h2>
-          <p>Quand le joueur joue le plus</p>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px">
-        <div class="activity-chart-card">
-          <h3 class="activity-chart-title">Activité par jour</h3>
-          <p class="activity-chart-subtitle">Répartition par jour de la semaine</p>
-          <div class="activity-bars">${wdBars}</div>
-          <p class="activity-chart-footer">Jour préféré: <strong>${peakDay}</strong> (${maxWd} parties)</p>
-        </div>
-      </div>
-      <div class="activity-heatmap-wrap">
-        <div class="activity-heatmap-header">
-          <div>
-            <h3 class="activity-heatmap-title">90 derniers jours</h3>
-            <p class="activity-heatmap-subtitle">${totalGames} parties sur ${activeDays} jours actifs</p>
-          </div>
-          <div class="activity-heatmap-legend">
-            <span>Moins</span>
-            ${["#F3F4F6", "#ffe8d1", "#ffc88a", "#ffa14d", "#ff7a00"].map((c) => `<span class="activity-heatmap-legend-cell" style="background:${c}"></span>`).join("")}
-            <span>Plus</span>
-          </div>
-        </div>
-        <div class="activity-heatmap-grid">
-          ${weeks.map((week) => `
-            <div class="activity-heatmap-week">
-              ${week.map((day) => {
-                const dateStr = day.date.toLocaleDateString("fr-FR");
-                const title = `${dateStr} — ${day.count} parties · ${formatDurationCompact(day.playtimeSec)}`;
-                return `<div class="activity-heatmap-day" title="${title}" style="background:${colorFor(day.count)}"></div>`;
-              }).join("")}
-            </div>
-          `).join("")}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-/* ════════════════════════════════════════════════════════════════
-   MAP STATS TABLE
-   ════════════════════════════════════════════════════════════════ */
-
-function renderMapStatsTable(games) {
-  const mount = document.getElementById("map-stats-section-mount");
-  if (!mount || games.length === 0) { if (mount) mount.innerHTML = ""; return; }
-
-  const pt = computePlaytimeStats(games);
-  if (pt.byMap.length === 0) { mount.innerHTML = ""; return; }
-
-  mount.innerHTML = `
-    <div class="stats-section">
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-        </span>
-        <div>
-          <h2>Statistiques par carte</h2>
-          <p>${pt.byMap.length} cartes jouées · triées par nombre de parties</p>
-        </div>
-      </div>
-      <div class="map-stats-table-wrap">
-        <div class="map-stats-sort-row">
-          <span class="map-stats-sort-label">Trier par:</span>
-          ${[
-            { key: "count", label: "Parties" },
-            { key: "winRate", label: "Winrate" },
-            { key: "avgDuration", label: "Durée moy." },
-            { key: "playtimeSec", label: "Temps total" },
-          ].map((s) => `<button class="map-stats-sort-btn ${_mapStatsSortBy === s.key ? 'active' : ''}" data-sort="${s.key}">${s.label}</button>`).join("")}
-        </div>
-        <div class="map-stats-table-scroll">
-          <table class="map-stats-table" id="map-stats-table-inner">
-          </table>
-        </div>
-        <div class="map-stats-show-more" id="map-stats-show-more"></div>
-      </div>
-    </div>
-  `;
-
-  // Wire sort buttons
-  mount.querySelectorAll(".map-stats-sort-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      _mapStatsSortBy = btn.dataset.sort;
-      _mapStatsShowAll = false;
-      renderMapStatsTable(games);
-    });
-  });
-
-  // Render table rows
-  const tableEl = document.getElementById("map-stats-table-inner");
-  if (!tableEl) return;
-
-  const sorted = [...pt.byMap].sort((a, b) => {
-    if (_mapStatsSortBy === "count") return b.count - a.count;
-    if (_mapStatsSortBy === "winRate") return b.winRate - a.winRate;
-    if (_mapStatsSortBy === "avgDuration") return b.avgDuration - a.avgDuration;
-    return b.playtimeSec - a.playtimeSec;
-  });
-  const displayed = _mapStatsShowAll ? sorted : sorted.slice(0, 10);
-
-  tableEl.innerHTML = `
-    <thead>
-      <tr>
-        <th>Carte</th>
-        <th style="text-align:right">Parties</th>
-        <th style="text-align:right">V</th>
-        <th style="text-align:right">D</th>
-        <th style="text-align:right">Winrate</th>
-        <th style="text-align:right">Durée moy.</th>
-        <th style="text-align:right">Temps total</th>
-        <th style="text-align:right">Dernière</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${displayed.map((m) => {
-        const wrColor = m.winRate >= 0.6 ? "#10b981" : m.winRate >= 0.4 ? "#d97706" : "#ef4444";
-        return `
-          <tr>
-            <td class="map-name">${esc(m.map)}</td>
-            <td class="num">${m.count}</td>
-            <td class="num" style="color:#10b981">${m.wins}</td>
-            <td class="num" style="color:#ef4444">${m.losses}</td>
-            <td class="num" style="color:${wrColor};font-weight:700">${formatPct(m.winRate)}</td>
-            <td class="num">${m.avgDuration > 0 ? formatDurationCompact(m.avgDuration) : "—"}</td>
-            <td class="num">${m.playtimeSec > 0 ? formatDurationCompact(m.playtimeSec) : "—"}</td>
-            <td class="num" style="font-size:11px;color:var(--text3)">${m.lastPlayed > 0 ? new Intl.DateTimeFormat("fr-FR",{day:"2-digit",month:"2-digit",year:"2-digit"}).format(new Date(m.lastPlayed)) : "—"}</td>
-          </tr>
-        `;
-      }).join("")}
-    </tbody>
-  `;
-
-  // Show more button
-  const showMoreEl = document.getElementById("map-stats-show-more");
-  if (showMoreEl && sorted.length > 10) {
-    showMoreEl.innerHTML = `<button id="map-stats-toggle">${_mapStatsShowAll ? "Voir moins" : `Voir les ${sorted.length} cartes`}</button>`;
-    const toggleBtn = showMoreEl.querySelector("button");
-    if (toggleBtn) {
-      toggleBtn.addEventListener("click", () => {
-        _mapStatsShowAll = !_mapStatsShowAll;
-        renderMapStatsTable(games);
-      });
-    }
-  }
-}
 
 /* ════════════════════════════════════════════════════════════════
    GAME DETAIL MODAL — opens when clicking a recent game row
@@ -2008,62 +1531,11 @@ function closeGameModal() {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   RECENT GAMES FULL LIST (20 most recent)
+   [COCKPIT-REDESIGN] renderRecentGamesFull was removed — recent games
+   are now rendered inline by renderPrecomputedStats (in the cockpit's
+   bottom full-width section). The game modal (showGameModal / closeGameModal
+   / attachGameRowClickHandlers) is kept as-is for clickable row details.
    ════════════════════════════════════════════════════════════════ */
-
-function renderRecentGamesFull(games) {
-  const mount = document.getElementById("recent-games-full-section-mount");
-  if (!mount || games.length === 0) { if (mount) mount.innerHTML = ""; return; }
-
-  const sorted = [...games]
-    .filter((g) => g.start)
-    .sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime())
-    .slice(0, 20);
-
-  const catLabels = {
-    ffaCasual: "FFA Casual",
-    ffaRanked: "1v1",
-    teamCasual: "Team Casual",
-    teamRanked: "2v2",
-  };
-
-  mount.innerHTML = `
-    <div class="stats-section">
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg>
-        </span>
-        <div>
-          <h2>Parties récentes</h2>
-          <p>${games.length} parties au total · 20 plus récentes · cliquez pour détails</p>
-        </div>
-      </div>
-      <div class="recent-games-list">
-        ${sorted.map((g) => {
-          const cat = classifyGame(g);
-          const resultColor = g.result === "victory" ? "#10b981" : g.result === "defeat" ? "#ef4444" : g.result === "incomplete" ? "#6B7280" : "#9CA3AF";
-          const resultLabel = g.result === "victory" ? "Victoire" : g.result === "defeat" ? "Défaite" : g.result === "incomplete" ? "Incomplet" : (g.result || "—");
-          const dur = g.durationSeconds || g.duration;
-          return `
-            <div class="recent-game-row" data-game-id="${esc(String(g.gameId ?? ""))}" role="button" tabindex="0">
-              <span class="recent-game-dot" style="background:${resultColor}"></span>
-              <div class="recent-game-info">
-                <div class="recent-game-map">${esc(g.map || "Carte inconnue")}</div>
-                <div class="recent-game-meta">${catLabels[cat] || g.mode || "—"} · ${g.totalPlayers || "?"} joueurs</div>
-              </div>
-              <div style="text-align:right;flex-shrink:0">
-                <div class="recent-game-result" style="color:${resultColor}">${resultLabel}</div>
-                <div class="recent-game-date">${g.start ? formatFrenchDate(new Date(g.start).getTime()) : "—"}${dur ? ` · ${formatDurationCompact(Number(dur) || 0)}` : ""}</div>
-              </div>
-            </div>
-          `;
-        }).join("")}
-      </div>
-    </div>
-  `;
-
-  attachGameRowClickHandlers(mount, sorted);
-}
 
 /* ════════════════════════════════════════════════════════════════
    FALLBACK: si onAuthStateChanged ne se déclenche pas (Firebase CDN
@@ -2092,157 +1564,556 @@ setTimeout(() => {
 }, 8000);
 
 /* ════════════════════════════════════════════════════════════════
-   RENDER PRE-COMPUTED STATS (from player-stats/<pid>.json)
-   — instant display, zero calculation
+   COCKPIT HELPERS — count-up animation, progress rings SVG,
+   sparkline SVG, keyboard shortcuts, share-profile action.
+   ════════════════════════════════════════════════════════════════ */
+
+const COCKPIT_CAT_LABELS = { ffaCasual: "FFA Casual", ffaRanked: "1v1", teamCasual: "Team Casual", teamRanked: "2v2" };
+const COCKPIT_CAT_COLORS = { ffaCasual: "#ff7a00", ffaRanked: "#d97706", teamCasual: "#10b981", teamRanked: "#a855f7" };
+const COCKPIT_WEEKDAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
+
+/** Animate a number from 0 to target over `duration` ms (ease-out cubic). */
+function cockpitCountUp(el, target, duration = 1000) {
+  if (!el) return;
+  const targetNum = Number(target);
+  if (!Number.isFinite(targetNum)) return;
+  const start = performance.now();
+  const fmt = (n) => new Intl.NumberFormat("fr-FR").format(Math.round(n));
+  const tick = (now) => {
+    const t = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = fmt(targetNum * eased);
+    if (t < 1) requestAnimationFrame(tick);
+    else el.textContent = fmt(targetNum);
+  };
+  requestAnimationFrame(tick);
+}
+
+/** Build 3 concentric progress rings as an SVG string (Apple Watch style). */
+function cockpitProgressRings(rings) {
+  const size = 168;
+  const cx = size / 2;
+  const cy = size / 2;
+  const stroke = 11;
+  const gap = 3;
+  const radii = [];
+  let r = cx - stroke / 2 - 3;
+  for (let i = 0; i < rings.length; i++) {
+    radii.push(r);
+    r -= (stroke + gap);
+  }
+  const circ = (rad) => 2 * Math.PI * rad;
+  const ringSvgs = rings.map((ring, i) => {
+    const rad = radii[i];
+    const c = circ(rad);
+    const pct = ring.target > 0 ? Math.min(1, ring.value / ring.target) : 0;
+    const offset = c * (1 - pct);
+    return `
+      <circle cx="${cx}" cy="${cy}" r="${rad}" fill="none" stroke="${ring.color}" stroke-opacity="0.13" stroke-width="${stroke}" />
+      <circle cx="${cx}" cy="${cy}" r="${rad}" fill="none" stroke="${ring.color}" stroke-width="${stroke}" stroke-linecap="round"
+        stroke-dasharray="${c.toFixed(2)}" stroke-dashoffset="${c.toFixed(2)}"
+        transform="rotate(-90 ${cx} ${cy})"
+        style="transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${0.1 + i * 0.15}s"
+        data-target-offset="${offset.toFixed(2)}" class="ring-arc" />
+    `;
+  }).join("");
+  const totalPct = rings.length > 0
+    ? Math.round(rings.reduce((s, r) => s + (r.target > 0 ? Math.min(1, r.value / r.target) : 0), 0) / rings.length * 100)
+    : 0;
+  return `
+    <svg viewBox="0 0 ${size} ${size}" class="progress-rings-svg" width="${size}" height="${size}" role="img" aria-label="Anneaux de progression">
+      ${ringSvgs}
+      <text x="${cx}" y="${cy - 2}" text-anchor="middle" class="progress-rings-center-pct">${totalPct}%</text>
+      <text x="${cx}" y="${cy + 18}" text-anchor="middle" class="progress-rings-center-sub">complété</text>
+    </svg>
+  `;
+}
+
+/** Build a small SVG sparkline from an array of 7 numbers. */
+function cockpitSparkline(values) {
+  const w = 220;
+  const h = 64;
+  const pad = 6;
+  const vals = Array.isArray(values) && values.length > 0 ? values.slice(-7) : [0, 0, 0, 0, 0, 0, 0];
+  while (vals.length < 7) vals.unshift(0);
+  const max = Math.max(...vals, 1);
+  const min = Math.min(...vals, 0);
+  const range = max - min || 1;
+  const stepX = (w - pad * 2) / Math.max(1, vals.length - 1);
+  const pts = vals.map((v, i) => ({
+    x: pad + i * stepX,
+    y: h - pad - ((v - min) / range) * (h - pad * 2 - 8) - 4,
+  }));
+  const linePath = pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(2)},${p.y.toFixed(2)}`).join(" ");
+  const areaPath = `${linePath} L${pts[pts.length - 1].x.toFixed(2)},${h - pad} L${pts[0].x.toFixed(2)},${h - pad} Z`;
+  let totalLength = 0;
+  for (let i = 1; i < pts.length; i++) {
+    totalLength += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
+  }
+  return `
+    <svg viewBox="0 0 ${w} ${h}" class="sparkline-svg" width="100%" height="${h}" preserveAspectRatio="none" role="img" aria-label="Activité 7 derniers jours">
+      <defs>
+        <linearGradient id="cockpit-spark-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ff7a00" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#ff7a00" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <path d="${areaPath}" fill="url(#cockpit-spark-grad)" />
+      <path d="${linePath}" fill="none" stroke="#ff7a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="${totalLength.toFixed(2)}" stroke-dashoffset="${totalLength.toFixed(2)}"
+        style="transition: stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.25s"
+        data-target-offset="0" class="sparkline-path" />
+      ${pts.map((p, i) => `<circle cx="${p.x.toFixed(2)}" cy="${p.y.toFixed(2)}" r="${i === pts.length - 1 ? 3 : 0}" fill="#ff7a00" />`).join("")}
+    </svg>
+  `;
+}
+
+/** Wire up keyboard shortcuts (g=games, m=maps, s=skins, r=recent, Esc=modal). */
+function setupCockpitKeyboardShortcuts() {
+  if (window._cockpitKbInit) return;
+  window._cockpitKbInit = true;
+  document.addEventListener("keydown", (e) => {
+    const tag = (e.target?.tagName || "").toLowerCase();
+    if (tag === "input" || tag === "textarea" || e.target?.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const k = e.key.toLowerCase();
+    if (k === "g" || k === "r") {
+      const el = document.getElementById("cockpit-recent-games");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (k === "m") {
+      const el = document.getElementById("cockpit-maps-section");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (k === "s") {
+      const el = document.getElementById("reward-code-section");
+      if (el && el.children.length > 0) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+}
+
+/** Copy the current profile URL to clipboard. */
+function cockpitShareProfile() {
+  const pid = _rewardCardState.publicId || (currentProfile && currentProfile.publicId) || viewingPublicId;
+  const url = pid ? `${window.location.origin}${window.location.pathname}?pid=${encodeURIComponent(pid)}` : window.location.href;
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(url).then(
+      () => showToast("Lien du profil copié !", "success"),
+      () => showToast("Copie impossible — sélectionne l'URL manuellement", "info")
+    );
+  } else {
+    const tmp = document.createElement("input");
+    tmp.value = url;
+    document.body.appendChild(tmp);
+    tmp.select();
+    try { document.execCommand("copy"); showToast("Lien du profil copié !", "success"); }
+    catch { showToast("Copie impossible", "error"); }
+    document.body.removeChild(tmp);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RENDER PRE-COMPUTED STATS — Cockpit layout
+   (from player-stats/<pid>.json — instant display, zero calculation)
    ════════════════════════════════════════════════════════════════ */
 
 function renderPrecomputedStats(stats, mount) {
   if (!mount || !stats) return;
+  mount.innerHTML = "";
+  setupCockpitKeyboardShortcuts();
 
-  const badge = document.createElement("div");
-  badge.style.cssText = "padding:8px 12px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:8px;font-size:11px;color:#10b981;margin-bottom:12px;display:flex;align-items:center;gap:6px";
+  // ── Synced data badge ──
   const syncedDate = stats.lastSyncedAt ? new Date(stats.lastSyncedAt) : null;
   const syncedStr = syncedDate ? syncedDate.toLocaleString("fr-FR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) : "récemment";
-  badge.innerHTML = `<span>✓</span> Données synchronisées (${stats.totalGames} parties · MAJ ${syncedStr})`;
+  const badge = document.createElement("div");
+  badge.className = "cockpit-sync-badge";
+  badge.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Données synchronisées (${stats.totalGames} parties · MAJ ${syncedStr})`;
   mount.appendChild(badge);
 
-  const pt = stats.playtime;
-  const cat = pt.byCategory;
-  const playtimeByCat = [
-    { name: "FFA Casual", sec: cat.ffaCasual.playtimeSec, games: cat.ffaCasual.games, color: "#ff7a00" },
-    { name: "1v1", sec: cat.ffaRanked.playtimeSec, games: cat.ffaRanked.games, color: "#d97706" },
-    { name: "Team Casual", sec: cat.teamCasual.playtimeSec, games: cat.teamCasual.games, color: "#10b981" },
-    { name: "2v2", sec: cat.teamRanked.playtimeSec, games: cat.teamRanked.games, color: "#a855f7" },
+  // ── Status bar meta (level + playtime + streak chips) ──
+  const metaEl = document.getElementById("cockpit-status-meta");
+  if (metaEl) {
+    const playtimeHours = Math.floor((stats.playtime?.totalSec || 0) / 3600);
+    const streak = stats.streaks?.current || 0;
+    const level = stats.level ?? Math.floor((stats.points || 0) / 100);
+    const flameSvg = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>`;
+    const starSvg = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+    const clockSvg = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
+    metaEl.innerHTML = `
+      <span class="cockpit-chip cockpit-chip-level">${starSvg} Niv. ${level}</span>
+      <span class="cockpit-chip cockpit-chip-playtime">${clockSvg} ${playtimeHours}h</span>
+      <span class="cockpit-chip cockpit-chip-streak ${streak > 0 ? "is-active" : ""}">${flameSvg} ${streak}</span>
+    `;
+  }
+
+  // ── Compute milestone + ring data ──
+  const ms = stats.nextMilestones || {
+    wins: { current: stats.totalWins, target: 100 },
+    playtime: { current: Math.floor((stats.playtime?.totalSec || 0) / 3600), target: 50 },
+    maps: { current: stats.maps?.length || 0, target: 100 },
+  };
+  const playtimeHoursCurrent = Math.floor((stats.playtime?.totalSec || 0) / 3600);
+  const rings = [
+    { label: "Wins", value: ms.wins.current, target: ms.wins.target, color: "#ff7a00" },
+    { label: "Playtime", value: ms.playtime.current ?? playtimeHoursCurrent, target: ms.playtime.target, color: "#c25700" },
+    { label: "Maps", value: ms.maps.current ?? (stats.maps?.length || 0), target: ms.maps.target, color: "#ffa14d" },
   ];
 
-  const playtimeSection = document.createElement("div");
-  playtimeSection.className = "stats-section";
-  playtimeSection.innerHTML = `
-    <div class="stats-section-title">
-      <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-      <div><h2>Temps de jeu</h2><p>Toutes parties confondues (publiques, privées, solo)</p></div>
+  // ── Build the cockpit grid ──
+  const grid = document.createElement("div");
+  grid.className = "cockpit-grid";
+
+  // ─────────── LEFT COLUMN ───────────
+  const leftCol = document.createElement("div");
+  leftCol.className = "cockpit-left";
+
+  // 4 metric widgets
+  const winrateNum = parseInt(String(stats.formatted?.winrate || "0").replace(/\D/g, ""), 10) || 0;
+  const metrics = document.createElement("div");
+  metrics.className = "cockpit-metrics";
+  metrics.innerHTML = `
+    <div class="metric-card" data-metric="wins">
+      <span class="metric-card-label">Wins</span>
+      <span class="metric-card-value" data-countup="${stats.totalWins || 0}">0</span>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
-      <div class="playtime-hero">
-        <div class="playtime-hero-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Temps de jeu total</div>
-        <div class="playtime-hero-value">${stats.formatted.totalPlaytime}</div>
-        <div class="playtime-hero-sub">${stats.totalGames} parties · moyenne ${stats.formatted.avgGameDuration} / partie</div>
-      </div>
-      <div class="chart-card">
-        <h3>Temps par catégorie</h3>
-        <p>Heures jouées par mode</p>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
-          ${playtimeByCat.map((c) => `<div><div class="playtime-breakdown-label"><span>${c.name}</span><span>${c.sec > 0 ? formatDurationCompact(c.sec) : "—"}</span></div><div class="playtime-breakdown-bar"><div class="playtime-breakdown-fill" style="width:${pt.totalSec > 0 ? (c.sec / pt.totalSec) * 100 : 0}%;background:${c.color}"></div></div><div class="playtime-breakdown-sub">${c.games} parties</div></div>`).join("")}
-        </div>
-      </div>
+    <div class="metric-card" data-metric="winrate">
+      <span class="metric-card-label">Winrate</span>
+      <span class="metric-card-value"><span data-countup="${winrateNum}">0</span>%</span>
     </div>
-    <div class="stats-grid" style="margin-top:14px">
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="stat-tile-label">Durée moyenne</span></div><div class="stat-tile-value">${stats.formatted.avgGameDuration}</div></div>
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><span class="stat-tile-label">Partie la plus longue</span></div><div class="stat-tile-value">${stats.formatted.longestGame}</div></div>
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div><div class="stat-tile-value">${stats.formatted.winrate}</div><div class="stat-tile-sub">${stats.results.victory}V / ${stats.results.defeat}D</div></div>
+    <div class="metric-card" data-metric="games">
+      <span class="metric-card-label">Games</span>
+      <span class="metric-card-value" data-countup="${stats.totalGames || 0}">0</span>
+    </div>
+    <div class="metric-card" data-metric="maps">
+      <span class="metric-card-label">Cartes</span>
+      <span class="metric-card-value" data-countup="${stats.maps?.length || 0}">0</span>
     </div>
   `;
-  mount.appendChild(playtimeSection);
+  leftCol.appendChild(metrics);
 
-  // Activity
-  const act = stats.activity;
-  const maxHour = Math.max(...act.byHour, 1);
-  const maxWd = Math.max(...act.byWeekday, 1);
-  const wdLabels = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
-  const activitySection = document.createElement("div");
-  activitySection.className = "stats-section";
-  activitySection.style.marginTop = "24px";
-  activitySection.innerHTML = `
-    <div class="stats-section-title">
-      <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-      <div><h2>Activité</h2><p>Quand le joueur joue le plus</p></div>
+  // Progress rings card
+  const ringsCard = document.createElement("div");
+  ringsCard.className = "cockpit-card cockpit-rings";
+  ringsCard.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>Anneaux de progression</h3>
+      <span class="cockpit-card-sub">Vers le prochain palier</span>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px">
-      <div class="activity-chart-card">
-        <h3 class="activity-chart-title">Activité par jour</h3>
-        <p class="activity-chart-subtitle">Répartition par jour de la semaine</p>
-        <div class="activity-bars">${act.byWeekday.map((count, i) => { const h = Math.max(1, (count / maxWd) * 100); return `<div class="activity-bar-row" title="${wdLabels[i]} — ${count} parties"><div class="activity-bars-row" style="height:80px;align-items:flex-end"><div class="activity-bar" style="height:${h}%;width:100%;background:#10b981"></div></div><div class="activity-bar-label">${wdLabels[i]}</div></div>`; }).join("")}</div>
-        <p class="activity-chart-footer">Jour préféré: <strong>${act.peakWeekday}</strong> (${maxWd} parties)</p>
+    <div class="cockpit-rings-body">
+      <div class="cockpit-rings-svg-wrap">${cockpitProgressRings(rings)}</div>
+      <div class="cockpit-rings-legend">
+        ${rings.map((r) => `
+          <div class="ring-legend-item">
+            <span class="ring-dot" style="background:${r.color}"></span>
+            <span class="ring-legend-label">${r.label}</span>
+            <span class="ring-legend-value">${r.value} / ${r.target}</span>
+          </div>
+        `).join("")}
       </div>
     </div>
   `;
-  mount.appendChild(activitySection);
+  leftCol.appendChild(ringsCard);
 
-  // Heatmap
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  const days = [];
-  for (let i = 90; i >= 0; i--) {
-    const d = new Date(today); d.setDate(d.getDate() - i);
-    const key = new Intl.DateTimeFormat("fr-FR", { timeZone: "Europe/Paris", day: "2-digit", month: "2-digit", year: "numeric" }).format(d);
-    const entry = act.byDay.find((b) => b.date === key);
-    days.push({ date: d, count: entry?.count ?? 0, playtimeSec: entry?.playtimeSec ?? 0 });
-  }
-  const maxCount = Math.max(...days.map((d) => d.count), 1);
-  const totalHeat = days.reduce((s, d) => s + d.count, 0);
-  const activeHeat = days.filter((d) => d.count > 0).length;
-  const colorFor = (count) => { if (count === 0) return "var(--border, #F3F4F6)"; const ratio = count / maxCount; if (ratio < 0.25) return "#ffe8d1"; if (ratio < 0.5) return "#ffc88a"; if (ratio < 0.75) return "#ffa14d"; return "#ff7a00"; };
-  const weeks = [];
-  for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
-  const heatmapDiv = document.createElement("div");
-  heatmapDiv.className = "activity-heatmap-wrap";
-  heatmapDiv.innerHTML = `
-    <div class="activity-heatmap-header">
-      <div><h3 class="activity-heatmap-title">90 derniers jours</h3><p class="activity-heatmap-subtitle">${totalHeat} parties sur ${activeHeat} jours actifs</p></div>
-      <div class="activity-heatmap-legend"><span>Moins</span>${["#F3F4F6", "#ffe8d1", "#ffc88a", "#ffa14d", "#ff7a00"].map((c) => `<span class="activity-heatmap-legend-cell" style="background:${c}"></span>`).join("")}<span>Plus</span></div>
+  // Temps par catégorie
+  const cat = stats.playtime?.byCategory || {};
+  const totalSec = stats.playtime?.totalSec || 0;
+  const catRows = [
+    { key: "ffaCasual", playtimeSec: cat.ffaCasual?.playtimeSec || 0, games: cat.ffaCasual?.games || 0 },
+    { key: "ffaRanked", playtimeSec: cat.ffaRanked?.playtimeSec || 0, games: cat.ffaRanked?.games || 0 },
+    { key: "teamCasual", playtimeSec: cat.teamCasual?.playtimeSec || 0, games: cat.teamCasual?.games || 0 },
+    { key: "teamRanked", playtimeSec: cat.teamRanked?.playtimeSec || 0, games: cat.teamRanked?.games || 0 },
+  ];
+  const catBars = document.createElement("div");
+  catBars.className = "cockpit-card cockpit-cat-bars";
+  catBars.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>Temps par catégorie</h3>
+      <span class="cockpit-card-sub">${stats.formatted?.totalPlaytime || "—"} au total</span>
     </div>
-    <div class="activity-heatmap-grid">${weeks.map((week) => `<div class="activity-heatmap-week">${week.map((day) => { const dateStr = day.date.toLocaleDateString("fr-FR"); return `<div class="activity-heatmap-day" title="${dateStr} — ${day.count} parties · ${formatDurationCompact(day.playtimeSec)}" style="background:${colorFor(day.count)}"></div>`; }).join("")}</div>`).join("")}</div>
+    <div class="cat-bars">
+      ${catRows.map((c) => {
+        const sec = c.playtimeSec;
+        const games = c.games;
+        const pct = totalSec > 0 ? (sec / totalSec) * 100 : 0;
+        const hours = sec / 3600;
+        const hoursStr = hours >= 1 ? `${Math.floor(hours)}h ${Math.floor((hours % 1) * 60)}m` : `${Math.floor(sec / 60)}m`;
+        return `
+          <div class="cat-bar-row">
+            <div class="cat-bar-label">
+              <span>${COCKPIT_CAT_LABELS[c.key] || c.key}</span>
+              <span class="cat-bar-hours">${hoursStr} · ${Math.round(pct)}%</span>
+            </div>
+            <div class="cat-bar-track">
+              <div class="cat-bar-fill" style="width:0%;background:${COCKPIT_CAT_COLORS[c.key] || "#ff7a00"}" data-target-width="${pct.toFixed(2)}"></div>
+            </div>
+            <div class="cat-bar-sub">${games} parties</div>
+          </div>
+        `;
+      }).join("")}
+    </div>
   `;
-  mount.appendChild(heatmapDiv);
+  leftCol.appendChild(catBars);
 
-  // Map stats
-  if (stats.maps && stats.maps.length > 0) {
-    const mapSection = document.createElement("div");
-    mapSection.className = "stats-section";
-    mapSection.style.marginTop = "24px";
-    const maps = stats.maps;
-    const displayed = maps.slice(0, 10);
-    mapSection.innerHTML = `
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span>
-        <div><h2>Statistiques par carte</h2><p>${maps.length} cartes jouées · triées par nombre de parties</p></div>
-      </div>
-      <div class="map-stats-table-wrap">
-        <div class="map-stats-table-scroll">
-          <table class="map-stats-table">
-            <thead><tr><th>Carte</th><th style="text-align:right">Parties</th><th style="text-align:right">V</th><th style="text-align:right">D</th><th style="text-align:right">Winrate</th><th style="text-align:right">Durée moy.</th><th style="text-align:right">Temps total</th><th style="text-align:right">Dernière</th></tr></thead>
-            <tbody>${displayed.map((m) => { const wrColor = m.winRate >= 0.6 ? "#10b981" : m.winRate >= 0.4 ? "#d97706" : "#ef4444"; return `<tr><td class="map-name">${esc(m.map)}</td><td class="num">${m.count}</td><td class="num" style="color:#10b981">${m.wins}</td><td class="num" style="color:#ef4444">${m.losses}</td><td class="num" style="color:${wrColor};font-weight:700">${m.formatted.winRate}</td><td class="num">${m.formatted.avgDuration}</td><td class="num">${m.formatted.playtime}</td><td class="num" style="font-size:11px;color:var(--text3)">${m.formatted.lastPlayed}</td></tr>`; }).join("")}</tbody>
-          </table>
-        </div>
-        ${maps.length > 10 ? `<div class="map-stats-show-more"><button id="map-show-all-btn">Voir les ${maps.length} cartes</button></div>` : ""}
-      </div>
-    `;
-    const showAllBtn = mapSection.querySelector("#map-show-all-btn");
-    if (showAllBtn) {
-      showAllBtn.addEventListener("click", () => {
-        const tbody = mapSection.querySelector("tbody");
-        if (tbody) tbody.innerHTML = maps.map((m) => { const wrColor = m.winRate >= 0.6 ? "#10b981" : m.winRate >= 0.4 ? "#d97706" : "#ef4444"; return `<tr><td class="map-name">${esc(m.map)}</td><td class="num">${m.count}</td><td class="num" style="color:#10b981">${m.wins}</td><td class="num" style="color:#ef4444">${m.losses}</td><td class="num" style="color:${wrColor};font-weight:700">${m.formatted.winRate}</td><td class="num">${m.formatted.avgDuration}</td><td class="num">${m.formatted.playtime}</td><td class="num" style="font-size:11px;color:var(--text3)">${m.formatted.lastPlayed}</td></tr>`; }).join("");
-        showAllBtn.style.display = "none";
-      });
-    }
-    mount.appendChild(mapSection);
-  }
+  // Activité par jour (weekday bars)
+  const wd = stats.activity?.byWeekday || [0, 0, 0, 0, 0, 0, 0];
+  const maxWd = Math.max(...wd, 1);
+  const peakWdIdx = wd.indexOf(Math.max(...wd));
+  const weekdayCard = document.createElement("div");
+  weekdayCard.className = "cockpit-card cockpit-weekday-bars";
+  weekdayCard.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>Activité par jour</h3>
+      <span class="cockpit-card-sub">Pic: ${COCKPIT_WEEKDAYS[peakWdIdx] || "—"} (${maxWd} parties)</span>
+    </div>
+    <div class="weekday-bars">
+      ${wd.map((count, i) => {
+        const h = Math.max(2, (count / maxWd) * 100);
+        const isPeak = i === peakWdIdx && count > 0;
+        return `
+          <div class="weekday-bar-col ${isPeak ? "is-peak" : ""}" title="${COCKPIT_WEEKDAYS[i]} — ${count} parties">
+            <div class="weekday-bar-track">
+              <div class="weekday-bar-fill" style="height:0%" data-target-height="${h.toFixed(2)}"></div>
+            </div>
+            <div class="weekday-bar-label">${COCKPIT_WEEKDAYS[i]}</div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+  leftCol.appendChild(weekdayCard);
 
-  // Recent games
+  grid.appendChild(leftCol);
+
+  // ─────────── RIGHT COLUMN ───────────
+  const rightCol = document.createElement("div");
+  rightCol.className = "cockpit-right";
+
+  // Prochaine action panel
+  const winsRemaining = Math.max(0, ms.wins.target - ms.wins.current);
+  const mapsRemaining = Math.max(0, ms.maps.target - ms.maps.current);
+  const playtimeRemaining = Math.max(0, ms.playtime.target - (ms.playtime.current ?? playtimeHoursCurrent));
+  const actions = [
+    {
+      title: `Atteins ${ms.wins.target} wins`,
+      sub: winsRemaining > 0 ? `${winsRemaining} wins restants` : "Objectif atteint !",
+      icon: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>`,
+    },
+    {
+      title: `Atteins ${ms.playtime.target}h de jeu`,
+      sub: playtimeRemaining > 0 ? `${playtimeRemaining}h restantes` : "Objectif atteint !",
+      icon: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    },
+    {
+      title: `Explore ${ms.maps.target} cartes`,
+      sub: mapsRemaining > 0 ? `${mapsRemaining} cartes restantes` : "Toutes explorées !",
+      icon: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>`,
+    },
+    {
+      title: "Partage ton profil",
+      sub: "Copier le lien",
+      icon: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>`,
+      action: "share",
+    },
+  ];
+  const actionsCard = document.createElement("div");
+  actionsCard.className = "cockpit-card cockpit-actions";
+  actionsCard.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>Prochaine action</h3>
+    </div>
+    <div class="action-list">
+      ${actions.map((a) => `
+        <button type="button" class="action-item ${a.action === "share" ? "action-share" : ""}" ${a.action === "share" ? 'data-action="share"' : ""}>
+          <span class="action-arrow"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          <span class="action-icon">${a.icon}</span>
+          <span class="action-text">
+            <span class="action-title">${esc(a.title)}</span>
+            <span class="action-sub">${esc(a.sub)}</span>
+          </span>
+        </button>
+      `).join("")}
+    </div>
+  `;
+  actionsCard.querySelectorAll(".action-share").forEach((btn) => {
+    btn.addEventListener("click", cockpitShareProfile);
+  });
+  rightCol.appendChild(actionsCard);
+
+  // Level bar
+  const level = stats.level ?? Math.floor((stats.points || 0) / 100);
+  const levelProgress = stats.levelProgress ?? ((stats.points || 0) % 100);
+  const levelPct = Math.min(100, (levelProgress / 100) * 100);
+  const levelCard = document.createElement("div");
+  levelCard.className = "cockpit-card cockpit-level";
+  levelCard.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>Niveau ${level}</h3>
+      <span class="cockpit-card-sub">${levelProgress} / 100 pts → Niv. ${level + 1}</span>
+    </div>
+    <div class="level-bar-track">
+      <div class="level-bar-fill" style="width:0%" data-target-width="${levelPct.toFixed(2)}"></div>
+    </div>
+    <div class="level-bar-stats">
+      <span>${levelProgress} pts</span>
+      <span>${stats.formatted?.points || stats.points || 0} pts total</span>
+    </div>
+  `;
+  rightCol.appendChild(levelCard);
+
+  // Sparkline (7 days)
+  const sparkValues = stats.sparkline7d || [0, 0, 0, 0, 0, 0, 0];
+  const sparkTotal = sparkValues.reduce((s, v) => s + (Number(v) || 0), 0);
+  const sparkCard = document.createElement("div");
+  sparkCard.className = "cockpit-card cockpit-sparkline";
+  sparkCard.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>7 derniers jours</h3>
+      <span class="cockpit-card-sub">${sparkTotal} parties</span>
+    </div>
+    <div class="sparkline-wrap">${cockpitSparkline(sparkValues)}</div>
+    <div class="sparkline-axis">
+      <span>J-6</span><span></span><span></span><span></span><span></span><span></span><span>Auj.</span>
+    </div>
+  `;
+  rightCol.appendChild(sparkCard);
+
+  // Streaks
+  const streakCard = document.createElement("div");
+  streakCard.className = "cockpit-card cockpit-streaks";
+  const curStreak = stats.streaks?.current || 0;
+  const bestStreak = stats.streaks?.best || 0;
+  const flameIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>`;
+  const trophyIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>`;
+  streakCard.innerHTML = `
+    <div class="cockpit-card-header">
+      <h3>Séries</h3>
+    </div>
+    <div class="streaks-grid">
+      <div class="streak-item ${curStreak > 0 ? "is-active" : ""}">
+        <span class="streak-icon">${flameIcon}</span>
+        <span class="streak-label">Actuelle</span>
+        <span class="streak-value" data-countup="${curStreak}">0</span>
+      </div>
+      <div class="streak-item">
+        <span class="streak-icon">${trophyIcon}</span>
+        <span class="streak-label">Record</span>
+        <span class="streak-value" data-countup="${bestStreak}">0</span>
+      </div>
+    </div>
+  `;
+  rightCol.appendChild(streakCard);
+
+  grid.appendChild(rightCol);
+  mount.appendChild(grid);
+
+  // ─────────── RECENT GAMES (full width) ───────────
   if (stats.recentGames && stats.recentGames.length > 0) {
     const recentSection = document.createElement("div");
-    recentSection.className = "stats-section";
-    recentSection.style.marginTop = "24px";
-    const catLabels = { ffaCasual: "FFA Casual", ffaRanked: "1v1", teamCasual: "Team Casual", teamRanked: "2v2" };
+    recentSection.className = "cockpit-card cockpit-recent-games";
+    recentSection.id = "cockpit-recent-games";
+    const recentList = stats.recentGames.slice(0, 20);
     recentSection.innerHTML = `
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg></span>
-        <div><h2>Parties récentes</h2><p>${stats.totalGames} parties au total · 20 plus récentes · cliquez pour détails</p></div>
+      <div class="cockpit-card-header">
+        <h3>Parties récentes</h3>
+        <span class="cockpit-card-sub">${stats.totalGames} au total · clique pour détails</span>
       </div>
-      <div class="recent-games-list">
-        ${stats.recentGames.map((g) => { const resultColor = g.result === "victory" ? "#10b981" : g.result === "defeat" ? "#ef4444" : g.result === "incomplete" ? "#6B7280" : "#9CA3AF"; const resultLabel = g.result === "victory" ? "Victoire" : g.result === "defeat" ? "Défaite" : g.result === "incomplete" ? "Incomplet" : (g.result || "—"); return `<div class="recent-game-row" data-game-id="${esc(String(g.gameId ?? ""))}" role="button" tabindex="0"><span class="recent-game-dot" style="background:${resultColor}"></span><div class="recent-game-info"><div class="recent-game-map">${esc(g.map)}</div><div class="recent-game-meta">${catLabels[g.category] || g.mode || "—"} · ${g.totalPlayers || "?"} joueurs</div></div><div style="text-align:right;flex-shrink:0"><div class="recent-game-result" style="color:${resultColor}">${resultLabel}</div><div class="recent-game-date">${g.start ? formatFrenchDate(new Date(g.start).getTime()) : "—"}${g.durationSeconds ? ` · ${formatDurationCompact(g.durationSeconds)}` : ""}</div></div></div>`; }).join("")}
+      <div class="recent-games-list cockpit-recent-list">
+        ${recentList.map((g) => {
+          const resultColor = g.result === "victory" ? "#10b981" : g.result === "defeat" ? "#ef4444" : "#9CA3AF";
+          const resultLabel = g.result === "victory" ? "Victoire" : g.result === "defeat" ? "Défaite" : (g.result || "—");
+          const dur = g.durationSeconds;
+          const dateStr = g.start ? formatFrenchDate(new Date(g.start).getTime()) : "—";
+          const durStr = dur ? formatDurationCompact(Number(dur) || 0) : "—";
+          return `
+            <div class="recent-game-row" data-game-id="${esc(String(g.gameId ?? ""))}" role="button" tabindex="0">
+              <span class="recent-game-dot" style="background:${resultColor}"></span>
+              <div class="recent-game-info">
+                <div class="recent-game-map">${esc(g.map || "Carte inconnue")}</div>
+                <div class="recent-game-meta">${COCKPIT_CAT_LABELS[g.category] || g.mode || "—"} · ${g.totalPlayers || "?"} joueurs</div>
+              </div>
+              <div class="recent-game-right">
+                <div class="recent-game-result" style="color:${resultColor}">${resultLabel}</div>
+                <div class="recent-game-date">${dateStr} · ${durStr}</div>
+              </div>
+            </div>
+          `;
+        }).join("")}
       </div>
     `;
     mount.appendChild(recentSection);
-    attachGameRowClickHandlers(recentSection, stats.recentGames);
+    attachGameRowClickHandlers(recentSection, recentList);
   }
+
+  // ─────────── MAP STATS (collapsible, full width) ───────────
+  if (stats.maps && stats.maps.length > 0) {
+    const mapSection = document.createElement("div");
+    mapSection.className = "cockpit-card cockpit-maps";
+    mapSection.id = "cockpit-maps-section";
+    const allMaps = stats.maps;
+    const topMaps = allMaps.slice(0, 10);
+    const mapRowHtml = (m) => {
+      const wrColor = m.winRate >= 0.6 ? "#10b981" : m.winRate >= 0.4 ? "#d97706" : "#ef4444";
+      return `<tr><td class="map-name">${esc(m.map)}</td><td class="num">${m.count}</td><td class="num" style="color:#10b981">${m.wins}</td><td class="num" style="color:#ef4444">${m.losses}</td><td class="num" style="color:${wrColor};font-weight:700">${m.formatted.winRate}</td><td class="num">${m.formatted.avgDuration}</td><td class="num" style="font-size:11px;color:var(--text3)">${m.formatted.lastPlayed}</td></tr>`;
+    };
+    mapSection.innerHTML = `
+      <div class="cockpit-card-header">
+        <h3>Statistiques par carte</h3>
+        <span class="cockpit-card-sub">${allMaps.length} cartes jouées</span>
+      </div>
+      <button type="button" id="cockpit-maps-toggle" class="cockpit-maps-toggle" aria-expanded="false">Voir les ${allMaps.length} cartes</button>
+      <div class="cockpit-maps-body" id="cockpit-maps-body">
+        <div class="map-stats-table-wrap">
+          <div class="map-stats-table-scroll">
+            <table class="map-stats-table">
+              <thead><tr><th>Carte</th><th style="text-align:right">Parties</th><th style="text-align:right">V</th><th style="text-align:right">D</th><th style="text-align:right">Winrate</th><th style="text-align:right">Durée moy.</th><th style="text-align:right">Dernière</th></tr></thead>
+              <tbody>${topMaps.map(mapRowHtml).join("")}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    `;
+    mount.appendChild(mapSection);
+
+    // Wire toggle button
+    const toggleBtn = mapSection.querySelector("#cockpit-maps-toggle");
+    const mapsBody = mapSection.querySelector("#cockpit-maps-body");
+    if (toggleBtn && mapsBody) {
+      let expanded = false;
+      toggleBtn.addEventListener("click", () => {
+        expanded = !expanded;
+        mapsBody.classList.toggle("is-open", expanded);
+        toggleBtn.textContent = expanded ? "Masquer les cartes" : `Voir les ${allMaps.length} cartes`;
+        toggleBtn.setAttribute("aria-expanded", String(expanded));
+        if (expanded) {
+          const tbody = mapsBody.querySelector("tbody");
+          if (tbody) tbody.innerHTML = allMaps.map(mapRowHtml).join("");
+        } else {
+          const tbody = mapsBody.querySelector("tbody");
+          if (tbody) tbody.innerHTML = topMaps.map(mapRowHtml).join("");
+        }
+      });
+    }
+  }
+
+  // ── Trigger animations on next frame (count-up, ring arcs, sparkline, bars) ──
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      mount.querySelectorAll("[data-countup]").forEach((el) => {
+        cockpitCountUp(el, parseFloat(el.dataset.countup) || 0, 1100);
+      });
+      mount.querySelectorAll(".ring-arc").forEach((el) => {
+        el.style.strokeDashoffset = el.dataset.targetOffset;
+      });
+      mount.querySelectorAll(".sparkline-path").forEach((el) => {
+        el.style.strokeDashoffset = el.dataset.targetOffset || "0";
+      });
+      mount.querySelectorAll(".cat-bar-fill").forEach((el) => {
+        el.style.width = el.dataset.targetWidth + "%";
+      });
+      mount.querySelectorAll(".weekday-bar-fill").forEach((el) => {
+        el.style.height = el.dataset.targetHeight + "%";
+      });
+      mount.querySelectorAll(".level-bar-fill").forEach((el) => {
+        el.style.width = el.dataset.targetWidth + "%";
+      });
+    });
+  });
 }
