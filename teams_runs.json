@@ -64934,6 +64934,62 @@
       "numPlayers": 28,
       "timestamp": "2026-08-16T11:50:26.762Z",
       "url": "https://openfront.io/game/G5DCgcjy"
+    },
+    {
+      "id": "R2gnDyYi",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "MOHD93",
+          "clientID": "wftKHsZG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "K2M",
+          "clientID": "zsP9H4Bh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Tutorial",
+          "clientID": "AfjRjF7m",
+          "clanTag": "UN"
+        },
+        {
+          "username": "IRA",
+          "clientID": "KTE4tGxJ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 635,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-16T12:10:19.933Z",
+      "url": "https://openfront.io/game/R2gnDyYi"
+    },
+    {
+      "id": "c2K7G3yS",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "ivo",
+          "clientID": "v2u9wjcF",
+          "clanTag": null
+        },
+        {
+          "username": "X I V",
+          "clientID": "S9auW5YA",
+          "clanTag": "UMMAH"
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 1488,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-16T12:07:56.294Z",
+      "url": "https://openfront.io/game/c2K7G3yS"
     }
   ]
 }
