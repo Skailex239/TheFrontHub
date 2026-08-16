@@ -13595,6 +13595,29 @@
       "numPlayers": 39,
       "timestamp": "2026-08-16T10:39:31.517Z",
       "url": "https://openfront.io/game/HheQ21MP"
+    },
+    {
+      "id": "xMicJfuM",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Moldova",
+          "clientID": "9VzVMMQV",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Ace",
+          "clientID": "JU3hFfNj",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1124,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-16T11:05:03.059Z",
+      "url": "https://openfront.io/game/xMicJfuM"
     }
   ],
   "trios": [
@@ -37011,6 +37034,52 @@
       "numPlayers": 60,
       "timestamp": "2026-08-16T10:53:58.881Z",
       "url": "https://openfront.io/game/vMjhX2Gw"
+    },
+    {
+      "id": "vm9ECUaB",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Moon",
+          "clientID": "5t5cQroQ",
+          "clanTag": null
+        },
+        {
+          "username": "uRx",
+          "clientID": "kAtuBdoa",
+          "clanTag": "BEAU"
+        },
+        {
+          "username": "MADNESS",
+          "clientID": "uPZVF6TD",
+          "clanTag": null
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 1410,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-16T11:01:09.830Z",
+      "url": "https://openfront.io/game/vm9ECUaB"
+    },
+    {
+      "id": "2zmVB5tj",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "8i8",
+          "clientID": "3mM1VHCM",
+          "clanTag": "ARTT"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 2353,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-16T10:45:23.878Z",
+      "url": "https://openfront.io/game/2zmVB5tj"
     }
   ],
   "quads": [
