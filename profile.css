@@ -1154,12 +1154,12 @@
    L'overlay de lave s'affiche à droite du pseudo dans le profil.
    ════════════════════════════════════════════════════════════════ */
 
-.pf-player-name.has-overlay {
+.pf-player-name span.has-overlay {
   position: relative;
   display: inline-block;
   padding-right: 140px;
 }
-.pf-player-name.has-overlay::after {
+.pf-player-name span.has-overlay::after {
   content: "";
   position: absolute;
   right: 0;
@@ -1175,17 +1175,17 @@
   z-index: 0;
   border-radius: 0 8px 8px 0;
 }
-.pf-player-name.has-overlay > * {
+.pf-player-name span.has-overlay > * {
   position: relative;
   z-index: 1;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .pf-player-name.has-overlay {
+  .pf-player-name span.has-overlay {
     padding-right: 90px;
   }
-  .pf-player-name.has-overlay::after {
+  .pf-player-name span.has-overlay::after {
     width: 90px;
   }
 }
