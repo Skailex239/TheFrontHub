@@ -1,8 +1,8 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-16T20:09:16.191Z",
-  "lastSyncedAt": "2026-08-16T20:09:14.040Z",
+  "computedAt": "2026-08-16T20:12:31.467Z",
+  "lastSyncedAt": "2026-08-16T20:12:29.677Z",
   "totalGames": 3695,
   "careerWins": {
     "ffaCasual": 261,
@@ -46,7 +46,7 @@
     "totalPlaytimeCompact": "30j 4h",
     "avgGameDuration": "11m 46s",
     "longestGame": "2h 53m",
-    "winrate": "57%",
+    "winrate": "52%",
     "totalPlaytimeHours": "724h"
   },
   "playtime": {
@@ -79,7 +79,8 @@
   },
   "results": {
     "victory": 1917,
-    "defeat": 1451
+    "defeat": 1451,
+    "incomplete": 327
   },
   "maps": [
     {
@@ -2333,17 +2334,6 @@
       "category": "ffaCasual"
     },
     {
-      "gameId": "XZa9KxbX",
-      "start": "2026-08-15T21:40:01.449Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 3,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
       "gameId": "HZrKrbTc",
       "start": "2026-08-15T21:20:59.003Z",
       "map": "Australia",
@@ -2373,6 +2363,17 @@
       "result": "defeat",
       "durationSeconds": 1378,
       "totalPlayers": 57,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "aoWUptpR",
+      "start": "2026-08-15T19:06:36.828Z",
+      "map": "Dyslexdria",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1464,
+      "totalPlayers": 58,
       "rankedType": "unranked",
       "category": "teamCasual"
     }

@@ -1,8 +1,8 @@
 {
   "publicId": "tqMGOI2Q",
   "username": "Zwiper.2734",
-  "computedAt": "2026-08-16T20:09:16.766Z",
-  "lastSyncedAt": "2026-08-16T20:09:13.259Z",
+  "computedAt": "2026-08-16T20:12:31.981Z",
+  "lastSyncedAt": "2026-08-16T20:12:28.979Z",
   "totalGames": 1980,
   "careerWins": {
     "ffaCasual": 239,
@@ -46,7 +46,7 @@
     "totalPlaytimeCompact": "19j 4h",
     "avgGameDuration": "13m 57s",
     "longestGame": "2h 47m",
-    "winrate": "41%",
+    "winrate": "34%",
     "totalPlaytimeHours": "460h"
   },
   "playtime": {
@@ -79,7 +79,8 @@
   },
   "results": {
     "victory": 675,
-    "defeat": 956
+    "defeat": 956,
+    "incomplete": 349
   },
   "maps": [
     {
@@ -2123,17 +2124,6 @@
       "category": "teamRanked"
     },
     {
-      "gameId": "BZkDDUCc",
-      "start": "2026-08-11T09:12:27.057Z",
-      "map": "Asia",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 3,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
       "gameId": "VLRKKLu4",
       "start": "2026-08-11T09:01:53.431Z",
       "map": "Asia",
@@ -2141,17 +2131,6 @@
       "result": "victory",
       "durationSeconds": 374,
       "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "jKhiK6b5",
-      "start": "2026-08-11T09:00:53.860Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 3,
       "rankedType": "2v2",
       "category": "teamRanked"
     },
@@ -2231,6 +2210,28 @@
       "totalPlayers": 50,
       "rankedType": "unranked",
       "category": "ffaCasual"
+    },
+    {
+      "gameId": "Q5SyN31p",
+      "start": "2026-07-05T08:25:18.558Z",
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 978,
+      "totalPlayers": 63,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "z61xAQpz",
+      "start": "2026-07-04T21:21:00.522Z",
+      "map": "Britannia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 650,
+      "totalPlayers": 44,
+      "rankedType": "unranked",
+      "category": "teamCasual"
     }
   ]
 }

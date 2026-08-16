@@ -1,8 +1,8 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-16T20:09:15.234Z",
-  "lastSyncedAt": "2026-08-16T20:09:13.761Z",
+  "computedAt": "2026-08-16T20:12:30.718Z",
+  "lastSyncedAt": "2026-08-16T20:12:29.427Z",
   "totalGames": 3033,
   "careerWins": {
     "ffaCasual": 492,
@@ -46,7 +46,7 @@
     "totalPlaytimeCompact": "30j 19h",
     "avgGameDuration": "14m 37s",
     "longestGame": "9h 22m",
-    "winrate": "49%",
+    "winrate": "40%",
     "totalPlaytimeHours": "739h"
   },
   "playtime": {
@@ -79,7 +79,8 @@
   },
   "results": {
     "victory": 1200,
-    "defeat": 1242
+    "defeat": 1242,
+    "incomplete": 591
   },
   "maps": [
     {
@@ -1965,39 +1966,6 @@
   },
   "recentGames": [
     {
-      "gameId": "ELe3Fe21",
-      "start": "2026-08-16T18:41:25.259Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 3124,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "ECpnRykU",
-      "start": "2026-08-16T18:36:52.988Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 219,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "esbvtmwD",
-      "start": "2026-08-15T08:40:20.824Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 396,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
       "gameId": "bpaKV9cX",
       "start": "2026-08-15T08:16:20.719Z",
       "map": "Arctic",
@@ -2018,17 +1986,6 @@
       "totalPlayers": 44,
       "rankedType": "unranked",
       "category": "teamCasual"
-    },
-    {
-      "gameId": "xGQnjguS",
-      "start": "2026-08-14T16:44:59.147Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 527,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     },
     {
       "gameId": "KrBrZvuR",
@@ -2062,61 +2019,6 @@
       "totalPlayers": 59,
       "rankedType": "unranked",
       "category": "ffaCasual"
-    },
-    {
-      "gameId": "w429cxxY",
-      "start": "2026-08-13T13:20:38.095Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 43,
-      "totalPlayers": null,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "qJBhNuJY",
-      "start": "2026-08-13T13:19:31.013Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 3,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "7n39oj1G",
-      "start": "2026-08-13T13:18:30.950Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 2,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "ScbqEfE7",
-      "start": "2026-08-13T13:17:30.878Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 2,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "VzvsaNJf",
-      "start": "2026-08-13T13:16:31.813Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 2,
-      "rankedType": "2v2",
-      "category": "teamRanked"
     },
     {
       "gameId": "QVWy5ndv",
@@ -2183,6 +2085,105 @@
       "totalPlayers": 49,
       "rankedType": "unranked",
       "category": "teamCasual"
+    },
+    {
+      "gameId": "e1pKkpUq",
+      "start": "2026-08-11T21:02:30.863Z",
+      "map": "Irish Sea",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 36,
+      "totalPlayers": 1,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "3KcKShnz",
+      "start": "2026-08-11T16:43:26.613Z",
+      "map": "Irish Sea",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 830,
+      "totalPlayers": 37,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "E6Rj8GH2",
+      "start": "2026-08-11T06:49:10.597Z",
+      "map": "Europe",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 966,
+      "totalPlayers": 77,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "3ywHXG2S",
+      "start": "2026-08-11T06:16:47.472Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 321,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "zgcRsHk5",
+      "start": "2026-08-11T05:58:40.897Z",
+      "map": "Europe Classic",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 148,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "a2hntMfz",
+      "start": "2026-08-11T05:47:28.041Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 632,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "Zdc2LUpo",
+      "start": "2026-08-11T05:43:03.277Z",
+      "map": "Iceland",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 226,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "eqMLgpxU",
+      "start": "2026-08-09T14:43:11.728Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 414,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "Md5qGdoN",
+      "start": "2026-08-09T14:25:34.658Z",
+      "map": "Asia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 411,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
     }
   ]
 }

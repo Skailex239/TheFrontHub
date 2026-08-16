@@ -1,8 +1,8 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-16T20:09:17.214Z",
-  "lastSyncedAt": "2026-08-16T20:09:14.283Z",
+  "computedAt": "2026-08-16T20:12:32.325Z",
+  "lastSyncedAt": "2026-08-16T20:12:29.928Z",
   "totalGames": 2143,
   "careerWins": {
     "ffaCasual": 371,
@@ -46,7 +46,7 @@
     "totalPlaytimeCompact": "22j 14h",
     "avgGameDuration": "15m 11s",
     "longestGame": "2h 40m",
-    "winrate": "44%",
+    "winrate": "37%",
     "totalPlaytimeHours": "542h"
   },
   "playtime": {
@@ -79,7 +79,8 @@
   },
   "results": {
     "victory": 794,
-    "defeat": 1028
+    "defeat": 1028,
+    "incomplete": 321
   },
   "maps": [
     {
@@ -2174,17 +2175,6 @@
       "category": "teamCasual"
     },
     {
-      "gameId": "sYtGSZYw",
-      "start": "2026-08-16T13:11:43.606Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 482,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
       "gameId": "ouM4pTAD",
       "start": "2026-08-16T13:02:34.085Z",
       "map": "Asia",
@@ -2225,17 +2215,6 @@
       "result": "victory",
       "durationSeconds": 1155,
       "totalPlayers": 45,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "T2PLtDDV",
-      "start": "2026-08-16T09:16:20.972Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 90,
-      "totalPlayers": null,
       "rankedType": "unranked",
       "category": "ffaCasual"
     },
@@ -2357,6 +2336,28 @@
       "result": "defeat",
       "durationSeconds": 1532,
       "totalPlayers": 55,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "jMQa9W6N",
+      "start": "2026-08-15T13:36:13.168Z",
+      "map": "South America",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1533,
+      "totalPlayers": 58,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "mHLapJHq",
+      "start": "2026-08-15T13:06:47.932Z",
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1434,
+      "totalPlayers": 63,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }

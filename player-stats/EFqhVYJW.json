@@ -1,8 +1,8 @@
 {
   "publicId": "EFqhVYJW",
   "username": "EFqhVYJW",
-  "computedAt": "2026-08-16T20:09:14.456Z",
-  "lastSyncedAt": "2026-08-16T20:09:13.473Z",
+  "computedAt": "2026-08-16T20:12:30.084Z",
+  "lastSyncedAt": "2026-08-16T20:12:29.157Z",
   "totalGames": 337,
   "careerWins": {
     "ffaCasual": 14,
@@ -46,7 +46,7 @@
     "totalPlaytimeCompact": "2j 16h",
     "avgGameDuration": "11m 32s",
     "longestGame": "2h 13m",
-    "winrate": "53%",
+    "winrate": "45%",
     "totalPlaytimeHours": "64h"
   },
   "playtime": {
@@ -79,7 +79,8 @@
   },
   "results": {
     "victory": 150,
-    "defeat": 132
+    "defeat": 132,
+    "incomplete": 55
   },
   "maps": [
     {
@@ -1171,72 +1172,6 @@
       "category": "teamRanked"
     },
     {
-      "gameId": "a5siqYqa",
-      "start": "2026-08-05T16:07:52.149Z",
-      "map": "Asia",
-      "mode": "Team",
-      "result": "incomplete",
-      "durationSeconds": 31,
-      "totalPlayers": 3,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "y61sYJqQ",
-      "start": "2026-07-07T16:05:27.577Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 483,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "cJ2mw2ji",
-      "start": "2026-07-07T15:50:38.182Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 831,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "keqRuFY8",
-      "start": "2026-07-07T15:37:29.904Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 786,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "yp5nraJC",
-      "start": "2026-07-07T13:04:46.808Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 553,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "Xgc5mH7Q",
-      "start": "2026-07-07T12:56:15.827Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 452,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
       "gameId": "eEY4qUEF",
       "start": "2026-07-07T12:41:18.441Z",
       "map": "Australia",
@@ -1255,28 +1190,6 @@
       "result": "victory",
       "durationSeconds": 493,
       "totalPlayers": 3,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "1sznrRDR",
-      "start": "2026-07-07T12:00:47.083Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 1232,
-      "totalPlayers": null,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "aY9nxxkk",
-      "start": "2026-07-07T11:59:25.991Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "incomplete",
-      "durationSeconds": 68,
-      "totalPlayers": null,
       "rankedType": "unranked",
       "category": "ffaCasual"
     },
@@ -1378,6 +1291,94 @@
       "totalPlayers": 49,
       "rankedType": "unranked",
       "category": "ffaCasual"
+    },
+    {
+      "gameId": "3hTsT32A",
+      "start": "2026-07-03T21:51:31.744Z",
+      "map": "Strait of Hormuz",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 617,
+      "totalPlayers": 62,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "YWgyjnjy",
+      "start": "2026-07-03T21:40:29.583Z",
+      "map": "Nile Delta",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 439,
+      "totalPlayers": 64,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "d5Z86Bru",
+      "start": "2026-06-29T21:34:23.260Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 435,
+      "totalPlayers": 1,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "PJzQHXFV",
+      "start": "2026-06-29T21:26:33.175Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 394,
+      "totalPlayers": 1,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "yUuDK667",
+      "start": "2026-06-29T20:43:51.645Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 458,
+      "totalPlayers": 1,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "qRCrDkMr",
+      "start": "2026-06-29T16:30:07.378Z",
+      "map": "Africa",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1334,
+      "totalPlayers": 53,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "QfjugHuP",
+      "start": "2026-06-28T17:30:46.261Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 707,
+      "totalPlayers": 7,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "kqfu42Sk",
+      "start": "2026-06-28T17:23:04.320Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 425,
+      "totalPlayers": 8,
+      "rankedType": "unranked",
+      "category": "teamCasual"
     }
   ]
 }
