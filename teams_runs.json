@@ -37379,6 +37379,57 @@
       "numPlayers": 23,
       "timestamp": "2026-08-16T14:18:00.588Z",
       "url": "https://openfront.io/game/E8fVsQot"
+    },
+    {
+      "id": "pfVukSsx",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Dr.Varvas",
+          "clientID": "2dacDJtb",
+          "clanTag": null
+        },
+        {
+          "username": "I love fullsending",
+          "clientID": "WLqwo8rq",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 603,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-16T14:43:08.097Z",
+      "url": "https://openfront.io/game/pfVukSsx"
+    },
+    {
+      "id": "Q6TjBvPH",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Gorzow Wielkopolski",
+          "clientID": "SiEXcps6",
+          "clanTag": "PL"
+        },
+        {
+          "username": "Niorault",
+          "clientID": "P6qndZV4",
+          "clanTag": null
+        },
+        {
+          "username": "Barnowko",
+          "clientID": "YuGMyhe7",
+          "clanTag": "PL"
+        }
+      ],
+      "map": "World",
+      "duration_s": 789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-16T14:42:42.578Z",
+      "url": "https://openfront.io/game/Q6TjBvPH"
     }
   ],
   "quads": [
@@ -65411,6 +65462,39 @@
       "numPlayers": 40,
       "timestamp": "2026-08-16T14:25:01.985Z",
       "url": "https://openfront.io/game/7bYb5tRa"
+    },
+    {
+      "id": "p1yGUm78",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "LUX",
+          "clientID": "DY2Ngxyp",
+          "clanTag": null
+        },
+        {
+          "username": "sign crushes motorist",
+          "clientID": "2GuMhAjp",
+          "clanTag": "67"
+        },
+        {
+          "username": "Anon912",
+          "clientID": "rCtc9SBH",
+          "clanTag": null
+        },
+        {
+          "username": "sultan masaad",
+          "clientID": "r8ezJu14",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1024,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-16T14:35:24.642Z",
+      "url": "https://openfront.io/game/p1yGUm78"
     }
   ]
 }
