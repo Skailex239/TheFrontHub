@@ -1,0 +1,111 @@
+name: Sync Player Games
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Sync continue des parties par joueur.
+#
+# Pour chaque joueur dans sync-players.json:
+#   - Première sync: récupère TOUTES les parties (full, lent)
+#   - Syncs suivantes: ne récupère que les nouvelles (incremental, rapide)
+#   - Stocke dans player-data/<publicId>.json
+#
+# Boucle continue via self-retrigger (comme sync.yml):
+#   - Le job retrigger relance ce workflow à la fin → 24/7
+#   - cancel-in-progress: true évite l'accumulation
+#   - cron */15 est un filet de sécurité
+#
+# Déclenchement manuel:
+#   - Paramètre player-public-id pour sync un joueur spécifique
+#   - Paramètre force-full pour forcer une sync complète
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # safety net every 15 min
+  workflow_dispatch:
+    inputs:
+      player-public-id:
+        description: "Public ID d'un joueur à sync (ex: tqMGOI2Q). Vide = tous les joueurs de sync-players.json"
+        required: false
+        type: string
+      force-full:
+        description: "Forcer une sync complète (ignore le cache)"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: sync-player-games
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run player games sync
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.player-public-id }}" ]; then
+            ARGS="${{ inputs.player-public-id }}"
+          fi
+          if [ "${{ inputs.force-full }}" = "true" ]; then
+            ARGS="--full $ARGS"
+          fi
+          echo "[workflow] Running: node sync-player-games.js $ARGS"
+          node sync-player-games.js $ARGS
+        env:
+          SKAILEX_ACCESS_TOKEN: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+
+      - name: Commit and push player data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p player-data
+          # Add all player data files (JSON)
+          git add player-data/*.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "[workflow] No changes to commit"; exit 0; }
+          git commit -m "[auto] sync player games"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && echo "[workflow] Pushed!" && exit 0
+            echo "[workflow] Retrying push ($i)..."
+            sleep 5
+          done
+          echo "[workflow] Failed to push after 5 attempts"
+
+  retrigger:
+    needs: sync
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    if: always()
+    steps:
+      - name: Retrigger this workflow (continuous loop)
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // Only retrigger if this wasn't a manual dispatch (avoid infinite manual loops)
+            const event = context.eventName;
+            if (event === 'workflow_dispatch') {
+              console.log('Manual dispatch — not retriggering');
+              return;
+            }
+            console.log('Auto-retriggering sync-player-games workflow');
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'sync-player-games.yml',
+              ref: 'main'
+            });
