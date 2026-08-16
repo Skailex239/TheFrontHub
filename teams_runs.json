@@ -35936,6 +35936,62 @@
       "numPlayers": 43,
       "timestamp": "2026-08-15T22:54:33.846Z",
       "url": "https://openfront.io/game/MkvuGvNU"
+    },
+    {
+      "id": "LECsNGa5",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Suco",
+          "clientID": "LHJLKn98",
+          "clanTag": "123"
+        },
+        {
+          "username": "Arbmu",
+          "clientID": "YcXEPyNY",
+          "clanTag": "123"
+        },
+        {
+          "username": "SucideCommando",
+          "clientID": "LBjPBnts",
+          "clanTag": "123"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 479,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "timestamp": "2026-08-15T23:49:16.622Z",
+      "url": "https://openfront.io/game/LECsNGa5"
+    },
+    {
+      "id": "WWoakF4j",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "KDR72",
+          "clientID": "LUd8Jkhg",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Ezbaze",
+          "clientID": "iAf8FA88",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonTurkey3",
+          "clientID": "9tpzgtLD",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1183,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-15T23:34:31.729Z",
+      "url": "https://openfront.io/game/WWoakF4j"
     }
   ],
   "quads": [
@@ -62645,6 +62701,34 @@
       "numPlayers": 28,
       "timestamp": "2026-08-15T23:39:01.515Z",
       "url": "https://openfront.io/game/d5GgeJMx"
+    },
+    {
+      "id": "6SWNgNaw",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BIG MOMMA",
+          "clientID": "QM5ckjAD",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonClay6",
+          "clientID": "xrEaXJ44",
+          "clanTag": "NU"
+        },
+        {
+          "username": "RAW",
+          "clientID": "KUGGqte4",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1295,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-15T23:44:50.879Z",
+      "url": "https://openfront.io/game/6SWNgNaw"
     }
   ]
 }
