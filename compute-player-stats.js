@@ -175,7 +175,7 @@ function computeStats(games, statsTree) {
   const byHour = new Array(24).fill(0);
   const byWeekday = new Array(7).fill(0);
   const byDayMap = new Map();
-  const results = { victory: 0, defeat: 0 };
+  const results = { victory: 0, defeat: 0, incomplete: 0 };
   const mapAgg = new Map();
 
   for (const g of games) {
@@ -217,10 +217,11 @@ function computeStats(games, statsTree) {
       }
     }
 
-    // Only count victory/defeat in results — incomplete games excluded entirely
+    // Count all results (victory + defeat + incomplete) — incomplete is used
+    // in the winrate denominator to match the in-game winrate (V / total games)
     if (g.result === "victory") results.victory++;
     else if (g.result === "defeat") results.defeat++;
-    // incomplete / other: skipped from results count
+    else if (g.result === "incomplete") results.incomplete++;
 
     // Map stats: exclude incomplete games entirely (only count victory + defeat)
     if (g.result === "victory" || g.result === "defeat") {
@@ -341,7 +342,7 @@ function computeAchievements(pt) {
 
 function getRecentGames(games, n = 20) {
   return [...games]
-    .filter((g) => g.start)
+    .filter((g) => g.start && g.result && g.result !== "incomplete")
     .sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime())
     .slice(0, n)
     .map((g) => ({
@@ -419,7 +420,7 @@ function computePlayerStats(publicId) {
       totalPlaytimeCompact: formatDurationCompact(pt.totalPlaytimeSec),
       avgGameDuration: formatDuration(pt.avgGameDurationSec),
       longestGame: formatDuration(pt.longestGameSec),
-      winrate: formatPct(pt.results.victory / Math.max(1, pt.results.victory + pt.results.defeat)),
+      winrate: formatPct(pt.results.victory / Math.max(1, pt.results.victory + pt.results.defeat + pt.results.incomplete)),
       totalPlaytimeHours: `${Math.floor(totalPlaytimeHours)}h`,
     },
 
