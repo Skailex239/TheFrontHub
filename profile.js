@@ -1745,11 +1745,22 @@ function renderPrecomputedStats(stats, mount) {
   }
 
   // ── Compute milestone + ring data ──
-  const ms = stats.nextMilestones || {
-    wins: { current: stats.totalWins, target: 100 },
-    playtime: { current: Math.floor((stats.playtime?.totalSec || 0) / 3600), target: 50 },
-    maps: { current: stats.maps?.length || 0, target: 100 },
-  };
+  const ms = stats.nextMilestones || (() => {
+    // Fallback: compute next milestone dynamically (next multiple above current)
+    const winsCurrent = stats.totalWins || 0;
+    const playtimeCurrent = Math.floor((stats.playtime?.totalSec || 0) / 3600);
+    const mapsCurrent = stats.maps?.length || 0;
+    const nextMult = (val, step) => {
+      if (val <= 0) return step;
+      const m = Math.ceil(val / step) * step;
+      return m > val ? m : m + step;
+    };
+    return {
+      wins: { current: winsCurrent, target: nextMult(winsCurrent, 50) },
+      playtime: { current: playtimeCurrent, target: nextMult(playtimeCurrent, 50) },
+      maps: { current: mapsCurrent, target: nextMult(mapsCurrent, 10) },
+    };
+  })();
   const playtimeHoursCurrent = Math.floor((stats.playtime?.totalSec || 0) / 3600);
   const rings = [
     { label: "Wins", value: ms.wins.current, target: ms.wins.target, color: "#ff7a00" },
