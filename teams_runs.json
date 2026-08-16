@@ -14137,6 +14137,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T21:04:50.441Z",
       "url": "https://openfront.io/game/w5Gi34tg"
+    },
+    {
+      "id": "s7n4TW3H",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "MarcioJunior",
+          "clientID": "Zk9NavCe",
+          "clanTag": "BR"
+        },
+        {
+          "username": "SHARKOS",
+          "clientID": "FQqh3CzN",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1206,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "timestamp": "2026-08-16T21:41:51.133Z",
+      "url": "https://openfront.io/game/s7n4TW3H"
     }
   ],
   "trios": [
@@ -67348,6 +67371,39 @@
       "numPlayers": 83,
       "timestamp": "2026-08-16T21:33:02.378Z",
       "url": "https://openfront.io/game/MDiCHAzh"
+    },
+    {
+      "id": "UgcZPoBu",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Army",
+          "clientID": "qCGQuZDb",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTemple9",
+          "clientID": "W3pVpUGE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRooster7",
+          "clientID": "6gqgMyCd",
+          "clanTag": "EUNE"
+        },
+        {
+          "username": "AnonOwl6",
+          "clientID": "v1QJz6Pz",
+          "clanTag": "EUNE"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 933,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-16T21:50:52.701Z",
+      "url": "https://openfront.io/game/UgcZPoBu"
     }
   ]
 }
