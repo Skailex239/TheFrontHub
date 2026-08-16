@@ -36983,6 +36983,34 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T10:35:16.262Z",
       "url": "https://openfront.io/game/ZkfoAFcV"
+    },
+    {
+      "id": "vMjhX2Gw",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Anon999",
+          "clientID": "MW4Pd2eh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Nagash",
+          "clientID": "Cwz6XPhJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "test01",
+          "clientID": "mR677Sob",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1144,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-16T10:53:58.881Z",
+      "url": "https://openfront.io/game/vMjhX2Gw"
     }
   ],
   "quads": [
@@ -64674,6 +64702,39 @@
       "numPlayers": 92,
       "timestamp": "2026-08-16T10:41:23.629Z",
       "url": "https://openfront.io/game/FGhRdHoT"
+    },
+    {
+      "id": "6rx9TZ7z",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Keki",
+          "clientID": "79wXNaeA",
+          "clanTag": "RUS"
+        },
+        {
+          "username": "F3nIk",
+          "clientID": "HP2FpQaE",
+          "clanTag": "RUS"
+        },
+        {
+          "username": "LEPEN",
+          "clientID": "YtaZEQgV",
+          "clanTag": "RUS"
+        },
+        {
+          "username": "AnonZebra2",
+          "clientID": "q3zfYH3R",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1214,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-16T10:56:07.510Z",
+      "url": "https://openfront.io/game/6rx9TZ7z"
     }
   ]
 }
