@@ -14068,6 +14068,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-16T19:14:54.823Z",
       "url": "https://openfront.io/game/cpNZL6mv"
+    },
+    {
+      "id": "mG2s5nXh",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Kaladin",
+          "clientID": "DHsvByLe",
+          "clanTag": "ROMAN"
+        },
+        {
+          "username": "Gale",
+          "clientID": "4dgv2R3o",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 578,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-16T20:06:30.929Z",
+      "url": "https://openfront.io/game/mG2s5nXh"
     }
   ],
   "trios": [
@@ -38308,6 +38331,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-16T19:41:42.927Z",
       "url": "https://openfront.io/game/3FpP6hgw"
+    },
+    {
+      "id": "kb5pYCqF",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Kiram to sepahi",
+          "clientID": "5DV5wv4u",
+          "clanTag": "MIGA"
+        },
+        {
+          "username": "Trader",
+          "clientID": "eicmhawL",
+          "clanTag": "MIGA"
+        },
+        {
+          "username": "Forward",
+          "clientID": "z9rwtJM8",
+          "clanTag": "MIGA"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1941,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-16T19:37:57.703Z",
+      "url": "https://openfront.io/game/kb5pYCqF"
     }
   ],
   "quads": [
@@ -66846,6 +66897,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-16T18:57:13.241Z",
       "url": "https://openfront.io/game/kTWSfpRX"
+    },
+    {
+      "id": "ivoTct94",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "NanasLilMan",
+          "clientID": "nZTqyad5",
+          "clanTag": null
+        },
+        {
+          "username": "Raceba",
+          "clientID": "v7jo3fKK",
+          "clanTag": null
+        },
+        {
+          "username": "ErnieMTB",
+          "clientID": "39HW8HhT",
+          "clanTag": "MTB"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1488,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-16T19:46:28.725Z",
+      "url": "https://openfront.io/game/ivoTct94"
     }
   ]
 }
