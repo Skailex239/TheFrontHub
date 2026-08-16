@@ -502,14 +502,13 @@ async function loadStats(publicId) {
     }
 
     // Recent games — fetched from /public/player/{id}/games (separate endpoint).
+    // Used only for the weekly chart now — the full recent games list
+    // is rendered by renderRecentGamesFull via loadAllGamesForStats().
     try {
-      const recentGames = await recentGamesPromise;
-      renderRecentGames(recentGames, publicId);
+      await recentGamesPromise;
       renderWeeklyChart();
     } catch (e) {
       console.error("[profile] recent games fetch failed:", e);
-      const c = document.getElementById("profile-recent-games");
-      if (c) c.innerHTML = `<div class="pf-empty">Impossible de charger les parties récentes.</div>`;
     }
   })();
 }
@@ -640,57 +639,6 @@ function hideError() {
 }
 
 /* ── Recent games ── */
-
-/**
- * Render recent games from /public/player/{id}/games endpoint.
- * Each game already includes a `result` field ("victory" | "defeat" | other)
- * so no per-game fetch is needed.
- *
- * Game object structure:
- *   { gameId, start, durationSeconds, map, mode, type, playerTeams,
- *     rankedType, result, totalPlayers, username, clanTag }
- */
-function renderRecentGames(games, publicId) {
-  const container = document.getElementById("profile-recent-games");
-  if (!container) return;
-
-  // Sort by start date desc, take last 10 (API returns 10 per page)
-  const sorted = games
-    .slice()
-    .sort((a, b) => new Date(b.start || 0).getTime() - new Date(a.start || 0).getTime())
-    .slice(0, 10);
-
-  if (sorted.length === 0) {
-    container.innerHTML = `<div class="pf-empty">Aucune partie récente.</div>`;
-    return;
-  }
-
-  container.innerHTML = sorted.map((g) => {
-    const isWin = g.result === "victory";
-    const resultClass = isWin ? "win" : "loss";
-    const resultLabel = isWin ? "VICTOIRE" : (g.result === "defeat" ? "DÉFAITE" : (g.result || "—"));
-    const duration = g.durationSeconds ? formatDuration(g.durationSeconds) : "—";
-    const modeLabel = formatGameMode(g);
-    const mapName = g.map || "Carte inconnue";
-    const rankedBadge = g.rankedType && g.rankedType !== "unranked"
-      ? `<span class="pf-game-ranked">${esc(g.rankedType)}</span>` : "";
-    const totalPlayers = g.totalPlayers != null ? `${g.totalPlayers} joueurs` : "";
-
-    return `
-      <div class="pf-game-card ${resultClass}">
-        <div class="pf-game-result">${resultLabel}</div>
-        <div class="pf-game-info">
-          <div class="pf-game-map">${esc(mapName)} ${rankedBadge}</div>
-          <div class="pf-game-meta">${esc(modeLabel)}${totalPlayers ? ' · ' + esc(totalPlayers) : ''} · ${duration}</div>
-          <div class="pf-game-meta">${formatDateTime(g.start)}</div>
-        </div>
-        <a class="pf-game-replay" href="https://openfront.io/game/${encodeURIComponent(g.gameId)}" target="_blank" rel="noopener" title="Voir le replay">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </a>
-      </div>
-    `;
-  }).join("");
-}
 
 /** Format duration in seconds as M:SS or H:MM:SS */
 function formatDuration(seconds) {
@@ -1435,8 +1383,8 @@ function renderCareerStats(statsTree, publicId) {
     { label: "Points", value: formatPoints(points), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', color: "#c25700", bg: "rgba(255,122,0,0.12)" },
     { label: "Wins FFA Casual", value: formatPoints(careerWins.ffaCasual), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/><path d="M16 16l4 4"/><path d="M19 21l2-2"/></svg>', color: "#ff7a00", bg: "rgba(255,122,0,0.12)" },
     { label: "Wins Team Casual", value: formatPoints(careerWins.teamCasual), icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', color: "#10b981", bg: "rgba(16,185,129,0.12)" },
-    { label: "Wins Classé 1v1", value: formatPoints(ranked1v1), sub: r1Total > 0 ? `${formatPct(ranked1v1 / r1Total)} (${r1Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>', color: "#d97706", bg: "rgba(217,119,6,0.12)" },
-    { label: "Wins Classé 2v2", value: formatPoints(ranked2v2), sub: r2Total > 0 ? `${formatPct(ranked2v2 / r2Total)} (${r2Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', color: "#a855f7", bg: "rgba(168,85,247,0.12)" },
+    { label: "Wins 1v1", value: formatPoints(ranked1v1), sub: r1Total > 0 ? `${formatPct(ranked1v1 / r1Total)} (${r1Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>', color: "#d97706", bg: "rgba(217,119,6,0.12)" },
+    { label: "Wins 2v2", value: formatPoints(ranked2v2), sub: r2Total > 0 ? `${formatPct(ranked2v2 / r2Total)} (${r2Total} games)` : "—", icon: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', color: "#a855f7", bg: "rgba(168,85,247,0.12)" },
   ];
 
   container.innerHTML = `
@@ -1473,7 +1421,6 @@ function renderCareerStats(statsTree, publicId) {
     <div id="playtime-section-mount"></div>
     <div id="activity-section-mount"></div>
     <div id="map-stats-section-mount"></div>
-    <div id="achievements-section-mount"></div>
     <div id="recent-games-full-section-mount"></div>
   `;
 
@@ -1488,8 +1435,8 @@ function renderWinsChart(careerWins) {
   const data = [
     { name: "FFA Casual", value: careerWins.ffaCasual, color: "#ff7a00" },
     { name: "Team Casual", value: careerWins.teamCasual, color: "#10b981" },
-    { name: "1v1 Classé", value: careerWins.ffaRanked, color: "#d97706" },
-    { name: "2v2 Classé", value: careerWins.teamRanked, color: "#a855f7" },
+    { name: "1v1", value: careerWins.ffaRanked, color: "#d97706" },
+    { name: "2v2", value: careerWins.teamRanked, color: "#a855f7" },
   ].filter((d) => d.value > 0);
 
   if (data.length === 0) {
@@ -1561,7 +1508,6 @@ async function loadAllGamesForStats(publicId) {
         renderPlaytimeStats(syncData.games);
         renderActivityStats(syncData.games);
         renderMapStatsTable(syncData.games);
-        renderAchievements(syncData.games);
         renderRecentGamesFull(syncData.games);
         // Show a small "synced data" badge
         if (mount) {
@@ -1591,7 +1537,6 @@ async function loadAllGamesForStats(publicId) {
         renderPlaytimeStats(parsed.games);
         renderActivityStats(parsed.games);
         renderMapStatsTable(parsed.games);
-        renderAchievements(parsed.games);
         renderRecentGamesFull(parsed.games);
         _allGamesLoading = false;
         return;
@@ -1650,7 +1595,6 @@ async function loadAllGamesForStats(publicId) {
         renderPlaytimeStats(allGames);
         renderActivityStats(allGames);
         renderMapStatsTable(allGames);
-        renderAchievements(allGames);
         renderRecentGamesFull(allGames);
         lastRenderAt = Date.now();
       }
@@ -1666,7 +1610,6 @@ async function loadAllGamesForStats(publicId) {
     renderPlaytimeStats(allGames);
     renderActivityStats(allGames);
     renderMapStatsTable(allGames);
-    renderAchievements(allGames);
     renderRecentGamesFull(allGames);
   } catch (e) {
     console.error("[profile] loadAllGamesForStats error:", e);
@@ -1689,21 +1632,13 @@ function renderPlaytimeStats(games) {
   }
 
   const pt = computePlaytimeStats(games);
-  const v = pt.byVisibility;
-  const totalVis = v.public + v.private + v.singleplayer || 1;
   const cat = pt.byCategory;
-
-  const visData = [
-    { name: "Publiques", value: v.public, color: "#ff7a00" },
-    { name: "Privées", value: v.private, color: "#a855f7" },
-    { name: "Solo", value: v.singleplayer, color: "#3b82f6" },
-  ].filter((d) => d.value > 0);
 
   const playtimeByCat = [
     { name: "FFA Casual", sec: cat.ffaCasual.playtimeSec, games: cat.ffaCasual.games, color: "#ff7a00" },
-    { name: "FFA Classé", sec: cat.ffaRanked.playtimeSec, games: cat.ffaRanked.games, color: "#d97706" },
+    { name: "1v1", sec: cat.ffaRanked.playtimeSec, games: cat.ffaRanked.games, color: "#d97706" },
     { name: "Team Casual", sec: cat.teamCasual.playtimeSec, games: cat.teamCasual.games, color: "#10b981" },
-    { name: "Team Classé", sec: cat.teamRanked.playtimeSec, games: cat.teamRanked.games, color: "#a855f7" },
+    { name: "2v2", sec: cat.teamRanked.playtimeSec, games: cat.teamRanked.games, color: "#a855f7" },
   ];
 
   mount.innerHTML = `
@@ -1717,7 +1652,7 @@ function renderPlaytimeStats(games) {
           <p>Toutes parties confondues (publiques, privées, solo)</p>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
         <div class="playtime-hero">
           <div class="playtime-hero-label">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -1727,26 +1662,9 @@ function renderPlaytimeStats(games) {
           <div class="playtime-hero-sub">${pt.totalGames} parties · moyenne ${formatDuration(pt.avgGameDurationSec)} / partie</div>
         </div>
         <div class="chart-card">
-          <h3>Répartition par visibilité</h3>
-          <p>${pt.totalGames} parties au total</p>
-          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-            ${visData.map((d) => `
-              <div>
-                <div class="playtime-breakdown-label">
-                  <span>${esc(d.name)}</span>
-                  <span>${d.value} (${formatPct(d.value / totalVis)})</span>
-                </div>
-                <div class="playtime-breakdown-bar">
-                  <div class="playtime-breakdown-fill" style="width:${(d.value / totalVis) * 100}%;background:${d.color}"></div>
-                </div>
-              </div>
-            `).join("")}
-          </div>
-        </div>
-        <div class="chart-card">
           <h3>Temps par catégorie</h3>
           <p>Heures jouées par mode</p>
-          <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
             ${playtimeByCat.map((c) => `
               <div>
                 <div class="playtime-breakdown-label">
@@ -1774,7 +1692,7 @@ function renderPlaytimeStats(games) {
         <div class="stat-tile">
           <div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div>
           <div class="stat-tile-value">${formatPct(pt.results.victory / Math.max(1, pt.results.victory + pt.results.defeat))}</div>
-          <div class="stat-tile-sub">${pt.results.victory}V / ${pt.results.defeat}D / ${pt.results.incomplete} incomplètes</div>
+          <div class="stat-tile-sub">${pt.results.victory}V / ${pt.results.defeat}D</div>
         </div>
       </div>
     </div>
@@ -2004,82 +1922,89 @@ function renderMapStatsTable(games) {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   ACHIEVEMENTS + STREAKS
+   GAME DETAIL MODAL — opens when clicking a recent game row
    ════════════════════════════════════════════════════════════════ */
 
-function renderAchievements(games) {
-  const mount = document.getElementById("achievements-section-mount");
-  if (!mount || games.length === 0) { if (mount) mount.innerHTML = ""; return; }
+/** Attach click handlers to all [data-game-id] rows inside `container`. */
+function attachGameRowClickHandlers(container, games) {
+  if (!container) return;
+  const rows = container.querySelectorAll('[data-game-id]');
+  rows.forEach((row) => {
+    const open = () => {
+      const id = row.getAttribute('data-game-id');
+      const game = games.find((g) => String(g.gameId) === id);
+      if (game) showGameModal(game);
+    };
+    row.addEventListener('click', (e) => {
+      if (e.target.closest('a, button')) return;
+      open();
+    });
+    row.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        open();
+      }
+    });
+  });
+}
 
-  const pt = computePlaytimeStats(games);
-  // Career wins from games (approximation — better to use the aggregated stats)
-  const careerWins = { ffaCasual: 0, ffaRanked: 0, teamCasual: 0, teamRanked: 0 };
-  for (const g of games) {
-    if (g.result !== "victory") continue;
-    const cat = classifyGame(g);
-    careerWins[cat]++;
+/** Show a modal with detailed info about a single game. */
+function showGameModal(game) {
+  let modal = document.getElementById('game-detail-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'game-detail-modal';
+    modal.className = 'game-modal-overlay';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML = `
+      <div class="game-modal">
+        <button class="game-modal-close" aria-label="Fermer" type="button">&times;</button>
+        <div class="game-modal-content"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.closest('.game-modal-close')) {
+        closeGameModal();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeGameModal();
+    });
   }
-  const totalW = totalWins(careerWins);
-  const distinctMaps = pt.byMap.length;
-  const activeDays = pt.byDay.filter((d) => d.count > 0).length;
-  const playtimeHours = pt.totalPlaytimeSec / 3600;
 
-  const achievements = [
-    { id: "first-win", name: "Première victoire", desc: "Remporte ta 1ère partie", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>', unlocked: totalW >= 1 },
-    { id: "ten-wins", name: "Décathlon", desc: "Remporte 10 parties", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', unlocked: totalW >= 10, progress: totalW >= 10 ? null : { current: totalW, target: 10 } },
-    { id: "hundred-wins", name: "Centurion", desc: "Remporte 100 parties", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', unlocked: totalW >= 100, progress: totalW >= 100 ? null : { current: totalW, target: 100 } },
-    { id: "marathon", name: "Marathonien", desc: "Joue plus de 24h au total", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>', unlocked: playtimeHours >= 24, progress: playtimeHours >= 24 ? null : { current: Math.floor(playtimeHours), target: 24 } },
-    { id: "weekend", name: "Assidu", desc: "Joue 7 jours différents", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>', unlocked: activeDays >= 7, progress: activeDays >= 7 ? null : { current: activeDays, target: 7 } },
-    { id: "cartographer", name: "Cartographe", desc: "Joue 10 cartes différentes", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>', unlocked: distinctMaps >= 10, progress: distinctMaps >= 10 ? null : { current: distinctMaps, target: 10 } },
-    { id: "streak5", name: "En feu", desc: "Fais une série de 5 victoires", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>', unlocked: pt.bestStreak >= 5, progress: pt.bestStreak >= 5 ? null : { current: pt.bestStreak, target: 5 } },
-    { id: "streak10", name: "Intouchable", desc: "Fais une série de 10 victoires", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>', unlocked: pt.bestStreak >= 10, progress: pt.bestStreak >= 10 ? null : { current: pt.bestStreak, target: 10 } },
-    { id: "polyvalent", name: "Polyvalent", desc: "Gagne dans les 4 catégories", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>', unlocked: careerWins.ffaCasual > 0 && careerWins.ffaRanked > 0 && careerWins.teamCasual > 0 && careerWins.teamRanked > 0 },
-    { id: "night-owl", name: "Oiseau de nuit", desc: "Joue après minuit (0h-4h)", icon: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>', unlocked: pt.byHour.slice(0, 4).some((c) => c > 0) },
-  ];
+  const cat = classifyGame(game);
+  const catLabels = { ffaCasual: "FFA Casual", ffaRanked: "1v1", teamCasual: "Team Casual", teamRanked: "2v2" };
+  const resultColor = game.result === "victory" ? "#10b981" : game.result === "defeat" ? "#ef4444" : game.result === "incomplete" ? "#6B7280" : "#9CA3AF";
+  const resultLabel = game.result === "victory" ? "Victoire" : game.result === "defeat" ? "Défaite" : game.result === "incomplete" ? "Incomplet" : (game.result || "—");
+  const duration = game.durationSeconds || game.duration;
+  const startDate = game.start ? formatFrenchDate(new Date(game.start).getTime()) : "—";
+  const replayUrl = game.gameId ? `https://openfront.io/game/${encodeURIComponent(game.gameId)}` : null;
 
-  const unlockedCount = achievements.filter((a) => a.unlocked).length;
-
-  mount.innerHTML = `
-    <div class="stats-section">
-      <div class="stats-section-title">
-        <span class="stats-section-title-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        </span>
-        <div>
-          <h2>Succès & séries</h2>
-          <p>Récompenses débloquées et séries de victoires</p>
-        </div>
-      </div>
-      <div class="streak-cards">
-        <div class="streak-card ${pt.currentStreak > 0 ? 'active' : ''}">
-          <div style="font-size:22px;margin-bottom:4px;color:#ff7a00"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
-          <div class="streak-card-value">${pt.currentStreak}</div>
-          <div class="streak-card-label">Série actuelle</div>
-        </div>
-        <div class="streak-card">
-          <div style="font-size:22px;margin-bottom:4px;color:#d97706"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
-          <div class="streak-card-value" style="color:#d97706">${pt.bestStreak}</div>
-          <div class="streak-card-label">Meilleure série</div>
-        </div>
-      </div>
-      <div class="chart-card">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-          <h3 style="margin:0;font-size:14px;font-weight:700">Succès</h3>
-          <span style="font-size:12px;color:var(--text3)">${unlockedCount}/${achievements.length} débloqués</span>
-        </div>
-        <div class="achievements-grid">
-          ${achievements.map((a) => `
-            <div class="achievement-card ${a.unlocked ? 'unlocked' : ''}">
-              ${a.unlocked ? `<div class="achievement-icon">${a.icon}</div>` : `<div class="achievement-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>`}
-              <div class="achievement-name">${esc(a.name)}</div>
-              <div class="achievement-desc">${esc(a.desc)}</div>
-              ${a.progress && !a.unlocked ? `<div class="achievement-progress">${a.progress.current}/${a.progress.target}</div>` : ''}
-            </div>
-          `).join("")}
-        </div>
-      </div>
+  const content = modal.querySelector('.game-modal-content');
+  content.innerHTML = `
+    <div class="game-modal-result-badge" style="background:${resultColor}">${esc(resultLabel)}</div>
+    <h3 class="game-modal-map">${esc(game.map || "Carte inconnue")}</h3>
+    <div class="game-modal-rows">
+      <div class="game-modal-row"><span class="game-modal-row-label">Mode</span><span class="game-modal-row-value">${esc(catLabels[cat] || game.mode || "—")}</span></div>
+      <div class="game-modal-row"><span class="game-modal-row-label">Type classé</span><span class="game-modal-row-value">${esc(game.rankedType || "—")}</span></div>
+      <div class="game-modal-row"><span class="game-modal-row-label">Durée</span><span class="game-modal-row-value">${duration ? formatDurationCompact(Number(duration) || 0) : "—"}</span></div>
+      <div class="game-modal-row"><span class="game-modal-row-label">Joueurs</span><span class="game-modal-row-value">${game.totalPlayers != null ? esc(String(game.totalPlayers)) : "—"}</span></div>
+      <div class="game-modal-row"><span class="game-modal-row-label">Date</span><span class="game-modal-row-value">${esc(startDate)}</span></div>
+      <div class="game-modal-row"><span class="game-modal-row-label">Game ID</span><span class="game-modal-row-value game-modal-gameid">${esc(String(game.gameId || "—"))}</span></div>
     </div>
+    ${replayUrl ? `<a class="game-modal-replay" href="${replayUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Voir le replay sur OpenFront</a>` : ""}
   `;
+
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGameModal() {
+  const modal = document.getElementById('game-detail-modal');
+  if (modal) modal.classList.remove('is-open');
+  document.body.style.overflow = '';
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -2097,9 +2022,9 @@ function renderRecentGamesFull(games) {
 
   const catLabels = {
     ffaCasual: "FFA Casual",
-    ffaRanked: "FFA Classé",
+    ffaRanked: "1v1",
     teamCasual: "Team Casual",
-    teamRanked: "Team Classé",
+    teamRanked: "2v2",
   };
 
   mount.innerHTML = `
@@ -2110,7 +2035,7 @@ function renderRecentGamesFull(games) {
         </span>
         <div>
           <h2>Parties récentes</h2>
-          <p>${games.length} parties au total · 20 plus récentes</p>
+          <p>${games.length} parties au total · 20 plus récentes · cliquez pour détails</p>
         </div>
       </div>
       <div class="recent-games-list">
@@ -2120,7 +2045,7 @@ function renderRecentGamesFull(games) {
           const resultLabel = g.result === "victory" ? "Victoire" : g.result === "defeat" ? "Défaite" : g.result === "incomplete" ? "Incomplet" : (g.result || "—");
           const dur = g.durationSeconds || g.duration;
           return `
-            <div class="recent-game-row">
+            <div class="recent-game-row" data-game-id="${esc(String(g.gameId ?? ""))}" role="button" tabindex="0">
               <span class="recent-game-dot" style="background:${resultColor}"></span>
               <div class="recent-game-info">
                 <div class="recent-game-map">${esc(g.map || "Carte inconnue")}</div>
@@ -2136,6 +2061,8 @@ function renderRecentGamesFull(games) {
       </div>
     </div>
   `;
+
+  attachGameRowClickHandlers(mount, sorted);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -2180,19 +2107,12 @@ function renderPrecomputedStats(stats, mount) {
   mount.appendChild(badge);
 
   const pt = stats.playtime;
-  const vis = pt.byVisibility;
-  const totalVis = (vis.public || 0) + (vis.private || 0) + (vis.singleplayer || 0) || 1;
   const cat = pt.byCategory;
-  const visData = [
-    { name: "Publiques", value: vis.public || 0, color: "#ff7a00" },
-    { name: "Privées", value: vis.private || 0, color: "#a855f7" },
-    { name: "Solo", value: vis.singleplayer || 0, color: "#3b82f6" },
-  ].filter((d) => d.value > 0);
   const playtimeByCat = [
     { name: "FFA Casual", sec: cat.ffaCasual.playtimeSec, games: cat.ffaCasual.games, color: "#ff7a00" },
-    { name: "FFA Classé", sec: cat.ffaRanked.playtimeSec, games: cat.ffaRanked.games, color: "#d97706" },
+    { name: "1v1", sec: cat.ffaRanked.playtimeSec, games: cat.ffaRanked.games, color: "#d97706" },
     { name: "Team Casual", sec: cat.teamCasual.playtimeSec, games: cat.teamCasual.games, color: "#10b981" },
-    { name: "Team Classé", sec: cat.teamRanked.playtimeSec, games: cat.teamRanked.games, color: "#a855f7" },
+    { name: "2v2", sec: cat.teamRanked.playtimeSec, games: cat.teamRanked.games, color: "#a855f7" },
   ];
 
   const playtimeSection = document.createElement("div");
@@ -2202,23 +2122,16 @@ function renderPrecomputedStats(stats, mount) {
       <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
       <div><h2>Temps de jeu</h2><p>Toutes parties confondues (publiques, privées, solo)</p></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
       <div class="playtime-hero">
         <div class="playtime-hero-label"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Temps de jeu total</div>
         <div class="playtime-hero-value">${stats.formatted.totalPlaytime}</div>
         <div class="playtime-hero-sub">${stats.totalGames} parties · moyenne ${stats.formatted.avgGameDuration} / partie</div>
       </div>
       <div class="chart-card">
-        <h3>Répartition par visibilité</h3>
-        <p>${stats.totalGames} parties au total</p>
-        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-          ${visData.map((d) => `<div><div class="playtime-breakdown-label"><span>${d.name}</span><span>${d.value} (${formatPct(d.value / totalVis)})</span></div><div class="playtime-breakdown-bar"><div class="playtime-breakdown-fill" style="width:${(d.value / totalVis) * 100}%;background:${d.color}"></div></div></div>`).join("")}
-        </div>
-      </div>
-      <div class="chart-card">
         <h3>Temps par catégorie</h3>
         <p>Heures jouées par mode</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
           ${playtimeByCat.map((c) => `<div><div class="playtime-breakdown-label"><span>${c.name}</span><span>${c.sec > 0 ? formatDurationCompact(c.sec) : "—"}</span></div><div class="playtime-breakdown-bar"><div class="playtime-breakdown-fill" style="width:${pt.totalSec > 0 ? (c.sec / pt.totalSec) * 100 : 0}%;background:${c.color}"></div></div><div class="playtime-breakdown-sub">${c.games} parties</div></div>`).join("")}
         </div>
       </div>
@@ -2226,7 +2139,7 @@ function renderPrecomputedStats(stats, mount) {
     <div class="stats-grid" style="margin-top:14px">
       <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="stat-tile-label">Durée moyenne</span></div><div class="stat-tile-value">${stats.formatted.avgGameDuration}</div></div>
       <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(239,68,68,0.12);color:#ef4444"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><span class="stat-tile-label">Partie la plus longue</span></div><div class="stat-tile-value">${stats.formatted.longestGame}</div></div>
-      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div><div class="stat-tile-value">${stats.formatted.winrate}</div><div class="stat-tile-sub">${stats.results.victory}V / ${stats.results.defeat}D / ${stats.results.incomplete} incomplètes</div></div>
+      <div class="stat-tile"><div class="stat-tile-header"><span class="stat-tile-icon" style="background:rgba(16,185,129,0.12);color:#10b981"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-tile-label">Winrate global</span></div><div class="stat-tile-value">${stats.formatted.winrate}</div><div class="stat-tile-sub">${stats.results.victory}V / ${stats.results.defeat}D</div></div>
     </div>
   `;
   mount.appendChild(playtimeSection);
@@ -2314,44 +2227,22 @@ function renderPrecomputedStats(stats, mount) {
     mount.appendChild(mapSection);
   }
 
-  // Achievements
-  const ach = stats.achievements;
-  const achSection = document.createElement("div");
-  achSection.className = "stats-section";
-  achSection.style.marginTop = "24px";
-  achSection.innerHTML = `
-    <div class="stats-section-title">
-      <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
-      <div><h2>Succès & séries</h2><p>Récompenses débloquées et séries de victoires</p></div>
-    </div>
-    <div class="streak-cards">
-      <div class="streak-card ${stats.streaks.current > 0 ? 'active' : ''}"><div style="font-size:22px;margin-bottom:4px;color:#ff7a00"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div class="streak-card-value">${stats.streaks.current}</div><div class="streak-card-label">Série actuelle</div></div>
-      <div class="streak-card"><div style="font-size:22px;margin-bottom:4px;color:#d97706"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="streak-card-value" style="color:#d97706">${stats.streaks.best}</div><div class="streak-card-label">Meilleure série</div></div>
-    </div>
-    <div class="chart-card">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h3 style="margin:0;font-size:14px;font-weight:700">Succès</h3><span style="font-size:12px;color:var(--text3)">${ach.unlockedCount}/${ach.list.length} débloqués</span></div>
-      <div class="achievements-grid">
-        ${ach.list.map((a) => `<div class="achievement-card ${a.unlocked ? 'unlocked' : ''}">${a.unlocked ? `<div class="achievement-icon">${a.icon}</div>` : `<div class="achievement-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>`}<div class="achievement-name">${esc(a.name)}</div><div class="achievement-desc">${esc(a.desc)}</div>${a.progress && !a.unlocked ? `<div class="achievement-progress">${a.progress.current}/${a.progress.target}</div>` : ''}</div>`).join("")}
-      </div>
-    </div>
-  `;
-  mount.appendChild(achSection);
-
   // Recent games
   if (stats.recentGames && stats.recentGames.length > 0) {
     const recentSection = document.createElement("div");
     recentSection.className = "stats-section";
     recentSection.style.marginTop = "24px";
-    const catLabels = { ffaCasual: "FFA Casual", ffaRanked: "FFA Classé", teamCasual: "Team Casual", teamRanked: "Team Classé" };
+    const catLabels = { ffaCasual: "FFA Casual", ffaRanked: "1v1", teamCasual: "Team Casual", teamRanked: "2v2" };
     recentSection.innerHTML = `
       <div class="stats-section-title">
         <span class="stats-section-title-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1"/><circle cx="18" cy="13" r="1"/></svg></span>
-        <div><h2>Parties récentes</h2><p>${stats.totalGames} parties au total · 20 plus récentes</p></div>
+        <div><h2>Parties récentes</h2><p>${stats.totalGames} parties au total · 20 plus récentes · cliquez pour détails</p></div>
       </div>
       <div class="recent-games-list">
-        ${stats.recentGames.map((g) => { const resultColor = g.result === "victory" ? "#10b981" : g.result === "defeat" ? "#ef4444" : g.result === "incomplete" ? "#6B7280" : "#9CA3AF"; const resultLabel = g.result === "victory" ? "Victoire" : g.result === "defeat" ? "Défaite" : g.result === "incomplete" ? "Incomplet" : (g.result || "—"); return `<div class="recent-game-row"><span class="recent-game-dot" style="background:${resultColor}"></span><div class="recent-game-info"><div class="recent-game-map">${esc(g.map)}</div><div class="recent-game-meta">${catLabels[g.category] || g.mode || "—"} · ${g.totalPlayers || "?"} joueurs</div></div><div style="text-align:right;flex-shrink:0"><div class="recent-game-result" style="color:${resultColor}">${resultLabel}</div><div class="recent-game-date">${g.start ? formatFrenchDate(new Date(g.start).getTime()) : "—"}${g.durationSeconds ? ` · ${formatDurationCompact(g.durationSeconds)}` : ""}</div></div></div>`; }).join("")}
+        ${stats.recentGames.map((g) => { const resultColor = g.result === "victory" ? "#10b981" : g.result === "defeat" ? "#ef4444" : g.result === "incomplete" ? "#6B7280" : "#9CA3AF"; const resultLabel = g.result === "victory" ? "Victoire" : g.result === "defeat" ? "Défaite" : g.result === "incomplete" ? "Incomplet" : (g.result || "—"); return `<div class="recent-game-row" data-game-id="${esc(String(g.gameId ?? ""))}" role="button" tabindex="0"><span class="recent-game-dot" style="background:${resultColor}"></span><div class="recent-game-info"><div class="recent-game-map">${esc(g.map)}</div><div class="recent-game-meta">${catLabels[g.category] || g.mode || "—"} · ${g.totalPlayers || "?"} joueurs</div></div><div style="text-align:right;flex-shrink:0"><div class="recent-game-result" style="color:${resultColor}">${resultLabel}</div><div class="recent-game-date">${g.start ? formatFrenchDate(new Date(g.start).getTime()) : "—"}${g.durationSeconds ? ` · ${formatDurationCompact(g.durationSeconds)}` : ""}</div></div></div>`; }).join("")}
       </div>
     `;
     mount.appendChild(recentSection);
+    attachGameRowClickHandlers(recentSection, stats.recentGames);
   }
 }

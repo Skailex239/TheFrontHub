@@ -41,16 +41,6 @@ function gameDurationSec(g) {
   return Number.isFinite(n) && n > 0 ? n : 0;
 }
 
-function gameVisibility(g) {
-  const v = String(g.visibility || "").toLowerCase();
-  if (v === "private") return "private";
-  if (v === "singleplayer" || v === "single") return "singleplayer";
-  if (v === "public") return "public";
-  const rt = String(g.rankedType || "").toLowerCase();
-  if (rt === "singleplayer") return "singleplayer";
-  return "public";
-}
-
 function formatDuration(totalSec) {
   const s = Math.max(0, Math.floor(totalSec || 0));
   if (s < 60) return `${s}s`;
@@ -146,11 +136,10 @@ function computeStats(games, statsTree) {
     teamCasual: { games: 0, playtimeSec: 0, wins: 0 },
     teamRanked: { games: 0, playtimeSec: 0, wins: 0 },
   };
-  const byVisibility = { public: 0, private: 0, singleplayer: 0 };
   const byHour = new Array(24).fill(0);
   const byWeekday = new Array(7).fill(0);
   const byDayMap = new Map();
-  const results = { victory: 0, defeat: 0, incomplete: 0, other: 0 };
+  const results = { victory: 0, defeat: 0 };
   const mapAgg = new Map();
 
   for (const g of games) {
@@ -163,8 +152,6 @@ function computeStats(games, statsTree) {
     byCategory[cat].games++;
     byCategory[cat].playtimeSec += dur;
     if (g.result === "victory") byCategory[cat].wins++;
-
-    byVisibility[gameVisibility(g)]++;
 
     if (g.start) {
       const t = new Date(g.start).getTime();
@@ -194,23 +181,25 @@ function computeStats(games, statsTree) {
       }
     }
 
+    // Only count victory/defeat in results — incomplete games excluded entirely
     if (g.result === "victory") results.victory++;
     else if (g.result === "defeat") results.defeat++;
-    else if (g.result === "incomplete") results.incomplete++;
-    else results.other++;
+    // incomplete / other: skipped from results count
 
-    const mapName = g.map || "Inconnue";
-    const t = g.start ? new Date(g.start).getTime() : 0;
-    const m = mapAgg.get(mapName) || {
-      count: 0, wins: 0, losses: 0, incompletes: 0, playtimeSec: 0, lastPlayed: 0,
-    };
-    m.count++;
-    m.playtimeSec += dur;
-    if (g.result === "victory") m.wins++;
-    else if (g.result === "defeat") m.losses++;
-    else if (g.result === "incomplete") m.incompletes++;
-    if (t > m.lastPlayed) m.lastPlayed = t;
-    mapAgg.set(mapName, m);
+    // Map stats: exclude incomplete games entirely (only count victory + defeat)
+    if (g.result === "victory" || g.result === "defeat") {
+      const mapName = g.map || "Inconnue";
+      const t = g.start ? new Date(g.start).getTime() : 0;
+      const m = mapAgg.get(mapName) || {
+        count: 0, wins: 0, losses: 0, playtimeSec: 0, lastPlayed: 0,
+      };
+      m.count++;
+      m.playtimeSec += dur;
+      if (g.result === "victory") m.wins++;
+      else m.losses++;
+      if (t > m.lastPlayed) m.lastPlayed = t;
+      mapAgg.set(mapName, m);
+    }
   }
 
   const byMap = [...mapAgg.entries()].map(([map, a]) => ({
@@ -218,7 +207,6 @@ function computeStats(games, statsTree) {
     count: a.count,
     wins: a.wins,
     losses: a.losses,
-    incompletes: a.incompletes,
     playtimeSec: a.playtimeSec,
     avgDuration: a.count > 0 ? a.playtimeSec / a.count : 0,
     winRate: a.wins + a.losses > 0 ? a.wins / (a.wins + a.losses) : 0,
@@ -229,13 +217,15 @@ function computeStats(games, statsTree) {
     .sort((a, b) => a.date.localeCompare(b.date))
     .slice(-90);
 
-  // Streaks
+  // Streaks — only count victory. Incomplete games are SKIPPED (don't break the streak).
+  // Only a defeat (or non-victory finished game) breaks a streak.
   const sortedByDateDesc = [...games].filter((g) => g.start)
     .sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime());
   let currentStreak = 0;
   for (const g of sortedByDateDesc) {
     if (g.result === "victory") currentStreak++;
-    else break;
+    else if (g.result === "defeat") break;
+    // incomplete / other: skip — doesn't break the streak
   }
   const sortedAsc = [...games].filter((g) => g.start)
     .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
@@ -245,9 +235,10 @@ function computeStats(games, statsTree) {
     if (g.result === "victory") {
       running++;
       if (running > bestStreak) bestStreak = running;
-    } else {
+    } else if (g.result === "defeat") {
       running = 0;
     }
+    // incomplete / other: skip — doesn't reset the running streak
   }
 
   // Career wins: count from games directly (more reliable than stats tree)
@@ -274,7 +265,6 @@ function computeStats(games, statsTree) {
     longestGameSec,
     shortestGameSec: shortestGameSec === Infinity ? 0 : shortestGameSec,
     byCategory,
-    byVisibility,
     byMap,
     byHour,
     byWeekday,
@@ -381,11 +371,10 @@ function computePlayerStats(publicId) {
       avgGameSec: pt.avgGameDurationSec,
       longestSec: pt.longestGameSec,
       shortestSec: pt.shortestGameSec,
-      byVisibility: pt.byVisibility,
       byCategory: pt.byCategory,
     },
 
-    // Results
+    // Results (victory + defeat only — incomplete excluded)
     results: pt.results,
 
     // Map stats
