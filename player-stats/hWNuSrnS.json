@@ -1,0 +1,2454 @@
+{
+  "publicId": "hWNuSrnS",
+  "username": "Nvr_Kn.6967",
+  "computedAt": "2026-08-16T12:46:34.624Z",
+  "lastSyncedAt": "2026-08-16T12:46:14.819Z",
+  "totalGames": 3691,
+  "careerWins": {
+    "ffaCasual": 260,
+    "ffaRanked": 1376,
+    "teamCasual": 151,
+    "teamRanked": 127
+  },
+  "totalWins": 1914,
+  "points": 4858,
+  "formatted": {
+    "points": "4 858",
+    "totalWins": "1 914",
+    "totalGames": "3 691",
+    "totalPlaytime": "30j 3h",
+    "totalPlaytimeCompact": "30j 3h",
+    "avgGameDuration": "11m 46s",
+    "longestGame": "2h 53m",
+    "winrate": "57%"
+  },
+  "playtime": {
+    "totalSec": 2606349,
+    "avgGameSec": 706.1362774315903,
+    "longestSec": 10434,
+    "shortestSec": 1,
+    "byVisibility": {
+      "public": 3691,
+      "private": 0,
+      "singleplayer": 0
+    },
+    "byCategory": {
+      "ffaCasual": {
+        "games": 1059,
+        "playtimeSec": 1271875,
+        "wins": 260
+      },
+      "ffaRanked": {
+        "games": 1851,
+        "playtimeSec": 699839,
+        "wins": 1376
+      },
+      "teamCasual": {
+        "games": 588,
+        "playtimeSec": 583839,
+        "wins": 151
+      },
+      "teamRanked": {
+        "games": 193,
+        "playtimeSec": 50796,
+        "wins": 127
+      }
+    }
+  },
+  "results": {
+    "victory": 1914,
+    "defeat": 1450,
+    "incomplete": 327,
+    "other": 0
+  },
+  "maps": [
+    {
+      "map": "Australia",
+      "count": 1128,
+      "wins": 671,
+      "losses": 268,
+      "incompletes": 189,
+      "playtimeSec": 487774,
+      "avgDuration": 432.4237588652482,
+      "winRate": 0.7145899893503728,
+      "lastPlayed": 1786875179930,
+      "formatted": {
+        "playtime": "5j 15h",
+        "avgDuration": "7m",
+        "winRate": "71%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Iceland",
+      "count": 423,
+      "wins": 288,
+      "losses": 121,
+      "incompletes": 14,
+      "playtimeSec": 174264,
+      "avgDuration": 411.97163120567376,
+      "winRate": 0.7041564792176039,
+      "lastPlayed": 1786876352111,
+      "formatted": {
+        "playtime": "2j 0h",
+        "avgDuration": "6m",
+        "winRate": "70%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Europe Classic",
+      "count": 378,
+      "wins": 266,
+      "losses": 100,
+      "incompletes": 12,
+      "playtimeSec": 145034,
+      "avgDuration": 383.6878306878307,
+      "winRate": 0.726775956284153,
+      "lastPlayed": 1786875712977,
+      "formatted": {
+        "playtime": "1j 16h",
+        "avgDuration": "6m",
+        "winRate": "73%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Asia",
+      "count": 360,
+      "wins": 262,
+      "losses": 89,
+      "incompletes": 9,
+      "playtimeSec": 148231,
+      "avgDuration": 411.7527777777778,
+      "winRate": 0.7464387464387464,
+      "lastPlayed": 1786796196697,
+      "formatted": {
+        "playtime": "1j 17h",
+        "avgDuration": "6m",
+        "winRate": "75%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Africa",
+      "count": 73,
+      "wins": 16,
+      "losses": 50,
+      "incompletes": 7,
+      "playtimeSec": 124457,
+      "avgDuration": 1704.890410958904,
+      "winRate": 0.24242424242424243,
+      "lastPlayed": 1786861221333,
+      "formatted": {
+        "playtime": "1j 10h",
+        "avgDuration": "28m",
+        "winRate": "24%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Europe",
+      "count": 67,
+      "wins": 6,
+      "losses": 56,
+      "incompletes": 5,
+      "playtimeSec": 97968,
+      "avgDuration": 1462.2089552238806,
+      "winRate": 0.0967741935483871,
+      "lastPlayed": 1786825660107,
+      "formatted": {
+        "playtime": "1j 3h",
+        "avgDuration": "24m",
+        "winRate": "10%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "World",
+      "count": 64,
+      "wins": 15,
+      "losses": 36,
+      "incompletes": 13,
+      "playtimeSec": 86024,
+      "avgDuration": 1344.125,
+      "winRate": 0.29411764705882354,
+      "lastPlayed": 1785682126877,
+      "formatted": {
+        "playtime": "23h 53m",
+        "avgDuration": "22m",
+        "winRate": "29%",
+        "lastPlayed": "02/08/26"
+      }
+    },
+    {
+      "map": "Falkland Islands",
+      "count": 63,
+      "wins": 42,
+      "losses": 19,
+      "incompletes": 2,
+      "playtimeSec": 38589,
+      "avgDuration": 612.5238095238095,
+      "winRate": 0.6885245901639344,
+      "lastPlayed": 1785356053006,
+      "formatted": {
+        "playtime": "10h 43m",
+        "avgDuration": "10m",
+        "winRate": "69%",
+        "lastPlayed": "29/07/26"
+      }
+    },
+    {
+      "map": "Black Sea",
+      "count": 60,
+      "wins": 16,
+      "losses": 38,
+      "incompletes": 6,
+      "playtimeSec": 68370,
+      "avgDuration": 1139.5,
+      "winRate": 0.2962962962962963,
+      "lastPlayed": 1786493299799,
+      "formatted": {
+        "playtime": "18h 59m",
+        "avgDuration": "18m",
+        "winRate": "30%",
+        "lastPlayed": "12/08/26"
+      }
+    },
+    {
+      "map": "Mena",
+      "count": 55,
+      "wins": 8,
+      "losses": 42,
+      "incompletes": 5,
+      "playtimeSec": 65425,
+      "avgDuration": 1189.5454545454545,
+      "winRate": 0.16,
+      "lastPlayed": 1785627215691,
+      "formatted": {
+        "playtime": "18h 10m",
+        "avgDuration": "19m",
+        "winRate": "16%",
+        "lastPlayed": "01/08/26"
+      }
+    },
+    {
+      "map": "Italia",
+      "count": 49,
+      "wins": 22,
+      "losses": 26,
+      "incompletes": 1,
+      "playtimeSec": 32136,
+      "avgDuration": 655.8367346938776,
+      "winRate": 0.4583333333333333,
+      "lastPlayed": 1786180768011,
+      "formatted": {
+        "playtime": "8h 55m",
+        "avgDuration": "10m",
+        "winRate": "46%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "Sierpinski",
+      "count": 45,
+      "wins": 27,
+      "losses": 18,
+      "incompletes": 0,
+      "playtimeSec": 22879,
+      "avgDuration": 508.4222222222222,
+      "winRate": 0.6,
+      "lastPlayed": 1773180659031,
+      "formatted": {
+        "playtime": "6h 21m",
+        "avgDuration": "8m",
+        "winRate": "60%",
+        "lastPlayed": "10/03/26"
+      }
+    },
+    {
+      "map": "Strait of Gibraltar",
+      "count": 39,
+      "wins": 12,
+      "losses": 25,
+      "incompletes": 2,
+      "playtimeSec": 48182,
+      "avgDuration": 1235.4358974358975,
+      "winRate": 0.32432432432432434,
+      "lastPlayed": 1785277309825,
+      "formatted": {
+        "playtime": "13h 23m",
+        "avgDuration": "20m",
+        "winRate": "32%",
+        "lastPlayed": "28/07/26"
+      }
+    },
+    {
+      "map": "Two Lakes",
+      "count": 38,
+      "wins": 6,
+      "losses": 30,
+      "incompletes": 2,
+      "playtimeSec": 46328,
+      "avgDuration": 1219.157894736842,
+      "winRate": 0.16666666666666666,
+      "lastPlayed": 1786635755391,
+      "formatted": {
+        "playtime": "12h 52m",
+        "avgDuration": "20m",
+        "winRate": "17%",
+        "lastPlayed": "13/08/26"
+      }
+    },
+    {
+      "map": "Montreal",
+      "count": 36,
+      "wins": 14,
+      "losses": 20,
+      "incompletes": 2,
+      "playtimeSec": 39281,
+      "avgDuration": 1091.138888888889,
+      "winRate": 0.4117647058823529,
+      "lastPlayed": 1785715097434,
+      "formatted": {
+        "playtime": "10h 54m",
+        "avgDuration": "18m",
+        "winRate": "41%",
+        "lastPlayed": "02/08/26"
+      }
+    },
+    {
+      "map": "Pluto",
+      "count": 35,
+      "wins": 9,
+      "losses": 22,
+      "incompletes": 4,
+      "playtimeSec": 40714,
+      "avgDuration": 1163.2571428571428,
+      "winRate": 0.2903225806451613,
+      "lastPlayed": 1785593795385,
+      "formatted": {
+        "playtime": "11h 18m",
+        "avgDuration": "19m",
+        "winRate": "29%",
+        "lastPlayed": "01/08/26"
+      }
+    },
+    {
+      "map": "Pangaea",
+      "count": 34,
+      "wins": 24,
+      "losses": 10,
+      "incompletes": 0,
+      "playtimeSec": 16227,
+      "avgDuration": 477.2647058823529,
+      "winRate": 0.7058823529411765,
+      "lastPlayed": 1785123327531,
+      "formatted": {
+        "playtime": "4h 30m",
+        "avgDuration": "7m",
+        "winRate": "71%",
+        "lastPlayed": "27/07/26"
+      }
+    },
+    {
+      "map": "Lisbon",
+      "count": 33,
+      "wins": 7,
+      "losses": 17,
+      "incompletes": 9,
+      "playtimeSec": 30619,
+      "avgDuration": 927.8484848484849,
+      "winRate": 0.2916666666666667,
+      "lastPlayed": 1785442641302,
+      "formatted": {
+        "playtime": "8h 30m",
+        "avgDuration": "15m",
+        "winRate": "29%",
+        "lastPlayed": "30/07/26"
+      }
+    },
+    {
+      "map": "Manicouagan",
+      "count": 32,
+      "wins": 11,
+      "losses": 19,
+      "incompletes": 2,
+      "playtimeSec": 50723,
+      "avgDuration": 1585.09375,
+      "winRate": 0.36666666666666664,
+      "lastPlayed": 1786862980941,
+      "formatted": {
+        "playtime": "14h 5m",
+        "avgDuration": "26m",
+        "winRate": "37%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Baikal",
+      "count": 31,
+      "wins": 9,
+      "losses": 21,
+      "incompletes": 1,
+      "playtimeSec": 46088,
+      "avgDuration": 1486.7096774193549,
+      "winRate": 0.3,
+      "lastPlayed": 1785088078476,
+      "formatted": {
+        "playtime": "12h 48m",
+        "avgDuration": "24m",
+        "winRate": "30%",
+        "lastPlayed": "26/07/26"
+      }
+    },
+    {
+      "map": "Between Two Seas",
+      "count": 30,
+      "wins": 7,
+      "losses": 20,
+      "incompletes": 3,
+      "playtimeSec": 37944,
+      "avgDuration": 1264.8,
+      "winRate": 0.25925925925925924,
+      "lastPlayed": 1786823664331,
+      "formatted": {
+        "playtime": "10h 32m",
+        "avgDuration": "21m",
+        "winRate": "26%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "South America",
+      "count": 30,
+      "wins": 6,
+      "losses": 23,
+      "incompletes": 1,
+      "playtimeSec": 41101,
+      "avgDuration": 1370.0333333333333,
+      "winRate": 0.20689655172413793,
+      "lastPlayed": 1786818985929,
+      "formatted": {
+        "playtime": "11h 25m",
+        "avgDuration": "22m",
+        "winRate": "21%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "New York City",
+      "count": 30,
+      "wins": 6,
+      "losses": 15,
+      "incompletes": 9,
+      "playtimeSec": 37436,
+      "avgDuration": 1247.8666666666666,
+      "winRate": 0.2857142857142857,
+      "lastPlayed": 1785373775745,
+      "formatted": {
+        "playtime": "10h 23m",
+        "avgDuration": "20m",
+        "winRate": "29%",
+        "lastPlayed": "30/07/26"
+      }
+    },
+    {
+      "map": "Gateway to the Atlantic",
+      "count": 28,
+      "wins": 8,
+      "losses": 20,
+      "incompletes": 0,
+      "playtimeSec": 32772,
+      "avgDuration": 1170.4285714285713,
+      "winRate": 0.2857142857142857,
+      "lastPlayed": 1786249251920,
+      "formatted": {
+        "playtime": "9h 6m",
+        "avgDuration": "19m",
+        "winRate": "29%",
+        "lastPlayed": "09/08/26"
+      }
+    },
+    {
+      "map": "Britannia",
+      "count": 25,
+      "wins": 7,
+      "losses": 18,
+      "incompletes": 0,
+      "playtimeSec": 25821,
+      "avgDuration": 1032.84,
+      "winRate": 0.28,
+      "lastPlayed": 1786817151666,
+      "formatted": {
+        "playtime": "7h 10m",
+        "avgDuration": "17m",
+        "winRate": "28%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Svalmel",
+      "count": 23,
+      "wins": 10,
+      "losses": 13,
+      "incompletes": 0,
+      "playtimeSec": 22655,
+      "avgDuration": 985,
+      "winRate": 0.43478260869565216,
+      "lastPlayed": 1786790229041,
+      "formatted": {
+        "playtime": "6h 17m",
+        "avgDuration": "16m",
+        "winRate": "43%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Mare Nostrum",
+      "count": 22,
+      "wins": 1,
+      "losses": 19,
+      "incompletes": 2,
+      "playtimeSec": 31239,
+      "avgDuration": 1419.9545454545455,
+      "winRate": 0.05,
+      "lastPlayed": 1786805860744,
+      "formatted": {
+        "playtime": "8h 40m",
+        "avgDuration": "23m",
+        "winRate": "5%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Deglaciated Antarctica",
+      "count": 22,
+      "wins": 7,
+      "losses": 15,
+      "incompletes": 0,
+      "playtimeSec": 30101,
+      "avgDuration": 1368.2272727272727,
+      "winRate": 0.3181818181818182,
+      "lastPlayed": 1786250713256,
+      "formatted": {
+        "playtime": "8h 21m",
+        "avgDuration": "22m",
+        "winRate": "32%",
+        "lastPlayed": "09/08/26"
+      }
+    },
+    {
+      "map": "Achiran",
+      "count": 20,
+      "wins": 10,
+      "losses": 10,
+      "incompletes": 0,
+      "playtimeSec": 20575,
+      "avgDuration": 1028.75,
+      "winRate": 0.5,
+      "lastPlayed": 1786868294135,
+      "formatted": {
+        "playtime": "5h 42m",
+        "avgDuration": "17m",
+        "winRate": "50%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Halkidiki",
+      "count": 20,
+      "wins": 8,
+      "losses": 12,
+      "incompletes": 0,
+      "playtimeSec": 21804,
+      "avgDuration": 1090.2,
+      "winRate": 0.4,
+      "lastPlayed": 1785359027914,
+      "formatted": {
+        "playtime": "6h 3m",
+        "avgDuration": "18m",
+        "winRate": "40%",
+        "lastPlayed": "29/07/26"
+      }
+    },
+    {
+      "map": "Mars",
+      "count": 20,
+      "wins": 4,
+      "losses": 15,
+      "incompletes": 1,
+      "playtimeSec": 19989,
+      "avgDuration": 999.45,
+      "winRate": 0.21052631578947367,
+      "lastPlayed": 1785020268107,
+      "formatted": {
+        "playtime": "5h 33m",
+        "avgDuration": "16m",
+        "winRate": "21%",
+        "lastPlayed": "25/07/26"
+      }
+    },
+    {
+      "map": "San Francisco",
+      "count": 18,
+      "wins": 4,
+      "losses": 14,
+      "incompletes": 0,
+      "playtimeSec": 21483,
+      "avgDuration": 1193.5,
+      "winRate": 0.2222222222222222,
+      "lastPlayed": 1786802773006,
+      "formatted": {
+        "playtime": "5h 58m",
+        "avgDuration": "19m",
+        "winRate": "22%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Bering Sea",
+      "count": 18,
+      "wins": 7,
+      "losses": 8,
+      "incompletes": 3,
+      "playtimeSec": 21001,
+      "avgDuration": 1166.7222222222222,
+      "winRate": 0.4666666666666667,
+      "lastPlayed": 1786233709052,
+      "formatted": {
+        "playtime": "5h 50m",
+        "avgDuration": "19m",
+        "winRate": "47%",
+        "lastPlayed": "09/08/26"
+      }
+    },
+    {
+      "map": "Nile Delta",
+      "count": 18,
+      "wins": 6,
+      "losses": 11,
+      "incompletes": 1,
+      "playtimeSec": 20841,
+      "avgDuration": 1157.8333333333333,
+      "winRate": 0.35294117647058826,
+      "lastPlayed": 1786181048778,
+      "formatted": {
+        "playtime": "5h 47m",
+        "avgDuration": "19m",
+        "winRate": "35%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "Arctic",
+      "count": 18,
+      "wins": 4,
+      "losses": 14,
+      "incompletes": 0,
+      "playtimeSec": 22537,
+      "avgDuration": 1252.0555555555557,
+      "winRate": 0.2222222222222222,
+      "lastPlayed": 1781222544648,
+      "formatted": {
+        "playtime": "6h 15m",
+        "avgDuration": "20m",
+        "winRate": "22%",
+        "lastPlayed": "12/06/26"
+      }
+    },
+    {
+      "map": "North America",
+      "count": 16,
+      "wins": 5,
+      "losses": 11,
+      "incompletes": 0,
+      "playtimeSec": 22720,
+      "avgDuration": 1420,
+      "winRate": 0.3125,
+      "lastPlayed": 1785614774254,
+      "formatted": {
+        "playtime": "6h 18m",
+        "avgDuration": "23m",
+        "winRate": "31%",
+        "lastPlayed": "01/08/26"
+      }
+    },
+    {
+      "map": "The Box",
+      "count": 15,
+      "wins": 1,
+      "losses": 11,
+      "incompletes": 3,
+      "playtimeSec": 17115,
+      "avgDuration": 1141,
+      "winRate": 0.08333333333333333,
+      "lastPlayed": 1781986147083,
+      "formatted": {
+        "playtime": "4h 45m",
+        "avgDuration": "19m",
+        "winRate": "8%",
+        "lastPlayed": "20/06/26"
+      }
+    },
+    {
+      "map": "Yenisei",
+      "count": 14,
+      "wins": 5,
+      "losses": 7,
+      "incompletes": 2,
+      "playtimeSec": 15625,
+      "avgDuration": 1116.0714285714287,
+      "winRate": 0.4166666666666667,
+      "lastPlayed": 1785354514968,
+      "formatted": {
+        "playtime": "4h 20m",
+        "avgDuration": "18m",
+        "winRate": "42%",
+        "lastPlayed": "29/07/26"
+      }
+    },
+    {
+      "map": "East Asia",
+      "count": 13,
+      "wins": 4,
+      "losses": 9,
+      "incompletes": 0,
+      "playtimeSec": 12714,
+      "avgDuration": 978,
+      "winRate": 0.3076923076923077,
+      "lastPlayed": 1785548156072,
+      "formatted": {
+        "playtime": "3h 31m",
+        "avgDuration": "16m",
+        "winRate": "31%",
+        "lastPlayed": "01/08/26"
+      }
+    },
+    {
+      "map": "Los Angeles",
+      "count": 12,
+      "wins": 5,
+      "losses": 6,
+      "incompletes": 1,
+      "playtimeSec": 21590,
+      "avgDuration": 1799.1666666666667,
+      "winRate": 0.45454545454545453,
+      "lastPlayed": 1786222935630,
+      "formatted": {
+        "playtime": "5h 59m",
+        "avgDuration": "29m",
+        "winRate": "45%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "Lemnos",
+      "count": 12,
+      "wins": 4,
+      "losses": 7,
+      "incompletes": 1,
+      "playtimeSec": 10349,
+      "avgDuration": 862.4166666666666,
+      "winRate": 0.36363636363636365,
+      "lastPlayed": 1785999279829,
+      "formatted": {
+        "playtime": "2h 52m",
+        "avgDuration": "14m",
+        "winRate": "36%",
+        "lastPlayed": "06/08/26"
+      }
+    },
+    {
+      "map": "Great Lakes",
+      "count": 11,
+      "wins": 2,
+      "losses": 9,
+      "incompletes": 0,
+      "playtimeSec": 14724,
+      "avgDuration": 1338.5454545454545,
+      "winRate": 0.18181818181818182,
+      "lastPlayed": 1786868910726,
+      "formatted": {
+        "playtime": "4h 5m",
+        "avgDuration": "22m",
+        "winRate": "18%",
+        "lastPlayed": "16/08/26"
+      }
+    },
+    {
+      "map": "Dyslexdria",
+      "count": 11,
+      "wins": 5,
+      "losses": 6,
+      "incompletes": 0,
+      "playtimeSec": 25691,
+      "avgDuration": 2335.5454545454545,
+      "winRate": 0.45454545454545453,
+      "lastPlayed": 1786820796828,
+      "formatted": {
+        "playtime": "7h 8m",
+        "avgDuration": "38m",
+        "winRate": "45%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Japan",
+      "count": 11,
+      "wins": 4,
+      "losses": 7,
+      "incompletes": 0,
+      "playtimeSec": 9253,
+      "avgDuration": 841.1818181818181,
+      "winRate": 0.36363636363636365,
+      "lastPlayed": 1785087397283,
+      "formatted": {
+        "playtime": "2h 34m",
+        "avgDuration": "14m",
+        "winRate": "36%",
+        "lastPlayed": "26/07/26"
+      }
+    },
+    {
+      "map": "Indian Subcontinent",
+      "count": 10,
+      "wins": 2,
+      "losses": 8,
+      "incompletes": 0,
+      "playtimeSec": 12666,
+      "avgDuration": 1266.6,
+      "winRate": 0.2,
+      "lastPlayed": 1786808185180,
+      "formatted": {
+        "playtime": "3h 31m",
+        "avgDuration": "21m",
+        "winRate": "20%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Giant World Map",
+      "count": 9,
+      "wins": 4,
+      "losses": 4,
+      "incompletes": 1,
+      "playtimeSec": 17170,
+      "avgDuration": 1907.7777777777778,
+      "winRate": 0.5,
+      "lastPlayed": 1786697597937,
+      "formatted": {
+        "playtime": "4h 46m",
+        "avgDuration": "31m",
+        "winRate": "50%",
+        "lastPlayed": "14/08/26"
+      }
+    },
+    {
+      "map": "Hong Kong",
+      "count": 9,
+      "wins": 4,
+      "losses": 5,
+      "incompletes": 0,
+      "playtimeSec": 11292,
+      "avgDuration": 1254.6666666666667,
+      "winRate": 0.4444444444444444,
+      "lastPlayed": 1786601683513,
+      "formatted": {
+        "playtime": "3h 8m",
+        "avgDuration": "20m",
+        "winRate": "44%",
+        "lastPlayed": "13/08/26"
+      }
+    },
+    {
+      "map": "World Inverted",
+      "count": 9,
+      "wins": 7,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 11854,
+      "avgDuration": 1317.111111111111,
+      "winRate": 0.7777777777777778,
+      "lastPlayed": 1786515836846,
+      "formatted": {
+        "playtime": "3h 17m",
+        "avgDuration": "21m",
+        "winRate": "78%",
+        "lastPlayed": "12/08/26"
+      }
+    },
+    {
+      "map": "Strait of Hormuz",
+      "count": 9,
+      "wins": 0,
+      "losses": 6,
+      "incompletes": 3,
+      "playtimeSec": 8967,
+      "avgDuration": 996.3333333333334,
+      "winRate": 0,
+      "lastPlayed": 1784747013824,
+      "formatted": {
+        "playtime": "2h 29m",
+        "avgDuration": "16m",
+        "winRate": "0%",
+        "lastPlayed": "22/07/26"
+      }
+    },
+    {
+      "map": "Aegean",
+      "count": 9,
+      "wins": 2,
+      "losses": 7,
+      "incompletes": 0,
+      "playtimeSec": 14683,
+      "avgDuration": 1631.4444444444443,
+      "winRate": 0.2222222222222222,
+      "lastPlayed": 1783573174346,
+      "formatted": {
+        "playtime": "4h 4m",
+        "avgDuration": "27m",
+        "winRate": "22%",
+        "lastPlayed": "09/07/26"
+      }
+    },
+    {
+      "map": "Faroe Islands",
+      "count": 9,
+      "wins": 2,
+      "losses": 4,
+      "incompletes": 3,
+      "playtimeSec": 10038,
+      "avgDuration": 1115.3333333333333,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1780671733906,
+      "formatted": {
+        "playtime": "2h 47m",
+        "avgDuration": "18m",
+        "winRate": "33%",
+        "lastPlayed": "05/06/26"
+      }
+    },
+    {
+      "map": "Britannia Classic",
+      "count": 8,
+      "wins": 0,
+      "losses": 7,
+      "incompletes": 1,
+      "playtimeSec": 7717,
+      "avgDuration": 964.625,
+      "winRate": 0,
+      "lastPlayed": 1776554111971,
+      "formatted": {
+        "playtime": "2h 8m",
+        "avgDuration": "16m",
+        "winRate": "0%",
+        "lastPlayed": "18/04/26"
+      }
+    },
+    {
+      "map": "Balkans",
+      "count": 7,
+      "wins": 1,
+      "losses": 6,
+      "incompletes": 0,
+      "playtimeSec": 7796,
+      "avgDuration": 1113.7142857142858,
+      "winRate": 0.14285714285714285,
+      "lastPlayed": 1786209423566,
+      "formatted": {
+        "playtime": "2h 9m",
+        "avgDuration": "18m",
+        "winRate": "14%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "Four Islands",
+      "count": 7,
+      "wins": 0,
+      "losses": 6,
+      "incompletes": 1,
+      "playtimeSec": 10452,
+      "avgDuration": 1493.142857142857,
+      "winRate": 0,
+      "lastPlayed": 1785713487336,
+      "formatted": {
+        "playtime": "2h 54m",
+        "avgDuration": "24m",
+        "winRate": "0%",
+        "lastPlayed": "02/08/26"
+      }
+    },
+    {
+      "map": "Alps",
+      "count": 7,
+      "wins": 2,
+      "losses": 4,
+      "incompletes": 1,
+      "playtimeSec": 6542,
+      "avgDuration": 934.5714285714286,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1782962411225,
+      "formatted": {
+        "playtime": "1h 49m",
+        "avgDuration": "15m",
+        "winRate": "33%",
+        "lastPlayed": "02/07/26"
+      }
+    },
+    {
+      "map": "Gulf of St. Lawrence",
+      "count": 6,
+      "wins": 2,
+      "losses": 4,
+      "incompletes": 0,
+      "playtimeSec": 5881,
+      "avgDuration": 980.1666666666666,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1785716348143,
+      "formatted": {
+        "playtime": "1h 38m",
+        "avgDuration": "16m",
+        "winRate": "33%",
+        "lastPlayed": "03/08/26"
+      }
+    },
+    {
+      "map": "Middle East",
+      "count": 6,
+      "wins": 3,
+      "losses": 3,
+      "incompletes": 0,
+      "playtimeSec": 7403,
+      "avgDuration": 1233.8333333333333,
+      "winRate": 0.5,
+      "lastPlayed": 1785278138126,
+      "formatted": {
+        "playtime": "2h 3m",
+        "avgDuration": "20m",
+        "winRate": "50%",
+        "lastPlayed": "28/07/26"
+      }
+    },
+    {
+      "map": "Surrounded",
+      "count": 6,
+      "wins": 2,
+      "losses": 4,
+      "incompletes": 0,
+      "playtimeSec": 9362,
+      "avgDuration": 1560.3333333333333,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1776619787751,
+      "formatted": {
+        "playtime": "2h 36m",
+        "avgDuration": "26m",
+        "winRate": "33%",
+        "lastPlayed": "19/04/26"
+      }
+    },
+    {
+      "map": "Scandinavia",
+      "count": 4,
+      "wins": 1,
+      "losses": 3,
+      "incompletes": 0,
+      "playtimeSec": 7767,
+      "avgDuration": 1941.75,
+      "winRate": 0.25,
+      "lastPlayed": 1786779297069,
+      "formatted": {
+        "playtime": "2h 9m",
+        "avgDuration": "32m",
+        "winRate": "25%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "Strait Of Malacca",
+      "count": 4,
+      "wins": 1,
+      "losses": 3,
+      "incompletes": 0,
+      "playtimeSec": 4501,
+      "avgDuration": 1125.25,
+      "winRate": 0.25,
+      "lastPlayed": 1785950048912,
+      "formatted": {
+        "playtime": "1h 15m",
+        "avgDuration": "18m",
+        "winRate": "25%",
+        "lastPlayed": "05/08/26"
+      }
+    },
+    {
+      "map": "Antarctica",
+      "count": 4,
+      "wins": 1,
+      "losses": 3,
+      "incompletes": 0,
+      "playtimeSec": 4541,
+      "avgDuration": 1135.25,
+      "winRate": 0.25,
+      "lastPlayed": 1785453973304,
+      "formatted": {
+        "playtime": "1h 15m",
+        "avgDuration": "18m",
+        "winRate": "25%",
+        "lastPlayed": "30/07/26"
+      }
+    },
+    {
+      "map": "Caucasus",
+      "count": 4,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 1,
+      "playtimeSec": 3546,
+      "avgDuration": 886.5,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1781982313651,
+      "formatted": {
+        "playtime": "59m",
+        "avgDuration": "14m",
+        "winRate": "33%",
+        "lastPlayed": "20/06/26"
+      }
+    },
+    {
+      "map": "Amazon River",
+      "count": 4,
+      "wins": 0,
+      "losses": 4,
+      "incompletes": 0,
+      "playtimeSec": 3992,
+      "avgDuration": 998,
+      "winRate": 0,
+      "lastPlayed": 1779979770571,
+      "formatted": {
+        "playtime": "1h 6m",
+        "avgDuration": "16m",
+        "winRate": "0%",
+        "lastPlayed": "28/05/26"
+      }
+    },
+    {
+      "map": "Didier",
+      "count": 4,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 1,
+      "playtimeSec": 3564,
+      "avgDuration": 891,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1777143167027,
+      "formatted": {
+        "playtime": "59m",
+        "avgDuration": "14m",
+        "winRate": "33%",
+        "lastPlayed": "25/04/26"
+      }
+    },
+    {
+      "map": "Finger Lakes",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 7218,
+      "avgDuration": 2406,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1786605393028,
+      "formatted": {
+        "playtime": "2h 0m",
+        "avgDuration": "40m",
+        "winRate": "33%",
+        "lastPlayed": "13/08/26"
+      }
+    },
+    {
+      "map": "Yellow Sea",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 4381,
+      "avgDuration": 1460.3333333333333,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1786513068219,
+      "formatted": {
+        "playtime": "1h 13m",
+        "avgDuration": "24m",
+        "winRate": "33%",
+        "lastPlayed": "12/08/26"
+      }
+    },
+    {
+      "map": "Korea",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 4118,
+      "avgDuration": 1372.6666666666667,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1785722378012,
+      "formatted": {
+        "playtime": "1h 8m",
+        "avgDuration": "22m",
+        "winRate": "33%",
+        "lastPlayed": "03/08/26"
+      }
+    },
+    {
+      "map": "Titan",
+      "count": 3,
+      "wins": 0,
+      "losses": 3,
+      "incompletes": 0,
+      "playtimeSec": 4297,
+      "avgDuration": 1432.3333333333333,
+      "winRate": 0,
+      "lastPlayed": 1785357037963,
+      "formatted": {
+        "playtime": "1h 11m",
+        "avgDuration": "23m",
+        "winRate": "0%",
+        "lastPlayed": "29/07/26"
+      }
+    },
+    {
+      "map": "Danish Straits",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 2633,
+      "avgDuration": 877.6666666666666,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1785346571665,
+      "formatted": {
+        "playtime": "43m",
+        "avgDuration": "14m",
+        "winRate": "33%",
+        "lastPlayed": "29/07/26"
+      }
+    },
+    {
+      "map": "Conakry",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 3344,
+      "avgDuration": 1114.6666666666667,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1785086439834,
+      "formatted": {
+        "playtime": "55m",
+        "avgDuration": "18m",
+        "winRate": "33%",
+        "lastPlayed": "26/07/26"
+      }
+    },
+    {
+      "map": "Bosphorus Straits",
+      "count": 3,
+      "wins": 0,
+      "losses": 3,
+      "incompletes": 0,
+      "playtimeSec": 2155,
+      "avgDuration": 718.3333333333334,
+      "winRate": 0,
+      "lastPlayed": 1784750437270,
+      "formatted": {
+        "playtime": "35m",
+        "avgDuration": "11m",
+        "winRate": "0%",
+        "lastPlayed": "22/07/26"
+      }
+    },
+    {
+      "map": "Luna",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 3292,
+      "avgDuration": 1097.3333333333333,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1782962119931,
+      "formatted": {
+        "playtime": "54m",
+        "avgDuration": "18m",
+        "winRate": "33%",
+        "lastPlayed": "02/07/26"
+      }
+    },
+    {
+      "map": "Hawaii",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 3510,
+      "avgDuration": 1170,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1780759983189,
+      "formatted": {
+        "playtime": "58m",
+        "avgDuration": "19m",
+        "winRate": "33%",
+        "lastPlayed": "06/06/26"
+      }
+    },
+    {
+      "map": "China",
+      "count": 2,
+      "wins": 2,
+      "losses": 0,
+      "incompletes": 0,
+      "playtimeSec": 2476,
+      "avgDuration": 1238,
+      "winRate": 1,
+      "lastPlayed": 1786516337313,
+      "formatted": {
+        "playtime": "41m",
+        "avgDuration": "20m",
+        "winRate": "100%",
+        "lastPlayed": "12/08/26"
+      }
+    },
+    {
+      "map": "France",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 3595,
+      "avgDuration": 1797.5,
+      "winRate": 0.5,
+      "lastPlayed": 1786182646190,
+      "formatted": {
+        "playtime": "59m",
+        "avgDuration": "29m",
+        "winRate": "50%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "SoutheastAsia",
+      "count": 2,
+      "wins": 0,
+      "losses": 2,
+      "incompletes": 0,
+      "playtimeSec": 2578,
+      "avgDuration": 1289,
+      "winRate": 0,
+      "lastPlayed": 1784806573677,
+      "formatted": {
+        "playtime": "42m",
+        "avgDuration": "21m",
+        "winRate": "0%",
+        "lastPlayed": "23/07/26"
+      }
+    },
+    {
+      "map": "MilkyWay",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1790,
+      "avgDuration": 895,
+      "winRate": 0.5,
+      "lastPlayed": 1782873740988,
+      "formatted": {
+        "playtime": "29m",
+        "avgDuration": "14m",
+        "winRate": "50%",
+        "lastPlayed": "01/07/26"
+      }
+    },
+    {
+      "map": "Baja California",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1767,
+      "avgDuration": 883.5,
+      "winRate": 0.5,
+      "lastPlayed": 1781013187065,
+      "formatted": {
+        "playtime": "29m",
+        "avgDuration": "14m",
+        "winRate": "50%",
+        "lastPlayed": "09/06/26"
+      }
+    },
+    {
+      "map": "Bering Strait",
+      "count": 2,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 1,
+      "playtimeSec": 1521,
+      "avgDuration": 760.5,
+      "winRate": 0,
+      "lastPlayed": 1780671388889,
+      "formatted": {
+        "playtime": "25m",
+        "avgDuration": "12m",
+        "winRate": "0%",
+        "lastPlayed": "05/06/26"
+      }
+    },
+    {
+      "map": "The Box Plus",
+      "count": 2,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 1,
+      "playtimeSec": 1462,
+      "avgDuration": 731,
+      "winRate": 0,
+      "lastPlayed": 1775078629895,
+      "formatted": {
+        "playtime": "24m",
+        "avgDuration": "12m",
+        "winRate": "0%",
+        "lastPlayed": "01/04/26"
+      }
+    },
+    {
+      "map": "Oceania",
+      "count": 2,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 1,
+      "playtimeSec": 1086,
+      "avgDuration": 543,
+      "winRate": 0,
+      "lastPlayed": 1771705423648,
+      "formatted": {
+        "playtime": "18m",
+        "avgDuration": "9m",
+        "winRate": "0%",
+        "lastPlayed": "21/02/26"
+      }
+    },
+    {
+      "map": "Germany",
+      "count": 1,
+      "wins": 1,
+      "losses": 0,
+      "incompletes": 0,
+      "playtimeSec": 697,
+      "avgDuration": 697,
+      "winRate": 1,
+      "lastPlayed": 1786780829781,
+      "formatted": {
+        "playtime": "11m",
+        "avgDuration": "11m",
+        "winRate": "100%",
+        "lastPlayed": "15/08/26"
+      }
+    },
+    {
+      "map": "United States",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 2103,
+      "avgDuration": 2103,
+      "winRate": 0,
+      "lastPlayed": 1786603116917,
+      "formatted": {
+        "playtime": "35m",
+        "avgDuration": "35m",
+        "winRate": "0%",
+        "lastPlayed": "13/08/26"
+      }
+    },
+    {
+      "map": "Gulf Of Guinea",
+      "count": 1,
+      "wins": 1,
+      "losses": 0,
+      "incompletes": 0,
+      "playtimeSec": 1002,
+      "avgDuration": 1002,
+      "winRate": 1,
+      "lastPlayed": 1786419201137,
+      "formatted": {
+        "playtime": "16m",
+        "avgDuration": "16m",
+        "winRate": "100%",
+        "lastPlayed": "11/08/26"
+      }
+    },
+    {
+      "map": "Northwest Passage",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1169,
+      "avgDuration": 1169,
+      "winRate": 0,
+      "lastPlayed": 1786176834887,
+      "formatted": {
+        "playtime": "19m",
+        "avgDuration": "19m",
+        "winRate": "0%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "Branching Paths",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1372,
+      "avgDuration": 1372,
+      "winRate": 0,
+      "lastPlayed": 1786173568848,
+      "formatted": {
+        "playtime": "22m",
+        "avgDuration": "22m",
+        "winRate": "0%",
+        "lastPlayed": "08/08/26"
+      }
+    },
+    {
+      "map": "Russia",
+      "count": 1,
+      "wins": 1,
+      "losses": 0,
+      "incompletes": 0,
+      "playtimeSec": 943,
+      "avgDuration": 943,
+      "winRate": 1,
+      "lastPlayed": 1786065755774,
+      "formatted": {
+        "playtime": "15m",
+        "avgDuration": "15m",
+        "winRate": "100%",
+        "lastPlayed": "07/08/26"
+      }
+    },
+    {
+      "map": "Las Vegas Strip",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1362,
+      "avgDuration": 1362,
+      "winRate": 0,
+      "lastPlayed": 1786065728240,
+      "formatted": {
+        "playtime": "22m",
+        "avgDuration": "22m",
+        "winRate": "0%",
+        "lastPlayed": "07/08/26"
+      }
+    },
+    {
+      "map": "Warship Warship",
+      "count": 1,
+      "wins": 1,
+      "losses": 0,
+      "incompletes": 0,
+      "playtimeSec": 986,
+      "avgDuration": 986,
+      "winRate": 1,
+      "lastPlayed": 1784855931814,
+      "formatted": {
+        "playtime": "16m",
+        "avgDuration": "16m",
+        "winRate": "100%",
+        "lastPlayed": "24/07/26"
+      }
+    },
+    {
+      "map": "Onion",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1818,
+      "avgDuration": 1818,
+      "winRate": 0,
+      "lastPlayed": 1781889338536,
+      "formatted": {
+        "playtime": "30m",
+        "avgDuration": "30m",
+        "winRate": "0%",
+        "lastPlayed": "19/06/26"
+      }
+    },
+    {
+      "map": "Labyrinth",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1718,
+      "avgDuration": 1718,
+      "winRate": 0,
+      "lastPlayed": 1781733111878,
+      "formatted": {
+        "playtime": "28m",
+        "avgDuration": "28m",
+        "winRate": "0%",
+        "lastPlayed": "17/06/26"
+      }
+    },
+    {
+      "map": "Juan De Fuca Strait",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 1233,
+      "avgDuration": 1233,
+      "winRate": 0,
+      "lastPlayed": 1781731899820,
+      "formatted": {
+        "playtime": "20m",
+        "avgDuration": "20m",
+        "winRate": "0%",
+        "lastPlayed": "17/06/26"
+      }
+    },
+    {
+      "map": "Traders Dream",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "incompletes": 0,
+      "playtimeSec": 3487,
+      "avgDuration": 3487,
+      "winRate": 0,
+      "lastPlayed": 1774984076020,
+      "formatted": {
+        "playtime": "58m",
+        "avgDuration": "58m",
+        "winRate": "0%",
+        "lastPlayed": "31/03/26"
+      }
+    },
+    {
+      "map": "Didier France",
+      "count": 1,
+      "wins": 1,
+      "losses": 0,
+      "incompletes": 0,
+      "playtimeSec": 1109,
+      "avgDuration": 1109,
+      "winRate": 1,
+      "lastPlayed": 1772207793152,
+      "formatted": {
+        "playtime": "18m",
+        "avgDuration": "18m",
+        "winRate": "100%",
+        "lastPlayed": "27/02/26"
+      }
+    }
+  ],
+  "activity": {
+    "byHour": [
+      201,
+      180,
+      109,
+      89,
+      59,
+      69,
+      24,
+      18,
+      28,
+      50,
+      80,
+      68,
+      89,
+      96,
+      90,
+      143,
+      225,
+      311,
+      336,
+      337,
+      313,
+      302,
+      244,
+      230
+    ],
+    "byWeekday": [
+      499,
+      562,
+      470,
+      548,
+      480,
+      576,
+      556
+    ],
+    "byDay": [
+      {
+        "date": "22/04/2026",
+        "count": 30,
+        "playtimeSec": 16410
+      },
+      {
+        "date": "22/05/2026",
+        "count": 10,
+        "playtimeSec": 6234
+      },
+      {
+        "date": "22/06/2026",
+        "count": 21,
+        "playtimeSec": 9750
+      },
+      {
+        "date": "22/07/2026",
+        "count": 20,
+        "playtimeSec": 16298
+      },
+      {
+        "date": "22/09/2025",
+        "count": 1,
+        "playtimeSec": 1291
+      },
+      {
+        "date": "22/10/2025",
+        "count": 3,
+        "playtimeSec": 3783
+      },
+      {
+        "date": "22/12/2025",
+        "count": 8,
+        "playtimeSec": 10111
+      },
+      {
+        "date": "23/01/2026",
+        "count": 21,
+        "playtimeSec": 9711
+      },
+      {
+        "date": "23/02/2026",
+        "count": 21,
+        "playtimeSec": 12959
+      },
+      {
+        "date": "23/03/2026",
+        "count": 10,
+        "playtimeSec": 8519
+      },
+      {
+        "date": "23/04/2026",
+        "count": 8,
+        "playtimeSec": 3448
+      },
+      {
+        "date": "23/05/2026",
+        "count": 25,
+        "playtimeSec": 16591
+      },
+      {
+        "date": "23/06/2026",
+        "count": 13,
+        "playtimeSec": 4552
+      },
+      {
+        "date": "23/07/2026",
+        "count": 14,
+        "playtimeSec": 10236
+      },
+      {
+        "date": "23/09/2025",
+        "count": 2,
+        "playtimeSec": 2312
+      },
+      {
+        "date": "23/10/2025",
+        "count": 2,
+        "playtimeSec": 2035
+      },
+      {
+        "date": "23/12/2025",
+        "count": 1,
+        "playtimeSec": 1117
+      },
+      {
+        "date": "24/01/2026",
+        "count": 15,
+        "playtimeSec": 11999
+      },
+      {
+        "date": "24/02/2026",
+        "count": 7,
+        "playtimeSec": 2795
+      },
+      {
+        "date": "24/03/2026",
+        "count": 23,
+        "playtimeSec": 16201
+      },
+      {
+        "date": "24/04/2026",
+        "count": 16,
+        "playtimeSec": 9397
+      },
+      {
+        "date": "24/05/2026",
+        "count": 13,
+        "playtimeSec": 9257
+      },
+      {
+        "date": "24/06/2025",
+        "count": 3,
+        "playtimeSec": 5337
+      },
+      {
+        "date": "24/06/2026",
+        "count": 26,
+        "playtimeSec": 11890
+      },
+      {
+        "date": "24/07/2026",
+        "count": 25,
+        "playtimeSec": 19001
+      },
+      {
+        "date": "24/09/2025",
+        "count": 1,
+        "playtimeSec": 1034
+      },
+      {
+        "date": "24/10/2025",
+        "count": 4,
+        "playtimeSec": 4183
+      },
+      {
+        "date": "24/12/2025",
+        "count": 4,
+        "playtimeSec": 3927
+      },
+      {
+        "date": "25/01/2026",
+        "count": 13,
+        "playtimeSec": 4940
+      },
+      {
+        "date": "25/02/2026",
+        "count": 7,
+        "playtimeSec": 4962
+      },
+      {
+        "date": "25/03/2026",
+        "count": 2,
+        "playtimeSec": 994
+      },
+      {
+        "date": "25/04/2026",
+        "count": 19,
+        "playtimeSec": 12224
+      },
+      {
+        "date": "25/05/2026",
+        "count": 12,
+        "playtimeSec": 4959
+      },
+      {
+        "date": "25/06/2026",
+        "count": 19,
+        "playtimeSec": 7278
+      },
+      {
+        "date": "25/07/2026",
+        "count": 14,
+        "playtimeSec": 12496
+      },
+      {
+        "date": "25/09/2025",
+        "count": 2,
+        "playtimeSec": 2264
+      },
+      {
+        "date": "25/12/2025",
+        "count": 3,
+        "playtimeSec": 6704
+      },
+      {
+        "date": "26/01/2026",
+        "count": 31,
+        "playtimeSec": 10193
+      },
+      {
+        "date": "26/02/2026",
+        "count": 1,
+        "playtimeSec": 630
+      },
+      {
+        "date": "26/03/2026",
+        "count": 11,
+        "playtimeSec": 8126
+      },
+      {
+        "date": "26/04/2026",
+        "count": 18,
+        "playtimeSec": 10482
+      },
+      {
+        "date": "26/05/2026",
+        "count": 16,
+        "playtimeSec": 8221
+      },
+      {
+        "date": "26/06/2025",
+        "count": 1,
+        "playtimeSec": 1114
+      },
+      {
+        "date": "26/06/2026",
+        "count": 12,
+        "playtimeSec": 4747
+      },
+      {
+        "date": "26/07/2025",
+        "count": 1,
+        "playtimeSec": 795
+      },
+      {
+        "date": "26/07/2026",
+        "count": 18,
+        "playtimeSec": 18191
+      },
+      {
+        "date": "26/12/2025",
+        "count": 8,
+        "playtimeSec": 8189
+      },
+      {
+        "date": "27/01/2026",
+        "count": 6,
+        "playtimeSec": 4391
+      },
+      {
+        "date": "27/02/2026",
+        "count": 18,
+        "playtimeSec": 17309
+      },
+      {
+        "date": "27/03/2026",
+        "count": 4,
+        "playtimeSec": 5035
+      },
+      {
+        "date": "27/04/2026",
+        "count": 13,
+        "playtimeSec": 7131
+      },
+      {
+        "date": "27/05/2026",
+        "count": 15,
+        "playtimeSec": 8066
+      },
+      {
+        "date": "27/06/2025",
+        "count": 5,
+        "playtimeSec": 10157
+      },
+      {
+        "date": "27/06/2026",
+        "count": 8,
+        "playtimeSec": 9355
+      },
+      {
+        "date": "27/07/2025",
+        "count": 1,
+        "playtimeSec": 1586
+      },
+      {
+        "date": "27/07/2026",
+        "count": 4,
+        "playtimeSec": 2721
+      },
+      {
+        "date": "27/09/2025",
+        "count": 3,
+        "playtimeSec": 3774
+      },
+      {
+        "date": "27/12/2025",
+        "count": 4,
+        "playtimeSec": 5377
+      },
+      {
+        "date": "28/01/2026",
+        "count": 4,
+        "playtimeSec": 3983
+      },
+      {
+        "date": "28/02/2026",
+        "count": 12,
+        "playtimeSec": 18918
+      },
+      {
+        "date": "28/03/2026",
+        "count": 20,
+        "playtimeSec": 9588
+      },
+      {
+        "date": "28/04/2026",
+        "count": 27,
+        "playtimeSec": 17246
+      },
+      {
+        "date": "28/05/2026",
+        "count": 33,
+        "playtimeSec": 12355
+      },
+      {
+        "date": "28/06/2025",
+        "count": 8,
+        "playtimeSec": 15608
+      },
+      {
+        "date": "28/06/2026",
+        "count": 1,
+        "playtimeSec": 1386
+      },
+      {
+        "date": "28/07/2026",
+        "count": 13,
+        "playtimeSec": 20427
+      },
+      {
+        "date": "28/09/2025",
+        "count": 3,
+        "playtimeSec": 4040
+      },
+      {
+        "date": "28/12/2025",
+        "count": 1,
+        "playtimeSec": 1538
+      },
+      {
+        "date": "29/01/2026",
+        "count": 3,
+        "playtimeSec": 2780
+      },
+      {
+        "date": "29/03/2026",
+        "count": 20,
+        "playtimeSec": 16050
+      },
+      {
+        "date": "29/04/2026",
+        "count": 3,
+        "playtimeSec": 2517
+      },
+      {
+        "date": "29/05/2026",
+        "count": 20,
+        "playtimeSec": 8811
+      },
+      {
+        "date": "29/06/2025",
+        "count": 3,
+        "playtimeSec": 5057
+      },
+      {
+        "date": "29/06/2026",
+        "count": 11,
+        "playtimeSec": 3429
+      },
+      {
+        "date": "29/07/2025",
+        "count": 1,
+        "playtimeSec": 2584
+      },
+      {
+        "date": "29/07/2026",
+        "count": 14,
+        "playtimeSec": 17998
+      },
+      {
+        "date": "29/09/2025",
+        "count": 3,
+        "playtimeSec": 5043
+      },
+      {
+        "date": "30/03/2026",
+        "count": 18,
+        "playtimeSec": 9379
+      },
+      {
+        "date": "30/04/2026",
+        "count": 9,
+        "playtimeSec": 7792
+      },
+      {
+        "date": "30/05/2026",
+        "count": 18,
+        "playtimeSec": 12784
+      },
+      {
+        "date": "30/06/2025",
+        "count": 6,
+        "playtimeSec": 10912
+      },
+      {
+        "date": "30/06/2026",
+        "count": 4,
+        "playtimeSec": 2300
+      },
+      {
+        "date": "30/07/2026",
+        "count": 6,
+        "playtimeSec": 7721
+      },
+      {
+        "date": "30/09/2025",
+        "count": 3,
+        "playtimeSec": 3919
+      },
+      {
+        "date": "30/12/2025",
+        "count": 7,
+        "playtimeSec": 7690
+      },
+      {
+        "date": "31/01/2026",
+        "count": 2,
+        "playtimeSec": 2165
+      },
+      {
+        "date": "31/03/2026",
+        "count": 14,
+        "playtimeSec": 13429
+      },
+      {
+        "date": "31/05/2026",
+        "count": 14,
+        "playtimeSec": 11661
+      },
+      {
+        "date": "31/07/2026",
+        "count": 17,
+        "playtimeSec": 15561
+      },
+      {
+        "date": "31/12/2025",
+        "count": 6,
+        "playtimeSec": 6165
+      }
+    ],
+    "peakHour": 19,
+    "peakWeekday": "Sam",
+    "activeDays": 90
+  },
+  "streaks": {
+    "current": 9,
+    "best": 24
+  },
+  "achievements": {
+    "list": [
+      {
+        "id": "first-win",
+        "name": "Première victoire",
+        "desc": "Remporte ta 1ère partie",
+        "unlocked": true
+      },
+      {
+        "id": "ten-wins",
+        "name": "Décathlon",
+        "desc": "Remporte 10 parties",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "hundred-wins",
+        "name": "Centurion",
+        "desc": "Remporte 100 parties",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "marathon",
+        "name": "Marathonien",
+        "desc": "Joue plus de 24h au total",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "weekend",
+        "name": "Assidu",
+        "desc": "Joue 7 jours différents",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "cartographer",
+        "name": "Cartographe",
+        "desc": "Joue 10 cartes différentes",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "streak5",
+        "name": "En feu",
+        "desc": "Fais une série de 5 victoires",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "streak10",
+        "name": "Intouchable",
+        "desc": "Fais une série de 10 victoires",
+        "unlocked": true,
+        "progress": null
+      },
+      {
+        "id": "polyvalent",
+        "name": "Polyvalent",
+        "desc": "Gagne dans les 4 catégories",
+        "unlocked": true
+      },
+      {
+        "id": "night-owl",
+        "name": "Oiseau de nuit",
+        "desc": "Joue après minuit (0h-4h)",
+        "unlocked": true
+      }
+    ],
+    "unlockedCount": 10
+  },
+  "recentGames": [
+    {
+      "gameId": "qkRC9t6N",
+      "start": "2026-08-16T10:32:32.111Z",
+      "map": "Iceland",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 267,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "yuxFyYAd",
+      "start": "2026-08-16T10:21:52.977Z",
+      "map": "Europe Classic",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 307,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "fFvRzdZc",
+      "start": "2026-08-16T10:12:59.930Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 372,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "nQncfnRZ",
+      "start": "2026-08-16T10:07:52.633Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 210,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "2CzDp85V",
+      "start": "2026-08-16T09:53:57.796Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 364,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "8WEgQkQD",
+      "start": "2026-08-16T09:39:17.892Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 255,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "wPj23NmW",
+      "start": "2026-08-16T09:37:19.761Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 77,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "g8DwwXQH",
+      "start": "2026-08-16T09:21:19.853Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 300,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "bJdFKURH",
+      "start": "2026-08-16T08:28:30.726Z",
+      "map": "Great Lakes",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 974,
+      "totalPlayers": 86,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "dgSB9XK6",
+      "start": "2026-08-16T08:18:14.135Z",
+      "map": "Achiran",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 896,
+      "totalPlayers": 37,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "pRk4Gqng",
+      "start": "2026-08-16T06:49:40.941Z",
+      "map": "Manicouagan",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 3538,
+      "totalPlayers": 72,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "vPogXz4j",
+      "start": "2026-08-16T06:20:21.333Z",
+      "map": "Africa",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1485,
+      "totalPlayers": 82,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "XZa9KxbX",
+      "start": "2026-08-15T21:40:01.449Z",
+      "map": "Europe Classic",
+      "mode": "Team",
+      "result": "incomplete",
+      "durationSeconds": 31,
+      "totalPlayers": 3,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "HZrKrbTc",
+      "start": "2026-08-15T21:20:59.003Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 118,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "Xir43rqZ",
+      "start": "2026-08-15T20:27:40.107Z",
+      "map": "Europe",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1532,
+      "totalPlayers": 48,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "653vA3Ej",
+      "start": "2026-08-15T19:54:24.331Z",
+      "map": "Between Two Seas",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1378,
+      "totalPlayers": 57,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "aoWUptpR",
+      "start": "2026-08-15T19:06:36.828Z",
+      "map": "Dyslexdria",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1464,
+      "totalPlayers": 58,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "fti7BCCt",
+      "start": "2026-08-15T18:36:25.929Z",
+      "map": "South America",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1533,
+      "totalPlayers": 80,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "7VVSGZou",
+      "start": "2026-08-15T18:05:51.666Z",
+      "map": "Britannia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1185,
+      "totalPlayers": 81,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "oo5NuCcY",
+      "start": "2026-08-15T15:36:25.180Z",
+      "map": "Indian Subcontinent",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1296,
+      "totalPlayers": 47,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    }
+  ]
+}
