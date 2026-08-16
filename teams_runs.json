@@ -13503,6 +13503,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-16T07:02:36.226Z",
       "url": "https://openfront.io/game/5cLQUz76"
+    },
+    {
+      "id": "4eMzdZX5",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "AnonLobster2",
+          "clientID": "3Bd1Z2ZH",
+          "clanTag": null
+        },
+        {
+          "username": "FRACTURE",
+          "clientID": "3Lek8yMe",
+          "clanTag": "PLS"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1233,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "timestamp": "2026-08-16T09:05:03.900Z",
+      "url": "https://openfront.io/game/4eMzdZX5"
     }
   ],
   "trios": [
@@ -64073,6 +64096,34 @@
       "numPlayers": 20,
       "timestamp": "2026-08-16T08:29:20.767Z",
       "url": "https://openfront.io/game/WYbgDzyb"
+    },
+    {
+      "id": "zVW56TLq",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "ikke",
+          "clientID": "2uRXF1wf",
+          "clanTag": null
+        },
+        {
+          "username": "TRADEnPEACE",
+          "clientID": "jqLYieFh",
+          "clanTag": "MAR"
+        },
+        {
+          "username": "Grumahji",
+          "clientID": "h4wn8424",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1226,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-16T08:55:23.303Z",
+      "url": "https://openfront.io/game/zVW56TLq"
     }
   ]
 }
