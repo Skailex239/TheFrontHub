@@ -14252,6 +14252,29 @@
       "numPlayers": 33,
       "timestamp": "2026-08-16T22:47:22.063Z",
       "url": "https://openfront.io/game/QJyuJAyj"
+    },
+    {
+      "id": "qUfWmCpF",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "Anon891",
+          "clientID": "GhBrQUV1",
+          "clanTag": null
+        },
+        {
+          "username": "drerg",
+          "clientID": "cqCRQyn4",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1269,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-16T23:13:03.149Z",
+      "url": "https://openfront.io/game/qUfWmCpF"
     }
   ],
   "trios": [
@@ -67636,6 +67659,72 @@
       "numPlayers": 39,
       "timestamp": "2026-08-16T23:01:23.906Z",
       "url": "https://openfront.io/game/jVX1q4Qk"
+    },
+    {
+      "id": "KiDQvTJs",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "AKT",
+          "clientID": "jNDcUka8",
+          "clanTag": "42"
+        },
+        {
+          "username": "EYGtheGreat",
+          "clientID": "5ARYsb92",
+          "clanTag": "42"
+        },
+        {
+          "username": "CanCanCanCanCan",
+          "clientID": "hAa1gP3t",
+          "clanTag": "42"
+        },
+        {
+          "username": "bacar",
+          "clientID": "VmEZm2Yo",
+          "clanTag": "42"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1036,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-16T23:22:44.304Z",
+      "url": "https://openfront.io/game/KiDQvTJs"
+    },
+    {
+      "id": "m9prq6sv",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Maine",
+          "clientID": "5y7fuB3K",
+          "clanTag": null
+        },
+        {
+          "username": "car",
+          "clientID": "bdgFuaHT",
+          "clanTag": "POGI"
+        },
+        {
+          "username": "Swelch",
+          "clientID": "1XhPpvUN",
+          "clanTag": null
+        },
+        {
+          "username": "888",
+          "clientID": "fipC5Jsv",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1589,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-16T23:14:40.771Z",
+      "url": "https://openfront.io/game/m9prq6sv"
     }
   ]
 }
