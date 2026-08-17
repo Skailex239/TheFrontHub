@@ -15106,6 +15106,24 @@
       "numPlayers": 44,
       "timestamp": "2026-08-17T21:30:41.537Z",
       "url": "https://openfront.io/game/G7LkFDiF"
+    },
+    {
+      "id": "WoLbPavA",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Anon217",
+          "clientID": "665Ld7xh",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1530,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-17T21:59:53.987Z",
+      "url": "https://openfront.io/game/WoLbPavA"
     }
   ],
   "trios": [
@@ -41580,6 +41598,34 @@
       "numPlayers": 86,
       "timestamp": "2026-08-17T20:53:21.690Z",
       "url": "https://openfront.io/game/kivcPhfK"
+    },
+    {
+      "id": "YmcVqeC2",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "WOLF",
+          "clientID": "5cnA1ZEi",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "neolan",
+          "clientID": "orEYyzW3",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "RedBlack",
+          "clientID": "MSBx3oUu",
+          "clanTag": "FSM"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1414,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T21:52:16.522Z",
+      "url": "https://openfront.io/game/YmcVqeC2"
     }
   ],
   "quads": [
@@ -72354,6 +72400,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-17T21:08:16.631Z",
       "url": "https://openfront.io/game/J4aaQM6t"
+    },
+    {
+      "id": "McrFyoUw",
+      "team": "Red",
+      "players": [
+        {
+          "username": "peace trade only",
+          "clientID": "6rB785kQ",
+          "clanTag": "AR"
+        },
+        {
+          "username": "BorisYakov",
+          "clientID": "Peeeugd8",
+          "clanTag": null
+        },
+        {
+          "username": "willing mitochondria",
+          "clientID": "syynKdmw",
+          "clanTag": null
+        },
+        {
+          "username": "kurdish",
+          "clientID": "pEpksid8",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 795,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-17T22:01:44.611Z",
+      "url": "https://openfront.io/game/McrFyoUw"
     }
   ]
 }
