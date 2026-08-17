@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-17T19:05:41.180Z",
-  "lastSyncedAt": "2026-08-17T19:05:39.185Z",
-  "totalGames": 3742,
+  "computedAt": "2026-08-17T19:38:10.188Z",
+  "lastSyncedAt": "2026-08-17T19:38:05.357Z",
+  "totalGames": 3743,
   "careerWins": {
     "ffaCasual": 263,
     "ffaRanked": 1402,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 914",
     "totalWins": "1 943",
-    "totalGames": "3 742",
+    "totalGames": "3 743",
     "totalPlaytime": "30j 12h",
     "totalPlaytimeCompact": "30j 12h",
     "avgGameDuration": "11m 44s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "732h"
   },
   "playtime": {
-    "totalSec": 2637490,
-    "avgGameSec": 704.8343132014966,
+    "totalSec": 2638241,
+    "avgGameSec": 704.8466470745392,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1067,
-        "playtimeSec": 1284537,
+        "games": 1068,
+        "playtimeSec": 1285288,
         "wins": 263
       },
       "ffaRanked": {
@@ -80,7 +80,7 @@
   "results": {
     "victory": 1943,
     "defeat": 1471,
-    "incomplete": 328
+    "incomplete": 329
   },
   "maps": [
     {
@@ -1611,12 +1611,12 @@
       343,
       343,
       319,
-      303,
+      304,
       244,
       230
     ],
     "byWeekday": [
-      546,
+      547,
       562,
       470,
       548,
