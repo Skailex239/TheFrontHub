@@ -40521,6 +40521,52 @@
       "numPlayers": 39,
       "timestamp": "2026-08-17T14:12:26.789Z",
       "url": "https://openfront.io/game/vzCKiuJe"
+    },
+    {
+      "id": "NStEemaR",
+      "team": "Green",
+      "players": [
+        {
+          "username": "BoDo",
+          "clientID": "uPMvfJDA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "FahaBombas",
+          "clientID": "hxMZWTL3",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 828,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-17T14:28:05.678Z",
+      "url": "https://openfront.io/game/NStEemaR"
+    },
+    {
+      "id": "dvh6CBmi",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "AnonAmethyst",
+          "clientID": "S2kNwnbt",
+          "clanTag": null
+        },
+        {
+          "username": "HHH",
+          "clientID": "bNRaheNr",
+          "clanTag": "HHH"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 943,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T14:32:32.971Z",
+      "url": "https://openfront.io/game/dvh6CBmi"
     }
   ],
   "quads": [
@@ -70710,6 +70756,67 @@
       "numPlayers": 52,
       "timestamp": "2026-08-17T13:55:52.822Z",
       "url": "https://openfront.io/game/591UuruU"
+    },
+    {
+      "id": "kUtsRKhA",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "999",
+          "clientID": "484y1ZQu",
+          "clanTag": null
+        },
+        {
+          "username": "chuk4171",
+          "clientID": "SzP9TXTx",
+          "clanTag": null
+        },
+        {
+          "username": "abbib",
+          "clientID": "NVUVUsvN",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Kedah Tua",
+          "clientID": "J5XYaoop",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 840,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T14:39:47.920Z",
+      "url": "https://openfront.io/game/kUtsRKhA"
+    },
+    {
+      "id": "BQePRyiT",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "R3zeil",
+          "clientID": "GqGMi7vT",
+          "clanTag": null
+        },
+        {
+          "username": "Pakistan",
+          "clientID": "pD9QT4yT",
+          "clanTag": null
+        },
+        {
+          "username": "Maori Tribe",
+          "clientID": "4KfRVVgK",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 780,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-17T14:40:11.440Z",
+      "url": "https://openfront.io/game/BQePRyiT"
     }
   ]
 }
