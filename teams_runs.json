@@ -14858,6 +14858,29 @@
       "numPlayers": 82,
       "timestamp": "2026-08-17T15:19:32.279Z",
       "url": "https://openfront.io/game/G7tNfvFA"
+    },
+    {
+      "id": "5N3Tnpdk",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Raccoon",
+          "clientID": "qTgkFgKV",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "No.1 Racconfanboy",
+          "clientID": "WpfJiY54",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 2876,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-17T15:39:07.474Z",
+      "url": "https://openfront.io/game/5N3Tnpdk"
     }
   ],
   "trios": [
@@ -71225,6 +71248,39 @@
       "numPlayers": 91,
       "timestamp": "2026-08-17T15:56:56.503Z",
       "url": "https://openfront.io/game/TRWSrd5w"
+    },
+    {
+      "id": "TkV6Qk2J",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "TurboCloud.637U",
+          "clientID": "rm1dj4op",
+          "clanTag": null
+        },
+        {
+          "username": "DentDuChat",
+          "clientID": "1oFAZDoM",
+          "clanTag": "AOP"
+        },
+        {
+          "username": "Mimoletteman",
+          "clientID": "agUDRmCe",
+          "clanTag": "AOP"
+        },
+        {
+          "username": "Lauge",
+          "clientID": "UBGpgrSf",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 872,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-17T16:16:51.692Z",
+      "url": "https://openfront.io/game/TkV6Qk2J"
     }
   ]
 }
