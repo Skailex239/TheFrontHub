@@ -14298,6 +14298,47 @@
       "numPlayers": 34,
       "timestamp": "2026-08-16T23:35:00.090Z",
       "url": "https://openfront.io/game/uXxJFi4H"
+    },
+    {
+      "id": "WsSCY9iH",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Pennsylvania",
+          "clientID": "gX5bGvA6",
+          "clanTag": null
+        },
+        {
+          "username": "Busan seagull",
+          "clientID": "Qxb7PwxW",
+          "clanTag": "KOR"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1280,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-16T23:44:02.102Z",
+      "url": "https://openfront.io/game/WsSCY9iH"
+    },
+    {
+      "id": "JwWPLJvm",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "p0nte",
+          "clientID": "ThsZuV8Q",
+          "clanTag": "LCI"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1999,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-16T23:24:45.440Z",
+      "url": "https://openfront.io/game/JwWPLJvm"
     }
   ],
   "trios": [
@@ -67781,6 +67822,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-16T22:57:59.202Z",
       "url": "https://openfront.io/game/RFtwpiqF"
+    },
+    {
+      "id": "uJAthKQq",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "blob",
+          "clientID": "NHG1yi5d",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPulley9",
+          "clientID": "5JLjsGd3",
+          "clanTag": null
+        },
+        {
+          "username": "vive le quebec libre",
+          "clientID": "7zb3tcWM",
+          "clanTag": "QC"
+        },
+        {
+          "username": "sokar",
+          "clientID": "9aMAwcRM",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 621,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "timestamp": "2026-08-16T23:47:09.795Z",
+      "url": "https://openfront.io/game/uJAthKQq"
     }
   ]
 }
