@@ -39845,6 +39845,113 @@
       "numPlayers": 81,
       "timestamp": "2026-08-17T10:34:54.797Z",
       "url": "https://openfront.io/game/oZ9YuErj"
+    },
+    {
+      "id": "v6kRzp8G",
+      "team": "Green",
+      "players": [
+        {
+          "username": "oOverblaze",
+          "clientID": "97gzH8Ns",
+          "clanTag": null
+        },
+        {
+          "username": "trussard",
+          "clientID": "FExuSTYz",
+          "clanTag": null
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "zinAECXm",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 862,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-17T11:10:50.409Z",
+      "url": "https://openfront.io/game/v6kRzp8G"
+    },
+    {
+      "id": "y2qkTooL",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Ri929ch",
+          "clientID": "ZnBSGaj1",
+          "clanTag": "SEK"
+        },
+        {
+          "username": "DarkMaik",
+          "clientID": "FkwuhP1a",
+          "clanTag": "SEK"
+        },
+        {
+          "username": "Commonwealth of Humankind",
+          "clientID": "apeqnT4p",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1378,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T10:58:32.217Z",
+      "url": "https://openfront.io/game/y2qkTooL"
+    },
+    {
+      "id": "brTuo6cp",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Richman555",
+          "clientID": "PBhwixcd",
+          "clanTag": null
+        },
+        {
+          "username": "Stein",
+          "clientID": "XzyEacEa",
+          "clanTag": null
+        },
+        {
+          "username": "dieegoo.rm",
+          "clientID": "V46W8Man",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 984,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T11:07:03.702Z",
+      "url": "https://openfront.io/game/brTuo6cp"
+    },
+    {
+      "id": "dxQzCB2w",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "GenghisKhamas",
+          "clientID": "2SACygnu",
+          "clanTag": null
+        },
+        {
+          "username": "Vega",
+          "clientID": "a8NSi2uE",
+          "clanTag": "IT"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 4348,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T10:11:05.933Z",
+      "url": "https://openfront.io/game/dxQzCB2w"
     }
   ],
   "quads": [
@@ -69525,6 +69632,62 @@
       "numPlayers": 68,
       "timestamp": "2026-08-17T11:00:01.802Z",
       "url": "https://openfront.io/game/RnGh2k8n"
+    },
+    {
+      "id": "X6Vj5GRh",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonOcean2",
+          "clientID": "CDQaer6K",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz7",
+          "clientID": "6BnWZheX",
+          "clanTag": "GO"
+        },
+        {
+          "username": "dro4un",
+          "clientID": "jRD7oVxE",
+          "clanTag": "GO"
+        },
+        {
+          "username": "Anon410",
+          "clientID": "rjfxxfuP",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1267,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-17T11:03:39.513Z",
+      "url": "https://openfront.io/game/X6Vj5GRh"
+    },
+    {
+      "id": "9p4mjx7d",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "JadAK",
+          "clientID": "fnB4Eye3",
+          "clanTag": null
+        },
+        {
+          "username": "anonGE",
+          "clientID": "B7rKhBNL",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1580,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T10:53:16.406Z",
+      "url": "https://openfront.io/game/9p4mjx7d"
     }
   ]
 }
