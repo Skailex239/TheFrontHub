@@ -39952,6 +39952,34 @@
       "numPlayers": 36,
       "timestamp": "2026-08-17T10:11:05.933Z",
       "url": "https://openfront.io/game/dxQzCB2w"
+    },
+    {
+      "id": "yhGjL9Nk",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Tarric",
+          "clientID": "aNCPzE7a",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "moma",
+          "clientID": "y8QBuUkQ",
+          "clanTag": null
+        },
+        {
+          "username": "GrumpyBobby",
+          "clientID": "TSqDugBY",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1359,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T11:16:25.236Z",
+      "url": "https://openfront.io/game/yhGjL9Nk"
     }
   ],
   "quads": [
@@ -69688,6 +69716,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-17T10:53:16.406Z",
       "url": "https://openfront.io/game/9p4mjx7d"
+    },
+    {
+      "id": "pvZ8L4rZ",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "broski",
+          "clientID": "817PhaYB",
+          "clanTag": null
+        },
+        {
+          "username": "i pick my nose for fun",
+          "clientID": "bm3MFeK6",
+          "clanTag": "LIDL"
+        },
+        {
+          "username": "Pervypotato11",
+          "clientID": "YwbuZro9",
+          "clanTag": "LIDL"
+        },
+        {
+          "username": "AnonSugar7",
+          "clientID": "SkwieCHz",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1468,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 95,
+      "timestamp": "2026-08-17T11:12:51.535Z",
+      "url": "https://openfront.io/game/pvZ8L4rZ"
     }
   ]
 }
