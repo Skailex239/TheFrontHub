@@ -39707,6 +39707,75 @@
       "numPlayers": 39,
       "timestamp": "2026-08-17T09:28:38.595Z",
       "url": "https://openfront.io/game/sEA7gKgG"
+    },
+    {
+      "id": "tLgcgqfp",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "chocolily",
+          "clientID": "bH3rUy8R",
+          "clanTag": "LILY"
+        },
+        {
+          "username": "Anon095",
+          "clientID": "G9dmCdmG",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 918,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-17T09:43:43.418Z",
+      "url": "https://openfront.io/game/tLgcgqfp"
+    },
+    {
+      "id": "AArh7wmm",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "IN THE SHEETS",
+          "clientID": "juFMBxuA",
+          "clanTag": "FREAK"
+        },
+        {
+          "username": "KEY4DINNER",
+          "clientID": "aBmn1qKP",
+          "clanTag": "FREAK"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 2343,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-17T09:26:37.980Z",
+      "url": "https://openfront.io/game/AArh7wmm"
+    },
+    {
+      "id": "Ho228pab",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Polar",
+          "clientID": "KrqdkE6Z",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "124",
+          "clientID": "veFXQr11",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 939,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-17T09:46:39.566Z",
+      "url": "https://openfront.io/game/Ho228pab"
     }
   ],
   "quads": [
@@ -69270,6 +69339,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-17T09:02:43.086Z",
       "url": "https://openfront.io/game/zbVuiBGg"
+    },
+    {
+      "id": "kdzLQEQa",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "OSMANLI IMP.",
+          "clientID": "GoX1YfJB",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ardenix",
+          "clientID": "9FYrd4i8",
+          "clanTag": "UN"
+        },
+        {
+          "username": "suplies",
+          "clientID": "RYo88iSk",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1514,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-17T09:31:43.255Z",
+      "url": "https://openfront.io/game/kdzLQEQa"
     }
   ]
 }
