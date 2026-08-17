@@ -40909,6 +40909,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-17T15:33:36.142Z",
       "url": "https://openfront.io/game/pZ6PXTXi"
+    },
+    {
+      "id": "b5FkLUH1",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Magique",
+          "clientID": "eVerZTSH",
+          "clanTag": null
+        },
+        {
+          "username": "Truus",
+          "clientID": "3kgoPhKR",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "7XZ2ymrZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1186,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-17T17:04:39.479Z",
+      "url": "https://openfront.io/game/b5FkLUH1"
     }
   ],
   "quads": [
@@ -71332,6 +71360,39 @@
       "numPlayers": 68,
       "timestamp": "2026-08-17T16:26:17.242Z",
       "url": "https://openfront.io/game/6VCPt1Y3"
+    },
+    {
+      "id": "tk5Uujyi",
+      "team": "Team 26",
+      "players": [
+        {
+          "username": "AnonSpider5",
+          "clientID": "qSJEXY1b",
+          "clanTag": null
+        },
+        {
+          "username": "Divine Idylle",
+          "clientID": "DKMATsyr",
+          "clanTag": null
+        },
+        {
+          "username": "Kingdom of the Gunds",
+          "clientID": "RjvEokT2",
+          "clanTag": "COV"
+        },
+        {
+          "username": "AnonScepter",
+          "clientID": "SJCC9Ho5",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1757,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "timestamp": "2026-08-17T16:58:53.643Z",
+      "url": "https://openfront.io/game/tk5Uujyi"
     }
   ]
 }
