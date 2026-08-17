@@ -14702,6 +14702,29 @@
       "numPlayers": 70,
       "timestamp": "2026-08-17T13:06:12.689Z",
       "url": "https://openfront.io/game/tyKBGNds"
+    },
+    {
+      "id": "cuEp8knM",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Loco",
+          "clientID": "eAgVX66z",
+          "clanTag": "31ER"
+        },
+        {
+          "username": "Clayz",
+          "clientID": "pjfubnWg",
+          "clanTag": "31ER"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 962,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-17T13:53:29.182Z",
+      "url": "https://openfront.io/game/cuEp8knM"
     }
   ],
   "trios": [
@@ -70450,6 +70473,57 @@
       "numPlayers": 92,
       "timestamp": "2026-08-17T13:32:48.926Z",
       "url": "https://openfront.io/game/bsFtEJEK"
+    },
+    {
+      "id": "vT6rx76b",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Danilchab",
+          "clientID": "ptdestjP",
+          "clanTag": "KYNS"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1150,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-17T13:51:02.046Z",
+      "url": "https://openfront.io/game/vT6rx76b"
+    },
+    {
+      "id": "NVi5ikX1",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "just watcher",
+          "clientID": "3XepUbmm",
+          "clanTag": null
+        },
+        {
+          "username": "RoM",
+          "clientID": "TWrxzfY4",
+          "clanTag": "TEG"
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "gUe8bBjW",
+          "clanTag": null
+        },
+        {
+          "username": "AnonComet2",
+          "clientID": "JtEW2V6f",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1351,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "timestamp": "2026-08-17T13:49:05.931Z",
+      "url": "https://openfront.io/game/NVi5ikX1"
     }
   ]
 }
