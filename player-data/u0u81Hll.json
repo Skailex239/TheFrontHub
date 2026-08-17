@@ -1,12 +1,40 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-17T17:16:38.633Z",
+  "lastSyncedAt": "2026-08-17T17:51:25.492Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.2,
-  "totalGames": 2146,
-  "newGamesThisSync": 0,
+  "totalGames": 2148,
+  "newGamesThisSync": 2,
   "games": [
+    {
+      "gameId": "JjMhHoK1",
+      "start": "2026-08-17T17:06:50.105Z",
+      "durationSeconds": 2624,
+      "map": "Hecate Strait",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 107,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
+    {
+      "gameId": "P7dw65DA",
+      "start": "2026-08-17T16:57:43.073Z",
+      "durationSeconds": 1385,
+      "map": "Indian Subcontinent",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 98,
+      "username": "Anto",
+      "clanTag": null
+    },
     {
       "gameId": "VMCchMhX",
       "start": "2026-08-17T16:35:46.295Z",
