@@ -962,22 +962,26 @@ function renderWeeklyChart() {
 
   let wrap = document.getElementById("weekly-chart-card");
   if (!wrap) {
-    const recent = document.getElementById("profile-recent-games");
-    if (!recent) return;
+    // Try cockpit mount first, then fallback to career-stats-section
+    const mount = document.getElementById("career-stats-section") || document.getElementById("playtime-section-mount");
+    if (!mount) return;
     wrap = document.createElement("div");
     wrap.id = "weekly-chart-card";
-    wrap.className = "pf-card";
-    wrap.style.marginTop = "16px";
+    wrap.className = "cockpit-card";
+    wrap.style.cssText = "margin-top:16px;padding:18px;background:var(--card,#fff);border:1px solid var(--border,#F3F4F6);border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,0.04)";
     wrap.innerHTML = `
-      <div class="pf-card-header">
-        <span class="pf-card-title">Weekly Performance</span>
-        <span class="pf-card-sub">Points par semaine</span>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:var(--orange-pale,#fff4e9);color:var(--orange-deep,#c25700);border:1px solid rgba(255,122,0,0.18)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+        </span>
+        <div>
+          <h3 style="margin:0;font-size:15px;font-weight:700;color:var(--text,#111)">Points par semaine</h3>
+          <p style="margin:0;font-size:12px;color:var(--text3,#9CA3AF)">Performance hebdomadaire (FFA, Team, Classé)</p>
+        </div>
       </div>
-      <div class="pf-card-body" style="padding:16px">
-        <canvas id="weekly-chart-canvas" style="width:100%;height:320px;display:block"></canvas>
-      </div>
+      <canvas id="weekly-chart-canvas" style="width:100%;height:300px;display:block"></canvas>
     `;
-    recent.parentNode.after(wrap);
+    mount.appendChild(wrap);
   }
 
   const canvas = document.getElementById("weekly-chart-canvas");
@@ -2157,4 +2161,10 @@ function renderPrecomputedStats(stats, mount) {
       });
     });
   });
+
+  // ── Weekly chart (points par semaine) ──
+  // Render after cockpit so the mount element exists
+  if (window._profileWeekData) {
+    setTimeout(() => renderWeeklyChart(), 100);
+  }
 }
