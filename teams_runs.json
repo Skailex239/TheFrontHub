@@ -39794,6 +39794,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-17T09:45:21.003Z",
       "url": "https://openfront.io/game/gFEYB79H"
+    },
+    {
+      "id": "hXFGTXQk",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "smithy",
+          "clientID": "f13yXaM9",
+          "clanTag": "UN"
+        },
+        {
+          "username": "abubles",
+          "clientID": "hXd6GBMQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mitochondria",
+          "clientID": "hUcZfbBu",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1261,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-17T09:57:29.680Z",
+      "url": "https://openfront.io/game/hXFGTXQk"
     }
   ],
   "quads": [
@@ -69413,6 +69441,34 @@
       "numPlayers": 82,
       "timestamp": "2026-08-17T09:42:28.857Z",
       "url": "https://openfront.io/game/2csqFekn"
+    },
+    {
+      "id": "RufUJy8V",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "feEEda",
+          "clientID": "AXt63a5y",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Oldenburg",
+          "clientID": "DvkUrwUP",
+          "clanTag": null
+        },
+        {
+          "username": "Paldea",
+          "clientID": "GpUrqvLM",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 918,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-17T10:05:17.102Z",
+      "url": "https://openfront.io/game/RufUJy8V"
     }
   ]
 }
