@@ -34,7 +34,7 @@ import {
 
 /* ── Player overlays (plaque nominative) ── */
 const PLAYER_OVERLAYS = [
-  { match: /skailex/i, image: "overlay-v2-alpha.webp" },
+  { match: /skailex/i, image: "overlay-v2-compact.webp" },
 ];
 function getPlayerOverlay(username) {
   if (!username) return null;

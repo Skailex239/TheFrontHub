@@ -1157,35 +1157,32 @@
 #profile-title-name span.has-overlay {
   position: relative;
   display: inline-block;
-  padding-right: 140px;
+  padding-right: 60px;
 }
 #profile-title-name span.has-overlay::after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 140px;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 25px;
   background-image: var(--overlay-img);
-  background-size: cover;
-  background-position: right center;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
-  opacity: 1;
+  opacity: 0.4;
   pointer-events: none;
-  z-index: 0;
-  border-radius: 0 8px 8px 0;
-}
-#profile-title-name span.has-overlay > * {
-  position: relative;
-  z-index: 1;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   #profile-title-name span.has-overlay {
-    padding-right: 90px;
+    padding-right: 42px;
   }
   #profile-title-name span.has-overlay::after {
-    width: 90px;
+    width: 40px;
+    height: 18px;
+    opacity: 0.35;
   }
 }
