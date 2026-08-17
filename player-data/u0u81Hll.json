@@ -1,12 +1,40 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-17T21:42:22.021Z",
+  "lastSyncedAt": "2026-08-17T21:58:20.056Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 2162,
-  "newGamesThisSync": 0,
+  "totalGames": 2164,
+  "newGamesThisSync": 2,
   "games": [
+    {
+      "gameId": "uv98bSfX",
+      "start": "2026-08-17T21:47:20.704Z",
+      "durationSeconds": 366,
+      "map": "Asia",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "victory",
+      "totalPlayers": 4,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
+    {
+      "gameId": "Q6wqqd5Q",
+      "start": "2026-08-17T21:42:19.403Z",
+      "durationSeconds": 227,
+      "map": "Europe Classic",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "victory",
+      "totalPlayers": 4,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "rmKRLrCj",
       "start": "2026-08-17T21:32:46.700Z",
