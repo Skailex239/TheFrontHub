@@ -39776,6 +39776,24 @@
       "numPlayers": 45,
       "timestamp": "2026-08-17T09:46:39.566Z",
       "url": "https://openfront.io/game/Ho228pab"
+    },
+    {
+      "id": "gFEYB79H",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Jaca",
+          "clientID": "ykbD7D7G",
+          "clanTag": "PL"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1596,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-17T09:45:21.003Z",
+      "url": "https://openfront.io/game/gFEYB79H"
     }
   ],
   "quads": [
@@ -69367,6 +69385,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-17T09:31:43.255Z",
       "url": "https://openfront.io/game/kdzLQEQa"
+    },
+    {
+      "id": "2csqFekn",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "MakeMoney",
+          "clientID": "5eZspb2b",
+          "clanTag": null
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "kp7cLeWK",
+          "clanTag": null
+        },
+        {
+          "username": "Khshayarsha",
+          "clientID": "yfqFitv2",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1403,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-17T09:42:28.857Z",
+      "url": "https://openfront.io/game/2csqFekn"
     }
   ]
 }
