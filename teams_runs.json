@@ -14656,6 +14656,29 @@
       "numPlayers": 40,
       "timestamp": "2026-08-17T12:21:53.271Z",
       "url": "https://openfront.io/game/7wzB3RbH"
+    },
+    {
+      "id": "4gu9QPS3",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "AnonZeppelin2",
+          "clientID": "uuNBjSpx",
+          "clanTag": null
+        },
+        {
+          "username": "Z0O0M0",
+          "clientID": "fTqHrgAs",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1185,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-17T12:47:14.869Z",
+      "url": "https://openfront.io/game/4gu9QPS3"
     }
   ],
   "trios": [
@@ -40276,6 +40299,57 @@
       "numPlayers": 78,
       "timestamp": "2026-08-17T12:13:30.761Z",
       "url": "https://openfront.io/game/1kvREYXo"
+    },
+    {
+      "id": "hTGZJubR",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Anon505",
+          "clientID": "vUKPWp34",
+          "clanTag": null
+        },
+        {
+          "username": "Mjewmjew",
+          "clientID": "VW6Cwb62",
+          "clanTag": null
+        },
+        {
+          "username": "UMUDQ346",
+          "clientID": "CjyRre2v",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1716,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-17T12:45:13.756Z",
+      "url": "https://openfront.io/game/hTGZJubR"
+    },
+    {
+      "id": "BeNmSmhB",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "AG1130",
+          "clientID": "SQfGhh5N",
+          "clanTag": null
+        },
+        {
+          "username": "Anti",
+          "clientID": "Yzaxqcry",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1076,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-17T12:49:59.520Z",
+      "url": "https://openfront.io/game/BeNmSmhB"
     }
   ],
   "quads": [
