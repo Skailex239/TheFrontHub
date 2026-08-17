@@ -1,12 +1,40 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-17T04:41:08.464Z",
+  "lastSyncedAt": "2026-08-17T05:20:19.577Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.2,
-  "totalGames": 3705,
-  "newGamesThisSync": 0,
+  "totalGames": 3707,
+  "newGamesThisSync": 2,
   "games": [
+    {
+      "gameId": "6b6TAi6D",
+      "start": "2026-08-17T05:04:42.552Z",
+      "durationSeconds": 877,
+      "map": "Black Sea",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 56,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
+    {
+      "gameId": "W4NRfqLw",
+      "start": "2026-08-17T04:41:20.724Z",
+      "durationSeconds": 1354,
+      "map": "France",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 89,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "iyaqCkwy",
       "start": "2026-08-17T03:55:53.577Z",

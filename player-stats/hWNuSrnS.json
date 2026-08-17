@@ -1,27 +1,27 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-17T04:41:10.801Z",
-  "lastSyncedAt": "2026-08-17T04:41:08.464Z",
-  "totalGames": 3705,
+  "computedAt": "2026-08-17T05:20:21.942Z",
+  "lastSyncedAt": "2026-08-17T05:20:19.577Z",
+  "totalGames": 3707,
   "careerWins": {
-    "ffaCasual": 261,
+    "ffaCasual": 262,
     "ffaRanked": 1387,
     "teamCasual": 151,
     "teamRanked": 127
   },
-  "totalWins": 1926,
-  "points": 4879,
+  "totalWins": 1927,
+  "points": 4889,
   "level": 48,
-  "levelProgress": 79,
+  "levelProgress": 89,
   "levelNextAt": 4900,
   "nextMilestones": {
     "wins": {
-      "current": 1926,
+      "current": 1927,
       "target": 2000
     },
     "playtime": {
-      "current": 725,
+      "current": 726,
       "target": 1000
     },
     "maps": {
@@ -39,26 +39,26 @@
     6
   ],
   "formatted": {
-    "points": "4 879",
-    "totalWins": "1 926",
-    "totalGames": "3 705",
-    "totalPlaytime": "30j 5h",
-    "totalPlaytimeCompact": "30j 5h",
+    "points": "4 889",
+    "totalWins": "1 927",
+    "totalGames": "3 707",
+    "totalPlaytime": "30j 6h",
+    "totalPlaytimeCompact": "30j 6h",
     "avgGameDuration": "11m 45s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "725h"
+    "totalPlaytimeHours": "726h"
   },
   "playtime": {
-    "totalSec": 2613055,
-    "avgGameSec": 705.2780026990554,
+    "totalSec": 2615286,
+    "avgGameSec": 705.4993256002158,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1060,
-        "playtimeSec": 1273252,
-        "wins": 261
+        "games": 1062,
+        "playtimeSec": 1275483,
+        "wins": 262
       },
       "ffaRanked": {
         "games": 1864,
@@ -78,8 +78,8 @@
     }
   },
   "results": {
-    "victory": 1926,
-    "defeat": 1452,
+    "victory": 1927,
+    "defeat": 1453,
     "incomplete": 327
   },
   "maps": [
@@ -197,18 +197,18 @@
     },
     {
       "map": "Black Sea",
-      "count": 54,
-      "wins": 16,
+      "count": 55,
+      "wins": 17,
       "losses": 38,
-      "playtimeSec": 55754,
-      "avgDuration": 1032.4814814814815,
-      "winRate": 0.2962962962962963,
-      "lastPlayed": 1786493299799,
+      "playtimeSec": 56631,
+      "avgDuration": 1029.6545454545455,
+      "winRate": 0.3090909090909091,
+      "lastPlayed": 1786943082552,
       "formatted": {
-        "playtime": "15h 29m",
+        "playtime": "15h 43m",
         "avgDuration": "17m",
-        "winRate": "30%",
-        "lastPlayed": "12/08/26"
+        "winRate": "31%",
+        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1076,6 +1076,22 @@
       }
     },
     {
+      "map": "France",
+      "count": 3,
+      "wins": 1,
+      "losses": 2,
+      "playtimeSec": 4949,
+      "avgDuration": 1649.6666666666667,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1786941680724,
+      "formatted": {
+        "playtime": "1h 22m",
+        "avgDuration": "27m",
+        "winRate": "33%",
+        "lastPlayed": "17/08/26"
+      }
+    },
+    {
       "map": "Finger Lakes",
       "count": 3,
       "wins": 1,
@@ -1265,22 +1281,6 @@
         "avgDuration": "20m",
         "winRate": "100%",
         "lastPlayed": "12/08/26"
-      }
-    },
-    {
-      "map": "France",
-      "count": 2,
-      "wins": 1,
-      "losses": 1,
-      "playtimeSec": 3595,
-      "avgDuration": 1797.5,
-      "winRate": 0.5,
-      "lastPlayed": 1786182646190,
-      "formatted": {
-        "playtime": "59m",
-        "avgDuration": "29m",
-        "winRate": "50%",
-        "lastPlayed": "08/08/26"
       }
     },
     {
@@ -1596,8 +1596,8 @@
       89,
       62,
       76,
-      24,
-      18,
+      25,
+      19,
       28,
       50,
       80,
@@ -1616,7 +1616,7 @@
       230
     ],
     "byWeekday": [
-      509,
+      511,
       562,
       470,
       548,
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,28 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "6b6TAi6D",
+      "start": "2026-08-17T05:04:42.552Z",
+      "map": "Black Sea",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 877,
+      "totalPlayers": 56,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "W4NRfqLw",
+      "start": "2026-08-17T04:41:20.724Z",
+      "map": "France",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1354,
+      "totalPlayers": 89,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "iyaqCkwy",
       "start": "2026-08-17T03:55:53.577Z",
@@ -2351,28 +2373,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 210,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "2CzDp85V",
-      "start": "2026-08-16T09:53:57.796Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 364,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "8WEgQkQD",
-      "start": "2026-08-16T09:39:17.892Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 255,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
