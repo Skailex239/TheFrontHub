@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-17T03:59:58.299Z",
+  "lastSyncedAt": "2026-08-17T04:40:33.466Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.2,
-  "totalGames": 3704,
-  "newGamesThisSync": 0,
+  "totalGames": 3705,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "iyaqCkwy",
+      "start": "2026-08-17T03:55:53.577Z",
+      "durationSeconds": 796,
+      "map": "Asia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "defeat",
+      "totalPlayers": 2,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "ETg3Yc92",
       "start": "2026-08-17T03:49:50.267Z",
