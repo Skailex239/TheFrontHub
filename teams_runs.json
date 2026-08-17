@@ -15060,6 +15060,29 @@
       "numPlayers": 54,
       "timestamp": "2026-08-17T20:56:08.861Z",
       "url": "https://openfront.io/game/dvXdYjhT"
+    },
+    {
+      "id": "5RTdiZGs",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "p0nte",
+          "clientID": "b2wGx79h",
+          "clanTag": "LCI"
+        },
+        {
+          "username": "AnonCrocodile5",
+          "clientID": "tUDVpxaU",
+          "clanTag": "LCI"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 820,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-17T21:09:33.712Z",
+      "url": "https://openfront.io/game/5RTdiZGs"
     }
   ],
   "trios": [
@@ -41506,6 +41529,34 @@
       "numPlayers": 24,
       "timestamp": "2026-08-17T20:56:16.372Z",
       "url": "https://openfront.io/game/NKzNZJDL"
+    },
+    {
+      "id": "kivcPhfK",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Prussian Empire",
+          "clientID": "juinT38S",
+          "clanTag": null
+        },
+        {
+          "username": "S.P.Q.PL",
+          "clientID": "tbCN7Poh",
+          "clanTag": "PL"
+        },
+        {
+          "username": "AnonOcean",
+          "clientID": "a8fjBdVq",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1940,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "timestamp": "2026-08-17T20:53:21.690Z",
+      "url": "https://openfront.io/game/kivcPhfK"
     }
   ],
   "quads": [
@@ -72252,6 +72303,34 @@
       "numPlayers": 72,
       "timestamp": "2026-08-17T20:36:04.600Z",
       "url": "https://openfront.io/game/QyNaesHA"
+    },
+    {
+      "id": "J4aaQM6t",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Framing Dragon",
+          "clientID": "AzS9D1bi",
+          "clanTag": null
+        },
+        {
+          "username": "HLAND",
+          "clientID": "UzTnsQD4",
+          "clanTag": "HLAND"
+        },
+        {
+          "username": "Als",
+          "clientID": "Uqc7Rz4n",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 946,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T21:08:16.631Z",
+      "url": "https://openfront.io/game/J4aaQM6t"
     }
   ]
 }
