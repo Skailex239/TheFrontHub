@@ -14408,6 +14408,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-17T01:04:28.999Z",
       "url": "https://openfront.io/game/ABfHhYhk"
+    },
+    {
+      "id": "HGWFw8Sc",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Te Rae o Papamoa",
+          "clientID": "SVv9wPrY",
+          "clanTag": "AKE"
+        },
+        {
+          "username": "AnonChariot3",
+          "clientID": "HshHgXfw",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1150,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "timestamp": "2026-08-17T01:43:43.927Z",
+      "url": "https://openfront.io/game/HGWFw8Sc"
     }
   ],
   "trios": [
@@ -68128,6 +68151,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-17T00:41:22.053Z",
       "url": "https://openfront.io/game/Nd2W5qzW"
+    },
+    {
+      "id": "ArmmzxE6",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Volfovich",
+          "clientID": "LocgFVvv",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "M1JZ7QSg",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Nardo RS",
+          "clientID": "W6gWDYhC",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Das Scrooge",
+          "clientID": "URXGxWfg",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-17T01:40:57.758Z",
+      "url": "https://openfront.io/game/ArmmzxE6"
     }
   ]
 }
