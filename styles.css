@@ -1875,9 +1875,9 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
 
 /* Dashboard (global leaderboard) — 48x16px image */
 .global-player.has-overlay {
-  position: relative;
-  display: inline-block;
-  padding-right: 52px;
+  position: relative !important;
+  display: inline-block !important;
+  padding-right: 52px !important;
 }
 .global-player.has-overlay::after {
   content: "";
@@ -1897,8 +1897,8 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
 
 /* Speedruns leaderboard — 171x57px image */
 .run-player.has-overlay {
-  position: relative;
-  padding-right: 175px;
+  position: relative !important;
+  padding-right: 175px !important;
 }
 .run-player.has-overlay::after {
   content: "";
@@ -1921,6 +1921,8 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
   position: relative;
   display: inline-block;
   padding-right: 148px !important;
+  position: relative !important;
+  display: inline-block !important;
 }
 .ranked-player-name.has-overlay::after {
   content: "";
