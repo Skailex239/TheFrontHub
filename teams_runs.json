@@ -39000,6 +39000,47 @@
       "numPlayers": 50,
       "timestamp": "2026-08-17T00:54:07.857Z",
       "url": "https://openfront.io/game/HR3kC1kq"
+    },
+    {
+      "id": "Z77Qruss",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Hyde",
+          "clientID": "HFT1zS3o",
+          "clanTag": "UN"
+        },
+        {
+          "username": "IndiaRespekt",
+          "clientID": "HBGZWWaj",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1920,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-17T01:14:55.126Z",
+      "url": "https://openfront.io/game/Z77Qruss"
+    },
+    {
+      "id": "A1Zaug5u",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Alabaster",
+          "clientID": "nJVbjCXp",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 2034,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-17T01:09:14.763Z",
+      "url": "https://openfront.io/game/A1Zaug5u"
     }
   ],
   "quads": [
