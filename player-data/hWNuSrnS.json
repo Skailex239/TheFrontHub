@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-17T10:20:28.951Z",
+  "lastSyncedAt": "2026-08-17T10:54:09.988Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 3712,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.3,
+  "totalGames": 3713,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "CuwtDa8f",
+      "start": "2026-08-17T10:16:13.734Z",
+      "durationSeconds": 522,
+      "map": "Iceland",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "victory",
+      "totalPlayers": 2,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "bEMSjDuH",
       "start": "2026-08-17T10:06:08.155Z",
