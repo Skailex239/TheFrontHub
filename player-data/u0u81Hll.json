@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-17T16:52:16.950Z",
+  "lastSyncedAt": "2026-08-17T17:16:02.102Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 2145,
-  "newGamesThisSync": 0,
+  "totalGames": 2146,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "VMCchMhX",
+      "start": "2026-08-17T16:35:46.295Z",
+      "durationSeconds": 1305,
+      "map": "Alps",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 119,
+      "username": "Anto",
+      "clanTag": null
+    },
     {
       "gameId": "5nhMxkAN",
       "start": "2026-08-17T16:08:16.075Z",

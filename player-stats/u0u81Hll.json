@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-17T16:52:19.342Z",
-  "lastSyncedAt": "2026-08-17T16:52:16.950Z",
-  "totalGames": 2145,
+  "computedAt": "2026-08-17T17:16:04.483Z",
+  "lastSyncedAt": "2026-08-17T17:16:02.102Z",
+  "totalGames": 2146,
   "careerWins": {
     "ffaCasual": 371,
     "ffaRanked": 325,
@@ -21,7 +21,7 @@
       "target": 1000
     },
     "playtime": {
-      "current": 542,
+      "current": 543,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 321",
     "totalWins": "794",
-    "totalGames": "2 145",
-    "totalPlaytime": "22j 14h",
-    "totalPlaytimeCompact": "22j 14h",
+    "totalGames": "2 146",
+    "totalPlaytime": "22j 15h",
+    "totalPlaytimeCompact": "22j 15h",
     "avgGameDuration": "15m 11s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "542h"
+    "totalPlaytimeHours": "543h"
   },
   "playtime": {
-    "totalSec": 1954437,
-    "avgGameSec": 911.1594405594406,
+    "totalSec": 1955742,
+    "avgGameSec": 911.3429636533085,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1373,
-        "playtimeSec": 1583315,
+        "games": 1374,
+        "playtimeSec": 1584620,
         "wins": 371
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 794,
-    "defeat": 1029,
+    "defeat": 1030,
     "incomplete": 322
   },
   "maps": [
@@ -484,6 +484,22 @@
       }
     },
     {
+      "map": "Alps",
+      "count": 18,
+      "wins": 3,
+      "losses": 15,
+      "playtimeSec": 25917,
+      "avgDuration": 1439.8333333333333,
+      "winRate": 0.16666666666666666,
+      "lastPlayed": 1786984546295,
+      "formatted": {
+        "playtime": "7h 11m",
+        "avgDuration": "23m",
+        "winRate": "17%",
+        "lastPlayed": "17/08/26"
+      }
+    },
+    {
       "map": "Dyslexdria",
       "count": 18,
       "wins": 8,
@@ -561,22 +577,6 @@
         "avgDuration": "22m",
         "winRate": "24%",
         "lastPlayed": "16/08/26"
-      }
-    },
-    {
-      "map": "Alps",
-      "count": 17,
-      "wins": 3,
-      "losses": 14,
-      "playtimeSec": 24612,
-      "avgDuration": 1447.764705882353,
-      "winRate": 0.17647058823529413,
-      "lastPlayed": 1784577456408,
-      "formatted": {
-        "playtime": "6h 50m",
-        "avgDuration": "24m",
-        "winRate": "18%",
-        "lastPlayed": "20/07/26"
       }
     },
     {
@@ -1592,7 +1592,7 @@
       143,
       136,
       200,
-      196,
+      197,
       222,
       190,
       148,
@@ -1600,7 +1600,7 @@
       144
     ],
     "byWeekday": [
-      282,
+      283,
       218,
       289,
       325,
@@ -1746,8 +1746,8 @@
       },
       {
         "date": "17/08/2026",
-        "count": 2,
-        "playtimeSec": 1892
+        "count": 3,
+        "playtimeSec": 3197
       },
       {
         "date": "18/02/2026",
@@ -2142,6 +2142,17 @@
   },
   "recentGames": [
     {
+      "gameId": "VMCchMhX",
+      "start": "2026-08-17T16:35:46.295Z",
+      "map": "Alps",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1305,
+      "totalPlayers": 119,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "iQed9Ywd",
       "start": "2026-08-17T15:48:14.507Z",
       "map": "Two Lakes",
@@ -2347,17 +2358,6 @@
       "result": "defeat",
       "durationSeconds": 1532,
       "totalPlayers": 55,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "jMQa9W6N",
-      "start": "2026-08-15T13:36:13.168Z",
-      "map": "South America",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1533,
-      "totalPlayers": 58,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
