@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="auth.css?v=17">
 <link rel="stylesheet" href="toast.css">
 <link rel="stylesheet" href="animations.css?v=6">
-<link rel="stylesheet" href="lobby.css?v=5">
+<link rel="stylesheet" href="lobby.css?v=6">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 </head>
@@ -100,6 +100,14 @@
 
   <!-- ═══ MAIN CONTENT ═══ -->
   <main class="content" id="lobby-content">
+    <header class="topbar">
+      <div>
+        <h1>Lobby</h1>
+        <p>Parties OpenFront en temps réel</p>
+      </div>
+      <div class="topbar-right">
+      </div>
+    </header>
 
     <div id="lobby-view" class="lobby-view">
       <div class="lobby-loading">
@@ -109,7 +117,7 @@
     </div>
 
     <footer class="lobby-footer">
-      <span>TheFrontHub · Lobby Live Feed · Données en temps réel via OpenFront WebSocket</span>
+      <span>TheFrontHub · Lobby</span>
     </footer>
   </main>
 
@@ -143,7 +151,7 @@
 <!-- Toast container -->
 <div id="toast-container"></div>
 
-<script type="module" src="lobby.js?v=7"></script>
+<script type="module" src="lobby.js?v=8"></script>
 <script type="module" src="auth.js?v=17"></script>
 <script src="toast.js"></script>
 <script src="lenis.js?v=2"></script>

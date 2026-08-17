@@ -261,9 +261,9 @@
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
-  background: var(--bg-subtle, #1a1d24);
+  background: var(--orange-pale, #fff4e9);
   position: relative;
-  border: 1px solid var(--border, #2a2d35);
+  border: 1px solid var(--border, #f0f0f0);
 }
 .lobby-feed-card-thumb img {
   position: absolute;
@@ -509,8 +509,8 @@
   border-radius: 6px;
   overflow: hidden;
   flex-shrink: 0;
-  background: var(--bg-subtle, #1a1d24);
-  border: 1px solid var(--border, #2a2d35);
+  background: var(--orange-pale, #fff4e9);
+  border: 1px solid var(--border, #f0f0f0);
   position: relative;
 }
 .lobby-history-thumb img {

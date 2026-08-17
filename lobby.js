@@ -292,8 +292,6 @@ const SVG = {
 };
 
 function renderFeedHeader(totalGames, totalPlayers) {
-  const gamesTxt = `${totalGames} partie${totalGames !== 1 ? "s" : ""}`;
-  const playersTxt = `${totalPlayers.toLocaleString("fr-FR")} joueur${totalPlayers !== 1 ? "s" : ""}`;
   const tabs = [
     { key: "all",     label: "Toutes" },
     { key: "ffa",     label: "FFA" },
@@ -303,14 +301,6 @@ function renderFeedHeader(totalGames, totalPlayers) {
 
   return `
     <header class="lobby-feed-header">
-      <h1 class="lobby-feed-title">
-        ${SVG.bolt}
-        <span>Lobby en direct</span>
-      </h1>
-      <div class="lobby-feed-counters">
-        <span class="lobby-feed-counter-dot"></span>
-        <span id="lobby-feed-counter-text">${escapeHtml(gamesTxt)} · ${escapeHtml(playersTxt)} · Temps réel</span>
-      </div>
       <div class="lobby-filter-tabs" id="lobby-filter-tabs">${tabs}</div>
     </header>
   `;
@@ -495,13 +485,6 @@ function render() {
     wireTabs();
     feed = document.getElementById("lobby-feed");
   } else {
-    // Update header counters in place
-    const counterText = document.getElementById("lobby-feed-counter-text");
-    if (counterText) {
-      const gamesTxt = `${all.length} partie${all.length !== 1 ? "s" : ""}`;
-      const playersTxt = `${totalPlayers.toLocaleString("fr-FR")} joueur${totalPlayers !== 1 ? "s" : ""}`;
-      counterText.textContent = `${gamesTxt} · ${playersTxt} · Temps réel`;
-    }
     // Refresh active tab state (in case filter changed)
     feed.querySelectorAll(".lobby-filter-tab").forEach(b =>
       b.classList.toggle("active", b.dataset.filter === currentFilter));
