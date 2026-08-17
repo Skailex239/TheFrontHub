@@ -15124,6 +15124,29 @@
       "numPlayers": 54,
       "timestamp": "2026-08-17T21:59:53.987Z",
       "url": "https://openfront.io/game/WoLbPavA"
+    },
+    {
+      "id": "5UZEFaNd",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Colmy",
+          "clientID": "nzWzSfvJ",
+          "clanTag": null
+        },
+        {
+          "username": "Heywood Jablome",
+          "clientID": "g4QaT25p",
+          "clanTag": "RARI"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1105,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-17T22:17:31.633Z",
+      "url": "https://openfront.io/game/5UZEFaNd"
     }
   ],
   "trios": [
@@ -41626,6 +41649,52 @@
       "numPlayers": 60,
       "timestamp": "2026-08-17T21:52:16.522Z",
       "url": "https://openfront.io/game/YmcVqeC2"
+    },
+    {
+      "id": "C6vYWTxr",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "nico",
+          "clientID": "U9S4JsDN",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "Olympe",
+          "clientID": "opejYuto",
+          "clanTag": "RSA"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1831,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-17T22:05:51.390Z",
+      "url": "https://openfront.io/game/C6vYWTxr"
+    },
+    {
+      "id": "yvR1sgWe",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "ugogole",
+          "clientID": "ino4RVPd",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "FaBite",
+          "clientID": "jE4ZrYLK",
+          "clanTag": "ZIL"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1120,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-17T22:13:37.902Z",
+      "url": "https://openfront.io/game/yvR1sgWe"
     }
   ],
   "quads": [
@@ -72433,6 +72502,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-17T22:01:44.611Z",
       "url": "https://openfront.io/game/McrFyoUw"
+    },
+    {
+      "id": "RDhwFtmv",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Lasombra",
+          "clientID": "fxXNf99U",
+          "clanTag": "UN"
+        },
+        {
+          "username": "KingMud",
+          "clientID": "NK3EiScX",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Yugo",
+          "clientID": "KSPZLbXo",
+          "clanTag": null
+        },
+        {
+          "username": "Jersey Giant",
+          "clientID": "wkogENiW",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 620,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-17T22:22:44.905Z",
+      "url": "https://openfront.io/game/RDhwFtmv"
     }
   ]
 }
