@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<title>TheFrontHub — Lobby Preview</title>
-<meta name="description" content="Lobby Preview — Visualisez les parties OpenFront en temps réel : FFA, Team, Special.">
+<title>TheFrontHub — Lobby Live Feed</title>
+<meta name="description" content="Lobby Live Feed — Visualisez les parties OpenFront en temps réel : FFA, Team, Special, avec filtres et historique.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="auth.css?v=17">
 <link rel="stylesheet" href="toast.css">
 <link rel="stylesheet" href="animations.css?v=6">
-<link rel="stylesheet" href="lobby.css?v=4">
+<link rel="stylesheet" href="lobby.css?v=5">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 </head>
@@ -100,14 +100,6 @@
 
   <!-- ═══ MAIN CONTENT ═══ -->
   <main class="content" id="lobby-content">
-    <header class="topbar">
-      <div>
-        <h1 id="topbar-title">Lobby</h1>
-        <p id="topbar-subtitle">Parties OpenFront en temps réel</p>
-      </div>
-      <div class="topbar-right">
-      </div>
-    </header>
 
     <div id="lobby-view" class="lobby-view">
       <div class="lobby-loading">
@@ -117,7 +109,7 @@
     </div>
 
     <footer class="lobby-footer">
-      <span>TheFrontHub · Lobby Preview · Données en temps réel via OpenFront WebSocket</span>
+      <span>TheFrontHub · Lobby Live Feed · Données en temps réel via OpenFront WebSocket</span>
     </footer>
   </main>
 
@@ -151,7 +143,7 @@
 <!-- Toast container -->
 <div id="toast-container"></div>
 
-<script type="module" src="lobby.js?v=6"></script>
+<script type="module" src="lobby.js?v=7"></script>
 <script type="module" src="auth.js?v=17"></script>
 <script src="toast.js"></script>
 <script src="lenis.js?v=2"></script>

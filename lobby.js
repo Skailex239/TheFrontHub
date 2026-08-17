@@ -1,6 +1,7 @@
-// lobby.js — Lobby Preview (parties OpenFront en temps réel)
+// lobby.js — Live Feed (Twitter/X timeline style)
 // WebSocket wss://openfront.io/{w0-w4}/lobbies
-// + Historique des 25 dernières parties via API HTTP
+// + History of recently ended games (recentHistory)
+// v7 — full render() rewrite for LOBBY-FEED-1.
 
 const LOBBY_VIEW = document.getElementById("lobby-view");
 
@@ -32,10 +33,14 @@ let reconnectTimer = null;
 let retries = 0;
 let snapshot = null;
 let renderTimer = null;
-let cardEls = new Map();
 let historyLoaded = false;
 let recentHistory = []; // games qui viennent de quitter le lobby (terminées)
 let prevGameIds = new Set(); // IDs présents au snapshot précédent
+
+/* Live Feed state */
+let currentFilter = "all"; // all | ffa | team | special
+let seenGameIds = new Set(); // all game IDs ever rendered (for slide-in detection)
+let tabsWired = false;
 
 /* ═══ Utilitaires ═══ */
 
@@ -139,6 +144,20 @@ function formatDate(ts) {
   const d = new Date(ts);
   return d.toLocaleDateString("fr-FR", { day: "2-digit", month: "short" }) +
     " " + d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+}
+
+/** Time elapsed since a past timestamp, humanized (e.g. "2 min", "1 h", "3 j"). */
+function formatTimeAgo(ts, now) {
+  if (!ts) return "—";
+  const diff = Math.max(0, (now || Date.now()) - ts);
+  const sec = Math.floor(diff / 1000);
+  if (sec < 60)   return `${sec}s`;
+  const min = Math.floor(sec / 60);
+  if (min < 60)   return `${min} min`;
+  const h = Math.floor(min / 60);
+  if (h < 24)     return `${h} h`;
+  const d = Math.floor(h / 24);
+  return `${d} j`;
 }
 
 function normalizeGame(raw) {
@@ -260,6 +279,203 @@ function scheduleRender() {
   renderTimer = setTimeout(() => { renderTimer = null; render(); }, 120);
 }
 
+/* Inline SVG strings (Lucide-style, no emojis) */
+const SVG = {
+  bolt:  `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+  users: `<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  clock: `<svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  arrow: `<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`,
+  map:   `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  search:`<svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+  ghost: `<svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01M15 12h.01M12 2a8 8 0 0 0-8 8v12l3-3 3 3 2-2 2 2 3-3 3 3V10a8 8 0 0 0-8-8z"/></svg>`,
+  check: `<svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`,
+};
+
+function renderFeedHeader(totalGames, totalPlayers) {
+  const gamesTxt = `${totalGames} partie${totalGames !== 1 ? "s" : ""}`;
+  const playersTxt = `${totalPlayers.toLocaleString("fr-FR")} joueur${totalPlayers !== 1 ? "s" : ""}`;
+  const tabs = [
+    { key: "all",     label: "Toutes" },
+    { key: "ffa",     label: "FFA" },
+    { key: "team",    label: "Team" },
+    { key: "special", label: "Special" },
+  ].map(t => `<button class="lobby-filter-tab ${currentFilter === t.key ? "active" : ""}" data-filter="${t.key}">${t.label}</button>`).join("");
+
+  return `
+    <header class="lobby-feed-header">
+      <h1 class="lobby-feed-title">
+        ${SVG.bolt}
+        <span>Lobby en direct</span>
+      </h1>
+      <div class="lobby-feed-counters">
+        <span class="lobby-feed-counter-dot"></span>
+        <span id="lobby-feed-counter-text">${escapeHtml(gamesTxt)} · ${escapeHtml(playersTxt)} · Temps réel</span>
+      </div>
+      <div class="lobby-filter-tabs" id="lobby-filter-tabs">${tabs}</div>
+    </header>
+  `;
+}
+
+function wireTabs() {
+  if (tabsWired) return;
+  const tabsEl = document.getElementById("lobby-filter-tabs");
+  if (!tabsEl) return;
+  tabsEl.addEventListener("click", (e) => {
+    const btn = e.target.closest(".lobby-filter-tab");
+    if (!btn) return;
+    if (currentFilter === btn.dataset.filter) return;
+    currentFilter = btn.dataset.filter;
+    tabsEl.querySelectorAll(".lobby-filter-tab").forEach(b =>
+      b.classList.toggle("active", b === btn));
+    scheduleRender();
+  });
+  tabsWired = true;
+}
+
+function renderSectionSeparator(kind, label, count) {
+  return `
+    <div class="lobby-section-separator ${kind}">
+      <span class="lobby-section-separator-dot"></span>
+      <span class="lobby-section-separator-title">${escapeHtml(label)}</span>
+      <span class="lobby-section-separator-line"></span>
+      <span class="lobby-section-separator-count">${count}</span>
+    </div>
+  `;
+}
+
+function renderCard(game, serverTime, status) {
+  const isNew = !seenGameIds.has(game.id);
+  const thumbUrl = getMapThumbnailUrl(game.map);
+  const mode = modeLabel(game);
+  const gameUrl = `https://openfront.io/game/${encodeURIComponent(game.id)}`;
+  const capacity = game.capacity || 0;
+  const players = game.players || 0;
+  const fillPct = capacity > 0 ? Math.min(100, Math.round((players / capacity) * 100)) : 0;
+  const isFull = capacity > 0 && players >= capacity;
+  const startsLabel = formatStartsAt(game.startsAt, serverTime);
+
+  // Status badge
+  let statusBadge;
+  if (status === "live") {
+    statusBadge = `<span class="lobby-status-badge live">LIVE</span>`;
+  } else {
+    statusBadge = `<span class="lobby-status-badge lobby">${SVG.clock}LOBBY</span>`;
+  }
+
+  // Duration / waiting
+  let metaRight;
+  if (status === "live") {
+    const elapsedMin = game.startsAt ? Math.max(0, Math.floor((serverTime - game.startsAt) / 60000)) : 0;
+    metaRight = elapsedMin > 0
+      ? `<span class="lobby-feed-card-meta-item">${elapsedMin} min</span>`
+      : `<span class="lobby-feed-card-meta-item">À l'instant</span>`;
+  } else {
+    metaRight = `<span class="lobby-feed-card-meta-item">${escapeHtml(startsLabel || "En attente…")}</span>`;
+  }
+
+  // Mod badges
+  const badges = game.badges.length
+    ? `<div class="lobby-feed-card-badges">${game.badges.map(b => `<span class="lobby-badge">${escapeHtml(b)}</span>`).join("")}</div>`
+    : "";
+
+  // Thumbnail (fallback SVG is always present; img paints over it when it loads)
+  const fallback = `<span class="lobby-feed-card-thumb-fallback">${SVG.map}</span>`;
+  const thumb = thumbUrl
+    ? `${fallback}<img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(game.map)}" loading="lazy" onerror="this.remove()">`
+    : fallback;
+
+  return `
+    <a class="lobby-feed-card${isNew ? " lobby-feed-card-new" : ""}"
+       href="${escapeHtml(gameUrl)}" target="_blank" rel="noopener"
+       data-game-id="${escapeHtml(game.id)}" data-status="${status}">
+      <div class="lobby-feed-card-thumb">${thumb}</div>
+      <div class="lobby-feed-card-info">
+        <div class="lobby-feed-card-title">
+          <span class="lobby-feed-card-name">${escapeHtml(game.map)}</span>
+          <span class="lobby-feed-card-mode">${escapeHtml(mode)}</span>
+        </div>
+        <div class="lobby-feed-card-meta">
+          <span class="lobby-feed-card-meta-item">${SVG.users}<strong>${players}</strong>/${capacity || "?"}</span>
+          <span class="lobby-feed-card-meta-sep">·</span>
+          ${metaRight}
+        </div>
+        <div class="lobby-progress-bar">
+          <div class="lobby-progress-bar-track">
+            <div class="lobby-progress-bar-fill${isFull ? " full" : ""}" style="width:${fillPct}%"></div>
+          </div>
+          <span class="lobby-progress-bar-text">${players}/${capacity || "?"}${capacity > 0 ? ` · ${fillPct}%` : ""}</span>
+        </div>
+        ${badges}
+      </div>
+      <div class="lobby-feed-card-right">
+        ${statusBadge}
+        <span class="lobby-feed-card-join-hint">Rejoindre ${SVG.arrow}</span>
+      </div>
+    </a>
+  `;
+}
+
+function renderHistorySection(serverTime) {
+  if (recentHistory.length === 0) {
+    return `
+      <section class="lobby-history-section">
+        ${renderSectionSeparator("ended", "Terminé", 0)}
+        <div class="lobby-history-empty">En attente de parties terminées…</div>
+      </section>
+    `;
+  }
+
+  const items = recentHistory.map(g => {
+    const thumbUrl = getMapThumbnailUrl(g.map);
+    const mode = modeLabel(g);
+    const gameUrl = `https://openfront.io/game/${encodeURIComponent(g.id)}`;
+    const ago = formatTimeAgo(g.endedAt, serverTime);
+    const players = g.players || 0;
+    const capacity = g.capacity || 0;
+    const fallback = `<span class="lobby-history-thumb-fallback">${SVG.map}</span>`;
+    const thumb = thumbUrl
+      ? `${fallback}<img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(g.map)}" loading="lazy" onerror="this.remove()">`
+      : fallback;
+    return `
+      <a class="lobby-history-item" href="${escapeHtml(gameUrl)}" target="_blank" rel="noopener">
+        <div class="lobby-history-thumb">${thumb}</div>
+        <div class="lobby-history-info">
+          <div class="lobby-history-map">${escapeHtml(g.map)}</div>
+          <div class="lobby-history-meta">${escapeHtml(mode)} · ${players}/${capacity || "?"} joueurs</div>
+        </div>
+        <div class="lobby-history-date">il y a ${escapeHtml(ago)}</div>
+      </a>
+    `;
+  }).join("");
+
+  return `
+    <section class="lobby-history-section">
+      ${renderSectionSeparator("ended", "Terminé", recentHistory.length)}
+      <div class="lobby-history-list">${items}</div>
+    </section>
+  `;
+}
+
+function renderEmptyState() {
+  return `
+    <div class="lobby-empty">
+      ${SVG.ghost}
+      <h3>Aucune partie en cours</h3>
+      <p>Les parties OpenFront apparaîtront ici dès qu'elles seront créées.</p>
+    </div>
+  `;
+}
+
+function renderEmptyFilteredState() {
+  return `
+    <div class="lobby-empty">
+      ${SVG.search}
+      <h3>Aucune partie dans cette catégorie</h3>
+      <p>Essayez un autre filtre — la catégorie « ${escapeHtml(currentFilter.toUpperCase())} » est vide pour le moment.</p>
+    </div>
+  `;
+}
+
 function render() {
   if (!LOBBY_VIEW) return;
   if (!snapshot || !snapshot.games) {
@@ -268,204 +484,82 @@ function render() {
   }
 
   const { ffa, team, special } = snapshot.games;
-  const totalGames = ffa.length + team.length + special.length;
+  const all = [...ffa, ...team, ...special];
+  const totalPlayers = all.reduce((s, g) => s + (g.players || 0), 0);
+  const serverTime = snapshot.serverTime || Date.now();
 
-  if (totalGames === 0) {
-    LOBBY_VIEW.innerHTML = `<div class="lobby-empty"><div style="font-size:48px">🎮</div><h3>Aucune partie en cours</h3><p>Les parties OpenFront apparaîtront ici dès qu'elles seront créées.</p></div>`;
+  // Build feed skeleton (header + body container) if missing
+  let feed = document.getElementById("lobby-feed");
+  if (!feed) {
+    LOBBY_VIEW.innerHTML = `<div id="lobby-feed" class="lobby-feed">${renderFeedHeader(all.length, totalPlayers)}<div class="lobby-feed-body" id="lobby-feed-body"></div></div>`;
+    wireTabs();
+    feed = document.getElementById("lobby-feed");
+  } else {
+    // Update header counters in place
+    const counterText = document.getElementById("lobby-feed-counter-text");
+    if (counterText) {
+      const gamesTxt = `${all.length} partie${all.length !== 1 ? "s" : ""}`;
+      const playersTxt = `${totalPlayers.toLocaleString("fr-FR")} joueur${totalPlayers !== 1 ? "s" : ""}`;
+      counterText.textContent = `${gamesTxt} · ${playersTxt} · Temps réel`;
+    }
+    // Refresh active tab state (in case filter changed)
+    feed.querySelectorAll(".lobby-filter-tab").forEach(b =>
+      b.classList.toggle("active", b.dataset.filter === currentFilter));
+  }
+
+  const body = document.getElementById("lobby-feed-body");
+  if (!body) return;
+
+  if (all.length === 0) {
+    body.innerHTML = renderEmptyState();
+    seenGameIds = new Set();
     return;
   }
 
-  // Créer le conteneur s'il n'existe pas
-  let container = document.getElementById("lobby-container");
-  if (!container) {
-    LOBBY_VIEW.innerHTML = `<div id="lobby-container"></div>`;
-    container = document.getElementById("lobby-container");
-  }
+  // Apply filter
+  let filtered;
+  if (currentFilter === "all")     filtered = all;
+  else if (currentFilter === "ffa")     filtered = ffa;
+  else if (currentFilter === "team")    filtered = team;
+  else                                   filtered = special;
 
-  // Colonnes
-  const columns = [
-    { key: "ffa", label: "FFA", games: ffa },
-    { key: "team", label: "Team", games: team },
-    { key: "special", label: "Special", games: special },
-  ];
+  const isWaiting = (g) => g.startsAt && g.startsAt > serverTime;
 
-  let columnsWrap = document.getElementById("lobby-columns");
-  if (!columnsWrap) {
-    columnsWrap = document.createElement("div");
-    columnsWrap.id = "lobby-columns";
-    columnsWrap.className = "lobby-columns";
-    container.appendChild(columnsWrap);
-  }
+  // Sort: started games first (by player count desc), then waiting games (by player count desc)
+  filtered = filtered.slice().sort((a, b) => {
+    const aWait = isWaiting(a);
+    const bWait = isWaiting(b);
+    if (aWait && !bWait) return 1;
+    if (!aWait && bWait) return -1;
+    return (b.players || 0) - (a.players || 0);
+  });
 
-  for (const col of columns) {
-    let colEl = document.getElementById(`lobby-col-${col.key}`);
-    if (!colEl) {
-      colEl = document.createElement("section");
-      colEl.id = `lobby-col-${col.key}`;
-      colEl.className = `lobby-column lobby-column-${col.key}`;
-      colEl.innerHTML = `
-        <div class="lobby-column-header">
-          <span class="lobby-column-title">${col.label}</span>
-          <span class="lobby-column-count">0</span>
-        </div>
-        <div class="lobby-column-body"></div>
-      `;
-      columnsWrap.appendChild(colEl);
+  const started = filtered.filter(g => !isWaiting(g));
+  const waiting = filtered.filter(g => isWaiting(g));
+
+  // Build body HTML
+  let html = "";
+  if (started.length === 0 && waiting.length === 0) {
+    html = renderEmptyFilteredState();
+  } else {
+    if (started.length > 0) {
+      html += renderSectionSeparator("live", "En cours", started.length);
+      html += started.map(g => renderCard(g, serverTime, "live")).join("");
     }
-
-    const countEl = colEl.querySelector(".lobby-column-count");
-    if (countEl) countEl.textContent = col.games.length;
-
-    const body = colEl.querySelector(".lobby-column-body");
-    if (!body) continue;
-
-    // Nettoyer les cards qui ne sont plus dans cette colonne
-    // IMPORTANT: ne supprimer que les cards qui appartiennent à body (cette colonne)
-    // pas les cards des autres colonnes
-    const liveIds = new Set(col.games.map(g => g.id));
-    const toRemove = [];
-    for (const [id, node] of cardEls) {
-      if (node.parentNode === body && !liveIds.has(id)) {
-        node.remove();
-        toRemove.push(id);
-      }
+    if (waiting.length > 0) {
+      if (started.length > 0) html += `<div class="lobby-section-gap"></div>`;
+      html += renderSectionSeparator("lobby-waiting", "Lancement", waiting.length);
+      html += waiting.map(g => renderCard(g, serverTime, "lobby")).join("");
     }
-    for (const id of toRemove) cardEls.delete(id);
-
-    // Créer ou updater les cards (pas de re-order)
-    col.games.slice(0, 20).forEach((game) => {
-      let card = cardEls.get(game.id);
-      if (!card) {
-        card = createCard(game);
-        cardEls.set(game.id, card);
-        body.appendChild(card);
-      }
-      updateCard(card, game);
-    });
   }
 
-  // Historique des 25 dernières parties (rendu à chaque update)
-  renderHistory();
-}
+  // History section (ended games)
+  html += renderHistorySection(serverTime);
 
-/* ═══ Rendu de l'historique (games terminées détectées en live) ═══ */
+  body.innerHTML = html;
 
-function renderHistory() {
-  const container = document.getElementById("lobby-container");
-  if (!container) return;
-
-  let historyEl = document.getElementById("lobby-history");
-  if (!historyEl) {
-    historyEl = document.createElement("section");
-    historyEl.id = "lobby-history";
-    historyEl.className = "lobby-history";
-    container.appendChild(historyEl);
-  }
-
-  if (recentHistory.length === 0) {
-    historyEl.innerHTML = `
-      <div class="lobby-history-header">
-        <h2 class="lobby-history-title">Historique</h2>
-        <span class="lobby-history-sub">Parties terminées récemment</span>
-      </div>
-      <div class="lobby-history-empty">
-        <p>En attente de parties terminées…</p>
-        <p class="lobby-history-note">Les parties apparaîtront ici dès qu'elles se terminent.</p>
-      </div>
-    `;
-    return;
-  }
-
-  const items = recentHistory.map(g => {
-    const thumbUrl = getMapThumbnailUrl(g.map);
-    const mode = modeLabel(g);
-    const date = formatDate(g.endedAt);
-    const gameUrl = `https://openfront.io/game/${encodeURIComponent(g.id)}`;
-    const diff = g.difficulty ? g.difficulty.charAt(0).toUpperCase() + g.difficulty.slice(1) : "";
-    return `
-      <a class="lobby-history-item" href="${escapeHtml(gameUrl)}" target="_blank" rel="noopener">
-        <div class="lobby-history-thumb">
-          ${thumbUrl ? `<img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(g.map)}" loading="lazy" onerror="this.style.display='none'">` : ""}
-        </div>
-        <div class="lobby-history-info">
-          <div class="lobby-history-map">${escapeHtml(g.map)}</div>
-          <div class="lobby-history-meta">${escapeHtml(mode)}${diff ? " · " + escapeHtml(diff) : ""} · ${g.players}/${g.capacity || "?"} joueurs</div>
-        </div>
-        <span class="lobby-history-date">${escapeHtml(date)}</span>
-      </a>
-    `;
-  }).join("");
-
-  historyEl.innerHTML = `
-    <div class="lobby-history-header">
-      <h2 class="lobby-history-title">Historique</h2>
-      <span class="lobby-history-sub">${recentHistory.length} partie${recentHistory.length > 1 ? "s" : ""} terminée${recentHistory.length > 1 ? "s" : ""}</span>
-    </div>
-    <div class="lobby-history-list">${items}</div>
-  `;
-}
-function createCard(game) {
-  const card = document.createElement("a");
-  card.className = "lobby-game";
-  card.target = "_blank";
-  card.rel = "noopener";
-  card.href = `https://openfront.io/game/${encodeURIComponent(game.id)}`;
-  card.dataset.gameId = game.id;
-  card.innerHTML = `
-    <div class="lobby-game-thumb"></div>
-    <div class="lobby-game-info">
-      <div class="lobby-game-name"></div>
-      <div class="lobby-game-mode"></div>
-      <div class="lobby-game-meta">
-        <span class="lobby-game-players"></span>
-        <span class="lobby-game-starts"></span>
-      </div>
-      <div class="lobby-game-badges"></div>
-    </div>
-    <div class="lobby-game-join">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </div>
-  `;
-  return card;
-}
-
-function updateCard(card, game) {
-  const thumb = card.querySelector(".lobby-game-thumb");
-  const thumbUrl = getMapThumbnailUrl(game.map);
-  if (thumbUrl && thumb.dataset.url !== thumbUrl) {
-    thumb.dataset.url = thumbUrl;
-    thumb.innerHTML = `<img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(game.map)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;lobby-game-thumb-fallback&quot;>🗺️</div>'">`;
-  } else if (!thumbUrl && !thumb.dataset.empty) {
-    thumb.dataset.empty = "1";
-    thumb.innerHTML = `<div class="lobby-game-thumb-fallback">🗺️</div>`;
-  }
-
-  const nameEl = card.querySelector(".lobby-game-name");
-  if (nameEl.textContent !== game.map) nameEl.textContent = game.map;
-
-  const modeEl = card.querySelector(".lobby-game-mode");
-  const modeText = modeLabel(game);
-  if (modeEl.textContent !== modeText) modeEl.textContent = modeText;
-
-  const playersEl = card.querySelector(".lobby-game-players");
-  const playersText = `${game.players}/${game.capacity || "?"}`;
-  if (playersEl.textContent !== playersText) {
-    playersEl.textContent = playersText;
-    playersEl.classList.toggle("full", game.capacity && game.players >= game.capacity);
-  }
-
-  const startsEl = card.querySelector(".lobby-game-starts");
-  const startsText = formatStartsAt(game.startsAt, snapshot.serverTime);
-  if (startsEl.textContent !== startsText) startsEl.textContent = startsText;
-
-  const badgesEl = card.querySelector(".lobby-game-badges");
-  const sig = game.badges.join("|");
-  if (badgesEl.dataset.sig !== sig) {
-    badgesEl.dataset.sig = sig;
-    badgesEl.innerHTML = game.badges.length
-      ? game.badges.map(b => `<span class="lobby-badge">${escapeHtml(b)}</span>`).join("")
-      : "";
-  }
+  // Mark all currently visible game IDs as seen (for next slide-in detection)
+  seenGameIds = new Set(all.map(g => g.id));
 }
 
 /* ═══ Init ═══ */
