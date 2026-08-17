@@ -1866,87 +1866,102 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
 
 /* ════════════════════════════════════════════════════════════════
    PLAYER OVERLAY (plaque nominative style Discord)
-   Image: lave pixel art orange (overlay-v2-compact.webp, 300x65px)
-   Subtle, well-positioned, doesn't overlap other columns.
+   4 images pixel art, une par contexte, dimensions exactes:
+   - dashboard: final_1_dashboard_48x16.webp (48x16px)
+   - ranked:    final_2_ranked_144x48.webp (144x48px)
+   - speedruns: final_3_speedruns_171x57.webp (171x57px)
+   - profile:   final_4_profil_304x48.webp (304x48px)
    ════════════════════════════════════════════════════════════════ */
 
-/* Speedruns leaderboard — .run-player.has-overlay */
-.run-player.has-overlay {
-  position: relative;
-  padding-right: 50px;
-}
-.run-player.has-overlay::after {
-  content: "";
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 45px;
-  height: 20px;
-  background-image: var(--overlay-img);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-/* Global leaderboard — .global-player.has-overlay */
+/* Dashboard (global leaderboard) — 48x16px image */
 .global-player.has-overlay {
   position: relative;
   display: inline-block;
-  padding-right: 50px;
+  padding-right: 52px;
 }
 .global-player.has-overlay::after {
   content: "";
   position: absolute;
-  right: 2px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 45px;
-  height: 20px;
+  width: 48px;
+  height: 16px;
   background-image: var(--overlay-img);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.35;
+  opacity: 0.7;
   pointer-events: none;
 }
 
-/* Ranked table — .ranked-player-name.has-overlay */
+/* Speedruns leaderboard — 171x57px image */
+.run-player.has-overlay {
+  position: relative;
+  padding-right: 175px;
+}
+.run-player.has-overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 171px;
+  height: 57px;
+  background-image: var(--overlay-img);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Ranked table — 144x48px image */
 .ranked-player-name.has-overlay {
   position: relative;
   display: inline-block;
-  padding-right: 50px !important;
+  padding-right: 148px !important;
 }
 .ranked-player-name.has-overlay::after {
   content: "";
   position: absolute;
-  right: 2px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 45px;
-  height: 20px;
+  width: 144px;
+  height: 48px;
   background-image: var(--overlay-img);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.35;
+  opacity: 0.7;
   pointer-events: none;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .run-player.has-overlay,
-  .global-player.has-overlay,
-  .ranked-player-name.has-overlay {
+  .global-player.has-overlay {
     padding-right: 38px;
   }
-  .run-player.has-overlay::after,
-  .global-player.has-overlay::after,
+  .global-player.has-overlay::after {
+    width: 36px;
+    height: 12px;
+    opacity: 0.6;
+  }
+  .run-player.has-overlay {
+    padding-right: 100px;
+  }
+  .run-player.has-overlay::after {
+    width: 100px;
+    height: 33px;
+    opacity: 0.6;
+  }
+  .ranked-player-name.has-overlay {
+    padding-right: 90px !important;
+  }
   .ranked-player-name.has-overlay::after {
-    width: 34px;
-    height: 15px;
-    opacity: 0.3;
+    width: 90px;
+    height: 30px;
+    opacity: 0.6;
   }
 }

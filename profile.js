@@ -34,12 +34,20 @@ import {
 
 /* ── Player overlays (plaque nominative) ── */
 const PLAYER_OVERLAYS = [
-  { match: /skailex/i, image: "overlay-v2-compact.webp" },
+  { match: /skailex/i, images: {
+    dashboard: "final_1_dashboard_48x16.webp",
+    ranked:    "final_2_ranked_144x48.webp",
+    speedruns: "final_3_speedruns_171x57.webp",
+    profile:   "final_4_profil_304x48.webp",
+  }},
 ];
-function getPlayerOverlay(username) {
+function getPlayerOverlay(username, context) {
   if (!username) return null;
   for (const o of PLAYER_OVERLAYS) {
-    if (o.match.test(username)) return o.image;
+    if (o.match.test(username)) {
+      if (context && o.images && o.images[context]) return o.images[context];
+      return o.images ? o.images.profile : null;
+    }
   }
   return null;
 }
@@ -275,7 +283,7 @@ function renderPublicProfile(username, publicId) {
     const skinSpan = document.createElement("span");
     skinSpan.textContent = username;
     // Apply overlay if the player has one
-    const overlayImg = getPlayerOverlay(username);
+    const overlayImg = getPlayerOverlay(username, "profile");
     if (overlayImg) {
       skinSpan.classList.add("has-overlay");
       skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
@@ -349,7 +357,7 @@ function renderHero(user, profile) {
     const skinSpan = document.createElement("span");
     skinSpan.textContent = profile.username || user.displayName || "Joueur";
     // Apply overlay if the player has one
-    const overlayImg = getPlayerOverlay(profile.username || user.displayName);
+    const overlayImg = getPlayerOverlay(profile.username || user.displayName, "profile");
     if (overlayImg) {
       skinSpan.classList.add("has-overlay");
       skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);

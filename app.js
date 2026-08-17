@@ -1422,14 +1422,22 @@ function selectMap(name){
 }
 // ── Player overlays (plaque nominative style Discord) ──
 // Returns overlay image path if the player has one, null otherwise.
-// Currently hardcoded for Skailex (testing). Later: drive from Firestore.
+// One image per context (dashboard, ranked, speedruns, profile) with exact dimensions.
 const PLAYER_OVERLAYS = [
-  { match: /skailex/i, image: "overlay-v2-compact.webp" },
+  { match: /skailex/i, images: {
+    dashboard: "final_1_dashboard_48x16.webp",
+    ranked:    "final_2_ranked_144x48.webp",
+    speedruns: "final_3_speedruns_171x57.webp",
+    profile:   "final_4_profil_304x48.webp",
+  }},
 ];
-function getPlayerOverlay(username) {
+function getPlayerOverlay(username, context) {
   if (!username) return null;
   for (const o of PLAYER_OVERLAYS) {
-    if (o.match.test(username)) return o.image;
+    if (o.match.test(username)) {
+      if (context && o.images && o.images[context]) return o.images[context];
+      return o.images ? o.images.dashboard : null;
+    }
   }
   return null;
 }
@@ -1465,7 +1473,7 @@ function renderLeaderboard(d){
       <span id="gg-count-${r.id}">${ggCount > 0 ? ggCount : ''}</span>
     </button>`;
 
-    const overlayImg = getPlayerOverlay(r.player);
+    const overlayImg = getPlayerOverlay(r.player, "speedruns");
     const overlayClass = overlayImg ? ' has-overlay' : '';
     const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
     return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+r.player+diff+isNew+'</div><a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
@@ -1593,7 +1601,7 @@ function renderGlobal(){
       const isNewSkinType = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'].includes(rewardType);
       const cosmeticClass = isVip ? ` is-${rewardType}` : '';
       const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
-      const overlayImg = getPlayerOverlay(p.player);
+      const overlayImg = getPlayerOverlay(p.player, "dashboard");
       const overlayClass = overlayImg ? ' has-overlay' : '';
       const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
       const playerInner = '<span class="global-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(p.player)+'\')">'+p.player+'</span>';
@@ -2065,7 +2073,7 @@ function renderRankedTable(players) {
     const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
 
     // Player overlay (plaque nominative)
-    const overlayImg = getPlayerOverlay(p.username);
+    const overlayImg = getPlayerOverlay(p.username, "ranked");
     const overlayClass = overlayImg ? ' has-overlay' : '';
     const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
 
