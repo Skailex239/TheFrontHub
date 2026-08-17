@@ -1,12 +1,40 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-17T15:57:36.783Z",
+  "lastSyncedAt": "2026-08-17T16:19:07.451Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 2143,
-  "newGamesThisSync": 0,
+  "totalGames": 2145,
+  "newGamesThisSync": 2,
   "games": [
+    {
+      "gameId": "5nhMxkAN",
+      "start": "2026-08-17T16:08:16.075Z",
+      "durationSeconds": 282,
+      "map": "Africa",
+      "mode": "Free For All",
+      "type": "Singleplayer",
+      "playerTeams": "2",
+      "rankedType": "unranked",
+      "result": "incomplete",
+      "totalPlayers": 0,
+      "username": "Anto",
+      "clanTag": null
+    },
+    {
+      "gameId": "iQed9Ywd",
+      "start": "2026-08-17T15:48:14.507Z",
+      "durationSeconds": 1610,
+      "map": "Two Lakes",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 80,
+      "username": "Anto",
+      "clanTag": null
+    },
     {
       "gameId": "j7KJcasr",
       "start": "2026-08-16T16:35:27.973Z",

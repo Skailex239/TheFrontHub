@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-17T15:57:38.650Z",
-  "lastSyncedAt": "2026-08-17T15:57:36.783Z",
-  "totalGames": 2143,
+  "computedAt": "2026-08-17T16:19:10.463Z",
+  "lastSyncedAt": "2026-08-17T16:19:07.451Z",
+  "totalGames": 2145,
   "careerWins": {
     "ffaCasual": 371,
     "ffaRanked": 325,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 321",
     "totalWins": "794",
-    "totalGames": "2 143",
+    "totalGames": "2 145",
     "totalPlaytime": "22j 14h",
     "totalPlaytimeCompact": "22j 14h",
     "avgGameDuration": "15m 11s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "542h"
   },
   "playtime": {
-    "totalSec": 1952545,
-    "avgGameSec": 911.1269248716752,
+    "totalSec": 1954437,
+    "avgGameSec": 911.1594405594406,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1371,
-        "playtimeSec": 1581423,
+        "games": 1373,
+        "playtimeSec": 1583315,
         "wins": 371
       },
       "ffaRanked": {
@@ -79,8 +79,8 @@
   },
   "results": {
     "victory": 794,
-    "defeat": 1028,
-    "incomplete": 321
+    "defeat": 1029,
+    "incomplete": 322
   },
   "maps": [
     {
@@ -181,18 +181,18 @@
     },
     {
       "map": "Two Lakes",
-      "count": 46,
+      "count": 47,
       "wins": 7,
-      "losses": 39,
-      "playtimeSec": 60882,
-      "avgDuration": 1323.5217391304348,
-      "winRate": 0.15217391304347827,
-      "lastPlayed": 1786803458213,
+      "losses": 40,
+      "playtimeSec": 62492,
+      "avgDuration": 1329.6170212765958,
+      "winRate": 0.14893617021276595,
+      "lastPlayed": 1786981694507,
       "formatted": {
-        "playtime": "16h 54m",
+        "playtime": "17h 21m",
         "avgDuration": "22m",
         "winRate": "15%",
-        "lastPlayed": "15/08/26"
+        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1591,8 +1591,8 @@
       130,
       143,
       136,
-      199,
-      195,
+      200,
+      196,
       222,
       190,
       148,
@@ -1600,7 +1600,7 @@
       144
     ],
     "byWeekday": [
-      280,
+      282,
       218,
       289,
       325,
@@ -1609,11 +1609,6 @@
       321
     ],
     "byDay": [
-      {
-        "date": "13/04/2026",
-        "count": 34,
-        "playtimeSec": 30983
-      },
       {
         "date": "13/05/2026",
         "count": 8,
@@ -1748,6 +1743,11 @@
         "date": "17/07/2026",
         "count": 16,
         "playtimeSec": 18995
+      },
+      {
+        "date": "17/08/2026",
+        "count": 2,
+        "playtimeSec": 1892
       },
       {
         "date": "18/02/2026",
@@ -2142,6 +2142,17 @@
   },
   "recentGames": [
     {
+      "gameId": "iQed9Ywd",
+      "start": "2026-08-17T15:48:14.507Z",
+      "map": "Two Lakes",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1610,
+      "totalPlayers": 80,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "j7KJcasr",
       "start": "2026-08-16T16:35:27.973Z",
       "map": "Pluto",
@@ -2347,17 +2358,6 @@
       "result": "defeat",
       "durationSeconds": 1533,
       "totalPlayers": 58,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "mHLapJHq",
-      "start": "2026-08-15T13:06:47.932Z",
-      "map": "Dyslexdria",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1434,
-      "totalPlayers": 63,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
