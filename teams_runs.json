@@ -39577,6 +39577,34 @@
       "numPlayers": 64,
       "timestamp": "2026-08-17T08:12:33.679Z",
       "url": "https://openfront.io/game/cwLYX1zN"
+    },
+    {
+      "id": "zTp1EnhH",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Khshayarsha",
+          "clientID": "5gF3ZDgD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz1",
+          "clientID": "6FEEeeSA",
+          "clanTag": null
+        },
+        {
+          "username": "LMB",
+          "clientID": "9cG9Bpbx",
+          "clanTag": "GL"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1371,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-17T08:22:02.193Z",
+      "url": "https://openfront.io/game/zTp1EnhH"
     }
   ],
   "quads": [
@@ -68982,6 +69010,62 @@
       "numPlayers": 32,
       "timestamp": "2026-08-17T07:58:58.342Z",
       "url": "https://openfront.io/game/4851oZEy"
+    },
+    {
+      "id": "s38Gqny7",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonCompass9",
+          "clientID": "eefFYAyh",
+          "clanTag": null
+        },
+        {
+          "username": "hifa",
+          "clientID": "X4RhSuYC",
+          "clanTag": "12"
+        },
+        {
+          "username": "AnonMirage2",
+          "clientID": "T8QPnRWN",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 950,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-17T08:27:57.530Z",
+      "url": "https://openfront.io/game/s38Gqny7"
+    },
+    {
+      "id": "83BtXpF5",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Koztky",
+          "clientID": "eDqyfa9y",
+          "clanTag": "EU"
+        },
+        {
+          "username": "K7P0",
+          "clientID": "UumxJsbp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShadow8",
+          "clientID": "RkBz4qKt",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1754,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-17T08:16:29.892Z",
+      "url": "https://openfront.io/game/83BtXpF5"
     }
   ]
 }
