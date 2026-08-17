@@ -41695,6 +41695,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-17T22:13:37.902Z",
       "url": "https://openfront.io/game/yvR1sgWe"
+    },
+    {
+      "id": "4AnLMCs8",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "slave",
+          "clientID": "4oeCbZrJ",
+          "clanTag": "PEACE"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 2427,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-17T22:08:48.578Z",
+      "url": "https://openfront.io/game/4AnLMCs8"
     }
   ],
   "quads": [
@@ -72535,6 +72553,105 @@
       "numPlayers": 32,
       "timestamp": "2026-08-17T22:22:44.905Z",
       "url": "https://openfront.io/game/RDhwFtmv"
+    },
+    {
+      "id": "c9p7n464",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonMagenta6",
+          "clientID": "MxYMskWQ",
+          "clanTag": null
+        },
+        {
+          "username": "Gueguette",
+          "clientID": "M4tz3cBQ",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "AnonOcean",
+          "clientID": "LkeKE8mb",
+          "clanTag": null
+        },
+        {
+          "username": "AnonChariot4",
+          "clientID": "W6NNFzXg",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1812,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-17T22:20:22.786Z",
+      "url": "https://openfront.io/game/c9p7n464"
+    },
+    {
+      "id": "pcKGa5S3",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonRaven9",
+          "clientID": "ymt9rR9t",
+          "clanTag": null
+        },
+        {
+          "username": "Byzantium",
+          "clientID": "HYzpkmez",
+          "clanTag": "FROGS"
+        },
+        {
+          "username": "tedy",
+          "clientID": "1JdkNx8g",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGlacier6",
+          "clientID": "JXthPMvp",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 662,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-17T22:33:11.045Z",
+      "url": "https://openfront.io/game/pcKGa5S3"
+    },
+    {
+      "id": "G4hLS1GV",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "enea",
+          "clientID": "aBqr2bKH",
+          "clanTag": null
+        },
+        {
+          "username": "United Nations",
+          "clientID": "or9TJxX8",
+          "clanTag": "BAD"
+        },
+        {
+          "username": "AnonDeer8",
+          "clientID": "V6W5oUzn",
+          "clanTag": null
+        },
+        {
+          "username": "imk",
+          "clientID": "ZcehFL7p",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 1007,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-17T22:25:16.570Z",
+      "url": "https://openfront.io/game/G4hLS1GV"
     }
   ]
 }
