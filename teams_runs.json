@@ -14725,6 +14725,29 @@
       "numPlayers": 69,
       "timestamp": "2026-08-17T13:53:29.182Z",
       "url": "https://openfront.io/game/cuEp8knM"
+    },
+    {
+      "id": "283Crh3n",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "HGFH",
+          "clientID": "1a1cJqvC",
+          "clanTag": null
+        },
+        {
+          "username": "Arski",
+          "clientID": "eUBXTQTb",
+          "clanTag": "FIN"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 877,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-17T14:11:46.747Z",
+      "url": "https://openfront.io/game/283Crh3n"
     }
   ],
   "trios": [
@@ -70524,6 +70547,34 @@
       "numPlayers": 79,
       "timestamp": "2026-08-17T13:49:05.931Z",
       "url": "https://openfront.io/game/NVi5ikX1"
+    },
+    {
+      "id": "HCdJPdyY",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SDRome",
+          "clientID": "ka2qjKa9",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "Erteschio",
+          "clientID": "GoSnE7rT",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "Anon550",
+          "clientID": "RotMLWeu",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1040,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-17T14:00:10.576Z",
+      "url": "https://openfront.io/game/HCdJPdyY"
     }
   ]
 }
