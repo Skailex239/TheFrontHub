@@ -14633,6 +14633,29 @@
       "numPlayers": 55,
       "timestamp": "2026-08-17T11:52:08.435Z",
       "url": "https://openfront.io/game/qW26HxN7"
+    },
+    {
+      "id": "7wzB3RbH",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "ioon",
+          "clientID": "QBVCNx9C",
+          "clanTag": null
+        },
+        {
+          "username": "Mr. Anon",
+          "clientID": "FHLM6nUb",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 1019,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-17T12:21:53.271Z",
+      "url": "https://openfront.io/game/7wzB3RbH"
     }
   ],
   "trios": [
@@ -40202,6 +40225,57 @@
       "numPlayers": 75,
       "timestamp": "2026-08-17T12:04:48.716Z",
       "url": "https://openfront.io/game/rcsxwUeW"
+    },
+    {
+      "id": "838uygPk",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "floetus",
+          "clientID": "fZ7NZC99",
+          "clanTag": "UN"
+        },
+        {
+          "username": "o g b",
+          "clientID": "dktnjBpc",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1339,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-17T12:19:28.129Z",
+      "url": "https://openfront.io/game/838uygPk"
+    },
+    {
+      "id": "1kvREYXo",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "A6T",
+          "clientID": "gXgbFGsT",
+          "clanTag": "BE"
+        },
+        {
+          "username": "slowzix",
+          "clientID": "K8Kuf8YJ",
+          "clanTag": "BE"
+        },
+        {
+          "username": "Lolman",
+          "clientID": "gHig18Pp",
+          "clanTag": "BE"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1550,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-17T12:13:30.761Z",
+      "url": "https://openfront.io/game/1kvREYXo"
     }
   ],
   "quads": [
