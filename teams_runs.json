@@ -40049,6 +40049,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-17T11:49:07.751Z",
       "url": "https://openfront.io/game/HRovhaRp"
+    },
+    {
+      "id": "6yjj4m7n",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Hulli",
+          "clientID": "9c2WqNHe",
+          "clanTag": "UA"
+        },
+        {
+          "username": "HELP",
+          "clientID": "SPSCtXix",
+          "clanTag": null
+        },
+        {
+          "username": "tokisan",
+          "clientID": "tz2AjGc8",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1199,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-17T11:43:01.850Z",
+      "url": "https://openfront.io/game/6yjj4m7n"
     }
   ],
   "quads": [
@@ -69841,6 +69869,72 @@
       "numPlayers": 72,
       "timestamp": "2026-08-17T11:33:36.793Z",
       "url": "https://openfront.io/game/7VyvkVtk"
+    },
+    {
+      "id": "gX9UZH7y",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "WERTY",
+          "clientID": "UkXq8MAX",
+          "clanTag": null
+        },
+        {
+          "username": "BOKACK",
+          "clientID": "Nttn1YuG",
+          "clanTag": "GOLD"
+        },
+        {
+          "username": "medium h",
+          "clientID": "znXivTdG",
+          "clanTag": "GOLD"
+        },
+        {
+          "username": "Karsten",
+          "clientID": "TLS7owZv",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 950,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-17T11:56:12.174Z",
+      "url": "https://openfront.io/game/gX9UZH7y"
+    },
+    {
+      "id": "C6iBcaKA",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "slowzix",
+          "clientID": "5yJpPbHX",
+          "clanTag": "BE"
+        },
+        {
+          "username": "A6T",
+          "clientID": "VHvVvJKy",
+          "clanTag": "BE"
+        },
+        {
+          "username": "whispeR",
+          "clientID": "ap8yr2x7",
+          "clanTag": null
+        },
+        {
+          "username": "AnonDusk",
+          "clientID": "MaMyQg4h",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1004,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-17T11:54:52.103Z",
+      "url": "https://openfront.io/game/C6iBcaKA"
     }
   ]
 }
