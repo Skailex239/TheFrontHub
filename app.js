@@ -1425,10 +1425,10 @@ function selectMap(name){
 // One image per context (dashboard, ranked, speedruns, profile) with exact dimensions.
 const PLAYER_OVERLAYS = [
   { match: /skailex/i, images: {
-    dashboard: "final_1_dashboard_48x16.webp",
-    ranked:    "final_2_ranked_144x48.webp",
-    speedruns: "final_3_speedruns_171x57.webp",
-    profile:   "final_4_profil_304x48.webp",
+    dashboard: "HQ_1_dashboard_48x16.webp",
+    ranked:    "HQ_2_ranked_144x48.webp",
+    speedruns: "HQ_3_speedruns_171x57.webp",
+    profile:   "HQ_4_profil_304x48.webp",
   }},
 ];
 function getPlayerOverlay(username, context) {
