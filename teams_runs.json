@@ -70371,6 +70371,62 @@
       "numPlayers": 28,
       "timestamp": "2026-08-17T13:22:58.798Z",
       "url": "https://openfront.io/game/gv4fMKmf"
+    },
+    {
+      "id": "7LEEeCpE",
+      "team": "Red",
+      "players": [
+        {
+          "username": "hola",
+          "clientID": "7JT8zHut",
+          "clanTag": "PIVA"
+        },
+        {
+          "username": "Brune",
+          "clientID": "otYBozu3",
+          "clanTag": "PIVA"
+        },
+        {
+          "username": "steca",
+          "clientID": "UtMiqFwj",
+          "clanTag": "PIVA"
+        },
+        {
+          "username": "BlueBerryPie",
+          "clientID": "a9ebNSjE",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 572,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-17T13:39:39.830Z",
+      "url": "https://openfront.io/game/7LEEeCpE"
+    },
+    {
+      "id": "pwbhCLRT",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Niliau",
+          "clientID": "LKCgD2ow",
+          "clanTag": null
+        },
+        {
+          "username": "Money",
+          "clientID": "tYpSWPzR",
+          "clanTag": "MMD"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1348,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 119,
+      "timestamp": "2026-08-17T13:29:30.200Z",
+      "url": "https://openfront.io/game/pwbhCLRT"
     }
   ]
 }
