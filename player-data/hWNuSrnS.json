@@ -1,12 +1,40 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-17T09:55:31.428Z",
+  "lastSyncedAt": "2026-08-17T10:19:51.036Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 3710,
-  "newGamesThisSync": 0,
+  "totalGames": 3712,
+  "newGamesThisSync": 2,
   "games": [
+    {
+      "gameId": "bEMSjDuH",
+      "start": "2026-08-17T10:06:08.155Z",
+      "durationSeconds": 529,
+      "map": "Asia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "victory",
+      "totalPlayers": 2,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
+    {
+      "gameId": "G17UFCgh",
+      "start": "2026-08-17T09:10:17.029Z",
+      "durationSeconds": 2995,
+      "map": "Mare Nostrum",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 116,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "HsyixfEN",
       "start": "2026-08-17T09:04:22.697Z",
