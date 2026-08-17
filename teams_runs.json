@@ -39212,6 +39212,29 @@
       "numPlayers": 54,
       "timestamp": "2026-08-17T02:32:50.823Z",
       "url": "https://openfront.io/game/ETL4d1A6"
+    },
+    {
+      "id": "MfB4QrVi",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Grandma Gary",
+          "clientID": "eZDDMRgQ",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "8q7bz91z",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 649,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-17T04:14:10.129Z",
+      "url": "https://openfront.io/game/MfB4QrVi"
     }
   ],
   "quads": [
@@ -68411,6 +68434,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-17T03:09:26.454Z",
       "url": "https://openfront.io/game/QGskPNCP"
+    },
+    {
+      "id": "Y4Wa4ZtT",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Xploit",
+          "clientID": "d2P98WAt",
+          "clanTag": "BOM"
+        },
+        {
+          "username": "Syria",
+          "clientID": "sazYkYrh",
+          "clanTag": "BOM"
+        },
+        {
+          "username": "SIBU",
+          "clientID": "sUtrZgu5",
+          "clanTag": null
+        },
+        {
+          "username": "Kingdom of Presidia",
+          "clientID": "h1V3wfUG",
+          "clanTag": "BOM"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1045,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-17T04:08:58.322Z",
+      "url": "https://openfront.io/game/Y4Wa4ZtT"
     }
   ]
 }
