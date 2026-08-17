@@ -14592,6 +14592,47 @@
       "numPlayers": 30,
       "timestamp": "2026-08-17T07:33:48.170Z",
       "url": "https://openfront.io/game/udR5JEKF"
+    },
+    {
+      "id": "hWDKJYUD",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Amir Ali 110",
+          "clientID": "kfZsbThY",
+          "clanTag": "IR"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 2025,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-17T11:46:15.550Z",
+      "url": "https://openfront.io/game/hWDKJYUD"
+    },
+    {
+      "id": "qW26HxN7",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "TreBetcha",
+          "clientID": "vkHvEa3j",
+          "clanTag": "BE"
+        },
+        {
+          "username": "Anon578",
+          "clientID": "VJebUcMx",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1687,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "timestamp": "2026-08-17T11:52:08.435Z",
+      "url": "https://openfront.io/game/qW26HxN7"
     }
   ],
   "trios": [
@@ -40077,6 +40118,90 @@
       "numPlayers": 21,
       "timestamp": "2026-08-17T11:43:01.850Z",
       "url": "https://openfront.io/game/6yjj4m7n"
+    },
+    {
+      "id": "6k1g88Uc",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "JUST TRADER PLS",
+          "clientID": "5vV2bLr8",
+          "clanTag": null
+        },
+        {
+          "username": "Omer",
+          "clientID": "cQeZmbVG",
+          "clanTag": "OG"
+        },
+        {
+          "username": "Lollero",
+          "clientID": "g56s884Y",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 1491,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-17T11:58:22.826Z",
+      "url": "https://openfront.io/game/6k1g88Uc"
+    },
+    {
+      "id": "4UFNLGzj",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "AnonRiver7",
+          "clientID": "NbmsnxEk",
+          "clanTag": null
+        },
+        {
+          "username": "death",
+          "clientID": "jZwyjzyo",
+          "clanTag": null
+        },
+        {
+          "username": "KristTheLight",
+          "clientID": "1C9pLLrY",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1441,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 83,
+      "timestamp": "2026-08-17T12:02:06.543Z",
+      "url": "https://openfront.io/game/4UFNLGzj"
+    },
+    {
+      "id": "rcsxwUeW",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Cesare",
+          "clientID": "UPyHK3Dk",
+          "clanTag": null
+        },
+        {
+          "username": "Imperium",
+          "clientID": "Y5rVov6i",
+          "clanTag": "ISPEN"
+        },
+        {
+          "username": "Mongol",
+          "clientID": "5x8sBBZW",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1266,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-17T12:04:48.716Z",
+      "url": "https://openfront.io/game/rcsxwUeW"
     }
   ],
   "quads": [
