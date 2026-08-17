@@ -41769,6 +41769,34 @@
       "numPlayers": 20,
       "timestamp": "2026-08-17T22:46:51.356Z",
       "url": "https://openfront.io/game/LFrSvgUY"
+    },
+    {
+      "id": "7goGaX3V",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "4_8_15_16_23_42",
+          "clientID": "3YsFy6zc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Keemon",
+          "clientID": "a1B2V6kZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonCrimson5",
+          "clientID": "nC8utxnL",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1008,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-17T22:51:06.117Z",
+      "url": "https://openfront.io/game/7goGaX3V"
     }
   ],
   "quads": [
@@ -72736,6 +72764,67 @@
       "numPlayers": 60,
       "timestamp": "2026-08-17T22:44:51.746Z",
       "url": "https://openfront.io/game/4FW62wrm"
+    },
+    {
+      "id": "JSq6D8HS",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "TEAM werk",
+          "clientID": "mJfZVziK",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Kakashka",
+          "clientID": "h8ENuEd6",
+          "clanTag": null
+        },
+        {
+          "username": "chud",
+          "clientID": "ZbGEhfPM",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1226,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T22:48:17.938Z",
+      "url": "https://openfront.io/game/JSq6D8HS"
+    },
+    {
+      "id": "noeiuqPg",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "YvngScorp1on",
+          "clientID": "XsKZ18dJ",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "KingJay",
+          "clientID": "BrA5iBeQ",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "Nuke Party",
+          "clientID": "yfC9HEN1",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "NWm",
+          "clientID": "n5PvnkPg",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T22:39:26.943Z",
+      "url": "https://openfront.io/game/noeiuqPg"
     }
   ]
 }
