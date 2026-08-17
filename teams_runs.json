@@ -70343,6 +70343,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-17T13:04:14.980Z",
       "url": "https://openfront.io/game/bSbZMyxN"
+    },
+    {
+      "id": "gv4fMKmf",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Glorfindel",
+          "clientID": "dzHDoGT6",
+          "clanTag": null
+        },
+        {
+          "username": "Garbage Town",
+          "clientID": "MWQF5N11",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Albanian Israeli Empire",
+          "clientID": "tN7BLubR",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 660,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-17T13:22:58.798Z",
+      "url": "https://openfront.io/game/gv4fMKmf"
     }
   ]
 }
