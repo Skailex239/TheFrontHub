@@ -41713,6 +41713,62 @@
       "numPlayers": 45,
       "timestamp": "2026-08-17T22:08:48.578Z",
       "url": "https://openfront.io/game/4AnLMCs8"
+    },
+    {
+      "id": "8QtsEBxy",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Lopy35",
+          "clientID": "TdU1XieT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ISON",
+          "clientID": "zSm7Rnyu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PAYDAR",
+          "clientID": "eoELkX8v",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 931,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "timestamp": "2026-08-17T22:43:45.697Z",
+      "url": "https://openfront.io/game/8QtsEBxy"
+    },
+    {
+      "id": "LFrSvgUY",
+      "team": "Red",
+      "players": [
+        {
+          "username": "1m2o",
+          "clientID": "xkHPBXR3",
+          "clanTag": "BG"
+        },
+        {
+          "username": "zizo",
+          "clientID": "kvgfVgoC",
+          "clanTag": "BG"
+        },
+        {
+          "username": "Mo0l",
+          "clientID": "xeyhnAUr",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 775,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-17T22:46:51.356Z",
+      "url": "https://openfront.io/game/LFrSvgUY"
     }
   ],
   "quads": [
@@ -72652,6 +72708,34 @@
       "numPlayers": 44,
       "timestamp": "2026-08-17T22:25:16.570Z",
       "url": "https://openfront.io/game/G4hLS1GV"
+    },
+    {
+      "id": "4FW62wrm",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "HNT",
+          "clientID": "iTdVUcBq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NBK",
+          "clientID": "t5oozsgB",
+          "clanTag": "UN"
+        },
+        {
+          "username": "7ANGELO7",
+          "clientID": "QPFAm3Tc",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 801,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-17T22:44:51.746Z",
+      "url": "https://openfront.io/game/4FW62wrm"
     }
   ]
 }
