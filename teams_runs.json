@@ -39087,6 +39087,29 @@
       "numPlayers": 18,
       "timestamp": "2026-08-17T01:09:14.763Z",
       "url": "https://openfront.io/game/A1Zaug5u"
+    },
+    {
+      "id": "pdXHgq9y",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Gale",
+          "clientID": "39t7BakH",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToucan",
+          "clientID": "xP9Kgddd",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 824,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-17T02:51:15.886Z",
+      "url": "https://openfront.io/game/pdXHgq9y"
     }
   ],
   "quads": [
@@ -68235,6 +68258,29 @@
       "numPlayers": 34,
       "timestamp": "2026-08-17T02:06:52.805Z",
       "url": "https://openfront.io/game/P5hoFZDy"
+    },
+    {
+      "id": "4Z5i2dVq",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Scoots",
+          "clientID": "DpsGqD2y",
+          "clanTag": "USA"
+        },
+        {
+          "username": "Money",
+          "clientID": "shbCqzdx",
+          "clanTag": "USA"
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1397,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T02:42:44.403Z",
+      "url": "https://openfront.io/game/4Z5i2dVq"
     }
   ]
 }
