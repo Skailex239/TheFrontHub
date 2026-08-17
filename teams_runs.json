@@ -14454,6 +14454,29 @@
       "numPlayers": 28,
       "timestamp": "2026-08-17T01:57:21.705Z",
       "url": "https://openfront.io/game/aUWNtuHB"
+    },
+    {
+      "id": "joHcB4ae",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "zzzz",
+          "clientID": "aEJtW8DZ",
+          "clanTag": "QQ"
+        },
+        {
+          "username": "mushi",
+          "clientID": "Tu6iaZqh",
+          "clanTag": "QQ"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1006,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-17T02:54:37.071Z",
+      "url": "https://openfront.io/game/joHcB4ae"
     }
   ],
   "trios": [
@@ -39110,6 +39133,62 @@
       "numPlayers": 54,
       "timestamp": "2026-08-17T02:51:15.886Z",
       "url": "https://openfront.io/game/pdXHgq9y"
+    },
+    {
+      "id": "zksAMzhA",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "AnonCamel9",
+          "clientID": "7gPv9TSv",
+          "clanTag": null
+        },
+        {
+          "username": "Das Scrooge",
+          "clientID": "3jKEivhH",
+          "clanTag": null
+        },
+        {
+          "username": "Franz Josef",
+          "clientID": "A22KibsC",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-17T02:52:08.440Z",
+      "url": "https://openfront.io/game/zksAMzhA"
+    },
+    {
+      "id": "ETL4d1A6",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Trade Center",
+          "clientID": "K6euJoEs",
+          "clanTag": "LYL"
+        },
+        {
+          "username": "stardust",
+          "clientID": "VuAX9UNa",
+          "clanTag": "LYL"
+        },
+        {
+          "username": "WHITEBOY89",
+          "clientID": "2DMMWpvW",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 2415,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-17T02:32:50.823Z",
+      "url": "https://openfront.io/game/ETL4d1A6"
     }
   ],
   "quads": [
