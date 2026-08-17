@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-17T09:06:33.570Z",
+  "lastSyncedAt": "2026-08-17T09:54:57.830Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 3709,
-  "newGamesThisSync": 0,
+  "totalGames": 3710,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "HsyixfEN",
+      "start": "2026-08-17T09:04:22.697Z",
+      "durationSeconds": 2267,
+      "map": "Balkans",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 87,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "yDy8qVRj",
       "start": "2026-08-17T08:42:48.402Z",
