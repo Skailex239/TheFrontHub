@@ -235,6 +235,14 @@ function applyMessage(msg) {
             for (const cat of Object.keys(snapshot.games)) {
               const oldGame = snapshot.games[cat].find(g => g.id === id);
               if (oldGame) {
+                // Si la game était quasi pleine (manque 1-3 joueurs),
+                // on la marque comme pleine — le count de l'API n'est pas
+                // toujours exact au moment où la game se termine.
+                const cap = oldGame.capacity || 0;
+                const pls = oldGame.players || 0;
+                if (cap > 0 && pls > 0 && (cap - pls) <= 3) {
+                  oldGame.players = cap; // marquer comme pleine
+                }
                 recentHistory.unshift({ ...oldGame, endedAt: serverTime });
                 break;
               }
