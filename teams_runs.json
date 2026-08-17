@@ -14748,6 +14748,29 @@
       "numPlayers": 74,
       "timestamp": "2026-08-17T14:11:46.747Z",
       "url": "https://openfront.io/game/283Crh3n"
+    },
+    {
+      "id": "zM339xrh",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Erteschio",
+          "clientID": "kTGFphpD",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "SDRome",
+          "clientID": "evPvqeWy",
+          "clanTag": "OPS"
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 797,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "timestamp": "2026-08-17T14:19:45.199Z",
+      "url": "https://openfront.io/game/zM339xrh"
     }
   ],
   "trios": [
@@ -40442,6 +40465,62 @@
       "numPlayers": 68,
       "timestamp": "2026-08-17T12:53:31.234Z",
       "url": "https://openfront.io/game/weZ5WD1y"
+    },
+    {
+      "id": "BWk46Hpe",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "HNT",
+          "clientID": "f2qKf26u",
+          "clanTag": "UN"
+        },
+        {
+          "username": "deniable",
+          "clientID": "6HSDVC1T",
+          "clanTag": "UN"
+        },
+        {
+          "username": "HqL",
+          "clientID": "mcaBQuLn",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1182,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-17T14:17:18.574Z",
+      "url": "https://openfront.io/game/BWk46Hpe"
+    },
+    {
+      "id": "vzCKiuJe",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Anon678",
+          "clientID": "h7VDoXAu",
+          "clanTag": "KEKE"
+        },
+        {
+          "username": "hdksf",
+          "clientID": "fFs6StB1",
+          "clanTag": "KEKE"
+        },
+        {
+          "username": "232",
+          "clientID": "FX5YnGqo",
+          "clanTag": "KEKE"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1207,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-17T14:12:26.789Z",
+      "url": "https://openfront.io/game/vzCKiuJe"
     }
   ],
   "quads": [
@@ -70575,6 +70654,62 @@
       "numPlayers": 32,
       "timestamp": "2026-08-17T14:00:10.576Z",
       "url": "https://openfront.io/game/HCdJPdyY"
+    },
+    {
+      "id": "9svv3tEZ",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonNebula8",
+          "clientID": "Tt4hroeM",
+          "clanTag": null
+        },
+        {
+          "username": "panik_d",
+          "clientID": "qVbmsvBe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "HoneyBearUF",
+          "clientID": "SDht6tsc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "QhPi9piD",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-17T14:30:01.800Z",
+      "url": "https://openfront.io/game/9svv3tEZ"
+    },
+    {
+      "id": "591UuruU",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "RTLR WAS RIGHT",
+          "clientID": "LA1SgP9f",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anuar",
+          "clientID": "BvNXTfLL",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 2060,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-17T13:55:52.822Z",
+      "url": "https://openfront.io/game/591UuruU"
     }
   ]
 }
