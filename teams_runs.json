@@ -15393,6 +15393,24 @@
       "numPlayers": 29,
       "timestamp": "2026-08-18T04:30:00.857Z",
       "url": "https://openfront.io/game/8BwJFwzh"
+    },
+    {
+      "id": "p7dAZe7R",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonSpider1",
+          "clientID": "QAti9ZRS",
+          "clanTag": "QWD"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1582,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T06:29:01.319Z",
+      "url": "https://openfront.io/game/p7dAZe7R"
     }
   ],
   "trios": [
@@ -42313,6 +42331,34 @@
       "numPlayers": 41,
       "timestamp": "2026-08-18T06:01:55.695Z",
       "url": "https://openfront.io/game/GoX7HYTC"
+    },
+    {
+      "id": "caTkxkoi",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Kingdom Wesex",
+          "clientID": "W3ZFjnwA",
+          "clanTag": null
+        },
+        {
+          "username": "Belthaczar",
+          "clientID": "aS6hVNiQ",
+          "clanTag": null
+        },
+        {
+          "username": "thicart",
+          "clientID": "6SqFFeg9",
+          "clanTag": "SATO"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 764,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-18T06:46:38.811Z",
+      "url": "https://openfront.io/game/caTkxkoi"
     }
   ],
   "quads": [
