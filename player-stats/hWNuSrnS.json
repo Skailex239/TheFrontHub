@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-18T11:59:58.721Z",
-  "lastSyncedAt": "2026-08-18T11:59:57.293Z",
-  "totalGames": 3764,
+  "computedAt": "2026-08-18T12:43:40.464Z",
+  "lastSyncedAt": "2026-08-18T12:43:38.485Z",
+  "totalGames": 3765,
   "careerWins": {
-    "ffaCasual": 264,
+    "ffaCasual": 265,
     "ffaRanked": 1414,
     "teamCasual": 151,
     "teamRanked": 127
   },
-  "totalWins": 1956,
-  "points": 4936,
+  "totalWins": 1957,
+  "points": 4946,
   "level": 49,
-  "levelProgress": 36,
+  "levelProgress": 46,
   "levelNextAt": 5000,
   "nextMilestones": {
     "wins": {
-      "current": 1956,
+      "current": 1957,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "4 936",
-    "totalWins": "1 956",
-    "totalGames": "3 764",
+    "points": "4 946",
+    "totalWins": "1 957",
+    "totalGames": "3 765",
     "totalPlaytime": "30j 15h",
     "totalPlaytimeCompact": "30j 15h",
     "avgGameDuration": "11m 43s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "735h"
   },
   "playtime": {
-    "totalSec": 2647676,
-    "avgGameSec": 703.4208289054197,
+    "totalSec": 2648894,
+    "avgGameSec": 703.5575033200531,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1069,
-        "playtimeSec": 1286406,
-        "wins": 264
+        "games": 1070,
+        "playtimeSec": 1287624,
+        "wins": 265
       },
       "ffaRanked": {
         "games": 1908,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1956,
+    "victory": 1957,
     "defeat": 1478,
     "incomplete": 330
   },
@@ -388,6 +388,22 @@
       }
     },
     {
+      "map": "Gateway to the Atlantic",
+      "count": 29,
+      "wins": 9,
+      "losses": 20,
+      "playtimeSec": 33990,
+      "avgDuration": 1172.0689655172414,
+      "winRate": 0.3103448275862069,
+      "lastPlayed": 1787053351997,
+      "formatted": {
+        "playtime": "9h 26m",
+        "avgDuration": "19m",
+        "winRate": "31%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "South America",
       "count": 29,
       "wins": 6,
@@ -401,22 +417,6 @@
         "avgDuration": "22m",
         "winRate": "21%",
         "lastPlayed": "15/08/26"
-      }
-    },
-    {
-      "map": "Gateway to the Atlantic",
-      "count": 28,
-      "wins": 8,
-      "losses": 20,
-      "playtimeSec": 32772,
-      "avgDuration": 1170.4285714285713,
-      "winRate": 0.2857142857142857,
-      "lastPlayed": 1786249251920,
-      "formatted": {
-        "playtime": "9h 6m",
-        "avgDuration": "19m",
-        "winRate": "29%",
-        "lastPlayed": "09/08/26"
       }
     },
     {
@@ -1603,7 +1603,7 @@
       85,
       74,
       92,
-      99,
+      100,
       91,
       143,
       225,
@@ -1617,7 +1617,7 @@
     ],
     "byWeekday": [
       547,
-      583,
+      584,
       470,
       548,
       480,
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 5,
+    "current": 6,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "dvRPfg3K",
+      "start": "2026-08-18T11:42:31.997Z",
+      "map": "Gateway to the Atlantic",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1218,
+      "totalPlayers": 102,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "mYMLSiSv",
       "start": "2026-08-18T09:35:47.772Z",
@@ -2363,17 +2374,6 @@
       "result": "defeat",
       "durationSeconds": 31,
       "totalPlayers": 1,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "zWnAk7Lf",
-      "start": "2026-08-18T05:46:33.817Z",
-      "map": "Asia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 432,
-      "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
     }

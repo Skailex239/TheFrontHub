@@ -1,27 +1,27 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-18T11:59:58.234Z",
-  "lastSyncedAt": "2026-08-18T11:59:57.012Z",
-  "totalGames": 3059,
+  "computedAt": "2026-08-18T12:43:39.700Z",
+  "lastSyncedAt": "2026-08-18T12:43:38.085Z",
+  "totalGames": 3066,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 262,
     "teamCasual": 331,
-    "teamRanked": 117
+    "teamRanked": 118
   },
-  "totalWins": 1202,
-  "points": 6954,
+  "totalWins": 1203,
+  "points": 6955,
   "level": 69,
-  "levelProgress": 54,
+  "levelProgress": 55,
   "levelNextAt": 7000,
   "nextMilestones": {
     "wins": {
-      "current": 1202,
+      "current": 1203,
       "target": 2000
     },
     "playtime": {
-      "current": 741,
+      "current": 742,
       "target": 1000
     },
     "maps": {
@@ -39,25 +39,25 @@
     4
   ],
   "formatted": {
-    "points": "6 954",
-    "totalWins": "1 202",
-    "totalGames": "3 059",
-    "totalPlaytime": "30j 21h",
-    "totalPlaytimeCompact": "30j 21h",
-    "avgGameDuration": "14m 33s",
+    "points": "6 955",
+    "totalWins": "1 203",
+    "totalGames": "3 066",
+    "totalPlaytime": "30j 22h",
+    "totalPlaytimeCompact": "30j 22h",
+    "avgGameDuration": "14m 31s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "741h"
+    "totalPlaytimeHours": "742h"
   },
   "playtime": {
-    "totalSec": 2670705,
-    "avgGameSec": 873.0647270349788,
+    "totalSec": 2673041,
+    "avgGameSec": 871.8333333333334,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1569,
-        "playtimeSec": 1591688,
+        "games": 1571,
+        "playtimeSec": 1592006,
         "wins": 492
       },
       "ffaRanked": {
@@ -66,32 +66,32 @@
         "wins": 262
       },
       "teamCasual": {
-        "games": 904,
-        "playtimeSec": 922663,
+        "games": 908,
+        "playtimeSec": 924548,
         "wins": 331
       },
       "teamRanked": {
-        "games": 187,
-        "playtimeSec": 37237,
-        "wins": 117
+        "games": 188,
+        "playtimeSec": 37370,
+        "wins": 118
       }
     }
   },
   "results": {
-    "victory": 1202,
+    "victory": 1203,
     "defeat": 1246,
-    "incomplete": 611
+    "incomplete": 617
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 493,
-      "wins": 316,
+      "count": 494,
+      "wins": 317,
       "losses": 177,
-      "playtimeSec": 262171,
-      "avgDuration": 531.7870182555781,
-      "winRate": 0.640973630831643,
-      "lastPlayed": 1787045747772,
+      "playtimeSec": 262304,
+      "avgDuration": 530.9797570850202,
+      "winRate": 0.6417004048582996,
+      "lastPlayed": 1787056724179,
       "formatted": {
         "playtime": "3j 0h",
         "avgDuration": "8m",
@@ -1411,8 +1411,8 @@
       208,
       193,
       74,
-      160,
-      219,
+      161,
+      225,
       218,
       216,
       283,
@@ -1425,7 +1425,7 @@
     ],
     "byWeekday": [
       272,
-      446,
+      453,
       424,
       386,
       360,
@@ -1889,7 +1889,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 42
   },
   "achievements": {
@@ -1965,6 +1965,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "q9aiUXJE",
+      "start": "2026-08-18T12:38:44.179Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 133,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "mYMLSiSv",
       "start": "2026-08-18T09:35:47.772Z",
@@ -2173,17 +2184,6 @@
       "totalPlayers": 37,
       "rankedType": "unranked",
       "category": "ffaCasual"
-    },
-    {
-      "gameId": "E6Rj8GH2",
-      "start": "2026-08-11T06:49:10.597Z",
-      "map": "Europe",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 966,
-      "totalPlayers": 77,
-      "rankedType": "unranked",
-      "category": "teamCasual"
     }
   ]
 }

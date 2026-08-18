@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-18T11:59:57.293Z",
+  "lastSyncedAt": "2026-08-18T12:43:38.485Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.1,
-  "totalGames": 3764,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.2,
+  "totalGames": 3765,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "dvRPfg3K",
+      "start": "2026-08-18T11:42:31.997Z",
+      "durationSeconds": 1218,
+      "map": "Gateway to the Atlantic",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 102,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "mYMLSiSv",
       "start": "2026-08-18T09:35:47.772Z",
