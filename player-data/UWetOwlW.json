@@ -1,12 +1,26 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "lastSyncedAt": "2026-08-18T12:44:10.623Z",
+  "lastSyncedAt": "2026-08-18T13:29:18.649Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 3066,
-  "newGamesThisSync": 0,
+  "totalGames": 3067,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "omGNkZpi",
+      "start": "2026-08-18T12:57:12.877Z",
+      "durationSeconds": 1020,
+      "map": "The Box",
+      "mode": "Free For All",
+      "type": "Private",
+      "playerTeams": "2",
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 29,
+      "username": "Skailex",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "q9aiUXJE",
       "start": "2026-08-18T12:38:44.179Z",

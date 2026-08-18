@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-18T12:44:11.841Z",
-  "lastSyncedAt": "2026-08-18T12:44:10.623Z",
-  "totalGames": 3066,
+  "computedAt": "2026-08-18T13:29:19.884Z",
+  "lastSyncedAt": "2026-08-18T13:29:18.649Z",
+  "totalGames": 3067,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 262,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "6 955",
     "totalWins": "1 203",
-    "totalGames": "3 066",
+    "totalGames": "3 067",
     "totalPlaytime": "30j 22h",
     "totalPlaytimeCompact": "30j 22h",
     "avgGameDuration": "14m 31s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "742h"
   },
   "playtime": {
-    "totalSec": 2673041,
-    "avgGameSec": 871.8333333333334,
+    "totalSec": 2674061,
+    "avgGameSec": 871.8816432996414,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1571,
-        "playtimeSec": 1592006,
+        "games": 1572,
+        "playtimeSec": 1593026,
         "wins": 492
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1203,
-    "defeat": 1246,
+    "defeat": 1247,
     "incomplete": 617
   },
   "maps": [
@@ -820,6 +820,22 @@
       }
     },
     {
+      "map": "The Box",
+      "count": 9,
+      "wins": 3,
+      "losses": 6,
+      "playtimeSec": 7042,
+      "avgDuration": 782.4444444444445,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1787057832877,
+      "formatted": {
+        "playtime": "1h 57m",
+        "avgDuration": "13m",
+        "winRate": "33%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Great Lakes",
       "count": 9,
       "wins": 1,
@@ -849,22 +865,6 @@
         "avgDuration": "20m",
         "winRate": "33%",
         "lastPlayed": "07/04/26"
-      }
-    },
-    {
-      "map": "The Box",
-      "count": 8,
-      "wins": 3,
-      "losses": 5,
-      "playtimeSec": 6022,
-      "avgDuration": 752.75,
-      "winRate": 0.375,
-      "lastPlayed": 1786712871618,
-      "formatted": {
-        "playtime": "1h 40m",
-        "avgDuration": "12m",
-        "winRate": "38%",
-        "lastPlayed": "14/08/26"
       }
     },
     {
@@ -1412,7 +1412,7 @@
       193,
       74,
       161,
-      225,
+      226,
       218,
       216,
       283,
@@ -1425,7 +1425,7 @@
     ],
     "byWeekday": [
       272,
-      453,
+      454,
       424,
       386,
       360,
@@ -1889,7 +1889,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 0,
     "best": 42
   },
   "achievements": {
@@ -1965,6 +1965,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "omGNkZpi",
+      "start": "2026-08-18T12:57:12.877Z",
+      "map": "The Box",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1020,
+      "totalPlayers": 29,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "q9aiUXJE",
       "start": "2026-08-18T12:38:44.179Z",
@@ -2171,17 +2182,6 @@
       "result": "victory",
       "durationSeconds": 36,
       "totalPlayers": 1,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "3KcKShnz",
-      "start": "2026-08-11T16:43:26.613Z",
-      "map": "Irish Sea",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 830,
-      "totalPlayers": 37,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
