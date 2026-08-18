@@ -15411,6 +15411,65 @@
       "numPlayers": 20,
       "timestamp": "2026-08-18T06:29:01.319Z",
       "url": "https://openfront.io/game/p7dAZe7R"
+    },
+    {
+      "id": "SYfzy8sh",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "AnonSapphire5",
+          "clientID": "nwB9EG6x",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 3102,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-18T07:26:00.592Z",
+      "url": "https://openfront.io/game/SYfzy8sh"
+    },
+    {
+      "id": "eLspcWFz",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "RoM",
+          "clientID": "sCQ1hZH3",
+          "clanTag": "TEG"
+        },
+        {
+          "username": "AnonLake1",
+          "clientID": "zMXQp4EF",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1569,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-18T07:58:37.987Z",
+      "url": "https://openfront.io/game/eLspcWFz"
+    },
+    {
+      "id": "dG4tddQ1",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "EMPIRE OF NAPOLEON",
+          "clientID": "q49usGJz",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 965,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "timestamp": "2026-08-18T07:56:36.360Z",
+      "url": "https://openfront.io/game/dG4tddQ1"
     }
   ],
   "trios": [
@@ -42415,6 +42474,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-18T07:19:11.214Z",
       "url": "https://openfront.io/game/naXFD9PK"
+    },
+    {
+      "id": "cMg3KV4M",
+      "team": "Red",
+      "players": [
+        {
+          "username": "xyz",
+          "clientID": "v3eYLUuf",
+          "clanTag": "YSG"
+        },
+        {
+          "username": "NotOugle",
+          "clientID": "2yYXkUFY",
+          "clanTag": "YSG"
+        },
+        {
+          "username": "Shumi",
+          "clientID": "wKFJVCMA",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1226,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-18T07:54:36.240Z",
+      "url": "https://openfront.io/game/cMg3KV4M"
     }
   ],
   "quads": [
