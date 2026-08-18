@@ -1,9 +1,9 @@
 .profile-api-error {
   padding: 12px 16px;
   border-radius: var(--radius);
-  border: 1px solid rgba(255, 120, 80, 0.45);
-  background: rgba(255, 120, 80, 0.12);
-  color: var(--text);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-subtle);
+  color: var(--fg);
   font-size: 13px;
   line-height: 1.45;
   margin-bottom: 16px;
@@ -84,7 +84,6 @@
   background: var(--accent);
   color: white;
   border-color: var(--accent);
-  box-shadow: 0 4px 12px var(--accentGlow);
 }
 
 /* ═══════════════════════════════════════
@@ -112,7 +111,7 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accentL));
+  background: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +119,6 @@
   font-weight: 800;
   color: white;
   flex-shrink: 0;
-  box-shadow: 0 6px 20px var(--accentGlow);
 }
 
 .pf-hero-info {
@@ -165,7 +163,6 @@
   background: var(--accent);
   color: white;
   border-color: var(--accent);
-  box-shadow: 0 4px 12px var(--accentGlow);
 }
 
 .pf-edit-form {
@@ -214,8 +211,8 @@
   font-size: 13px;
   color: var(--text2);
   padding: 10px 14px;
-  background: rgba(231, 76, 60, 0.08);
-  border: 1px solid rgba(231, 76, 60, 0.2);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
 }
 
@@ -240,7 +237,7 @@
 .pf-toggle-label {
   font-size: 11px;
   font-weight: 600;
-  color: var(--green);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -260,8 +257,8 @@
   transition: background 0.2s, border-color 0.2s;
 }
 .pf-reward-toggle .toggle-switch.on {
-  background: #e74c3c;
-  border-color: #e74c3c;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .pf-reward-toggle .toggle-switch.is-flame.on {
   background: #f39c12;
@@ -320,7 +317,6 @@
   background: #fff;
   border-radius: 50%;
   transition: transform 0.2s;
-  box-shadow: var(--shadow-sm);
 }
 .pf-reward-toggle .toggle-switch.on .toggle-knob {
   transform: translateX(18px);
@@ -362,12 +358,12 @@
 }
 .pf-cosmetic-card {
   position: relative;
-  background: var(--bg2);
-  border: 2px solid var(--rim);
+  background: var(--bg);
+  border: 1px solid var(--rim);
   border-radius: var(--radius);
   padding: 14px 12px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,28 +372,24 @@
 }
 .pf-cosmetic-card:hover {
   border-color: var(--accent);
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-2px);
 }
 .pf-cosmetic-card.selected {
   border-color: var(--accent);
-  background: var(--accentGlow);
-  box-shadow: 0 0 16px var(--accentGlow), inset 0 0 12px rgba(91,138,255,0.06);
+  background: var(--accent-subtle);
   transform: scale(1.04);
 }
 .pf-cosmetic-card.selected.vip {
   border-color: #ff1744;
-  background: rgba(255, 23, 68, 0.08);
-  box-shadow: 0 0 16px rgba(255, 23, 68, 0.25), inset 0 0 12px rgba(255, 23, 68, 0.06);
+  background: rgba(255, 23, 68, 0.06);
 }
 .pf-cosmetic-card.selected.flame {
   border-color: #ff6d00;
-  background: rgba(255, 109, 0, 0.08);
-  box-shadow: 0 0 16px rgba(255, 109, 0, 0.25), inset 0 0 12px rgba(255, 109, 0, 0.06);
+  background: rgba(255, 109, 0, 0.06);
 }
 .pf-cosmetic-card.selected.rainbow {
   border-color: #8b00ff;
-  background: rgba(139, 0, 255, 0.08);
-  box-shadow: 0 0 16px rgba(139, 0, 255, 0.25), inset 0 0 12px rgba(139, 0, 255, 0.06);
+  background: rgba(139, 0, 255, 0.06);
 }
 .pf-cosmetic-name {
   font-size: 12px;
@@ -438,7 +430,6 @@
   border-style: solid;
   border-color: var(--rim2);
   background: var(--bg2);
-  box-shadow: none;
   transform: scale(1.02);
 }
 .pf-none-icon {
@@ -458,12 +449,12 @@
    Couleur du texte qui change en boucle
    ═══════════════════════════════════════ */
 
-/* VIP — Rouge/Noir cyclique */
+/* VIP — Rouge cyclique */
 @keyframes vipColor {
   0%, 100% { color: #ff1744; }
   20% { color: #d50000; }
   40% { color: #8b0000; }
-  60% { color: #1a1a2e; }
+  60% { color: #b91c1c; }
   80% { color: #8b0000; }
 }
 
@@ -640,11 +631,11 @@
   border-radius: var(--r);
   padding: 18px 16px;
   text-align: center;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 .pf-stat:hover {
-  border-color: var(--rim2);
-  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
 }
 
 .pf-stat-val {
@@ -744,12 +735,11 @@
   padding: 14px 18px;
   text-decoration: none;
   color: var(--text);
-  transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, background 0.15s ease;
 }
 .pf-game:hover {
   border-color: var(--accent);
-  transform: translateX(4px);
-  box-shadow: var(--shadow);
+  background: var(--accent-subtle);
 }
 
 .pf-game-icon {
@@ -869,7 +859,7 @@
   100%{background-position:0% 50%}
 }
 
-.container-rgb{background:#0d0d11;font-size:42px;font-weight:900}
+.container-rgb{background:var(--bg-subtle);font-size:42px;font-weight:900}
 
 /* ── Profile hero name overrides for new skins ── */
 .pf-name.rgb-cyberpunk{display:inline-block !important;font-family:'Orbitron',sans-serif !important;font-size:30px !important;background:linear-gradient(90deg,#ff00ff,#00ffff,#ff00ff) !important;background-size:200% auto !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;color:transparent !important;animation:bouge-rgb 3s linear infinite !important;filter:brightness(1.2) !important}
@@ -884,17 +874,17 @@
 .pf-name.rgb-chroma{display:inline-block !important;font-family:'Montserrat',sans-serif !important;font-size:30px !important;background:linear-gradient(90deg,#ff0000,#ff8800,#ffff00,#00ff00,#00aaff,#8800ff,#ff0088,#ff0000) !important;background-size:200% auto !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;color:transparent !important;animation:bouge-rgb 4s linear infinite !important}
 
 /* ── Cosmetic card selected state for new skins ── */
-.pf-cosmetic-card.selected.cyberpunk{border-color:#ff00ff;background:rgba(255,0,255,0.08);box-shadow:0 0 12px rgba(255,0,255,0.2)}
-.pf-cosmetic-card.selected.sunset{border-color:#ff8c00;background:rgba(255,140,0,0.08);box-shadow:0 0 12px rgba(255,140,0,0.2)}
-.pf-cosmetic-card.selected.aurore{border-color:#60efff;background:rgba(96,239,255,0.08);box-shadow:0 0 12px rgba(96,239,255,0.2)}
-.pf-cosmetic-card.selected.pastel{border-color:#a18cd1;background:rgba(161,140,209,0.08);box-shadow:0 0 12px rgba(161,140,209,0.2)}
-.pf-cosmetic-card.selected.gold{border-color:#ffd700;background:rgba(255,215,0,0.08);box-shadow:0 0 16px rgba(255,215,0,0.25),inset 0 0 12px rgba(255,215,0,0.06)}
-.pf-cosmetic-card.selected.volcano{border-color:#ff4500;background:rgba(255,69,0,0.08);box-shadow:0 0 12px rgba(255,69,0,0.2)}
-.pf-cosmetic-card.selected.ocean{border-color:#00b4d8;background:rgba(0,180,216,0.08);box-shadow:0 0 12px rgba(0,180,216,0.2)}
-.pf-cosmetic-card.selected.miami{border-color:#ff6ec7;background:rgba(255,110,199,0.08);box-shadow:0 0 12px rgba(255,110,199,0.2)}
-.pf-cosmetic-card.selected.toxic{border-color:#39ff14;background:rgba(57,255,20,0.08);box-shadow:0 0 12px rgba(57,255,20,0.2)}
-.pf-cosmetic-card.selected.chroma{border-color:#8800ff;background:rgba(136,0,255,0.08);box-shadow:0 0 12px rgba(136,0,255,0.2)}
-.pf-cosmetic-card.selected.prism{border-color:#cc00ff;background:linear-gradient(135deg,rgba(255,0,85,0.08),rgba(0,255,136,0.08),rgba(102,68,255,0.08));box-shadow:0 0 16px rgba(204,0,255,0.25),inset 0 0 12px rgba(204,0,255,0.06)}
+.pf-cosmetic-card.selected.cyberpunk{border-color:#ff00ff;background:rgba(255,0,255,0.05)}
+.pf-cosmetic-card.selected.sunset{border-color:#ff8c00;background:rgba(255,140,0,0.05)}
+.pf-cosmetic-card.selected.aurore{border-color:#60efff;background:rgba(96,239,255,0.05)}
+.pf-cosmetic-card.selected.pastel{border-color:#a18cd1;background:rgba(161,140,209,0.05)}
+.pf-cosmetic-card.selected.gold{border-color:#ffd700;background:rgba(255,215,0,0.06)}
+.pf-cosmetic-card.selected.volcano{border-color:#ff4500;background:rgba(255,69,0,0.05)}
+.pf-cosmetic-card.selected.ocean{border-color:#00b4d8;background:rgba(0,180,216,0.05)}
+.pf-cosmetic-card.selected.miami{border-color:#ff6ec7;background:rgba(255,110,199,0.05)}
+.pf-cosmetic-card.selected.toxic{border-color:#39ff14;background:rgba(57,255,20,0.05)}
+.pf-cosmetic-card.selected.chroma{border-color:#8800ff;background:rgba(136,0,255,0.05)}
+.pf-cosmetic-card.selected.prism{border-color:#cc00ff;background:linear-gradient(135deg,rgba(255,0,85,0.05),rgba(0,255,136,0.05),rgba(102,68,255,0.05))}
 
 /* PRISM skin preview in profile */
 .pf-name.rgb-prism{
@@ -953,19 +943,19 @@
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 12px;
   font-weight: 600;
-  background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15));
-  border: 1px solid rgba(99,102,241,0.3);
-  color: var(--accent, #6366f1);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
   text-decoration: none;
-  transition: all var(--dur) var(--ease);
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .pf-clan-tag:hover {
-  background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(168,85,247,0.25));
-  border-color: rgba(99,102,241,0.5);
-  transform: translateY(-1px);
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
 
 /* Period filter toolbar (Feature 5) */
@@ -976,34 +966,34 @@
   flex-wrap: wrap;
   padding: 10px 14px;
   margin-bottom: 16px;
-  background: var(--bg2, rgba(255,255,255,0.03));
-  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 .pf-period-label {
   font-size: 13px;
   font-weight: 500;
-  color: var(--text2, #aaa);
+  color: var(--fg-secondary);
   margin-right: 4px;
 }
 .pf-period-btn {
   padding: 5px 14px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border, rgba(255,255,255,0.1));
+  border: 1px solid var(--border);
   background: transparent;
-  color: var(--text2, #aaa);
+  color: var(--fg-secondary);
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.18s;
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
 }
 .pf-period-btn:hover {
-  border-color: var(--accent, #6366f1);
-  color: var(--text, #fff);
+  border-color: var(--accent-border);
+  color: var(--fg);
 }
 .pf-period-btn.active {
-  background: var(--accent, #6366f1);
-  border-color: var(--accent, #6366f1);
+  background: var(--accent);
+  border-color: var(--accent);
   color: #fff;
 }
 
@@ -1022,12 +1012,12 @@
 .pf-aliases-title {
   font-size: 14px;
   font-weight: 600;
-  color: var(--text, #fff);
+  color: var(--fg);
 }
 .pf-aliases-toggle {
   background: none;
   border: none;
-  color: var(--accent, #6366f1);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -1037,7 +1027,7 @@
   margin-top: 8px;
   max-height: 320px;
   overflow-y: auto;
-  border-top: 1px solid var(--border, rgba(255,255,255,0.08));
+  border-top: 1px solid var(--border);
 }
 .pf-alias-row {
   display: flex;
@@ -1045,12 +1035,12 @@
   justify-content: space-between;
   gap: 12px;
   padding: 8px 4px;
-  border-bottom: 1px solid var(--border, rgba(255,255,255,0.05));
+  border-bottom: 1px solid var(--border-subtle);
   font-size: 13px;
 }
 .pf-alias-name {
   font-weight: 600;
-  color: var(--text, #fff);
+  color: var(--fg);
   flex-shrink: 0;
   max-width: 40%;
   overflow: hidden;
@@ -1058,13 +1048,13 @@
   white-space: nowrap;
 }
 .pf-alias-count {
-  color: var(--accent, #6366f1);
+  color: var(--accent);
   font-weight: 500;
   font-size: 12px;
   white-space: nowrap;
 }
 .pf-alias-dates {
-  color: var(--text3, #666);
+  color: var(--fg-muted);
   font-size: 11px;
   text-align: right;
 }
@@ -1074,7 +1064,7 @@
   display: block;
   font-size: 10px;
   font-weight: 400;
-  color: var(--text3, #666);
+  color: var(--fg-muted);
   margin-top: 2px;
   line-height: 1;
 }
@@ -1088,7 +1078,7 @@
 .pf-section-hint {
   font-size: 12px;
   font-weight: 400;
-  color: var(--text3, #666);
+  color: var(--fg-muted);
 }
 
 /* BigInt stats grid (Feature 6) */
@@ -1106,14 +1096,14 @@
   gap: 4px;
   padding: 14px 8px;
   border-radius: var(--radius);
-  background: var(--bg2, rgba(255,255,255,0.03));
-  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
   text-align: center;
-  transition: transform 0.18s, border-color 0.18s;
+  transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
 }
 .pf-bigint-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent, #6366f1);
+  border-color: var(--accent-border);
+  background: var(--bg);
 }
 .pf-bigint-icon {
   font-size: 22px;
@@ -1122,13 +1112,13 @@
 .pf-bigint-val {
   font-size: 18px;
   font-weight: 700;
-  color: var(--text, #fff);
+  color: var(--fg);
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
 }
 .pf-bigint-lbl {
   font-size: 11px;
-  color: var(--text3, #888);
+  color: var(--fg-muted);
   line-height: 1.2;
 }
 
