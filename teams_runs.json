@@ -15257,6 +15257,29 @@
       "numPlayers": 27,
       "timestamp": "2026-08-18T00:14:43.687Z",
       "url": "https://openfront.io/game/5TcDZTgq"
+    },
+    {
+      "id": "Eo3euMBm",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "CrunkMunk",
+          "clientID": "hT9p6kiQ",
+          "clanTag": null
+        },
+        {
+          "username": "yoo",
+          "clientID": "v7GNP1YE",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1166,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-18T00:17:56.872Z",
+      "url": "https://openfront.io/game/Eo3euMBm"
     }
   ],
   "trios": [
@@ -41935,6 +41958,34 @@
       "numPlayers": 22,
       "timestamp": "2026-08-18T00:05:52.647Z",
       "url": "https://openfront.io/game/XH9kaKY2"
+    },
+    {
+      "id": "MnFCUWiD",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "TSM",
+          "clientID": "E9R12Rth",
+          "clanTag": null
+        },
+        {
+          "username": "SENDTROOPSGREEDYGAY",
+          "clientID": "qaRJBpJf",
+          "clanTag": "IND"
+        },
+        {
+          "username": "Anon652",
+          "clientID": "Hh9GnQrK",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 862,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-18T00:24:23.731Z",
+      "url": "https://openfront.io/game/MnFCUWiD"
     }
   ],
   "quads": [
@@ -72991,6 +73042,34 @@
       "numPlayers": 20,
       "timestamp": "2026-08-17T23:15:06.670Z",
       "url": "https://openfront.io/game/s8PxQoM1"
+    },
+    {
+      "id": "H2TgPvc3",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "hotdiggity",
+          "clientID": "NXBvC4aA",
+          "clanTag": "MOSSD"
+        },
+        {
+          "username": "yeet",
+          "clientID": "jJLFi5j9",
+          "clanTag": null
+        },
+        {
+          "username": "vive le quebec libre",
+          "clientID": "VsCVtxd1",
+          "clanTag": "QC"
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 828,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "timestamp": "2026-08-18T00:26:24.338Z",
+      "url": "https://openfront.io/game/H2TgPvc3"
     }
   ]
 }
