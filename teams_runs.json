@@ -42262,6 +42262,57 @@
       "numPlayers": 35,
       "timestamp": "2026-08-18T04:54:44.786Z",
       "url": "https://openfront.io/game/1zxk57uz"
+    },
+    {
+      "id": "aqjkCFmp",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "420K",
+          "clientID": "24b2AdAn",
+          "clanTag": "MVV"
+        },
+        {
+          "username": "hullo",
+          "clientID": "s5YsBQbr",
+          "clanTag": "MVV"
+        }
+      ],
+      "map": "France",
+      "duration_s": 798,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-18T06:25:59.635Z",
+      "url": "https://openfront.io/game/aqjkCFmp"
+    },
+    {
+      "id": "GoX7HYTC",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Clintons Fixer",
+          "clientID": "6GPUn1oP",
+          "clanTag": "CLOWN"
+        },
+        {
+          "username": "Unlicked Hog",
+          "clientID": "ixFtHMjk",
+          "clanTag": "CLOWN"
+        },
+        {
+          "username": "Peace7Strife",
+          "clientID": "dxoTUFWT",
+          "clanTag": "CLOWN"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1709,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "timestamp": "2026-08-18T06:01:55.695Z",
+      "url": "https://openfront.io/game/GoX7HYTC"
     }
   ],
   "quads": [
@@ -73778,6 +73829,39 @@
       "numPlayers": 49,
       "timestamp": "2026-08-18T05:07:48.020Z",
       "url": "https://openfront.io/game/sg8r2ov5"
+    },
+    {
+      "id": "mUSctzK2",
+      "team": "Red",
+      "players": [
+        {
+          "username": "hannibal",
+          "clientID": "qUYQzBMd",
+          "clanTag": null
+        },
+        {
+          "username": "BurntoutSloth",
+          "clientID": "BzhUc9nA",
+          "clanTag": "BDN"
+        },
+        {
+          "username": "Purple",
+          "clientID": "mXeRP3En",
+          "clanTag": "BDN"
+        },
+        {
+          "username": "EnchantedChicken.Z1yT",
+          "clientID": "gu5dLftR",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 967,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-18T06:16:09.538Z",
+      "url": "https://openfront.io/game/mUSctzK2"
     }
   ]
 }
