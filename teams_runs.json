@@ -15534,6 +15534,29 @@
       "numPlayers": 22,
       "timestamp": "2026-08-18T09:07:32.777Z",
       "url": "https://openfront.io/game/3RnFtJX4"
+    },
+    {
+      "id": "nGyWuNX7",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "SnugglePuppy",
+          "clientID": "DUzpMvzY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFjord8",
+          "clientID": "KtDdrWXG",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 920,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-18T09:55:06.014Z",
+      "url": "https://openfront.io/game/nGyWuNX7"
     }
   ],
   "trios": [
@@ -74535,6 +74558,34 @@
       "numPlayers": 100,
       "timestamp": "2026-08-18T09:09:57.978Z",
       "url": "https://openfront.io/game/5XWkMRLR"
+    },
+    {
+      "id": "o6fyi8ph",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Novac",
+          "clientID": "zzQwoRKf",
+          "clanTag": "NKTN"
+        },
+        {
+          "username": "Oil",
+          "clientID": "x3wC6vGw",
+          "clanTag": "NKTN"
+        },
+        {
+          "username": "The Revolutionists",
+          "clientID": "wghu8dnx",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1622,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T09:40:54.111Z",
+      "url": "https://openfront.io/game/o6fyi8ph"
     }
   ]
 }
