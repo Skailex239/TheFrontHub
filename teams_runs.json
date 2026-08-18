@@ -74227,6 +74227,62 @@
       "numPlayers": 52,
       "timestamp": "2026-08-18T08:38:08.252Z",
       "url": "https://openfront.io/game/RYejRwUa"
+    },
+    {
+      "id": "VcMSZvPP",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "DUTCH EAST INDA COMPANY",
+          "clientID": "1dzy8z9X",
+          "clanTag": null
+        },
+        {
+          "username": "11111",
+          "clientID": "yPErPwpq",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "AnonFlame8",
+          "clientID": "K43iMeBq",
+          "clanTag": null
+        },
+        {
+          "username": "Potchok",
+          "clientID": "EXaawk7T",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1374,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-18T08:42:09.969Z",
+      "url": "https://openfront.io/game/VcMSZvPP"
+    },
+    {
+      "id": "Q3DLhwAn",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "chillah",
+          "clientID": "ZYsuFWwc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Maximus Decimus Meridius",
+          "clientID": "AdMfuBju",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1609,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "timestamp": "2026-08-18T08:41:34.949Z",
+      "url": "https://openfront.io/game/Q3DLhwAn"
     }
   ]
 }
