@@ -12,11 +12,11 @@
 <link rel="icon" type="image/png" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="128x128" href="favicon-180x180.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
-<link rel="stylesheet" href="styles.css?v=42">
+<link rel="stylesheet" href="styles.css?v=43">
 <link rel="stylesheet" href="auth.css?v=17">
 <link rel="stylesheet" href="toast.css">
 <link rel="stylesheet" href="animations.css?v=6">
-<link rel="stylesheet" href="lobby.css?v=11">
+<link rel="stylesheet" href="lobby.css?v=12">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
 <script type="module" src="icons.js?v=2"></script>
 </head>
@@ -60,42 +60,7 @@
     </nav>
 
     <!-- Theme + Language toggles -->
-    <div style="display:flex;gap:8px;padding:0 16px 12px">
-      <!-- Dark mode toggle -->
-      <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Mode sombre / clair" aria-label="Toggle dark mode">
-        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <!-- Language toggle -->
-      <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()" title="Français / English" aria-label="Toggle language">
-        <span id="lang-label">FR</span>
-      </button>
-    </div>
-
-    <!-- Profile / Auth -->
-    <div class="sidebar-profile">
-      <div class="auth-zone" id="auth-zone">
-        <button class="login-btn login-btn-sidebar" onclick="toggleAuthModal()" id="login-btn-main">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span>Connexion</span>
-        </button>
-      </div>
-      <div class="user-container" id="user-container" style="display: none;">
-        <div class="user-badge" id="user-badge-btn" onclick="toggleUserDropdown(event)">
-          <div class="profile-avatar" id="sidebar-avatar">—</div>
-          <div class="profile-info">
-            <h4 id="user-display-name">—</h4>
-            <span>En ligne</span>
-          </div>
-          <svg class="chevron-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;color:var(--muted);flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="user-dropdown-menu" id="user-dropdown-menu">
-          <div class="dropdown-header">
-            <div class="dropdown-avatar" id="dropdown-avatar"></div>
-            <div class="dropdown-user-info">
-              <div class="dropdown-username" id="dropdown-username-display">—</div>
-              <div class="dropdown-publicid" id="dropdown-publicid-display">—</div>
-            </div>
+    
           </div>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" onclick="goToProfilePage(event)">
@@ -169,35 +134,6 @@
 <script src="toast.js"></script>
 <script src="lenis.js?v=2"></script>
 <script src="animations.js?v=13"></script>
-<script>
-/* ═══ Theme + Language toggles (dark mode + FR/EN) ═══ */
-function toggleTheme() {
-  const isDark = document.documentElement.classList.toggle('dark');
-  localStorage.setItem('tfh-theme', isDark ? 'dark' : 'light');
-}
-(function() {
-  const saved = localStorage.getItem('tfh-theme');
-  if (saved === 'dark') document.documentElement.classList.add('dark');
-})();
 
-function toggleLang() {
-  const current = localStorage.getItem('openfront_lang') || localStorage.getItem('tfh-lang') || 'fr';
-  const next = current === 'fr' ? 'en' : 'fr';
-  localStorage.setItem('tfh-lang', next);
-  localStorage.setItem('openfront_lang', next);
-  const label = document.getElementById('lang-label');
-  if (label) label.textContent = next.toUpperCase();
-  if (window.setLanguage) {
-    window.setLanguage(next);
-  } else if (window.applyTranslations) {
-    window.applyTranslations(next);
-  }
-}
-(function() {
-  const lang = localStorage.getItem('openfront_lang') || localStorage.getItem('tfh-lang') || 'fr';
-  const label = document.getElementById('lang-label');
-  if (label) label.textContent = lang.toUpperCase();
-})();
-</script>
 </body>
 </html>

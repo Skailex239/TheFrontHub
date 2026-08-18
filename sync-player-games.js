@@ -38,7 +38,7 @@ const API_BASE = "https://api.openfront.io";
 const DATA_DIR = path.join(__dirname, "player-data");
 const CONFIG_FILE = path.join(__dirname, "sync-players.json");
 const MAX_PAGES_FULL = 500; // full sync: up to 5000 games
-const MAX_PAGES_INCREMENTAL = 50; // incremental: up to 500 games (stop early on dedup)
+const MAX_PAGES_INCREMENTAL = 150; // incremental: up to 1500 games (scans more pages to not miss team games)
 
 /* ── HTTP fetch helper ── */
 function fetchJson(url) {
@@ -105,26 +105,44 @@ async function fetchGames(publicId, knownGameIds, maxPages, onProgress) {
     const results = data?.results || [];
     if (results.length === 0) break;
 
-    let hitKnown = false;
+    // BUG FIX: Don't break on first known gameId — scan ALL games on the page.
+    // The API returns games by gameId (numeric order), NOT by start date.
+    // Team games can have different gameId ranges than FFA games.
+    // If we stop at the first known gameId, we miss games on the same page
+    // and games on subsequent pages that are newer.
+    // FIX: Collect ALL unknown games from every page, stop only when we've
+    // gone through enough pages with zero new games (safety break).
+    let newOnThisPage = 0;
     for (const g of results) {
       if (knownGameIds && knownGameIds.has(g.gameId)) {
-        hitKnown = true;
-        break;
+        continue; // skip known, but DON'T break — keep scanning
       }
       newGames.push(g);
+      newOnThisPage++;
     }
 
     pages++;
     onProgress?.(newGames.length, pages);
 
-    if (hitKnown) {
-      console.log(`[sync] ${publicId}: hit known game at page ${pages}, stopping (incremental)`);
-      break;
+    // Safety: if we're in incremental mode and found 0 new games on
+    // 3 consecutive pages, we've passed all new games — stop.
+    if (knownGameIds && newOnThisPage === 0) {
+      // Check if we should stop (3 empty pages in a row)
+      if (!fetchGames._emptyStreak) fetchGames._emptyStreak = 0;
+      fetchGames._emptyStreak++;
+      if (fetchGames._emptyStreak >= 3) {
+        console.log(`[sync] ${publicId}: 3 consecutive empty pages, stopping (incremental)`);
+        break;
+      }
+    } else {
+      fetchGames._emptyStreak = 0;
     }
+
     if (!data.nextCursor) break;
     cursor = data.nextCursor;
   }
 
+  fetchGames._emptyStreak = 0; // reset for next player
   return newGames;
 }
 
