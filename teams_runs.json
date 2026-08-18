@@ -15488,6 +15488,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-18T07:54:12.215Z",
       "url": "https://openfront.io/game/8ZZuT4Cy"
+    },
+    {
+      "id": "KbF3Cjv9",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Money",
+          "clientID": "ycdTkFbq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "KingCNMMD",
+          "clientID": "LrJL5ZsT",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1444,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-18T08:20:02.763Z",
+      "url": "https://openfront.io/game/KbF3Cjv9"
     }
   ],
   "trios": [
@@ -42548,6 +42571,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-18T08:03:27.785Z",
       "url": "https://openfront.io/game/PejyDvRA"
+    },
+    {
+      "id": "uKsVKHdr",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "J.D.Vance",
+          "clientID": "fFNVRgbp",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonNebula4",
+          "clientID": "LGnFFM3q",
+          "clanTag": null
+        },
+        {
+          "username": "Empire of the Sun",
+          "clientID": "AK3672hG",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1159,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "timestamp": "2026-08-18T08:27:41.729Z",
+      "url": "https://openfront.io/game/uKsVKHdr"
     }
   ],
   "quads": [
