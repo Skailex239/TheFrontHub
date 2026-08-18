@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-18T07:52:38.480Z",
-  "lastSyncedAt": "2026-08-18T07:52:36.628Z",
-  "totalGames": 3756,
+  "computedAt": "2026-08-18T08:21:28.778Z",
+  "lastSyncedAt": "2026-08-18T08:21:27.012Z",
+  "totalGames": 3757,
   "careerWins": {
-    "ffaCasual": 263,
+    "ffaCasual": 264,
     "ffaRanked": 1409,
     "teamCasual": 151,
     "teamRanked": 127
   },
-  "totalWins": 1950,
-  "points": 4921,
+  "totalWins": 1951,
+  "points": 4931,
   "level": 49,
-  "levelProgress": 21,
+  "levelProgress": 31,
   "levelNextAt": 5000,
   "nextMilestones": {
     "wins": {
-      "current": 1950,
+      "current": 1951,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "4 921",
-    "totalWins": "1 950",
-    "totalGames": "3 756",
+    "points": "4 931",
+    "totalWins": "1 951",
+    "totalGames": "3 757",
     "totalPlaytime": "30j 14h",
     "totalPlaytimeCompact": "30j 14h",
     "avgGameDuration": "11m 43s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "734h"
   },
   "playtime": {
-    "totalSec": 2643154,
-    "avgGameSec": 703.7151224707135,
+    "totalSec": 2644272,
+    "avgGameSec": 703.8253926004791,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1068,
-        "playtimeSec": 1285288,
-        "wins": 263
+        "games": 1069,
+        "playtimeSec": 1286406,
+        "wins": 264
       },
       "ffaRanked": {
         "games": 1901,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1950,
+    "victory": 1951,
     "defeat": 1477,
     "incomplete": 329
   },
@@ -453,18 +453,18 @@
     },
     {
       "map": "Lisbon",
-      "count": 24,
-      "wins": 7,
+      "count": 25,
+      "wins": 8,
       "losses": 17,
-      "playtimeSec": 24242,
-      "avgDuration": 1010.0833333333334,
-      "winRate": 0.2916666666666667,
-      "lastPlayed": 1785442641302,
+      "playtimeSec": 25360,
+      "avgDuration": 1014.4,
+      "winRate": 0.32,
+      "lastPlayed": 1787039821882,
       "formatted": {
-        "playtime": "6h 44m",
+        "playtime": "7h 2m",
         "avgDuration": "16m",
-        "winRate": "29%",
-        "lastPlayed": "30/07/26"
+        "winRate": "32%",
+        "lastPlayed": "18/08/26"
       }
     },
     {
@@ -1599,7 +1599,7 @@
       25,
       22,
       36,
-      52,
+      53,
       82,
       70,
       92,
@@ -1617,7 +1617,7 @@
     ],
     "byWeekday": [
       547,
-      575,
+      576,
       470,
       548,
       480,
@@ -2077,11 +2077,11 @@
       }
     ],
     "peakHour": 18,
-    "peakWeekday": "Sam",
+    "peakWeekday": "Mar",
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 2,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "MK4e8von",
+      "start": "2026-08-18T07:57:01.882Z",
+      "map": "Lisbon",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1118,
+      "totalPlayers": 49,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "6kLoyAXK",
       "start": "2026-08-18T07:17:00.085Z",
@@ -2362,17 +2373,6 @@
       "mode": "Free For All",
       "result": "defeat",
       "durationSeconds": 397,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "wYL1dkiq",
-      "start": "2026-08-17T17:52:48.906Z",
-      "map": "Asia",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 445,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"

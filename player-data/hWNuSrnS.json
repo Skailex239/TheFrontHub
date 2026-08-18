@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-18T07:52:36.628Z",
+  "lastSyncedAt": "2026-08-18T08:21:27.012Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 3756,
-  "newGamesThisSync": 0,
+  "totalGames": 3757,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "MK4e8von",
+      "start": "2026-08-18T07:57:01.882Z",
+      "durationSeconds": 1118,
+      "map": "Lisbon",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 49,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "6kLoyAXK",
       "start": "2026-08-18T07:17:00.085Z",
