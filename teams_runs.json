@@ -15731,6 +15731,24 @@
       "numPlayers": 67,
       "timestamp": "2026-08-18T10:52:47.894Z",
       "url": "https://openfront.io/game/797Mr5Wv"
+    },
+    {
+      "id": "gw3eRYL7",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "La Castagne",
+          "clientID": "pzahc7N3",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 928,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-18T11:40:55.900Z",
+      "url": "https://openfront.io/game/gw3eRYL7"
     }
   ],
   "trios": [
@@ -75012,6 +75030,39 @@
       "numPlayers": 112,
       "timestamp": "2026-08-18T11:08:29.882Z",
       "url": "https://openfront.io/game/XpfPzvag"
+    },
+    {
+      "id": "D28jtvZt",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "rrr",
+          "clientID": "9BSo6RLQ",
+          "clanTag": "DFF"
+        },
+        {
+          "username": "kich",
+          "clientID": "Lt6hBwPr",
+          "clanTag": "DFF"
+        },
+        {
+          "username": "DarkSkala",
+          "clientID": "PgS5tGNp",
+          "clanTag": "DFF"
+        },
+        {
+          "username": "AnonPyramid4",
+          "clientID": "XeAdwiTz",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1210,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 97,
+      "timestamp": "2026-08-18T11:45:24.176Z",
+      "url": "https://openfront.io/game/D28jtvZt"
     }
   ]
 }
