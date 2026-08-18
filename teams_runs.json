@@ -16074,6 +16074,47 @@
       "numPlayers": 80,
       "timestamp": "2026-08-18T18:14:25.267Z",
       "url": "https://openfront.io/game/3hJLiJkW"
+    },
+    {
+      "id": "R5zXZowa",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "AnonChicken",
+          "clientID": "FtoL84ai",
+          "clanTag": null
+        },
+        {
+          "username": "Dvusi",
+          "clientID": "b1EXPhTZ",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 818,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-18T18:53:03.408Z",
+      "url": "https://openfront.io/game/R5zXZowa"
+    },
+    {
+      "id": "XXy5rGRm",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "peaceful trader",
+          "clientID": "BZGPNwbt",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1155,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-18T18:47:22.523Z",
+      "url": "https://openfront.io/game/XXy5rGRm"
     }
   ],
   "trios": [
@@ -43950,6 +43991,29 @@
       "numPlayers": 30,
       "timestamp": "2026-08-18T18:34:55.199Z",
       "url": "https://openfront.io/game/sfXbb836"
+    },
+    {
+      "id": "52EtHSEs",
+      "team": "Team 27",
+      "players": [
+        {
+          "username": "AnonCamel7",
+          "clientID": "oMkyfU4Q",
+          "clanTag": null
+        },
+        {
+          "username": "DOOMSDAY",
+          "clientID": "Nt1qvbHU",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1929,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-18T18:29:23.839Z",
+      "url": "https://openfront.io/game/52EtHSEs"
     }
   ],
   "quads": [
@@ -76664,6 +76728,29 @@
       "numPlayers": 96,
       "timestamp": "2026-08-18T17:43:29.131Z",
       "url": "https://openfront.io/game/wx9A2dSe"
+    },
+    {
+      "id": "4C9Q5jFi",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Vanuatu",
+          "clientID": "abdMG73b",
+          "clanTag": "URSAL"
+        },
+        {
+          "username": "But Why",
+          "clientID": "1PZFqF8J",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1375,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "timestamp": "2026-08-18T18:34:31.178Z",
+      "url": "https://openfront.io/game/4C9Q5jFi"
     }
   ]
 }
