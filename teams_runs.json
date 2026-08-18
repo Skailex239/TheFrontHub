@@ -15298,6 +15298,47 @@
       "numPlayers": 74,
       "timestamp": "2026-08-18T00:50:09.243Z",
       "url": "https://openfront.io/game/HBUNYFEF"
+    },
+    {
+      "id": "etAugWHr",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "TRADE EMPIRE",
+          "clientID": "ePaY2pFh",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "The Holy Nation",
+          "clientID": "BncHW8vJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1360,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 16,
+      "timestamp": "2026-08-18T02:10:45.208Z",
+      "url": "https://openfront.io/game/etAugWHr"
+    },
+    {
+      "id": "27zgqdtE",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "007",
+          "clientID": "1XxknkBh",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 4479,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "timestamp": "2026-08-18T01:23:12.298Z",
+      "url": "https://openfront.io/game/27zgqdtE"
     }
   ],
   "trios": [
@@ -42032,6 +42073,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-18T01:28:35.135Z",
       "url": "https://openfront.io/game/2JchUhKs"
+    },
+    {
+      "id": "exnxnkKt",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Anon420",
+          "clientID": "iDdDX7qL",
+          "clanTag": "ANAR"
+        },
+        {
+          "username": "AnonJellyfish7",
+          "clientID": "sUaN9G9J",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1438,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "timestamp": "2026-08-18T02:13:37.379Z",
+      "url": "https://openfront.io/game/exnxnkKt"
     }
   ],
   "quads": [
@@ -73299,6 +73363,72 @@
       "numPlayers": 28,
       "timestamp": "2026-08-18T02:00:34.579Z",
       "url": "https://openfront.io/game/3r3EYSBv"
+    },
+    {
+      "id": "7uuijyrN",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "KIWI",
+          "clientID": "HQHvwrBg",
+          "clanTag": null
+        },
+        {
+          "username": "delta",
+          "clientID": "LQWbjdx7",
+          "clanTag": "GAMMA"
+        },
+        {
+          "username": "Towin",
+          "clientID": "rtHGiD46",
+          "clanTag": null
+        },
+        {
+          "username": "MRM.D_S.314",
+          "clientID": "JD3SFAtY",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 828,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-18T02:22:46.887Z",
+      "url": "https://openfront.io/game/7uuijyrN"
+    },
+    {
+      "id": "GSUEfimX",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "LePigu",
+          "clientID": "yQQSQhJH",
+          "clanTag": null
+        },
+        {
+          "username": "default21",
+          "clientID": "ZPAsY1MX",
+          "clanTag": null
+        },
+        {
+          "username": "Rayklut",
+          "clientID": "j7Rj5oxQ",
+          "clanTag": "RAY"
+        },
+        {
+          "username": "Remo Driver",
+          "clientID": "8zZ6RkHF",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1424,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T02:03:37.761Z",
+      "url": "https://openfront.io/game/GSUEfimX"
     }
   ]
 }
