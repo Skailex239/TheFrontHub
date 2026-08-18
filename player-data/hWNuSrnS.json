@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-18T14:50:18.408Z",
+  "lastSyncedAt": "2026-08-18T15:19:58.174Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.2,
-  "totalGames": 3765,
-  "newGamesThisSync": 0,
+  "totalGames": 3766,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "kJgqVpBz",
+      "start": "2026-08-18T14:37:17.578Z",
+      "durationSeconds": 1645,
+      "map": "Middle East",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 82,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "dvRPfg3K",
       "start": "2026-08-18T11:42:31.997Z",

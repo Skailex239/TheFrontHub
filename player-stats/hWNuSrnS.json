@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-18T14:50:20.246Z",
-  "lastSyncedAt": "2026-08-18T14:50:18.408Z",
-  "totalGames": 3765,
+  "computedAt": "2026-08-18T15:20:00.605Z",
+  "lastSyncedAt": "2026-08-18T15:19:58.174Z",
+  "totalGames": 3766,
   "careerWins": {
     "ffaCasual": 265,
     "ffaRanked": 1414,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 735,
+      "current": 736,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 946",
     "totalWins": "1 957",
-    "totalGames": "3 765",
-    "totalPlaytime": "30j 15h",
-    "totalPlaytimeCompact": "30j 15h",
+    "totalGames": "3 766",
+    "totalPlaytime": "30j 16h",
+    "totalPlaytimeCompact": "30j 16h",
     "avgGameDuration": "11m 43s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "735h"
+    "totalPlaytimeHours": "736h"
   },
   "playtime": {
-    "totalSec": 2648894,
-    "avgGameSec": 703.5575033200531,
+    "totalSec": 2650539,
+    "avgGameSec": 703.8074880509824,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1070,
-        "playtimeSec": 1287624,
+        "games": 1071,
+        "playtimeSec": 1289269,
         "wins": 265
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1957,
-    "defeat": 1478,
+    "defeat": 1479,
     "incomplete": 330
   },
   "maps": [
@@ -884,6 +884,22 @@
       }
     },
     {
+      "map": "Middle East",
+      "count": 7,
+      "wins": 3,
+      "losses": 4,
+      "playtimeSec": 9048,
+      "avgDuration": 1292.5714285714287,
+      "winRate": 0.42857142857142855,
+      "lastPlayed": 1787063837578,
+      "formatted": {
+        "playtime": "2h 30m",
+        "avgDuration": "21m",
+        "winRate": "43%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Britannia Classic",
       "count": 7,
       "wins": 0,
@@ -929,22 +945,6 @@
         "avgDuration": "14m",
         "winRate": "0%",
         "lastPlayed": "02/08/26"
-      }
-    },
-    {
-      "map": "Middle East",
-      "count": 6,
-      "wins": 3,
-      "losses": 3,
-      "playtimeSec": 7403,
-      "avgDuration": 1233.8333333333333,
-      "winRate": 0.5,
-      "lastPlayed": 1785278138126,
-      "formatted": {
-        "playtime": "2h 3m",
-        "avgDuration": "20m",
-        "winRate": "50%",
-        "lastPlayed": "28/07/26"
       }
     },
     {
@@ -1606,7 +1606,7 @@
       100,
       91,
       143,
-      225,
+      226,
       319,
       343,
       343,
@@ -1617,7 +1617,7 @@
     ],
     "byWeekday": [
       547,
-      584,
+      585,
       470,
       548,
       480,
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 6,
+    "current": 0,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "kJgqVpBz",
+      "start": "2026-08-18T14:37:17.578Z",
+      "map": "Middle East",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1645,
+      "totalPlayers": 82,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "dvRPfg3K",
       "start": "2026-08-18T11:42:31.997Z",
@@ -2363,17 +2374,6 @@
       "result": "defeat",
       "durationSeconds": 376,
       "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "abYP1aWv",
-      "start": "2026-08-18T05:54:34.284Z",
-      "map": "Asia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 31,
-      "totalPlayers": 1,
       "rankedType": "1v1",
       "category": "ffaRanked"
     }
