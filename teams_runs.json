@@ -73177,6 +73177,95 @@
       "numPlayers": 38,
       "timestamp": "2026-08-18T01:35:14.562Z",
       "url": "https://openfront.io/game/BeTR4Gjf"
+    },
+    {
+      "id": "8f4BnKb5",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Ricky Bobby",
+          "clientID": "dQaKXnRj",
+          "clanTag": "1ST"
+        },
+        {
+          "username": "Flamingo",
+          "clientID": "DjALud72",
+          "clanTag": null
+        },
+        {
+          "username": "Amberhold",
+          "clientID": "hgctF3Ri",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 909,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-18T01:45:13.166Z",
+      "url": "https://openfront.io/game/8f4BnKb5"
+    },
+    {
+      "id": "1j4iovCN",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Alfred The Great",
+          "clientID": "fFxvghpv",
+          "clanTag": null
+        },
+        {
+          "username": "pirate",
+          "clientID": "MAWnGD2E",
+          "clanTag": "LTU"
+        },
+        {
+          "username": "AnonSilence1",
+          "clientID": "SvmnAqM5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonChariot8",
+          "clientID": "KHYycBwG",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 772,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T01:47:49.308Z",
+      "url": "https://openfront.io/game/1j4iovCN"
+    },
+    {
+      "id": "ErKHn8uA",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ZazZ",
+          "clientID": "tdDo19bt",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "Grandma Gary",
+          "clientID": "1p4acito",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "Volfovich",
+          "clientID": "xcFzd7yL",
+          "clanTag": "BRAVE"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1033,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "timestamp": "2026-08-18T01:56:51.874Z",
+      "url": "https://openfront.io/game/ErKHn8uA"
     }
   ]
 }
