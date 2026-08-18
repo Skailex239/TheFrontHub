@@ -43013,6 +43013,34 @@
       "numPlayers": 92,
       "timestamp": "2026-08-18T11:26:21.979Z",
       "url": "https://openfront.io/game/F4hQ7ULd"
+    },
+    {
+      "id": "jz1NDB2J",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Magyaristan",
+          "clientID": "gu1e69Vm",
+          "clanTag": "TUD"
+        },
+        {
+          "username": "Valyria",
+          "clientID": "LVPaJMeY",
+          "clanTag": "TUD"
+        },
+        {
+          "username": "Bond",
+          "clientID": "obY5A48i",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1100,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-18T11:56:56.926Z",
+      "url": "https://openfront.io/game/jz1NDB2J"
     }
   ],
   "quads": [
@@ -75063,6 +75091,39 @@
       "numPlayers": 97,
       "timestamp": "2026-08-18T11:45:24.176Z",
       "url": "https://openfront.io/game/D28jtvZt"
+    },
+    {
+      "id": "HtBumhY3",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Serna",
+          "clientID": "2nesjXVS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Blblblblblblblblblbl",
+          "clientID": "c8X2NLCp",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Samaeldes",
+          "clientID": "v8Jh9pDR",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MANIN",
+          "clientID": "b6cSYwPy",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1586,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "timestamp": "2026-08-18T11:50:04.007Z",
+      "url": "https://openfront.io/game/HtBumhY3"
     }
   ]
 }
