@@ -42004,6 +42004,34 @@
       "numPlayers": 21,
       "timestamp": "2026-08-18T00:24:23.731Z",
       "url": "https://openfront.io/game/MnFCUWiD"
+    },
+    {
+      "id": "2JchUhKs",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "PrinceOfTurbojet",
+          "clientID": "mXp34Mma",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "MYSTIUC",
+          "clientID": "8VfS2e1U",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "Franklin",
+          "clientID": "s6UdR6SC",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1185,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T01:28:35.135Z",
+      "url": "https://openfront.io/game/2JchUhKs"
     }
   ],
   "quads": [
@@ -73116,6 +73144,39 @@
       "numPlayers": 44,
       "timestamp": "2026-08-18T00:51:58.838Z",
       "url": "https://openfront.io/game/7Jfd9u2Y"
+    },
+    {
+      "id": "BeTR4Gjf",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Grandma Gary",
+          "clientID": "uafxjuVQ",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "eThcVe6b",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "Volfovich",
+          "clientID": "Z8GLThWA",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "AnonTulip6",
+          "clientID": "jrxT8HQf",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1072,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-18T01:35:14.562Z",
+      "url": "https://openfront.io/game/BeTR4Gjf"
     }
   ]
 }
