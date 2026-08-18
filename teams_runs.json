@@ -15795,6 +15795,29 @@
       "numPlayers": 38,
       "timestamp": "2026-08-18T12:31:16.688Z",
       "url": "https://openfront.io/game/Nt6m27qA"
+    },
+    {
+      "id": "871Fg8UC",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Raccoon",
+          "clientID": "WJ1ZA2cx",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "No.1 Racconfanboy",
+          "clientID": "vrEvY88e",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 926,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-18T13:08:43.795Z",
+      "url": "https://openfront.io/game/871Fg8UC"
     }
   ],
   "trios": [
@@ -43133,6 +43156,34 @@
       "numPlayers": 53,
       "timestamp": "2026-08-18T12:36:07.011Z",
       "url": "https://openfront.io/game/Ft1XXj4S"
+    },
+    {
+      "id": "5KfwGyUT",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "M7mD",
+          "clientID": "JycYFdfz",
+          "clanTag": "NU"
+        },
+        {
+          "username": "book",
+          "clientID": "VQWGZjuF",
+          "clanTag": "NU"
+        },
+        {
+          "username": "oncenot",
+          "clientID": "MgyxzkHp",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 952,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T13:01:41.199Z",
+      "url": "https://openfront.io/game/5KfwGyUT"
     }
   ],
   "quads": [
@@ -75343,6 +75394,62 @@
       "numPlayers": 48,
       "timestamp": "2026-08-18T12:47:57.779Z",
       "url": "https://openfront.io/game/t8Udk3Jn"
+    },
+    {
+      "id": "uDZFMopj",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "UN Peacekeeping Taskforce",
+          "clientID": "Gf4mjiY8",
+          "clanTag": null
+        },
+        {
+          "username": "AbenCity",
+          "clientID": "oPXah8Vh",
+          "clanTag": "ET"
+        },
+        {
+          "username": "llllllllllllllll",
+          "clientID": "6aLMMWsh",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 967,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T12:54:19.696Z",
+      "url": "https://openfront.io/game/uDZFMopj"
+    },
+    {
+      "id": "amLvm4wj",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonSphinx5",
+          "clientID": "n6vj9LLh",
+          "clanTag": null
+        },
+        {
+          "username": "SupremeDoug",
+          "clientID": "CnQxMsjo",
+          "clanTag": "WWRS"
+        },
+        {
+          "username": "Bjorn",
+          "clientID": "R8oGRAKo",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1503,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-18T12:51:06.512Z",
+      "url": "https://openfront.io/game/amLvm4wj"
     }
   ]
 }
