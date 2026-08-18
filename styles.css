@@ -1245,10 +1245,7 @@ select:focus-visible,
 /* B017: Map stats table — horizontal scroll */
 .map-stats-table-scroll,[class*="map-stats-table-wrap"]{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
-/* B019: Speedruns — limit max-width on large screens */
-@media(min-width:1600px){
-    .content{max-width:1400px;margin:0 auto}
-}
+/* B019: REMOVED — was causing empty space on right side of large screens */
 
 /* B020: Ranked filter buttons — more gap on tablet */
 @media(max-width:768px){
