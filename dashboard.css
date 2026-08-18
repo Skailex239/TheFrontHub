@@ -9,8 +9,8 @@
 
 .dash-view {
   padding: 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   font-variant-numeric: tabular-nums;
 }
 
@@ -555,7 +555,7 @@
   flex-shrink: 0;
 }
 .dash-footer-inner {
-  max-width: 1280px;
+  max-width: none;
   margin: 0 auto;
   display: flex;
   align-items: center;
