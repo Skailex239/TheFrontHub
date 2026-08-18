@@ -43534,6 +43534,47 @@
       "numPlayers": 105,
       "timestamp": "2026-08-18T15:10:17.405Z",
       "url": "https://openfront.io/game/E4BdmRJ8"
+    },
+    {
+      "id": "r7Gide8W",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "SavingRyansPrivate",
+          "clientID": "3gidZ9gx",
+          "clanTag": null
+        },
+        {
+          "username": "korea",
+          "clientID": "BkYfXPJM",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1114,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-18T15:16:48.347Z",
+      "url": "https://openfront.io/game/r7Gide8W"
+    },
+    {
+      "id": "Wk9u9TTq",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "STABLE TEA",
+          "clientID": "QcKfbsD1",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 1081,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-18T15:12:26.041Z",
+      "url": "https://openfront.io/game/Wk9u9TTq"
     }
   ],
   "quads": [
@@ -75930,6 +75971,72 @@
       "numPlayers": 36,
       "timestamp": "2026-08-18T14:19:44.932Z",
       "url": "https://openfront.io/game/JK5gFS82"
+    },
+    {
+      "id": "zygbSJyd",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "H.yeong._.Seong",
+          "clientID": "uqBiWWGx",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "AnonTopaz8",
+          "clientID": "EGpKQtAn",
+          "clanTag": null
+        },
+        {
+          "username": "bibigo",
+          "clientID": "ovRhxKhE",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Anti",
+          "clientID": "hpeZ63fC",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 897,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-18T15:21:23.141Z",
+      "url": "https://openfront.io/game/zygbSJyd"
+    },
+    {
+      "id": "sRj2GZUg",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Anon678",
+          "clientID": "PXuwyYTn",
+          "clanTag": "KEKE"
+        },
+        {
+          "username": "hdksf",
+          "clientID": "FXH1tMhM",
+          "clanTag": "KEKE"
+        },
+        {
+          "username": "232",
+          "clientID": "tLRDFC94",
+          "clanTag": "KEKE"
+        },
+        {
+          "username": "TEAM EMPIRE TR",
+          "clientID": "rB9HhXSJ",
+          "clanTag": "KEKE"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1491,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "timestamp": "2026-08-18T15:08:30.778Z",
+      "url": "https://openfront.io/game/sRj2GZUg"
     }
   ]
 }
