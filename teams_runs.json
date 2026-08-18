@@ -42944,6 +42944,34 @@
       "numPlayers": 93,
       "timestamp": "2026-08-18T11:02:37.513Z",
       "url": "https://openfront.io/game/S3WTPt9s"
+    },
+    {
+      "id": "YcqUCG7D",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonShrimp",
+          "clientID": "gTFLNiLA",
+          "clanTag": null
+        },
+        {
+          "username": "Tanish",
+          "clientID": "ZVX7tDXW",
+          "clanTag": "INDIA"
+        },
+        {
+          "username": "Galatone",
+          "clientID": "FK6kzCLT",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T11:19:54.560Z",
+      "url": "https://openfront.io/game/YcqUCG7D"
     }
   ],
   "quads": [
@@ -74905,6 +74933,62 @@
       "numPlayers": 44,
       "timestamp": "2026-08-18T11:14:03.210Z",
       "url": "https://openfront.io/game/4HoBrDR2"
+    },
+    {
+      "id": "LWDUrtTe",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Hamza",
+          "clientID": "URCVdb5V",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "cazi",
+          "clientID": "GhHPJPAg",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "bananaJC",
+          "clientID": "8QsAkjvq",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "AnonUrchin9",
+          "clientID": "fsYTTwby",
+          "clanTag": null
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 596,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "timestamp": "2026-08-18T11:22:00.693Z",
+      "url": "https://openfront.io/game/LWDUrtTe"
+    },
+    {
+      "id": "XpfPzvag",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "tdfriese",
+          "clientID": "cBffPK4L",
+          "clanTag": null
+        },
+        {
+          "username": "boh",
+          "clientID": "SKf4F7ny",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1766,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "timestamp": "2026-08-18T11:08:29.882Z",
+      "url": "https://openfront.io/game/XpfPzvag"
     }
   ]
 }
