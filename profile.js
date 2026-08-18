@@ -34,12 +34,19 @@ import {
 
 /* ── Player overlays (plaque nominative) ── */
 const PLAYER_OVERLAYS = [
-  { match: /skailex/i, images: {
-    dashboard: "HQ_1_dashboard_48x16.webp",
-    ranked:    "HQ_2_ranked_144x48.webp",
-    speedruns: "HQ_3_speedruns_171x57.webp",
-    profile:   "HQ_4_profil_304x48.webp",
+  { match: /skailex/i, theme: "green", images: {
+    dashboard: "green_original_dashboard_48x16.webp",
+    ranked:    "green_original_ranked_144x48.webp",
+    speedruns: "green_original_speedruns_171x57.webp",
+    profile:   "green_original_profil_304x48.webp",
   }},
+  { match: /varxard/i, theme: "fire", images: {
+    dashboard: "fire_dashboard_48x16.webp",
+    ranked:    "fire_ranked_144x48.webp",
+    speedruns: "fire_speedruns_171x57.webp",
+    profile:   "fire_profil_304x48.webp",
+  }},
+  // Available themes for future players: water, earth, air
 ];
 function getPlayerOverlay(username, context) {
   if (!username) return null;
