@@ -43672,6 +43672,34 @@
       "numPlayers": 18,
       "timestamp": "2026-08-18T16:06:19.196Z",
       "url": "https://openfront.io/game/WvPRHPZL"
+    },
+    {
+      "id": "tv9K1GWG",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "Kingdom of the Gunds",
+          "clientID": "bm8U2MNQ",
+          "clanTag": "COV"
+        },
+        {
+          "username": "AnonSnake",
+          "clientID": "Y5faSRBZ",
+          "clanTag": null
+        },
+        {
+          "username": "Rayleigh",
+          "clientID": "UugKomiv",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1978,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "timestamp": "2026-08-18T16:31:18.807Z",
+      "url": "https://openfront.io/game/tv9K1GWG"
     }
   ],
   "quads": [
@@ -76269,6 +76297,72 @@
       "numPlayers": 69,
       "timestamp": "2026-08-18T16:20:37.157Z",
       "url": "https://openfront.io/game/d3HGbp7d"
+    },
+    {
+      "id": "sVmvsXwd",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "brrk",
+          "clientID": "g6pfvNTX",
+          "clanTag": "UN"
+        },
+        {
+          "username": "KarmaTrigger",
+          "clientID": "dud3Rfsh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "chalybs",
+          "clientID": "p8jj4Ht5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BAKA",
+          "clientID": "6GXgdzqr",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1200,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-18T16:38:45.839Z",
+      "url": "https://openfront.io/game/sVmvsXwd"
+    },
+    {
+      "id": "zUs3JSmB",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "VROT",
+          "clientID": "AenEZQYt",
+          "clanTag": "PNS"
+        },
+        {
+          "username": "SleepyAngel.cdeV",
+          "clientID": "zw8CTG1B",
+          "clanTag": null
+        },
+        {
+          "username": "GRIEF",
+          "clientID": "nxWKjSJx",
+          "clanTag": null
+        },
+        {
+          "username": "Sage Mo",
+          "clientID": "h1uK9FAi",
+          "clanTag": "INIT"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1015,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T16:49:14.543Z",
+      "url": "https://openfront.io/game/zUs3JSmB"
     }
   ]
 }
