@@ -15557,6 +15557,47 @@
       "numPlayers": 14,
       "timestamp": "2026-08-18T09:55:06.014Z",
       "url": "https://openfront.io/game/nGyWuNX7"
+    },
+    {
+      "id": "dtkX6d3L",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "BigBoy",
+          "clientID": "YaVhYvqM",
+          "clanTag": "TE"
+        },
+        {
+          "username": "Bort",
+          "clientID": "n6MaFcoM",
+          "clanTag": "TE"
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 821,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-18T10:08:45.418Z",
+      "url": "https://openfront.io/game/dtkX6d3L"
+    },
+    {
+      "id": "wiUHz43q",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Anon",
+          "clientID": "PkJvKcMz",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1926,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "timestamp": "2026-08-18T09:47:47.573Z",
+      "url": "https://openfront.io/game/wiUHz43q"
     }
   ],
   "trios": [
