@@ -1761,6 +1761,12 @@ function closeModal(e){
   updateURL();
 }
 function switchTab(name,btn){
+  // Update topbar title based on tab
+  const topbarTitle = document.getElementById('topbar-title');
+  if (topbarTitle) {
+    if (name === 'ranked') topbarTitle.textContent = 'Classé';
+    else if (name === 'maps') topbarTitle.textContent = 'Speedruns';
+  }
   if (name === 'ranked') loadRankedLeaderboard(true);
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   
