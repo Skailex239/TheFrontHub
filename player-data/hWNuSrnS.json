@@ -1,12 +1,40 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-18T07:12:32.923Z",
+  "lastSyncedAt": "2026-08-18T07:52:07.118Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 3754,
-  "newGamesThisSync": 0,
+  "totalGames": 3756,
+  "newGamesThisSync": 2,
   "games": [
+    {
+      "gameId": "6kLoyAXK",
+      "start": "2026-08-18T07:17:00.085Z",
+      "durationSeconds": 341,
+      "map": "Australia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "victory",
+      "totalPlayers": 2,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
+    {
+      "gameId": "4ayaqzSW",
+      "start": "2026-08-18T07:07:06.998Z",
+      "durationSeconds": 356,
+      "map": "Australia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "defeat",
+      "totalPlayers": 2,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "dp7cJQKw",
       "start": "2026-08-18T06:58:23.502Z",

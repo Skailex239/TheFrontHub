@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-18T07:12:34.324Z",
-  "lastSyncedAt": "2026-08-18T07:12:32.923Z",
-  "totalGames": 3754,
+  "computedAt": "2026-08-18T07:52:09.383Z",
+  "lastSyncedAt": "2026-08-18T07:52:07.118Z",
+  "totalGames": 3756,
   "careerWins": {
     "ffaCasual": 263,
-    "ffaRanked": 1408,
+    "ffaRanked": 1409,
     "teamCasual": 151,
     "teamRanked": 127
   },
-  "totalWins": 1949,
-  "points": 4920,
+  "totalWins": 1950,
+  "points": 4921,
   "level": 49,
-  "levelProgress": 20,
+  "levelProgress": 21,
   "levelNextAt": 5000,
   "nextMilestones": {
     "wins": {
-      "current": 1949,
+      "current": 1950,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "4 920",
-    "totalWins": "1 949",
-    "totalGames": "3 754",
+    "points": "4 921",
+    "totalWins": "1 950",
+    "totalGames": "3 756",
     "totalPlaytime": "30j 14h",
     "totalPlaytimeCompact": "30j 14h",
     "avgGameDuration": "11m 43s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "734h"
   },
   "playtime": {
-    "totalSec": 2642457,
-    "avgGameSec": 703.904368673415,
+    "totalSec": 2643154,
+    "avgGameSec": 703.7151224707135,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -61,9 +61,9 @@
         "wins": 263
       },
       "ffaRanked": {
-        "games": 1899,
-        "playtimeSec": 720610,
-        "wins": 1408
+        "games": 1901,
+        "playtimeSec": 721307,
+        "wins": 1409
       },
       "teamCasual": {
         "games": 588,
@@ -78,22 +78,22 @@
     }
   },
   "results": {
-    "victory": 1949,
-    "defeat": 1476,
+    "victory": 1950,
+    "defeat": 1477,
     "incomplete": 329
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 953,
-      "wins": 681,
-      "losses": 272,
-      "playtimeSec": 402607,
-      "avgDuration": 422.46274921301153,
-      "winRate": 0.7145855194123819,
-      "lastPlayed": 1787035759960,
+      "count": 955,
+      "wins": 682,
+      "losses": 273,
+      "playtimeSec": 403304,
+      "avgDuration": 422.30785340314134,
+      "winRate": 0.7141361256544503,
+      "lastPlayed": 1787037420085,
       "formatted": {
-        "playtime": "4j 15h",
+        "playtime": "4j 16h",
         "avgDuration": "7m",
         "winRate": "71%",
         "lastPlayed": "18/08/26"
@@ -1599,7 +1599,7 @@
       25,
       22,
       36,
-      50,
+      52,
       82,
       70,
       92,
@@ -1617,7 +1617,7 @@
     ],
     "byWeekday": [
       547,
-      573,
+      575,
       470,
       548,
       480,
@@ -2158,6 +2158,28 @@
   },
   "recentGames": [
     {
+      "gameId": "6kLoyAXK",
+      "start": "2026-08-18T07:17:00.085Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 341,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
+    {
+      "gameId": "4ayaqzSW",
+      "start": "2026-08-18T07:07:06.998Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 356,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
+    {
       "gameId": "dp7cJQKw",
       "start": "2026-08-18T06:58:23.502Z",
       "map": "Asia",
@@ -2351,28 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 445,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "xastAuUH",
-      "start": "2026-08-17T17:46:15.000Z",
-      "map": "Asia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 347,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "mzhCuaUG",
-      "start": "2026-08-17T17:35:48.361Z",
-      "map": "Iceland",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 555,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
