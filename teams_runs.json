@@ -15772,6 +15772,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-18T12:21:24.536Z",
       "url": "https://openfront.io/game/wVPjbZDr"
+    },
+    {
+      "id": "Nt6m27qA",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Raccoon",
+          "clientID": "ejiHEeU1",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "No.1 Racconfanboy",
+          "clientID": "1AhonTxC",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 816,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-18T12:31:16.688Z",
+      "url": "https://openfront.io/game/Nt6m27qA"
     }
   ],
   "trios": [
@@ -75198,6 +75221,34 @@
       "numPlayers": 20,
       "timestamp": "2026-08-18T12:28:10.970Z",
       "url": "https://openfront.io/game/CH38wXqF"
+    },
+    {
+      "id": "AW2zmQCd",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Granny Never Die",
+          "clientID": "Gxg1Lzjj",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Rookes",
+          "clientID": "aYVQPFTm",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Ehsan",
+          "clientID": "xqb4d2b4",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1413,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-18T12:18:02.332Z",
+      "url": "https://openfront.io/game/AW2zmQCd"
     }
   ]
 }
