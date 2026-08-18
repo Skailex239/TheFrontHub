@@ -43450,6 +43450,62 @@
       "numPlayers": 102,
       "timestamp": "2026-08-18T14:13:50.059Z",
       "url": "https://openfront.io/game/CWvUPuYQ"
+    },
+    {
+      "id": "2d5iuWvH",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Wacko",
+          "clientID": "pdjcCHxL",
+          "clanTag": null
+        },
+        {
+          "username": "Noobteam",
+          "clientID": "vHw667R8",
+          "clanTag": "TEST"
+        },
+        {
+          "username": "AnonWrench6",
+          "clientID": "nXcZgHCM",
+          "clanTag": "TEST"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 955,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-18T14:55:24.307Z",
+      "url": "https://openfront.io/game/2d5iuWvH"
+    },
+    {
+      "id": "VmqPNGyi",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Bob",
+          "clientID": "2GC5UhyD",
+          "clanTag": null
+        },
+        {
+          "username": "FaBite",
+          "clientID": "Ce84QTeb",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "ugogole",
+          "clientID": "GEdt1oxH",
+          "clanTag": "ZIL"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1111,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-18T14:52:07.081Z",
+      "url": "https://openfront.io/game/VmqPNGyi"
     }
   ],
   "quads": [
