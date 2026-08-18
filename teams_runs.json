@@ -16115,6 +16115,52 @@
       "numPlayers": 63,
       "timestamp": "2026-08-18T18:47:22.523Z",
       "url": "https://openfront.io/game/XXy5rGRm"
+    },
+    {
+      "id": "rJZCGVEr",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "DominionOfCanada",
+          "clientID": "BxCGoqb1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "majasae",
+          "clientID": "CWuowsWm",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 854,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-18T21:39:34.632Z",
+      "url": "https://openfront.io/game/rJZCGVEr"
+    },
+    {
+      "id": "Ud28DcjL",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "ugogole",
+          "clientID": "gcF8BJkb",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "FaBite",
+          "clientID": "PtbpLeos",
+          "clanTag": "ZIL"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1094,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-18T21:30:16.243Z",
+      "url": "https://openfront.io/game/Ud28DcjL"
     }
   ],
   "trios": [
@@ -77140,6 +77186,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-18T21:18:45.978Z",
       "url": "https://openfront.io/game/JoPWS82p"
+    },
+    {
+      "id": "sNzX6YZ2",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Timbo",
+          "clientID": "4eMFvzwA",
+          "clanTag": "BUTT"
+        },
+        {
+          "username": "Bombidaro",
+          "clientID": "qE2Qettz",
+          "clanTag": "BUTT"
+        },
+        {
+          "username": "ououff",
+          "clientID": "XTKWr33E",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1175,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-18T21:32:16.919Z",
+      "url": "https://openfront.io/game/sNzX6YZ2"
     }
   ]
 }
