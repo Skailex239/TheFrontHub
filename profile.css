@@ -1158,7 +1158,8 @@
 #profile-title-name span.has-overlay {
   position: relative;
   display: inline-block;
-  padding-right: 310px;
+  padding-right: 210px;
+  overflow: hidden;
 }
 #profile-title-name span.has-overlay::after {
   content: "";
@@ -1166,24 +1167,56 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 304px;
-  height: 48px;
+  width: 200px;
+  height: 36px;
   background-image: var(--overlay-img);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 0.6;
   pointer-events: none;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   #profile-title-name span.has-overlay {
-    padding-right: 160px;
+    padding-right: 105px;
   }
   #profile-title-name span.has-overlay::after {
-    width: 150px;
-    height: 24px;
-    opacity: 0.6;
+    width: 100px;
+    height: 18px;
+    opacity: 0.5;
+  }
+}
+
+
+/* B018: Unify section gaps in cockpit */
+.cockpit-card + .cockpit-card {
+  margin-top: 20px;
+}
+
+/* B021: Profile name — prevent overflow on mobile */
+#profile-title-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* B015: Progress rings — ensure centered */
+.progress-rings-svg-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* B012: Profile overlay — scale up on large screens */
+@media (min-width: 1600px) {
+  #profile-title-name span.has-overlay {
+    padding-right: 320px;
+  }
+  #profile-title-name span.has-overlay::after {
+    width: 310px;
+    height: 48px;
   }
 }

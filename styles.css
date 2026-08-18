@@ -241,7 +241,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);min-height:100v
 .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:30px}
 .topbar h1{font-size:32px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
 .topbar p{color:var(--muted);font-size:14px}
-.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;max-width:300px;overflow:hidden}.topbar-right > *{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .game-version{font-size:12px;color:var(--muted);font-family:var(--mono)}
 .last-update-inline{font-size:12px;color:var(--muted);margin:0;padding:0}
 .refresh-badge{display:inline-block;background:var(--orange);color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;margin-left:6px;animation:pulse 2s infinite}
@@ -1965,5 +1965,55 @@ button:active, .btn-primary:active, .btn-secondary:active, .btn-ghost:active,
     width: 90px;
     height: 30px;
     opacity: 0.6;
+  }
+}
+
+
+/* ═══ B022: Focus rings (accessibility WCAG 2.2 AA) ═══ */
+button:focus-visible,
+a:focus-visible,
+[role="tab"]:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--orange, #ff7a00);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* B014: Auth modal — max-height on mobile */
+@media (max-width: 768px) {
+  .auth-modal {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* B008: Dashboard mobile spacing */
+@media (max-width: 768px) {
+  .stat-card, [class*="stat-tile"] {
+    margin-bottom: 8px;
+  }
+}
+
+/* B017: Map stats table — horizontal scroll */
+.map-stats-table-scroll, [class*="map-stats-table-wrap"] {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* B019: Speedruns — limit max-width on large screens */
+@media (min-width: 1600px) {
+  .content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* B020: Ranked filter buttons — more gap on tablet */
+@media (max-width: 768px) {
+  .ranked-filters, [class*="rk-filter"] {
+    gap: 8px !important;
   }
 }
