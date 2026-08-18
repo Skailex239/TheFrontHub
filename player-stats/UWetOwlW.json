@@ -1,27 +1,27 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-18T08:21:57.366Z",
-  "lastSyncedAt": "2026-08-18T08:21:55.752Z",
-  "totalGames": 3047,
+  "computedAt": "2026-08-18T09:00:36.123Z",
+  "lastSyncedAt": "2026-08-18T09:00:34.252Z",
+  "totalGames": 3049,
   "careerWins": {
     "ffaCasual": 492,
-    "ffaRanked": 260,
+    "ffaRanked": 261,
     "teamCasual": 331,
     "teamRanked": 117
   },
-  "totalWins": 1200,
-  "points": 6952,
+  "totalWins": 1201,
+  "points": 6953,
   "level": 69,
-  "levelProgress": 52,
+  "levelProgress": 53,
   "levelNextAt": 7000,
   "nextMilestones": {
     "wins": {
-      "current": 1200,
+      "current": 1201,
       "target": 2000
     },
     "playtime": {
-      "current": 739,
+      "current": 740,
       "target": 1000
     },
     "maps": {
@@ -39,19 +39,19 @@
     4
   ],
   "formatted": {
-    "points": "6 952",
-    "totalWins": "1 200",
-    "totalGames": "3 047",
-    "totalPlaytime": "30j 19h",
-    "totalPlaytimeCompact": "30j 19h",
+    "points": "6 953",
+    "totalWins": "1 201",
+    "totalGames": "3 049",
+    "totalPlaytime": "30j 20h",
+    "totalPlaytimeCompact": "30j 20h",
     "avgGameDuration": "14m 34s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "739h"
+    "totalPlaytimeHours": "740h"
   },
   "playtime": {
-    "totalSec": 2663518,
-    "avgGameSec": 874.14440433213,
+    "totalSec": 2666378,
+    "avgGameSec": 874.5090193506068,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
@@ -61,13 +61,13 @@
         "wins": 492
       },
       "ffaRanked": {
-        "games": 393,
-        "playtimeSec": 116578,
-        "wins": 260
+        "games": 394,
+        "playtimeSec": 117209,
+        "wins": 261
       },
       "teamCasual": {
-        "games": 903,
-        "playtimeSec": 920434,
+        "games": 904,
+        "playtimeSec": 922663,
         "wins": 331
       },
       "teamRanked": {
@@ -78,25 +78,25 @@
     }
   },
   "results": {
-    "victory": 1200,
+    "victory": 1201,
     "defeat": 1242,
-    "incomplete": 605
+    "incomplete": 606
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 491,
-      "wins": 315,
+      "count": 492,
+      "wins": 316,
       "losses": 176,
-      "playtimeSec": 260984,
-      "avgDuration": 531.5356415478615,
-      "winRate": 0.6415478615071283,
-      "lastPlayed": 1786724261506,
+      "playtimeSec": 261615,
+      "avgDuration": 531.7378048780488,
+      "winRate": 0.6422764227642277,
+      "lastPlayed": 1787041041594,
       "formatted": {
         "playtime": "3j 0h",
         "avgDuration": "8m",
         "winRate": "64%",
-        "lastPlayed": "14/08/26"
+        "lastPlayed": "18/08/26"
       }
     },
     {
@@ -1408,7 +1408,7 @@
       29,
       142,
       175,
-      206,
+      208,
       188,
       72,
       157,
@@ -1425,7 +1425,7 @@
     ],
     "byWeekday": [
       272,
-      434,
+      436,
       424,
       386,
       360,
@@ -1889,7 +1889,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 42
   },
   "achievements": {
@@ -1965,6 +1965,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "etCWpHVQ",
+      "start": "2026-08-18T08:17:21.594Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 631,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
     {
       "gameId": "bpaKV9cX",
       "start": "2026-08-15T08:16:20.719Z",
@@ -2170,17 +2181,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 414,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "Md5qGdoN",
-      "start": "2026-08-09T14:25:34.658Z",
-      "map": "Asia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 411,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
