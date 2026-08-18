@@ -15280,6 +15280,24 @@
       "numPlayers": 45,
       "timestamp": "2026-08-18T00:17:56.872Z",
       "url": "https://openfront.io/game/Eo3euMBm"
+    },
+    {
+      "id": "HBUNYFEF",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "SENDTROOPSGREEDYGAY",
+          "clientID": "JxrD82h7",
+          "clanTag": "IND"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-18T00:50:09.243Z",
+      "url": "https://openfront.io/game/HBUNYFEF"
     }
   ],
   "trios": [
@@ -73070,6 +73088,34 @@
       "numPlayers": 47,
       "timestamp": "2026-08-18T00:26:24.338Z",
       "url": "https://openfront.io/game/H2TgPvc3"
+    },
+    {
+      "id": "7Jfd9u2Y",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Kingdom of Presidia",
+          "clientID": "G2KRsEmE",
+          "clanTag": "BOM"
+        },
+        {
+          "username": "Xploit",
+          "clientID": "yUNskm7b",
+          "clanTag": "BOM"
+        },
+        {
+          "username": "Emarat",
+          "clientID": "tzWMfzx2",
+          "clanTag": "BOM"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1489,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T00:51:58.838Z",
+      "url": "https://openfront.io/game/7Jfd9u2Y"
     }
   ]
 }
