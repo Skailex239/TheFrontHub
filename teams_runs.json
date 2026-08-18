@@ -76213,6 +76213,62 @@
       "numPlayers": 69,
       "timestamp": "2026-08-18T16:10:04.951Z",
       "url": "https://openfront.io/game/PTC4CWGY"
+    },
+    {
+      "id": "t1oH7L2f",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Anon235",
+          "clientID": "DAYuGQYM",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "micro",
+          "clientID": "xzoDB4oD",
+          "clanTag": "LAW"
+        },
+        {
+          "username": "Geez",
+          "clientID": "kEno1k7d",
+          "clanTag": "LAW"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 2218,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-18T16:16:20.368Z",
+      "url": "https://openfront.io/game/t1oH7L2f"
+    },
+    {
+      "id": "d3HGbp7d",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Burublik",
+          "clientID": "6Co8qyH1",
+          "clanTag": null
+        },
+        {
+          "username": "Laisk",
+          "clientID": "NgXEujYK",
+          "clanTag": null
+        },
+        {
+          "username": "Snytie",
+          "clientID": "YtP61nJc",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1931,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-18T16:20:37.157Z",
+      "url": "https://openfront.io/game/d3HGbp7d"
     }
   ]
 }
