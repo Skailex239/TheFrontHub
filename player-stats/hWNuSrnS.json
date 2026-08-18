@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-18T15:20:32.578Z",
-  "lastSyncedAt": "2026-08-18T15:20:30.786Z",
-  "totalGames": 3766,
+  "computedAt": "2026-08-18T15:54:01.586Z",
+  "lastSyncedAt": "2026-08-18T15:53:59.200Z",
+  "totalGames": 3768,
   "careerWins": {
     "ffaCasual": 265,
     "ffaRanked": 1414,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 736,
+      "current": 737,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 946",
     "totalWins": "1 957",
-    "totalGames": "3 766",
-    "totalPlaytime": "30j 16h",
-    "totalPlaytimeCompact": "30j 16h",
-    "avgGameDuration": "11m 43s",
+    "totalGames": "3 768",
+    "totalPlaytime": "30j 17h",
+    "totalPlaytimeCompact": "30j 17h",
+    "avgGameDuration": "11m 44s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "736h"
+    "totalPlaytimeHours": "737h"
   },
   "playtime": {
-    "totalSec": 2650539,
-    "avgGameSec": 703.8074880509824,
+    "totalSec": 2653295,
+    "avgGameSec": 704.1653397027601,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1071,
-        "playtimeSec": 1289269,
+        "games": 1073,
+        "playtimeSec": 1292025,
         "wins": 265
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1957,
-    "defeat": 1479,
+    "defeat": 1481,
     "incomplete": 330
   },
   "maps": [
@@ -356,6 +356,22 @@
       }
     },
     {
+      "map": "Gateway to the Atlantic",
+      "count": 30,
+      "wins": 9,
+      "losses": 21,
+      "playtimeSec": 35831,
+      "avgDuration": 1194.3666666666666,
+      "winRate": 0.3,
+      "lastPlayed": 1787066218861,
+      "formatted": {
+        "playtime": "9h 57m",
+        "avgDuration": "19m",
+        "winRate": "30%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Manicouagan",
       "count": 30,
       "wins": 11,
@@ -385,22 +401,6 @@
         "avgDuration": "23m",
         "winRate": "30%",
         "lastPlayed": "26/07/26"
-      }
-    },
-    {
-      "map": "Gateway to the Atlantic",
-      "count": 29,
-      "wins": 9,
-      "losses": 20,
-      "playtimeSec": 33990,
-      "avgDuration": 1172.0689655172414,
-      "winRate": 0.3103448275862069,
-      "lastPlayed": 1787053351997,
-      "formatted": {
-        "playtime": "9h 26m",
-        "avgDuration": "19m",
-        "winRate": "31%",
-        "lastPlayed": "18/08/26"
       }
     },
     {
@@ -1012,6 +1012,22 @@
       }
     },
     {
+      "map": "France",
+      "count": 4,
+      "wins": 1,
+      "losses": 3,
+      "playtimeSec": 5864,
+      "avgDuration": 1466,
+      "winRate": 0.25,
+      "lastPlayed": 1787065639687,
+      "formatted": {
+        "playtime": "1h 37m",
+        "avgDuration": "24m",
+        "winRate": "25%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Scandinavia",
       "count": 4,
       "wins": 1,
@@ -1073,22 +1089,6 @@
         "avgDuration": "16m",
         "winRate": "0%",
         "lastPlayed": "28/05/26"
-      }
-    },
-    {
-      "map": "France",
-      "count": 3,
-      "wins": 1,
-      "losses": 2,
-      "playtimeSec": 4949,
-      "avgDuration": 1649.6666666666667,
-      "winRate": 0.3333333333333333,
-      "lastPlayed": 1786941680724,
-      "formatted": {
-        "playtime": "1h 22m",
-        "avgDuration": "27m",
-        "winRate": "33%",
-        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1607,7 +1607,7 @@
       91,
       143,
       226,
-      319,
+      321,
       343,
       343,
       319,
@@ -1617,7 +1617,7 @@
     ],
     "byWeekday": [
       547,
-      585,
+      587,
       470,
       548,
       480,
@@ -2158,6 +2158,28 @@
   },
   "recentGames": [
     {
+      "gameId": "76fKGtFC",
+      "start": "2026-08-18T15:16:58.861Z",
+      "map": "Gateway to the Atlantic",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1841,
+      "totalPlayers": 103,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "gWETDvxK",
+      "start": "2026-08-18T15:07:19.687Z",
+      "map": "France",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 915,
+      "totalPlayers": 95,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "kJgqVpBz",
       "start": "2026-08-18T14:37:17.578Z",
       "map": "Middle East",
@@ -2351,28 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 379,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "C2jDqVrC",
-      "start": "2026-08-18T06:04:06.314Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 319,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "6WthCg8p",
-      "start": "2026-08-18T05:56:03.870Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 376,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"

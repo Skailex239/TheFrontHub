@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-18T15:20:31.818Z",
-  "lastSyncedAt": "2026-08-18T15:20:30.536Z",
-  "totalGames": 3068,
+  "computedAt": "2026-08-18T15:54:00.589Z",
+  "lastSyncedAt": "2026-08-18T15:53:58.697Z",
+  "totalGames": 3069,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 262,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "6 955",
     "totalWins": "1 203",
-    "totalGames": "3 068",
+    "totalGames": "3 069",
     "totalPlaytime": "30j 23h",
     "totalPlaytimeCompact": "30j 23h",
     "avgGameDuration": "14m 32s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "743h"
   },
   "playtime": {
-    "totalSec": 2675894,
-    "avgGameSec": 872.1949152542373,
+    "totalSec": 2676809,
+    "avgGameSec": 872.208862821766,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1572,
-        "playtimeSec": 1593026,
+        "games": 1573,
+        "playtimeSec": 1593941,
         "wins": 492
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1203,
-    "defeat": 1248,
+    "defeat": 1249,
     "incomplete": 617
   },
   "maps": [
@@ -1108,6 +1108,22 @@
       }
     },
     {
+      "map": "France",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "playtimeSec": 1736,
+      "avgDuration": 868,
+      "winRate": 0.5,
+      "lastPlayed": 1787065639687,
+      "formatted": {
+        "playtime": "28m",
+        "avgDuration": "14m",
+        "winRate": "50%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Russia",
       "count": 2,
       "wins": 0,
@@ -1284,22 +1300,6 @@
       }
     },
     {
-      "map": "France",
-      "count": 1,
-      "wins": 1,
-      "losses": 0,
-      "playtimeSec": 821,
-      "avgDuration": 821,
-      "winRate": 1,
-      "lastPlayed": 1786196451800,
-      "formatted": {
-        "playtime": "13m",
-        "avgDuration": "13m",
-        "winRate": "100%",
-        "lastPlayed": "08/08/26"
-      }
-    },
-    {
       "map": "China",
       "count": 1,
       "wins": 0,
@@ -1415,7 +1415,7 @@
       226,
       219,
       216,
-      283,
+      284,
       400,
       157,
       247,
@@ -1425,7 +1425,7 @@
     ],
     "byWeekday": [
       272,
-      455,
+      456,
       424,
       386,
       360,
@@ -1966,6 +1966,17 @@
   },
   "recentGames": [
     {
+      "gameId": "gWETDvxK",
+      "start": "2026-08-18T15:07:19.687Z",
+      "map": "France",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 915,
+      "totalPlayers": 95,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "NRqQHYRt",
       "start": "2026-08-18T13:18:17.448Z",
       "map": "Africa",
@@ -2171,17 +2182,6 @@
       "result": "victory",
       "durationSeconds": 977,
       "totalPlayers": 86,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "gUWtjpsm",
-      "start": "2026-08-12T08:38:52.765Z",
-      "map": "Los Angeles",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 869,
-      "totalPlayers": 49,
       "rankedType": "unranked",
       "category": "teamCasual"
     }
