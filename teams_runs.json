@@ -15708,6 +15708,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-18T10:50:39.771Z",
       "url": "https://openfront.io/game/QbQDBmGP"
+    },
+    {
+      "id": "797Mr5Wv",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Zlonsky",
+          "clientID": "XfWJYd6r",
+          "clanTag": "KEK"
+        },
+        {
+          "username": "flamingo",
+          "clientID": "bHFAzN2r",
+          "clanTag": "KEK"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1877,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "timestamp": "2026-08-18T10:52:47.894Z",
+      "url": "https://openfront.io/game/797Mr5Wv"
     }
   ],
   "trios": [
@@ -42898,6 +42921,29 @@
       "numPlayers": 51,
       "timestamp": "2026-08-18T09:43:32.299Z",
       "url": "https://openfront.io/game/N9bgRsCN"
+    },
+    {
+      "id": "S3WTPt9s",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "_0_NOTK",
+          "clientID": "1YkE4RSb",
+          "clanTag": "AST"
+        },
+        {
+          "username": "M613",
+          "clientID": "RcM7Jf4h",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1560,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "timestamp": "2026-08-18T11:02:37.513Z",
+      "url": "https://openfront.io/game/S3WTPt9s"
     }
   ],
   "quads": [
@@ -74826,6 +74872,39 @@
       "numPlayers": 12,
       "timestamp": "2026-08-18T10:36:36.263Z",
       "url": "https://openfront.io/game/uhrdW2Bf"
+    },
+    {
+      "id": "4HoBrDR2",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonShark1",
+          "clientID": "zEGGqvgU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBear5",
+          "clientID": "x27EXGg6",
+          "clanTag": null
+        },
+        {
+          "username": "Chiorico",
+          "clientID": "hfmtSFJK",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "test01",
+          "clientID": "AMkbxVUt",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 533,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T11:14:03.210Z",
+      "url": "https://openfront.io/game/4HoBrDR2"
     }
   ]
 }
