@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-18T18:20:21.941Z",
-  "lastSyncedAt": "2026-08-18T18:20:19.531Z",
-  "totalGames": 2171,
+  "computedAt": "2026-08-18T19:04:40.040Z",
+  "lastSyncedAt": "2026-08-18T19:04:37.710Z",
+  "totalGames": 2172,
   "careerWins": {
     "ffaCasual": 374,
     "ffaRanked": 325,
@@ -21,7 +21,7 @@
       "target": 1000
     },
     "playtime": {
-      "current": 547,
+      "current": 548,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 360",
     "totalWins": "806",
-    "totalGames": "2 171",
-    "totalPlaytime": "22j 19h",
-    "totalPlaytimeCompact": "22j 19h",
-    "avgGameDuration": "15m 8s",
+    "totalGames": "2 172",
+    "totalPlaytime": "22j 20h",
+    "totalPlaytimeCompact": "22j 20h",
+    "avgGameDuration": "15m 9s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "547h"
+    "totalPlaytimeHours": "548h"
   },
   "playtime": {
-    "totalSec": 1972006,
-    "avgGameSec": 908.3399355135882,
+    "totalSec": 1975022,
+    "avgGameSec": 909.3103130755064,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1381,
-        "playtimeSec": 1595064,
+        "games": 1382,
+        "playtimeSec": 1598080,
         "wins": 374
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 806,
-    "defeat": 1040,
+    "defeat": 1041,
     "incomplete": 325
   },
   "maps": [
@@ -1332,6 +1332,22 @@
       }
     },
     {
+      "map": "Hecate Strait",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "playtimeSec": 5640,
+      "avgDuration": 2820,
+      "winRate": 0.5,
+      "lastPlayed": 1787075117245,
+      "formatted": {
+        "playtime": "1h 34m",
+        "avgDuration": "47m",
+        "winRate": "50%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Surrounded",
       "count": 2,
       "wins": 1,
@@ -1456,22 +1472,6 @@
         "playtime": "1h 7m",
         "avgDuration": "1h 7m",
         "winRate": "0%",
-        "lastPlayed": "17/08/26"
-      }
-    },
-    {
-      "map": "Hecate Strait",
-      "count": 1,
-      "wins": 1,
-      "losses": 0,
-      "playtimeSec": 2624,
-      "avgDuration": 2624,
-      "winRate": 1,
-      "lastPlayed": 1786986410105,
-      "formatted": {
-        "playtime": "43m",
-        "avgDuration": "43m",
-        "winRate": "100%",
         "lastPlayed": "17/08/26"
       }
     },
@@ -1625,7 +1625,7 @@
       136,
       200,
       198,
-      223,
+      224,
       190,
       149,
       146,
@@ -1633,7 +1633,7 @@
     ],
     "byWeekday": [
       302,
-      224,
+      225,
       289,
       325,
       346,
@@ -1803,8 +1803,8 @@
       },
       {
         "date": "18/08/2026",
-        "count": 6,
-        "playtimeSec": 2732
+        "count": 7,
+        "playtimeSec": 5748
       },
       {
         "date": "19/03/2026",
@@ -2097,7 +2097,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2173,6 +2173,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "FmbJL2ji",
+      "start": "2026-08-18T17:45:17.245Z",
+      "map": "Hecate Strait",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 3016,
+      "totalPlayers": 108,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "hxmgFdhM",
       "start": "2026-08-18T10:45:08.809Z",
@@ -2381,17 +2392,6 @@
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
-    },
-    {
-      "gameId": "mvWATvgw",
-      "start": "2026-08-17T19:40:33.310Z",
-      "map": "Sol",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 4032,
-      "totalPlayers": 20,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }

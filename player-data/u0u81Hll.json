@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-18T18:20:19.531Z",
+  "lastSyncedAt": "2026-08-18T19:04:37.710Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.4,
-  "totalGames": 2171,
-  "newGamesThisSync": 0,
+  "totalGames": 2172,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "FmbJL2ji",
+      "start": "2026-08-18T17:45:17.245Z",
+      "durationSeconds": 3016,
+      "map": "Hecate Strait",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 108,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "6qNA7XEQ",
       "start": "2026-08-18T10:53:11.513Z",
