@@ -15841,6 +15841,47 @@
       "numPlayers": 37,
       "timestamp": "2026-08-18T13:12:23.082Z",
       "url": "https://openfront.io/game/yefGQRrh"
+    },
+    {
+      "id": "TLBJsghP",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Bingus",
+          "clientID": "CbeeKXrr",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "Ibrahim Traore",
+          "clientID": "4o69mFDD",
+          "clanTag": "ZDFB"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1704,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-18T13:28:25.142Z",
+      "url": "https://openfront.io/game/TLBJsghP"
+    },
+    {
+      "id": "u8S8hsdd",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "HGFH",
+          "clientID": "iwi2hgVH",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1357,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-18T13:31:32.853Z",
+      "url": "https://openfront.io/game/u8S8hsdd"
     }
   ],
   "trios": [
@@ -43243,6 +43284,34 @@
       "numPlayers": 68,
       "timestamp": "2026-08-18T12:43:21.482Z",
       "url": "https://openfront.io/game/bGMSbrhs"
+    },
+    {
+      "id": "aYNjveEX",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ANO 658",
+          "clientID": "GL86KKtS",
+          "clanTag": "513"
+        },
+        {
+          "username": "Anon142",
+          "clientID": "ZKNeMuNx",
+          "clanTag": null
+        },
+        {
+          "username": "Malaxeur2Nibards",
+          "clientID": "k4KxUKN8",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "timestamp": "2026-08-18T13:38:25.252Z",
+      "url": "https://openfront.io/game/aYNjveEX"
     }
   ],
   "quads": [
@@ -75509,6 +75578,34 @@
       "numPlayers": 32,
       "timestamp": "2026-08-18T12:51:06.512Z",
       "url": "https://openfront.io/game/amLvm4wj"
+    },
+    {
+      "id": "c8VCJ7xz",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Anon754",
+          "clientID": "bcSuSSkn",
+          "clanTag": null
+        },
+        {
+          "username": "RedAly",
+          "clientID": "UMP25vfn",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Iran",
+          "clientID": "gPynZDDe",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1084,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "timestamp": "2026-08-18T13:38:13.746Z",
+      "url": "https://openfront.io/game/c8VCJ7xz"
     }
   ]
 }
