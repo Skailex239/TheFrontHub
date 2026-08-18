@@ -42622,6 +42622,34 @@
       "numPlayers": 15,
       "timestamp": "2026-08-18T08:27:14.215Z",
       "url": "https://openfront.io/game/o3MgJmVZ"
+    },
+    {
+      "id": "DTEB8vgM",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "BigBoy",
+          "clientID": "qaLTSjs8",
+          "clanTag": "TE"
+        },
+        {
+          "username": "Bort",
+          "clientID": "AVz3831X",
+          "clanTag": "TE"
+        },
+        {
+          "username": "9527 0721",
+          "clientID": "kKigVQyJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1924,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-18T08:47:12.298Z",
+      "url": "https://openfront.io/game/DTEB8vgM"
     }
   ],
   "quads": [
@@ -74283,6 +74311,95 @@
       "numPlayers": 58,
       "timestamp": "2026-08-18T08:41:34.949Z",
       "url": "https://openfront.io/game/Q3DLhwAn"
+    },
+    {
+      "id": "HKQj9V4M",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "IamFirst",
+          "clientID": "FnDsR76F",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Titus",
+          "clientID": "uPu9RRSP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Charles de Gaulles",
+          "clientID": "yugKhWg2",
+          "clanTag": "UN"
+        },
+        {
+          "username": "floetus",
+          "clientID": "oPPpY5aH",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1296,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-18T08:49:56.607Z",
+      "url": "https://openfront.io/game/HKQj9V4M"
+    },
+    {
+      "id": "AUdYRf6W",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "big cheese",
+          "clientID": "3K5QKWzu",
+          "clanTag": null
+        },
+        {
+          "username": "Angyyyz",
+          "clientID": "9bKyMYB2",
+          "clanTag": "IT"
+        },
+        {
+          "username": "Zeta",
+          "clientID": "Ky7fTgsi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEmber8",
+          "clientID": "YZTT3KeH",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 1475,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T08:45:13.137Z",
+      "url": "https://openfront.io/game/AUdYRf6W"
+    },
+    {
+      "id": "u8qvRXkM",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Anon724",
+          "clientID": "ieope7EE",
+          "clanTag": null
+        },
+        {
+          "username": "Free Trains",
+          "clientID": "MY9EdiTg",
+          "clanTag": "USA"
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1040,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "timestamp": "2026-08-18T08:52:50.788Z",
+      "url": "https://openfront.io/game/u8qvRXkM"
     }
   ]
 }
