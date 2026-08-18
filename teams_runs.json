@@ -15964,6 +15964,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-18T15:29:12.213Z",
       "url": "https://openfront.io/game/xGtqJZUb"
+    },
+    {
+      "id": "K2Nuam38",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "tsuo0OZOR",
+          "clientID": "5UXB7tGR",
+          "clanTag": "DOG"
+        },
+        {
+          "username": "Laravel",
+          "clientID": "jqoYaWyw",
+          "clanTag": "DOG"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1611,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-18T16:00:46.350Z",
+      "url": "https://openfront.io/game/K2Nuam38"
     }
   ],
   "trios": [
@@ -76129,6 +76152,34 @@
       "numPlayers": 80,
       "timestamp": "2026-08-18T14:49:43.922Z",
       "url": "https://openfront.io/game/pSLgduxF"
+    },
+    {
+      "id": "WZS1nAEj",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "LEPEN",
+          "clientID": "PJurC8nJ",
+          "clanTag": "SND"
+        },
+        {
+          "username": "Anon089",
+          "clientID": "BP6PU6wc",
+          "clanTag": null
+        },
+        {
+          "username": "Austria",
+          "clientID": "yYbo7Z16",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 805,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-18T16:04:55.597Z",
+      "url": "https://openfront.io/game/WZS1nAEj"
     }
   ]
 }
