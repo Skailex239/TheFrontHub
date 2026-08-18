@@ -16179,6 +16179,29 @@
       "numPlayers": 31,
       "timestamp": "2026-08-18T22:19:09.206Z",
       "url": "https://openfront.io/game/ZNfqgc4Z"
+    },
+    {
+      "id": "b68E2ttF",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "MilanVilag",
+          "clientID": "q4cXLd2F",
+          "clanTag": "PEAK"
+        },
+        {
+          "username": "YRDani",
+          "clientID": "wjETBQ9Z",
+          "clanTag": "PEAK"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1728,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-18T22:29:56.917Z",
+      "url": "https://openfront.io/game/b68E2ttF"
     }
   ],
   "trios": [
@@ -77344,6 +77367,39 @@
       "numPlayers": 72,
       "timestamp": "2026-08-18T22:02:28.096Z",
       "url": "https://openfront.io/game/JiW4bkEw"
+    },
+    {
+      "id": "ojZTQuCB",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Cassidy Wharf",
+          "clientID": "6UXf6Bfe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Who",
+          "clientID": "sS3bppfg",
+          "clanTag": "UN"
+        },
+        {
+          "username": "brrk",
+          "clientID": "w66YmvxS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Newzin",
+          "clientID": "cHq5FkdL",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "France",
+      "duration_s": 1033,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 87,
+      "timestamp": "2026-08-18T22:32:15.072Z",
+      "url": "https://openfront.io/game/ojZTQuCB"
     }
   ]
 }
