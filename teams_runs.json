@@ -42124,6 +42124,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-18T02:50:52.545Z",
       "url": "https://openfront.io/game/piWcR2Ko"
+    },
+    {
+      "id": "meSocUUk",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Clown",
+          "clientID": "SKCwTqYw",
+          "clanTag": null
+        },
+        {
+          "username": "Anomura Galatheoidea",
+          "clientID": "5jryePXA",
+          "clanTag": null
+        },
+        {
+          "username": "TND",
+          "clientID": "1WvSSg21",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 1010,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "timestamp": "2026-08-18T04:05:14.411Z",
+      "url": "https://openfront.io/game/meSocUUk"
     }
   ],
   "quads": [
@@ -73546,6 +73574,67 @@
       "numPlayers": 20,
       "timestamp": "2026-08-18T03:56:53.916Z",
       "url": "https://openfront.io/game/ajRUJ7tS"
+    },
+    {
+      "id": "hzcSWoNT",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Big Boat",
+          "clientID": "nVvCjzRz",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "Orcs",
+          "clientID": "QNCZe6gg",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "chefboyardeeznutz",
+          "clientID": "TzYkGgFW",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "FanBins",
+          "clientID": "GyoQVExK",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 2179,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T03:50:27.545Z",
+      "url": "https://openfront.io/game/hzcSWoNT"
+    },
+    {
+      "id": "prTi7jkK",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "jimmy pickle",
+          "clientID": "cZW7hnb2",
+          "clanTag": "HALLO"
+        },
+        {
+          "username": "tvc",
+          "clientID": "dS7Bkp9R",
+          "clanTag": "HALLO"
+        },
+        {
+          "username": "WHY",
+          "clientID": "KfAtJNEn",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1688,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "timestamp": "2026-08-18T03:56:16.378Z",
+      "url": "https://openfront.io/game/prTi7jkK"
     }
   ]
 }
