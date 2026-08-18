@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-18T13:29:56.657Z",
-  "lastSyncedAt": "2026-08-18T13:29:54.752Z",
-  "totalGames": 3067,
+  "computedAt": "2026-08-18T14:06:02.720Z",
+  "lastSyncedAt": "2026-08-18T14:06:01.026Z",
+  "totalGames": 3068,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 262,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 742,
+      "current": 743,
       "target": 1000
     },
     "maps": {
@@ -41,17 +41,17 @@
   "formatted": {
     "points": "6 955",
     "totalWins": "1 203",
-    "totalGames": "3 067",
-    "totalPlaytime": "30j 22h",
-    "totalPlaytimeCompact": "30j 22h",
-    "avgGameDuration": "14m 31s",
+    "totalGames": "3 068",
+    "totalPlaytime": "30j 23h",
+    "totalPlaytimeCompact": "30j 23h",
+    "avgGameDuration": "14m 32s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "742h"
+    "totalPlaytimeHours": "743h"
   },
   "playtime": {
-    "totalSec": 2674061,
-    "avgGameSec": 871.8816432996414,
+    "totalSec": 2675894,
+    "avgGameSec": 872.1949152542373,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
@@ -66,8 +66,8 @@
         "wins": 262
       },
       "teamCasual": {
-        "games": 908,
-        "playtimeSec": 924548,
+        "games": 909,
+        "playtimeSec": 926381,
         "wins": 331
       },
       "teamRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1203,
-    "defeat": 1247,
+    "defeat": 1248,
     "incomplete": 617
   },
   "maps": [
@@ -197,18 +197,18 @@
     },
     {
       "map": "Africa",
-      "count": 70,
+      "count": 71,
       "wins": 26,
-      "losses": 44,
-      "playtimeSec": 88062,
-      "avgDuration": 1258.0285714285715,
-      "winRate": 0.37142857142857144,
-      "lastPlayed": 1786016933068,
+      "losses": 45,
+      "playtimeSec": 89895,
+      "avgDuration": 1266.1267605633802,
+      "winRate": 0.36619718309859156,
+      "lastPlayed": 1787059097448,
       "formatted": {
         "playtime": "1j 0h",
-        "avgDuration": "20m",
+        "avgDuration": "21m",
         "winRate": "37%",
-        "lastPlayed": "06/08/26"
+        "lastPlayed": "18/08/26"
       }
     },
     {
@@ -1413,7 +1413,7 @@
       74,
       161,
       226,
-      218,
+      219,
       216,
       283,
       400,
@@ -1425,7 +1425,7 @@
     ],
     "byWeekday": [
       272,
-      454,
+      455,
       424,
       386,
       360,
@@ -1966,6 +1966,17 @@
   },
   "recentGames": [
     {
+      "gameId": "NRqQHYRt",
+      "start": "2026-08-18T13:18:17.448Z",
+      "map": "Africa",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 1833,
+      "totalPlayers": 28,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
       "gameId": "omGNkZpi",
       "start": "2026-08-18T12:57:12.877Z",
       "map": "The Box",
@@ -2173,17 +2184,6 @@
       "totalPlayers": 49,
       "rankedType": "unranked",
       "category": "teamCasual"
-    },
-    {
-      "gameId": "e1pKkpUq",
-      "start": "2026-08-11T21:02:30.863Z",
-      "map": "Irish Sea",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 36,
-      "totalPlayers": 1,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }
