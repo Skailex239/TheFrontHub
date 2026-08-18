@@ -76180,6 +76180,39 @@
       "numPlayers": 40,
       "timestamp": "2026-08-18T16:04:55.597Z",
       "url": "https://openfront.io/game/WZS1nAEj"
+    },
+    {
+      "id": "PTC4CWGY",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "AnonGarnet7",
+          "clientID": "cuJEooAt",
+          "clanTag": "GO"
+        },
+        {
+          "username": "dro4un",
+          "clientID": "AJS6qLtp",
+          "clanTag": "GO"
+        },
+        {
+          "username": "Kofeman",
+          "clientID": "48njSwYY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZ",
+          "clientID": "boHyT7zN",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1341,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-18T16:10:04.951Z",
+      "url": "https://openfront.io/game/PTC4CWGY"
     }
   ]
 }
