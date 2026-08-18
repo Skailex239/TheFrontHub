@@ -43105,6 +43105,34 @@
       "numPlayers": 76,
       "timestamp": "2026-08-18T11:54:12.757Z",
       "url": "https://openfront.io/game/hx3rjnQv"
+    },
+    {
+      "id": "Ft1XXj4S",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Banana",
+          "clientID": "eQzuHRG2",
+          "clanTag": null
+        },
+        {
+          "username": "Tangoz",
+          "clientID": "rcUJ3LW7",
+          "clanTag": "ITALY"
+        },
+        {
+          "username": "CoolBoy",
+          "clientID": "vobh8Cxv",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1144,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-18T12:36:07.011Z",
+      "url": "https://openfront.io/game/Ft1XXj4S"
     }
   ],
   "quads": [
@@ -75249,6 +75277,72 @@
       "numPlayers": 69,
       "timestamp": "2026-08-18T12:18:02.332Z",
       "url": "https://openfront.io/game/AW2zmQCd"
+    },
+    {
+      "id": "M8qU61oB",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Surgud empire",
+          "clientID": "TfBMBo1M",
+          "clanTag": null
+        },
+        {
+          "username": "BEAGA MG",
+          "clientID": "8CWYwzcV",
+          "clanTag": null
+        },
+        {
+          "username": "Paris 1871",
+          "clientID": "xA7Qfp9U",
+          "clanTag": null
+        },
+        {
+          "username": "book",
+          "clientID": "DfydgkHf",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 824,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-18T12:45:42.133Z",
+      "url": "https://openfront.io/game/M8qU61oB"
+    },
+    {
+      "id": "t8Udk3Jn",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Omega",
+          "clientID": "dXmncHPM",
+          "clanTag": null
+        },
+        {
+          "username": "BIG T",
+          "clientID": "q7ZoUkQw",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonQuartz6",
+          "clientID": "mKogidLA",
+          "clanTag": null
+        },
+        {
+          "username": "Gwynedd",
+          "clientID": "b2MLwSrZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 656,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T12:47:57.779Z",
+      "url": "https://openfront.io/game/t8Udk3Jn"
     }
   ]
 }
