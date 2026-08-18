@@ -15598,6 +15598,24 @@
       "numPlayers": 42,
       "timestamp": "2026-08-18T09:47:47.573Z",
       "url": "https://openfront.io/game/wiUHz43q"
+    },
+    {
+      "id": "4ht3x5ip",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Cordyceps",
+          "clientID": "35mJTdHk",
+          "clanTag": "BZH"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1284,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "timestamp": "2026-08-18T10:13:03.192Z",
+      "url": "https://openfront.io/game/4ht3x5ip"
     }
   ],
   "trios": [
@@ -74627,6 +74645,62 @@
       "numPlayers": 44,
       "timestamp": "2026-08-18T09:40:54.111Z",
       "url": "https://openfront.io/game/o6fyi8ph"
+    },
+    {
+      "id": "KG45z7V6",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "SPoS",
+          "clientID": "MXYkY8p9",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Hamza",
+          "clientID": "CkoMhtRm",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "cazi",
+          "clientID": "4tcRaYR3",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Taya",
+          "clientID": "GSFxveks",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 584,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-18T10:21:27.724Z",
+      "url": "https://openfront.io/game/KG45z7V6"
+    },
+    {
+      "id": "aGCtpH8u",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "MtVice",
+          "clientID": "dNF3yZot",
+          "clanTag": "NL"
+        },
+        {
+          "username": "Truhania",
+          "clientID": "SPbpKFSr",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1850,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-18T10:00:32.368Z",
+      "url": "https://openfront.io/game/aGCtpH8u"
     }
   ]
 }
