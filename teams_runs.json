@@ -15882,6 +15882,24 @@
       "numPlayers": 74,
       "timestamp": "2026-08-18T13:31:32.853Z",
       "url": "https://openfront.io/game/u8S8hsdd"
+    },
+    {
+      "id": "YpD5r6gf",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "Supreme",
+          "clientID": "zSPLH7ML",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T13:35:41.599Z",
+      "url": "https://openfront.io/game/YpD5r6gf"
     }
   ],
   "trios": [
@@ -75713,6 +75731,57 @@
       "numPlayers": 20,
       "timestamp": "2026-08-18T14:14:11.584Z",
       "url": "https://openfront.io/game/gtQcooMk"
+    },
+    {
+      "id": "cPT6GHBL",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Korinthe",
+          "clientID": "fLkHohV6",
+          "clanTag": null
+        },
+        {
+          "username": "BDZ",
+          "clientID": "MjUN7ssr",
+          "clanTag": "BDZ"
+        },
+        {
+          "username": "Malekoev",
+          "clientID": "jm6tEHKM",
+          "clanTag": "BDZ"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "timestamp": "2026-08-18T14:28:09.473Z",
+      "url": "https://openfront.io/game/cPT6GHBL"
+    },
+    {
+      "id": "369bv7fz",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "Trader Neighbour",
+          "clientID": "MGcDivVX",
+          "clanTag": "DE"
+        },
+        {
+          "username": "MAHDI",
+          "clientID": "pedFHLP7",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-18T14:22:50.643Z",
+      "url": "https://openfront.io/game/369bv7fz"
     }
   ]
 }
