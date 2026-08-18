@@ -15511,6 +15511,29 @@
       "numPlayers": 54,
       "timestamp": "2026-08-18T08:20:02.763Z",
       "url": "https://openfront.io/game/KbF3Cjv9"
+    },
+    {
+      "id": "3RnFtJX4",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "kich",
+          "clientID": "wUNmd2wo",
+          "clanTag": "DFF"
+        },
+        {
+          "username": "DarkSkala",
+          "clientID": "dmo6bHkU",
+          "clanTag": "DFF"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 779,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "timestamp": "2026-08-18T09:07:32.777Z",
+      "url": "https://openfront.io/game/3RnFtJX4"
     }
   ],
   "trios": [
@@ -74400,6 +74423,39 @@
       "numPlayers": 58,
       "timestamp": "2026-08-18T08:52:50.788Z",
       "url": "https://openfront.io/game/u8qvRXkM"
+    },
+    {
+      "id": "6wpyXSxv",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonNebula2",
+          "clientID": "B6Y6tE1x",
+          "clanTag": null
+        },
+        {
+          "username": "UN mama mia",
+          "clientID": "6RXoGinT",
+          "clanTag": null
+        },
+        {
+          "username": "Polska Gurom",
+          "clientID": "gjFLKjPF",
+          "clanTag": "POLAK"
+        },
+        {
+          "username": "AnonCastle",
+          "clientID": "rjwuyWLw",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1117,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-18T09:12:40.158Z",
+      "url": "https://openfront.io/game/6wpyXSxv"
     }
   ]
 }
