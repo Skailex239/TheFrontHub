@@ -42673,6 +42673,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-18T08:47:12.298Z",
       "url": "https://openfront.io/game/DTEB8vgM"
+    },
+    {
+      "id": "mFcTj8zz",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "minisosis",
+          "clientID": "BwRWoUwS",
+          "clanTag": null
+        },
+        {
+          "username": "BENITO",
+          "clientID": "U7VGKwzD",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1157,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-18T09:18:17.494Z",
+      "url": "https://openfront.io/game/mFcTj8zz"
     }
   ],
   "quads": [
@@ -74456,6 +74479,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-18T09:12:40.158Z",
       "url": "https://openfront.io/game/6wpyXSxv"
+    },
+    {
+      "id": "5XWkMRLR",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Mr. Anon",
+          "clientID": "qAe8qbQG",
+          "clanTag": null
+        },
+        {
+          "username": "Vickers",
+          "clientID": "NHKt87Gf",
+          "clanTag": "RLI"
+        },
+        {
+          "username": "Anon514",
+          "clientID": "mgpTGGWT",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1548,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "timestamp": "2026-08-18T09:09:57.978Z",
+      "url": "https://openfront.io/game/5XWkMRLR"
     }
   ]
 }
