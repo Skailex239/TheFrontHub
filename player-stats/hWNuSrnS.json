@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-18T17:50:57.535Z",
-  "lastSyncedAt": "2026-08-18T17:50:54.731Z",
-  "totalGames": 3768,
+  "computedAt": "2026-08-18T18:19:45.248Z",
+  "lastSyncedAt": "2026-08-18T18:19:42.920Z",
+  "totalGames": 3769,
   "careerWins": {
     "ffaCasual": 265,
     "ffaRanked": 1414,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 946",
     "totalWins": "1 957",
-    "totalGames": "3 768",
+    "totalGames": "3 769",
     "totalPlaytime": "30j 17h",
     "totalPlaytimeCompact": "30j 17h",
     "avgGameDuration": "11m 44s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "737h"
   },
   "playtime": {
-    "totalSec": 2653295,
-    "avgGameSec": 704.1653397027601,
+    "totalSec": 2656488,
+    "avgGameSec": 704.8256832050942,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1073,
-        "playtimeSec": 1292025,
+        "games": 1074,
+        "playtimeSec": 1295218,
         "wins": 265
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1957,
-    "defeat": 1481,
+    "defeat": 1482,
     "incomplete": 330
   },
   "maps": [
@@ -804,6 +804,22 @@
       }
     },
     {
+      "map": "Balkans",
+      "count": 9,
+      "wins": 1,
+      "losses": 8,
+      "playtimeSec": 13256,
+      "avgDuration": 1472.888888888889,
+      "winRate": 0.1111111111111111,
+      "lastPlayed": 1787073189143,
+      "formatted": {
+        "playtime": "3h 40m",
+        "avgDuration": "24m",
+        "winRate": "11%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Giant World Map",
       "count": 9,
       "wins": 4,
@@ -865,22 +881,6 @@
         "avgDuration": "27m",
         "winRate": "22%",
         "lastPlayed": "09/07/26"
-      }
-    },
-    {
-      "map": "Balkans",
-      "count": 8,
-      "wins": 1,
-      "losses": 7,
-      "playtimeSec": 10063,
-      "avgDuration": 1257.875,
-      "winRate": 0.125,
-      "lastPlayed": 1786957462697,
-      "formatted": {
-        "playtime": "2h 47m",
-        "avgDuration": "20m",
-        "winRate": "13%",
-        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1609,7 +1609,7 @@
       226,
       321,
       343,
-      343,
+      344,
       319,
       304,
       244,
@@ -1617,7 +1617,7 @@
     ],
     "byWeekday": [
       547,
-      587,
+      588,
       470,
       548,
       480,
@@ -2076,7 +2076,7 @@
         "playtimeSec": 6165
       }
     ],
-    "peakHour": 18,
+    "peakHour": 19,
     "peakWeekday": "Mar",
     "activeDays": 90
   },
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "KFX5SiFQ",
+      "start": "2026-08-18T17:13:09.143Z",
+      "map": "Balkans",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 3193,
+      "totalPlayers": 84,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "76fKGtFC",
       "start": "2026-08-18T15:16:58.861Z",
@@ -2362,17 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 368,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "YtruoJgU",
-      "start": "2026-08-18T06:12:09.275Z",
-      "map": "Iceland",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 379,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
