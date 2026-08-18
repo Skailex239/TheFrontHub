@@ -16202,6 +16202,52 @@
       "numPlayers": 57,
       "timestamp": "2026-08-18T22:29:56.917Z",
       "url": "https://openfront.io/game/b68E2ttF"
+    },
+    {
+      "id": "pHRvhCCc",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "FaBite",
+          "clientID": "tSzg9Aa7",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "ugogole",
+          "clientID": "s12aaFi2",
+          "clanTag": "ZIL"
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 696,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-18T23:06:39.813Z",
+      "url": "https://openfront.io/game/pHRvhCCc"
+    },
+    {
+      "id": "kgVMm2a8",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "CanCanCanCanCan",
+          "clientID": "TqqZejLE",
+          "clanTag": "42"
+        },
+        {
+          "username": "bacar",
+          "clientID": "VBMHSWse",
+          "clanTag": "42"
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 1079,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-18T23:04:28.681Z",
+      "url": "https://openfront.io/game/kgVMm2a8"
     }
   ],
   "trios": [
@@ -77484,6 +77530,29 @@
       "numPlayers": 48,
       "timestamp": "2026-08-18T22:43:50.368Z",
       "url": "https://openfront.io/game/xw7VAzRN"
+    },
+    {
+      "id": "cdCJD5uT",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Piepiopi",
+          "clientID": "BPeJzEYD",
+          "clanTag": null
+        },
+        {
+          "username": "Fionnan",
+          "clientID": "B85K2bKL",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 2620,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-18T22:37:30.453Z",
+      "url": "https://openfront.io/game/cdCJD5uT"
     }
   ]
 }
