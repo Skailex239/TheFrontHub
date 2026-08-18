@@ -15616,6 +15616,52 @@
       "numPlayers": 64,
       "timestamp": "2026-08-18T10:13:03.192Z",
       "url": "https://openfront.io/game/4ht3x5ip"
+    },
+    {
+      "id": "AXv6ptwn",
+      "team": "Team 20",
+      "players": [
+        {
+          "username": "AnonMedallion3",
+          "clientID": "dJPqTxur",
+          "clanTag": null
+        },
+        {
+          "username": "Anon861",
+          "clientID": "pK91B142",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1786,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-18T10:19:33.597Z",
+      "url": "https://openfront.io/game/AXv6ptwn"
+    },
+    {
+      "id": "bED3pjnn",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Voldemort",
+          "clientID": "DMxEmQJh",
+          "clanTag": "MIKSI"
+        },
+        {
+          "username": "normmaalipoikavalte",
+          "clientID": "rb1uBfbd",
+          "clanTag": "MIKSI"
+        }
+      ],
+      "map": "France",
+      "duration_s": 1270,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "timestamp": "2026-08-18T10:30:01.801Z",
+      "url": "https://openfront.io/game/bED3pjnn"
     }
   ],
   "trios": [
@@ -74701,6 +74747,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-18T10:00:32.368Z",
       "url": "https://openfront.io/game/aGCtpH8u"
+    },
+    {
+      "id": "uhrdW2Bf",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SPoS",
+          "clientID": "H4GZ9mQc",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "cazi",
+          "clientID": "EkfSagyN",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Hamza",
+          "clientID": "9dtscTBo",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Taya",
+          "clientID": "2Dyggfz3",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 334,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-18T10:36:36.263Z",
+      "url": "https://openfront.io/game/uhrdW2Bf"
     }
   ]
 }
