@@ -133,6 +133,7 @@ body{
     -webkit-font-smoothing:antialiased;
     line-height:1.5;
     overflow-x:hidden;
+    transition:background 0.2s var(--ease),color 0.2s var(--ease);
 }
 
 /* ── Loading Bar ── */
@@ -1260,4 +1261,77 @@ button:active,.btn-primary:active,.btn-secondary:active,.btn-ghost:active,
 .mode-btn:active,.share-btn:active,.gg-btn:active,.run-replay:active,
 .feed-replay:active,.login-btn-sidebar:active,.mode-dropdown-item:active{
     transform:scale(.98);
+}
+
+/* ═══════════════════════════════════════════
+   THEME + LANGUAGE TOGGLES (sidebar)
+   ═══════════════════════════════════════════ */
+.theme-toggle {
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 16px 12px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md, 8px);
+  background: var(--bg);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.theme-icon-moon { display: none; }
+:root.dark .theme-icon-sun { display: none; }
+:root.dark .theme-icon-moon { display: block; }
+
+.lang-toggle {
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 16px 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md, 8px);
+  background: var(--bg);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-weight: 600;
+  font-size: 12px;
+}
+.lang-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* When toggles are wrapped in a flex container, make them share the width evenly */
+[style*="display:flex"][style*="gap:8px"] > .theme-toggle,
+[style*="display:flex"][style*="gap:8px"] > .lang-toggle {
+  flex: 1;
+  margin: 0;
+}
+
+/* ═══ DARK MODE ═══ */
+:root.dark {
+  --bg: #0F0F11;
+  --bg-subtle: #1A1A1E;
+  --bg-muted: #242428;
+  --fg: #F4F4F5;
+  --fg-secondary: #D4D4D8;
+  --fg-muted: #9CA3AF;
+  --fg-subtle: #71717A;
+  --border: #2A2A2E;
+  --border-subtle: #1F1F23;
+  --accent: #FF6B00;
+  --accent-hover: #FF8533;
+  --accent-subtle: #2A1A0A;
+  --accent-border: #4A3020;
+  --card: #1A1A1E;
+  --orange-pale: #2A1A0A;
+  --card: #1A1A1E;
+  --text: #F4F4F5;
+  --text2: #D4D4D8;
+  --text3: #9CA3AF;
+  --muted: #9CA3AF;
+  --bg2: #242428;
+  --border-light: #2A2A2E;
 }

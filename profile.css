@@ -1210,3 +1210,31 @@
     height: 48px;
   }
 }
+
+/* ═══════════════════════════════════════════
+   DARK MODE — profile.css overrides
+   Ensures profile-specific cards use --card
+   ═══════════════════════════════════════════ */
+/* Base rule: ensure cockpit + reward cards pick up card background
+   (some are injected via profile.js with inline styles that already
+   use var(--card), but providing a class-level fallback is harmless
+   because inline styles win specificity-wise.) */
+.cockpit-card,
+.reward-code-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+:root.dark .pf-header-card,
+:root.dark .cockpit-card,
+:root.dark .reward-code-card {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+/* Profile-specific dark tweaks — subtle adjustments only */
+:root.dark .pf-game-result.win  { background: rgba(80,200,120,.18); color: #4ADE80; }
+:root.dark .pf-game-result.loss { background: rgba(220,80,80,.18);  color: #F87171; }
+:root.dark .pf-error-banner     { background: rgba(255,120,80,.15); border-color: rgba(255,120,80,.45); }
+:root.dark .pf-show-all:hover   { background: var(--bg-muted); }

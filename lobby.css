@@ -484,3 +484,21 @@
   .lobby-game-mode { font-size: 11px; }
   .lobby-game-players { font-size: 12px; }
 }
+
+/* ═══════════════════════════════════════════
+   DARK MODE — lobby.css overrides
+   Ensures lobby-game cards use --card
+   ═══════════════════════════════════════════ */
+:root.dark .lobby-game {
+  background: var(--card);
+}
+:root.dark .lobby-game:hover {
+  background: var(--accent-subtle);
+}
+:root.dark .lobby-next {
+  background: var(--card);
+}
+:root.dark .lobby-status {
+  background: var(--bg-subtle);
+}
+
