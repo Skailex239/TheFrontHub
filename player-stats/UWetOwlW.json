@@ -1,27 +1,27 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-18T09:01:10.721Z",
-  "lastSyncedAt": "2026-08-18T09:01:08.813Z",
-  "totalGames": 3049,
+  "computedAt": "2026-08-18T09:46:24.639Z",
+  "lastSyncedAt": "2026-08-18T09:46:23.166Z",
+  "totalGames": 3054,
   "careerWins": {
     "ffaCasual": 492,
-    "ffaRanked": 261,
+    "ffaRanked": 262,
     "teamCasual": 331,
     "teamRanked": 117
   },
-  "totalWins": 1201,
-  "points": 6953,
+  "totalWins": 1202,
+  "points": 6954,
   "level": 69,
-  "levelProgress": 53,
+  "levelProgress": 54,
   "levelNextAt": 7000,
   "nextMilestones": {
     "wins": {
-      "current": 1201,
+      "current": 1202,
       "target": 2000
     },
     "playtime": {
-      "current": 740,
+      "current": 741,
       "target": 1000
     },
     "maps": {
@@ -39,19 +39,19 @@
     4
   ],
   "formatted": {
-    "points": "6 953",
-    "totalWins": "1 201",
-    "totalGames": "3 049",
-    "totalPlaytime": "30j 20h",
-    "totalPlaytimeCompact": "30j 20h",
-    "avgGameDuration": "14m 34s",
+    "points": "6 954",
+    "totalWins": "1 202",
+    "totalGames": "3 054",
+    "totalPlaytime": "30j 21h",
+    "totalPlaytimeCompact": "30j 21h",
+    "avgGameDuration": "14m 33s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "740h"
+    "totalPlaytimeHours": "741h"
   },
   "playtime": {
-    "totalSec": 2666378,
-    "avgGameSec": 874.5090193506068,
+    "totalSec": 2668286,
+    "avgGameSec": 873.702030124427,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
@@ -61,9 +61,9 @@
         "wins": 492
       },
       "ffaRanked": {
-        "games": 394,
-        "playtimeSec": 117209,
-        "wins": 261
+        "games": 399,
+        "playtimeSec": 119117,
+        "wins": 262
       },
       "teamCasual": {
         "games": 904,
@@ -78,20 +78,20 @@
     }
   },
   "results": {
-    "victory": 1201,
-    "defeat": 1242,
+    "victory": 1202,
+    "defeat": 1246,
     "incomplete": 606
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 492,
+      "count": 493,
       "wins": 316,
-      "losses": 176,
-      "playtimeSec": 261615,
-      "avgDuration": 531.7378048780488,
-      "winRate": 0.6422764227642277,
-      "lastPlayed": 1787041041594,
+      "losses": 177,
+      "playtimeSec": 262171,
+      "avgDuration": 531.7870182555781,
+      "winRate": 0.640973630831643,
+      "lastPlayed": 1787045747772,
       "formatted": {
         "playtime": "3j 0h",
         "avgDuration": "8m",
@@ -101,18 +101,18 @@
     },
     {
       "map": "Iceland",
-      "count": 143,
-      "wins": 90,
-      "losses": 53,
-      "playtimeSec": 64960,
-      "avgDuration": 454.26573426573424,
-      "winRate": 0.6293706293706294,
-      "lastPlayed": 1786426983277,
+      "count": 145,
+      "wins": 91,
+      "losses": 54,
+      "playtimeSec": 65616,
+      "avgDuration": 452.5241379310345,
+      "winRate": 0.6275862068965518,
+      "lastPlayed": 1787045083999,
       "formatted": {
-        "playtime": "18h 2m",
+        "playtime": "18h 13m",
         "avgDuration": "7m",
         "winRate": "63%",
-        "lastPlayed": "11/08/26"
+        "lastPlayed": "18/08/26"
       }
     },
     {
@@ -133,18 +133,18 @@
     },
     {
       "map": "Europe Classic",
-      "count": 92,
+      "count": 94,
       "wins": 50,
-      "losses": 42,
-      "playtimeSec": 55897,
-      "avgDuration": 607.5760869565217,
-      "winRate": 0.5434782608695652,
-      "lastPlayed": 1786427920897,
+      "losses": 44,
+      "playtimeSec": 56593,
+      "avgDuration": 602.0531914893617,
+      "winRate": 0.5319148936170213,
+      "lastPlayed": 1787044688472,
       "formatted": {
-        "playtime": "15h 31m",
+        "playtime": "15h 43m",
         "avgDuration": "10m",
-        "winRate": "54%",
-        "lastPlayed": "11/08/26"
+        "winRate": "53%",
+        "lastPlayed": "18/08/26"
       }
     },
     {
@@ -1409,7 +1409,7 @@
       142,
       175,
       208,
-      188,
+      193,
       72,
       157,
       219,
@@ -1425,7 +1425,7 @@
     ],
     "byWeekday": [
       272,
-      436,
+      441,
       424,
       386,
       360,
@@ -1889,7 +1889,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 0,
     "best": 42
   },
   "achievements": {
@@ -1965,6 +1965,61 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "mYMLSiSv",
+      "start": "2026-08-18T09:35:47.772Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 556,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
+    {
+      "gameId": "LfFCRNpG",
+      "start": "2026-08-18T09:24:43.999Z",
+      "map": "Iceland",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 625,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
+    {
+      "gameId": "Z9rosjpv",
+      "start": "2026-08-18T09:18:08.472Z",
+      "map": "Europe Classic",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 374,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
+    {
+      "gameId": "NvPKLPGr",
+      "start": "2026-08-18T09:12:07.117Z",
+      "map": "Europe Classic",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 322,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
+    {
+      "gameId": "dWt1gHab",
+      "start": "2026-08-18T09:03:27.498Z",
+      "map": "Iceland",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 31,
+      "totalPlayers": 1,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
     {
       "gameId": "etCWpHVQ",
       "start": "2026-08-18T08:17:21.594Z",
@@ -2129,61 +2184,6 @@
       "totalPlayers": 77,
       "rankedType": "unranked",
       "category": "teamCasual"
-    },
-    {
-      "gameId": "3ywHXG2S",
-      "start": "2026-08-11T06:16:47.472Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 321,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "zgcRsHk5",
-      "start": "2026-08-11T05:58:40.897Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 148,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "a2hntMfz",
-      "start": "2026-08-11T05:47:28.041Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 632,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "Zdc2LUpo",
-      "start": "2026-08-11T05:43:03.277Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 226,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "eqMLgpxU",
-      "start": "2026-08-09T14:43:11.728Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 414,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
     }
   ]
 }
