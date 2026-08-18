@@ -43363,6 +43363,34 @@
       "numPlayers": 36,
       "timestamp": "2026-08-18T13:48:27.384Z",
       "url": "https://openfront.io/game/8q8jRcPX"
+    },
+    {
+      "id": "CWvUPuYQ",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "thehonoredone",
+          "clientID": "9DqfUKdT",
+          "clanTag": null
+        },
+        {
+          "username": "NHH",
+          "clientID": "Cd6Jw19B",
+          "clanTag": "NHH"
+        },
+        {
+          "username": "Merchant Republic",
+          "clientID": "Kc4XpG9E",
+          "clanTag": null
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1195,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "timestamp": "2026-08-18T14:13:50.059Z",
+      "url": "https://openfront.io/game/CWvUPuYQ"
     }
   ],
   "quads": [
@@ -75657,6 +75685,34 @@
       "numPlayers": 108,
       "timestamp": "2026-08-18T13:38:13.746Z",
       "url": "https://openfront.io/game/c8VCJ7xz"
+    },
+    {
+      "id": "gtQcooMk",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Birb",
+          "clientID": "469gRvKY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Tutorial",
+          "clientID": "pPasRFgz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Fan Hellsing",
+          "clientID": "Se7sFFBm",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T14:14:11.584Z",
+      "url": "https://openfront.io/game/gtQcooMk"
     }
   ]
 }
