@@ -15749,6 +15749,29 @@
       "numPlayers": 64,
       "timestamp": "2026-08-18T11:40:55.900Z",
       "url": "https://openfront.io/game/gw3eRYL7"
+    },
+    {
+      "id": "wVPjbZDr",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "Chalaza",
+          "clientID": "Ptn9EPFk",
+          "clanTag": null
+        },
+        {
+          "username": "SpyZ",
+          "clientID": "kUifxKBH",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1168,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T12:21:24.536Z",
+      "url": "https://openfront.io/game/wVPjbZDr"
     }
   ],
   "trios": [
@@ -43041,6 +43064,24 @@
       "numPlayers": 30,
       "timestamp": "2026-08-18T11:56:56.926Z",
       "url": "https://openfront.io/game/jz1NDB2J"
+    },
+    {
+      "id": "hx3rjnQv",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "viteazul",
+          "clientID": "4iwY66Bx",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 2512,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "timestamp": "2026-08-18T11:54:12.757Z",
+      "url": "https://openfront.io/game/hx3rjnQv"
     }
   ],
   "quads": [
@@ -75124,6 +75165,39 @@
       "numPlayers": 112,
       "timestamp": "2026-08-18T11:50:04.007Z",
       "url": "https://openfront.io/game/HtBumhY3"
+    },
+    {
+      "id": "CH38wXqF",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Ibrahim Traore",
+          "clientID": "3xzSxsKY",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "AnonZenith5",
+          "clientID": "fGipR6g6",
+          "clanTag": null
+        },
+        {
+          "username": "Bingus",
+          "clientID": "x2KrCFBA",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "Euski",
+          "clientID": "DLFF8UpW",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 754,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T12:28:10.970Z",
+      "url": "https://openfront.io/game/CH38wXqF"
     }
   ]
 }
