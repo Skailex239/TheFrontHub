@@ -15987,6 +15987,29 @@
       "numPlayers": 60,
       "timestamp": "2026-08-18T16:00:46.350Z",
       "url": "https://openfront.io/game/K2Nuam38"
+    },
+    {
+      "id": "EnXptjtQ",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Asurn",
+          "clientID": "vQG6V2kZ",
+          "clanTag": "TRADE"
+        },
+        {
+          "username": "Yedonculus",
+          "clientID": "9iNZR34c",
+          "clanTag": "TRADE"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1518,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "timestamp": "2026-08-18T17:09:02.901Z",
+      "url": "https://openfront.io/game/EnXptjtQ"
     }
   ],
   "trios": [
@@ -43728,6 +43751,34 @@
       "numPlayers": 71,
       "timestamp": "2026-08-18T17:00:22.316Z",
       "url": "https://openfront.io/game/Q1sa8jC3"
+    },
+    {
+      "id": "D4nwW8qP",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Ibico",
+          "clientID": "eh9VHjpc",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "Oscalabama",
+          "clientID": "4ctfXHyM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGinger4",
+          "clientID": "mLP7GhDf",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1238,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-18T17:16:03.329Z",
+      "url": "https://openfront.io/game/D4nwW8qP"
     }
   ],
   "quads": [
@@ -76391,6 +76442,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-18T16:49:14.543Z",
       "url": "https://openfront.io/game/zUs3JSmB"
+    },
+    {
+      "id": "pDEgWM4k",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "The Little Kingdom",
+          "clientID": "CsHT4xsE",
+          "clanTag": "TLK"
+        },
+        {
+          "username": "Hubris",
+          "clientID": "UomKPGtR",
+          "clanTag": null
+        },
+        {
+          "username": "RedAly",
+          "clientID": "wpq3f3Bz",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1239,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-18T17:04:26.077Z",
+      "url": "https://openfront.io/game/pDEgWM4k"
     }
   ]
 }
