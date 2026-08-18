@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-18T10:16:13.167Z",
+  "lastSyncedAt": "2026-08-18T10:21:45.554Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.1,
-  "totalGames": 2167,
-  "newGamesThisSync": 0,
+  "totalGames": 2168,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "Tk3bYuUS",
+      "start": "2026-08-18T10:08:23.380Z",
+      "durationSeconds": 765,
+      "map": "Deglaciated Antarctica",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 28,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "1RFdmYdB",
       "start": "2026-08-17T22:01:51.109Z",

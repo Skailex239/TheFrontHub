@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-18T10:16:16.162Z",
-  "lastSyncedAt": "2026-08-18T10:16:13.167Z",
-  "totalGames": 2167,
+  "computedAt": "2026-08-18T10:21:47.924Z",
+  "lastSyncedAt": "2026-08-18T10:21:45.554Z",
+  "totalGames": 2168,
   "careerWins": {
-    "ffaCasual": 372,
+    "ffaCasual": 373,
     "ffaRanked": 325,
     "teamCasual": 47,
     "teamRanked": 60
   },
-  "totalWins": 804,
-  "points": 4340,
+  "totalWins": 805,
+  "points": 4350,
   "level": 43,
-  "levelProgress": 40,
+  "levelProgress": 50,
   "levelNextAt": 4400,
   "nextMilestones": {
     "wins": {
-      "current": 804,
+      "current": 805,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 340",
-    "totalWins": "804",
-    "totalGames": "2 167",
+    "points": "4 350",
+    "totalWins": "805",
+    "totalGames": "2 168",
     "totalPlaytime": "22j 19h",
     "totalPlaytimeCompact": "22j 19h",
     "avgGameDuration": "15m 8s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "547h"
   },
   "playtime": {
-    "totalSec": 1969603,
-    "avgGameSec": 908.9077065066913,
+    "totalSec": 1970368,
+    "avgGameSec": 908.8413284132841,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1377,
-        "playtimeSec": 1592661,
-        "wins": 372
+        "games": 1378,
+        "playtimeSec": 1593426,
+        "wins": 373
       },
       "ffaRanked": {
         "games": 494,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 804,
+    "victory": 805,
     "defeat": 1039,
     "incomplete": 324
   },
@@ -644,6 +644,22 @@
       }
     },
     {
+      "map": "Deglaciated Antarctica",
+      "count": 14,
+      "wins": 2,
+      "losses": 12,
+      "playtimeSec": 18048,
+      "avgDuration": 1289.142857142857,
+      "winRate": 0.14285714285714285,
+      "lastPlayed": 1787047703380,
+      "formatted": {
+        "playtime": "5h 0m",
+        "avgDuration": "21m",
+        "winRate": "14%",
+        "lastPlayed": "18/08/26"
+      }
+    },
+    {
       "map": "Between Two Seas",
       "count": 14,
       "wins": 5,
@@ -721,22 +737,6 @@
         "avgDuration": "17m",
         "winRate": "31%",
         "lastPlayed": "15/07/26"
-      }
-    },
-    {
-      "map": "Deglaciated Antarctica",
-      "count": 13,
-      "wins": 1,
-      "losses": 12,
-      "playtimeSec": 17283,
-      "avgDuration": 1329.4615384615386,
-      "winRate": 0.07692307692307693,
-      "lastPlayed": 1783773634713,
-      "formatted": {
-        "playtime": "4h 48m",
-        "avgDuration": "22m",
-        "winRate": "8%",
-        "lastPlayed": "11/07/26"
       }
     },
     {
@@ -1618,7 +1618,7 @@
       12,
       40,
       69,
-      70,
+      71,
       124,
       130,
       143,
@@ -1633,7 +1633,7 @@
     ],
     "byWeekday": [
       302,
-      220,
+      221,
       289,
       325,
       346,
@@ -1803,8 +1803,8 @@
       },
       {
         "date": "18/08/2026",
-        "count": 2,
-        "playtimeSec": 329
+        "count": 3,
+        "playtimeSec": 1094
       },
       {
         "date": "19/03/2026",
@@ -2097,7 +2097,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 5,
+    "current": 6,
     "best": 15
   },
   "achievements": {
@@ -2173,6 +2173,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "Tk3bYuUS",
+      "start": "2026-08-18T10:08:23.380Z",
+      "map": "Deglaciated Antarctica",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 765,
+      "totalPlayers": 28,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "1RFdmYdB",
       "start": "2026-08-17T22:01:51.109Z",
@@ -2379,17 +2390,6 @@
       "result": "defeat",
       "durationSeconds": 1385,
       "totalPlayers": 98,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "VMCchMhX",
-      "start": "2026-08-17T16:35:46.295Z",
-      "map": "Alps",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1305,
-      "totalPlayers": 119,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
