@@ -15470,6 +15470,24 @@
       "numPlayers": 65,
       "timestamp": "2026-08-18T07:56:36.360Z",
       "url": "https://openfront.io/game/dG4tddQ1"
+    },
+    {
+      "id": "8ZZuT4Cy",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Oil",
+          "clientID": "NkD8tr6X",
+          "clanTag": "NKTN"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 2121,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "timestamp": "2026-08-18T07:54:12.215Z",
+      "url": "https://openfront.io/game/8ZZuT4Cy"
     }
   ],
   "trios": [
@@ -42502,6 +42520,34 @@
       "numPlayers": 18,
       "timestamp": "2026-08-18T07:54:36.240Z",
       "url": "https://openfront.io/game/cMg3KV4M"
+    },
+    {
+      "id": "PejyDvRA",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Anon089",
+          "clientID": "SwQKAhpJ",
+          "clanTag": null
+        },
+        {
+          "username": "KarlFlow",
+          "clientID": "qbd3qPdE",
+          "clanTag": "MOL"
+        },
+        {
+          "username": "IRGC",
+          "clientID": "HcvqP62W",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1556,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-18T08:03:27.785Z",
+      "url": "https://openfront.io/game/PejyDvRA"
     }
   ],
   "quads": [
