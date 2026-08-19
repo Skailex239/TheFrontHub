@@ -2265,3 +2265,226 @@ button:active:not(:disabled),
     padding: 0;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   📌 FOOTER (commun à toutes les pages)
+   Style moderne (Linear/Stripe/Vercel-like) — cohérent avec le reste du site.
+   S'adapte au dark mode automatiquement via les variables CSS.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.tfh-footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-12);
+  padding: var(--space-10) var(--space-4) var(--space-6);
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.tfh-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent) 50%,
+    transparent 100%);
+  opacity: 0.4;
+}
+
+.tfh-footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-8);
+  padding: 0 var(--space-4);
+}
+
+.tfh-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tfh-footer-brand .tfh-footer-logo img {
+  height: 32px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity var(--dur) var(--ease);
+}
+.tfh-footer-brand .tfh-footer-logo:hover img {
+  opacity: 1;
+}
+
+.tfh-footer-tagline {
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0;
+}
+
+.tfh-footer-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #5865F2;
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--dur) var(--ease);
+  width: fit-content;
+  -webkit-tap-highlight-color: transparent;
+}
+.tfh-footer-discord:hover {
+  background: #4752C4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+.tfh-footer-discord:active {
+  transform: scale(0.97);
+}
+.tfh-footer-discord svg {
+  flex-shrink: 0;
+}
+
+.tfh-footer-title {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--fg-secondary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.tfh-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tfh-footer-links a {
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: color var(--dur) var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tfh-footer-links a:hover {
+  color: var(--accent);
+}
+
+.tfh-footer-bottom {
+  max-width: 1280px;
+  margin: var(--space-8) auto 0;
+  padding: var(--space-4) var(--space-4) 0;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--fg-subtle);
+}
+.tfh-footer-bottom p {
+  margin: 0;
+}
+.tfh-footer-made {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tfh-heart {
+  color: var(--accent);
+  animation: tfh-heart-beat 2s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes tfh-heart-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* ── FOOTER RESPONSIVE ─────────────────────────────────────────────────── */
+
+/* Tablette (≤ 1024px) : 2 colonnes pour la brand, 1 colonne pour les liens */
+@media (max-width: 1024px) {
+  .tfh-footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+  .tfh-footer-brand {
+    grid-column: 1 / -1;  /* prend toute la largeur */
+  }
+  .tfh-footer-tagline {
+    max-width: 100%;
+  }
+  .tfh-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* Mobile (≤ 768px) : 1 seule colonne, tout empilé */
+@media (max-width: 768px) {
+  .tfh-footer {
+    margin-top: var(--space-8);
+    padding: var(--space-6) var(--space-3) var(--space-4);
+    /* Add space for the bottom-nav */
+    padding-bottom: calc(var(--space-4) + 80px);
+  }
+  .tfh-footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: 0;
+  }
+  .tfh-footer-brand {
+    grid-column: 1;
+  }
+  .tfh-footer-discord {
+    width: 100%;
+    justify-content: center;
+  }
+  .tfh-footer-bottom {
+    padding: var(--space-4) 0 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Petit mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .tfh-footer {
+    padding: var(--space-5) var(--space-2) var(--space-4);
+  }
+  .tfh-footer-tagline {
+    font-size: var(--text-xs);
+  }
+}
+
+/* ── FOOTER en DARK MODE (utilise déjà les variables, mais on ajoute qques ajustements) ── */
+:root[data-theme="dark"] .tfh-footer,
+:root.dark .tfh-footer {
+  background: var(--bg);
+}
+:root[data-theme="dark"] .tfh-footer-discord {
+  background: #5865F2;
+}
+:root[data-theme="dark"] .tfh-footer-discord:hover {
+  background: #7983F5;
+}
