@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-19T18:17:38.201Z",
-  "lastSyncedAt": "2026-08-19T18:17:36.154Z",
-  "totalGames": 3791,
+  "computedAt": "2026-08-19T18:59:56.744Z",
+  "lastSyncedAt": "2026-08-19T18:59:54.423Z",
+  "totalGames": 3793,
   "careerWins": {
     "ffaCasual": 268,
     "ffaRanked": 1419,
     "teamCasual": 151,
-    "teamRanked": 136
+    "teamRanked": 137
   },
-  "totalWins": 1974,
-  "points": 4990,
+  "totalWins": 1975,
+  "points": 4991,
   "level": 49,
-  "levelProgress": 90,
+  "levelProgress": 91,
   "levelNextAt": 5000,
   "nextMilestones": {
     "wins": {
-      "current": 1974,
+      "current": 1975,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "4 990",
-    "totalWins": "1 974",
-    "totalGames": "3 791",
+    "points": "4 991",
+    "totalWins": "1 975",
+    "totalGames": "3 793",
     "totalPlaytime": "30j 21h",
     "totalPlaytimeCompact": "30j 21h",
     "avgGameDuration": "11m 43s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "741h"
   },
   "playtime": {
-    "totalSec": 2668635,
-    "avgGameSec": 703.9395937747296,
+    "totalSec": 2669160,
+    "avgGameSec": 703.7068283680464,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -71,27 +71,27 @@
         "wins": 151
       },
       "teamRanked": {
-        "games": 211,
-        "playtimeSec": 56691,
-        "wins": 136
+        "games": 213,
+        "playtimeSec": 57216,
+        "wins": 137
       }
     }
   },
   "results": {
-    "victory": 1974,
-    "defeat": 1486,
+    "victory": 1975,
+    "defeat": 1487,
     "incomplete": 331
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 963,
-      "wins": 688,
-      "losses": 275,
-      "playtimeSec": 407142,
-      "avgDuration": 422.78504672897196,
-      "winRate": 0.7144340602284528,
-      "lastPlayed": 1787157508767,
+      "count": 965,
+      "wins": 689,
+      "losses": 276,
+      "playtimeSec": 407667,
+      "avgDuration": 422.45284974093266,
+      "winRate": 0.7139896373056995,
+      "lastPlayed": 1787163590148,
       "formatted": {
         "playtime": "4j 17h",
         "avgDuration": "7m",
@@ -1610,7 +1610,7 @@
       324,
       351,
       345,
-      320,
+      322,
       304,
       244,
       230
@@ -1618,7 +1618,7 @@
     "byWeekday": [
       547,
       589,
-      491,
+      493,
       548,
       480,
       576,
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 5,
+    "current": 0,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,28 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "oC6fP4Fb",
+      "start": "2026-08-19T18:19:50.148Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 396,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "kD4bp4q5",
+      "start": "2026-08-19T18:16:20.912Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 129,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "92dqfDf4",
       "start": "2026-08-19T17:48:58.551Z",
@@ -2354,28 +2376,6 @@
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
-    },
-    {
-      "gameId": "NZPxbEKM",
-      "start": "2026-08-19T08:13:37.289Z",
-      "map": "Iceland",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 1111,
-      "totalPlayers": 51,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "agAaVSQQ",
-      "start": "2026-08-19T07:57:27.240Z",
-      "map": "Juan De Fuca Strait",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 942,
-      "totalPlayers": 79,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }
