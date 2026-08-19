@@ -46411,6 +46411,29 @@
       "numPlayers": 90,
       "timestamp": "2026-08-19T18:18:03.049Z",
       "url": "https://openfront.io/game/wTX5M9Fa"
+    },
+    {
+      "id": "PC5SjgP8",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Trader",
+          "clientID": "DsobRw5T",
+          "clanTag": "UN"
+        },
+        {
+          "username": "mitochondria",
+          "clientID": "BzRopYwd",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 1166,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-19T18:44:11.915Z",
+      "url": "https://openfront.io/game/PC5SjgP8"
     }
   ],
   "quads": [
@@ -81504,6 +81527,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-19T18:31:30.534Z",
       "url": "https://openfront.io/game/Nvp1r1vc"
+    },
+    {
+      "id": "NNcTyiNm",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonHarbor5",
+          "clientID": "36EZxgNs",
+          "clanTag": null
+        },
+        {
+          "username": "doctorwhofs",
+          "clientID": "F6dCem2x",
+          "clanTag": "UN"
+        },
+        {
+          "username": "forthe",
+          "clientID": "8hUEh48H",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Attack the strongest not me",
+          "clientID": "4Rh5BPV8",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 661,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-19T18:45:58.934Z",
+      "url": "https://openfront.io/game/NNcTyiNm"
     }
   ]
 }
