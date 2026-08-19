@@ -16880,6 +16880,24 @@
       "numPlayers": 38,
       "timestamp": "2026-08-19T18:29:01.553Z",
       "url": "https://openfront.io/game/2JLuebva"
+    },
+    {
+      "id": "miYCvZZd",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "weloni",
+          "clientID": "8PxNy41h",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1662,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "timestamp": "2026-08-19T19:30:37.510Z",
+      "url": "https://openfront.io/game/miYCvZZd"
     }
   ],
   "trios": [
@@ -81606,6 +81624,39 @@
       "numPlayers": 80,
       "timestamp": "2026-08-19T18:49:16.933Z",
       "url": "https://openfront.io/game/k26g387p"
+    },
+    {
+      "id": "pUdSvxfV",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Hegel",
+          "clientID": "mhU4xnd3",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Iku",
+          "clientID": "JYn64g9f",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Giant Paul",
+          "clientID": "zRp8W4kZ",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "justacommie",
+          "clientID": "cZ8TSjKH",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 815,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-19T19:38:33.807Z",
+      "url": "https://openfront.io/game/pUdSvxfV"
     }
   ]
 }
