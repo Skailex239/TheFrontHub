@@ -44338,6 +44338,34 @@
       "numPlayers": 24,
       "timestamp": "2026-08-18T23:27:56.766Z",
       "url": "https://openfront.io/game/PvcbvwuJ"
+    },
+    {
+      "id": "SnoKKbEB",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "888",
+          "clientID": "T5JWtvJx",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCompass4",
+          "clientID": "CriNE7Ww",
+          "clanTag": null
+        },
+        {
+          "username": "RedAly",
+          "clientID": "zq3dGwyY",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1130,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-18T23:38:24.487Z",
+      "url": "https://openfront.io/game/SnoKKbEB"
     }
   ],
   "quads": [
@@ -77604,6 +77632,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-18T22:37:30.453Z",
       "url": "https://openfront.io/game/cdCJD5uT"
+    },
+    {
+      "id": "u5eYa5FH",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "mrgorillaz",
+          "clientID": "Aatnstnq",
+          "clanTag": null
+        },
+        {
+          "username": "dogwater",
+          "clientID": "YATMQmAs",
+          "clanTag": null
+        },
+        {
+          "username": "DeadSeaMan",
+          "clientID": "VxB1J5kY",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "deathnote",
+          "clientID": "Jn2Ng38G",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 550,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-18T23:46:56.580Z",
+      "url": "https://openfront.io/game/u5eYa5FH"
     }
   ]
 }
