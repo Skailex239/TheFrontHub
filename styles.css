@@ -1335,3 +1335,764 @@ button:active,.btn-primary:active,.btn-secondary:active,.btn-ghost:active,
   --bg2: #242428;
   --border-light: #2A2A2E;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   🎨 DESIGN SYSTEM UNIFIÉ — Sprint Design (D2-D5)
+   Ajouté pour harmoniser tous les écrans sans casser les styles existants.
+
+   Principes :
+   - Les classes utilitaires ci-dessous peuvent être utilisées partout
+   - Les anciennes classes (.auth-btn, .pf-primary-btn, .runs-btn, etc.)
+     sont rétro-aliassées pour utiliser ces nouvelles classes automatiquement
+   - Mobile-first : breakpoints à 768px et 1024px
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── BOUTONS UNIFIÉS ────────────────────────────────────────────────────── */
+/* Base commune à tous les boutons */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-family: var(--f);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: background var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              transform var(--dur-fast) var(--ease),
+              box-shadow var(--dur) var(--ease);
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--orange-glow);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}
+.btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: var(--bg);
+  color: var(--fg);
+  border-color: var(--border);
+}
+.btn-secondary:hover {
+  background: var(--bg-subtle);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+.btn-secondary:active {
+  transform: scale(0.97);
+  background: var(--bg-muted);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg-secondary);
+  border-color: transparent;
+}
+.btn-ghost:hover {
+  background: var(--bg-subtle);
+  color: var(--fg);
+}
+.btn-ghost:active {
+  transform: scale(0.97);
+  background: var(--bg-muted);
+}
+
+/* Variant sizing */
+.btn-sm { padding: 6px 10px; font-size: var(--text-sm); }
+.btn-lg { padding: 14px 22px; font-size: var(--text-lg); }
+.btn-icon { padding: 8px; aspect-ratio: 1; }
+.btn-block { width: 100%; }
+
+/* Focus visible cohérent pour tous les boutons */
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-ghost:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* ── ALIAS : anciennes classes → nouvelles ─────────────────────────────── */
+/* Pour ne pas casser les pages existantes, on fait hériter les anciennes
+   classes des nouveaux styles .btn-* */
+.auth-btn,
+.pf-primary-btn {
+  /* Même apparence que .btn-secondary pour auth-btn, .btn-primary pour pf-primary-btn */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-family: var(--f);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: background var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              transform var(--dur-fast) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.auth-btn:hover,
+.pf-primary-btn:hover {
+  transform: translateY(-1px);
+}
+.auth-btn:active,
+.pf-primary-btn:active,
+.runs-btn:active,
+.prf-play-btn:active,
+.mode-btn:active,
+.share-btn:active,
+.filter-btn:active,
+.login-btn:active,
+.dropdown-item:active,
+.nav-item:active {
+  transform: scale(0.97);
+}
+
+.pf-ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-family: var(--f);
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--dur) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.pf-ghost-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── CARDS UNIFIÉES ────────────────────────────────────────────────────── */
+.card-base,
+.feed-card,
+.pf-gate-card,
+.pf-setup-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: border-color var(--dur) var(--ease),
+              background var(--dur) var(--ease),
+              transform var(--dur) var(--ease);
+}
+
+.feed-card:hover,
+.pf-gate-card:hover,
+.pf-setup-card:hover {
+  border-color: var(--accent-border);
+}
+
+/* Les .card de la stats grid gardent leur animation au hover existante */
+
+/* ── INPUTS UNIFIÉS ─────────────────────────────────────────────────────── */
+.input,
+.search-input,
+.pf-form-group input,
+.runs-ctrl input[type="number"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  font-family: var(--f);
+  font-size: var(--text-base);
+  color: var(--fg);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 9px 12px;
+  line-height: 1.5;
+  transition: border-color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease),
+              background var(--dur) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.search-input:focus,
+.pf-form-group input:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-focus);
+  background: var(--bg);
+}
+
+.input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: var(--fg-subtle);
+}
+
+/* ── BADGES UNIFIÉS ────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--fg-muted);
+  background: var(--bg-muted);
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.3px;
+}
+.badge-accent {
+  background: var(--accent-subtle);
+  color: var(--accent-hover);
+}
+.badge-success {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--green);
+}
+.badge-warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--warning);
+}
+.badge-error {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--red);
+}
+
+/* ── MICRO-INTERACTIONS : retour visuel au clic ────────────────────────── */
+/* S'applique à tous les éléments interactifs cliquables */
+button,
+[role="button"],
+.nav-item,
+.tab-btn,
+.mode-btn,
+.filter-btn,
+.dropdown-item,
+.see-more-btn,
+.gg-btn,
+.run-replay,
+.run-player,
+.map-item,
+.feed-item,
+.prf-topnav-link,
+.prf-drawer-link,
+.mode-dropdown-item {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--dur-fast) var(--ease),
+              background var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+}
+
+button:active:not(:disabled),
+[role="button"]:active,
+.nav-item:active,
+.tab-btn:active,
+.mode-btn:active,
+.filter-btn:active,
+.dropdown-item:active,
+.see-more-btn:active,
+.gg-btn:active,
+.map-item:active,
+.feed-item:active,
+.prf-topnav-link:active,
+.prf-drawer-link:active,
+.mode-dropdown-item:active {
+  transform: scale(0.97);
+}
+
+/* Hover lifts subtils sur les éléments cliquables (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  .feed-card:hover,
+  .map-item:hover,
+  .pf-gate-card:hover,
+  .atlas-card:hover,
+  .prf-tournament-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  }
+  .nav-item:hover {
+    background: var(--bg-subtle);
+    color: var(--fg);
+  }
+  .nav-item:hover .icon {
+    color: var(--accent);
+  }
+}
+
+/* Focus visible cohérent pour tous les éléments interactifs */
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius);
+}
+
+/* ── ANIMATIONS DE TRANSITION ──────────────────────────────────────────── */
+/* Fade-in subtil au chargement de page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app,
+.content > * {
+  animation: fadeInUp 0.3s var(--ease-out);
+}
+
+/* Stagger pour les listes (cartes, feed) */
+.map-item,
+.feed-item,
+.prf-tournament-card {
+  animation: fadeInUp 0.25s var(--ease-out) both;
+}
+
+.map-item:nth-child(1) { animation-delay: 0ms; }
+.map-item:nth-child(2) { animation-delay: 20ms; }
+.map-item:nth-child(3) { animation-delay: 40ms; }
+.map-item:nth-child(4) { animation-delay: 60ms; }
+.map-item:nth-child(5) { animation-delay: 80ms; }
+.map-item:nth-child(6) { animation-delay: 100ms; }
+.map-item:nth-child(7) { animation-delay: 120ms; }
+.map-item:nth-child(8) { animation-delay: 140ms; }
+.map-item:nth-child(n+9) { animation-delay: 160ms; }
+
+/* ── EMPTY STATES (au lieu de juste "Aucune donnée") ──────────────────── */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: var(--fg-muted);
+}
+.empty-state h3 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--fg-secondary);
+  margin: 0;
+}
+.empty-state p {
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+  margin: 0;
+  max-width: 320px;
+}
+.empty-state svg {
+  width: 48px;
+  height: 48px;
+  color: var(--fg-subtle);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+/* ── SKELETON LOADER (à la place de "Chargement...") ──────────────────── */
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--bg-subtle) 0%,
+    var(--bg-muted) 50%,
+    var(--bg-subtle) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: var(--radius);
+  display: block;
+  width: 100%;
+  height: 16px;
+}
+.skeleton-text { height: 12px; margin-bottom: 8px; }
+.skeleton-title { height: 20px; width: 60%; margin-bottom: 12px; }
+.skeleton-block { height: 80px; margin-bottom: 12px; }
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   📱 RESPONSIVE / MOBILE
+   Breakpoints : 1024px (tablette), 768px (mobile)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── TABLETTE (≤ 1024px) ─────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 64px;
+    padding: var(--space-3) var(--space-2);
+  }
+  .sidebar .logo img {
+    height: 36px;
+  }
+  /* Cacher les labels de nav-item, garder que les icônes */
+  .nav-item {
+    justify-content: center;
+    padding: 10px;
+  }
+  .nav-item i,
+  .nav-item .icon {
+    margin: 0;
+  }
+  .nav-item span:not(.icon) {
+    display: none;
+  }
+  /* Logo sans texte */
+  .sidebar .logo {
+    justify-content: center;
+  }
+  .content {
+    padding: var(--space-4);
+  }
+}
+
+/* ── MOBILE (≤ 768px) ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Layout devient column : content au-dessus, sidebar en bottom-nav */
+  .app {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .sidebar {
+    order: 2;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 4px;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.03);
+  }
+  .sidebar .logo,
+  .sidebar-profile {
+    display: none;  /* Cacher le logo et le profil sur mobile (bouton dédié) */
+  }
+  .sidebar nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+  .nav-item {
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 4px;
+    font-size: 10px;
+    border-radius: var(--radius);
+    min-height: 56px;
+  }
+  .nav-item i,
+  .nav-item .icon {
+    font-size: 18px;
+    margin: 0;
+  }
+  .nav-item span:not(.icon) {
+    display: block;  /* Re-afficher les labels en version courte */
+    font-size: 9px;
+    line-height: 1.1;
+  }
+
+  /* Content prend tout l'espace, avec padding-bottom pour bottom-nav */
+  .content {
+    flex: 1;
+    width: 100%;
+    padding: var(--space-3);
+    padding-bottom: 80px;  /* Space pour bottom-nav */
+  }
+
+  /* Topbar devient plus compacte */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+  .topbar-right {
+    width: 100%;
+    justify-content: space-between;
+    max-width: 100% !important;
+  }
+  .topbar-right #game-version,
+  .topbar-right #last-update {
+    font-size: 10px;
+  }
+
+  /* Stats grid : 2 colonnes au lieu de 4 sur mobile */
+  .stats-grid,
+  #ffa-stats-grid,
+  #ranked-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .stats-grid .card {
+    padding: 12px;
+  }
+  .stats-grid .card h2 {
+    font-size: 20px;
+  }
+  .stats-grid .card .stat-icon {
+    font-size: 18px;
+    top: 12px;
+    right: 12px;
+  }
+
+  /* Leaderboard : maps et records en colonne */
+  .leaderboard {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .leaderboard .maps {
+    width: 100%;
+    max-height: 200px;
+  }
+  .leaderboard .records {
+    width: 100%;
+  }
+
+  /* Chart grid : 1 colonne */
+  .chart-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Mode selector wrap */
+  .mode-selector-wrapper,
+  #mode-selector {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .mode-group {
+    flex: 1 1 100%;
+  }
+
+  /* Modal : full-screen sur mobile */
+  .modal-overlay.active .modal {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  /* Tournois : top-nav scrollable horizontalement */
+  .prf-topnav-links {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .prf-topnav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .prf-topnav-link {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Atlas : simplifier la vue */
+  .atlas-view,
+  #atlas-view {
+    padding: 8px;
+  }
+
+  /* Profile : pleine largeur */
+  .pf-gate-card,
+  .pf-setup-card,
+  .pf-main {
+    margin: 16px 0;
+    padding: 20px 16px;
+  }
+
+  /* Runs table : horizontal scroll */
+  .runs-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .runs-controls {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .runs-ctrl {
+    flex: 1;
+  }
+
+  /* Bottom safe area (notch iPhone) */
+  .sidebar {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+  .content {
+    padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom)));
+  }
+
+  /* Buttons full-width sur mobile par défaut (sauf .btn-icon et .btn-sm) */
+  .auth-btn,
+  .pf-primary-btn,
+  .pf-ghost-btn,
+  .runs-btn,
+  .share-btn:not(.btn-icon) {
+    width: 100%;
+  }
+
+  /* Filter buttons : scrollable horizontalement */
+  .filter-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── PETIT MOBILE (≤ 480px) ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --space-4: 12px;
+    --space-5: 14px;
+    --space-6: 16px;
+  }
+  .content {
+    padding: var(--space-2);
+    padding-bottom: 80px;
+  }
+  .stats-grid .card {
+    padding: 10px;
+  }
+  .stats-grid .card h2 {
+    font-size: 18px;
+  }
+  .stats-grid .card p {
+    font-size: 10px;
+  }
+
+  /* H1 plus petit sur mobile */
+  .topbar h1 {
+    font-size: 18px;
+  }
+
+  /* Modal auth : pleine largeur */
+  .auth-modal {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+}
+
+/* ── DARK MODE TOGGLE : auto-detect + respect prefers-color-scheme ─────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F0F11;
+    --bg-subtle: #1A1A1E;
+    --bg-muted: #242428;
+    --fg: #F4F4F5;
+    --fg-secondary: #D4D4D8;
+    --fg-muted: #9CA3AF;
+    --fg-subtle: #71717A;
+    --border: #2A2A2E;
+    --border-subtle: #1F1F23;
+    --border-strong: #3A3A3E;
+    --accent: #FF6B00;
+    --accent-hover: #FF8533;
+    --accent-subtle: #2A1A0A;
+    --accent-border: #4A3020;
+    --card: #1A1A1E;
+    --orange-pale: #2A1A0A;
+    --card: #1A1A1E;
+    --text: #F4F4F5;
+    --text2: #D4D4D8;
+    --text3: #9CA3AF;
+    --muted: #9CA3AF;
+    --bg2: #242428;
+    --border-light: #2A2A2E;
+    --shadow-focus: 0 0 0 3px rgba(255, 107, 0, 0.25);
+  }
+}
+
+/* ── REDUCED MOTION : respecter les préférences utilisateurs ──────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── PRINT : cacher les éléments non essentiels ────────────────────────── */
+@media print {
+  .sidebar,
+  .topbar-right,
+  .share-btn,
+  .modal-overlay,
+  .loading-bar-track {
+    display: none !important;
+  }
+  .content {
+    padding: 0;
+  }
+}

@@ -90,3 +90,4 @@ dashboard-*.png
 # resume from where it left off (otherwise it would have to re-scrape
 # 400 days of history from scratch, taking hours).
 # See GUIDE_NETTOYAGE.md for the rationale.
+.backup-ui-avant/
