@@ -36,7 +36,7 @@
 <noscript><link rel="stylesheet" href="animations.css?v=6"></noscript>
 <link rel="stylesheet" href="toast.css">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
-  <script type="module" src="icons.js?v=2"></script>
+  <script type="module" src="dist/icons.min.js?v=1"></script>
 </head>
 <body>
 <a href="#topbar-title" class="skip-link">Aller au contenu principal</a>
@@ -129,7 +129,11 @@
         <h1 id="topbar-title">Speedruns</h1>
         <p id="topbar-subtitle">OpenFront Leaderboard</p>
       </div>
-      <div class="topbar-right" style="overflow:hidden;max-width:300px">
+      <div class="topbar-right" style="overflow:hidden;max-width:300px;display:flex;align-items:center;gap:10px">
+        <button id="share-topbar-btn" onclick="shareCurrentView()" title="Partager cette page" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:var(--card);border:1px solid var(--border);border-radius:6px;cursor:pointer;color:var(--text2);font-size:12px;font-family:var(--f);transition:all .15s ease;flex-shrink:0">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          <span>Partager</span>
+        </button>
         <div id="game-version" class="game-version"></div>
         <div id="last-update" class="last-update-inline" style="margin:0;padding:0;font-size:12px"></div>
       </div>
@@ -497,11 +501,20 @@
   </div>
 </div>
 
-<script src="i18n.js"></script>
-<script src="toast.js?v=2" defer></script>
-<script src="lenis.js?v=2"></script>
-<script src="animations.js?v=13" defer></script>
-<script src="app.js?v=33" type="module"></script>
+<script src="dist/i18n.min.js?v=1"></script>
+<script src="dist/toast.min.js?v=1" defer></script>
+<script src="dist/lenis.min.js?v=1"></script>
+<script src="dist/animations.min.js?v=1" defer></script>
+<script src="dist/app.min.js?v=1" type="module"></script>
+
+<script>
+  // Register Service Worker for offline support + Stale-While-Revalidate caching
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js?v=8').catch(e => console.warn('[SW] Registration failed:', e));
+    });
+  }
+</script>
 
 </body>
 </html>

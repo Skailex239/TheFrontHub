@@ -71,3 +71,22 @@ live-*-final.png
 
 # All dashboard screenshots (never commit)
 dashboard-*.png
+
+# ─── Build artifacts ──────────────────────────────────────────────────────────
+# /dist/ IS committed because GitHub Pages doesn't run a build step.
+# The minified bundles must be present in the repo so they get deployed.
+# Run `node scripts/build.js` after editing source JS to regenerate them.
+
+# Build deps (local only — don't commit our local symlink or package-lock)
+/node_modules
+/package-lock.json
+
+# Build script temp
+/scripts/build.js.bak
+
+# NOTE: Heavy sync state files (runs.json.gz, seen.json, seen_compact.json,
+# runs_compact.json.gz, teams_runs.json, teams_seen.json, checkpoint*.json,
+# player-data/) are KEPT in git so the GitHub Actions sync workflow can
+# resume from where it left off (otherwise it would have to re-scrape
+# 400 days of history from scratch, taking hours).
+# See GUIDE_NETTOYAGE.md for the rationale.

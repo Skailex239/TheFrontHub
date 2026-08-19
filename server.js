@@ -315,36 +315,152 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // Serve bundled/minified JS from /dist/ (immutable cache because versioned via ?v=)
+  if (pathname.startsWith("/dist/")) {
+    const file = pathname.slice(1); // remove leading /
+    const filePath = path.join(STATIC_DIR, file);
+    if (fs.existsSync(filePath) && filePath.endsWith(".js")) {
+      const data = fs.readFileSync(filePath);
+      res.writeHead(200, {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Content-Length": data.length,
+        // 1 year immutable — files are versioned via ?v=N in HTML for cache busting
+        "Cache-Control": "public, max-age=31536000, immutable",
+      });
+      res.end(data);
+      return;
+    }
+  }
+
+  // IMPORTANT: ESM imports like `import { ... } from "./auth.js"` resolve to /auth.js
+  // at runtime. We need to serve the MINIFIED version (from /dist/auth.min.js) so
+  // that production pages get the optimized code, not the raw source.
+  // Same logic for any other entry that's imported as a bare specifier from a bundle.
+  const BARE_ESM_ALIASES = {
+    "/auth.js": "dist/auth.min.js",
+    "/openfront-parse.js": "dist/openfront-parse.min.js", // not currently minified but reserved
+  };
+  if (BARE_ESM_ALIASES[pathname]) {
+    const filePath = path.join(STATIC_DIR, BARE_ESM_ALIASES[pathname]);
+    if (fs.existsSync(filePath)) {
+      const data = fs.readFileSync(filePath);
+      res.writeHead(200, {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Content-Length": data.length,
+        "Cache-Control": "public, max-age=31536000, immutable",
+      });
+      res.end(data);
+      return;
+    }
+  }
+
   const staticMap = {
+    // HTML pages
     "/": ["index.html", "text/html; charset=utf-8"],
     "/index.html": ["index.html", "text/html; charset=utf-8"],
     "/profile.html": ["profile.html", "text/html; charset=utf-8"],
     "/runs.html": ["runs.html", "text/html; charset=utf-8"],
-    "/runs.js": ["runs.js", "text/javascript; charset=utf-8"],
-    "/profile.js": ["profile.js", "text/javascript; charset=utf-8"],
-    "/openfront-client.js": ["openfront-client.js", "text/javascript; charset=utf-8"],
-    "/openfront-parse.js": ["openfront-parse.js", "text/javascript; charset=utf-8"],
+    "/dashboard.html": ["dashboard.html", "text/html; charset=utf-8"],
+    "/lobby.html": ["lobby.html", "text/html; charset=utf-8"],
+    "/atlas.html": ["atlas.html", "text/html; charset=utf-8"],
+    "/tournois.html": ["tournois.html", "text/html; charset=utf-8"],
+    // CSS
     "/styles.css": ["styles.css", "text/css; charset=utf-8"],
     "/auth.css": ["auth.css", "text/css; charset=utf-8"],
     "/profile.css": ["profile.css", "text/css; charset=utf-8"],
+    "/dashboard.css": ["dashboard.css", "text/css; charset=utf-8"],
+    "/lobby.css": ["lobby.css", "text/css; charset=utf-8"],
+    "/atlas.css": ["atlas.css", "text/css; charset=utf-8"],
+    "/tournois.css": ["tournois.css", "text/css; charset=utf-8"],
+    "/skins.css": ["skins.css", "text/css; charset=utf-8"],
     "/animations.css": ["animations.css", "text/css; charset=utf-8"],
-    "/animations.js": ["animations.js", "text/javascript; charset=utf-8"],
-    "/i18n.js": ["i18n.js", "text/javascript; charset=utf-8"],
-    "/auth.js": ["auth.js", "text/javascript; charset=utf-8"],
-    "/app.js": ["app.js", "text/javascript; charset=utf-8"],
+    "/toast.css": ["toast.css", "text/css; charset=utf-8"],
+    // Shared modules (ESM imports)
+    "/shared/maps.js": ["shared/maps.js", "text/javascript; charset=utf-8"],
+    "/shared/firebase-config.js": ["shared/firebase-config.js", "text/javascript; charset=utf-8"],
+    "/shared/extract-speedrun.js": ["shared/extract-speedrun.js", "text/javascript; charset=utf-8"],
+    // JSON data
     "/maps_list.json": ["maps_list.json", "application/json; charset=utf-8"],
     "/ranked.json": ["ranked.json", "application/json; charset=utf-8"],
     "/ranked.json.gz": ["ranked.json.gz", "application/gzip"],
     "/ranked_history.json": ["ranked_history.json", "application/json; charset=utf-8"],
     "/ranked_history.json.gz": ["ranked_history.json.gz", "application/gzip"],
-    "/toast.js": ["toast.js", "text/javascript; charset=utf-8"],
-    "/toast.css": ["toast.css", "text/css; charset=utf-8"],
-    "/sw.js": ["sw.js", "text/javascript; charset=utf-8"],
     "/runs_public.json": ["runs_public.json", "application/json; charset=utf-8"],
     "/runs_public.json.gz": ["runs_public.json.gz", "application/gzip"],
     "/runs_compact_public.json": ["runs_compact_public.json", "application/json; charset=utf-8"],
     "/runs_compact_public.json.gz": ["runs_compact_public.json.gz", "application/gzip"],
+    "/teams_public.json": ["teams_public.json", "application/json; charset=utf-8"],
+    "/teams_public.json.gz": ["teams_public.json.gz", "application/gzip"],
+    "/dashboard_ranking.json": ["dashboard_ranking.json", "application/json; charset=utf-8"],
+    "/dashboard_scores.json": ["dashboard_scores.json", "application/json; charset=utf-8"],
+    "/dashboard_scores.json.gz": ["dashboard_scores.json.gz", "application/gzip"],
+    "/checkpoint.json": ["checkpoint.json", "application/json; charset=utf-8"],
+    "/checkpoint_compact.json": ["checkpoint_compact.json", "application/json; charset=utf-8"],
+    // Atlas data
+    "/atlas-data/maps_data.json": ["atlas-data/maps_data.json", "application/json; charset=utf-8"],
+    // Tournois data
+    "/data/players.json": ["data/players.json", "application/json; charset=utf-8"],
+    "/data/scoring.config.json": ["data/scoring.config.json", "application/json; charset=utf-8"],
+    "/data/calendar.json": ["data/calendar.json", "application/json; charset=utf-8"],
+    "/data/tournaments/manifest.json": ["data/tournaments/manifest.json", "application/json; charset=utf-8"],
+    // Source JS (kept for backward compat — pages now use /dist/*.min.js)
+    "/runs.js": ["runs.js", "text/javascript; charset=utf-8"],
+    "/profile.js": ["profile.js", "text/javascript; charset=utf-8"],
+    "/openfront-client.js": ["openfront-client.js", "text/javascript; charset=utf-8"],
+    "/openfront-parse.js": ["openfront-parse.js", "text/javascript; charset=utf-8"],
+    "/animations.js": ["animations.js", "text/javascript; charset=utf-8"],
+    "/i18n.js": ["i18n.js", "text/javascript; charset=utf-8"],
+    "/auth.js": ["auth.js", "text/javascript; charset=utf-8"],
+    "/app.js": ["app.js", "text/javascript; charset=utf-8"],
+    "/toast.js": ["toast.js", "text/javascript; charset=utf-8"],
+    "/sw.js": ["sw.js", "text/javascript; charset=utf-8"],
   };
+
+  // Also serve any image / data file from the atlas-data folder, with proper content-type
+  if (pathname.startsWith("/atlas-data/")) {
+    const filePath = path.join(STATIC_DIR, pathname.slice(1));
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+      const ext = path.extname(filePath).toLowerCase();
+      const ct = ext === ".webp" ? "image/webp"
+              : ext === ".png" ? "image/png"
+              : ext === ".jpg" || ext === ".jpeg" ? "image/jpeg"
+              : ext === ".svg" ? "image/svg+xml"
+              : ext === ".json" ? "application/json; charset=utf-8"
+              : "application/octet-stream";
+      sendFile(res, 200, filePath, ct);
+      return;
+    }
+  }
+
+  // Also serve any image asset by extension (logos, favicons, etc.)
+  // NOTE: pathname may contain %20 (URL-encoded spaces). We decode it before checking the file.
+  const imgExt = [".png", ".jpg", ".jpeg", ".webp", ".svg", ".ico", ".gif"];
+  const decodedPath = decodeURIComponent(pathname);
+  if (imgExt.includes(path.extname(decodedPath).toLowerCase())) {
+    const filePath = path.join(STATIC_DIR, decodedPath.slice(1));
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+      const ext = path.extname(filePath).toLowerCase();
+      const ct = ext === ".webp" ? "image/webp"
+              : ext === ".png" ? "image/png"
+              : ext === ".jpg" || ext === ".jpeg" ? "image/jpeg"
+              : ext === ".svg" ? "image/svg+xml"
+              : ext === ".ico" ? "image/x-icon"
+              : ext === ".gif" ? "image/gif"
+              : "application/octet-stream";
+      sendFile(res, 200, filePath, ct);
+      return;
+    }
+  }
+
+  // Serve tournament data files dynamically (data/tournaments/*.json)
+  if (pathname.startsWith("/data/tournaments/")) {
+    const filePath = path.join(STATIC_DIR, pathname.slice(1));
+    if (fs.existsSync(filePath) && filePath.endsWith(".json")) {
+      sendFile(res, 200, filePath, "application/json; charset=utf-8");
+      return;
+    }
+  }
+
   if (staticMap[pathname]) {
     const [file, type] = staticMap[pathname];
     sendFile(res, 200, path.join(STATIC_DIR, file), type);

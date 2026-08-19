@@ -396,7 +396,7 @@
       .pf-player-name { font-size: 20px; }
     }
   </style>
-  <script type="module" src="icons.js?v=2"></script>
+  <script type="module" src="dist/icons.min.js?v=1"></script>
 </head>
 <body>
 <a href="#profile-loading" class="skip-link">Aller au contenu principal</a>
@@ -606,11 +606,19 @@
   </div>
 </div>
 
-<script src="i18n.js"></script>
-<script src="toast.js?v=2" defer></script>
-<script src="lenis.js?v=2"></script>
-<script src="animations.js?v=13" defer></script>
-<script src="profile.js?v=26" type="module"></script>
+<script src="dist/i18n.min.js?v=1"></script>
+<script src="dist/toast.min.js?v=1" defer></script>
+<script src="dist/lenis.min.js?v=1"></script>
+<script src="dist/animations.min.js?v=1" defer></script>
+<script src="dist/profile.min.js?v=1" type="module"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js?v=8').catch(e => console.warn('[SW] Registration failed:', e));
+    });
+  }
+</script>
 
 
 </body>

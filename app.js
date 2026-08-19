@@ -1809,10 +1809,105 @@ function updateURL(){
                   : activeTab.id === 'tab-btn-maps' ? 'maps' : null;
     if(tabName) p.set('tab',tabName);
   }
-  if(activeMap)p.set('map',activeMap);
+  if(activeMap) p.set('map',activeMap);
+  // Preserve map size (compact/normal) so reloads/links keep the same context
+  if(typeof currentMapSize !== 'undefined' && currentMapSize === 'compact') p.set('mapSize','compact');
+  // Preserve game mode (solo/duos/trios/quads) if non-default
+  if(typeof currentGameMode !== 'undefined' && currentGameMode && currentGameMode !== 'solo') p.set('gameMode',currentGameMode);
+  // Preserve player search (deep-linking)
+  const searchInput=document.getElementById('player-search');
+  if(searchInput && searchInput.value.trim()) p.set('player',searchInput.value.trim());
   const h=window.location.pathname+(p.toString()?'?'+p:'');
   history.replaceState(null,'',h);
 }
+
+// ── Deep-link: handle browser back/forward (popstate) ───────────────────────
+window.addEventListener('popstate', () => {
+  const params = new URLSearchParams(window.location.search);
+  const map = params.get('map');
+  const tab = params.get('tab');
+  const player = params.get('player');
+  const mapSize = params.get('mapSize');
+  const gameMode = params.get('gameMode');
+
+  // Map size toggle
+  const newMapSize = mapSize === 'compact' ? 'compact' : 'normal';
+  if (typeof currentMapSize !== 'undefined' && newMapSize !== currentMapSize) {
+    // Soft toggle — just update state and UI, don't trigger full switchMode reload
+    currentMapSize = newMapSize;
+    const btnC = document.getElementById('mapsize-compact');
+    const btnN = document.getElementById('mapsize-normal');
+    if (btnC) btnC.classList.toggle('active', newMapSize === 'compact');
+    if (btnN) btnN.classList.toggle('active', newMapSize === 'normal');
+    if (typeof updateSubtitle === 'function') updateSubtitle();
+    if (typeof updateCurrentMode === 'function') updateCurrentMode();
+  }
+
+  // Tab switch (only for in-page tabs: maps/ranked)
+  const btns = document.querySelectorAll('.tab-btn');
+  if (tab === 'ranked' || tab === 'maps') {
+    btns.forEach(b => b.classList.remove('active'));
+    const btnId = tab === 'ranked' ? 'tab-btn-ranked' : 'tab-btn-maps';
+    const btn = document.getElementById(btnId);
+    if (btn) btn.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    const tabContent = document.getElementById('tab-' + tab);
+    if (tabContent) tabContent.classList.add('active');
+  }
+
+  // Map selection
+  if (map && typeof allMaps !== 'undefined' && allMaps.find(m => m.map === map)) {
+    if (typeof selectMap === 'function') selectMap(map);
+  } else if (!map && activeMap) {
+    activeMap = null;
+    const shareBtn = document.getElementById('share-btn');
+    if (shareBtn) shareBtn.style.display = 'none';
+    const titleEl = document.getElementById('content-title');
+    if (titleEl) titleEl.textContent = 'Sélectionnez une carte';
+    const metaEl = document.getElementById('content-meta');
+    if (metaEl) metaEl.textContent = '—';
+    const lbEl = document.getElementById('leaderboard');
+    if (lbEl) lbEl.innerHTML = '';
+    if (typeof renderMaps === 'function') renderMaps();
+  }
+
+  // Player search
+  const searchInput = document.getElementById('player-search');
+  if (searchInput) {
+    if (player) {
+      searchInput.value = player;
+      if (typeof searchPlayer === 'function') searchPlayer();
+    } else {
+      searchInput.value = '';
+      if (typeof searchPlayer === 'function') searchPlayer();
+    }
+  }
+});
+
+// ── Share current view (deep-link copy to clipboard) ────────────────────────
+// Unlike shareMap() which only shares ?map=, this shares the FULL current URL
+// (tab + map + player + mapSize + gameMode) — useful for the topbar button.
+function shareCurrentView() {
+  const url = window.location.origin + window.location.pathname + window.location.search;
+  const btn = document.getElementById('share-topbar-btn');
+  const origHTML = btn ? btn.innerHTML : null;
+  navigator.clipboard.writeText(url).then(() => {
+    if (btn) {
+      btn.innerHTML = '<span>✓ Copié !</span>';
+      setTimeout(() => { if (btn) btn.innerHTML = origHTML; }, 2000);
+    }
+    if (typeof window.showToast === 'function') {
+      window.showToast('Lien copié dans le presse-papier !', 'success', 2000);
+    } else if (typeof showToast === 'function') {
+      showToast('Lien copié !', 'success', 2000);
+    }
+  }).catch(() => {
+    // Fallback: prompt the user to copy manually
+    window.prompt('Copiez ce lien :', url);
+  });
+}
+window.shareCurrentView = shareCurrentView;
+
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 
 // Init — theme/color picker removed, orange/yellow gradient is the fixed theme
@@ -1822,6 +1917,7 @@ const tabParam=urlParams.get('tab');
 const modeParam=urlParams.get('mode');
 const mapSizeParam=urlParams.get('mapSize');
 const gameModeParam=urlParams.get('gameMode');
+const playerParam=urlParams.get('player');
 // Init from URL params (new system)
 if (mapSizeParam === 'compact') {
   currentMapSize = 'compact';
@@ -1869,6 +1965,18 @@ loadData().then(()=>{
     const tabBtnId = tabParam === 'ranked' ? 'tab-btn-ranked' : 'tab-btn-maps';
     const btn = document.getElementById(tabBtnId);
     if (btn) switchTab(tabParam, btn);
+  }
+  // Pre-fill player search if ?player= is in URL (deep-linking)
+  if (playerParam) {
+    const searchInput = document.getElementById('player-search');
+    if (searchInput) {
+      searchInput.value = playerParam;
+      searchPlayer();
+      // Scroll the search bar into view so the user sees it
+      setTimeout(() => {
+        try { searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e) {}
+      }, 300);
+    }
   }
 });
 

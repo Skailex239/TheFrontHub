@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="tournois.css?v=10">
 <link rel="stylesheet" href="animations.css?v=6">
 <style>.skip-link{position:absolute;top:-40px;left:0;background:var(--orange,#ef6c00);color:#fff;padding:8px 16px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}</style>
-<script type="module" src="icons.js?v=2"></script>
-<script type="module" src="tournois-icons.js?v=1"></script>
+<script type="module" src="dist/icons.min.js?v=1"></script>
+<script type="module" src="dist/tournois-icons.min.js?v=1"></script>
 </head>
 <body class="tournois-page">
 <a href="#tournois-content" class="skip-link">Aller au contenu principal</a>
@@ -139,8 +139,15 @@
   </nav>
 </aside>
 
-<script type="module" src="tournois.js?v=9"></script>
-<script src="lenis.js?v=2"></script>
-<script src="animations.js?v=13"></script>
+<script type="module" src="dist/tournois.min.js?v=1"></script>
+<script src="dist/lenis.min.js?v=1"></script>
+<script src="dist/animations.min.js?v=1"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js?v=8').catch(e => console.warn('[SW] Registration failed:', e));
+    });
+  }
+</script>
 </body>
 </html>

@@ -27,7 +27,7 @@ function makeRankBadge(rank) {
 // Load connected usernames from Firebase public-rewards and public-aliases
 async function loadConnectedUsernames() {
   try {
-    var mod = await import('./auth.js');
+    var mod = await import('./dist/auth.min.js');
     var db = mod.db;
     var collection = mod.collection;
     var onSnapshot = mod.onSnapshot;
