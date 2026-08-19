@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-19T16:54:17.809Z",
-  "lastSyncedAt": "2026-08-19T16:54:15.901Z",
-  "totalGames": 3081,
+  "computedAt": "2026-08-19T17:16:22.144Z",
+  "lastSyncedAt": "2026-08-19T17:16:19.120Z",
+  "totalGames": 3082,
   "careerWins": {
     "ffaCasual": 492,
     "ffaRanked": 262,
@@ -21,11 +21,11 @@
       "target": 2000
     },
     "playtime": {
-      "current": 744,
+      "current": 745,
       "target": 1000
     },
     "maps": {
-      "current": 82,
+      "current": 83,
       "target": 100
     }
   },
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "6 955",
     "totalWins": "1 203",
-    "totalGames": "3 081",
-    "totalPlaytime": "31j 0h",
-    "totalPlaytimeCompact": "31j 0h",
+    "totalGames": "3 082",
+    "totalPlaytime": "31j 1h",
+    "totalPlaytimeCompact": "31j 1h",
     "avgGameDuration": "14m 30s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "744h"
+    "totalPlaytimeHours": "745h"
   },
   "playtime": {
-    "totalSec": 2681778,
-    "avgGameSec": 870.4245374878286,
+    "totalSec": 2683406,
+    "avgGameSec": 870.6703439325114,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1584,
-        "playtimeSec": 1598879,
+        "games": 1585,
+        "playtimeSec": 1600507,
         "wins": 492
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1203,
-    "defeat": 1249,
+    "defeat": 1250,
     "incomplete": 629
   },
   "maps": [
@@ -1252,6 +1252,22 @@
       }
     },
     {
+      "map": "Balkans",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "playtimeSec": 1628,
+      "avgDuration": 1628,
+      "winRate": 0,
+      "lastPlayed": 1787158066902,
+      "formatted": {
+        "playtime": "27m",
+        "avgDuration": "27m",
+        "winRate": "0%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Juan De Fuca Strait",
       "count": 1,
       "wins": 1,
@@ -1416,7 +1432,7 @@
       222,
       218,
       284,
-      402,
+      403,
       157,
       247,
       138,
@@ -1426,7 +1442,7 @@
     "byWeekday": [
       272,
       456,
-      436,
+      437,
       386,
       360,
       523,
@@ -1966,6 +1982,17 @@
   },
   "recentGames": [
     {
+      "gameId": "8hmQVDP3",
+      "start": "2026-08-19T16:47:46.902Z",
+      "map": "Balkans",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1628,
+      "totalPlayers": 88,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "gWETDvxK",
       "start": "2026-08-18T15:07:19.687Z",
       "map": "France",
@@ -2171,17 +2198,6 @@
       "result": "victory",
       "durationSeconds": 475,
       "totalPlayers": 9,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "qo7KBGCc",
-      "start": "2026-08-12T08:54:45.708Z",
-      "map": "Mare Nostrum",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 977,
-      "totalPlayers": 86,
       "rankedType": "unranked",
       "category": "teamCasual"
     }
