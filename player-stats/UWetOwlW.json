@@ -1,23 +1,23 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-19T17:16:58.386Z",
-  "lastSyncedAt": "2026-08-19T17:16:56.467Z",
-  "totalGames": 3082,
+  "computedAt": "2026-08-19T17:47:21.991Z",
+  "lastSyncedAt": "2026-08-19T17:47:19.086Z",
+  "totalGames": 3084,
   "careerWins": {
-    "ffaCasual": 492,
+    "ffaCasual": 494,
     "ffaRanked": 262,
     "teamCasual": 331,
     "teamRanked": 118
   },
-  "totalWins": 1203,
-  "points": 6955,
+  "totalWins": 1205,
+  "points": 6975,
   "level": 69,
-  "levelProgress": 55,
+  "levelProgress": 75,
   "levelNextAt": 7000,
   "nextMilestones": {
     "wins": {
-      "current": 1203,
+      "current": 1205,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     4
   ],
   "formatted": {
-    "points": "6 955",
-    "totalWins": "1 203",
-    "totalGames": "3 082",
+    "points": "6 975",
+    "totalWins": "1 205",
+    "totalGames": "3 084",
     "totalPlaytime": "31j 1h",
     "totalPlaytimeCompact": "31j 1h",
     "avgGameDuration": "14m 30s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "745h"
   },
   "playtime": {
-    "totalSec": 2683406,
-    "avgGameSec": 870.6703439325114,
+    "totalSec": 2684104,
+    "avgGameSec": 870.3320363164721,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1585,
-        "playtimeSec": 1600507,
-        "wins": 492
+        "games": 1587,
+        "playtimeSec": 1601205,
+        "wins": 494
       },
       "ffaRanked": {
         "games": 399,
@@ -78,25 +78,25 @@
     }
   },
   "results": {
-    "victory": 1203,
+    "victory": 1205,
     "defeat": 1250,
     "incomplete": 629
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 494,
-      "wins": 317,
+      "count": 495,
+      "wins": 318,
       "losses": 177,
-      "playtimeSec": 262304,
-      "avgDuration": 530.9797570850202,
-      "winRate": 0.6417004048582996,
-      "lastPlayed": 1787056724179,
+      "playtimeSec": 262321,
+      "avgDuration": 529.9414141414142,
+      "winRate": 0.6424242424242425,
+      "lastPlayed": 1787161508230,
       "formatted": {
         "playtime": "3j 0h",
         "avgDuration": "8m",
         "winRate": "64%",
-        "lastPlayed": "18/08/26"
+        "lastPlayed": "19/08/26"
       }
     },
     {
@@ -564,6 +564,22 @@
       }
     },
     {
+      "map": "Two Lakes",
+      "count": 19,
+      "wins": 7,
+      "losses": 12,
+      "playtimeSec": 24394,
+      "avgDuration": 1283.8947368421052,
+      "winRate": 0.3684210526315789,
+      "lastPlayed": 1787160790479,
+      "formatted": {
+        "playtime": "6h 46m",
+        "avgDuration": "21m",
+        "winRate": "37%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Manicouagan",
       "count": 19,
       "wins": 8,
@@ -609,22 +625,6 @@
         "avgDuration": "17m",
         "winRate": "21%",
         "lastPlayed": "16/05/26"
-      }
-    },
-    {
-      "map": "Two Lakes",
-      "count": 18,
-      "wins": 6,
-      "losses": 12,
-      "playtimeSec": 23713,
-      "avgDuration": 1317.388888888889,
-      "winRate": 0.3333333333333333,
-      "lastPlayed": 1786195606031,
-      "formatted": {
-        "playtime": "6h 35m",
-        "avgDuration": "21m",
-        "winRate": "33%",
-        "lastPlayed": "08/08/26"
       }
     },
     {
@@ -1433,7 +1433,7 @@
       218,
       284,
       403,
-      157,
+      159,
       247,
       138,
       126,
@@ -1442,7 +1442,7 @@
     "byWeekday": [
       272,
       456,
-      437,
+      439,
       386,
       360,
       523,
@@ -1905,7 +1905,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 2,
     "best": 42
   },
   "achievements": {
@@ -1981,6 +1981,28 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "AgGCERwL",
+      "start": "2026-08-19T17:45:08.230Z",
+      "map": "Australia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 17,
+      "totalPlayers": 1,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "joXAiAVF",
+      "start": "2026-08-19T17:33:10.479Z",
+      "map": "Two Lakes",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 681,
+      "totalPlayers": 17,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "8hmQVDP3",
       "start": "2026-08-19T16:47:46.902Z",
@@ -2178,28 +2200,6 @@
       "totalPlayers": 71,
       "rankedType": "unranked",
       "category": "ffaCasual"
-    },
-    {
-      "gameId": "4s6AnENc",
-      "start": "2026-08-12T12:17:24.298Z",
-      "map": "Giant World Map",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 2607,
-      "totalPlayers": 78,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "7dLeEtka",
-      "start": "2026-08-12T12:06:57.686Z",
-      "map": "Crimea",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 475,
-      "totalPlayers": 9,
-      "rankedType": "unranked",
-      "category": "teamCasual"
     }
   ]
 }

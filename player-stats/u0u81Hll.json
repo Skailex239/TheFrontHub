@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-19T17:17:00.037Z",
-  "lastSyncedAt": "2026-08-19T17:16:57.591Z",
-  "totalGames": 2178,
+  "computedAt": "2026-08-19T17:47:23.923Z",
+  "lastSyncedAt": "2026-08-19T17:47:21.060Z",
+  "totalGames": 2179,
   "careerWins": {
     "ffaCasual": 377,
     "ffaRanked": 325,
@@ -25,7 +25,7 @@
       "target": 1000
     },
     "maps": {
-      "current": 95,
+      "current": 96,
       "target": 100
     }
   },
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 390",
     "totalWins": "809",
-    "totalGames": "2 178",
+    "totalGames": "2 179",
     "totalPlaytime": "22j 22h",
     "totalPlaytimeCompact": "22j 22h",
-    "avgGameDuration": "15m 9s",
+    "avgGameDuration": "15m 10s",
     "longestGame": "2h 40m",
     "winrate": "37%",
     "totalPlaytimeHours": "550h"
   },
   "playtime": {
-    "totalSec": 1981175,
-    "avgGameSec": 909.6303948576676,
+    "totalSec": 1983062,
+    "avgGameSec": 910.0789352914181,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1388,
-        "playtimeSec": 1604233,
+        "games": 1389,
+        "playtimeSec": 1606120,
         "wins": 377
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 809,
-    "defeat": 1043,
+    "defeat": 1044,
     "incomplete": 326
   },
   "maps": [
@@ -1460,6 +1460,22 @@
       }
     },
     {
+      "map": "Clearwater Lakes",
+      "count": 1,
+      "wins": 0,
+      "losses": 1,
+      "playtimeSec": 1887,
+      "avgDuration": 1887,
+      "winRate": 0,
+      "lastPlayed": 1787159298741,
+      "formatted": {
+        "playtime": "31m",
+        "avgDuration": "31m",
+        "winRate": "0%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Sol",
       "count": 1,
       "wins": 0,
@@ -1625,7 +1641,7 @@
       136,
       200,
       200,
-      224,
+      225,
       190,
       149,
       146,
@@ -1634,7 +1650,7 @@
     "byWeekday": [
       302,
       225,
-      295,
+      296,
       325,
       346,
       364,
@@ -1823,8 +1839,8 @@
       },
       {
         "date": "19/08/2026",
-        "count": 6,
-        "playtimeSec": 6153
+        "count": 7,
+        "playtimeSec": 8040
       },
       {
         "date": "20/01/2026",
@@ -2097,7 +2113,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2173,6 +2189,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "rxMs9FvG",
+      "start": "2026-08-19T17:08:18.741Z",
+      "map": "Clearwater Lakes",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1887,
+      "totalPlayers": 29,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "o75ZSWg8",
       "start": "2026-08-19T16:45:35.753Z",
@@ -2378,17 +2405,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 505,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "AMatWvVD",
-      "start": "2026-08-17T20:46:30.737Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 360,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
