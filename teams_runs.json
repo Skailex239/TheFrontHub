@@ -16665,6 +16665,47 @@
       "numPlayers": 114,
       "timestamp": "2026-08-19T13:59:56.362Z",
       "url": "https://openfront.io/game/AgU7cGJx"
+    },
+    {
+      "id": "oBkTiXwE",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "SUSU",
+          "clientID": "68cQhf7f",
+          "clanTag": null
+        },
+        {
+          "username": "Jelly",
+          "clientID": "rMP6Yj5Z",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1357,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-19T14:56:51.510Z",
+      "url": "https://openfront.io/game/oBkTiXwE"
+    },
+    {
+      "id": "FJB3T6ZZ",
+      "team": "Team 32",
+      "players": [
+        {
+          "username": "House Vernius",
+          "clientID": "fBpDXcRU",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1309,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-19T14:51:02.145Z",
+      "url": "https://openfront.io/game/FJB3T6ZZ"
     }
   ],
   "trios": [
@@ -80469,6 +80510,72 @@
       "numPlayers": 69,
       "timestamp": "2026-08-19T14:41:27.022Z",
       "url": "https://openfront.io/game/2jieNaff"
+    },
+    {
+      "id": "pUwZZTe9",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonHarbor5",
+          "clientID": "KKuNUFXY",
+          "clanTag": null
+        },
+        {
+          "username": "Yaroke",
+          "clientID": "Xsni1CXV",
+          "clanTag": "MOSSD"
+        },
+        {
+          "username": "Nakash",
+          "clientID": "fGrCUP7o",
+          "clanTag": "MOSSD"
+        },
+        {
+          "username": "ifs",
+          "clientID": "AfXgi3vS",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 811,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-19T14:54:54.875Z",
+      "url": "https://openfront.io/game/pUwZZTe9"
+    },
+    {
+      "id": "bCjk27Pa",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Leo",
+          "clientID": "jnaMpMp4",
+          "clanTag": null
+        },
+        {
+          "username": "Behzad",
+          "clientID": "dtK94vJ8",
+          "clanTag": "NOVA"
+        },
+        {
+          "username": "Val",
+          "clientID": "5cUtkuPq",
+          "clanTag": null
+        },
+        {
+          "username": "meow",
+          "clientID": "Bv9wWsB7",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1292,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-19T14:56:33.491Z",
+      "url": "https://openfront.io/game/bCjk27Pa"
     }
   ]
 }
