@@ -44879,6 +44879,29 @@
       "numPlayers": 47,
       "timestamp": "2026-08-19T04:41:15.406Z",
       "url": "https://openfront.io/game/rhXncNEs"
+    },
+    {
+      "id": "2rTfkqNt",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Lavuistuvia",
+          "clientID": "SqRYFUM1",
+          "clanTag": null
+        },
+        {
+          "username": "StrongPeach.Zo1p",
+          "clientID": "p2KFav8c",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1070,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-19T05:32:35.836Z",
+      "url": "https://openfront.io/game/2rTfkqNt"
     }
   ],
   "quads": [
@@ -78646,6 +78669,24 @@
       "numPlayers": 52,
       "timestamp": "2026-08-19T04:57:37.046Z",
       "url": "https://openfront.io/game/fwTip9vh"
+    },
+    {
+      "id": "GXtin8J5",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Friendly",
+          "clientID": "VFULzNX5",
+          "clanTag": "PIVO"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 3170,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 19,
+      "timestamp": "2026-08-19T04:53:33.743Z",
+      "url": "https://openfront.io/game/GXtin8J5"
     }
   ]
 }
