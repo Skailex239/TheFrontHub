@@ -1,9 +1,9 @@
 {
   "publicId": "tqMGOI2Q",
   "username": "Zwiper.2734",
-  "computedAt": "2026-08-19T14:50:53.543Z",
-  "lastSyncedAt": "2026-08-19T14:50:47.790Z",
-  "totalGames": 1980,
+  "computedAt": "2026-08-19T15:19:47.189Z",
+  "lastSyncedAt": "2026-08-19T15:19:41.015Z",
+  "totalGames": 1981,
   "careerWins": {
     "ffaCasual": 239,
     "ffaRanked": 168,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "3 854",
     "totalWins": "675",
-    "totalGames": "1 980",
+    "totalGames": "1 981",
     "totalPlaytime": "19j 4h",
     "totalPlaytimeCompact": "19j 4h",
     "avgGameDuration": "13m 57s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "460h"
   },
   "playtime": {
-    "totalSec": 1657808,
-    "avgGameSec": 837.2767676767677,
+    "totalSec": 1659151,
+    "avgGameSec": 837.5320545179202,
     "longestSec": 10071,
     "shortestSec": 2,
     "byCategory": {
       "ffaCasual": {
-        "games": 989,
-        "playtimeSec": 945253,
+        "games": 990,
+        "playtimeSec": 946596,
         "wins": 239
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 675,
-    "defeat": 956,
+    "defeat": 957,
     "incomplete": 349
   },
   "maps": [
@@ -1188,6 +1188,22 @@
       }
     },
     {
+      "map": "World Inverted",
+      "count": 3,
+      "wins": 0,
+      "losses": 3,
+      "playtimeSec": 4440,
+      "avgDuration": 1480,
+      "winRate": 0,
+      "lastPlayed": 1787151162221,
+      "formatted": {
+        "playtime": "1h 14m",
+        "avgDuration": "24m",
+        "winRate": "0%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Indian Subcontinent",
       "count": 3,
       "wins": 1,
@@ -1265,22 +1281,6 @@
         "avgDuration": "17m",
         "winRate": "50%",
         "lastPlayed": "29/06/26"
-      }
-    },
-    {
-      "map": "World Inverted",
-      "count": 2,
-      "wins": 0,
-      "losses": 2,
-      "playtimeSec": 3097,
-      "avgDuration": 1548.5,
-      "winRate": 0,
-      "lastPlayed": 1782499630148,
-      "formatted": {
-        "playtime": "51m",
-        "avgDuration": "25m",
-        "winRate": "0%",
-        "lastPlayed": "26/06/26"
       }
     },
     {
@@ -1462,7 +1462,7 @@
       71,
       114,
       114,
-      130,
+      131,
       140,
       227,
       184,
@@ -1474,18 +1474,13 @@
     "byWeekday": [
       277,
       263,
-      341,
+      342,
       152,
       275,
       286,
       386
     ],
     "byDay": [
-      {
-        "date": "11/05/2026",
-        "count": 9,
-        "playtimeSec": 6634
-      },
       {
         "date": "11/06/2026",
         "count": 5,
@@ -1685,6 +1680,11 @@
         "date": "19/06/2026",
         "count": 8,
         "playtimeSec": 13132
+      },
+      {
+        "date": "19/08/2026",
+        "count": 1,
+        "playtimeSec": 1343
       },
       {
         "date": "20/03/2026",
@@ -2014,6 +2014,17 @@
   },
   "recentGames": [
     {
+      "gameId": "6uWE5MFr",
+      "start": "2026-08-19T14:52:42.221Z",
+      "map": "World Inverted",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1343,
+      "totalPlayers": 52,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "uFmsana5",
       "start": "2026-08-14T16:50:22.457Z",
       "map": "Yellow Sea",
@@ -2221,17 +2232,6 @@
       "totalPlayers": 63,
       "rankedType": "unranked",
       "category": "ffaCasual"
-    },
-    {
-      "gameId": "z61xAQpz",
-      "start": "2026-07-04T21:21:00.522Z",
-      "map": "Britannia",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 650,
-      "totalPlayers": 44,
-      "rankedType": "unranked",
-      "category": "teamCasual"
     }
   ]
 }
