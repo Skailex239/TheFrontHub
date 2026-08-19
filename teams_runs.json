@@ -44764,6 +44764,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-19T03:58:35.644Z",
       "url": "https://openfront.io/game/uWwrL8k5"
+    },
+    {
+      "id": "mQvYobmX",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Petrov",
+          "clientID": "4RpS8xBk",
+          "clanTag": null
+        },
+        {
+          "username": "BEATABLE PRICES",
+          "clientID": "tGovh3zz",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 752,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-19T04:04:59.558Z",
+      "url": "https://openfront.io/game/mQvYobmX"
     }
   ],
   "quads": [
@@ -78386,6 +78409,39 @@
       "numPlayers": 23,
       "timestamp": "2026-08-19T03:23:48.423Z",
       "url": "https://openfront.io/game/xTX4heXh"
+    },
+    {
+      "id": "AW56P5j6",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Toast",
+          "clientID": "Z8g8oLsn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonOracle9",
+          "clientID": "mMPUhk2C",
+          "clanTag": null
+        },
+        {
+          "username": "TryingTooHard67",
+          "clientID": "WfCzDWR7",
+          "clanTag": null
+        },
+        {
+          "username": "NCR",
+          "clientID": "NeE9ybUt",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 979,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-19T04:05:44.106Z",
+      "url": "https://openfront.io/game/AW56P5j6"
     }
   ]
 }
