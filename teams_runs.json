@@ -16606,6 +16606,65 @@
       "numPlayers": 88,
       "timestamp": "2026-08-19T14:19:22.621Z",
       "url": "https://openfront.io/game/FTXq5FBR"
+    },
+    {
+      "id": "Y8zSPTbE",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "AnonTruffle",
+          "clientID": "2EdxM7gG",
+          "clanTag": null
+        },
+        {
+          "username": "AmigoTrader",
+          "clientID": "xkZxxYTi",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 2168,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "timestamp": "2026-08-19T14:21:03.725Z",
+      "url": "https://openfront.io/game/Y8zSPTbE"
+    },
+    {
+      "id": "pWzt5BkQ",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "Mares",
+          "clientID": "BTGeZgoE",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 1964,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "timestamp": "2026-08-19T14:24:32.453Z",
+      "url": "https://openfront.io/game/pWzt5BkQ"
+    },
+    {
+      "id": "AgU7cGJx",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "Twerbled Spip",
+          "clientID": "Vf73JSYB",
+          "clanTag": "TWERP"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 3455,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "timestamp": "2026-08-19T13:59:56.362Z",
+      "url": "https://openfront.io/game/AgU7cGJx"
     }
   ],
   "trios": [
@@ -80288,6 +80347,39 @@
       "numPlayers": 80,
       "timestamp": "2026-08-19T13:38:52.012Z",
       "url": "https://openfront.io/game/J3no9QHD"
+    },
+    {
+      "id": "6YEM6CDh",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "moulaga tah bogota",
+          "clientID": "wBZ4dkiv",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nonex",
+          "clientID": "cokfSsWE",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Chockaw",
+          "clientID": "97VCkpN7",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "PqsQ14PT",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 920,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "timestamp": "2026-08-19T14:37:34.296Z",
+      "url": "https://openfront.io/game/6YEM6CDh"
     }
   ]
 }
