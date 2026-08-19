@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-19T07:51:49.901Z",
-  "lastSyncedAt": "2026-08-19T07:51:47.950Z",
-  "totalGames": 3770,
+  "computedAt": "2026-08-19T08:22:43.744Z",
+  "lastSyncedAt": "2026-08-19T08:22:41.555Z",
+  "totalGames": 3771,
   "careerWins": {
-    "ffaCasual": 265,
+    "ffaCasual": 266,
     "ffaRanked": 1415,
     "teamCasual": 151,
     "teamRanked": 127
   },
-  "totalWins": 1958,
-  "points": 4947,
+  "totalWins": 1959,
+  "points": 4957,
   "level": 49,
-  "levelProgress": 47,
+  "levelProgress": 57,
   "levelNextAt": 5000,
   "nextMilestones": {
     "wins": {
-      "current": 1958,
+      "current": 1959,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "4 947",
-    "totalWins": "1 958",
-    "totalGames": "3 770",
+    "points": "4 957",
+    "totalWins": "1 959",
+    "totalGames": "3 771",
     "totalPlaytime": "30j 18h",
     "totalPlaytimeCompact": "30j 18h",
     "avgGameDuration": "11m 44s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "738h"
   },
   "playtime": {
-    "totalSec": 2657159,
-    "avgGameSec": 704.8167108753315,
+    "totalSec": 2658101,
+    "avgGameSec": 704.8796075311589,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1074,
-        "playtimeSec": 1295218,
-        "wins": 265
+        "games": 1075,
+        "playtimeSec": 1296160,
+        "wins": 266
       },
       "ffaRanked": {
         "games": 1909,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1958,
+    "victory": 1959,
     "defeat": 1482,
     "incomplete": 330
   },
@@ -1268,6 +1268,22 @@
       }
     },
     {
+      "map": "Juan De Fuca Strait",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "playtimeSec": 2175,
+      "avgDuration": 1087.5,
+      "winRate": 0.5,
+      "lastPlayed": 1787126247240,
+      "formatted": {
+        "playtime": "36m",
+        "avgDuration": "18m",
+        "winRate": "50%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "China",
       "count": 2,
       "wins": 2,
@@ -1492,22 +1508,6 @@
       }
     },
     {
-      "map": "Juan De Fuca Strait",
-      "count": 1,
-      "wins": 0,
-      "losses": 1,
-      "playtimeSec": 1233,
-      "avgDuration": 1233,
-      "winRate": 0,
-      "lastPlayed": 1781731899820,
-      "formatted": {
-        "playtime": "20m",
-        "avgDuration": "20m",
-        "winRate": "0%",
-        "lastPlayed": "17/06/26"
-      }
-    },
-    {
       "map": "Bering Strait",
       "count": 1,
       "wins": 0,
@@ -1599,7 +1599,7 @@
       25,
       22,
       36,
-      53,
+      54,
       85,
       74,
       92,
@@ -1618,7 +1618,7 @@
     "byWeekday": [
       547,
       589,
-      470,
+      471,
       548,
       480,
       576,
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 2,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "agAaVSQQ",
+      "start": "2026-08-19T07:57:27.240Z",
+      "map": "Juan De Fuca Strait",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 942,
+      "totalPlayers": 79,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "RpT4M8YX",
       "start": "2026-08-18T18:15:25.335Z",
@@ -2362,17 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 381,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "PWrXMD3k",
-      "start": "2026-08-18T06:25:53.626Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 471,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
