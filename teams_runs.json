@@ -46937,6 +46937,62 @@
       "numPlayers": 30,
       "timestamp": "2026-08-19T22:46:20.843Z",
       "url": "https://openfront.io/game/NFWyfZKt"
+    },
+    {
+      "id": "jWPzhDzn",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "chad",
+          "clientID": "XAT2e4mk",
+          "clanTag": null
+        },
+        {
+          "username": "for all",
+          "clientID": "H4FiQbp6",
+          "clanTag": "UA"
+        },
+        {
+          "username": "Cavalry Charge",
+          "clientID": "iVHexjnG",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 791,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-19T23:06:07.681Z",
+      "url": "https://openfront.io/game/jWPzhDzn"
+    },
+    {
+      "id": "F6qT7uTS",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "bananaJC",
+          "clientID": "hcPBPD69",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "1KZVcvbK",
+          "clanTag": "AST"
+        },
+        {
+          "username": "psychpomp",
+          "clientID": "3ttFMoAj",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 708,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-19T23:10:22.462Z",
+      "url": "https://openfront.io/game/F6qT7uTS"
     }
   ],
   "quads": [
@@ -82480,6 +82536,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-19T22:59:06.224Z",
       "url": "https://openfront.io/game/gcM3dqcu"
+    },
+    {
+      "id": "n6T1YxTQ",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Chockaw",
+          "clientID": "r9rSEDSv",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "judom",
+          "clientID": "tddmChkU",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Alberto",
+          "clientID": "ZPYn8bWT",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "pizza pasta pepene",
+          "clientID": "absR2Q5K",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "North America",
+      "duration_s": 974,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-19T23:08:20.822Z",
+      "url": "https://openfront.io/game/n6T1YxTQ"
     }
   ]
 }
