@@ -16839,6 +16839,47 @@
       "numPlayers": 74,
       "timestamp": "2026-08-19T18:15:54.884Z",
       "url": "https://openfront.io/game/Eghk8F5r"
+    },
+    {
+      "id": "GdMqZGLQ",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "John Bezos pesos",
+          "clientID": "1cK6HGrX",
+          "clanTag": "YES"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1129,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "timestamp": "2026-08-19T18:34:25.581Z",
+      "url": "https://openfront.io/game/GdMqZGLQ"
+    },
+    {
+      "id": "2JLuebva",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "AnonCamel7",
+          "clientID": "q6jKwP2H",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLeather7",
+          "clientID": "yyfvAxNj",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 925,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-19T18:29:01.553Z",
+      "url": "https://openfront.io/game/2JLuebva"
     }
   ],
   "trios": [
@@ -46342,6 +46383,34 @@
       "numPlayers": 45,
       "timestamp": "2026-08-19T18:04:33.117Z",
       "url": "https://openfront.io/game/2YuQSrCY"
+    },
+    {
+      "id": "wTX5M9Fa",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Los",
+          "clientID": "AecKDzMJ",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "Tos",
+          "clientID": "ebJcXuSN",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "MORDOR",
+          "clientID": "hK6CnxaW",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1794,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "timestamp": "2026-08-19T18:18:03.049Z",
+      "url": "https://openfront.io/game/wTX5M9Fa"
     }
   ],
   "quads": [
@@ -81374,6 +81443,67 @@
       "numPlayers": 44,
       "timestamp": "2026-08-19T18:05:22.160Z",
       "url": "https://openfront.io/game/GZCHePox"
+    },
+    {
+      "id": "w7TJhdB6",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "BSyex",
+          "clientID": "FLL9tk5b",
+          "clanTag": null
+        },
+        {
+          "username": "Puthead",
+          "clientID": "3h6ZUUtL",
+          "clanTag": null
+        },
+        {
+          "username": "Astravon",
+          "clientID": "9myEJMi2",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 1397,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-19T18:25:20.060Z",
+      "url": "https://openfront.io/game/w7TJhdB6"
+    },
+    {
+      "id": "Nvp1r1vc",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "sfrzd",
+          "clientID": "bBd9hyRg",
+          "clanTag": null
+        },
+        {
+          "username": "Taha",
+          "clientID": "UoB6YVJz",
+          "clanTag": "TAHA"
+        },
+        {
+          "username": "mitu",
+          "clientID": "1thv93jz",
+          "clanTag": null
+        },
+        {
+          "username": "Mouse",
+          "clientID": "TimFqsER",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 904,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-19T18:31:30.534Z",
+      "url": "https://openfront.io/game/Nvp1r1vc"
     }
   ]
 }
