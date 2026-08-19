@@ -46089,6 +46089,34 @@
       "numPlayers": 52,
       "timestamp": "2026-08-19T16:17:59.300Z",
       "url": "https://openfront.io/game/dLM1twrU"
+    },
+    {
+      "id": "99morhHH",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "slippinJimmy",
+          "clientID": "ewTND8oN",
+          "clanTag": null
+        },
+        {
+          "username": "DoctorFart",
+          "clientID": "YKf3zh5E",
+          "clanTag": null
+        },
+        {
+          "username": "MommaChicken",
+          "clientID": "BEeEHYyD",
+          "clanTag": "CHUD"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1409,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "timestamp": "2026-08-19T16:32:53.871Z",
+      "url": "https://openfront.io/game/99morhHH"
     }
   ],
   "quads": [
@@ -80849,6 +80877,39 @@
       "numPlayers": 79,
       "timestamp": "2026-08-19T16:02:53.286Z",
       "url": "https://openfront.io/game/XTevH1Xz"
+    },
+    {
+      "id": "Q6h7WgPy",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "codo3.",
+          "clientID": "6NmHuSbQ",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "Bingus",
+          "clientID": "FYvWE65y",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "Ibrahim Traore",
+          "clientID": "sdEBR5mZ",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "hih",
+          "clientID": "UkiYP2Ad",
+          "clanTag": "ZDFB"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1006,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "timestamp": "2026-08-19T16:40:00.367Z",
+      "url": "https://openfront.io/game/Q6h7WgPy"
     }
   ]
 }
