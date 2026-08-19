@@ -16985,6 +16985,29 @@
       "numPlayers": 50,
       "timestamp": "2026-08-19T21:11:04.702Z",
       "url": "https://openfront.io/game/B6YRiSC9"
+    },
+    {
+      "id": "yzwNhiw4",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Atza",
+          "clientID": "JeY8i5cz",
+          "clanTag": "BOMBI"
+        },
+        {
+          "username": "Robinio",
+          "clientID": "ngzjNWnA",
+          "clanTag": "BOMBI"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1574,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-19T21:26:48.789Z",
+      "url": "https://openfront.io/game/yzwNhiw4"
     }
   ],
   "trios": [
@@ -82182,6 +82205,39 @@
       "numPlayers": 52,
       "timestamp": "2026-08-19T21:13:45.896Z",
       "url": "https://openfront.io/game/UHRiLUR6"
+    },
+    {
+      "id": "v6RS2r34",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Wonder",
+          "clientID": "xsimjaig",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "KingJay",
+          "clientID": "H2i3hqTV",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "_0_Sparkles",
+          "clientID": "1niBA3bf",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "enea",
+          "clientID": "hvdfYaUD",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 400,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-19T21:46:20.279Z",
+      "url": "https://openfront.io/game/v6RS2r34"
     }
   ]
 }
