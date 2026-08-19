@@ -45872,6 +45872,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-19T14:17:21.981Z",
       "url": "https://openfront.io/game/WMoqerBq"
+    },
+    {
+      "id": "JdvF5d9y",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "CaoBao",
+          "clientID": "2q7yrJL2",
+          "clanTag": "RTK"
+        },
+        {
+          "username": "Wex empire",
+          "clientID": "bkKvtPsz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonIndigo5",
+          "clientID": "RY5wZfK1",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1148,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-19T14:42:36.602Z",
+      "url": "https://openfront.io/game/JdvF5d9y"
     }
   ],
   "quads": [
@@ -80380,6 +80408,67 @@
       "numPlayers": 92,
       "timestamp": "2026-08-19T14:37:34.296Z",
       "url": "https://openfront.io/game/6YEM6CDh"
+    },
+    {
+      "id": "QxyustDN",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Tony Troops",
+          "clientID": "aw5hVfKm",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nonex",
+          "clientID": "xFy1nK8Y",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "moulaga tah bogota",
+          "clientID": "9oFR6RZr",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Chockaw",
+          "clientID": "6CKMBgek",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 517,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-19T14:54:29.838Z",
+      "url": "https://openfront.io/game/QxyustDN"
+    },
+    {
+      "id": "2jieNaff",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "ekna",
+          "clientID": "LnUvLTL4",
+          "clanTag": null
+        },
+        {
+          "username": "Toja",
+          "clientID": "MXsHeRaK",
+          "clanTag": null
+        },
+        {
+          "username": "DOOM",
+          "clientID": "DnohfVkh",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1315,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "timestamp": "2026-08-19T14:41:27.022Z",
+      "url": "https://openfront.io/game/2jieNaff"
     }
   ]
 }
