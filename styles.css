@@ -1981,22 +1981,23 @@ button:active:not(:disabled),
 
   /* Theme toggle sur mobile : aligné avec les nav-items dans la bottom-nav */
   .theme-toggle {
-    margin: 0;
-    padding: 8px;
-    border: none;
-    background: transparent;
-    flex: 0 0 auto;
-    width: 48px;
-    height: 56px;
-    border-radius: var(--radius);
+    margin: 0 !important;
+    padding: 8px !important;
+    border: none !important;
+    background: transparent !important;
+    flex: 0 0 auto !important;
+    width: 48px !important;
+    height: 56px !important;
+    border-radius: var(--radius) !important;
+    align-self: auto !important;
   }
   .theme-toggle:hover {
-    background: var(--bg-subtle);
-    border-color: transparent;
+    background: var(--bg-subtle) !important;
+    border-color: transparent !important;
   }
   .theme-toggle svg {
-    width: 20px;
-    height: 20px;
+    width: 20px !important;
+    height: 20px !important;
   }
 
   /* Buttons full-width sur mobile par défaut (sauf .btn-icon et .btn-sm) */
@@ -2176,6 +2177,45 @@ button:active:not(:disabled),
 /* Afficher l'icône correspondante au mode ACTIF (pas l'inverse) */
 .theme-icon-sun { display: block; }
 .theme-icon-moon { display: none; }
+
+/* Taille des icônes (sun/moon) — doit être explicite car les SVG n'ont pas
+   d'attribut width/height dans le HTML */
+.theme-toggle svg,
+.theme-icon-sun,
+.theme-icon-moon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Styles desktop du bouton .theme-toggle (mobile styles dans media query plus bas) */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px 12px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: all 0.15s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+  width: 36px;  /* carré juste assez pour l'icône */
+  height: 36px;
+  flex-shrink: 0;
+  align-self: center;  /* centré horizontalement dans la sidebar */
+  box-sizing: border-box;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-subtle);
+}
+.theme-toggle:active {
+  transform: scale(0.97);
+}
 
 /* En mode dark, on affiche l'icône soleil (= "passer en light") */
 :root[data-theme="dark"] .theme-icon-sun { display: block; }
