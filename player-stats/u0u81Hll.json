@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-19T11:40:53.375Z",
-  "lastSyncedAt": "2026-08-19T11:40:50.364Z",
-  "totalGames": 2175,
+  "computedAt": "2026-08-19T11:58:35.220Z",
+  "lastSyncedAt": "2026-08-19T11:58:32.242Z",
+  "totalGames": 2176,
   "careerWins": {
-    "ffaCasual": 375,
+    "ffaCasual": 376,
     "ffaRanked": 325,
     "teamCasual": 47,
     "teamRanked": 60
   },
-  "totalWins": 807,
-  "points": 4370,
+  "totalWins": 808,
+  "points": 4380,
   "level": 43,
-  "levelProgress": 70,
+  "levelProgress": 80,
   "levelNextAt": 4400,
   "nextMilestones": {
     "wins": {
-      "current": 807,
+      "current": 808,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 370",
-    "totalWins": "807",
-    "totalGames": "2 175",
+    "points": "4 380",
+    "totalWins": "808",
+    "totalGames": "2 176",
     "totalPlaytime": "22j 21h",
     "totalPlaytimeCompact": "22j 21h",
     "avgGameDuration": "15m 9s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "549h"
   },
   "playtime": {
-    "totalSec": 1977464,
-    "avgGameSec": 909.1788505747127,
+    "totalSec": 1978652,
+    "avgGameSec": 909.3069852941177,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1385,
-        "playtimeSec": 1600522,
-        "wins": 375
+        "games": 1386,
+        "playtimeSec": 1601710,
+        "wins": 376
       },
       "ffaRanked": {
         "games": 494,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 807,
+    "victory": 808,
     "defeat": 1042,
     "incomplete": 326
   },
@@ -404,6 +404,22 @@
       }
     },
     {
+      "map": "Black Sea",
+      "count": 21,
+      "wins": 6,
+      "losses": 15,
+      "playtimeSec": 24915,
+      "avgDuration": 1186.4285714285713,
+      "winRate": 0.2857142857142857,
+      "lastPlayed": 1787139127603,
+      "formatted": {
+        "playtime": "6h 55m",
+        "avgDuration": "19m",
+        "winRate": "29%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Arctic",
       "count": 21,
       "wins": 7,
@@ -433,22 +449,6 @@
         "avgDuration": "8m",
         "winRate": "52%",
         "lastPlayed": "18/07/26"
-      }
-    },
-    {
-      "map": "Black Sea",
-      "count": 20,
-      "wins": 5,
-      "losses": 15,
-      "playtimeSec": 23727,
-      "avgDuration": 1186.35,
-      "winRate": 0.25,
-      "lastPlayed": 1785417049308,
-      "formatted": {
-        "playtime": "6h 35m",
-        "avgDuration": "19m",
-        "winRate": "25%",
-        "lastPlayed": "30/07/26"
       }
     },
     {
@@ -1619,7 +1619,7 @@
       40,
       69,
       75,
-      124,
+      125,
       130,
       143,
       136,
@@ -1634,7 +1634,7 @@
     "byWeekday": [
       302,
       225,
-      292,
+      293,
       325,
       346,
       364,
@@ -1823,8 +1823,8 @@
       },
       {
         "date": "19/08/2026",
-        "count": 3,
-        "playtimeSec": 2442
+        "count": 4,
+        "playtimeSec": 3630
       },
       {
         "date": "20/01/2026",
@@ -2097,7 +2097,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 15
   },
   "achievements": {
@@ -2173,6 +2173,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "w4zgex9y",
+      "start": "2026-08-19T11:32:07.603Z",
+      "map": "Black Sea",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1188,
+      "totalPlayers": 54,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "c8PRERdt",
       "start": "2026-08-19T10:02:20.211Z",
@@ -2378,17 +2389,6 @@
       "mode": "Team",
       "result": "defeat",
       "durationSeconds": 405,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "pjAzQtN3",
-      "start": "2026-08-17T20:27:19.080Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 420,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
