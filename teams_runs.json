@@ -77749,6 +77749,67 @@
       "numPlayers": 12,
       "timestamp": "2026-08-19T00:06:52.954Z",
       "url": "https://openfront.io/game/QpbP3fAF"
+    },
+    {
+      "id": "zshsi1D6",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "AnonTurkey3",
+          "clientID": "ZHWdnVir",
+          "clanTag": null
+        },
+        {
+          "username": "puppies",
+          "clientID": "TvHDijiP",
+          "clanTag": "AWW"
+        },
+        {
+          "username": "AnonSugar4",
+          "clientID": "pGyTnufP",
+          "clanTag": null
+        },
+        {
+          "username": "LetsMakePeace",
+          "clientID": "unnPBnM5",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1235,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-19T00:09:15.127Z",
+      "url": "https://openfront.io/game/zshsi1D6"
+    },
+    {
+      "id": "istpBC7p",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Noob",
+          "clientID": "6wqizsU2",
+          "clanTag": null
+        },
+        {
+          "username": "Toast",
+          "clientID": "t5phtZ3n",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Coopd0g",
+          "clientID": "R81Rb4Md",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1348,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "timestamp": "2026-08-19T00:06:45.446Z",
+      "url": "https://openfront.io/game/istpBC7p"
     }
   ]
 }
