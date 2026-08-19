@@ -82238,6 +82238,29 @@
       "numPlayers": 20,
       "timestamp": "2026-08-19T21:46:20.279Z",
       "url": "https://openfront.io/game/v6RS2r34"
+    },
+    {
+      "id": "NFXobej7",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "CCCP",
+          "clientID": "qhXrE1TA",
+          "clanTag": "BEL"
+        },
+        {
+          "username": "mother",
+          "clientID": "woJ3Zocm",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 1013,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-19T22:02:48.397Z",
+      "url": "https://openfront.io/game/NFXobej7"
     }
   ]
 }
