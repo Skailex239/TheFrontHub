@@ -45410,6 +45410,57 @@
       "numPlayers": 60,
       "timestamp": "2026-08-19T11:36:52.898Z",
       "url": "https://openfront.io/game/gjuCsUBj"
+    },
+    {
+      "id": "SAtQgRgk",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "chirag12321",
+          "clientID": "QqnPj2bE",
+          "clanTag": null
+        },
+        {
+          "username": "Kiwi burger",
+          "clientID": "2QbKPZpo",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1741,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "timestamp": "2026-08-19T11:51:36.841Z",
+      "url": "https://openfront.io/game/SAtQgRgk"
+    },
+    {
+      "id": "aFZJzbZP",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Serjee",
+          "clientID": "5dEbjvDJ",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "kaizo",
+          "clientID": "c2aY4ype",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "MONGOL",
+          "clientID": "2qteQkFM",
+          "clanTag": "BOT"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1396,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-19T12:01:09.928Z",
+      "url": "https://openfront.io/game/aFZJzbZP"
     }
   ],
   "quads": [
@@ -79702,6 +79753,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-19T10:04:08.323Z",
       "url": "https://openfront.io/game/xGcGey8r"
+    },
+    {
+      "id": "PQ6bfhVE",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Novac",
+          "clientID": "mrXXi9Mt",
+          "clanTag": "NKTN"
+        },
+        {
+          "username": "NeverGoodAt",
+          "clientID": "pxEMNWrW",
+          "clanTag": null
+        },
+        {
+          "username": "Oil",
+          "clientID": "X4oivCra",
+          "clanTag": "NKTN"
+        },
+        {
+          "username": "SLETrade",
+          "clientID": "SZhf7KsB",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 1038,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "timestamp": "2026-08-19T11:59:45.340Z",
+      "url": "https://openfront.io/game/PQ6bfhVE"
     }
   ]
 }
