@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-19T10:17:27.414Z",
-  "lastSyncedAt": "2026-08-19T10:17:24.780Z",
-  "totalGames": 3775,
+  "computedAt": "2026-08-19T10:51:47.586Z",
+  "lastSyncedAt": "2026-08-19T10:51:45.383Z",
+  "totalGames": 3776,
   "careerWins": {
     "ffaCasual": 267,
     "ffaRanked": 1417,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 969",
     "totalWins": "1 962",
-    "totalGames": "3 775",
+    "totalGames": "3 776",
     "totalPlaytime": "30j 19h",
     "totalPlaytimeCompact": "30j 19h",
     "avgGameDuration": "11m 45s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "739h"
   },
   "playtime": {
-    "totalSec": 2661961,
-    "avgGameSec": 705.1552317880795,
+    "totalSec": 2662967,
+    "avgGameSec": 705.2349046610169,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1077,
-        "playtimeSec": 1298786,
+        "games": 1078,
+        "playtimeSec": 1299792,
         "wins": 267
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1962,
-    "defeat": 1483,
+    "defeat": 1484,
     "incomplete": 330
   },
   "maps": [
@@ -500,6 +500,22 @@
       }
     },
     {
+      "map": "Achiran",
+      "count": 21,
+      "wins": 10,
+      "losses": 11,
+      "playtimeSec": 21581,
+      "avgDuration": 1027.6666666666667,
+      "winRate": 0.47619047619047616,
+      "lastPlayed": 1787135346439,
+      "formatted": {
+        "playtime": "5h 59m",
+        "avgDuration": "17m",
+        "winRate": "48%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Mare Nostrum",
       "count": 21,
       "wins": 1,
@@ -529,22 +545,6 @@
         "avgDuration": "17m",
         "winRate": "29%",
         "lastPlayed": "30/07/26"
-      }
-    },
-    {
-      "map": "Achiran",
-      "count": 20,
-      "wins": 10,
-      "losses": 10,
-      "playtimeSec": 20575,
-      "avgDuration": 1028.75,
-      "winRate": 0.5,
-      "lastPlayed": 1786868294135,
-      "formatted": {
-        "playtime": "5h 42m",
-        "avgDuration": "17m",
-        "winRate": "50%",
-        "lastPlayed": "16/08/26"
       }
     },
     {
@@ -1602,7 +1602,7 @@
       54,
       87,
       76,
-      92,
+      93,
       100,
       91,
       143,
@@ -1618,7 +1618,7 @@
     "byWeekday": [
       547,
       589,
-      475,
+      476,
       548,
       480,
       576,
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "ZHbvs7z7",
+      "start": "2026-08-19T10:29:06.439Z",
+      "map": "Achiran",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1006,
+      "totalPlayers": 54,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "C9sLzi71",
       "start": "2026-08-19T09:48:37.372Z",
       "map": "Balkans",
@@ -2362,17 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 341,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "4ayaqzSW",
-      "start": "2026-08-18T07:07:06.998Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 356,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"

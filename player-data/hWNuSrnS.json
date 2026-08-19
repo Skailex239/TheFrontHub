@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-19T10:17:24.780Z",
+  "lastSyncedAt": "2026-08-19T10:51:45.383Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 3775,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.4,
+  "totalGames": 3776,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "ZHbvs7z7",
+      "start": "2026-08-19T10:29:06.439Z",
+      "durationSeconds": 1006,
+      "map": "Achiran",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 54,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "C9sLzi71",
       "start": "2026-08-19T09:48:37.372Z",
