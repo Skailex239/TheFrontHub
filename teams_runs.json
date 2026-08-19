@@ -80632,6 +80632,52 @@
       "numPlayers": 48,
       "timestamp": "2026-08-19T14:56:33.491Z",
       "url": "https://openfront.io/game/bCjk27Pa"
+    },
+    {
+      "id": "RBHEvtYt",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "mzn",
+          "clientID": "cj7TwQbE",
+          "clanTag": null
+        },
+        {
+          "username": "literallyjustsendtroops",
+          "clientID": "9FnWVESK",
+          "clanTag": "6767"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1281,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-19T15:21:36.603Z",
+      "url": "https://openfront.io/game/RBHEvtYt"
+    },
+    {
+      "id": "ErDsEn4E",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonVortex6",
+          "clientID": "kh8fG1gQ",
+          "clanTag": null
+        },
+        {
+          "username": "URSS",
+          "clientID": "cY3nTzBt",
+          "clanTag": "LOL"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1035,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-19T15:25:33.347Z",
+      "url": "https://openfront.io/game/ErDsEn4E"
     }
   ]
 }
