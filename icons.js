@@ -112,3 +112,103 @@ if (typeof document !== "undefined") {
   });
   observer.observe(document.documentElement, { childList: true, subtree: true });
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// THEME TOGGLE (light / dark / auto)
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// 3 modes :
+//   - "auto"   → suit prefers-color-scheme (default, no data-theme attribute)
+//   - "light"  → force clair (data-theme="light")
+//   - "dark"   → force sombre (data-theme="dark")
+//
+// Clic sur le bouton = cycle auto → light → dark → auto → ...
+// Le choix est sauvegardé en localStorage('tfs-theme').
+// Au chargement, on lit le localStorage et on applique.
+
+const THEME_KEY = 'tfs-theme';
+
+/**
+ * Apply theme based on stored preference.
+ * Called on page load (see bottom of this file).
+ */
+function applyStoredTheme() {
+  try {
+    const theme = localStorage.getItem(THEME_KEY);
+    if (theme === 'light' || theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', theme);
+    } else {
+      // "auto" or null → remove attribute to let prefers-color-scheme rule
+      document.documentElement.removeAttribute('data-theme');
+    }
+  } catch (e) {
+    // localStorage might throw in private mode, ignore
+    console.warn('[theme] Could not read localStorage:', e.message);
+  }
+}
+
+/**
+ * Get the current effective theme (what the user actually sees).
+ * Returns 'light' or 'dark'.
+ */
+function getEffectiveTheme() {
+  const explicit = document.documentElement.getAttribute('data-theme');
+  if (explicit === 'light' || explicit === 'dark') return explicit;
+  // Auto → check prefers-color-scheme
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+/**
+ * Get the current "mode" (what's stored): 'auto', 'light', or 'dark'.
+ */
+function getThemeMode() {
+  try {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored === 'light' || stored === 'dark') return stored;
+  } catch (e) {}
+  return 'auto';
+}
+
+/**
+ * Cycle through auto → light → dark → auto.
+ * Called when user clicks the .theme-toggle button.
+ */
+function toggleTheme() {
+  const current = getThemeMode();
+  let next;
+  if (current === 'auto') next = 'light';
+  else if (current === 'light') next = 'dark';
+  else next = 'auto';
+
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  applyStoredTheme();
+
+  // Show a toast if available
+  const labels = { auto: 'Auto (suit le système)', light: 'Thème clair', dark: 'Thème sombre' };
+  if (typeof window.showToast === 'function') {
+    window.showToast(labels[next], 'info', 1500);
+  } else {
+    console.log(`[theme] switched to ${next}`);
+  }
+}
+
+// Expose globally for onclick handlers
+if (typeof window !== 'undefined') {
+  window.toggleTheme = toggleTheme;
+  window.getEffectiveTheme = getEffectiveTheme;
+
+  // Apply stored theme ASAP (before CSS renders) to avoid flash of wrong theme
+  // This script is loaded as type="module" so it's deferred — but still
+  // applies before the user sees anything thanks to module defer semantics.
+  applyStoredTheme();
+
+  // Listen for system theme changes (only affects "auto" mode)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    // Only re-apply if user is in auto mode
+    if (getThemeMode() === 'auto') {
+      // No attribute change needed — CSS prefers-color-scheme handles it
+      // Just notify the user (optional)
+    }
+  });
+}
+

@@ -1266,24 +1266,9 @@ button:active,.btn-primary:active,.btn-secondary:active,.btn-ghost:active,
 /* ═══════════════════════════════════════════
    THEME + LANGUAGE TOGGLES (sidebar)
    ═══════════════════════════════════════════ */
-.theme-toggle {
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 16px 12px;
-  padding: 8px;
-  border: 1px solid var(--border);
-  border-radius: var(--r-md, 8px);
-  background: var(--bg);
-  color: var(--fg-muted);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.theme-icon-moon { display: none; }
-:root.dark .theme-icon-sun { display: none; }
-:root.dark .theme-icon-moon { display: block; }
+/* Note: les styles complets du .theme-toggle sont définis plus bas dans la
+   section "DESIGN SYSTEM UNIFIÉ" (ligne 1990+). Cette section ne garde que
+   .lang-toggle et les règles d'icônes. */
 
 .lang-toggle {
   display: flex; align-items: center; justify-content: center;
@@ -1818,8 +1803,17 @@ button:active:not(:disabled),
     bottom: 0;
     left: 0;
     right: 0;
+    top: auto;  /* reset top:0 from desktop */
     z-index: 100;
     box-shadow: 0 -1px 12px rgba(0, 0, 0, 0.03);
+    /* Reset animations reveal-slide-left/reveal-left — they break on mobile */
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  /* Force nav to be visible too (in case reveal animation hasn't fired) */
+  .sidebar nav {
+    transform: none !important;
+    opacity: 1 !important;
   }
   .sidebar .logo,
   .sidebar-profile {
@@ -1985,6 +1979,26 @@ button:active:not(:disabled),
     padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom)));
   }
 
+  /* Theme toggle sur mobile : aligné avec les nav-items dans la bottom-nav */
+  .theme-toggle {
+    margin: 0;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    flex: 0 0 auto;
+    width: 48px;
+    height: 56px;
+    border-radius: var(--radius);
+  }
+  .theme-toggle:hover {
+    background: var(--bg-subtle);
+    border-color: transparent;
+  }
+  .theme-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
   /* Buttons full-width sur mobile par défaut (sauf .btn-icon et .btn-sm) */
   .auth-btn,
   .pf-primary-btn,
@@ -2041,7 +2055,53 @@ button:active:not(:disabled),
   }
 }
 
-/* ── DARK MODE TOGGLE : auto-detect + respect prefers-color-scheme ─────── */
+/* ── DARK MODE — 3 modes : auto (default), light, dark ────────────────────── */
+/* Logique :
+   - data-theme="light" → force le mode clair (ignore prefers-color-scheme)
+   - data-theme="dark"  → force le mode sombre (ignore prefers-color-scheme)
+   - pas de data-theme  → suit prefers-color-scheme (auto)
+   L'utilisateur peut basculer entre les 3 via le bouton .theme-toggle dans la sidebar.
+   Le choix est sauvegardé en localStorage('tfs-theme').
+*/
+
+/* Mode sombre explicite (data-theme="dark") */
+:root[data-theme="dark"] {
+  --bg: #0F0F11;
+  --bg-subtle: #1A1A1E;
+  --bg-muted: #242428;
+  --fg: #F4F4F5;
+  --fg-secondary: #D4D4D8;
+  --fg-muted: #9CA3AF;
+  --fg-subtle: #71717A;
+  --border: #2A2A2E;
+  --border-subtle: #1F1F23;
+  --border-strong: #3A3A3E;
+  --accent: #FF6B00;
+  --accent-hover: #FF8533;
+  --accent-subtle: #2A1A0A;
+  --accent-border: #4A3020;
+  --card: #1A1A1E;
+  --orange-pale: #2A1A0A;
+  --text: #F4F4F5;
+  --text2: #D4D4D8;
+  --text3: #9CA3AF;
+  --muted: #9CA3AF;
+  --bg2: #242428;
+  --border-light: #2A2A2E;
+  --shadow-focus: 0 0 0 3px rgba(255, 107, 0, 0.25);
+
+  /* PR-Front variables override (tournois.html) */
+  --prf-ink: #F4F4F5;
+  --prf-ink2: #1A1A1E;
+  --prf-panel: #1A1A1E;
+  --prf-line: #2A2A2E;
+  --prf-text: #F4F4F5;
+  --prf-muted: #9CA3AF;
+  --prf-beige: #0F0F11;
+  --prf-sidebar: #1A1A1E;
+}
+
+/* Mode sombre auto (si pas de data-theme explicite + OS en dark) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0F0F11;
@@ -2068,8 +2128,77 @@ button:active:not(:disabled),
     --bg2: #242428;
     --border-light: #2A2A2E;
     --shadow-focus: 0 0 0 3px rgba(255, 107, 0, 0.25);
+
+    /* PR-Front variables override (tournois.html) */
+    --prf-ink: #F4F4F5;
+    --prf-ink2: #1A1A1E;
+    --prf-panel: #1A1A1E;
+    --prf-line: #2A2A2E;
+    --prf-text: #F4F4F5;
+    --prf-muted: #9CA3AF;
+    --prf-beige: #0F0F11;
+    --prf-sidebar: #1A1A1E;
   }
 }
+
+/* Pour que :root.dark (ancienne syntaxe) marche toujours — rétro-compat */
+:root.dark {
+  --bg: #0F0F11;
+  --bg-subtle: #1A1A1E;
+  --bg-muted: #242428;
+  --fg: #F4F4F5;
+  --fg-secondary: #D4D4D8;
+  --fg-muted: #9CA3AF;
+  --fg-subtle: #71717A;
+  --border: #2A2A2E;
+  --border-subtle: #1F1F23;
+  --border-strong: #3A3A3E;
+  --accent: #FF6B00;
+  --accent-hover: #FF8533;
+  --accent-subtle: #2A1A0A;
+  --accent-border: #4A3020;
+  --card: #1A1A1E;
+  --orange-pale: #2A1A0A;
+  --card: #1A1A1E;
+  --text: #F4F4F5;
+  --text2: #D4D4D8;
+  --text3: #9CA3AF;
+  --muted: #9CA3AF;
+  --bg2: #242428;
+  --border-light: #2A2A2E;
+  --shadow-focus: 0 0 0 3px rgba(255, 107, 0, 0.25);
+}
+
+/* ── THEME TOGGLE BOUTON (sidebar) ───────────────────────────────────────── */
+/* Note: les styles principaux sont définis plus haut (ligne 1269 et 1990 mobile).
+   Cette section ne définit que les icônes (sun/moon) qui changent selon le thème. */
+
+/* Afficher l'icône correspondante au mode ACTIF (pas l'inverse) */
+.theme-icon-sun { display: block; }
+.theme-icon-moon { display: none; }
+
+/* En mode dark, on affiche l'icône soleil (= "passer en light") */
+:root[data-theme="dark"] .theme-icon-sun { display: block; }
+:root[data-theme="dark"] .theme-icon-moon { display: none; }
+
+/* En mode light explicite, on affiche l'icône lune (= "passer en dark") */
+:root[data-theme="light"] .theme-icon-sun { display: none; }
+:root[data-theme="light"] .theme-icon-moon { display: block; }
+
+/* En mode auto : afficher l'icône selon l'heure (jour=lune pour passer en dark, nuit=soleil) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-icon-sun { display: block; }
+  :root:not([data-theme]) .theme-icon-moon { display: none; }
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .theme-icon-sun { display: none; }
+  :root:not([data-theme]) .theme-icon-moon { display: block; }
+}
+
+/* Rétro-compat ancien système :root.dark */
+:root.dark .theme-icon-sun { display: block; }
+:root.dark .theme-icon-moon { display: none; }
+
 
 /* ── REDUCED MOTION : respecter les préférences utilisateurs ──────────── */
 @media (prefers-reduced-motion: reduce) {
