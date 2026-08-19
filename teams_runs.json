@@ -46595,6 +46595,34 @@
       "numPlayers": 63,
       "timestamp": "2026-08-19T20:03:07.046Z",
       "url": "https://openfront.io/game/gGJ9V1mS"
+    },
+    {
+      "id": "MDswGm3G",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Soulterr",
+          "clientID": "AwCAuL2o",
+          "clanTag": "UN"
+        },
+        {
+          "username": "TradeOrNuke",
+          "clientID": "1VseSZsZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Blasphemous Fish",
+          "clientID": "349bzQ6N",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1191,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-19T20:12:12.656Z",
+      "url": "https://openfront.io/game/MDswGm3G"
     }
   ],
   "quads": [
@@ -81833,6 +81861,39 @@
       "numPlayers": 28,
       "timestamp": "2026-08-19T19:52:33.312Z",
       "url": "https://openfront.io/game/CHtBAdUB"
+    },
+    {
+      "id": "1WueL5Be",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Friend",
+          "clientID": "Xvm7iGRm",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Whiskerandojoe",
+          "clientID": "UcMHKjp9",
+          "clanTag": "AST"
+        },
+        {
+          "username": "NotBot",
+          "clientID": "RPrL8AJ5",
+          "clanTag": null
+        },
+        {
+          "username": "seY",
+          "clientID": "LqZKTNie",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1133,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 118,
+      "timestamp": "2026-08-19T20:15:07.349Z",
+      "url": "https://openfront.io/game/1WueL5Be"
     }
   ]
 }
