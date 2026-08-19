@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-19T07:02:57.466Z",
-  "lastSyncedAt": "2026-08-19T07:02:55.098Z",
-  "totalGames": 2172,
+  "computedAt": "2026-08-19T07:51:12.488Z",
+  "lastSyncedAt": "2026-08-19T07:51:11.180Z",
+  "totalGames": 2173,
   "careerWins": {
-    "ffaCasual": 374,
+    "ffaCasual": 375,
     "ffaRanked": 325,
     "teamCasual": 47,
     "teamRanked": 60
   },
-  "totalWins": 806,
-  "points": 4360,
+  "totalWins": 807,
+  "points": 4370,
   "level": 43,
-  "levelProgress": 60,
+  "levelProgress": 70,
   "levelNextAt": 4400,
   "nextMilestones": {
     "wins": {
-      "current": 806,
+      "current": 807,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 360",
-    "totalWins": "806",
-    "totalGames": "2 172",
+    "points": "4 370",
+    "totalWins": "807",
+    "totalGames": "2 173",
     "totalPlaytime": "22j 20h",
     "totalPlaytimeCompact": "22j 20h",
     "avgGameDuration": "15m 9s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "548h"
   },
   "playtime": {
-    "totalSec": 1975022,
-    "avgGameSec": 909.3103130755064,
+    "totalSec": 1975903,
+    "avgGameSec": 909.2972848596411,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1382,
-        "playtimeSec": 1598080,
-        "wins": 374
+        "games": 1383,
+        "playtimeSec": 1598961,
+        "wins": 375
       },
       "ffaRanked": {
         "games": 494,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 806,
+    "victory": 807,
     "defeat": 1041,
     "incomplete": 325
   },
@@ -836,6 +836,22 @@
       }
     },
     {
+      "map": "Yenisei",
+      "count": 9,
+      "wins": 3,
+      "losses": 6,
+      "playtimeSec": 9762,
+      "avgDuration": 1084.6666666666667,
+      "winRate": 0.3333333333333333,
+      "lastPlayed": 1787122849564,
+      "formatted": {
+        "playtime": "2h 42m",
+        "avgDuration": "18m",
+        "winRate": "33%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "Bering Strait",
       "count": 9,
       "wins": 2,
@@ -945,22 +961,6 @@
         "avgDuration": "16m",
         "winRate": "38%",
         "lastPlayed": "19/06/26"
-      }
-    },
-    {
-      "map": "Yenisei",
-      "count": 8,
-      "wins": 2,
-      "losses": 6,
-      "playtimeSec": 8881,
-      "avgDuration": 1110.125,
-      "winRate": 0.25,
-      "lastPlayed": 1780862765034,
-      "formatted": {
-        "playtime": "2h 28m",
-        "avgDuration": "18m",
-        "winRate": "25%",
-        "lastPlayed": "07/06/26"
       }
     },
     {
@@ -1615,7 +1615,7 @@
       1,
       1,
       5,
-      12,
+      13,
       40,
       69,
       74,
@@ -1634,18 +1634,13 @@
     "byWeekday": [
       302,
       225,
-      289,
+      290,
       325,
       346,
       364,
       321
     ],
     "byDay": [
-      {
-        "date": "13/06/2026",
-        "count": 9,
-        "playtimeSec": 9754
-      },
       {
         "date": "13/07/2026",
         "count": 12,
@@ -1825,6 +1820,11 @@
         "date": "19/07/2026",
         "count": 11,
         "playtimeSec": 13715
+      },
+      {
+        "date": "19/08/2026",
+        "count": 1,
+        "playtimeSec": 881
       },
       {
         "date": "20/01/2026",
@@ -2097,7 +2097,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 15
   },
   "achievements": {
@@ -2173,6 +2173,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "uUKRHcxB",
+      "start": "2026-08-19T07:00:49.564Z",
+      "map": "Yenisei",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 881,
+      "totalPlayers": 56,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "FmbJL2ji",
       "start": "2026-08-18T17:45:17.245Z",
@@ -2378,17 +2389,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 425,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "6Tfg9Jcc",
-      "start": "2026-08-17T20:14:18.768Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 303,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
