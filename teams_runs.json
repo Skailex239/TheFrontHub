@@ -16770,6 +16770,75 @@
       "numPlayers": 52,
       "timestamp": "2026-08-19T15:58:18.474Z",
       "url": "https://openfront.io/game/8b3DeAdP"
+    },
+    {
+      "id": "8vRTi59T",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cloud",
+          "clientID": "8EL98xxq",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "The Grandma Gary",
+          "clientID": "vNZnHEih",
+          "clanTag": "CYN"
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 905,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 11,
+      "timestamp": "2026-08-19T18:27:20.741Z",
+      "url": "https://openfront.io/game/8vRTi59T"
+    },
+    {
+      "id": "BJtdBEaE",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Parmenion",
+          "clientID": "hodJ2LCe",
+          "clanTag": null
+        },
+        {
+          "username": "yoavmarom",
+          "clientID": "7BDLux2z",
+          "clanTag": "MF"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1171,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-19T18:11:43.124Z",
+      "url": "https://openfront.io/game/BJtdBEaE"
+    },
+    {
+      "id": "Eghk8F5r",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "vive le quebec libre",
+          "clientID": "WyLJASPc",
+          "clanTag": "QC"
+        },
+        {
+          "username": "BunnyKisses67",
+          "clientID": "7iSPZbn1",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1254,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "timestamp": "2026-08-19T18:15:54.884Z",
+      "url": "https://openfront.io/game/Eghk8F5r"
     }
   ],
   "trios": [
@@ -46227,6 +46296,52 @@
       "numPlayers": 60,
       "timestamp": "2026-08-19T17:35:18.131Z",
       "url": "https://openfront.io/game/7bh7Q6kX"
+    },
+    {
+      "id": "LFKztUxo",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "pahlavi",
+          "clientID": "gPrPne6g",
+          "clanTag": "UN"
+        },
+        {
+          "username": "henroikol",
+          "clientID": "GyxMMozi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "casmen90",
+          "clientID": "BwApNERi",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1475,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-19T18:08:52.420Z",
+      "url": "https://openfront.io/game/LFKztUxo"
+    },
+    {
+      "id": "2YuQSrCY",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Bears",
+          "clientID": "Uvj1btxT",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 1783,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "timestamp": "2026-08-19T18:04:33.117Z",
+      "url": "https://openfront.io/game/2YuQSrCY"
     }
   ],
   "quads": [
