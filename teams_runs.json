@@ -45206,6 +45206,34 @@
       "numPlayers": 60,
       "timestamp": "2026-08-19T08:54:48.886Z",
       "url": "https://openfront.io/game/LwLXGebQ"
+    },
+    {
+      "id": "P5bNuR5W",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Gedeon",
+          "clientID": "pYt7odnd",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "AnonMoss",
+          "clientID": "vqqu4CNN",
+          "clanTag": null
+        },
+        {
+          "username": "ENBO",
+          "clientID": "xDUXWDpH",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 698,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "timestamp": "2026-08-19T09:47:08.283Z",
+      "url": "https://openfront.io/game/P5bNuR5W"
     }
   ],
   "quads": [
@@ -79378,6 +79406,52 @@
       "numPlayers": 44,
       "timestamp": "2026-08-19T08:59:21.176Z",
       "url": "https://openfront.io/game/32cNpzRW"
+    },
+    {
+      "id": "h2H5Zpeu",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonCamel7",
+          "clientID": "HqHfdkgY",
+          "clanTag": null
+        },
+        {
+          "username": "YellowPoop.R8B6",
+          "clientID": "2GZHXJn7",
+          "clanTag": null
+        },
+        {
+          "username": "Fatboy",
+          "clientID": "HBRVTnxR",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 1370,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "timestamp": "2026-08-19T09:31:41.777Z",
+      "url": "https://openfront.io/game/h2H5Zpeu"
+    },
+    {
+      "id": "73yFsVof",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "OXLONG",
+          "clientID": "xk82HF4m",
+          "clanTag": "TITO"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1092,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-19T09:39:26.784Z",
+      "url": "https://openfront.io/game/73yFsVof"
     }
   ]
 }
