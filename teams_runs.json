@@ -46176,6 +46176,29 @@
       "numPlayers": 75,
       "timestamp": "2026-08-19T17:03:11.431Z",
       "url": "https://openfront.io/game/qHEUnoNm"
+    },
+    {
+      "id": "Nz6fP1tZ",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Udena slanina",
+          "clientID": "XdqFMtVh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Croco",
+          "clientID": "c2dmHRDw",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1198,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-19T17:34:01.038Z",
+      "url": "https://openfront.io/game/Nz6fP1tZ"
     }
   ],
   "quads": [
@@ -81129,6 +81152,57 @@
       "numPlayers": 32,
       "timestamp": "2026-08-19T17:31:22.862Z",
       "url": "https://openfront.io/game/DidbRV5K"
+    },
+    {
+      "id": "jRsJBXpt",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Mo0l",
+          "clientID": "TpzrW1L8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCipher9",
+          "clientID": "DsypP9tt",
+          "clanTag": null
+        },
+        {
+          "username": "Grey",
+          "clientID": "rQgUYrwx",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1000,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-19T17:39:31.923Z",
+      "url": "https://openfront.io/game/jRsJBXpt"
+    },
+    {
+      "id": "HipEH5LP",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "pie69420",
+          "clientID": "4JVej5hc",
+          "clanTag": null
+        },
+        {
+          "username": "Evil Mitochondria",
+          "clientID": "1D6JPRgx",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 785,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-19T17:46:00.865Z",
+      "url": "https://openfront.io/game/HipEH5LP"
     }
   ]
 }
