@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-19T16:18:22.398Z",
-  "lastSyncedAt": "2026-08-19T16:18:20.595Z",
-  "totalGames": 3783,
+  "computedAt": "2026-08-19T16:53:33.505Z",
+  "lastSyncedAt": "2026-08-19T16:53:30.506Z",
+  "totalGames": 3789,
   "careerWins": {
     "ffaCasual": 267,
     "ffaRanked": 1419,
     "teamCasual": 151,
-    "teamRanked": 131
+    "teamRanked": 135
   },
-  "totalWins": 1968,
-  "points": 4975,
+  "totalWins": 1972,
+  "points": 4979,
   "level": 49,
-  "levelProgress": 75,
+  "levelProgress": 79,
   "levelNextAt": 5000,
   "nextMilestones": {
     "wins": {
-      "current": 1968,
+      "current": 1972,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "4 975",
-    "totalWins": "1 968",
-    "totalGames": "3 783",
+    "points": "4 979",
+    "totalWins": "1 972",
+    "totalGames": "3 789",
     "totalPlaytime": "30j 20h",
     "totalPlaytimeCompact": "30j 20h",
     "avgGameDuration": "11m 44s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "740h"
   },
   "playtime": {
-    "totalSec": 2665824,
-    "avgGameSec": 704.6851704996035,
+    "totalSec": 2667495,
+    "avgGameSec": 704.0102929532858,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -71,29 +71,29 @@
         "wins": 151
       },
       "teamRanked": {
-        "games": 204,
-        "playtimeSec": 54720,
-        "wins": 131
+        "games": 210,
+        "playtimeSec": 56391,
+        "wins": 135
       }
     }
   },
   "results": {
-    "victory": 1968,
-    "defeat": 1485,
-    "incomplete": 330
+    "victory": 1972,
+    "defeat": 1486,
+    "incomplete": 331
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 961,
-      "wins": 687,
-      "losses": 274,
-      "playtimeSec": 406293,
-      "avgDuration": 422.78147762747136,
-      "winRate": 0.7148803329864725,
-      "lastPlayed": 1787151994111,
+      "count": 963,
+      "wins": 688,
+      "losses": 275,
+      "playtimeSec": 407142,
+      "avgDuration": 422.78504672897196,
+      "winRate": 0.7144340602284528,
+      "lastPlayed": 1787157508767,
       "formatted": {
-        "playtime": "4j 16h",
+        "playtime": "4j 17h",
         "avgDuration": "7m",
         "winRate": "71%",
         "lastPlayed": "19/08/26"
@@ -133,13 +133,13 @@
     },
     {
       "map": "Asia",
-      "count": 370,
-      "wins": 271,
+      "count": 373,
+      "wins": 274,
       "losses": 99,
-      "playtimeSec": 156512,
-      "avgDuration": 423.0054054054054,
-      "winRate": 0.7324324324324324,
-      "lastPlayed": 1787155442357,
+      "playtimeSec": 157303,
+      "avgDuration": 421.7238605898123,
+      "winRate": 0.7345844504021448,
+      "lastPlayed": 1787157901208,
       "formatted": {
         "playtime": "1j 19h",
         "avgDuration": "7m",
@@ -1608,7 +1608,7 @@
       143,
       227,
       324,
-      344,
+      350,
       344,
       320,
       304,
@@ -1618,7 +1618,7 @@
     "byWeekday": [
       547,
       589,
-      483,
+      489,
       548,
       480,
       576,
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 3,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,61 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "2RRwsMk8",
+      "start": "2026-08-19T16:45:01.208Z",
+      "map": "Asia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 278,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "v3SntnT5",
+      "start": "2026-08-19T16:38:28.767Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 360,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "eY8axETe",
+      "start": "2026-08-19T16:29:28.645Z",
+      "map": "Asia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 356,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "mrop4Gph",
+      "start": "2026-08-19T16:19:58.447Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 489,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
+      "gameId": "fN99NsXp",
+      "start": "2026-08-19T16:15:55.144Z",
+      "map": "Asia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 157,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "sNXDqHam",
       "start": "2026-08-19T16:04:02.357Z",
@@ -2321,61 +2376,6 @@
       "totalPlayers": 84,
       "rankedType": "unranked",
       "category": "ffaCasual"
-    },
-    {
-      "gameId": "76fKGtFC",
-      "start": "2026-08-18T15:16:58.861Z",
-      "map": "Gateway to the Atlantic",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1841,
-      "totalPlayers": 103,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "gWETDvxK",
-      "start": "2026-08-18T15:07:19.687Z",
-      "map": "France",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 915,
-      "totalPlayers": 95,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "kJgqVpBz",
-      "start": "2026-08-18T14:37:17.578Z",
-      "map": "Middle East",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1645,
-      "totalPlayers": 82,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "dvRPfg3K",
-      "start": "2026-08-18T11:42:31.997Z",
-      "map": "Gateway to the Atlantic",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 1218,
-      "totalPlayers": 102,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "mYMLSiSv",
-      "start": "2026-08-18T09:35:47.772Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 556,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
     }
   ]
 }

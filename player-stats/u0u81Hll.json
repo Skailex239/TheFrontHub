@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-19T16:18:23.065Z",
-  "lastSyncedAt": "2026-08-19T16:18:21.035Z",
-  "totalGames": 2176,
+  "computedAt": "2026-08-19T16:53:34.548Z",
+  "lastSyncedAt": "2026-08-19T16:53:31.572Z",
+  "totalGames": 2177,
   "careerWins": {
     "ffaCasual": 376,
     "ffaRanked": 325,
@@ -21,7 +21,7 @@
       "target": 1000
     },
     "playtime": {
-      "current": 549,
+      "current": 550,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 380",
     "totalWins": "808",
-    "totalGames": "2 176",
-    "totalPlaytime": "22j 21h",
-    "totalPlaytimeCompact": "22j 21h",
+    "totalGames": "2 177",
+    "totalPlaytime": "22j 22h",
+    "totalPlaytimeCompact": "22j 22h",
     "avgGameDuration": "15m 9s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "549h"
+    "totalPlaytimeHours": "550h"
   },
   "playtime": {
-    "totalSec": 1978652,
-    "avgGameSec": 909.3069852941177,
+    "totalSec": 1980262,
+    "avgGameSec": 909.6288470372072,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1386,
-        "playtimeSec": 1601710,
+        "games": 1387,
+        "playtimeSec": 1603320,
         "wins": 376
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 808,
-    "defeat": 1042,
+    "defeat": 1043,
     "incomplete": 326
   },
   "maps": [
@@ -452,6 +452,22 @@
       }
     },
     {
+      "map": "Alps",
+      "count": 19,
+      "wins": 3,
+      "losses": 16,
+      "playtimeSec": 27527,
+      "avgDuration": 1448.7894736842106,
+      "winRate": 0.15789473684210525,
+      "lastPlayed": 1787155269169,
+      "formatted": {
+        "playtime": "7h 38m",
+        "avgDuration": "24m",
+        "winRate": "16%",
+        "lastPlayed": "19/08/26"
+      }
+    },
+    {
       "map": "South America",
       "count": 19,
       "wins": 5,
@@ -481,22 +497,6 @@
         "avgDuration": "18m",
         "winRate": "26%",
         "lastPlayed": "17/07/26"
-      }
-    },
-    {
-      "map": "Alps",
-      "count": 18,
-      "wins": 3,
-      "losses": 15,
-      "playtimeSec": 25917,
-      "avgDuration": 1439.8333333333333,
-      "winRate": 0.16666666666666666,
-      "lastPlayed": 1786984546295,
-      "formatted": {
-        "playtime": "7h 11m",
-        "avgDuration": "23m",
-        "winRate": "17%",
-        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1624,7 +1624,7 @@
       143,
       136,
       200,
-      198,
+      199,
       224,
       190,
       149,
@@ -1634,7 +1634,7 @@
     "byWeekday": [
       302,
       225,
-      293,
+      294,
       325,
       346,
       364,
@@ -1823,8 +1823,8 @@
       },
       {
         "date": "19/08/2026",
-        "count": 4,
-        "playtimeSec": 3630
+        "count": 5,
+        "playtimeSec": 5240
       },
       {
         "date": "20/01/2026",
@@ -2097,7 +2097,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2173,6 +2173,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "WUGVoBJD",
+      "start": "2026-08-19T16:01:09.169Z",
+      "map": "Alps",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1610,
+      "totalPlayers": 122,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "w4zgex9y",
       "start": "2026-08-19T11:32:07.603Z",
@@ -2378,17 +2389,6 @@
       "mode": "Team",
       "result": "defeat",
       "durationSeconds": 131,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "BhMooi5m",
-      "start": "2026-08-17T20:35:25.563Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 405,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
