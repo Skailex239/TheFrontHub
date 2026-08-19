@@ -44943,6 +44943,29 @@
       "numPlayers": 45,
       "timestamp": "2026-08-19T06:39:37.245Z",
       "url": "https://openfront.io/game/WDHe883L"
+    },
+    {
+      "id": "Kk1fTGJa",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "BossRatt",
+          "clientID": "v2qemaCi",
+          "clanTag": "AHOJ"
+        },
+        {
+          "username": "Miks",
+          "clientID": "38ZJ9KMk",
+          "clanTag": "AHOJ"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1169,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "timestamp": "2026-08-19T06:56:09.272Z",
+      "url": "https://openfront.io/game/Kk1fTGJa"
     }
   ],
   "quads": [
@@ -78896,6 +78919,34 @@
       "numPlayers": 40,
       "timestamp": "2026-08-19T06:36:42.548Z",
       "url": "https://openfront.io/game/Qt37ih11"
+    },
+    {
+      "id": "BmukGZND",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Ben Dover",
+          "clientID": "ALHC1nx6",
+          "clanTag": null
+        },
+        {
+          "username": "SAMOnTheBeach",
+          "clientID": "P9zZZNhu",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonComet5",
+          "clientID": "LUZ66z6G",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 621,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-19T07:09:16.114Z",
+      "url": "https://openfront.io/game/BmukGZND"
     }
   ]
 }
