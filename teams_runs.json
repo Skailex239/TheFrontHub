@@ -17008,6 +17008,24 @@
       "numPlayers": 34,
       "timestamp": "2026-08-19T21:26:48.789Z",
       "url": "https://openfront.io/game/yzwNhiw4"
+    },
+    {
+      "id": "6NRGsvQ2",
+      "team": "Team 22",
+      "players": [
+        {
+          "username": "Gale",
+          "clientID": "N2njJ15M",
+          "clanTag": null
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 1272,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "timestamp": "2026-08-19T22:19:39.523Z",
+      "url": "https://openfront.io/game/6NRGsvQ2"
     }
   ],
   "trios": [
@@ -46817,6 +46835,62 @@
       "numPlayers": 63,
       "timestamp": "2026-08-19T20:53:55.023Z",
       "url": "https://openfront.io/game/gjFdhbKR"
+    },
+    {
+      "id": "fCzePMSd",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "psan",
+          "clientID": "f6nmVit5",
+          "clanTag": "AGRAR"
+        },
+        {
+          "username": "Liev",
+          "clientID": "eELFgrMo",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion2",
+          "clientID": "cgfWxZ2N",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 892,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "timestamp": "2026-08-19T22:27:00.005Z",
+      "url": "https://openfront.io/game/fCzePMSd"
+    },
+    {
+      "id": "H1LC52A2",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LeVi",
+          "clientID": "SfnDKhK7",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "Amon",
+          "clientID": "mybYJcFr",
+          "clanTag": null
+        },
+        {
+          "username": "chungus",
+          "clientID": "Khiwi6bT",
+          "clanTag": "NUB"
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 546,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "timestamp": "2026-08-19T22:19:47.031Z",
+      "url": "https://openfront.io/game/H1LC52A2"
     }
   ],
   "quads": [
@@ -82261,6 +82335,39 @@
       "numPlayers": 36,
       "timestamp": "2026-08-19T22:02:48.397Z",
       "url": "https://openfront.io/game/NFXobej7"
+    },
+    {
+      "id": "1ayJH6vj",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Lonely_Millennial",
+          "clientID": "JddjjxFZ",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "StrikingSpliff",
+          "clientID": "j6zENMVW",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "nYGvDBK9",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Dan",
+          "clientID": "hkCyUiEg",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 555,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-19T22:15:21.245Z",
+      "url": "https://openfront.io/game/1ayJH6vj"
     }
   ]
 }
