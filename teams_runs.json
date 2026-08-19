@@ -16271,6 +16271,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-18T23:21:07.273Z",
       "url": "https://openfront.io/game/t1M757nx"
+    },
+    {
+      "id": "1hab946D",
+      "team": "Team 19",
+      "players": [
+        {
+          "username": "Doublenum",
+          "clientID": "g9Y5wmTe",
+          "clanTag": null
+        },
+        {
+          "username": "Jiggle",
+          "clientID": "PAGYXY1W",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1453,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-18T23:46:31.043Z",
+      "url": "https://openfront.io/game/1hab946D"
     }
   ],
   "trios": [
@@ -44366,6 +44389,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-18T23:38:24.487Z",
       "url": "https://openfront.io/game/SnoKKbEB"
+    },
+    {
+      "id": "pSQBbBy9",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "CanCanCanCanCan",
+          "clientID": "PWDHZ6Yq",
+          "clanTag": "42"
+        },
+        {
+          "username": "bacar",
+          "clientID": "jW7HzEtS",
+          "clanTag": "42"
+        },
+        {
+          "username": "AKT",
+          "clientID": "EaYacMik",
+          "clanTag": "42"
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 603,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-19T00:04:45.319Z",
+      "url": "https://openfront.io/game/pSQBbBy9"
     }
   ],
   "quads": [
@@ -77665,6 +77716,39 @@
       "numPlayers": 20,
       "timestamp": "2026-08-18T23:46:56.580Z",
       "url": "https://openfront.io/game/u5eYa5FH"
+    },
+    {
+      "id": "QpbP3fAF",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon",
+          "clientID": "hKi9AiUi",
+          "clanTag": null
+        },
+        {
+          "username": "USS Anderson",
+          "clientID": "imfZHrk7",
+          "clanTag": null
+        },
+        {
+          "username": "Jav",
+          "clientID": "vxnAT4Ze",
+          "clanTag": "AAA"
+        },
+        {
+          "username": "Anon744",
+          "clientID": "yfvKT5fu",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 508,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-19T00:06:52.954Z",
+      "url": "https://openfront.io/game/QpbP3fAF"
     }
   ]
 }
