@@ -79049,6 +79049,34 @@
       "numPlayers": 64,
       "timestamp": "2026-08-19T07:23:41.043Z",
       "url": "https://openfront.io/game/ENRb2B6X"
+    },
+    {
+      "id": "aaqQm3FP",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Hippopanonymous",
+          "clientID": "V84MQjk2",
+          "clanTag": null
+        },
+        {
+          "username": "Omerta",
+          "clientID": "gi9ro9a4",
+          "clanTag": "47"
+        },
+        {
+          "username": "CorsicaPennArBed",
+          "clientID": "tddX33WZ",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1433,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-19T07:56:21.154Z",
+      "url": "https://openfront.io/game/aaqQm3FP"
     }
   ]
 }
