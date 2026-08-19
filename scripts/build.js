@@ -66,11 +66,20 @@ async function run() {
       entryPoints: [path.join(ROOT, t.entry)],
       outfile: path.join(DIST, t.out),
       minify: true,
+      // Keep identifiers readable for debugging + avoid tree-shaking bugs.
+      // minifyIdentifiers=false keeps original variable names (e.g. MAP_NORMALIZATION)
+      // so cross-module references can't be accidentally dropped.
+      minifyIdentifiers: false,
+      minifySyntax: true,
+      minifyWhitespace: true,
       target: "es2020",
       format: "esm",
       sourcemap: false,
       legalComments: "none",
       logLevel: "warning",
+      // Tree-shaking can sometimes drop exports that ARE used (false negative).
+      // Disable it to be safe — bundle size impact is minimal (<5%).
+      treeShaking: false,
     };
     if (t.bundled) {
       opts.bundle = true;

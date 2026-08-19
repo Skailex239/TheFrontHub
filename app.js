@@ -128,7 +128,7 @@ onAuthStateChanged(auth, async (user) => {
       if (data && data.publicId) {
         console.log("[auth] Login réussi — redirection vers profile.html");
         if (typeof showToast === 'function') {
-          showToast("Bienvenue " + (data.username || '') + " ! Redirection...", "success", 1500);
+          window.showToast("Bienvenue " + (data.username || '') + " ! Redirection...", "success", 1500);
         }
         setTimeout(() => { window.location.href = "profile.html"; }, 800);
         return;
@@ -419,20 +419,20 @@ window.startOwnershipVerification = async () => {
 
   // L8: Form validation
   if (!username || !publicId) {
-    showToast("Veuillez remplir tous les champs.", "warning");
+    window.showToast("Veuillez remplir tous les champs.", "warning");
     return;
   }
   if (username.length < 2 || username.length > 30) {
-    showToast("Le pseudo doit faire entre 2 et 30 caractères.", "warning");
+    window.showToast("Le pseudo doit faire entre 2 et 30 caractères.", "warning");
     return;
   }
   // L8: OpenFront publicId is exactly 8 alphanumeric chars
   if (!/^[A-Za-z0-9]{8}$/.test(publicId)) {
-    showToast("Le Public ID doit faire exactement 8 caractères alphanumériques (ex: HabCsQYR).", "warning");
+    window.showToast("Le Public ID doit faire exactement 8 caractères alphanumériques (ex: HabCsQYR).", "warning");
     return;
   }
   if (/[^a-zA-Z0-9_\- ]/.test(username)) {
-    showToast("Le pseudo ne peut contenir que des lettres, chiffres, espaces, _ et -", "warning");
+    window.showToast("Le pseudo ne peut contenir que des lettres, chiffres, espaces, _ et -", "warning");
     return;
   }
 
@@ -440,7 +440,7 @@ window.startOwnershipVerification = async () => {
   try {
     const existing = (await getDoc(doc(db, "users", currentUser.uid))).data() || {};
     if (existing.publicId && existing.publicId !== publicId) {
-      showToast("Le Public ID OpenFront ne peut plus être modifié.", "error");
+      window.showToast("Le Public ID OpenFront ne peut plus être modifié.", "error");
       return;
     }
   } catch (e) {
@@ -448,16 +448,16 @@ window.startOwnershipVerification = async () => {
   }
 
   // L8: Verify publicId exists via OpenFront API
-  showToast("Vérification du Public ID...", "info", 3000);
+  window.showToast("Vérification du Public ID...", "info", 3000);
   try {
     const { fetchOpenFront } = await import('./openfront-client.js');
     const playerData = await fetchOpenFront(`/public/player/${encodeURIComponent(publicId)}`);
     if (!playerData || !playerData.games) {
-      showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
+      window.showToast("Public ID introuvable sur OpenFront. Vérifiez votre saisie.", "error");
       return;
     }
   } catch (e) {
-    showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error");
+    window.showToast("Impossible de vérifier le Public ID (API indisponible). Réessayez plus tard.", "error");
     console.error("[ownership] API check failed:", e);
     return;
   }
@@ -475,7 +475,7 @@ window.startOwnershipVerification = async () => {
   document.getElementById('profile-setup-step2').style.display = 'block';
   document.getElementById('ownership-code').textContent = _ownershipCode;
   document.getElementById('ownership-example').textContent = _ownershipCode + " " + username;
-  showToast("Code généré. Suivez les instructions ci-dessous.", "info");
+  window.showToast("Code généré. Suivez les instructions ci-dessous.", "info");
 };
 
 // L7: Step 2 — confirm by checking that the code appears in recent sessions
@@ -505,7 +505,7 @@ window.confirmOwnershipVerification = async () => {
     }
 
     if (!found) {
-      showToast("Code non trouvé dans vos parties récentes. Assurez-vous d'avoir joué avec le code dans votre pseudo.", "error", 6000);
+      window.showToast("Code non trouvé dans vos parties récentes. Assurez-vous d'avoir joué avec le code dans votre pseudo.", "error", 6000);
       btn.disabled = false;
       btn.textContent = originalText;
       return;
@@ -515,7 +515,7 @@ window.confirmOwnershipVerification = async () => {
     await saveUserProfile(_ownershipUsername, _ownershipPublicId);
   } catch (e) {
     console.error("[ownership] Confirmation failed:", e);
-    showToast("Erreur lors de la vérification. Réessayez.", "error");
+    window.showToast("Erreur lors de la vérification. Réessayez.", "error");
     btn.disabled = false;
     btn.textContent = originalText;
   }
@@ -560,12 +560,12 @@ async function saveUserProfile(username, publicId) {
     updateAuthUI(currentUser);
     processData();
     renderAll();
-    showToast("Profil vérifié et enregistré avec succès ! Redirection…", "success");
+    window.showToast("Profil vérifié et enregistré avec succès ! Redirection…", "success");
     // Redirect to profile.html so user can see their freshly-linked stats
     setTimeout(() => { window.location.href = "profile.html"; }, 800);
   } catch (error) {
     console.error("Erreur sauvegarde profil:", error);
-    showToast("Erreur lors de la sauvegarde du profil.", "error");
+    window.showToast("Erreur lors de la sauvegarde du profil.", "error");
   }
 }
 
@@ -989,7 +989,7 @@ async function loadData(){
 
   } catch(e) {
     console.error("Erreur critique chargement:", e);
-    showToast("Mode hors-ligne : données réseau inaccessibles.", "warning", 6000);
+    window.showToast("Mode hors-ligne : données réseau inaccessibles.", "warning", 6000);
     hideProgressBar();
     
     // Si on a pas de cache du tout, on affiche une erreur fatale
@@ -1083,7 +1083,7 @@ async function autoRefresh(){
     }
   }catch(e){
     console.error("[TheFrontHub] ❌ Erreur auto-refresh:", e);
-    showToast("Erreur de synchronisation automatique", "warning", 3000);
+    window.showToast("Erreur de synchronisation automatique", "warning", 3000);
   }
 }
 
@@ -1370,7 +1370,7 @@ function renderAll(){
     const d = allMaps.find(m => m.map === activeMap);
     if (d) {
       document.getElementById("content-title").textContent = getMapDisplayName(activeMap);
-      document.getElementById("content-meta").textContent = t("ui.meta", { runs: d.total, best: formatTime(d.best) });
+      document.getElementById("content-meta").textContent = window.t("ui.meta", { runs: d.total, best: formatTime(d.best) });
       renderLeaderboard(d);
     }
   }
@@ -1390,7 +1390,7 @@ function updateLastUpdate(){
 
   if(_latestRun){
     const formattedTime = new Date(_latestRun.timestamp).toLocaleString(localeStr);
-    document.getElementById("last-update").innerHTML = esc(t("ui.last_update", { time: formattedTime })) + '<span class="refresh-badge" id="refresh-badge" style="display:none">LIVE</span>';
+    document.getElementById("last-update").innerHTML = esc(window.t("ui.last_update", { time: formattedTime })) + '<span class="refresh-badge" id="refresh-badge" style="display:none">LIVE</span>';
   }
 
   if (gameCommit) {
@@ -1416,7 +1416,7 @@ function selectMap(name){
   const d=allMaps.find(m=>m.map===name);if(!d)return;
 
   document.getElementById("content-title").textContent=getMapDisplayName(name);
-  document.getElementById("content-meta").textContent=t("ui.meta", { runs: d.total, best: formatTime(d.best) });
+  document.getElementById("content-meta").textContent=window.t("ui.meta", { runs: d.total, best: formatTime(d.best) });
   document.getElementById("share-btn").style.display='inline-flex';
   renderLeaderboard(d);updateURL();
 }
@@ -1566,11 +1566,11 @@ async function toggleGG(runId, event) {
 
 function timeAgo(ts){
   const s=Math.floor((Date.now()-new Date(ts).getTime())/1000);
-  if(s<60)return t("time.now");
-  if(s<3600)return t("time.min", { n: Math.floor(s/60) });
-  if(s<86400)return t("time.hour", { n: Math.floor(s/3600) });
+  if(s<60)return window.t("time.now");
+  if(s<3600)return window.t("time.min", { n: Math.floor(s/60) });
+  if(s<86400)return window.t("time.hour", { n: Math.floor(s/3600) });
   const d=Math.floor(s/86400);
-  return t("time.day", { n: d });
+  return window.t("time.day", { n: d });
 }
 function renderFeed(){
   const c=document.getElementById("feed-list");
@@ -1626,25 +1626,25 @@ function renderHof(){
 function renderCompare(){
   const c=document.getElementById("compare-list");
   if(comparePlayers.length<2){
-    c.innerHTML='<div class="empty-state"><h3>'+t("compare.empty_title")+'</h3><p>'+t("compare.empty_desc")+'</p></div>';
+    c.innerHTML='<div class="empty-state"><h3>'+window.t("compare.empty_title")+'</h3><p>'+window.t("compare.empty_desc")+'</p></div>';
     return;
   }
   const p1=playerStats[comparePlayers[0]],p2=playerStats[comparePlayers[1]];
   if(!p1||!p2){
-    c.innerHTML='<div class="empty-state"><p>'+t("search.no_player")+'</p></div>';
+    c.innerHTML='<div class="empty-state"><p>'+window.t("search.no_player")+'</p></div>';
     return;
   }
   const r1=getRank(p1.points),r2=getRank(p2.points);
   const rows=[
-    {label:t("compare.rank"),v1:r1.name,v2:r2.name},
-    {label:t("compare.points"),v1:p1.points,v2:p2.points},
-    {label:t("compare.gold"),v1:p1.golds,v2:p2.golds},
-    {label:t("compare.silver"),v1:p1.silvers,v2:p2.silvers},
-    {label:t("compare.bronze"),v1:p1.bronzes,v2:p2.bronzes},
-    {label:t("compare.wins"),v1:p1.wins,v2:p2.wins},
-    {label:t("compare.maps"),v1:p1.maps.size,v2:p2.maps.size},
-    {label:t("compare.avg_time"),v1:formatTime(Math.round(p1.totalTime/p1.wins)),v2:formatTime(Math.round(p2.totalTime/p2.wins))},
-    {label:t("compare.max_streak"),v1:p1.maxStreak,v2:p2.maxStreak}
+    {label:window.t("compare.rank"),v1:r1.name,v2:r2.name},
+    {label:window.t("compare.points"),v1:p1.points,v2:p2.points},
+    {label:window.t("compare.gold"),v1:p1.golds,v2:p2.golds},
+    {label:window.t("compare.silver"),v1:p1.silvers,v2:p2.silvers},
+    {label:window.t("compare.bronze"),v1:p1.bronzes,v2:p2.bronzes},
+    {label:window.t("compare.wins"),v1:p1.wins,v2:p2.wins},
+    {label:window.t("compare.maps"),v1:p1.maps.size,v2:p2.maps.size},
+    {label:window.t("compare.avg_time"),v1:formatTime(Math.round(p1.totalTime/p1.wins)),v2:formatTime(Math.round(p2.totalTime/p2.wins))},
+    {label:window.t("compare.max_streak"),v1:p1.maxStreak,v2:p2.maxStreak}
   ];
   c.innerHTML='<table class="global-table"><thead><tr><th></th><th class="global-player" onclick="showPlayer(\''+esc(p1.player)+'\')">'+p1.player+'</th><th class="global-player" onclick="showPlayer(\''+esc(p2.player)+'\')">'+p2.player+'</th></tr></thead><tbody>'+
     rows.map(r=>'<tr><td class="compare-label">'+r.label+'</td><td class="compare-val">'+r.v1+'</td><td class="compare-val">'+r.v2+'</td></tr>').join("")+
@@ -1693,12 +1693,12 @@ function searchPlayer(){
   if(!q){c.innerHTML='';return}
   const matches=globalLeaderboard.filter(p=>p.player.toLowerCase().includes(q)).slice(0,5);
   if(!matches.length){
-    c.innerHTML='<div class="feed-card" style="padding:16px"><p style="color:var(--text2)">'+t("search.no_player")+'</p></div>';
+    c.innerHTML='<div class="feed-card" style="padding:16px"><p style="color:var(--text2)">'+window.t("search.no_player")+'</p></div>';
     return;
   }
   c.innerHTML='<div class="feed-card">'+matches.map(p=>{
     const rank=getRank(p.points);
-    const desc = t("search.player_desc", { rank: rank.name, wins: p.wins, maps: p.maps.size });
+    const desc = window.t("search.player_desc", { rank: rank.name, wins: p.wins, maps: p.maps.size });
     return '<div class="feed-item" onclick="showPlayer(\''+esc(p.player)+'\')"><div class="feed-rank">'+p.points+'</div><div class="feed-info"><div class="feed-player">'+p.player+'</div><div class="feed-map">'+desc+'</div></div></div>';
   }).join("")+'</div>';
 }
@@ -1723,7 +1723,7 @@ function showPlayer(name){
   // Not connected — show modal with "non connecté" message
   const rank=getRank(p.points);
   document.getElementById("modal-player-name").innerHTML=esc(name)+' <span class="rank-badge" style="color:'+esc(rank.color)+'">'+esc(rank.name)+'</span>';
-  document.getElementById("modal-player-stats").textContent=t("ui.player_stats", { wins: p.wins, maps: p.maps.size, points: p.points });
+  document.getElementById("modal-player-stats").textContent=window.t("ui.player_stats", { wins: p.wins, maps: p.maps.size, points: p.points });
   document.getElementById("modal-wins").textContent=p.wins;
   document.getElementById("modal-maps").textContent=p.maps.size;
   document.getElementById("modal-avg").textContent=formatTime(Math.round(p.totalTime/p.wins));
@@ -1737,7 +1737,7 @@ function showPlayer(name){
     let hypothRank = '';
     if (rank2 > 1) {
       const betterRuns = mapData ? mapData.runs.filter(run => run.duration_s < r.duration_s).length : 0;
-      hypothRank = '<span style="color:var(--text3);font-size:11px;margin-left:8px">' + t("ui.hypoth_rank", { rank: betterRuns + 1 }) + '</span>';
+      hypothRank = '<span style="color:var(--text3);font-size:11px;margin-left:8px">' + window.t("ui.hypoth_rank", { rank: betterRuns + 1 }) + '</span>';
     }
     
     return '<div class="player-run-row"><div class="player-run-map">'+getMapDisplayName(r.map)+'</div><div class="player-run-rank">#'+rank2+'</div><div class="player-run-time">'+formatTime(r.duration_s)+'</div><a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay" style="width:26px;height:26px;font-size:11px">&#9654;</a></div>';
@@ -1899,7 +1899,7 @@ function shareCurrentView() {
     if (typeof window.showToast === 'function') {
       window.showToast('Lien copié dans le presse-papier !', 'success', 2000);
     } else if (typeof showToast === 'function') {
-      showToast('Lien copié !', 'success', 2000);
+      window.showToast('Lien copié !', 'success', 2000);
     }
   }).catch(() => {
     // Fallback: prompt the user to copy manually
@@ -2376,10 +2376,10 @@ function toggleFavorite(publicId, username) {
   const idx = list.indexOf(publicId);
   if (idx === -1) {
     list.push(publicId);
-    try { showToast((username || 'Joueur') + ' ajouté aux favoris', 'success', 4000, 'star'); } catch (e) {}
+    try { window.showToast((username || 'Joueur') + ' ajouté aux favoris', 'success', 4000, 'star'); } catch (e) {}
   } else {
     list.splice(idx, 1);
-    try { showToast((username || 'Joueur') + ' retiré des favoris', 'info', 4000, 'starOutline'); } catch (e) {}
+    try { window.showToast((username || 'Joueur') + ' retiré des favoris', 'info', 4000, 'starOutline'); } catch (e) {}
   }
   saveFavorites(list);
   updateFavCounter();

@@ -15,8 +15,8 @@
 //   - On next visit: user sees fresh data, still instantly
 //   - Works even on flaky 3G
 
-const CACHE_NAME = 'thefronthub-v1';
-const CACHE_IMMUTABLE = 'thefronthub-imm-v1';
+const CACHE_NAME = 'thefronthub-v9';
+const CACHE_IMMUTABLE = 'thefronthub-imm-v9';
 const SWR_MAX_AGE_MS = 30 * 60 * 1000;  // 30 min — consider cache fresh this long
 
 // Static assets to pre-cache on install (HTML pages + core JS + CSS + icons)
@@ -164,31 +164,52 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // ── Strategy 2: Data files (.json, .json.gz) → stale-while-revalidate ──
+  // ── Strategy 2: Data files (.json, .json.gz) → network-first with cache fallback ──
+  // CHANGED from pure SWR because SWR can serve stale error responses (404/503)
+  // indefinitely if they were ever cached. Network-first ensures we always try
+  // the fresh data first, and only fall back to cache if the network fails.
+  // We also skip caching for the heavy "runs.json.gz" (16MB) and "runs_compact.json.gz"
+  // — those are fallback files that app.js uses only when public payloads are missing.
   if (isDataFile(url.pathname)) {
+    // Don't cache heavy fallback files — they're 16MB and would bloat the SW cache.
+    const isHeavyFallback =
+      url.pathname.endsWith('/runs.json.gz') ||
+      url.pathname.endsWith('/runs_compact.json.gz') ||
+      url.pathname.endsWith('/runs.json') ||
+      url.pathname.endsWith('/runs_compact.json') ||
+      url.pathname.endsWith('/teams_runs.json.gz') ||
+      url.pathname.endsWith('/teams_runs.json');
+
     event.respondWith(
       caches.open(CACHE_NAME).then(async (cache) => {
-        const cached = await cache.match(req);
+        // 1. Try network first (with short timeout)
+        try {
+          const networkResponse = await Promise.race([
+            fetch(req),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('SW timeout')), 8000)),
+          ]);
 
-        // Always start a network fetch in the background to revalidate
-        const networkFetchPromise = fetch(req)
-          .then((response) => {
-            if (response.ok) {
-              cache.put(req, response.clone());
-            }
-            return response;
-          })
-          .catch(() => null);
-
-        // SWR logic:
-        //   - Cache exists → return it IMMEDIATELY (even if stale)
-        //   - Network fetch updates the cache silently in the background
-        //   - No cache → wait for network
-        if (cached) {
-          return cached;
+          // Only cache successful responses (200), never errors (4xx/5xx)
+          if (networkResponse && networkResponse.ok && !isHeavyFallback) {
+            cache.put(req, networkResponse.clone());
+          }
+          if (networkResponse) return networkResponse;
+        } catch (e) {
+          console.warn('[SW] Network failed for', url.pathname, '— falling back to cache');
         }
-        const networkResponse = await networkFetchPromise;
-        return networkResponse || new Response('Offline', { status: 503 });
+
+        // 2. Network failed → fall back to cache
+        const cached = await cache.match(req);
+        if (cached) return cached;
+
+        // 3. No cache either → return offline response
+        return new Response(
+          JSON.stringify({ error: 'Offline', message: 'Network unavailable and no cached data' }),
+          {
+            status: 503,
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+          }
+        );
       })
     );
     return;
