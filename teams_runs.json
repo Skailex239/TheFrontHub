@@ -44537,6 +44537,34 @@
       "numPlayers": 54,
       "timestamp": "2026-08-19T01:21:19.837Z",
       "url": "https://openfront.io/game/NLu8XdTC"
+    },
+    {
+      "id": "ecZuah4G",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "langbang",
+          "clientID": "Mb5T9YWJ",
+          "clanTag": null
+        },
+        {
+          "username": "Clown Nation",
+          "clientID": "7yubToLH",
+          "clanTag": "EIRE"
+        },
+        {
+          "username": "AnonTitan3",
+          "clientID": "5GrDAzj2",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1393,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "timestamp": "2026-08-19T01:57:56.193Z",
+      "url": "https://openfront.io/game/ecZuah4G"
     }
   ],
   "quads": [
@@ -77991,6 +78019,29 @@
       "numPlayers": 31,
       "timestamp": "2026-08-19T01:52:00.316Z",
       "url": "https://openfront.io/game/fyvheExn"
+    },
+    {
+      "id": "wTkeKvZu",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Khshayarsha",
+          "clientID": "yrqrgAbV",
+          "clanTag": null
+        },
+        {
+          "username": "Tom Tom et Nana",
+          "clientID": "wQH8oDct",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1308,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-19T02:00:06.349Z",
+      "url": "https://openfront.io/game/wTkeKvZu"
     }
   ]
 }
