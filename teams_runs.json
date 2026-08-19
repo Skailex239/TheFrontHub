@@ -46549,6 +46549,52 @@
       "numPlayers": 60,
       "timestamp": "2026-08-19T19:44:48.244Z",
       "url": "https://openfront.io/game/NHiEDXoh"
+    },
+    {
+      "id": "eEsPPkqe",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "AS DE PIC",
+          "clientID": "j3xRZG8L",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 2347,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-19T19:40:50.450Z",
+      "url": "https://openfront.io/game/eEsPPkqe"
+    },
+    {
+      "id": "gGJ9V1mS",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "AnonCamel7",
+          "clientID": "pL6aUVgT",
+          "clanTag": null
+        },
+        {
+          "username": "PinoIlGrigio",
+          "clientID": "55GZui2C",
+          "clanTag": "ROMA"
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "QnZsrd9r",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1187,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "timestamp": "2026-08-19T20:03:07.046Z",
+      "url": "https://openfront.io/game/gGJ9V1mS"
     }
   ],
   "quads": [
@@ -81736,6 +81782,57 @@
       "numPlayers": 80,
       "timestamp": "2026-08-19T19:38:33.807Z",
       "url": "https://openfront.io/game/pUdSvxfV"
+    },
+    {
+      "id": "eKpkLM3s",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "MUTTABURRASAURUS",
+          "clientID": "L7qUvvHb",
+          "clanTag": null
+        },
+        {
+          "username": "Excalibrrr",
+          "clientID": "uDWELvua",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3641,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-19T19:25:47.511Z",
+      "url": "https://openfront.io/game/eKpkLM3s"
+    },
+    {
+      "id": "CHtBAdUB",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "GGx",
+          "clientID": "aid4RbPa",
+          "clanTag": null
+        },
+        {
+          "username": "Anapirat69",
+          "clientID": "WJGtma8H",
+          "clanTag": null
+        },
+        {
+          "username": "EXTREMADURA",
+          "clientID": "AfefxVZ5",
+          "clanTag": "ESP"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1441,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "timestamp": "2026-08-19T19:52:33.312Z",
+      "url": "https://openfront.io/game/CHtBAdUB"
     }
   ]
 }
