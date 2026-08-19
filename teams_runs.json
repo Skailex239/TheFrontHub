@@ -16921,6 +16921,24 @@
       "numPlayers": 42,
       "timestamp": "2026-08-19T19:34:20.372Z",
       "url": "https://openfront.io/game/fMskVZxr"
+    },
+    {
+      "id": "6WQ1TNRk",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "LeVi",
+          "clientID": "ytx6yLBE",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1675,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-19T20:32:58.060Z",
+      "url": "https://openfront.io/game/6WQ1TNRk"
     }
   ],
   "trios": [
@@ -46623,6 +46641,34 @@
       "numPlayers": 74,
       "timestamp": "2026-08-19T20:12:12.656Z",
       "url": "https://openfront.io/game/MDswGm3G"
+    },
+    {
+      "id": "cuw8HPPa",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "snowball",
+          "clientID": "9VxMXpeF",
+          "clanTag": null
+        },
+        {
+          "username": "___",
+          "clientID": "SLxyoRfV",
+          "clanTag": "OG"
+        },
+        {
+          "username": "Anon0809999",
+          "clientID": "Bga9UamA",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1338,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "timestamp": "2026-08-19T20:38:23.949Z",
+      "url": "https://openfront.io/game/cuw8HPPa"
     }
   ],
   "quads": [
@@ -81922,6 +81968,39 @@
       "numPlayers": 96,
       "timestamp": "2026-08-19T20:23:51.406Z",
       "url": "https://openfront.io/game/HQsi4WPu"
+    },
+    {
+      "id": "3MK8tRP4",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Kano",
+          "clientID": "UTjXK7ER",
+          "clanTag": "JEFF"
+        },
+        {
+          "username": "Scoosh",
+          "clientID": "n1rjeYs6",
+          "clanTag": "JEFF"
+        },
+        {
+          "username": "AnonLantern9",
+          "clientID": "he2hsnXL",
+          "clanTag": null
+        },
+        {
+          "username": "Smurf",
+          "clientID": "zgU5y3Ug",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1124,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "timestamp": "2026-08-19T20:36:01.855Z",
+      "url": "https://openfront.io/game/3MK8tRP4"
     }
   ]
 }
