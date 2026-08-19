@@ -46909,6 +46909,34 @@
       "numPlayers": 18,
       "timestamp": "2026-08-19T22:19:47.031Z",
       "url": "https://openfront.io/game/H1LC52A2"
+    },
+    {
+      "id": "NFWyfZKt",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "LEBON",
+          "clientID": "gUxx2gHQ",
+          "clanTag": "QDT"
+        },
+        {
+          "username": "SIMSIM la frime",
+          "clientID": "xBG4mdxx",
+          "clanTag": "QDT"
+        },
+        {
+          "username": "chillbro",
+          "clientID": "qupbMFWK",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1085,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-19T22:46:20.843Z",
+      "url": "https://openfront.io/game/NFWyfZKt"
     }
   ],
   "quads": [
@@ -82386,6 +82414,72 @@
       "numPlayers": 40,
       "timestamp": "2026-08-19T22:15:21.245Z",
       "url": "https://openfront.io/game/1ayJH6vj"
+    },
+    {
+      "id": "uhYiaKTN",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "cos",
+          "clientID": "XnztGfnb",
+          "clanTag": null
+        },
+        {
+          "username": "Spuds",
+          "clientID": "1Yyg7N29",
+          "clanTag": "DONT"
+        },
+        {
+          "username": "bulla7",
+          "clientID": "nm3yC47b",
+          "clanTag": null
+        },
+        {
+          "username": "IDidNaatOhHiMark",
+          "clientID": "LJny3LaS",
+          "clanTag": "DONT"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1101,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-19T22:51:45.722Z",
+      "url": "https://openfront.io/game/uhYiaKTN"
+    },
+    {
+      "id": "gcM3dqcu",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "_0_Map Gamer",
+          "clientID": "aUWibQr4",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Woda",
+          "clientID": "tpo8Vsxu",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "TradingEmpire",
+          "clientID": "8U9pKKoS",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Palladiania",
+          "clientID": "nzJDEUYN",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 829,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-19T22:59:06.224Z",
+      "url": "https://openfront.io/game/gcM3dqcu"
     }
   ]
 }
