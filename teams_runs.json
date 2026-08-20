@@ -17108,6 +17108,24 @@
       "numPlayers": 14,
       "timestamp": "2026-08-20T00:44:38.248Z",
       "url": "https://openfront.io/game/DeQVKSiZ"
+    },
+    {
+      "id": "DWAFhDFb",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "Bruh",
+          "clientID": "SQLbKXhS",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1464,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-20T00:52:00.235Z",
+      "url": "https://openfront.io/game/DWAFhDFb"
     }
   ],
   "trios": [
@@ -47169,6 +47187,29 @@
       "numPlayers": 39,
       "timestamp": "2026-08-20T00:17:26.987Z",
       "url": "https://openfront.io/game/2sCDYEt3"
+    },
+    {
+      "id": "CdskUu1o",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "BLUD",
+          "clientID": "2Y8BqUqX",
+          "clanTag": "AST"
+        },
+        {
+          "username": "mother",
+          "clientID": "E87U6AHb",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1155,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-20T00:55:20.956Z",
+      "url": "https://openfront.io/game/CdskUu1o"
     }
   ],
   "quads": [
@@ -82877,6 +82918,29 @@
       "numPlayers": 44,
       "timestamp": "2026-08-20T00:47:41.963Z",
       "url": "https://openfront.io/game/HBFQwxg3"
+    },
+    {
+      "id": "hbaKA9UE",
+      "team": "Red",
+      "players": [
+        {
+          "username": "In The Thick Of It",
+          "clientID": "E5HPejay",
+          "clanTag": "POP"
+        },
+        {
+          "username": "BIG MIKE",
+          "clientID": "qiumJKaz",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 984,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-20T01:01:07.352Z",
+      "url": "https://openfront.io/game/hbaKA9UE"
     }
   ]
 }
