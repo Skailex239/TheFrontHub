@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-20T17:05:39.689Z",
-  "lastSyncedAt": "2026-08-20T17:05:37.596Z",
-  "totalGames": 3095,
+  "computedAt": "2026-08-20T17:08:25.145Z",
+  "lastSyncedAt": "2026-08-20T17:08:23.309Z",
+  "totalGames": 3096,
   "careerWins": {
     "ffaCasual": 496,
     "ffaRanked": 262,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "7 000",
     "totalWins": "1 208",
-    "totalGames": "3 095",
+    "totalGames": "3 096",
     "totalPlaytime": "31j 3h",
     "totalPlaytimeCompact": "31j 3h",
     "avgGameDuration": "14m 29s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "747h"
   },
   "playtime": {
-    "totalSec": 2691006,
-    "avgGameSec": 869.4688206785137,
+    "totalSec": 2691885,
+    "avgGameSec": 869.4718992248062,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1594,
-        "playtimeSec": 1606552,
+        "games": 1595,
+        "playtimeSec": 1607431,
         "wins": 496
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1208,
-    "defeat": 1253,
+    "defeat": 1254,
     "incomplete": 634
   },
   "maps": [
@@ -277,18 +277,18 @@
     },
     {
       "map": "Gateway to the Atlantic",
-      "count": 59,
+      "count": 60,
       "wins": 29,
-      "losses": 30,
-      "playtimeSec": 62280,
-      "avgDuration": 1055.593220338983,
-      "winRate": 0.4915254237288136,
-      "lastPlayed": 1786174326543,
+      "losses": 31,
+      "playtimeSec": 63159,
+      "avgDuration": 1052.65,
+      "winRate": 0.48333333333333334,
+      "lastPlayed": 1787244685670,
       "formatted": {
-        "playtime": "17h 18m",
+        "playtime": "17h 32m",
         "avgDuration": "17m",
-        "winRate": "49%",
-        "lastPlayed": "08/08/26"
+        "winRate": "48%",
+        "lastPlayed": "20/08/26"
       }
     },
     {
@@ -1432,7 +1432,7 @@
       222,
       218,
       284,
-      403,
+      404,
       163,
       247,
       138,
@@ -1443,7 +1443,7 @@
       272,
       456,
       443,
-      393,
+      394,
       360,
       523,
       648
@@ -1982,6 +1982,17 @@
   },
   "recentGames": [
     {
+      "gameId": "zsD8Y2rQ",
+      "start": "2026-08-20T16:51:25.670Z",
+      "map": "Gateway to the Atlantic",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 879,
+      "totalPlayers": 82,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "DUA5Em4q",
       "start": "2026-08-20T11:51:09.990Z",
       "map": "China",
@@ -2189,17 +2200,6 @@
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
-    },
-    {
-      "gameId": "bpaKV9cX",
-      "start": "2026-08-15T08:16:20.719Z",
-      "map": "Arctic",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 528,
-      "totalPlayers": 13,
-      "rankedType": "unranked",
-      "category": "teamCasual"
     }
   ]
 }

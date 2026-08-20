@@ -1,12 +1,26 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "lastSyncedAt": "2026-08-20T17:05:37.596Z",
+  "lastSyncedAt": "2026-08-20T17:08:23.309Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.4,
-  "totalGames": 3095,
-  "newGamesThisSync": 0,
+  "totalGames": 3096,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "zsD8Y2rQ",
+      "start": "2026-08-20T16:51:25.670Z",
+      "durationSeconds": 879,
+      "map": "Gateway to the Atlantic",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 82,
+      "username": "Skailex",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "DUA5Em4q",
       "start": "2026-08-20T11:51:09.990Z",
