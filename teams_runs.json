@@ -43311,6 +43311,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:02:54.557Z",
       "url": "https://openfront.io/game/toJt9ord"
+    },
+    {
+      "id": "sw9yMMiV",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "land mine boom",
+          "clientID": "qUsDGLgg",
+          "clanTag": "MJ"
+        },
+        {
+          "username": "Isle of Man",
+          "clientID": "HCNn4P5o",
+          "clanTag": null
+        },
+        {
+          "username": "Js_Juke",
+          "clientID": "arBnDaJa",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 783,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:12:43.186Z",
+      "url": "https://openfront.io/game/sw9yMMiV"
     }
   ],
   "quads": [
@@ -67748,6 +67778,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T20:01:53.498Z",
       "url": "https://openfront.io/game/x2iAwEZx"
+    },
+    {
+      "id": "4rn3R41L",
+      "mode": "quads",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Volcano",
+          "clientID": "rwWMjCmS",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMist8",
+          "clientID": "xZitdb9Q",
+          "clanTag": null
+        },
+        {
+          "username": "pilote",
+          "clientID": "V2zzVJDM",
+          "clanTag": "PIX"
+        },
+        {
+          "username": "WEWEWE",
+          "clientID": "CU2d2QfK",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 550,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T20:17:54.545Z",
+      "url": "https://openfront.io/game/4rn3R41L"
     }
   ],
   "team_custom": [
@@ -77185,6 +77250,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T20:05:16.204Z",
       "url": "https://openfront.io/game/NGDPnFLN"
+    },
+    {
+      "id": "sXAFFmnH",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "no war just trade",
+          "clientID": "Pt4xAnyw",
+          "clanTag": null
+        },
+        {
+          "username": "SchlaendMan",
+          "clientID": "DNNK7obX",
+          "clanTag": "LIT"
+        },
+        {
+          "username": "Kermite",
+          "clientID": "NFP1QnAY",
+          "clanTag": "TUX"
+        },
+        {
+          "username": "Observateur",
+          "clientID": "N92HexwX",
+          "clanTag": null
+        },
+        {
+          "username": "Kernel",
+          "clientID": "ABBHb6en",
+          "clanTag": "TUX"
+        },
+        {
+          "username": "AnonBridge7",
+          "clientID": "dGURZFxw",
+          "clanTag": null
+        },
+        {
+          "username": "SleepyAlien.ihu1",
+          "clientID": "N2UrpjzW",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 774,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T20:13:09.699Z",
+      "url": "https://openfront.io/game/sXAFFmnH"
+    },
+    {
+      "id": "fQA9DsE5",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Moria",
+          "clientID": "PHP9uwqY",
+          "clanTag": null
+        },
+        {
+          "username": "GANG",
+          "clientID": "HPs7ZALn",
+          "clanTag": "GOOSE"
+        },
+        {
+          "username": "yerk",
+          "clientID": "8i8rNCYZ",
+          "clanTag": null
+        },
+        {
+          "username": "CuteHippo.Pszk",
+          "clientID": "3wKg5kiY",
+          "clanTag": null
+        },
+        {
+          "username": "Ingrid",
+          "clientID": "89zaNM7d",
+          "clanTag": "GOOSE"
+        },
+        {
+          "username": "Anon567",
+          "clientID": "C6gYoopr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRelic3",
+          "clientID": "qUZ5JSVR",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 932,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T20:10:25.049Z",
+      "url": "https://openfront.io/game/fQA9DsE5"
     }
   ],
   "hvn": [
