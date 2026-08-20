@@ -30916,6 +30916,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T13:18:01.406Z",
       "url": "https://openfront.io/game/HQ1PtAD1"
+    },
+    {
+      "id": "4nNr8EUo",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Chockaw",
+          "clientID": "HkUwEcP9",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Flooo",
+          "clientID": "nx5XFjss",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T13:16:57.835Z",
+      "url": "https://openfront.io/game/4nNr8EUo"
     }
   ],
   "trios": [
@@ -106034,6 +106059,116 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T13:11:16.005Z",
       "url": "https://openfront.io/game/XqyvyNG3"
+    },
+    {
+      "id": "yPQJHpgs",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Reykjavik",
+          "clientID": "hH21xvkk",
+          "clanTag": null
+        },
+        {
+          "username": "Bagel72",
+          "clientID": "RVpTdcBS",
+          "clanTag": null
+        },
+        {
+          "username": "Wings of Freedom",
+          "clientID": "AVV8g3fR",
+          "clanTag": "SCOUT"
+        },
+        {
+          "username": "Liot",
+          "clientID": "uNgd7m6S",
+          "clanTag": null
+        },
+        {
+          "username": "gere",
+          "clientID": "BJ2HFCVp",
+          "clanTag": "SC"
+        },
+        {
+          "username": "Bolshevik",
+          "clientID": "3h2wp3uR",
+          "clanTag": null
+        },
+        {
+          "username": "DamDam",
+          "clientID": "jQMc6fbh",
+          "clanTag": "DD"
+        },
+        {
+          "username": "AnonFrost6",
+          "clientID": "GVKKRiYP",
+          "clanTag": null
+        },
+        {
+          "username": "House LeBron",
+          "clientID": "2ebGtsfW",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUrchin9",
+          "clientID": "1LyRtsv2",
+          "clanTag": null
+        },
+        {
+          "username": "Valmania",
+          "clientID": "XieXdbHv",
+          "clanTag": null
+        },
+        {
+          "username": "PABLO",
+          "clientID": "VNW7CQ9w",
+          "clanTag": "SC"
+        },
+        {
+          "username": "Defender",
+          "clientID": "6jgDLhLg",
+          "clanTag": "QC"
+        },
+        {
+          "username": "slt",
+          "clientID": "CfNs7NE3",
+          "clanTag": null
+        },
+        {
+          "username": "Patootie",
+          "clientID": "5cqBeJoX",
+          "clanTag": "CUTIE"
+        },
+        {
+          "username": ". .",
+          "clientID": "98PqkoN9",
+          "clanTag": null
+        },
+        {
+          "username": "Selidor",
+          "clientID": "UUrCZyho",
+          "clanTag": null
+        },
+        {
+          "username": "RBEITER",
+          "clientID": "46qJoUUT",
+          "clanTag": "BAUA"
+        },
+        {
+          "username": "AnonCastle7",
+          "clientID": "4EXgGWKV",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 728,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T13:22:34.214Z",
+      "url": "https://openfront.io/game/yPQJHpgs"
     }
   ],
   "team_custom": [
@@ -112181,6 +112316,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T13:14:19.179Z",
       "url": "https://openfront.io/game/fqYpKAjn"
+    },
+    {
+      "id": "nEWQMyRQ",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Kore",
+          "clientID": "JrzvygFC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLizard9",
+          "clientID": "wEuP7195",
+          "clanTag": null
+        },
+        {
+          "username": "thicart",
+          "clientID": "i8MKxKX1",
+          "clanTag": "TUG"
+        },
+        {
+          "username": "Bobbbbed",
+          "clientID": "8iWS4Sqb",
+          "clanTag": null
+        },
+        {
+          "username": "Ouest sauvage",
+          "clientID": "pNQh85wb",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 606,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T13:23:52.800Z",
+      "url": "https://openfront.io/game/nEWQMyRQ"
     }
   ],
   "hvn": [
