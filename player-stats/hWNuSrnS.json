@@ -1,27 +1,27 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-20T07:04:10.445Z",
-  "lastSyncedAt": "2026-08-20T07:04:08.116Z",
-  "totalGames": 3794,
+  "computedAt": "2026-08-20T07:54:05.854Z",
+  "lastSyncedAt": "2026-08-20T07:54:03.090Z",
+  "totalGames": 3797,
   "careerWins": {
-    "ffaCasual": 268,
+    "ffaCasual": 269,
     "ffaRanked": 1419,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1975,
-  "points": 4991,
-  "level": 49,
-  "levelProgress": 91,
-  "levelNextAt": 5000,
+  "totalWins": 1976,
+  "points": 5001,
+  "level": 50,
+  "levelProgress": 1,
+  "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1975,
+      "current": 1976,
       "target": 2000
     },
     "playtime": {
-      "current": 741,
+      "current": 742,
       "target": 1000
     },
     "maps": {
@@ -39,26 +39,26 @@
     6
   ],
   "formatted": {
-    "points": "4 991",
-    "totalWins": "1 975",
-    "totalGames": "3 794",
-    "totalPlaytime": "30j 21h",
-    "totalPlaytimeCompact": "30j 21h",
-    "avgGameDuration": "11m 43s",
+    "points": "5 001",
+    "totalWins": "1 976",
+    "totalGames": "3 797",
+    "totalPlaytime": "30j 22h",
+    "totalPlaytimeCompact": "30j 22h",
+    "avgGameDuration": "11m 44s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "741h"
+    "totalPlaytimeHours": "742h"
   },
   "playtime": {
-    "totalSec": 2669970,
-    "avgGameSec": 703.734844491302,
+    "totalSec": 2674322,
+    "avgGameSec": 704.3249934158546,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1080,
-        "playtimeSec": 1301442,
-        "wins": 268
+        "games": 1083,
+        "playtimeSec": 1305794,
+        "wins": 269
       },
       "ffaRanked": {
         "games": 1913,
@@ -78,8 +78,8 @@
     }
   },
   "results": {
-    "victory": 1975,
-    "defeat": 1488,
+    "victory": 1976,
+    "defeat": 1490,
     "incomplete": 331
   },
   "maps": [
@@ -101,18 +101,18 @@
     },
     {
       "map": "Iceland",
-      "count": 425,
+      "count": 426,
       "wins": 301,
-      "losses": 124,
-      "playtimeSec": 180412,
-      "avgDuration": 424.49882352941177,
-      "winRate": 0.7082352941176471,
-      "lastPlayed": 1787158262117,
+      "losses": 125,
+      "playtimeSec": 181244,
+      "avgDuration": 425.45539906103284,
+      "winRate": 0.7065727699530516,
+      "lastPlayed": 1787210504915,
       "formatted": {
         "playtime": "2j 2h",
         "avgDuration": "7m",
         "winRate": "71%",
-        "lastPlayed": "19/08/26"
+        "lastPlayed": "20/08/26"
       }
     },
     {
@@ -468,6 +468,22 @@
       }
     },
     {
+      "map": "Deglaciated Antarctica",
+      "count": 23,
+      "wins": 8,
+      "losses": 15,
+      "playtimeSec": 30936,
+      "avgDuration": 1345.0434782608695,
+      "winRate": 0.34782608695652173,
+      "lastPlayed": 1787209504816,
+      "formatted": {
+        "playtime": "8h 35m",
+        "avgDuration": "22m",
+        "winRate": "35%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "Svalmel",
       "count": 23,
       "wins": 10,
@@ -481,22 +497,6 @@
         "avgDuration": "16m",
         "winRate": "43%",
         "lastPlayed": "15/08/26"
-      }
-    },
-    {
-      "map": "Deglaciated Antarctica",
-      "count": 22,
-      "wins": 7,
-      "losses": 15,
-      "playtimeSec": 30101,
-      "avgDuration": 1368.2272727272727,
-      "winRate": 0.3181818181818182,
-      "lastPlayed": 1786250713256,
-      "formatted": {
-        "playtime": "8h 21m",
-        "avgDuration": "22m",
-        "winRate": "32%",
-        "lastPlayed": "09/08/26"
       }
     },
     {
@@ -660,6 +660,22 @@
       }
     },
     {
+      "map": "Dyslexdria",
+      "count": 13,
+      "wins": 6,
+      "losses": 7,
+      "playtimeSec": 29753,
+      "avgDuration": 2288.6923076923076,
+      "winRate": 0.46153846153846156,
+      "lastPlayed": 1787207856485,
+      "formatted": {
+        "playtime": "8h 15m",
+        "avgDuration": "38m",
+        "winRate": "46%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "East Asia",
       "count": 13,
       "wins": 4,
@@ -673,22 +689,6 @@
         "avgDuration": "16m",
         "winRate": "31%",
         "lastPlayed": "01/08/26"
-      }
-    },
-    {
-      "map": "Dyslexdria",
-      "count": 12,
-      "wins": 6,
-      "losses": 6,
-      "playtimeSec": 27068,
-      "avgDuration": 2255.6666666666665,
-      "winRate": 0.5,
-      "lastPlayed": 1786897551401,
-      "formatted": {
-        "playtime": "7h 31m",
-        "avgDuration": "37m",
-        "winRate": "50%",
-        "lastPlayed": "16/08/26"
       }
     },
     {
@@ -1598,8 +1598,8 @@
       76,
       25,
       22,
-      37,
-      54,
+      38,
+      56,
       87,
       76,
       95,
@@ -1619,7 +1619,7 @@
       547,
       589,
       493,
-      549,
+      552,
       480,
       576,
       560
@@ -2158,6 +2158,28 @@
   },
   "recentGames": [
     {
+      "gameId": "NDn1Bs8m",
+      "start": "2026-08-20T07:21:44.915Z",
+      "map": "Iceland",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 832,
+      "totalPlayers": 51,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "eR2hCV9c",
+      "start": "2026-08-20T07:05:04.816Z",
+      "map": "Deglaciated Antarctica",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 835,
+      "totalPlayers": 53,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "UNUBBYh9",
       "start": "2026-08-20T06:49:51.770Z",
       "map": "Bering Sea",
@@ -2165,6 +2187,17 @@
       "result": "defeat",
       "durationSeconds": 810,
       "totalPlayers": 77,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "mz51VxJJ",
+      "start": "2026-08-20T06:37:36.485Z",
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 2685,
+      "totalPlayers": 98,
       "rankedType": "unranked",
       "category": "ffaCasual"
     },
@@ -2340,39 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 411,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "ZHbvs7z7",
-      "start": "2026-08-19T10:29:06.439Z",
-      "map": "Achiran",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1006,
-      "totalPlayers": 54,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "C9sLzi71",
-      "start": "2026-08-19T09:48:37.372Z",
-      "map": "Balkans",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1515,
-      "totalPlayers": 116,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "UxCGYZy5",
-      "start": "2026-08-19T09:10:13.886Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 631,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
