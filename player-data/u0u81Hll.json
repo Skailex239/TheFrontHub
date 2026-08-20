@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-20T18:37:38.223Z",
+  "lastSyncedAt": "2026-08-20T18:39:40.177Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.7,
-  "totalGames": 2189,
+  "syncDurationSec": 0.3,
+  "totalGames": 2190,
   "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "sA2r6Hfr",
+      "start": "2026-08-20T18:36:32.435Z",
+      "durationSeconds": 167,
+      "map": "Asia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "victory",
+      "totalPlayers": 2,
+      "username": "Road to 1600",
+      "clanTag": null
+    },
     {
       "gameId": "W6uFKAVA",
       "start": "2026-08-20T18:26:33.295Z",
