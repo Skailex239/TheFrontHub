@@ -68973,6 +68973,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T21:08:00.691Z",
       "url": "https://openfront.io/game/z1Rve6a8"
+    },
+    {
+      "id": "gFwpLbsd",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Slovenia",
+          "clientID": "gfaEYKJo",
+          "clanTag": "JAS"
+        },
+        {
+          "username": "2a1b0t",
+          "clientID": "1rHGej3F",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSteel4",
+          "clientID": "edqsidvj",
+          "clanTag": null
+        },
+        {
+          "username": "Potato",
+          "clientID": "dh1kVonL",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1156,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T21:10:17.847Z",
+      "url": "https://openfront.io/game/gFwpLbsd"
     }
   ],
   "team_custom": [
