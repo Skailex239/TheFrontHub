@@ -17442,6 +17442,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T15:47:03.040Z",
       "url": "https://openfront.io/game/HH5upmyg"
+    },
+    {
+      "id": "i45hd9mn",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon719",
+          "clientID": "jczai7KK",
+          "clanTag": "EUS"
+        },
+        {
+          "username": "Spinnyl on insta",
+          "clientID": "fWbroYn1",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:01:09.936Z",
+      "url": "https://openfront.io/game/i45hd9mn"
+    },
+    {
+      "id": "637reoT7",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cho",
+          "clientID": "4LaGQ51A",
+          "clanTag": null
+        },
+        {
+          "username": "SilverViper.cvk7",
+          "clientID": "tHhZDzBQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 628,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:03:13.103Z",
+      "url": "https://openfront.io/game/637reoT7"
     }
   ],
   "trios": [
@@ -40376,6 +40426,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T15:51:15.810Z",
       "url": "https://openfront.io/game/wTfkv6W2"
+    },
+    {
+      "id": "BZB8R2bb",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Napoleon",
+          "clientID": "H7SfY5YC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFrost8",
+          "clientID": "dyNSJ5Ky",
+          "clanTag": null
+        },
+        {
+          "username": "Ano",
+          "clientID": "PEDciYDo",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1686,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:45:34.956Z",
+      "url": "https://openfront.io/game/BZB8R2bb"
+    },
+    {
+      "id": "JjD4N6bK",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JuicyBroccoli.7v1G",
+          "clientID": "yMeAJwoz",
+          "clanTag": null
+        },
+        {
+          "username": "Anon127",
+          "clientID": "mVbtuMYt",
+          "clanTag": null
+        },
+        {
+          "username": "liminal",
+          "clientID": "UCdj2CwV",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 583,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T16:04:35.653Z",
+      "url": "https://openfront.io/game/JjD4N6bK"
     }
   ],
   "quads": [
@@ -63413,6 +63523,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T16:00:13.883Z",
       "url": "https://openfront.io/game/Y7bqngWF"
+    },
+    {
+      "id": "vL5NdhZX",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ibrahim Traore",
+          "clientID": "Tid2UAmn",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "AnonPyramid4",
+          "clientID": "zKK1D5Vn",
+          "clanTag": null
+        },
+        {
+          "username": "Bingus",
+          "clientID": "xsVtsg85",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "cesenticerqua",
+          "clientID": "JRk2C46r",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 693,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T16:01:29.949Z",
+      "url": "https://openfront.io/game/vL5NdhZX"
     }
   ],
   "team_custom": [
