@@ -20317,6 +20317,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:18:55.685Z",
       "url": "https://openfront.io/game/FnHjqVs6"
+    },
+    {
+      "id": "CbYGGSHg",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Novomoskovsk",
+          "clientID": "1R4SXrSo",
+          "clanTag": "MIPT"
+        },
+        {
+          "username": "AnonGoat8",
+          "clientID": "SafWCKTQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 508,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:45:52.281Z",
+      "url": "https://openfront.io/game/CbYGGSHg"
+    },
+    {
+      "id": "kAeWvVBB",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Da Warboss",
+          "clientID": "chQahLg8",
+          "clanTag": "POOB"
+        },
+        {
+          "username": "ProfOak",
+          "clientID": "jF9rhpuh",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 802,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:41:03.013Z",
+      "url": "https://openfront.io/game/kAeWvVBB"
     }
   ],
   "trios": [
@@ -45291,6 +45341,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T22:25:47.106Z",
       "url": "https://openfront.io/game/ynhQVKiM"
+    },
+    {
+      "id": "7pL8YAmj",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Muslim",
+          "clientID": "MNgGvB8k",
+          "clanTag": "ISLAM"
+        },
+        {
+          "username": "dan",
+          "clientID": "eEAY2mMh",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTalisman2",
+          "clientID": "gqEQstdy",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1221,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T22:34:48.119Z",
+      "url": "https://openfront.io/game/7pL8YAmj"
+    },
+    {
+      "id": "6X8vFsmD",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "DISGRUNTLED TYRANT",
+          "clientID": "rFEr1ic8",
+          "clanTag": "WW3"
+        },
+        {
+          "username": "AnonEmber8",
+          "clientID": "qCBK6sjt",
+          "clanTag": null
+        },
+        {
+          "username": "Anon347",
+          "clientID": "9wTnvDQF",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 685,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T22:43:40.160Z",
+      "url": "https://openfront.io/game/6X8vFsmD"
     }
   ],
   "quads": [
