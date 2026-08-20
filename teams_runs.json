@@ -33291,6 +33291,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T14:48:31.389Z",
       "url": "https://openfront.io/game/TgFBKMDp"
+    },
+    {
+      "id": "UfFUVfZi",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Agarian Empire",
+          "clientID": "UvkwgGcy",
+          "clanTag": null
+        },
+        {
+          "username": "mhdsbk",
+          "clientID": "59R3TNYs",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 635,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:54:53.358Z",
+      "url": "https://openfront.io/game/UfFUVfZi"
     }
   ],
   "trios": [
@@ -118596,6 +118621,156 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T14:39:01.314Z",
       "url": "https://openfront.io/game/RFW4K3m7"
+    },
+    {
+      "id": "yvPVRGXj",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Kuddel",
+          "clientID": "LdbQQojH",
+          "clanTag": null
+        },
+        {
+          "username": "Eight808",
+          "clientID": "Y5fbUNPa",
+          "clanTag": null
+        },
+        {
+          "username": "CrunkMunk",
+          "clientID": "zUfZoQ14",
+          "clanTag": null
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "4DKFriEd",
+          "clanTag": null
+        },
+        {
+          "username": "BabTvT",
+          "clientID": "9w8Naeom",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz5",
+          "clientID": "PSPs3rxo",
+          "clanTag": null
+        },
+        {
+          "username": "natutu",
+          "clientID": "8ahhxwz7",
+          "clanTag": "JP"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 928,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T14:51:36.618Z",
+      "url": "https://openfront.io/game/yvPVRGXj"
+    },
+    {
+      "id": "7faiax3J",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonGong8",
+          "clientID": "fsfXEnqX",
+          "clanTag": null
+        },
+        {
+          "username": "Snorkes",
+          "clientID": "vUNE2Vk4",
+          "clanTag": null
+        },
+        {
+          "username": "JokersLopunny",
+          "clientID": "3e8GbrnP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "build factories ffs",
+          "clientID": "pZcouA1M",
+          "clanTag": "UN"
+        },
+        {
+          "username": "South Korea",
+          "clientID": "sroAkA1D",
+          "clanTag": null
+        },
+        {
+          "username": "Anon568",
+          "clientID": "xdmUFhiW",
+          "clanTag": null
+        },
+        {
+          "username": "Anton",
+          "clientID": "QpVk6M2K",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 119,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T14:50:07.498Z",
+      "url": "https://openfront.io/game/7faiax3J"
+    },
+    {
+      "id": "pqSNsJsw",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "tungtung",
+          "clientID": "dUzX3txM",
+          "clanTag": null
+        },
+        {
+          "username": "Imperium",
+          "clientID": "BWC5DxNt",
+          "clanTag": null
+        },
+        {
+          "username": "DerDer",
+          "clientID": "wLPnxESK",
+          "clanTag": "DERDE"
+        },
+        {
+          "username": "MMike",
+          "clientID": "j4tqYmZv",
+          "clanTag": null
+        },
+        {
+          "username": "Gurka",
+          "clientID": "Ap2aVJ21",
+          "clanTag": "OO"
+        },
+        {
+          "username": "HEHEHAHA",
+          "clientID": "13oG9yJ9",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLighthouse5",
+          "clientID": "FdsrkdXo",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 680,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T14:54:26.830Z",
+      "url": "https://openfront.io/game/pqSNsJsw"
     }
   ],
   "hvn": [
