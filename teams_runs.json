@@ -17542,6 +17542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:07:59.377Z",
       "url": "https://openfront.io/game/hC2Z5kQG"
+    },
+    {
+      "id": "sj4ExdLx",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Aref",
+          "clientID": "isDzejcd",
+          "clanTag": "BVB"
+        },
+        {
+          "username": "Anon995",
+          "clientID": "UFvTz7ne",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 971,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:11:46.133Z",
+      "url": "https://openfront.io/game/sj4ExdLx"
     }
   ],
   "trios": [
@@ -69900,6 +69925,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T16:09:44.519Z",
       "url": "https://openfront.io/game/E2ePusb8"
+    },
+    {
+      "id": "J3LuVPTY",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "manan",
+          "clientID": "YnWBEXo1",
+          "clanTag": null
+        },
+        {
+          "username": "4tra",
+          "clientID": "1JaJLtrV",
+          "clanTag": "LT"
+        },
+        {
+          "username": "AnonRabbit",
+          "clientID": "s5siZhpg",
+          "clanTag": null
+        },
+        {
+          "username": "Sasuke",
+          "clientID": "DC3UGhEa",
+          "clanTag": "CH"
+        },
+        {
+          "username": "Vespa",
+          "clientID": "iG2TntBu",
+          "clanTag": null
+        },
+        {
+          "username": "Ruffs_5",
+          "clientID": "gKESK43J",
+          "clanTag": null
+        },
+        {
+          "username": "NipIIe",
+          "clientID": "GWEbCzf7",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 586,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T16:18:20.041Z",
+      "url": "https://openfront.io/game/J3LuVPTY"
     }
   ],
   "hvn": [
