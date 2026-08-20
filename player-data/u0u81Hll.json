@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-20T08:23:51.151Z",
+  "lastSyncedAt": "2026-08-20T09:02:52.156Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 2183,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.4,
+  "totalGames": 2184,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "N6eVPwDo",
+      "start": "2026-08-20T08:17:07.396Z",
+      "durationSeconds": 1859,
+      "map": "Manicouagan",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 83,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "7dED9eFC",
       "start": "2026-08-19T18:28:50.628Z",
