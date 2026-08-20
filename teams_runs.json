@@ -44846,6 +44846,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T22:01:33.042Z",
       "url": "https://openfront.io/game/pvHdHFuZ"
+    },
+    {
+      "id": "ttLT1gqf",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "meowwww",
+          "clientID": "7guSK66j",
+          "clanTag": "UN"
+        },
+        {
+          "username": "meow",
+          "clientID": "t1qWrgng",
+          "clanTag": null
+        },
+        {
+          "username": "Sunny",
+          "clientID": "v2MDyeqc",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 915,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T21:55:41.650Z",
+      "url": "https://openfront.io/game/ttLT1gqf"
     }
   ],
   "quads": [
@@ -69703,6 +69733,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T21:33:18.015Z",
       "url": "https://openfront.io/game/M7pBm5o9"
+    },
+    {
+      "id": "GGxYxuMk",
+      "mode": "quads",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "tom bomboclaat",
+          "clientID": "rQjqc6Sk",
+          "clanTag": null
+        },
+        {
+          "username": "BasqueInMyGlory",
+          "clientID": "FUG6mkox",
+          "clanTag": "UN"
+        },
+        {
+          "username": "123",
+          "clientID": "bpgbNBDL",
+          "clanTag": null
+        },
+        {
+          "username": "CrazyVIP",
+          "clientID": "VWwuDhmw",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1112,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T21:52:48.446Z",
+      "url": "https://openfront.io/game/GGxYxuMk"
     }
   ],
   "team_custom": [
@@ -80195,6 +80260,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T21:56:55.223Z",
       "url": "https://openfront.io/game/FN8LwoKE"
+    },
+    {
+      "id": "LAMMUwyT",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "BOARFELLA",
+          "clientID": "c2CZzFbD",
+          "clanTag": null
+        },
+        {
+          "username": "Friendtopia",
+          "clientID": "UeZns6LN",
+          "clanTag": "ILY"
+        },
+        {
+          "username": "mainstreamusr",
+          "clientID": "BwY2ja1e",
+          "clanTag": null
+        },
+        {
+          "username": "Goku",
+          "clientID": "KQz3w1Cj",
+          "clanTag": null
+        },
+        {
+          "username": "TSAR BORIS III",
+          "clientID": "E8m5vJyh",
+          "clanTag": "BUL"
+        },
+        {
+          "username": "Pixel pusher",
+          "clientID": "NbeRKkVc",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 1169,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T21:51:26.863Z",
+      "url": "https://openfront.io/game/LAMMUwyT"
     }
   ],
   "hvn": [
