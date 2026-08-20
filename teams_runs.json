@@ -20517,6 +20517,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T22:43:03.123Z",
       "url": "https://openfront.io/game/DXarMpMX"
+    },
+    {
+      "id": "3nNj3Wc2",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "oLI",
+          "clientID": "EdKrJJq1",
+          "clanTag": "AOV"
+        },
+        {
+          "username": "Duck",
+          "clientID": "JRzshANw",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1090,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T23:08:47.230Z",
+      "url": "https://openfront.io/game/3nNj3Wc2"
     }
   ],
   "trios": [
@@ -70818,6 +70843,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T23:09:26.778Z",
       "url": "https://openfront.io/game/LY22q1gR"
+    },
+    {
+      "id": "TcJWbmDH",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PreciousBubbles",
+          "clientID": "d4vNAVpF",
+          "clanTag": null
+        },
+        {
+          "username": "armpit_pete",
+          "clientID": "Ao5sEJfk",
+          "clanTag": "BROTH"
+        },
+        {
+          "username": "Feces_O_Stoole",
+          "clientID": "NoUDcJ2a",
+          "clanTag": "BROTH"
+        },
+        {
+          "username": "DougyJrDAD",
+          "clientID": "GvyYFL9u",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 722,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T23:13:28.051Z",
+      "url": "https://openfront.io/game/TcJWbmDH"
     }
   ],
   "team_custom": [
