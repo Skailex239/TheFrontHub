@@ -17817,6 +17817,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:48:27.964Z",
       "url": "https://openfront.io/game/TcekXceN"
+    },
+    {
+      "id": "z5zHZhz9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "D_D",
+          "clientID": "Mm5G737p",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Maxiyo",
+          "clientID": "PPY8L598",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1751,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:30:39.319Z",
+      "url": "https://openfront.io/game/z5zHZhz9"
     }
   ],
   "trios": [
@@ -40931,6 +40956,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T16:38:51.349Z",
       "url": "https://openfront.io/game/67seKq6v"
+    },
+    {
+      "id": "R6KXzrHx",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "natutu",
+          "clientID": "JdBUxHYK",
+          "clanTag": "JP"
+        },
+        {
+          "username": "Log",
+          "clientID": "WNym8RKx",
+          "clanTag": "EU"
+        },
+        {
+          "username": "TURK",
+          "clientID": "fiA2DCao",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 969,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T16:44:39.696Z",
+      "url": "https://openfront.io/game/R6KXzrHx"
     }
   ],
   "quads": [
@@ -70765,6 +70820,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T16:40:30.931Z",
       "url": "https://openfront.io/game/jLk61JNC"
+    },
+    {
+      "id": "EiAwxZGn",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "JafarAJarJafarThatsInAJar",
+          "clientID": "ccsLAdiC",
+          "clanTag": "EU"
+        },
+        {
+          "username": "geroyam slava",
+          "clientID": "ytbXJGoh",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPrairie8",
+          "clientID": "daS6Chev",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShovel7",
+          "clientID": "xMMthPRJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMango7",
+          "clientID": "6ncoMGrr",
+          "clanTag": null
+        },
+        {
+          "username": "Bananstan",
+          "clientID": "CwbUJMhM",
+          "clanTag": "BANAN"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1090,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T16:43:12.591Z",
+      "url": "https://openfront.io/game/EiAwxZGn"
     }
   ],
   "hvn": [
