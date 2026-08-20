@@ -43201,6 +43201,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:59:14.839Z",
       "url": "https://openfront.io/game/uicczFxQ"
+    },
+    {
+      "id": "ssRAnDwS",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonOpal7",
+          "clientID": "VEm2mdvA",
+          "clanTag": null
+        },
+        {
+          "username": "Klingon Empire",
+          "clientID": "qgoTXBXe",
+          "clanTag": null
+        },
+        {
+          "username": "_umer_sohail_",
+          "clientID": "GqZcCqf7",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 587,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:04:26.153Z",
+      "url": "https://openfront.io/game/ssRAnDwS"
     }
   ],
   "quads": [
@@ -67603,6 +67633,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T19:37:10.993Z",
       "url": "https://openfront.io/game/gBMCV7oH"
+    },
+    {
+      "id": "x2iAwEZx",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "judom",
+          "clientID": "jgixvTj7",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Alberto",
+          "clientID": "jLbPUKDe",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "hR1oKCuQ",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nath 57",
+          "clientID": "Zbjhvg5B",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "World",
+      "duration_s": 727,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T20:01:53.498Z",
+      "url": "https://openfront.io/game/x2iAwEZx"
     }
   ],
   "team_custom": [
