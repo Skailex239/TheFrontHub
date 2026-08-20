@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-20T18:52:26.044Z",
-  "lastSyncedAt": "2026-08-20T18:52:23.746Z",
-  "totalGames": 2191,
+  "computedAt": "2026-08-20T18:54:30.399Z",
+  "lastSyncedAt": "2026-08-20T18:54:28.446Z",
+  "totalGames": 2192,
   "careerWins": {
     "ffaCasual": 379,
     "ffaRanked": 328,
@@ -21,7 +21,7 @@
       "target": 1000
     },
     "playtime": {
-      "current": 552,
+      "current": 553,
       "target": 1000
     },
     "maps": {
@@ -41,17 +41,17 @@
   "formatted": {
     "points": "4 416",
     "totalWins": "817",
-    "totalGames": "2 191",
-    "totalPlaytime": "23j 0h",
-    "totalPlaytimeCompact": "23j 0h",
+    "totalGames": "2 192",
+    "totalPlaytime": "23j 1h",
+    "totalPlaytimeCompact": "23j 1h",
     "avgGameDuration": "15m 8s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "552h"
+    "totalPlaytimeHours": "553h"
   },
   "playtime": {
-    "totalSec": 1990389,
-    "avgGameSec": 908.4386125057051,
+    "totalSec": 1990820,
+    "avgGameSec": 908.220802919708,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -61,8 +61,8 @@
         "wins": 379
       },
       "ffaRanked": {
-        "games": 497,
-        "playtimeSec": 167301,
+        "games": 498,
+        "playtimeSec": 167732,
         "wins": 328
       },
       "teamCasual": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 817,
-    "defeat": 1046,
+    "defeat": 1047,
     "incomplete": 328
   },
   "maps": [
@@ -101,18 +101,18 @@
     },
     {
       "map": "Iceland",
-      "count": 132,
+      "count": 133,
       "wins": 81,
-      "losses": 51,
-      "playtimeSec": 50209,
-      "avgDuration": 380.3712121212121,
-      "winRate": 0.6136363636363636,
-      "lastPlayed": 1787164130628,
+      "losses": 52,
+      "playtimeSec": 50640,
+      "avgDuration": 380.7518796992481,
+      "winRate": 0.6090225563909775,
+      "lastPlayed": 1787251627130,
       "formatted": {
-        "playtime": "13h 56m",
+        "playtime": "14h 4m",
         "avgDuration": "6m",
         "winRate": "61%",
-        "lastPlayed": "19/08/26"
+        "lastPlayed": "20/08/26"
       }
     },
     {
@@ -1674,7 +1674,7 @@
       201,
       201,
       227,
-      197,
+      198,
       149,
       146,
       152
@@ -1683,7 +1683,7 @@
       302,
       225,
       300,
-      333,
+      334,
       346,
       364,
       321
@@ -1896,8 +1896,8 @@
       },
       {
         "date": "20/08/2026",
-        "count": 8,
-        "playtimeSec": 6390
+        "count": 9,
+        "playtimeSec": 6821
       },
       {
         "date": "21/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 4,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "CVhLwWFx",
+      "start": "2026-08-20T18:47:07.130Z",
+      "map": "Iceland",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 431,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
     {
       "gameId": "Mo49Mo4z",
       "start": "2026-08-20T18:41:03.260Z",
@@ -2427,17 +2438,6 @@
       "result": "defeat",
       "durationSeconds": 1110,
       "totalPlayers": 45,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "Tk3bYuUS",
-      "start": "2026-08-18T10:08:23.380Z",
-      "map": "Deglaciated Antarctica",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 765,
-      "totalPlayers": 28,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
