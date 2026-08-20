@@ -45111,6 +45111,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T22:09:24.019Z",
       "url": "https://openfront.io/game/cqaMj7k3"
+    },
+    {
+      "id": "ynhQVKiM",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "dan",
+          "clientID": "PAvZFunF",
+          "clanTag": null
+        },
+        {
+          "username": "Red Six",
+          "clientID": "4No8yqt5",
+          "clanTag": "MT"
+        },
+        {
+          "username": "Wumpus15",
+          "clientID": "xKsnagkF",
+          "clanTag": "MT"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 420,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T22:25:47.106Z",
+      "url": "https://openfront.io/game/ynhQVKiM"
     }
   ],
   "quads": [
