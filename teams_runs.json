@@ -44211,6 +44211,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T21:01:24.772Z",
       "url": "https://openfront.io/game/6fXinzR7"
+    },
+    {
+      "id": "xbzS6XxT",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "JDatGamer",
+          "clientID": "pTgriBvj",
+          "clanTag": null
+        },
+        {
+          "username": "Hupihelvetti",
+          "clientID": "hhBiQewd",
+          "clanTag": null
+        },
+        {
+          "username": "Monke",
+          "clientID": "zryPbeJp",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 753,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T21:13:26.555Z",
+      "url": "https://openfront.io/game/xbzS6XxT"
     }
   ],
   "quads": [
@@ -68788,6 +68818,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T20:49:47.020Z",
       "url": "https://openfront.io/game/u1nDFPEo"
+    },
+    {
+      "id": "deNCBHoE",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Menace",
+          "clientID": "1RcYRTGn",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "SwampKing",
+          "clientID": "ThyhpAg1",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Yuri",
+          "clientID": "qtdVEpVk",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Feed OoO",
+          "clientID": "hYHtivYF",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 647,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T21:15:15.691Z",
+      "url": "https://openfront.io/game/deNCBHoE"
     }
   ],
   "team_custom": [
