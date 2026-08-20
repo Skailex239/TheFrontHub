@@ -19692,6 +19692,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T20:47:11.375Z",
       "url": "https://openfront.io/game/z4PKo7CE"
+    },
+    {
+      "id": "DkhEsggn",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonClay3",
+          "clientID": "ScMzH2or",
+          "clanTag": null
+        },
+        {
+          "username": "Hotdogin",
+          "clientID": "vx3Mjkzw",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 524,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:14:40.639Z",
+      "url": "https://openfront.io/game/DkhEsggn"
     }
   ],
   "trios": [
@@ -78970,6 +78995,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T21:02:50.870Z",
       "url": "https://openfront.io/game/Ei8iH2vq"
+    },
+    {
+      "id": "ujhtjBwq",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "BigBadCheese",
+          "clientID": "HaTkSeQq",
+          "clanTag": null
+        },
+        {
+          "username": "Fatal1ty",
+          "clientID": "YeT33Fdt",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Borysrzep",
+          "clientID": "8472L7BA",
+          "clanTag": "PL"
+        },
+        {
+          "username": "Spare Me I Have A Cat",
+          "clientID": "ani7F4Bp",
+          "clanTag": null
+        },
+        {
+          "username": "lawdguzzler",
+          "clientID": "tBTCV2i2",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Brooklyn",
+          "clientID": "qz69ritf",
+          "clanTag": null
+        },
+        {
+          "username": "defforestation",
+          "clientID": "CiCNubpU",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 857,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 115,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T21:09:45.817Z",
+      "url": "https://openfront.io/game/ujhtjBwq"
     }
   ],
   "hvn": [
