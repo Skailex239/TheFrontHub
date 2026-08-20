@@ -19642,6 +19642,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T21:12:55.019Z",
       "url": "https://openfront.io/game/853NvrYb"
+    },
+    {
+      "id": "kDVpLQsQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "twingo",
+          "clientID": "xG4cH9LP",
+          "clanTag": null
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "3f5G4ppu",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 292,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:16:09.262Z",
+      "url": "https://openfront.io/game/kDVpLQsQ"
+    },
+    {
+      "id": "z4PKo7CE",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "FaBite",
+          "clientID": "WZFzLTKC",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "ugogole",
+          "clientID": "akL3QGR4",
+          "clanTag": "ZIL"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1999,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T20:47:11.375Z",
+      "url": "https://openfront.io/game/z4PKo7CE"
     }
   ],
   "trios": [
