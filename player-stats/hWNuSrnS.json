@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-20T06:03:34.688Z",
-  "lastSyncedAt": "2026-08-20T06:03:32.000Z",
-  "totalGames": 3793,
+  "computedAt": "2026-08-20T07:03:39.295Z",
+  "lastSyncedAt": "2026-08-20T07:03:36.647Z",
+  "totalGames": 3794,
   "careerWins": {
     "ffaCasual": 268,
     "ffaRanked": 1419,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 991",
     "totalWins": "1 975",
-    "totalGames": "3 793",
+    "totalGames": "3 794",
     "totalPlaytime": "30j 21h",
     "totalPlaytimeCompact": "30j 21h",
     "avgGameDuration": "11m 43s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "741h"
   },
   "playtime": {
-    "totalSec": 2669160,
-    "avgGameSec": 703.7068283680464,
+    "totalSec": 2669970,
+    "avgGameSec": 703.734844491302,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1079,
-        "playtimeSec": 1300632,
+        "games": 1080,
+        "playtimeSec": 1301442,
         "wins": 268
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1975,
-    "defeat": 1487,
+    "defeat": 1488,
     "incomplete": 331
   },
   "maps": [
@@ -628,6 +628,22 @@
       }
     },
     {
+      "map": "Bering Sea",
+      "count": 16,
+      "wins": 7,
+      "losses": 9,
+      "playtimeSec": 20009,
+      "avgDuration": 1250.5625,
+      "winRate": 0.4375,
+      "lastPlayed": 1787208591770,
+      "formatted": {
+        "playtime": "5h 33m",
+        "avgDuration": "20m",
+        "winRate": "44%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "North America",
       "count": 16,
       "wins": 5,
@@ -641,22 +657,6 @@
         "avgDuration": "23m",
         "winRate": "31%",
         "lastPlayed": "01/08/26"
-      }
-    },
-    {
-      "map": "Bering Sea",
-      "count": 15,
-      "wins": 7,
-      "losses": 8,
-      "playtimeSec": 19199,
-      "avgDuration": 1279.9333333333334,
-      "winRate": 0.4666666666666667,
-      "lastPlayed": 1786233709052,
-      "formatted": {
-        "playtime": "5h 19m",
-        "avgDuration": "21m",
-        "winRate": "47%",
-        "lastPlayed": "09/08/26"
       }
     },
     {
@@ -1598,7 +1598,7 @@
       76,
       25,
       22,
-      36,
+      37,
       54,
       87,
       76,
@@ -1619,7 +1619,7 @@
       547,
       589,
       493,
-      548,
+      549,
       480,
       576,
       560
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "UNUBBYh9",
+      "start": "2026-08-20T06:49:51.770Z",
+      "map": "Bering Sea",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 810,
+      "totalPlayers": 77,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "oC6fP4Fb",
       "start": "2026-08-19T18:19:50.148Z",
       "map": "Australia",
@@ -2362,17 +2373,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 631,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "YxkJLDuR",
-      "start": "2026-08-19T08:59:44.200Z",
-      "map": "Europe Classic",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 603,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
