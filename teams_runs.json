@@ -20192,6 +20192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:23:05.952Z",
       "url": "https://openfront.io/game/DQP7nHzC"
+    },
+    {
+      "id": "YZwnxZTf",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSugar3",
+          "clientID": "LRpDigjy",
+          "clanTag": null
+        },
+        {
+          "username": "I will take both down",
+          "clientID": "78Afvh9c",
+          "clanTag": "SIR"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 941,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:21:21.341Z",
+      "url": "https://openfront.io/game/YZwnxZTf"
     }
   ],
   "trios": [
@@ -70233,6 +70258,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T22:17:21.072Z",
       "url": "https://openfront.io/game/bEV8jNTF"
+    },
+    {
+      "id": "2HaGbWgR",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ugogole",
+          "clientID": "gp13ChZh",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "Zilou",
+          "clientID": "CNPv3vZ8",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "FaBite",
+          "clientID": "wCvSStyd",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "kompirr",
+          "clientID": "9H442VNu",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 934,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T22:21:09.331Z",
+      "url": "https://openfront.io/game/2HaGbWgR"
     }
   ],
   "team_custom": [
@@ -80920,6 +80980,101 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T22:24:40.041Z",
       "url": "https://openfront.io/game/QEapq35X"
+    },
+    {
+      "id": "oYfwVics",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "dont be a clown",
+          "clientID": "VKcrTvym",
+          "clanTag": null
+        },
+        {
+          "username": "BorisYakov",
+          "clientID": "uCy6oHwX",
+          "clanTag": null
+        },
+        {
+          "username": "oostif_f",
+          "clientID": "Q9QkojFt",
+          "clanTag": "AST"
+        },
+        {
+          "username": "PeterPanSmells",
+          "clientID": "A9Q9GBKZ",
+          "clanTag": null
+        },
+        {
+          "username": "Vannacci",
+          "clientID": "N8naReBV",
+          "clanTag": "GEN"
+        },
+        {
+          "username": "AnonShield9",
+          "clientID": "BYskyKPa",
+          "clanTag": null
+        },
+        {
+          "username": "Bikini Bottom",
+          "clientID": "a8GMtDeB",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1016,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T22:22:23.896Z",
+      "url": "https://openfront.io/game/oYfwVics"
+    },
+    {
+      "id": "hCqCSkF9",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "I finance wars",
+          "clientID": "4wjWWdU5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonNebula",
+          "clientID": "kvcRMcpA",
+          "clanTag": null
+        },
+        {
+          "username": "VegasBreaks",
+          "clientID": "YGUtoTWe",
+          "clanTag": null
+        },
+        {
+          "username": "SpecAngle",
+          "clientID": "b9qLWRMZ",
+          "clanTag": "IGL"
+        },
+        {
+          "username": "Cho",
+          "clientID": "tsUV7a72",
+          "clanTag": null
+        },
+        {
+          "username": "BunnyKisses67",
+          "clientID": "tRchR5Rb",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1689,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T22:09:11.014Z",
+      "url": "https://openfront.io/game/hCqCSkF9"
     }
   ],
   "hvn": [
