@@ -33441,6 +33441,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T15:07:52.625Z",
       "url": "https://openfront.io/game/7db6daUD"
+    },
+    {
+      "id": "8StGZtA5",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Serbia",
+          "clientID": "oDcYf4X7",
+          "clanTag": null
+        },
+        {
+          "username": "Rinzler",
+          "clientID": "7etqyeJs",
+          "clanTag": "BE"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 474,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T15:11:03.327Z",
+      "url": "https://openfront.io/game/8StGZtA5"
     }
   ],
   "trios": [
@@ -110999,6 +111024,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T14:47:10.305Z",
       "url": "https://openfront.io/game/uQh9qMzQ"
+    },
+    {
+      "id": "crcBvu7e",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Tortex",
+          "clientID": "4kwWLM6j",
+          "clanTag": "DE"
+        },
+        {
+          "username": "GHOST20_07",
+          "clientID": "QHLc3RYG",
+          "clanTag": null
+        },
+        {
+          "username": "BlackDolphin",
+          "clientID": "PbGUvMb2",
+          "clanTag": null
+        },
+        {
+          "username": "TND",
+          "clientID": "zz4BAU1k",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 921,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T15:03:03.843Z",
+      "url": "https://openfront.io/game/crcBvu7e"
     }
   ],
   "team_custom": [
@@ -119156,6 +119216,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T14:57:37.530Z",
       "url": "https://openfront.io/game/pCoiyeVF"
+    },
+    {
+      "id": "QX8uja94",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Lee_Couchette",
+          "clientID": "Du5UwfR8",
+          "clanTag": "CAG"
+        },
+        {
+          "username": "Poison",
+          "clientID": "8CetjUFm",
+          "clanTag": null
+        },
+        {
+          "username": "Zhotas",
+          "clientID": "hRKNovmJ",
+          "clanTag": null
+        },
+        {
+          "username": "KATARK44",
+          "clientID": "WGD7fKLv",
+          "clanTag": null
+        },
+        {
+          "username": "Billy the Kid",
+          "clientID": "tVX3xF1R",
+          "clanTag": "WEST"
+        },
+        {
+          "username": "sanodesusano",
+          "clientID": "KGowy1Rm",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLocket3",
+          "clientID": "zAN3f1mG",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 659,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T15:08:48.689Z",
+      "url": "https://openfront.io/game/QX8uja94"
+    },
+    {
+      "id": "ig84QqDn",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Lonely_Millennial",
+          "clientID": "92E96ncC",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "LeFish",
+          "clientID": "fHySRFmt",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "icey",
+          "clientID": "Nzdy9GMo",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Blossom",
+          "clientID": "34TjToDE",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Ziyad",
+          "clientID": "baYemKa1",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "zmess",
+          "clientID": "NSEYSrUv",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "lithuania mashallah",
+          "clientID": "UwujXWTa",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 646,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T15:11:14.831Z",
+      "url": "https://openfront.io/game/ig84QqDn"
     }
   ],
   "hvn": [
