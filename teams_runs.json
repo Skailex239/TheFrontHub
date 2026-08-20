@@ -19417,6 +19417,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T20:34:37.106Z",
       "url": "https://openfront.io/game/UHdDtqye"
+    },
+    {
+      "id": "X8jin6iy",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Leo",
+          "clientID": "HKP9uHVa",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGecko5",
+          "clientID": "LTkdSyGL",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 2316,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:06:26.277Z",
+      "url": "https://openfront.io/game/X8jin6iy"
     }
   ],
   "trios": [
@@ -43551,6 +43576,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:17:12.498Z",
       "url": "https://openfront.io/game/ufXwRqEY"
+    },
+    {
+      "id": "JshmEekx",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Kuddel",
+          "clientID": "mGuW56WH",
+          "clanTag": null
+        },
+        {
+          "username": "Jdragon",
+          "clientID": "bbWTC4Xg",
+          "clanTag": null
+        },
+        {
+          "username": "gotu jim",
+          "clientID": "rGfmamQ7",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 692,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:33:13.525Z",
+      "url": "https://openfront.io/game/JshmEekx"
     }
   ],
   "quads": [
@@ -77785,6 +77840,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T20:16:23.936Z",
       "url": "https://openfront.io/game/mVtncFBR"
+    },
+    {
+      "id": "YTFstAjw",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonTemple3",
+          "clientID": "AU6VtXVd",
+          "clanTag": null
+        },
+        {
+          "username": "FreeTradeNoTax",
+          "clientID": "5UZZ2dXM",
+          "clanTag": "DR"
+        },
+        {
+          "username": "PEST",
+          "clientID": "XjZyaxvm",
+          "clanTag": null
+        },
+        {
+          "username": "Ctrl W to Win",
+          "clientID": "9dkoAYtj",
+          "clanTag": "DR"
+        },
+        {
+          "username": "uRx",
+          "clientID": "eGsDac2M",
+          "clanTag": "BEAU"
+        },
+        {
+          "username": "Winterfell",
+          "clientID": "Q3XtCWjc",
+          "clanTag": null
+        },
+        {
+          "username": "simek",
+          "clientID": "77RyoDnY",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 969,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T20:29:38.806Z",
+      "url": "https://openfront.io/game/YTFstAjw"
     }
   ],
   "hvn": [
