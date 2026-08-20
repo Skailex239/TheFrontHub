@@ -20392,6 +20392,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:38:23.852Z",
       "url": "https://openfront.io/game/buHinaqZ"
+    },
+    {
+      "id": "d2yBpbWy",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonShadow3",
+          "clientID": "ieyEx3K6",
+          "clanTag": null
+        },
+        {
+          "username": "DROWSY VS THE WORLD",
+          "clientID": "66oTyGPz",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 676,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:51:20.607Z",
+      "url": "https://openfront.io/game/d2yBpbWy"
     }
   ],
   "trios": [
@@ -81445,6 +81470,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T22:45:41.777Z",
       "url": "https://openfront.io/game/ugtnzKZ3"
+    },
+    {
+      "id": "8LR3n1Xe",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "DOOMSDAY",
+          "clientID": "b7AwT2ve",
+          "clanTag": null
+        },
+        {
+          "username": "ErmengouGaraula",
+          "clientID": "VCnmAfyo",
+          "clanTag": null
+        },
+        {
+          "username": "Formichi1",
+          "clientID": "oGtFYEH4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonFern7",
+          "clientID": "FQotA38j",
+          "clanTag": null
+        },
+        {
+          "username": "whatsthaword",
+          "clientID": "C6EDMoEk",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 959,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T22:47:03.350Z",
+      "url": "https://openfront.io/game/8LR3n1Xe"
     }
   ],
   "hvn": [
