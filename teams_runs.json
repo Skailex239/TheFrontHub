@@ -18042,6 +18042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T17:08:01.221Z",
       "url": "https://openfront.io/game/Bqk3Hx4M"
+    },
+    {
+      "id": "Lte9jUF7",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Cambyses",
+          "clientID": "7HAzJySx",
+          "clanTag": null
+        },
+        {
+          "username": "Carthaginian Horde",
+          "clientID": "MZaGR99W",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 445,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T17:27:07.514Z",
+      "url": "https://openfront.io/game/Lte9jUF7"
     }
   ],
   "trios": [
@@ -64698,6 +64723,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T17:07:06.663Z",
       "url": "https://openfront.io/game/EiD5MmEq"
+    },
+    {
+      "id": "uFs8iNx3",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "cazi",
+          "clientID": "9rs7B2Yz",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Ducky",
+          "clientID": "y34YFx5m",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "1iKZ17wJ",
+          "clanTag": "ASTX"
+        },
+        {
+          "username": "Hamza",
+          "clientID": "BAkWBysD",
+          "clanTag": "ASTX"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 89,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T17:18:28.437Z",
+      "url": "https://openfront.io/game/uFs8iNx3"
     }
   ],
   "team_custom": [
