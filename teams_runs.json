@@ -44731,6 +44731,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T21:40:18.606Z",
       "url": "https://openfront.io/game/NqHnTT3o"
+    },
+    {
+      "id": "A5Qrtdk6",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mo0l",
+          "clientID": "iz8z2d6D",
+          "clanTag": null
+        },
+        {
+          "username": "winner",
+          "clientID": "aNb2YeAg",
+          "clanTag": null
+        },
+        {
+          "username": "PhilippeAuguste",
+          "clientID": "5B1xi9Be",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 767,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T21:48:04.642Z",
+      "url": "https://openfront.io/game/A5Qrtdk6"
     }
   ],
   "quads": [
@@ -79940,6 +79970,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T21:45:55.986Z",
       "url": "https://openfront.io/game/XEqkG1YJ"
+    },
+    {
+      "id": "YAvofTec",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "WamboNr5",
+          "clientID": "8WMYUxLb",
+          "clanTag": "DCREW"
+        },
+        {
+          "username": "nofun",
+          "clientID": "iL7Gwsv8",
+          "clanTag": null
+        },
+        {
+          "username": "cherry",
+          "clientID": "p5Jizey4",
+          "clanTag": null
+        },
+        {
+          "username": "Solar Imperium",
+          "clientID": "dXEhYnk9",
+          "clanTag": "PLUTO"
+        },
+        {
+          "username": "Anon018",
+          "clientID": "KXGGzL8A",
+          "clanTag": null
+        },
+        {
+          "username": "kingtaz",
+          "clientID": "g6iLFX1D",
+          "clanTag": "BUB"
+        },
+        {
+          "username": "Mills",
+          "clientID": "NwPvQeVH",
+          "clanTag": "BUB"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 910,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T21:45:06.451Z",
+      "url": "https://openfront.io/game/YAvofTec"
     }
   ],
   "hvn": [
