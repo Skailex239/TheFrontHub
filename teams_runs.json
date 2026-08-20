@@ -20167,6 +20167,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:15:19.423Z",
       "url": "https://openfront.io/game/JGDAUBWe"
+    },
+    {
+      "id": "DQP7nHzC",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "OINK",
+          "clientID": "5YpBrv6m",
+          "clanTag": null
+        },
+        {
+          "username": "szef",
+          "clientID": "BfyMCdRg",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 706,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:23:05.952Z",
+      "url": "https://openfront.io/game/DQP7nHzC"
     }
   ],
   "trios": [
@@ -70173,6 +70198,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T22:13:28.286Z",
       "url": "https://openfront.io/game/oGtStbt3"
+    },
+    {
+      "id": "bEV8jNTF",
+      "mode": "quads",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "corporation LB",
+          "clientID": "TwR5eLV9",
+          "clanTag": null
+        },
+        {
+          "username": "1555",
+          "clientID": "iM3pk4ps",
+          "clanTag": null
+        },
+        {
+          "username": "The Lidless Eye",
+          "clientID": "yqF3BVoG",
+          "clanTag": "LOTR"
+        },
+        {
+          "username": "Meow Meow",
+          "clientID": "ZTNuJaqu",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1100,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T22:17:21.072Z",
+      "url": "https://openfront.io/game/bEV8jNTF"
     }
   ],
   "team_custom": [
@@ -80810,6 +80870,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T22:07:07.873Z",
       "url": "https://openfront.io/game/RoyyEiYh"
+    },
+    {
+      "id": "QEapq35X",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Wikol",
+          "clientID": "cJ1URAbk",
+          "clanTag": "POL"
+        },
+        {
+          "username": "MuSi",
+          "clientID": "HUnz49Cc",
+          "clanTag": "POL"
+        },
+        {
+          "username": "pasha_dankov",
+          "clientID": "97uVTLtF",
+          "clanTag": "POL"
+        },
+        {
+          "username": "Apodo",
+          "clientID": "FZ8kiTEB",
+          "clanTag": null
+        },
+        {
+          "username": "Mobius",
+          "clientID": "re6CnHdK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTimber5",
+          "clientID": "6StsCGCv",
+          "clanTag": null
+        },
+        {
+          "username": "Gale",
+          "clientID": "KGZo2qGn",
+          "clanTag": null
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T22:24:40.041Z",
+      "url": "https://openfront.io/game/QEapq35X"
     }
   ],
   "hvn": [
