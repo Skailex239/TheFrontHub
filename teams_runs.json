@@ -42406,6 +42406,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:04:26.341Z",
       "url": "https://openfront.io/game/jsoL1bCv"
+    },
+    {
+      "id": "3dDvB7iT",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonGong2",
+          "clientID": "Q5Y2kQXo",
+          "clanTag": null
+        },
+        {
+          "username": "Noowork",
+          "clientID": "cA5LQb5W",
+          "clanTag": null
+        },
+        {
+          "username": "TraderJoes",
+          "clientID": "reCaxPDU",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 621,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 122,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:07:55.580Z",
+      "url": "https://openfront.io/game/3dDvB7iT"
     }
   ],
   "quads": [
@@ -66283,6 +66313,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T18:56:21.281Z",
       "url": "https://openfront.io/game/H4LDKrkK"
+    },
+    {
+      "id": "Qu5J6cZE",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "DMH",
+          "clientID": "ra1d8RFK",
+          "clanTag": "110"
+        },
+        {
+          "username": "anon",
+          "clientID": "NbXXKaom",
+          "clanTag": null
+        },
+        {
+          "username": "VROT",
+          "clientID": "dvpGDYz7",
+          "clanTag": "PNS"
+        },
+        {
+          "username": "Oaxaca",
+          "clientID": "y53ivdWK",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 683,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T19:05:59.434Z",
+      "url": "https://openfront.io/game/Qu5J6cZE"
     }
   ],
   "team_custom": [
