@@ -19267,6 +19267,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T20:11:03.587Z",
       "url": "https://openfront.io/game/XdxtqnMs"
+    },
+    {
+      "id": "2E7ZmjSM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "The Mistake",
+          "clientID": "LSfEEgJ6",
+          "clanTag": "JAKE"
+        },
+        {
+          "username": "gooz",
+          "clientID": "RXT65bXQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1153,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:09:42.502Z",
+      "url": "https://openfront.io/game/2E7ZmjSM"
+    },
+    {
+      "id": "h95qXso6",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "EExRZpGu",
+          "clanTag": null
+        },
+        {
+          "username": "Monster",
+          "clientID": "zcRJ5Ucm",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:21:19.764Z",
+      "url": "https://openfront.io/game/h95qXso6"
+    },
+    {
+      "id": "gE6oGESd",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anl rapipst",
+          "clientID": "XEoE9HHE",
+          "clanTag": "ANL"
+        },
+        {
+          "username": "Atgyva",
+          "clientID": "B97RrTGU",
+          "clanTag": "ROSE"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 542,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:19:17.648Z",
+      "url": "https://openfront.io/game/gE6oGESd"
     }
   ],
   "trios": [
@@ -43341,6 +43416,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:12:43.186Z",
       "url": "https://openfront.io/game/sw9yMMiV"
+    },
+    {
+      "id": "TWm2XDS2",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Crumpets",
+          "clientID": "Fu26amzk",
+          "clanTag": null
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "sHehvgzJ",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "sczmCkSh",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 769,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:15:08.340Z",
+      "url": "https://openfront.io/game/TWm2XDS2"
     }
   ],
   "quads": [
@@ -77350,6 +77455,101 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T20:10:25.049Z",
       "url": "https://openfront.io/game/fQA9DsE5"
+    },
+    {
+      "id": "dU1mnjoV",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LiczeTenHajs",
+          "clientID": "z58zoLsK",
+          "clanTag": "BUBEL"
+        },
+        {
+          "username": "AnonChicken4",
+          "clientID": "s2j7sDQq",
+          "clanTag": null
+        },
+        {
+          "username": "superdupepuper",
+          "clientID": "aiBYXd8N",
+          "clanTag": null
+        },
+        {
+          "username": "legion",
+          "clientID": "Z2vxt2uU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLadder4",
+          "clientID": "MLTHbAu1",
+          "clanTag": null
+        },
+        {
+          "username": "ari",
+          "clientID": "R7oTus9b",
+          "clanTag": "ARI"
+        },
+        {
+          "username": "AnonTalisman8",
+          "clientID": "4QBdHY8d",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 662,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T20:21:58.803Z",
+      "url": "https://openfront.io/game/dU1mnjoV"
+    },
+    {
+      "id": "RSL7Lk9u",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Olympus",
+          "clientID": "HMjdGSUm",
+          "clanTag": "BDB"
+        },
+        {
+          "username": "Jan",
+          "clientID": "Rmuq6iAQ",
+          "clanTag": null
+        },
+        {
+          "username": "Fish",
+          "clientID": "DskG1pKT",
+          "clanTag": null
+        },
+        {
+          "username": "Error",
+          "clientID": "jDVKppWt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonIndigo4",
+          "clientID": "jRWopRd6",
+          "clanTag": null
+        },
+        {
+          "username": "quoffy",
+          "clientID": "sQg1X3xR",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T20:18:50.622Z",
+      "url": "https://openfront.io/game/RSL7Lk9u"
     }
   ],
   "hvn": [
