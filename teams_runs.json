@@ -18317,6 +18317,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T17:42:05.901Z",
       "url": "https://openfront.io/game/hi84o4V3"
+    },
+    {
+      "id": "Yg83bURe",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "NESS",
+          "clientID": "UYgBJFF7",
+          "clanTag": "MAD"
+        },
+        {
+          "username": "Anon656",
+          "clientID": "HissHYQF",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 438,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:05:20.975Z",
+      "url": "https://openfront.io/game/Yg83bURe"
     }
   ],
   "trios": [
@@ -41671,6 +41696,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T17:54:42.753Z",
       "url": "https://openfront.io/game/JVQpbiyB"
+    },
+    {
+      "id": "JcP5gSh8",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Knopper",
+          "clientID": "ZotAZ6gM",
+          "clanTag": null
+        },
+        {
+          "username": "free tibet",
+          "clientID": "raE9RgKh",
+          "clanTag": null
+        },
+        {
+          "username": "Inland Empire",
+          "clientID": "WQ3RQLSH",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 714,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T18:00:33.663Z",
+      "url": "https://openfront.io/game/JcP5gSh8"
     }
   ],
   "quads": [
