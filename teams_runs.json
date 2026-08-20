@@ -47210,6 +47210,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-20T00:55:20.956Z",
       "url": "https://openfront.io/game/CdskUu1o"
+    },
+    {
+      "id": "KpnZPNat",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "zyu",
+          "clientID": "ChGaifuj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFrog5",
+          "clientID": "QvtNgnpB",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 764,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "timestamp": "2026-08-20T01:32:33.575Z",
+      "url": "https://openfront.io/game/KpnZPNat"
     }
   ],
   "quads": [
@@ -83002,6 +83025,39 @@
       "numPlayers": 61,
       "timestamp": "2026-08-20T00:57:49.142Z",
       "url": "https://openfront.io/game/MwBMrozP"
+    },
+    {
+      "id": "RZnPwZfQ",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Azymcalys",
+          "clientID": "Bo7eqLcM",
+          "clanTag": "LIFE"
+        },
+        {
+          "username": "Napoleon",
+          "clientID": "PTxFPkLT",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTopaz5",
+          "clientID": "uqV5UyPZ",
+          "clanTag": null
+        },
+        {
+          "username": "GWFGuardian",
+          "clientID": "hkyZMuQQ",
+          "clanTag": "GARS"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2397,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-20T01:02:57.981Z",
+      "url": "https://openfront.io/game/RZnPwZfQ"
     }
   ]
 }
