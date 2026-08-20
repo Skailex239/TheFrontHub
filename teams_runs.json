@@ -67973,6 +67973,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T20:17:54.545Z",
       "url": "https://openfront.io/game/4rn3R41L"
+    },
+    {
+      "id": "G724jRuL",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonTuba3",
+          "clientID": "nQaykTjD",
+          "clanTag": null
+        },
+        {
+          "username": "gui",
+          "clientID": "PfM4iFYa",
+          "clanTag": null
+        },
+        {
+          "username": "asdad",
+          "clientID": "APMFz68z",
+          "clanTag": "AGE"
+        },
+        {
+          "username": "manifest",
+          "clientID": "niVLUueq",
+          "clanTag": "AGE"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 888,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T20:24:08.933Z",
+      "url": "https://openfront.io/game/G724jRuL"
     }
   ],
   "team_custom": [
