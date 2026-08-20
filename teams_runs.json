@@ -18942,6 +18942,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T19:25:00.204Z",
       "url": "https://openfront.io/game/wybWpH9E"
+    },
+    {
+      "id": "PLGqExn7",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "nono du 18",
+          "clientID": "MnX61Y7X",
+          "clanTag": null
+        },
+        {
+          "username": "Moonbase",
+          "clientID": "poroqt9i",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2120,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:10:45.759Z",
+      "url": "https://openfront.io/game/PLGqExn7"
+    },
+    {
+      "id": "U3wVaETm",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GOKTURKK",
+          "clientID": "SbAM8CkY",
+          "clanTag": "BUYUK"
+        },
+        {
+          "username": "Jotl",
+          "clientID": "odeewp8M",
+          "clanTag": "USSR"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1343,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:24:06.144Z",
+      "url": "https://openfront.io/game/U3wVaETm"
     }
   ],
   "trios": [
@@ -42686,6 +42736,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:33:06.770Z",
       "url": "https://openfront.io/game/BT311edD"
+    },
+    {
+      "id": "Vhtywxma",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Ibrahim Traore",
+          "clientID": "nJyYn7i1",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "codo3.",
+          "clientID": "T8RWqZsf",
+          "clanTag": "ZDFB"
+        },
+        {
+          "username": "Bingus",
+          "clientID": "2qteXfrw",
+          "clanTag": "ZDFB"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 854,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T19:30:45.604Z",
+      "url": "https://openfront.io/game/Vhtywxma"
     }
   ],
   "quads": [
@@ -66843,6 +66923,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T19:27:05.861Z",
       "url": "https://openfront.io/game/WjRBDnWK"
+    },
+    {
+      "id": "gcNMyimf",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Dont be coglioni",
+          "clientID": "tBQ61hVM",
+          "clanTag": null
+        },
+        {
+          "username": "Trez",
+          "clientID": "qiJ5wnCZ",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Chitam",
+          "clientID": "wW7CSC8K",
+          "clanTag": null
+        },
+        {
+          "username": "Thomas",
+          "clientID": "iafKqyFL",
+          "clanTag": "ISR"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 565,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T19:36:28.443Z",
+      "url": "https://openfront.io/game/gcNMyimf"
+    },
+    {
+      "id": "UEU1Vi6A",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon Anon Anon Anon Anon",
+          "clientID": "bgkzu5a4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "k0wB0y5",
+          "clientID": "bH7Mf9Sj",
+          "clanTag": "UN"
+        },
+        {
+          "username": "dadafun urby",
+          "clientID": "2GwnJFG9",
+          "clanTag": null
+        },
+        {
+          "username": "Tohsakas Armpit",
+          "clientID": "cF57cgWt",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 944,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T19:30:06.066Z",
+      "url": "https://openfront.io/game/UEU1Vi6A"
     }
   ],
   "team_custom": [
