@@ -2669,3 +2669,6 @@ function switchRankedMode(mode) {
 }
 
 window.switchRankedMode = switchRankedMode;
+
+}
+}
