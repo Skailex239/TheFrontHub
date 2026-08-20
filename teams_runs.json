@@ -19717,6 +19717,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T21:14:40.639Z",
       "url": "https://openfront.io/game/DkhEsggn"
+    },
+    {
+      "id": "gGBHYNpH",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "zycsss",
+          "clientID": "SxhW28Ef",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Kvazar",
+          "clientID": "p83CQ7Un",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 937,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:12:15.976Z",
+      "url": "https://openfront.io/game/gGBHYNpH"
+    },
+    {
+      "id": "HL7Etv2L",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "The Kiwi Empire",
+          "clientID": "SuA3cqpN",
+          "clanTag": null
+        },
+        {
+          "username": "FallenPhoenixIV",
+          "clientID": "WE4syYhj",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:17:48.878Z",
+      "url": "https://openfront.io/game/HL7Etv2L"
     }
   ],
   "trios": [
@@ -68853,6 +68903,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T21:15:15.691Z",
       "url": "https://openfront.io/game/deNCBHoE"
+    },
+    {
+      "id": "sBehWJF8",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bembe",
+          "clientID": "R5aovWfn",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Kirch1nator",
+          "clientID": "2FpTgr69",
+          "clanTag": "JR"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "Uy1inMgM",
+          "clanTag": "JR"
+        },
+        {
+          "username": "LePeloche",
+          "clientID": "w73oPzRz",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 400,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T21:21:50.661Z",
+      "url": "https://openfront.io/game/sBehWJF8"
+    },
+    {
+      "id": "z1Rve6a8",
+      "mode": "quads",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "FUFU",
+          "clientID": "A39HnPEA",
+          "clanTag": null
+        },
+        {
+          "username": "oooohaaayoo",
+          "clientID": "J6JnMvmy",
+          "clanTag": null
+        },
+        {
+          "username": "alphao",
+          "clientID": "hqDzfia7",
+          "clanTag": "TICTA"
+        },
+        {
+          "username": "The Great Republic of Bob",
+          "clientID": "m1EdkvDi",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1240,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T21:08:00.691Z",
+      "url": "https://openfront.io/game/z1Rve6a8"
     }
   ],
   "team_custom": [
