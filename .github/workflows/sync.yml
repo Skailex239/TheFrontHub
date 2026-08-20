@@ -190,7 +190,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    timeout-minutes: 30
+    timeout-minutes: 10  # ⚡ réduit de 30 à 10 min pour pas bloquer le cycle
     steps:
       - uses: actions/checkout@v4
         with:
@@ -224,14 +224,14 @@ jobs:
           done
 
   retrigger:
-    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard]
+    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard, sync-player-games]
     runs-on: ubuntu-latest
     permissions:
       actions: write
     steps:
       - name: Retrigger self (continuous loop)
         run: |
-          echo "🔄 Re-déclenchement du workflow (5 syncs rapides terminés, sync-player-games continue en parallèle)."
+          echo "🔄 Re-déclenchement du workflow (les 6 syncs terminés)."
           gh workflow run sync.yml \
             --repo ${{ github.repository }} \
             --ref main
