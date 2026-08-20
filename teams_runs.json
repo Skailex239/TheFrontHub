@@ -17085,6 +17085,29 @@
       "numPlayers": 35,
       "timestamp": "2026-08-19T23:54:30.404Z",
       "url": "https://openfront.io/game/nWihvzai"
+    },
+    {
+      "id": "DeQVKSiZ",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BirKar",
+          "clientID": "ppaHrSBc",
+          "clanTag": "001"
+        },
+        {
+          "username": "pedi",
+          "clientID": "bbD1ssCu",
+          "clanTag": "001"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 658,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-20T00:44:38.248Z",
+      "url": "https://openfront.io/game/DeQVKSiZ"
     }
   ],
   "trios": [
@@ -82821,6 +82844,39 @@
       "numPlayers": 40,
       "timestamp": "2026-08-19T23:38:48.325Z",
       "url": "https://openfront.io/game/ZwPzmNoe"
+    },
+    {
+      "id": "HBFQwxg3",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Tabartouffe",
+          "clientID": "ibdPq3ps",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "BenjaminF78",
+          "clientID": "FkmAiyJf",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "PoilDeLama",
+          "clientID": "AUJPndr2",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "000",
+          "clientID": "Q9MbxXD2",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 534,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "timestamp": "2026-08-20T00:47:41.963Z",
+      "url": "https://openfront.io/game/HBFQwxg3"
     }
   ]
 }
