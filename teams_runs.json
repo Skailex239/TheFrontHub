@@ -69422,6 +69422,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T14:43:46.605Z",
       "url": "https://openfront.io/game/d8iGY5zP"
+    },
+    {
+      "id": "uvvEA9Kv",
+      "mode": "trios",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Riccardo",
+          "clientID": "QKJ9goJs",
+          "clanTag": "GOT"
+        },
+        {
+          "username": "KÜTAHYA",
+          "clientID": "GSPeeuix",
+          "clanTag": "GOT"
+        },
+        {
+          "username": "SUCUK",
+          "clientID": "X2eX7hLy",
+          "clanTag": "GOT"
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 2021,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 97,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T14:24:20.861Z",
+      "url": "https://openfront.io/game/uvvEA9Kv"
     }
   ],
   "quads": [
@@ -110669,6 +110699,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T14:45:00.180Z",
       "url": "https://openfront.io/game/Ho1Fe7Ft"
+    },
+    {
+      "id": "uQh9qMzQ",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon913",
+          "clientID": "mkmFCETP",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSphinx3",
+          "clientID": "uUC9CWC6",
+          "clanTag": null
+        },
+        {
+          "username": "BeIarus",
+          "clientID": "fgwbC6s6",
+          "clanTag": null
+        },
+        {
+          "username": "R3RE5_TTV",
+          "clientID": "VqcZYBNg",
+          "clanTag": "GXD"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 648,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T14:47:10.305Z",
+      "url": "https://openfront.io/game/uQh9qMzQ"
     }
   ],
   "team_custom": [
