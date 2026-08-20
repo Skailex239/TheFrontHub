@@ -17190,6 +17190,24 @@
       "numPlayers": 14,
       "timestamp": "2026-08-20T03:26:26.861Z",
       "url": "https://openfront.io/game/ausURmvB"
+    },
+    {
+      "id": "rEBThMjx",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Anon400",
+          "clientID": "DSz7id4v",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1254,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "timestamp": "2026-08-20T04:41:15.082Z",
+      "url": "https://openfront.io/game/rEBThMjx"
     }
   ],
   "trios": [
@@ -47422,6 +47440,34 @@
       "numPlayers": 16,
       "timestamp": "2026-08-20T04:08:48.590Z",
       "url": "https://openfront.io/game/9LMbRpi4"
+    },
+    {
+      "id": "g8dBd3Pb",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Cavalry Charge",
+          "clientID": "cqazov9Z",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "77teD8C8",
+          "clanTag": null
+        },
+        {
+          "username": "Auckland",
+          "clientID": "PqQUuHA6",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1186,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "timestamp": "2026-08-20T04:48:45.052Z",
+      "url": "https://openfront.io/game/g8dBd3Pb"
     }
   ],
   "quads": [
@@ -83481,6 +83527,29 @@
       "numPlayers": 36,
       "timestamp": "2026-08-20T04:32:00.518Z",
       "url": "https://openfront.io/game/7KhTrvCF"
+    },
+    {
+      "id": "QeQavadB",
+      "team": "Green",
+      "players": [
+        {
+          "username": "master_pred",
+          "clientID": "13sfDMjG",
+          "clanTag": null
+        },
+        {
+          "username": "Anon734",
+          "clientID": "op5M3Eko",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 931,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-20T04:47:07.450Z",
+      "url": "https://openfront.io/game/QeQavadB"
     }
   ]
 }
