@@ -40286,6 +40286,96 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T15:55:12.056Z",
       "url": "https://openfront.io/game/KzmR5tLk"
+    },
+    {
+      "id": "ZnLoEZZe",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Sim",
+          "clientID": "gAs2Hbei",
+          "clanTag": "SIM"
+        },
+        {
+          "username": "Anon922",
+          "clientID": "fp8CNwGS",
+          "clanTag": null
+        },
+        {
+          "username": "Falcon8",
+          "clientID": "6Jp9n4Yt",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 432,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T16:02:20.011Z",
+      "url": "https://openfront.io/game/ZnLoEZZe"
+    },
+    {
+      "id": "c8sNRFzy",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "lol",
+          "clientID": "ebLSAjYk",
+          "clanTag": "VOC"
+        },
+        {
+          "username": "The Blizzard",
+          "clientID": "drhaMobw",
+          "clanTag": null
+        },
+        {
+          "username": "Anon212",
+          "clientID": "XqiriXK8",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 626,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:58:44.273Z",
+      "url": "https://openfront.io/game/c8sNRFzy"
+    },
+    {
+      "id": "wTfkv6W2",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Alx",
+          "clientID": "2gkjRsid",
+          "clanTag": null
+        },
+        {
+          "username": "Goule Disco",
+          "clientID": "Uihot1Ng",
+          "clanTag": "LBR"
+        },
+        {
+          "username": "Trade trade",
+          "clientID": "gu6dBwSK",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1118,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:51:15.810Z",
+      "url": "https://openfront.io/game/wTfkv6W2"
     }
   ],
   "quads": [
@@ -63288,6 +63378,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T15:34:54.821Z",
       "url": "https://openfront.io/game/ReN2Wr2j"
+    },
+    {
+      "id": "Y7bqngWF",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Spected",
+          "clientID": "h3jQomiW",
+          "clanTag": null
+        },
+        {
+          "username": "MIAOOMIXX",
+          "clientID": "gWM6KZ5F",
+          "clanTag": "FIDO"
+        },
+        {
+          "username": "Kiritimati Sevdalisi",
+          "clientID": "vxuibg1u",
+          "clanTag": "53"
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "3PuwJ28z",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T16:00:13.883Z",
+      "url": "https://openfront.io/game/Y7bqngWF"
     }
   ],
   "team_custom": [
