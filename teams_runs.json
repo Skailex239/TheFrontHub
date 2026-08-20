@@ -47233,6 +47233,52 @@
       "numPlayers": 48,
       "timestamp": "2026-08-20T01:32:33.575Z",
       "url": "https://openfront.io/game/KpnZPNat"
+    },
+    {
+      "id": "2kzH5QqG",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Defender",
+          "clientID": "BZG4kX5F",
+          "clanTag": "QC"
+        },
+        {
+          "username": "Chill",
+          "clientID": "LiF2jhyk",
+          "clanTag": null
+        },
+        {
+          "username": "Anon278",
+          "clientID": "JWW7U8Ao",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1135,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "timestamp": "2026-08-20T02:10:18.552Z",
+      "url": "https://openfront.io/game/2kzH5QqG"
+    },
+    {
+      "id": "U6thiF1c",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Friend",
+          "clientID": "YwaWywrA",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 1841,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "timestamp": "2026-08-20T02:00:53.939Z",
+      "url": "https://openfront.io/game/U6thiF1c"
     }
   ],
   "quads": [
