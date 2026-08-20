@@ -67448,6 +67448,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T19:45:45.030Z",
       "url": "https://openfront.io/game/5eZkVbwS"
+    },
+    {
+      "id": "P9EajHH1",
+      "mode": "quads",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "WanderFront",
+          "clientID": "nheLgZU6",
+          "clanTag": "GG"
+        },
+        {
+          "username": "RatiGeo",
+          "clientID": "ceV4cnEW",
+          "clanTag": null
+        },
+        {
+          "username": "General Claws",
+          "clientID": "kxtLsVeY",
+          "clanTag": "GG"
+        },
+        {
+          "username": "YOU TRASH BRO REALLY",
+          "clientID": "dDFRFoUX",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 1149,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T19:47:08.623Z",
+      "url": "https://openfront.io/game/P9EajHH1"
     }
   ],
   "team_custom": [
@@ -76555,6 +76590,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T19:49:38.764Z",
       "url": "https://openfront.io/game/mPJ2HqYw"
+    },
+    {
+      "id": "2nt551kL",
+      "mode": "team_custom",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "soyez sympa",
+          "clientID": "yTgMZ9fK",
+          "clanTag": null
+        },
+        {
+          "username": "Anon966",
+          "clientID": "ob3LndwP",
+          "clanTag": null
+        },
+        {
+          "username": "ARHO",
+          "clientID": "iJQr1mme",
+          "clanTag": "COL"
+        },
+        {
+          "username": "FuturePrincess.kHWC",
+          "clientID": "gV4MC2FM",
+          "clanTag": null
+        },
+        {
+          "username": "HumaEmpire",
+          "clientID": "xYHMrhVE",
+          "clanTag": "JRJR"
+        },
+        {
+          "username": "Soulzz",
+          "clientID": "4Je4bk97",
+          "clanTag": null
+        },
+        {
+          "username": "GGx",
+          "clientID": "TBizeFL2",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 769,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T19:52:08.412Z",
+      "url": "https://openfront.io/game/2nt551kL"
     }
   ],
   "hvn": [
