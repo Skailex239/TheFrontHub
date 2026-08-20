@@ -1,9 +1,9 @@
 {
   "publicId": "tqMGOI2Q",
   "username": "Zwiper.2734",
-  "computedAt": "2026-08-20T13:18:04.029Z",
-  "lastSyncedAt": "2026-08-20T13:17:58.211Z",
-  "totalGames": 1993,
+  "computedAt": "2026-08-20T13:20:09.959Z",
+  "lastSyncedAt": "2026-08-20T13:20:04.206Z",
+  "totalGames": 1994,
   "careerWins": {
     "ffaCasual": 239,
     "ffaRanked": 168,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "3 861",
     "totalWins": "678",
-    "totalGames": "1 993",
+    "totalGames": "1 994",
     "totalPlaytime": "19j 6h",
     "totalPlaytimeCompact": "19j 6h",
     "avgGameDuration": "13m 55s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "462h"
   },
   "playtime": {
-    "totalSec": 1664635,
-    "avgGameSec": 835.2408429503262,
+    "totalSec": 1666468,
+    "avgGameSec": 835.741223671013,
     "longestSec": 10071,
     "shortestSec": 2,
     "byCategory": {
       "ffaCasual": {
-        "games": 992,
-        "playtimeSec": 949391,
+        "games": 993,
+        "playtimeSec": 951224,
         "wins": 239
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 678,
-    "defeat": 962,
+    "defeat": 963,
     "incomplete": 353
   },
   "maps": [
@@ -532,6 +532,22 @@
       }
     },
     {
+      "map": "South America",
+      "count": 16,
+      "wins": 2,
+      "losses": 14,
+      "playtimeSec": 18670,
+      "avgDuration": 1166.875,
+      "winRate": 0.125,
+      "lastPlayed": 1787230035156,
+      "formatted": {
+        "playtime": "5h 11m",
+        "avgDuration": "19m",
+        "winRate": "13%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "Bering Sea",
       "count": 16,
       "wins": 6,
@@ -593,22 +609,6 @@
         "avgDuration": "16m",
         "winRate": "33%",
         "lastPlayed": "02/07/26"
-      }
-    },
-    {
-      "map": "South America",
-      "count": 15,
-      "wins": 2,
-      "losses": 13,
-      "playtimeSec": 16837,
-      "avgDuration": 1122.4666666666667,
-      "winRate": 0.13333333333333333,
-      "lastPlayed": 1781377096875,
-      "formatted": {
-        "playtime": "4h 40m",
-        "avgDuration": "18m",
-        "winRate": "13%",
-        "lastPlayed": "13/06/26"
       }
     },
     {
@@ -1460,7 +1460,7 @@
       95,
       54,
       76,
-      114,
+      115,
       114,
       131,
       145,
@@ -1475,7 +1475,7 @@
       277,
       263,
       349,
-      157,
+      158,
       275,
       286,
       386
@@ -1703,8 +1703,8 @@
       },
       {
         "date": "20/08/2026",
-        "count": 5,
-        "playtimeSec": 3795
+        "count": 6,
+        "playtimeSec": 5628
       },
       {
         "date": "21/03/2026",
@@ -2014,6 +2014,17 @@
   },
   "recentGames": [
     {
+      "gameId": "W6h9q1Lm",
+      "start": "2026-08-20T12:47:15.156Z",
+      "map": "South America",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1833,
+      "totalPlayers": 23,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "DUA5Em4q",
       "start": "2026-08-20T11:51:09.990Z",
       "map": "China",
@@ -2218,17 +2229,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 333,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "VLRKKLu4",
-      "start": "2026-08-11T09:01:53.431Z",
-      "map": "Asia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 374,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"

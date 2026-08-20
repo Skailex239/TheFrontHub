@@ -1,12 +1,26 @@
 {
   "publicId": "tqMGOI2Q",
   "username": "Zwiper.2734",
-  "lastSyncedAt": "2026-08-20T13:17:58.211Z",
+  "lastSyncedAt": "2026-08-20T13:20:04.206Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 1993,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 1994,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "W6h9q1Lm",
+      "start": "2026-08-20T12:47:15.156Z",
+      "durationSeconds": 1833,
+      "map": "South America",
+      "mode": "Free For All",
+      "type": "Private",
+      "playerTeams": "2",
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 23,
+      "username": "Zwiper",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "DUA5Em4q",
       "start": "2026-08-20T11:51:09.990Z",
