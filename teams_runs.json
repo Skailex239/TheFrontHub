@@ -43636,6 +43636,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T20:32:12.962Z",
       "url": "https://openfront.io/game/dfR4ssbt"
+    },
+    {
+      "id": "Vzvc5AKx",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonFox5",
+          "clientID": "p5ESoPzu",
+          "clanTag": null
+        },
+        {
+          "username": "Stu",
+          "clientID": "bBscaAAt",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Globex Corporation",
+          "clientID": "Y4jfcN5N",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 731,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:44:14.708Z",
+      "url": "https://openfront.io/game/Vzvc5AKx"
     }
   ],
   "quads": [
