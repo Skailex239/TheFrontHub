@@ -45741,6 +45741,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T23:31:48.642Z",
       "url": "https://openfront.io/game/GNzCdrCu"
+    },
+    {
+      "id": "Ahu1DNMp",
+      "mode": "trios",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "FaBite",
+          "clientID": "J93gAVBd",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "ugogole",
+          "clientID": "N6nenPGq",
+          "clanTag": "ZIL"
+        },
+        {
+          "username": "Zilou",
+          "clientID": "PNCEketm",
+          "clanTag": "ZIL"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 765,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T23:33:42.249Z",
+      "url": "https://openfront.io/game/Ahu1DNMp"
     }
   ],
   "quads": [
@@ -82200,6 +82230,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T23:24:44.738Z",
       "url": "https://openfront.io/game/5UpfW9md"
+    },
+    {
+      "id": "RcWXpacA",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "ur bes fren",
+          "clientID": "i5etkfJW",
+          "clanTag": null
+        },
+        {
+          "username": "House Targaryen",
+          "clientID": "tXc7Da8P",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Igivutroopsifuprotec",
+          "clientID": "oLZptzRt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMagenta8",
+          "clientID": "M1ZFtWdY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz5",
+          "clientID": "tzgmoLn7",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1434,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T23:21:55.554Z",
+      "url": "https://openfront.io/game/RcWXpacA"
     }
   ],
   "hvn": [
