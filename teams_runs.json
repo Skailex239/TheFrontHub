@@ -20217,6 +20217,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:21:21.341Z",
       "url": "https://openfront.io/game/YZwnxZTf"
+    },
+    {
+      "id": "WE4wZgWj",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "nono du 18",
+          "clientID": "BrgphZRt",
+          "clanTag": null
+        },
+        {
+          "username": "gold",
+          "clientID": "NoMxykMr",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 749,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:27:33.722Z",
+      "url": "https://openfront.io/game/WE4wZgWj"
+    },
+    {
+      "id": "fygZdJEQ",
+      "mode": "duos",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "MAHDI",
+          "clientID": "RHC3xcMY",
+          "clanTag": "IRAN"
+        },
+        {
+          "username": "casher777",
+          "clientID": "aKKurA1b",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 2268,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T22:03:38.183Z",
+      "url": "https://openfront.io/game/fygZdJEQ"
     }
   ],
   "trios": [
@@ -81075,6 +81125,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T22:09:11.014Z",
       "url": "https://openfront.io/game/hCqCSkF9"
+    },
+    {
+      "id": "TfHLP2zF",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "NoAlliances",
+          "clientID": "DXfURiqw",
+          "clanTag": null
+        },
+        {
+          "username": "for all",
+          "clientID": "4c66GycT",
+          "clanTag": "UA"
+        },
+        {
+          "username": "RoyalCoffee.OGbj",
+          "clientID": "TB1L56Cs",
+          "clanTag": null
+        },
+        {
+          "username": "cjk",
+          "clientID": "Nppq7p8M",
+          "clanTag": "USA"
+        },
+        {
+          "username": "NoAlliances",
+          "clientID": "94A8ZQyL",
+          "clanTag": null
+        },
+        {
+          "username": "Mourang",
+          "clientID": "vaixfv93",
+          "clanTag": "ZOV"
+        },
+        {
+          "username": "sushi",
+          "clientID": "76QtfazL",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T22:29:34.355Z",
+      "url": "https://openfront.io/game/TfHLP2zF"
     }
   ],
   "hvn": [
