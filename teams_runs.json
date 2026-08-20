@@ -33166,6 +33166,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:10:16.961Z",
       "url": "https://openfront.io/game/tNHhapXu"
+    },
+    {
+      "id": "oNQYarPk",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "StrongBen",
+          "clientID": "5zg6jBDg",
+          "clanTag": null
+        },
+        {
+          "username": "Ali2",
+          "clientID": "vngwyahq",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 476,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:46:15.759Z",
+      "url": "https://openfront.io/game/oNQYarPk"
+    },
+    {
+      "id": "X8xgJoQF",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Shafticator",
+          "clientID": "Wk4wT1rQ",
+          "clanTag": null
+        },
+        {
+          "username": "Kevi",
+          "clientID": "zPJPJwud",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 452,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:46:31.278Z",
+      "url": "https://openfront.io/game/X8xgJoQF"
     }
   ],
   "trios": [
@@ -118246,6 +118296,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T14:29:09.643Z",
       "url": "https://openfront.io/game/vSY4uJwg"
+    },
+    {
+      "id": "jXyEDp6a",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "FRESA",
+          "clientID": "ZW2G5Yix",
+          "clanTag": "AST"
+        },
+        {
+          "username": "EnchantedKing.FOIQ",
+          "clientID": "8g73LEti",
+          "clanTag": null
+        },
+        {
+          "username": "MINEB616",
+          "clientID": "ppWRTRw6",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUnicorn4",
+          "clientID": "tnVruYUk",
+          "clanTag": null
+        },
+        {
+          "username": "Mats",
+          "clientID": "QLGrNQox",
+          "clanTag": null
+        },
+        {
+          "username": "GLZL",
+          "clientID": "2dz22eSf",
+          "clanTag": "CH"
+        },
+        {
+          "username": "AnonRainbow4",
+          "clientID": "CqktbcBc",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 838,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T14:40:22.891Z",
+      "url": "https://openfront.io/game/jXyEDp6a"
     }
   ],
   "hvn": [
