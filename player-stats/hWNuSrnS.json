@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-20T09:03:25.319Z",
-  "lastSyncedAt": "2026-08-20T09:03:23.895Z",
-  "totalGames": 3799,
+  "computedAt": "2026-08-20T09:48:16.622Z",
+  "lastSyncedAt": "2026-08-20T09:48:14.275Z",
+  "totalGames": 3800,
   "careerWins": {
-    "ffaCasual": 270,
+    "ffaCasual": 271,
     "ffaRanked": 1419,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1977,
-  "points": 5011,
+  "totalWins": 1978,
+  "points": 5021,
   "level": 50,
-  "levelProgress": 11,
+  "levelProgress": 21,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1977,
+      "current": 1978,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "5 011",
-    "totalWins": "1 977",
-    "totalGames": "3 799",
+    "points": "5 021",
+    "totalWins": "1 978",
+    "totalGames": "3 800",
     "totalPlaytime": "31j 0h",
     "totalPlaytimeCompact": "31j 0h",
     "avgGameDuration": "11m 45s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "744h"
   },
   "playtime": {
-    "totalSec": 2678855,
-    "avgGameSec": 705.1474072124244,
+    "totalSec": 2680811,
+    "avgGameSec": 705.4765789473685,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1085,
-        "playtimeSec": 1310327,
-        "wins": 270
+        "games": 1086,
+        "playtimeSec": 1312283,
+        "wins": 271
       },
       "ffaRanked": {
         "games": 1913,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1977,
+    "victory": 1978,
     "defeat": 1491,
     "incomplete": 331
   },
@@ -500,6 +500,22 @@
       }
     },
     {
+      "map": "New York City",
+      "count": 22,
+      "wins": 7,
+      "losses": 15,
+      "playtimeSec": 24195,
+      "avgDuration": 1099.7727272727273,
+      "winRate": 0.3181818181818182,
+      "lastPlayed": 1787214801429,
+      "formatted": {
+        "playtime": "6h 43m",
+        "avgDuration": "18m",
+        "winRate": "32%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "Achiran",
       "count": 21,
       "wins": 10,
@@ -529,22 +545,6 @@
         "avgDuration": "25m",
         "winRate": "5%",
         "lastPlayed": "17/08/26"
-      }
-    },
-    {
-      "map": "New York City",
-      "count": 21,
-      "wins": 6,
-      "losses": 15,
-      "playtimeSec": 22239,
-      "avgDuration": 1059,
-      "winRate": 0.2857142857142857,
-      "lastPlayed": 1785373775745,
-      "formatted": {
-        "playtime": "6h 10m",
-        "avgDuration": "17m",
-        "winRate": "29%",
-        "lastPlayed": "30/07/26"
       }
     },
     {
@@ -1600,7 +1600,7 @@
       22,
       38,
       57,
-      88,
+      89,
       76,
       95,
       100,
@@ -1619,7 +1619,7 @@
       547,
       589,
       493,
-      554,
+      555,
       480,
       576,
       560
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 2,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "Hfe9MjYi",
+      "start": "2026-08-20T08:33:21.429Z",
+      "map": "New York City",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1956,
+      "totalPlayers": 76,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "Lm48tu7x",
       "start": "2026-08-20T08:03:13.451Z",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 496,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "aRVN5SD4",
-      "start": "2026-08-19T14:59:53.696Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 335,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"

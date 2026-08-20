@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-20T09:03:23.895Z",
+  "lastSyncedAt": "2026-08-20T09:48:14.275Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 3799,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.4,
+  "totalGames": 3800,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "Hfe9MjYi",
+      "start": "2026-08-20T08:33:21.429Z",
+      "durationSeconds": 1956,
+      "map": "New York City",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 76,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "Lm48tu7x",
       "start": "2026-08-20T08:03:13.451Z",

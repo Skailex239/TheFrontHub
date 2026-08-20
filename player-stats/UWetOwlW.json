@@ -1,23 +1,23 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-20T09:03:24.809Z",
-  "lastSyncedAt": "2026-08-20T09:03:23.445Z",
-  "totalGames": 3089,
+  "computedAt": "2026-08-20T09:48:15.669Z",
+  "lastSyncedAt": "2026-08-20T09:48:13.656Z",
+  "totalGames": 3090,
   "careerWins": {
-    "ffaCasual": 495,
+    "ffaCasual": 496,
     "ffaRanked": 262,
     "teamCasual": 331,
     "teamRanked": 118
   },
-  "totalWins": 1206,
-  "points": 6985,
+  "totalWins": 1207,
+  "points": 6995,
   "level": 69,
-  "levelProgress": 85,
+  "levelProgress": 95,
   "levelNextAt": 7000,
   "nextMilestones": {
     "wins": {
-      "current": 1206,
+      "current": 1207,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     4
   ],
   "formatted": {
-    "points": "6 985",
-    "totalWins": "1 206",
-    "totalGames": "3 089",
+    "points": "6 995",
+    "totalWins": "1 207",
+    "totalGames": "3 090",
     "totalPlaytime": "31j 2h",
     "totalPlaytimeCompact": "31j 2h",
     "avgGameDuration": "14m 29s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "746h"
   },
   "playtime": {
-    "totalSec": 2686245,
-    "avgGameSec": 869.61638070573,
+    "totalSec": 2687211,
+    "avgGameSec": 869.647572815534,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1592,
-        "playtimeSec": 1603346,
-        "wins": 495
+        "games": 1593,
+        "playtimeSec": 1604312,
+        "wins": 496
       },
       "ffaRanked": {
         "games": 399,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1206,
+    "victory": 1207,
     "defeat": 1251,
     "incomplete": 632
   },
@@ -564,6 +564,22 @@
       }
     },
     {
+      "map": "Manicouagan",
+      "count": 20,
+      "wins": 9,
+      "losses": 11,
+      "playtimeSec": 24677,
+      "avgDuration": 1233.85,
+      "winRate": 0.45,
+      "lastPlayed": 1787216998780,
+      "formatted": {
+        "playtime": "6h 51m",
+        "avgDuration": "20m",
+        "winRate": "45%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "Two Lakes",
       "count": 19,
       "wins": 7,
@@ -577,22 +593,6 @@
         "avgDuration": "21m",
         "winRate": "37%",
         "lastPlayed": "19/08/26"
-      }
-    },
-    {
-      "map": "Manicouagan",
-      "count": 19,
-      "wins": 8,
-      "losses": 11,
-      "playtimeSec": 23711,
-      "avgDuration": 1247.9473684210527,
-      "winRate": 0.42105263157894735,
-      "lastPlayed": 1785527755609,
-      "formatted": {
-        "playtime": "6h 35m",
-        "avgDuration": "20m",
-        "winRate": "42%",
-        "lastPlayed": "31/07/26"
       }
     },
     {
@@ -1425,7 +1425,7 @@
       143,
       180,
       208,
-      193,
+      194,
       74,
       161,
       226,
@@ -1443,7 +1443,7 @@
       272,
       456,
       443,
-      387,
+      388,
       360,
       523,
       648
@@ -1905,7 +1905,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 3,
+    "current": 4,
     "best": 42
   },
   "achievements": {
@@ -1981,6 +1981,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "j6PD3Wr3",
+      "start": "2026-08-20T09:09:58.780Z",
+      "map": "Manicouagan",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 966,
+      "totalPlayers": 46,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "NYxg4iEp",
       "start": "2026-08-19T17:48:13.175Z",
@@ -2189,17 +2200,6 @@
       "totalPlayers": 67,
       "rankedType": "unranked",
       "category": "teamCasual"
-    },
-    {
-      "gameId": "TA5AQ9vb",
-      "start": "2026-08-14T13:07:51.618Z",
-      "map": "The Box",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1189,
-      "totalPlayers": 59,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }
