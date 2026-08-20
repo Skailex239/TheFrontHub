@@ -33216,6 +33216,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:46:31.278Z",
       "url": "https://openfront.io/game/X8xgJoQF"
+    },
+    {
+      "id": "Kd3BesRZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonClay2",
+          "clientID": "eELiaWU9",
+          "clanTag": null
+        },
+        {
+          "username": "henbonn",
+          "clientID": "ZDaSFVCA",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 705,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:44:20.642Z",
+      "url": "https://openfront.io/game/Kd3BesRZ"
+    },
+    {
+      "id": "KVXnG4wc",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon981",
+          "clientID": "Bkg4Jhk7",
+          "clanTag": null
+        },
+        {
+          "username": "Sasfi12",
+          "clientID": "A4ziTj1P",
+          "clanTag": "BE"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1150,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:37:47.226Z",
+      "url": "https://openfront.io/game/KVXnG4wc"
     }
   ],
   "trios": [
@@ -110584,6 +110634,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T14:43:03.058Z",
       "url": "https://openfront.io/game/yqSr2fi3"
+    },
+    {
+      "id": "Ho1Fe7Ft",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "nagoyajin",
+          "clientID": "3a7Ur1r3",
+          "clanTag": null
+        },
+        {
+          "username": "MG42",
+          "clientID": "kT2e8nR5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRuby5",
+          "clientID": "X8Nx5hRP",
+          "clanTag": null
+        },
+        {
+          "username": "Walhalla0815",
+          "clientID": "kCL4UQfa",
+          "clanTag": "SOD4"
+        }
+      ],
+      "map": "France",
+      "duration_s": 656,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T14:45:00.180Z",
+      "url": "https://openfront.io/game/Ho1Fe7Ft"
     }
   ],
   "team_custom": [
