@@ -19342,6 +19342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T20:19:17.648Z",
       "url": "https://openfront.io/game/gE6oGESd"
+    },
+    {
+      "id": "X12QxjuV",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SPQR",
+          "clientID": "kF3KFFac",
+          "clanTag": null
+        },
+        {
+          "username": "Bla Bla Bla",
+          "clientID": "mLfusCLY",
+          "clanTag": "ALG2"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 790,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:24:40.981Z",
+      "url": "https://openfront.io/game/X12QxjuV"
     }
   ],
   "trios": [
@@ -43446,6 +43471,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:15:08.340Z",
       "url": "https://openfront.io/game/TWm2XDS2"
+    },
+    {
+      "id": "ufXwRqEY",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonLeather1",
+          "clientID": "kaWDsaC3",
+          "clanTag": null
+        },
+        {
+          "username": "RATS11",
+          "clientID": "scqMvmYA",
+          "clanTag": null
+        },
+        {
+          "username": "oh im finna",
+          "clientID": "GULzANji",
+          "clanTag": "FENT"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1190,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:17:12.498Z",
+      "url": "https://openfront.io/game/ufXwRqEY"
     }
   ],
   "quads": [
@@ -77550,6 +77605,101 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T20:18:50.622Z",
       "url": "https://openfront.io/game/RSL7Lk9u"
+    },
+    {
+      "id": "4wUPEf5j",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BezLeg",
+          "clientID": "PLmA3zec",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Mister Mount Rushmore",
+          "clientID": "1Z1Hsxng",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Kirch1nator",
+          "clientID": "ZG2mdSdY",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Blossom",
+          "clientID": "mvizmcHx",
+          "clanTag": "JR"
+        },
+        {
+          "username": "paragon",
+          "clientID": "oTwkfPFs",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Zyro",
+          "clientID": "P5vn3S9b",
+          "clanTag": "JR"
+        },
+        {
+          "username": "The German Navy",
+          "clientID": "7xbpbcDM",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 501,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T20:28:58.269Z",
+      "url": "https://openfront.io/game/4wUPEf5j"
+    },
+    {
+      "id": "mVtncFBR",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Alberto",
+          "clientID": "aZ1o9sYj",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "nZxwLQHg",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "judom",
+          "clientID": "AQE4kMzC",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nath 57",
+          "clientID": "S2CbJufv",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Yuumi",
+          "clientID": "gjVBwoxp",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "boat",
+          "clientID": "3qffKNF6",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1231,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T20:16:23.936Z",
+      "url": "https://openfront.io/game/mVtncFBR"
     }
   ],
   "hvn": [
