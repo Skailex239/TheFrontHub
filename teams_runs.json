@@ -111299,6 +111299,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T15:25:36.736Z",
       "url": "https://openfront.io/game/KjSeLqWY"
+    },
+    {
+      "id": "GQeioYQB",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Super Grunt",
+          "clientID": "T7hHGgvp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnchor5",
+          "clientID": "p3p2wnLc",
+          "clanTag": null
+        },
+        {
+          "username": "Mattdoug12",
+          "clientID": "EdddBQhW",
+          "clanTag": "QC"
+        },
+        {
+          "username": "Iron Warriors",
+          "clientID": "UzSDtiso",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1130,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T15:19:11.345Z",
+      "url": "https://openfront.io/game/GQeioYQB"
     }
   ],
   "team_custom": [
@@ -119646,6 +119681,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T15:07:29.603Z",
       "url": "https://openfront.io/game/6HeKD3L4"
+    },
+    {
+      "id": "xhXRgzsh",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "ajezo",
+          "clientID": "qkg42C51",
+          "clanTag": null
+        },
+        {
+          "username": "AnonObelisk3",
+          "clientID": "dQCQCQ1k",
+          "clanTag": null
+        },
+        {
+          "username": "llllllll",
+          "clientID": "TCZuwSa8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonIndigo9",
+          "clientID": "QJcGUY6M",
+          "clanTag": null
+        },
+        {
+          "username": "Rysioslaw",
+          "clientID": "d7qj55V9",
+          "clanTag": "EFN"
+        },
+        {
+          "username": "GorzkiRandom64",
+          "clientID": "psWdaZnW",
+          "clanTag": "EFN"
+        },
+        {
+          "username": "PKMZ",
+          "clientID": "HWrckVAt",
+          "clanTag": "TPP"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1278,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 95,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T15:17:23.729Z",
+      "url": "https://openfront.io/game/xhXRgzsh"
     }
   ],
   "hvn": [
