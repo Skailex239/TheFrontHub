@@ -70758,6 +70758,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T22:51:56.643Z",
       "url": "https://openfront.io/game/a5BS6KvM"
+    },
+    {
+      "id": "LY22q1gR",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonGeyser6",
+          "clientID": "32dDNAvm",
+          "clanTag": null
+        },
+        {
+          "username": "Le_Mils",
+          "clientID": "zxpmvjmh",
+          "clanTag": "PRT"
+        },
+        {
+          "username": "loom",
+          "clientID": "NQbGPTsn",
+          "clanTag": null
+        },
+        {
+          "username": "dont be a clown",
+          "clientID": "kbz1DMff",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 710,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T23:09:26.778Z",
+      "url": "https://openfront.io/game/LY22q1gR"
     }
   ],
   "team_custom": [
@@ -81780,6 +81815,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T22:57:32.017Z",
       "url": "https://openfront.io/game/NbcbYEMJ"
+    },
+    {
+      "id": "Bw7BS5wK",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Varey",
+          "clientID": "yYRLxiwd",
+          "clanTag": null
+        },
+        {
+          "username": "bog",
+          "clientID": "9h8fyHBA",
+          "clanTag": "SWE"
+        },
+        {
+          "username": "Russia",
+          "clientID": "6TRSQ8HC",
+          "clanTag": null
+        },
+        {
+          "username": "What is it now",
+          "clientID": "T7k99agh",
+          "clanTag": null
+        },
+        {
+          "username": "Vin",
+          "clientID": "YhToJzDf",
+          "clanTag": null
+        },
+        {
+          "username": "Rezaa",
+          "clientID": "C7EmQc3Y",
+          "clanTag": null
+        },
+        {
+          "username": "gotu jim",
+          "clientID": "vixsqkF8",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 995,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T23:02:10.314Z",
+      "url": "https://openfront.io/game/Bw7BS5wK"
     }
   ],
   "hvn": [
