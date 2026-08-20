@@ -28,11 +28,11 @@ import {
 // We accept BOTH the text format (legacy) and the numeric format (new).
 // maxTeamSize = nombre maximum de joueurs dans l'équipe gagnante (2 pour Duos, etc.)
 const MODES = {
-  duos:        { name: "Duos",              playerTeamsValues: ["Duos", "2"],            maxTeamSize: 2 },
-  trios:       { name: "Trios",            playerTeamsValues: ["Trios", "3"],            maxTeamSize: 3 },
-  quads:       { name: "Quads",            playerTeamsValues: ["Quads", "4"],            maxTeamSize: 4 },
-  team_custom: { name: "Team Custom",      playerTeamsValues: ["5", "6", "7"],          maxTeamSize: 7 },
-  hvn:         { name: "Humans Vs Nations", playerTeamsValues: ["Humans Vs Nations"],     maxTeamSize: 999 },
+  duos:        { name: "Duos",              playerTeamsValues: ["Duos", "2"],            minTeamSize: 2, maxTeamSize: 2 },
+  trios:       { name: "Trios",            playerTeamsValues: ["Trios", "3"],            minTeamSize: 3, maxTeamSize: 3 },
+  quads:       { name: "Quads",            playerTeamsValues: ["Quads", "4"],            minTeamSize: 4, maxTeamSize: 4 },
+  team_custom: { name: "Team Custom",      playerTeamsValues: ["5", "6", "7"],          minTeamSize: 5, maxTeamSize: 7 },
+  hvn:         { name: "Humans Vs Nations", playerTeamsValues: ["Humans Vs Nations"],     minTeamSize: 1, maxTeamSize: 999 },
 };
 const MODE_KEYS = Object.keys(MODES); // ["duos", "trios", "quads", "team_custom", "hvn"]
 
@@ -201,6 +201,11 @@ function extractTeamRun(raw) {
   // On garde uniquement les maxTeamSize premiers joueurs de l'équipe gagnante.
   const maxTeamSize = MODES[modeKey].maxTeamSize;
   const limitedWinnerPlayers = winnerPlayers.slice(0, maxTeamSize);
+
+  // ⚡ FIX BUG: rejeter les runs avec équipe incomplète (ex: 1 seul joueur en Duos)
+  // minTeamSize = nombre minimum de joueurs dans l'équipe gagnante
+  const minTeamSize = MODES[modeKey].minTeamSize || 1;
+  if (limitedWinnerPlayers.length < minTeamSize) return null;
 
   let durationSecs = info.duration;
   if (!durationSecs || durationSecs < 60) return null;
