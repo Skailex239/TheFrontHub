@@ -18417,6 +18417,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T18:00:16.646Z",
       "url": "https://openfront.io/game/k65DksCJ"
+    },
+    {
+      "id": "AouhHCqY",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Meowth",
+          "clientID": "866i91hS",
+          "clanTag": null
+        },
+        {
+          "username": "back office",
+          "clientID": "wNLtUG4q",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 777,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:16:23.672Z",
+      "url": "https://openfront.io/game/AouhHCqY"
+    },
+    {
+      "id": "DCz4wJHj",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "I Love You",
+          "clientID": "9sLoxFbn",
+          "clanTag": "FREND"
+        },
+        {
+          "username": "Empire",
+          "clientID": "SBBsfefb",
+          "clanTag": "JAPAN"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 573,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:19:20.373Z",
+      "url": "https://openfront.io/game/DCz4wJHj"
     }
   ],
   "trios": [
@@ -41831,6 +41881,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T18:07:03.572Z",
       "url": "https://openfront.io/game/PxYGk4ib"
+    },
+    {
+      "id": "479bFYV9",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "TheRealOne",
+          "clientID": "oGaWauD8",
+          "clanTag": null
+        },
+        {
+          "username": "Artichette",
+          "clientID": "LEgHAGP6",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "colorblind",
+          "clientID": "11Jymy1h",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1008,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T18:11:50.370Z",
+      "url": "https://openfront.io/game/479bFYV9"
     }
   ],
   "quads": [
@@ -73470,6 +73550,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T18:13:49.012Z",
       "url": "https://openfront.io/game/U15PpgnC"
+    },
+    {
+      "id": "GHys9JZm",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon066",
+          "clientID": "uooLfbp8",
+          "clanTag": null
+        },
+        {
+          "username": "SovietCapitalist",
+          "clientID": "YqwvX2WY",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "Landia",
+          "clientID": "4NjpAM6d",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "JeMudder",
+          "clientID": "nYDV53yA",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "AnonTornado2",
+          "clientID": "6ixQZc6e",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMoss3",
+          "clientID": "zbGgi9gd",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T18:17:06.728Z",
+      "url": "https://openfront.io/game/GHys9JZm"
     }
   ],
   "hvn": [
