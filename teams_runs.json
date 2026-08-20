@@ -42596,6 +42596,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:13:48.946Z",
       "url": "https://openfront.io/game/v2PkSTV5"
+    },
+    {
+      "id": "HY7F3hX8",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ari",
+          "clientID": "Bmhf4362",
+          "clanTag": "ARI"
+        },
+        {
+          "username": "Riku",
+          "clientID": "3AmQ1DHE",
+          "clanTag": "KCDQ"
+        },
+        {
+          "username": "Tomawar40",
+          "clientID": "ppjHuCdY",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1208,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:17:05.676Z",
+      "url": "https://openfront.io/game/HY7F3hX8"
     }
   ],
   "quads": [
@@ -75590,6 +75620,96 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T19:22:36.558Z",
       "url": "https://openfront.io/game/gc3ezb8t"
+    },
+    {
+      "id": "YxJSz6PQ",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonSapphire4",
+          "clientID": "JjXrUUVn",
+          "clanTag": null
+        },
+        {
+          "username": "Childe of Malkav",
+          "clientID": "4G6D6y8y",
+          "clanTag": null
+        },
+        {
+          "username": "Alx",
+          "clientID": "CJihdrtW",
+          "clanTag": null
+        },
+        {
+          "username": "parispremiere",
+          "clientID": "eZSJprpS",
+          "clanTag": null
+        },
+        {
+          "username": "Mac Orion",
+          "clientID": "92MuBfXF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "VLAD",
+          "clientID": "Agn24WeZ",
+          "clanTag": null
+        },
+        {
+          "username": "OTTOMAN EMPIRE",
+          "clientID": "TF4nkASb",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1101,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T19:18:48.808Z",
+      "url": "https://openfront.io/game/YxJSz6PQ"
+    },
+    {
+      "id": "AJQYvxLe",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Listenbourg",
+          "clientID": "72u7khqN",
+          "clanTag": "SPQR"
+        },
+        {
+          "username": "Qariban",
+          "clientID": "CxdkCLgv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield3",
+          "clientID": "1r2dJjdw",
+          "clanTag": null
+        },
+        {
+          "username": "Franco",
+          "clientID": "oB4SLa2Y",
+          "clanTag": null
+        },
+        {
+          "username": "Pirufani",
+          "clientID": "5oU3maHJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T19:25:28.735Z",
+      "url": "https://openfront.io/game/AJQYvxLe"
     }
   ],
   "hvn": [
