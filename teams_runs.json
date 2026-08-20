@@ -42866,6 +42866,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T19:30:45.604Z",
       "url": "https://openfront.io/game/Vhtywxma"
+    },
+    {
+      "id": "qPmiRV7m",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Physcojohs",
+          "clientID": "h5iY6zSH",
+          "clanTag": "NU"
+        },
+        {
+          "username": "LanLemoord",
+          "clientID": "9pfBU2J1",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Dragon",
+          "clientID": "rxA52Dcd",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:40:33.196Z",
+      "url": "https://openfront.io/game/qPmiRV7m"
     }
   ],
   "quads": [
@@ -76175,6 +76205,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T19:21:16.981Z",
       "url": "https://openfront.io/game/mcHGEiQF"
+    },
+    {
+      "id": "797T3Lnv",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "bibi",
+          "clientID": "VTN6ZrGd",
+          "clanTag": null
+        },
+        {
+          "username": "neolan",
+          "clientID": "aQdXKQK5",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "BORT",
+          "clientID": "oZKQyequ",
+          "clanTag": null
+        },
+        {
+          "username": "WOLF",
+          "clientID": "aUvV7K6F",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "Error",
+          "clientID": "Z4KRsaQQ",
+          "clanTag": null
+        },
+        {
+          "username": "Yellax",
+          "clientID": "EFBi8bvu",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T19:42:42.845Z",
+      "url": "https://openfront.io/game/797T3Lnv"
     }
   ],
   "hvn": [
