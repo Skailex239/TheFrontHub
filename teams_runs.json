@@ -19192,6 +19192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T19:51:36.374Z",
       "url": "https://openfront.io/game/oahBm3e6"
+    },
+    {
+      "id": "eJYuBTkY",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ben991",
+          "clientID": "tJvsT3iZ",
+          "clanTag": null
+        },
+        {
+          "username": "Mister Chips",
+          "clientID": "LwYxgm2H",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1180,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:51:18.361Z",
+      "url": "https://openfront.io/game/eJYuBTkY"
     }
   ],
   "trios": [
@@ -43146,6 +43171,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:56:17.662Z",
       "url": "https://openfront.io/game/P9fvfsHs"
+    },
+    {
+      "id": "uicczFxQ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Isle of Man",
+          "clientID": "poYktbtK",
+          "clanTag": null
+        },
+        {
+          "username": "Erik",
+          "clientID": "JC7SupNh",
+          "clanTag": null
+        },
+        {
+          "username": "colorblind",
+          "clientID": "rA7gwFud",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:59:14.839Z",
+      "url": "https://openfront.io/game/uicczFxQ"
     }
   ],
   "quads": [
@@ -76790,6 +76845,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T19:55:51.641Z",
       "url": "https://openfront.io/game/3PTLK2Xc"
+    },
+    {
+      "id": "ZaFDcVYF",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Dil1234567",
+          "clientID": "RB585G4a",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Physcojohs",
+          "clientID": "mWh3dhU8",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Fredonia",
+          "clientID": "RAXWUkyn",
+          "clanTag": "NU"
+        },
+        {
+          "username": "watermeleon11",
+          "clientID": "cr24jbW4",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Biden",
+          "clientID": "XEVuLCBv",
+          "clanTag": "NU"
+        },
+        {
+          "username": "ChipotleNavy",
+          "clientID": "dPSBwV7Z",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Texas",
+          "clientID": "KXprSwMS",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 630,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T20:00:51.440Z",
+      "url": "https://openfront.io/game/ZaFDcVYF"
     }
   ],
   "hvn": [
