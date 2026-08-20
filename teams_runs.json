@@ -41801,6 +41801,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T18:00:33.663Z",
       "url": "https://openfront.io/game/JcP5gSh8"
+    },
+    {
+      "id": "PxYGk4ib",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "empi",
+          "clientID": "cuh8wcTx",
+          "clanTag": null
+        },
+        {
+          "username": "Kuddel",
+          "clientID": "agqzpjYD",
+          "clanTag": null
+        },
+        {
+          "username": "Nope",
+          "clientID": "vnQjfzqF",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 864,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T18:07:03.572Z",
+      "url": "https://openfront.io/game/PxYGk4ib"
     }
   ],
   "quads": [
@@ -73195,6 +73225,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T18:12:25.921Z",
       "url": "https://openfront.io/game/SxccMZo3"
+    },
+    {
+      "id": "QNX1Nohz",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Jeffrey 3PST4IN",
+          "clientID": "FckjoFdY",
+          "clanTag": null
+        },
+        {
+          "username": "Yayas la fripouille",
+          "clientID": "VgiCidtc",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "AnonPumpkin6",
+          "clientID": "3aLdDGqn",
+          "clanTag": null
+        },
+        {
+          "username": "Pyrpek",
+          "clientID": "7axmVT77",
+          "clanTag": "RALU"
+        },
+        {
+          "username": "MENFIS131",
+          "clientID": "km3RbtxY",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 1347,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T17:58:15.495Z",
+      "url": "https://openfront.io/game/QNX1Nohz"
     }
   ],
   "hvn": [
