@@ -18267,6 +18267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T17:52:56.141Z",
       "url": "https://openfront.io/game/Z1oTxvqF"
+    },
+    {
+      "id": "zGAbFfBx",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon615",
+          "clientID": "ccfU9M81",
+          "clanTag": null
+        },
+        {
+          "username": "arta",
+          "clientID": "NML7rq9g",
+          "clanTag": "AIUR"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1234,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T17:44:14.560Z",
+      "url": "https://openfront.io/game/zGAbFfBx"
     }
   ],
   "trios": [
@@ -78927,6 +78952,86 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T17:39:13.712Z",
       "url": "https://openfront.io/game/gqZHdVW4"
+    },
+    {
+      "id": "qqQfDE4S",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Gabella",
+          "clientID": "8VpyWPBo",
+          "clanTag": null
+        },
+        {
+          "username": "danzo",
+          "clientID": "7JvBuLZL",
+          "clanTag": null
+        },
+        {
+          "username": "DoNuT",
+          "clientID": "jALL3kuM",
+          "clanTag": null
+        },
+        {
+          "username": "apple",
+          "clientID": "YAwy31ry",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonUnicorn4",
+          "clientID": "Vwf4xCV8",
+          "clanTag": null
+        },
+        {
+          "username": "Grannys Big Boy",
+          "clientID": "mzQePfk3",
+          "clanTag": null
+        },
+        {
+          "username": "Baranka",
+          "clientID": "r9pzYkzJ",
+          "clanTag": "GEM"
+        },
+        {
+          "username": "Bunny Girl Remix",
+          "clientID": "V9WkpKX7",
+          "clanTag": "NEURO"
+        },
+        {
+          "username": "hegemony",
+          "clientID": "gWXWNeAJ",
+          "clanTag": null
+        },
+        {
+          "username": "Bunker",
+          "clientID": "1CGuYSRA",
+          "clanTag": null
+        },
+        {
+          "username": "Kuddel",
+          "clientID": "gjqwGawv",
+          "clanTag": null
+        },
+        {
+          "username": "Goth",
+          "clientID": "JfyaWscD",
+          "clanTag": null
+        },
+        {
+          "username": "eatinyoass",
+          "clientID": "kDVXgZRa",
+          "clanTag": "MEGA"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 706,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T17:52:36.125Z",
+      "url": "https://openfront.io/game/qqQfDE4S"
     }
   ]
 }
