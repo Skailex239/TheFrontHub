@@ -109764,6 +109764,61 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T13:55:38.949Z",
       "url": "https://openfront.io/game/sMoj7d1n"
+    },
+    {
+      "id": "8ghRT3Qs",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonLadder1",
+          "clientID": "xJY4dXVP",
+          "clanTag": null
+        },
+        {
+          "username": "FER",
+          "clientID": "267egEBq",
+          "clanTag": null
+        },
+        {
+          "username": "scene",
+          "clientID": "CkeaK3z8",
+          "clanTag": null
+        },
+        {
+          "username": "Seigneur Jean Lassalle",
+          "clientID": "9AzPGcb4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSpider6",
+          "clientID": "9yBf1EHe",
+          "clanTag": null
+        },
+        {
+          "username": "Domolix90",
+          "clientID": "inkJRoki",
+          "clanTag": "PL"
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "7QYsUR5Y",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "pay8Ehms",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 894,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T14:07:08.235Z",
+      "url": "https://openfront.io/game/8ghRT3Qs"
     }
   ],
   "team_custom": [
@@ -116811,6 +116866,76 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T13:58:58.664Z",
       "url": "https://openfront.io/game/uPgiavYR"
+    },
+    {
+      "id": "SFYCQYBM",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Onion",
+          "clientID": "9acy3x2o",
+          "clanTag": null
+        },
+        {
+          "username": "HoneyMustard",
+          "clientID": "mG2auZeM",
+          "clanTag": "LUDKO"
+        },
+        {
+          "username": "AnonComet8",
+          "clientID": "j32jS1gP",
+          "clanTag": null
+        },
+        {
+          "username": "Anon9999",
+          "clientID": "Bh2MZU1K",
+          "clanTag": null
+        },
+        {
+          "username": "Goule Disco",
+          "clientID": "nxpeZDsP",
+          "clanTag": "LBR"
+        },
+        {
+          "username": "AnDREEE",
+          "clientID": "gcns9Yf5",
+          "clanTag": null
+        },
+        {
+          "username": "ABC",
+          "clientID": "jGNGiLC3",
+          "clanTag": "XYZ"
+        },
+        {
+          "username": "Bear",
+          "clientID": "BY5hpKsw",
+          "clanTag": null
+        },
+        {
+          "username": "Quartel",
+          "clientID": "JRaBif4u",
+          "clanTag": "URSAL"
+        },
+        {
+          "username": "lulu",
+          "clientID": "kweegd9X",
+          "clanTag": null
+        },
+        {
+          "username": "Ben Dover",
+          "clientID": "VAfn3N6w",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 847,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T14:06:27.689Z",
+      "url": "https://openfront.io/game/SFYCQYBM"
     }
   ],
   "hvn": [
