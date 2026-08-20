@@ -82941,6 +82941,67 @@
       "numPlayers": 12,
       "timestamp": "2026-08-20T01:01:07.352Z",
       "url": "https://openfront.io/game/hbaKA9UE"
+    },
+    {
+      "id": "LD1KUJHr",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Musti",
+          "clientID": "8gTTMYb1",
+          "clanTag": null
+        },
+        {
+          "username": "PeaceAmongWorlds",
+          "clientID": "pqXFnnfr",
+          "clanTag": null
+        },
+        {
+          "username": "SAUSAGE DINNER",
+          "clientID": "dBgCjC2b",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 940,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-20T01:10:32.503Z",
+      "url": "https://openfront.io/game/LD1KUJHr"
+    },
+    {
+      "id": "MwBMrozP",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "JOHNSON",
+          "clientID": "S3q79RF4",
+          "clanTag": "12IN"
+        },
+        {
+          "username": "JUST HAPPY TO BE HERE",
+          "clientID": "eSfbPQDK",
+          "clanTag": "12IN"
+        },
+        {
+          "username": "American Saoma",
+          "clientID": "QkMTmbk8",
+          "clanTag": null
+        },
+        {
+          "username": "Jh20",
+          "clientID": "iMbUmYU4",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1260,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 61,
+      "timestamp": "2026-08-20T00:57:49.142Z",
+      "url": "https://openfront.io/game/MwBMrozP"
     }
   ]
 }
