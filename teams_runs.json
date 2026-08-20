@@ -18467,6 +18467,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:19:20.373Z",
       "url": "https://openfront.io/game/DCz4wJHj"
+    },
+    {
+      "id": "zgfN2VrP",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Hyron",
+          "clientID": "7chjgAxJ",
+          "clanTag": "SELAM"
+        },
+        {
+          "username": "AnonChicken4",
+          "clientID": "KoBYLjdA",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 696,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:22:54.084Z",
+      "url": "https://openfront.io/game/zgfN2VrP"
+    },
+    {
+      "id": "2MS34YLr",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "YankusSpanker",
+          "clientID": "4tWGiC2j",
+          "clanTag": "BDGYM"
+        },
+        {
+          "username": "AnonWrench",
+          "clientID": "q8S2fBRb",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 566,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:24:39.691Z",
+      "url": "https://openfront.io/game/2MS34YLr"
     }
   ],
   "trios": [
@@ -65578,6 +65628,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T18:02:31.301Z",
       "url": "https://openfront.io/game/byJxzjhu"
+    },
+    {
+      "id": "Ws8oBwM8",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Cvetko",
+          "clientID": "DNeey6rg",
+          "clanTag": "DRVO"
+        },
+        {
+          "username": "AnonUrchin9",
+          "clientID": "uN4n1sm3",
+          "clanTag": null
+        },
+        {
+          "username": "VukIzVojvodine",
+          "clientID": "uRn7SfNN",
+          "clanTag": "DRVO"
+        },
+        {
+          "username": "Serendipity",
+          "clientID": "9bsDinDG",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1455,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T18:09:21.701Z",
+      "url": "https://openfront.io/game/Ws8oBwM8"
+    },
+    {
+      "id": "w4fEyk51",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "loxu",
+          "clientID": "wghKcYj9",
+          "clanTag": "KURD"
+        },
+        {
+          "username": "AnonSilence6",
+          "clientID": "G2MkADFp",
+          "clanTag": null
+        },
+        {
+          "username": "WASHINGTON",
+          "clientID": "PKzzMaKa",
+          "clanTag": "USA"
+        },
+        {
+          "username": "AnonTundra3",
+          "clientID": "7EiiMiLX",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 748,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T18:22:25.049Z",
+      "url": "https://openfront.io/game/w4fEyk51"
     }
   ],
   "team_custom": [
