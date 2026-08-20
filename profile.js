@@ -534,13 +534,6 @@ async function loadStats(publicId) {
     setText("stat-week-score", `This week score: ${weekScore} pts (FFA: ${weekFFA} · Team: ${weekTeam})`);
     setText("stat-alltime", `All-time score: ${weekTotalPoints || allTimeScore} (${stats.wins} wins${detailStr})`);
 
-    // ── NEW: Stats grid moderne ──
-    const winRate = stats.total > 0 ? Math.round((stats.wins / stats.total) * 100) : 0;
-    setText("pf-stat-wins", String(stats.wins || 0));
-    setText("pf-stat-games", String(stats.total || 0));
-    setText("pf-stat-winrate", winRate + "%");
-    setText("pf-stat-rank", weekRank ? "#" + weekRank : "—");
-    
     // ELO from ranked.json (1v1)
     const ranked1v1 = await eloPromise;
     const eloLine = document.getElementById("stat-elo-line");
@@ -551,28 +544,6 @@ async function loadStats(publicId) {
       } else {
         eloLine.style.display = "none";
       }
-    }
-    
-    // New stat cards : ELO + Peak
-    setText("pf-stat-elo", ranked1v1 && ranked1v1.elo != null ? String(ranked1v1.elo) : "—");
-    setText("pf-stat-peak", ranked1v1 && ranked1v1.peakElo != null ? String(ranked1v1.peakElo) : "—");
-
-    // Extra info chips
-    const extraInfo = document.getElementById("pf-extra-info");
-    if (extraInfo) {
-      extraInfo.style.display = "flex";
-      setText("pf-chip-ffa", "FFA: " + (breakdown.FFA || 0));
-      setText("pf-chip-team", "Team: " + (breakdown.Team || 0));
-      setText("pf-chip-week", "Semaine: " + (weekScore || 0) + " pts");
-      setText("pf-chip-total", "Total: " + (weekTotalPoints || allTimeScore || 0));
-    }
-    
-    // Clan tag
-    const clanTag = playerData.clanTag || (playerData.info && playerData.info.clanTag);
-    const clanEl = document.getElementById("pf-clan-tag");
-    if (clanEl && clanTag) {
-      clanEl.textContent = "[" + clanTag + "]";
-      clanEl.style.display = "inline-block";
     }
 
     // ELO 2v2 from ranked.json
