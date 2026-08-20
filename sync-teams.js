@@ -49,7 +49,8 @@ const RECENT_OVERLAP_MS = 10 * 60 * 1000;   // 10 min overlap
 const WINDOW_MS = 30 * 1000;                 // 30s windows
 const WINDOW_DELAY = 0;                       // no delay (with exemption)
 const FETCH_TIMEOUT = 8000;
-const DETAIL_CONCURRENCY = 12;
+const DETAIL_CONCURRENCY = 24;  // ⚡ BOOSTED from 12 to 24 (parallel game detail fetches)
+const WINDOW_CONCURRENCY = 16;  // ⚡ NEW: 16 windows in parallel (was 1 = serial)
 const TIME_OFFSET_SECS = 32;
 const MIN_HUMANS = 10;
 const TOP_PER_MAP = 25; // for public payload only
@@ -242,47 +243,50 @@ async function syncRecent() {
   const newRunsByMode = emptyRuns();
   const gameIdsToFetch = []; // { gameId, playerTeams }
 
-  // Phase 1: fetch game lists in each window (Option B — 2 requests max per window)
-  for (const { start, end } of windows) {
-    // Request 1: regular
-    const url1 = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000`;
-    const data1 = await fetchWithRetry(url1);
-    totalApiCalls++;
-    let games1 = [];
-    let totalInWindow = 0;
-    if (data1) {
-      games1 = Array.isArray(data1) ? data1 : (data1.games || []);
-      totalInWindow = games1.length;
-    }
-
-    // Request 2: only if request 1 returned 1000 games (might be truncated)
-    let games2 = [];
-    if (games1.length === 1000) {
-      const url2 = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000&offset=1000`;
-      const data2 = await fetchWithRetry(url2);
-      totalApiCalls++;
-      if (data2) {
-        games2 = Array.isArray(data2) ? data2 : (data2.games || []);
-        totalInWindow += games2.length;
+  // ⚡ Phase 1: fetch game lists in PARALLEL batches of WINDOW_CONCURRENCY (was serial)
+  for (let i = 0; i < windows.length; i += WINDOW_CONCURRENCY) {
+    const batch = windows.slice(i, i + WINDOW_CONCURRENCY);
+    const batchResults = await Promise.all(batch.map(async ({ start, end }) => {
+      let apiCalls = 0;
+      // Request 1: regular
+      const url1 = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000`;
+      const data1 = await fetchWithRetry(url1);
+      apiCalls++;
+      let games1 = [];
+      if (data1) {
+        games1 = Array.isArray(data1) ? data1 : (data1.games || []);
       }
-    }
 
-    if (totalInWindow > 1000) {
-      console.log(`[teams] ⚠️ Fenêtre ${start.toISOString().slice(11, 19)}: ${totalInWindow} games (pagination utilisée)`);
-    }
+      // Request 2: only if request 1 returned 1000 games (might be truncated)
+      let games2 = [];
+      if (games1.length === 1000) {
+        const url2 = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000&offset=1000`;
+        const data2 = await fetchWithRetry(url2);
+        apiCalls++;
+        if (data2) {
+          games2 = Array.isArray(data2) ? data2 : (data2.games || []);
+        }
+      }
 
-    const allGames = [...games1, ...games2];
-    for (const g of allGames) {
-      if (g.type !== "Public") continue;
-      if ((g.numPlayers || 0) < MIN_HUMANS) continue;
-      const gameId = g.game || g.gameId;
-      if (!gameId || seen.has(gameId)) continue;
-      gameIdsToFetch.push({ gameId, playerTeams: g.playerTeams });
+      const allGames = [...games1, ...games2];
+      const candidates = [];
+      for (const g of allGames) {
+        if (g.type !== "Public") continue;
+        if ((g.numPlayers || 0) < MIN_HUMANS) continue;
+        const gameId = g.game || g.gameId;
+        if (!gameId || seen.has(gameId)) continue;
+        candidates.push({ gameId, playerTeams: g.playerTeams });
+      }
+      return { candidates, apiCalls };
+    }));
+
+    for (const { candidates, apiCalls } of batchResults) {
+      gameIdsToFetch.push(...candidates);
+      totalApiCalls += apiCalls;
     }
-    if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
   }
 
-  console.log(`[teams] ${gameIdsToFetch.length} games candidates à fetcher (${totalApiCalls} appels API)`);
+  console.log(`[teams] ⚡ Phase 1 terminée — ${gameIdsToFetch.length} games candidates (${totalApiCalls} appels API, ${windows.length} fenêtres en ${Math.ceil(windows.length / WINDOW_CONCURRENCY)} batches parallèles)`);
 
   // Phase 2: fetch game details in parallel chunks
   const chunks = [];
