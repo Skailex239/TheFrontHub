@@ -17517,6 +17517,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:05:06.181Z",
       "url": "https://openfront.io/game/Upae1hcA"
+    },
+    {
+      "id": "hC2Z5kQG",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GoPepper",
+          "clientID": "seNMNWLd",
+          "clanTag": null
+        },
+        {
+          "username": "nnz",
+          "clientID": "meab9XUb",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 607,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:07:59.377Z",
+      "url": "https://openfront.io/game/hC2Z5kQG"
     }
   ],
   "trios": [
@@ -63583,6 +63608,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T16:01:29.949Z",
       "url": "https://openfront.io/game/vL5NdhZX"
+    },
+    {
+      "id": "Kc3gcGJu",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Sind",
+          "clientID": "ntRAAMZt",
+          "clanTag": null
+        },
+        {
+          "username": "Zamunda",
+          "clientID": "dxmDMARe",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "FUFU",
+          "clientID": "6Cvud8VN",
+          "clanTag": null
+        },
+        {
+          "username": "Federal Europe",
+          "clientID": "YapSNU53",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "World",
+      "duration_s": 489,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T16:10:06.535Z",
+      "url": "https://openfront.io/game/Kc3gcGJu"
     }
   ],
   "team_custom": [
@@ -69645,6 +69705,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T15:53:30.446Z",
       "url": "https://openfront.io/game/XdU2ykfp"
+    },
+    {
+      "id": "qkZUX5J9",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Zoptikal",
+          "clientID": "6FwjVK5m",
+          "clanTag": null
+        },
+        {
+          "username": "bestcamp",
+          "clientID": "47XHpddw",
+          "clanTag": null
+        },
+        {
+          "username": "SUN TZU",
+          "clientID": "846xk37d",
+          "clanTag": "FNS"
+        },
+        {
+          "username": "Anon595",
+          "clientID": "ZRTQrrwQ",
+          "clanTag": null
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "eP3zgMh3",
+          "clanTag": null
+        },
+        {
+          "username": "Sam.",
+          "clientID": "FBdFZpqx",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 876,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T16:04:00.112Z",
+      "url": "https://openfront.io/game/qkZUX5J9"
     }
   ],
   "hvn": [
