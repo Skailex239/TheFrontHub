@@ -83081,6 +83081,39 @@
       "numPlayers": 58,
       "timestamp": "2026-08-20T01:34:41.350Z",
       "url": "https://openfront.io/game/vm7wPWrr"
+    },
+    {
+      "id": "yewU2TiZ",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ike",
+          "clientID": "e9ffkuny",
+          "clanTag": "RAFT"
+        },
+        {
+          "username": "FOXTROT",
+          "clientID": "gNZP2mYg",
+          "clanTag": "RAFT"
+        },
+        {
+          "username": "Eponym",
+          "clientID": "EB6us7Tu",
+          "clanTag": null
+        },
+        {
+          "username": "Mascott",
+          "clientID": "sSFZD7iq",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 518,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "timestamp": "2026-08-20T01:58:53.328Z",
+      "url": "https://openfront.io/game/yewU2TiZ"
     }
   ]
 }
