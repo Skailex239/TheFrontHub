@@ -19092,6 +19092,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T19:37:38.027Z",
       "url": "https://openfront.io/game/XwtC1ndn"
+    },
+    {
+      "id": "9JdBJmqq",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "smd",
+          "clientID": "NqZimS69",
+          "clanTag": null
+        },
+        {
+          "username": "Jules",
+          "clientID": "2E4FmXNX",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 417,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:49:52.276Z",
+      "url": "https://openfront.io/game/9JdBJmqq"
+    },
+    {
+      "id": "b5F8Se9Y",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon445",
+          "clientID": "bebqWVef",
+          "clanTag": null
+        },
+        {
+          "username": "KWI",
+          "clientID": "qwQis8s7",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1125,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:39:31.136Z",
+      "url": "https://openfront.io/game/b5F8Se9Y"
+    },
+    {
+      "id": "8gdBDSQH",
+      "mode": "duos",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Maori Tribe",
+          "clientID": "8vzrJBk5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPlow2",
+          "clientID": "eb2mTDq7",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1916,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T19:24:52.193Z",
+      "url": "https://openfront.io/game/8gdBDSQH"
     }
   ],
   "trios": [
@@ -42896,6 +42971,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:40:33.196Z",
       "url": "https://openfront.io/game/qPmiRV7m"
+    },
+    {
+      "id": "U4Pm43gJ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonOnyx9",
+          "clientID": "bScwJfCb",
+          "clanTag": null
+        },
+        {
+          "username": "Loser",
+          "clientID": "d6V9J9ZY",
+          "clanTag": "11"
+        },
+        {
+          "username": "Red Death",
+          "clientID": "jijjuyHQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 815,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:43:50.920Z",
+      "url": "https://openfront.io/game/U4Pm43gJ"
     }
   ],
   "quads": [
