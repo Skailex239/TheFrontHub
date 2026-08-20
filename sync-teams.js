@@ -1,6 +1,15 @@
-// sync-teams.js — Team speedrun sync (Duos, Trios, Quads)
+// sync-teams.js — Team speedrun sync (Duos, Trios, Quads, Team Custom, HvN)
 // Same accumulation logic as sync.js: loads existing runs, adds new ones, saves back.
 // Scans last 2h each run, accumulates over time.
+//
+// BUG FIXED (2026-08-20): OpenFront API now returns playerTeams as BOTH:
+//   - "Duos", "Trios", "Quads" (text, old games)
+//   - "2", "3", "4" (numeric, new games — same meaning)
+//   - "5", "6", "7" (numeric, custom team sizes)
+//   - "Humans Vs Nations" (special mode)
+// Previously we only fetched the text format → missed ~76% of Team games.
+// Now we fetch ALL Team games with one request (Option B — clean sync) and
+// classify them in extractTeamRun based on playerTeams value.
 //
 // Usage: node sync-teams.js
 // Files: teams_runs.json (full accumulated), teams_seen.json (de-dupe),
@@ -14,8 +23,27 @@ import {
   hasExemption,
 } from "./openfront-api.js";
 
+// ── Mode definitions ──────────────────────────────────────────────────────
+// Each mode maps to a key in teams_runs.json and to a set of playerTeams values.
+// We accept BOTH the text format (legacy) and the numeric format (new).
+const MODES = {
+  duos:        { name: "Duos",              playerTeamsValues: ["Duos", "2"] },
+  trios:       { name: "Trios",            playerTeamsValues: ["Trios", "3"] },
+  quads:       { name: "Quads",            playerTeamsValues: ["Quads", "4"] },
+  team_custom: { name: "Team Custom",      playerTeamsValues: ["5", "6", "7"] },
+  hvn:         { name: "Humans Vs Nations", playerTeamsValues: ["Humans Vs Nations"] },
+};
+const MODE_KEYS = Object.keys(MODES); // ["duos", "trios", "quads", "team_custom", "hvn"]
+
+// Reverse map: API playerTeams value → mode key
+const PLAYER_TEAMS_TO_MODE = {};
+for (const [modeKey, def] of Object.entries(MODES)) {
+  for (const v of def.playerTeamsValues) {
+    PLAYER_TEAMS_TO_MODE[v] = modeKey;
+  }
+}
+
 // ── Constants ──
-const TEAM_MODES = ["Duos", "Trios", "Quads"];
 const RECENT_MAX_MS = 2 * 60 * 60 * 1000;  // 2 hours
 const RECENT_OVERLAP_MS = 10 * 60 * 1000;   // 10 min overlap
 const WINDOW_MS = 30 * 1000;                 // 30s windows
@@ -29,18 +57,31 @@ const TARGET_DATE = new Date("2025-11-01").getTime(); // backfill jusqu'à nov 2
 const DEFAULT_HISTORY_WINDOWS = 10000; // fenêtres par cycle de backfill
 
 // ── File paths ──
-const RUNS_FILE = "teams_runs.json";        // { duos: [...], trios: [...], quads: [...] }
+const RUNS_FILE = "teams_runs.json";        // { duos, trios, quads, team_custom, hvn }
 const SEEN_FILE = "teams_seen.json";        // ["gameId1", "gameId2", ...]
 const CHECKPOINT_FILE = "teams_checkpoint.json";
 
 // ── Helpers ──
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
+function emptyRuns() {
+  const r = {};
+  for (const k of MODE_KEYS) r[k] = [];
+  return r;
+}
+
 function loadRuns() {
   try {
     const raw = JSON.parse(fs.readFileSync(RUNS_FILE, "utf8"));
-    return raw || { duos: [], trios: [], quads: [] };
-  } catch { return { duos: [], trios: [], quads: [] }; }
+    // Migrate: ensure all mode keys exist (in case of upgrade from old version)
+    const result = emptyRuns();
+    if (raw && typeof raw === "object") {
+      for (const k of MODE_KEYS) {
+        if (Array.isArray(raw[k])) result[k] = raw[k];
+      }
+    }
+    return result;
+  } catch { return emptyRuns(); }
 }
 
 function saveRuns(runs) {
@@ -117,7 +158,17 @@ function hasModifiers(config) {
   return false;
 }
 
-function extractTeamRun(raw, mode) {
+/**
+ * Determine which mode a game belongs to based on config.playerTeams.
+ * Returns null if the game doesn't match any known mode.
+ */
+function classifyGameMode(config) {
+  const pt = config.playerTeams;
+  if (pt == null) return null;
+  return PLAYER_TEAMS_TO_MODE[pt] || null;
+}
+
+function extractTeamRun(raw) {
   const info = raw?.info;
   if (!info) return null;
   const config = info.config || {};
@@ -126,8 +177,11 @@ function extractTeamRun(raw, mode) {
   if (config.gameMode !== "Team") return null;
   if (config.gameMapSize !== "Normal") return null;
   if (config.bots !== 400) return null;
-  if (config.playerTeams !== mode) return null;
   if (hasModifiers(config)) return null;
+
+  // Classify mode from playerTeams (accepts both text and numeric format)
+  const modeKey = classifyGameMode(config);
+  if (!modeKey) return null;
 
   const players = info.players || [];
   const humanPlayers = players.filter(p => !p.isBot);
@@ -148,6 +202,7 @@ function extractTeamRun(raw, mode) {
 
   return {
     id: gameId,
+    mode: modeKey,  // ← new field so we know which mode this run belongs to
     team: winner[1],
     players: winnerPlayers.map(p => ({ username: p.username, clientID: p.clientID, clanTag: p.clanTag || null })),
     map: config.gameMap || "Unknown",
@@ -155,6 +210,7 @@ function extractTeamRun(raw, mode) {
     difficulty: config.difficulty || "Medium",
     bots: 400,
     numPlayers: humanPlayers.length,
+    playerTeams: config.playerTeams,  // keep raw value for debugging
     timestamp: info.start ? new Date(info.start > 1e10 ? info.start : info.start * 1000).toISOString() : new Date().toISOString(),
     url: `https://openfront.io/game/${gameId}`,
   };
@@ -176,23 +232,21 @@ async function syncRecent() {
   console.log(`[teams] ${windows.length} fenêtres de 30s (~${Math.round((now - ago) / 60000)} min, max 2h, filtre Public Team ≥10p)`);
 
   let totalNew = 0;
-  const newRunsByMode = { duos: [], trios: [], quads: [] };
-  const gameIdsToFetch = []; // { gameId, mode }
+  const newRunsByMode = emptyRuns();
+  const gameIdsToFetch = []; // { gameId }
 
-  // Phase 1: fetch game lists in each window
+  // Phase 1: fetch game lists in each window (Option B: ONE request per window)
   for (const { start, end } of windows) {
-    for (const mode of TEAM_MODES) {
-      const url = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&playerTeams=${encodeURIComponent(mode)}&limit=1000`;
-      const data = await fetchWithRetry(url);
-      if (!data) continue;
-      const games = Array.isArray(data) ? data : (data.games || []);
-      for (const g of games) {
-        if (g.type !== "Public") continue;
-        if ((g.numPlayers || 0) < MIN_HUMANS) continue;
-        const gameId = g.game || g.gameId;
-        if (!gameId || seen.has(gameId)) continue;
-        gameIdsToFetch.push({ gameId, mode });
-      }
+    const url = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000`;
+    const data = await fetchWithRetry(url);
+    if (!data) continue;
+    const games = Array.isArray(data) ? data : (data.games || []);
+    for (const g of games) {
+      if (g.type !== "Public") continue;
+      if ((g.numPlayers || 0) < MIN_HUMANS) continue;
+      const gameId = g.game || g.gameId;
+      if (!gameId || seen.has(gameId)) continue;
+      gameIdsToFetch.push({ gameId, playerTeams: g.playerTeams });
     }
     if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
   }
@@ -206,31 +260,32 @@ async function syncRecent() {
   }
 
   for (const chunk of chunks) {
-    await Promise.all(chunk.map(async ({ gameId, mode }) => {
+    await Promise.all(chunk.map(async ({ gameId, playerTeams }) => {
       seen.add(gameId);
       try {
         const raw = await fetchWithRetry(`${API_BASE}/public/game/${encodeURIComponent(gameId)}?turns=false`);
-        const run = extractTeamRun(raw, mode);
+        const run = extractTeamRun(raw);
         if (run) {
-          const key = mode.toLowerCase();
-          newRunsByMode[key].push(run);
-          totalNew++;
+          // run.mode is set by extractTeamRun based on config.playerTeams
+          if (newRunsByMode[run.mode]) {
+            newRunsByMode[run.mode].push(run);
+            totalNew++;
+          }
         }
       } catch (e) {
-        console.warn(`[teams] game ${gameId}: ${e.message}`);
+        console.warn(`[teams] game ${gameId} (pt=${playerTeams}): ${e.message}`);
       }
     }));
   }
 
   // Phase 3: merge new runs into existing
-  for (const mode of TEAM_MODES) {
-    const key = mode.toLowerCase();
-    if (newRunsByMode[key].length > 0) {
+  for (const modeKey of MODE_KEYS) {
+    if (newRunsByMode[modeKey].length > 0) {
       // Deduplicate by run ID (in case of overlap)
-      const existingIds = new Set(runs[key].map(r => r.id));
-      const newOnes = newRunsByMode[key].filter(r => !existingIds.has(r.id));
-      runs[key] = [...runs[key], ...newOnes];
-      console.log(`[teams] ${mode}: +${newOnes.length} nouveaux runs (total: ${runs[key].length})`);
+      const existingIds = new Set(runs[modeKey].map(r => r.id));
+      const newOnes = newRunsByMode[modeKey].filter(r => !existingIds.has(r.id));
+      runs[modeKey] = [...runs[modeKey], ...newOnes];
+      console.log(`[teams] ${MODES[modeKey].name}: +${newOnes.length} nouveaux runs (total: ${runs[modeKey].length})`);
     }
   }
 
@@ -258,12 +313,10 @@ async function syncRecent() {
 function generatePublicPayload(runs) {
   const payload = {
     u: new Date().toISOString(),
-    duos: {},
-    trios: {},
-    quads: {},
   };
+  for (const k of MODE_KEYS) payload[k] = {};
 
-  for (const key of ["duos", "trios", "quads"]) {
+  for (const key of MODE_KEYS) {
     // Group by map
     const byMap = {};
     for (const r of runs[key]) {
@@ -299,13 +352,11 @@ function generatePublicPayload(runs) {
   fs.writeFileSync("teams_public.json", json);
   fs.writeFileSync("teams_public.json.gz", zlib.gzipSync(json));
 
-  const totals = {
-    duos: Object.keys(payload.duos).length,
-    trios: Object.keys(payload.trios).length,
-    quads: Object.keys(payload.quads).length,
-  };
-  const totalRuns = runs.duos.length + runs.trios.length + runs.quads.length;
-  console.log(`[teams] 📦 Public payload: ${(zlib.gzipSync(json).length / 1024).toFixed(1)} KB, ${totalRuns} runs total, ${totals.duos} duo / ${totals.trios} trio / ${totals.quads} quad maps`);
+  const totals = {};
+  for (const k of MODE_KEYS) totals[k] = Object.keys(payload[k]).length;
+  let totalRuns = 0;
+  for (const k of MODE_KEYS) totalRuns += runs[k].length;
+  console.log(`[teams] 📦 Public payload: ${(zlib.gzipSync(json).length / 1024).toFixed(1)} KB, ${totalRuns} runs total, maps: duos=${totals.duos} trio=${totals.trios} quad=${totals.quads} custom=${totals.team_custom} hvn=${totals.hvn}`);
 }
 
 // ── History backfill (remonte dans le temps, comme sync.js) ──
@@ -326,7 +377,7 @@ async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
   // Scan backwards from saved towards oldest
   let oldestReached = saved;
   let totalNew = 0;
-  const newRunsByMode = { duos: [], trios: [], quads: [] };
+  const newRunsByMode = emptyRuns();
 
   for (let i = 0; i < maxWindows; i++) {
     const windowEnd = oldestReached - i * WINDOW_MS;
@@ -337,28 +388,27 @@ async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
       break;
     }
 
-    for (const mode of TEAM_MODES) {
-      const url = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&playerTeams=${encodeURIComponent(mode)}&limit=1000`;
-      const data = await fetchWithRetry(url);
-      if (!data) continue;
-      const games = Array.isArray(data) ? data : (data.games || []);
-      for (const g of games) {
-        if (g.type !== "Public") continue;
-        if ((g.numPlayers || 0) < MIN_HUMANS) continue;
-        const gameId = g.game || g.gameId;
-        if (!gameId || seen.has(gameId)) continue;
+    // Option B: ONE request per window (instead of one per mode)
+    const url = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000`;
+    const data = await fetchWithRetry(url);
+    if (!data) continue;
+    const games = Array.isArray(data) ? data : (data.games || []);
+    for (const g of games) {
+      if (g.type !== "Public") continue;
+      if ((g.numPlayers || 0) < MIN_HUMANS) continue;
+      const gameId = g.game || g.gameId;
+      if (!gameId || seen.has(gameId)) continue;
 
-        // Fetch detail
-        seen.add(gameId);
-        try {
-          const raw = await fetchWithRetry(`${API_BASE}/public/game/${encodeURIComponent(gameId)}?turns=false`);
-          const run = extractTeamRun(raw, mode);
-          if (run) {
-            newRunsByMode[mode.toLowerCase()].push(run);
-            totalNew++;
-          }
-        } catch (e) { /* skip */ }
-      }
+      // Fetch detail
+      seen.add(gameId);
+      try {
+        const raw = await fetchWithRetry(`${API_BASE}/public/game/${encodeURIComponent(gameId)}?turns=false`);
+        const run = extractTeamRun(raw);
+        if (run) {
+          newRunsByMode[run.mode].push(run);
+          totalNew++;
+        }
+      } catch (e) { /* skip */ }
     }
 
     oldestReached = windowStart;
@@ -369,12 +419,11 @@ async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
       saveCheckpoint(cp);
       if (totalNew > 0) {
         // Merge + save
-        for (const mode of TEAM_MODES) {
-          const key = mode.toLowerCase();
-          if (newRunsByMode[key].length > 0) {
-            const existingIds = new Set(runs[key].map(r => r.id));
-            const newOnes = newRunsByMode[key].filter(r => !existingIds.has(r.id));
-            runs[key] = [...runs[key], ...newOnes];
+        for (const modeKey of MODE_KEYS) {
+          if (newRunsByMode[modeKey].length > 0) {
+            const existingIds = new Set(runs[modeKey].map(r => r.id));
+            const newOnes = newRunsByMode[modeKey].filter(r => !existingIds.has(r.id));
+            runs[modeKey] = [...runs[modeKey], ...newOnes];
           }
         }
         saveRuns(runs);
@@ -386,13 +435,12 @@ async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
   }
 
   // Final merge + save
-  for (const mode of TEAM_MODES) {
-    const key = mode.toLowerCase();
-    if (newRunsByMode[key].length > 0) {
-      const existingIds = new Set(runs[key].map(r => r.id));
-      const newOnes = newRunsByMode[key].filter(r => !existingIds.has(r.id));
-      runs[key] = [...runs[key], ...newOnes];
-      console.log(`[teams-history] ${mode}: +${newOnes.length} (total: ${runs[key].length})`);
+  for (const modeKey of MODE_KEYS) {
+    if (newRunsByMode[modeKey].length > 0) {
+      const existingIds = new Set(runs[modeKey].map(r => r.id));
+      const newOnes = newRunsByMode[modeKey].filter(r => !existingIds.has(r.id));
+      runs[modeKey] = [...runs[modeKey], ...newOnes];
+      console.log(`[teams-history] ${MODES[modeKey].name}: +${newOnes.length} (total: ${runs[modeKey].length})`);
     }
   }
   if (totalNew > 0) saveRuns(runs);
@@ -409,7 +457,7 @@ async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
 
 // ── Main ──
 async function main() {
-  console.log("[teams] 🚀 Démarrage — Team Speedrun Sync (accumulate + history)");
+  console.log("[teams] 🚀 Démarrage — Team Speedrun Sync (5 modes: duos, trios, quads, team_custom, hvn)");
   if (hasExemption()) console.log("[teams] 🔑 Exemption Skailex active");
   else console.log("[teams] ⚠️ Pas d'exemption — rate limits peuvent s'appliquer");
 
@@ -420,7 +468,8 @@ async function main() {
   const histNew = await syncHistory(DEFAULT_HISTORY_WINDOWS);
 
   const runs = loadRuns();
-  console.log(`[teams] 🏁 Terminé: ${runs.duos.length} duos, ${runs.trios.length} trios, ${runs.quads.length} quads (${histNew} historiques)`);
+  const counts = MODE_KEYS.map(k => `${MODES[k].name}=${runs[k].length}`).join(", ");
+  console.log(`[teams] 🏁 Terminé: ${counts} (${histNew} historiques)`);
 }
 
 main().catch(e => { console.error("[teams] Fatal:", e); process.exit(1); });

@@ -15,7 +15,7 @@ let _mapTotalCounts={}; // Comptes totaux par map (pour chart)
 let _durationBuckets={}; // Distribution durées (pour chart)
 const TOP_PER_MAP=25;
 let currentMapSize = 'normal'; // 'normal' or 'compact'
-let currentGameMode = 'solo'; // 'solo', 'duos', 'trios', 'quads'
+let currentGameMode = 'solo'; // 'solo', 'duos', 'trios', 'quads', 'team_custom', 'hvn'
 // Compat: currentMode derived from mapSize + gameMode
 let currentMode = 'normal'; // kept for getDataFile() compatibility
 let gameCommit = null;
@@ -705,12 +705,12 @@ function debounce(fn,ms){let t;return function(...a){clearTimeout(t);t=setTimeou
 
 function getDataFile() {
   if (currentMode === 'compact') return 'runs_compact_public.json';
-  if (currentMode === 'duos' || currentMode === 'trios' || currentMode === 'quads') return 'teams_public.json';
+  if (['duos', 'trios', 'quads', 'team_custom', 'hvn'].includes(currentMode)) return 'teams_public.json';
   return 'runs_public.json';
 }
 function getDataFileGz() {
   if (currentMode === 'compact') return 'runs_compact_public.json.gz';
-  if (currentMode === 'duos' || currentMode === 'trios' || currentMode === 'quads') return 'teams_public.json.gz';
+  if (['duos', 'trios', 'quads', 'team_custom', 'hvn'].includes(currentMode)) return 'teams_public.json.gz';
   return 'runs_public.json.gz';
 }
 // Fallback to full files if public payload doesn't exist
@@ -748,7 +748,7 @@ function updateSubtitle() {
   const el = document.getElementById('header-subtitle');
   if (!el) return;
   const sizeLabel = currentMapSize === 'compact' ? 'Compact' : 'Standard';
-  const modeLabels = { solo: 'FFA', duos: 'Team Duos', trios: 'Team Trios', quads: 'Team Quads' };
+  const modeLabels = { solo: 'FFA', duos: 'Team Duos', trios: 'Team Trios', quads: 'Team Quads', team_custom: 'Team Custom', hvn: 'Humans Vs Nations' };
   const minPlayers = currentMapSize === 'compact' ? '3+' : '10+';
   const bots = currentMapSize === 'compact' ? '100' : '400';
   el.textContent = `Leaderboard ${modeLabels[currentGameMode] || 'FFA'} · ${minPlayers} joueurs · ${bots} bots · ${sizeLabel}`;
@@ -789,8 +789,8 @@ async function switchGameMode(mode) {
   updateCurrentMode();
   const menu = document.getElementById('gamemode-menu');
   if (menu) menu.classList.remove('open');
-  const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads' };
-  const icons = { solo: 'user', duos: 'users', trios: 'users', quads: 'users' };
+  const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads', team_custom: 'Team Custom', hvn: 'HvN' };
+  const icons = { solo: 'user', duos: 'users', trios: 'users', quads: 'users', team_custom: 'users', hvn: 'swords' };
   const labelEl = document.getElementById('gamemode-label');
   if (labelEl) labelEl.textContent = labels[mode] || 'Solo';
   const toggleIcon = document.querySelector('#gamemode-toggle .mode-icon');
@@ -855,9 +855,9 @@ function applyPayloadData(data, isBackground = false) {
   window.apiMapTotals = {};
   let apiMapTotals = window.apiMapTotals;
 
-  // Team mode: data has { duos: {map: [...]}, trios: {...}, quads: {...} }
-  if (currentMode === 'duos' || currentMode === 'trios' || currentMode === 'quads') {
-    const teamKey = currentMode; // 'duos', 'trios', 'quads'
+  // Team mode: data has { duos: {map: [...]}, trios: {...}, quads: {...}, team_custom: {...}, hvn: {...} }
+  if (['duos', 'trios', 'quads', 'team_custom', 'hvn'].includes(currentMode)) {
+    const teamKey = currentMode; // 'duos', 'trios', 'quads', 'team_custom', 'hvn'
     const teamData = data[teamKey] || {};
     const runs = [];
     const mapTotals = {};
@@ -1926,11 +1926,11 @@ if (mapSizeParam === 'compact') {
   if (btn) btn.classList.add('active');
   if (btnN) btnN.classList.remove('active');
 }
-if (gameModeParam && ['solo','duos','trios','quads'].includes(gameModeParam)) {
+if (gameModeParam && ['solo','duos','trios','quads','team_custom','hvn'].includes(gameModeParam)) {
   currentGameMode = gameModeParam;
   // Update dropdown UI
-  const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads' };
-  const icons = { solo: 'user', duos: 'users', trios: 'users', quads: 'users' };
+  const labels = { solo: 'Solo', duos: 'Duos', trios: 'Trios', quads: 'Quads', team_custom: 'Team Custom', hvn: 'HvN' };
+  const icons = { solo: 'user', duos: 'users', trios: 'users', quads: 'users', team_custom: 'users', hvn: 'swords' };
   const labelEl = document.getElementById('gamemode-label');
   if (labelEl) labelEl.textContent = labels[gameModeParam];
   const toggleIcon = document.querySelector('#gamemode-toggle .mode-icon');
