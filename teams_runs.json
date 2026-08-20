@@ -65827,6 +65827,51 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T13:09:01.792Z",
       "url": "https://openfront.io/game/z93nfxzK"
+    },
+    {
+      "id": "dfbuivUR",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "test01",
+          "clientID": "h27YYRCv",
+          "clanTag": null
+        },
+        {
+          "username": "Lukasss",
+          "clientID": "2KgNFJHJ",
+          "clanTag": "SPR"
+        },
+        {
+          "username": "lonelypurplegrape",
+          "clientID": "YQLuGVpD",
+          "clanTag": null
+        },
+        {
+          "username": "dogwater",
+          "clientID": "Vgph3s5h",
+          "clanTag": null
+        },
+        {
+          "username": "LTU",
+          "clientID": "VetsmD65",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage4",
+          "clientID": "xctWPx4S",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 625,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T13:26:23.950Z",
+      "url": "https://openfront.io/game/dfbuivUR"
     }
   ],
   "quads": [
@@ -106169,6 +106214,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T13:22:34.214Z",
       "url": "https://openfront.io/game/yPQJHpgs"
+    },
+    {
+      "id": "6NVUCgAs",
+      "mode": "quads",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "GrigriSENDTROOP2WIN",
+          "clientID": "AhbjHYz9",
+          "clanTag": null
+        },
+        {
+          "username": "BastiGHG",
+          "clientID": "Wd1oxtrN",
+          "clanTag": "OLIO"
+        },
+        {
+          "username": "Macieee",
+          "clientID": "NYwkLFxC",
+          "clanTag": null
+        },
+        {
+          "username": "rawrr",
+          "clientID": "qQ1xtteL",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 912,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T13:21:25.633Z",
+      "url": "https://openfront.io/game/6NVUCgAs"
     }
   ],
   "team_custom": [
