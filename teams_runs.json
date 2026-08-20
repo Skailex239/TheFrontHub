@@ -17667,6 +17667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:28:21.184Z",
       "url": "https://openfront.io/game/ELn5D4JJ"
+    },
+    {
+      "id": "yDibAf6d",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Person",
+          "clientID": "6kPnGmFa",
+          "clanTag": "KIND"
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "XiktMinD",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:35:39.145Z",
+      "url": "https://openfront.io/game/yDibAf6d"
     }
   ],
   "trios": [
@@ -70285,6 +70310,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T16:20:18.663Z",
       "url": "https://openfront.io/game/d672wrqE"
+    },
+    {
+      "id": "6KmgfBKZ",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonRaven2",
+          "clientID": "QBHY3BJx",
+          "clanTag": null
+        },
+        {
+          "username": "Arsfin_Khan",
+          "clientID": "sezdr6gC",
+          "clanTag": "APOOP"
+        },
+        {
+          "username": "AnonMedallion3",
+          "clientID": "ZXaBGo3e",
+          "clanTag": null
+        },
+        {
+          "username": "moon",
+          "clientID": "PBgtZCzk",
+          "clanTag": null
+        },
+        {
+          "username": "calocxanh",
+          "clientID": "ivPPo2SQ",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 747,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T16:31:32.876Z",
+      "url": "https://openfront.io/game/6KmgfBKZ"
     }
   ],
   "hvn": [
