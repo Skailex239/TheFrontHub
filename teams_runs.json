@@ -19592,6 +19592,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T20:59:07.630Z",
       "url": "https://openfront.io/game/UeZSMhDC"
+    },
+    {
+      "id": "Q2Ws3qTr",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BITCOINTOTHEM00N",
+          "clientID": "rJxjwnJ3",
+          "clanTag": null
+        },
+        {
+          "username": "Izynizzy",
+          "clientID": "Py7kdxyc",
+          "clanTag": "SWE"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 390,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:13:45.070Z",
+      "url": "https://openfront.io/game/Q2Ws3qTr"
+    },
+    {
+      "id": "853NvrYb",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "zavad",
+          "clientID": "mE31KHia",
+          "clanTag": "NU"
+        },
+        {
+          "username": "FLiPFLAVA",
+          "clientID": "qfKySDmp",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 348,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:12:55.019Z",
+      "url": "https://openfront.io/game/853NvrYb"
     }
   ],
   "trios": [
@@ -44056,6 +44106,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T20:47:53.404Z",
       "url": "https://openfront.io/game/iXhfJmaL"
+    },
+    {
+      "id": "6fXinzR7",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Prussian Empire",
+          "clientID": "19tbL2wE",
+          "clanTag": null
+        },
+        {
+          "username": "Re0NuM",
+          "clientID": "vwJ2VCJY",
+          "clanTag": null
+        },
+        {
+          "username": "lnside",
+          "clientID": "gu3LdhRa",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1098,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T21:01:24.772Z",
+      "url": "https://openfront.io/game/6fXinzR7"
     }
   ],
   "quads": [
@@ -87127,6 +87207,51 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T21:08:18.712Z",
       "url": "https://openfront.io/game/oqzqx8Qc"
+    },
+    {
+      "id": "6hDAvaiT",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "I play barefoot",
+          "clientID": "2LJHggR5",
+          "clanTag": null
+        },
+        {
+          "username": "Fuzzy And Soft Kitten Union",
+          "clientID": "usw3uQMK",
+          "clanTag": "GM"
+        },
+        {
+          "username": "Laurest",
+          "clientID": "HeoJG7kz",
+          "clanTag": null
+        },
+        {
+          "username": "Scooby4",
+          "clientID": "Y1NoKj4n",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "BYFCFk5K",
+          "clanTag": null
+        },
+        {
+          "username": "Yummy",
+          "clientID": "sszFgQVa",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 905,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 11,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T21:04:38.461Z",
+      "url": "https://openfront.io/game/6hDAvaiT"
     }
   ]
 }
