@@ -41476,6 +41476,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T17:20:02.539Z",
       "url": "https://openfront.io/game/QjboTvao"
+    },
+    {
+      "id": "nP5MP7zw",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "New Jersey",
+          "clientID": "xn6Qwthe",
+          "clanTag": null
+        },
+        {
+          "username": "pampa",
+          "clientID": "4P4as1S9",
+          "clanTag": null
+        },
+        {
+          "username": "IHeartEco",
+          "clientID": "nqdArTk1",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 800,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T17:40:56.329Z",
+      "url": "https://openfront.io/game/nP5MP7zw"
     }
   ],
   "quads": [
@@ -72365,6 +72395,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T17:40:05.263Z",
       "url": "https://openfront.io/game/uNWQcQsB"
+    },
+    {
+      "id": "g5TvoZmU",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon980",
+          "clientID": "rYcWm3Tc",
+          "clanTag": null
+        },
+        {
+          "username": "just trade",
+          "clientID": "jdATc6iY",
+          "clanTag": null
+        },
+        {
+          "username": "Hellebore",
+          "clientID": "zsvxbvBL",
+          "clanTag": null
+        },
+        {
+          "username": "WoW",
+          "clientID": "b3X3bzA5",
+          "clanTag": null
+        },
+        {
+          "username": "DONT BOTHER NONE",
+          "clientID": "ZGYJRNyp",
+          "clanTag": null
+        },
+        {
+          "username": "SOS",
+          "clientID": "DK3JtJg4",
+          "clanTag": null
+        },
+        {
+          "username": "Mitocondria",
+          "clientID": "ZpuQsZ6N",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 956,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T17:38:27.180Z",
+      "url": "https://openfront.io/game/g5TvoZmU"
     }
   ],
   "hvn": [
