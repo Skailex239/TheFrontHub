@@ -17742,6 +17742,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:39:42.895Z",
       "url": "https://openfront.io/game/cSYpCFjP"
+    },
+    {
+      "id": "Hz7su9bZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Tsuzuki_ The Great",
+          "clientID": "GAyeM6ua",
+          "clanTag": "POINT"
+        },
+        {
+          "username": "Snoozz",
+          "clientID": "KPzB9BVm",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1198,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:34:52.103Z",
+      "url": "https://openfront.io/game/Hz7su9bZ"
+    },
+    {
+      "id": "JDQWj6tt",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bomber",
+          "clientID": "qzbJAbSV",
+          "clanTag": "RU"
+        },
+        {
+          "username": "ILAYos",
+          "clientID": "bAVBp79t",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 495,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:46:58.354Z",
+      "url": "https://openfront.io/game/JDQWj6tt"
+    },
+    {
+      "id": "TcekXceN",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Adiiiiiiii",
+          "clientID": "4HeohRqq",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSteam9",
+          "clientID": "UDkJVj8c",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 498,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:48:27.964Z",
+      "url": "https://openfront.io/game/TcekXceN"
     }
   ],
   "trios": [
@@ -70650,6 +70725,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T16:13:09.209Z",
       "url": "https://openfront.io/game/VMQ9pyGc"
+    },
+    {
+      "id": "jLk61JNC",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "literallyjustsendtroops",
+          "clientID": "fkJ48Smp",
+          "clanTag": "6767"
+        },
+        {
+          "username": "AnonBlizzard1",
+          "clientID": "NizsbBAd",
+          "clanTag": null
+        },
+        {
+          "username": "GG vive_la_France",
+          "clientID": "eQGXqk5A",
+          "clanTag": null
+        },
+        {
+          "username": "FRZ",
+          "clientID": "eFME2fhj",
+          "clanTag": null
+        },
+        {
+          "username": "adrian94266",
+          "clientID": "M8Yr8WFX",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 869,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T16:40:30.931Z",
+      "url": "https://openfront.io/game/jLk61JNC"
     }
   ],
   "hvn": [
