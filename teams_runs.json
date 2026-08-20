@@ -18917,6 +18917,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T19:19:04.815Z",
       "url": "https://openfront.io/game/iVWxjvdJ"
+    },
+    {
+      "id": "wybWpH9E",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Dragon",
+          "clientID": "HuSoPdLm",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Fredonia",
+          "clientID": "iw6vNjWJ",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "World",
+      "duration_s": 628,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:25:00.204Z",
+      "url": "https://openfront.io/game/wybWpH9E"
     }
   ],
   "trios": [
@@ -66658,6 +66683,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T19:22:01.522Z",
       "url": "https://openfront.io/game/Hwuesmrr"
+    },
+    {
+      "id": "MXXyU4bF",
+      "mode": "quads",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "ihihi",
+          "clientID": "kzsyAMuW",
+          "clanTag": null
+        },
+        {
+          "username": "Flexter",
+          "clientID": "nwgFbiek",
+          "clanTag": null
+        },
+        {
+          "username": "EXTREMADURA",
+          "clientID": "C16Y4NrD",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "AnonRiver3",
+          "clientID": "rRXJ355U",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 746,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T19:23:03.088Z",
+      "url": "https://openfront.io/game/MXXyU4bF"
     }
   ],
   "team_custom": [
@@ -75485,6 +75545,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T19:09:53.200Z",
       "url": "https://openfront.io/game/QULVBb1b"
+    },
+    {
+      "id": "gc3ezb8t",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Shia313",
+          "clientID": "o9S3ub49",
+          "clanTag": null
+        },
+        {
+          "username": "Sage Mo",
+          "clientID": "NEuAPnRk",
+          "clanTag": "INIT"
+        },
+        {
+          "username": "WildBurger.kjHj",
+          "clientID": "38hZxS8n",
+          "clanTag": null
+        },
+        {
+          "username": "Factory maxxer",
+          "clientID": "hZfTTrGG",
+          "clanTag": null
+        },
+        {
+          "username": "The Legend Returns",
+          "clientID": "2s9MC4Cc",
+          "clanTag": null
+        },
+        {
+          "username": "bossenath",
+          "clientID": "wBDmroL9",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T19:22:36.558Z",
+      "url": "https://openfront.io/game/gc3ezb8t"
     }
   ],
   "hvn": [
