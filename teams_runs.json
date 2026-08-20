@@ -18742,6 +18742,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:49:47.309Z",
       "url": "https://openfront.io/game/gmmbv8Hp"
+    },
+    {
+      "id": "aHJVdPmm",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Pepik",
+          "clientID": "zugTwMTj",
+          "clanTag": null
+        },
+        {
+          "username": "LDK",
+          "clientID": "p72nLtW6",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:50:43.886Z",
+      "url": "https://openfront.io/game/aHJVdPmm"
+    },
+    {
+      "id": "PgD5JT6s",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "A country",
+          "clientID": "c2C6mP5x",
+          "clanTag": "NOT"
+        },
+        {
+          "username": "TULANE",
+          "clientID": "5hDLZ2sm",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 462,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:57:51.395Z",
+      "url": "https://openfront.io/game/PgD5JT6s"
     }
   ],
   "trios": [
@@ -66083,6 +66133,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T18:20:17.915Z",
       "url": "https://openfront.io/game/9yJob8wL"
+    },
+    {
+      "id": "MFuVFeKS",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "TradingEmpire",
+          "clientID": "hr1gNxjm",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Ducky",
+          "clientID": "8KFLab8U",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anon109",
+          "clientID": "NoyZhngM",
+          "clanTag": null
+        },
+        {
+          "username": "A Dry Sandwich",
+          "clientID": "qWLEvU88",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 474,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T18:57:09.334Z",
+      "url": "https://openfront.io/game/MFuVFeKS"
     }
   ],
   "team_custom": [
@@ -81462,6 +81547,156 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T18:35:20.848Z",
       "url": "https://openfront.io/game/RJwShLzr"
+    },
+    {
+      "id": "Ns8BHVMQ",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "VNO",
+          "clientID": "mJcR1ydC",
+          "clanTag": "GO"
+        },
+        {
+          "username": "swalbrick",
+          "clientID": "u53THXZ1",
+          "clanTag": "USA"
+        },
+        {
+          "username": "TRADING",
+          "clientID": "yJiG38Gp",
+          "clanTag": "ASL"
+        },
+        {
+          "username": "Sega",
+          "clientID": "dJUiRVjS",
+          "clanTag": "PIPI"
+        },
+        {
+          "username": "Milo",
+          "clientID": "vfmFyaQ9",
+          "clanTag": "JR"
+        },
+        {
+          "username": "DETERMINED",
+          "clientID": "A1S2i8MS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Uh oh",
+          "clientID": "FXgtFupi",
+          "clanTag": null
+        },
+        {
+          "username": "0w0",
+          "clientID": "D6WCX72q",
+          "clanTag": null
+        },
+        {
+          "username": "stalin57",
+          "clientID": "XbkFYSMp",
+          "clanTag": null
+        },
+        {
+          "username": "msi",
+          "clientID": "7hJrQu4x",
+          "clanTag": null
+        },
+        {
+          "username": "Letha Trade",
+          "clientID": "7wbZJwQV",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "Anon143",
+          "clientID": "Gg8jT9XU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRuby8",
+          "clientID": "1cdthWk2",
+          "clanTag": null
+        },
+        {
+          "username": "Zitrah",
+          "clientID": "MZRPWFzD",
+          "clanTag": null
+        },
+        {
+          "username": "Landia",
+          "clientID": "U2PLMMPL",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "SovietCapitalist",
+          "clientID": "DJV7NVFW",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "1 Line Rails pls",
+          "clientID": "Vw3bcdXf",
+          "clanTag": "BAP"
+        },
+        {
+          "username": "Visca",
+          "clientID": "WK7PdXWe",
+          "clanTag": "AP"
+        },
+        {
+          "username": "switzerland",
+          "clientID": "kWtPtzc2",
+          "clanTag": null
+        },
+        {
+          "username": "Arsvandil",
+          "clientID": "aFCb8ipP",
+          "clanTag": null
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "ZyRgN8MG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVolcano4",
+          "clientID": "vFitzXvm",
+          "clanTag": null
+        },
+        {
+          "username": "Just A Merchant",
+          "clientID": "o8yxxJ9v",
+          "clanTag": null
+        },
+        {
+          "username": "Nation of Anon",
+          "clientID": "hHZasTVg",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTurquoise3",
+          "clientID": "xz5XvQUE",
+          "clanTag": null
+        },
+        {
+          "username": "Anon592",
+          "clientID": "naizGPH7",
+          "clanTag": null
+        },
+        {
+          "username": "Cordas",
+          "clientID": "GzCNn94a",
+          "clanTag": "KONNI"
+        }
+      ],
+      "map": "France",
+      "duration_s": 788,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T18:51:51.957Z",
+      "url": "https://openfront.io/game/Ns8BHVMQ"
     }
   ]
 }
