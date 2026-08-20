@@ -20,12 +20,9 @@ import {
 } from "./auth.js";
 import { fetchOpenFront } from "./openfront-client.js?v=24";
 import {
-  getSkin, getUnlockableSkins, DEFAULT_SKIN_ID, RARITY_META, normalizeCode,
 } from "./skins.js?v=1";
 import {
-  fetchOwnedSkins, redeemCode, activateSkin, applySkinToElement,
   invalidateActiveSkinCache,
-} from "./reward-codes.js?v=1";
 import {
   computePlaytimeStats, extractCareerWins, totalWins, pointsFor,
   formatDurationCompact, formatPct, formatFrenchDate,
@@ -70,7 +67,6 @@ let _allGamesCache = null; // toutes les games paginées (pour playtime + map st
 let _allGamesLoading = false;
 let _mapStatsSortBy = "count";
 let _mapStatsShowAll = false;
-let _rewardCardState = { publicId: null, ownedSkins: [], activeSkinId: null };
 
 // VIP skin: publicId → rewardType (matching par PUBLIC ID, pas par alias)
 let vipPlayersByPid = new Map();
@@ -296,7 +292,6 @@ function renderPublicProfile(username, publicId) {
       skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
     }
     nameEl.appendChild(skinSpan);
-    applySkinToElement(skinSpan, publicId, true);
   }
 
   const badgeEl = document.getElementById("profile-public-badge");
@@ -370,7 +365,6 @@ function renderHero(user, profile) {
       skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
     }
     nameEl.appendChild(skinSpan);
-    applySkinToElement(skinSpan, profile.publicId, true);
   }
 
   const badgeEl = document.getElementById("profile-public-badge");
@@ -1256,7 +1250,6 @@ function renderWeeklyChart() {
    ════════════════════════════════════════════════════════════════ */
 
 function renderRewardCodeCard(publicId) {
-  _rewardCardState.publicId = publicId;
   const container = document.getElementById("reward-code-section");
   if (!container) return;
 
@@ -1321,28 +1314,17 @@ async function refreshOwnedSkins(publicId) {
   if (!gallery) return;
 
   try {
-    const { ownedSkins, activeSkinId } = await fetchOwnedSkins(publicId);
-    _rewardCardState.ownedSkins = ownedSkins;
-    _rewardCardState.activeSkinId = activeSkinId;
-    if (countEl) countEl.textContent = ownedSkins.filter((s) => s.skinId !== DEFAULT_SKIN_ID).length;
-    renderSkinsGallery(ownedSkins, activeSkinId);
   } catch (e) {
     console.warn("[profile] refreshOwnedSkins failed:", e);
     gallery.innerHTML = `<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">Erreur de chargement</div>`;
   }
 }
 
-function renderSkinsGallery(ownedSkins, activeSkinId) {
   const gallery = document.getElementById("skins-gallery");
   if (!gallery) return;
 
-  const ownedIds = new Set(ownedSkins.map((s) => s.skinId));
-  const allSkins = [getSkin(DEFAULT_SKIN_ID), ...getUnlockableSkins()];
 
   gallery.innerHTML = allSkins.map((skin) => {
-    const isOwned = skin.id === DEFAULT_SKIN_ID || ownedIds.has(skin.id);
-    const isActive = (skin.id === DEFAULT_SKIN_ID && (!activeSkinId || activeSkinId === DEFAULT_SKIN_ID)) || activeSkinId === skin.id;
-    const ownedEntry = ownedSkins.find((s) => s.skinId === skin.id);
     const rarity = RARITY_META[skin.rarity];
 
     if (!isOwned) {
@@ -1381,14 +1363,12 @@ async function handleRedeem() {
   if (!input || !input.value.trim()) return;
 
   const code = input.value.trim();
-  const publicId = _rewardCardState.publicId;
   if (!publicId) return;
 
   btn.disabled = true;
   btn.innerHTML = `<div class="games-loading-spinner" style="width:14px;height:14px"></div> Validation…`;
 
   try {
-    const result = await redeemCode(code, publicId);
     if (result.alreadyOwned) {
       showToast(result.message, "info");
     } else {
@@ -1407,13 +1387,8 @@ async function handleRedeem() {
 }
 
 async function handleActivate(skinId) {
-  const publicId = _rewardCardState.publicId;
   if (!publicId) return;
   try {
-    const result = await activateSkin(publicId, skinId);
-    _rewardCardState.activeSkinId = result.activeSkinId;
-    showToast(skinId === DEFAULT_SKIN_ID ? "Skin standard activé" : `Skin "${getSkin(skinId).name}" activé`, "success");
-    renderSkinsGallery(_rewardCardState.ownedSkins, result.activeSkinId);
     // Refresh hero name
     if (currentProfile) renderHero(currentUser, currentProfile);
   } catch (e) {
@@ -1741,7 +1716,6 @@ function setupCockpitKeyboardShortcuts() {
 
 /** Copy the current profile URL to clipboard. */
 function cockpitShareProfile() {
-  const pid = _rewardCardState.publicId || (currentProfile && currentProfile.publicId) || viewingPublicId;
   const url = pid ? `${window.location.origin}${window.location.pathname}?pid=${encodeURIComponent(pid)}` : window.location.href;
   if (navigator.clipboard?.writeText) {
     navigator.clipboard.writeText(url).then(

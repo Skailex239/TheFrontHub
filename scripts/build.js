@@ -56,7 +56,6 @@ const targets = [
   { entry: "tournois-icons.js", out: "tournois-icons.min.js", bundled: false },
   // Tutorial (no imports, just standalone)
   { entry: "tutorial.js",    out: "tutorial.min.js",     bundled: false },
-  { entry: "skin-icons.js",     out: "skin-icons.min.js",    bundled: false },
 ];
 
 const watch = process.argv.includes("--watch");

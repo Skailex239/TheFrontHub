@@ -1,6 +1,5 @@
 import { MAP_NORMALIZATION } from "./shared/maps.js";
 import { icon } from "./icons.js";
-import { getSkinIcon } from "./skin-icons.js";
 
 function getMapDisplayName(mapName) {
   const key = "map." + mapName;
@@ -60,8 +59,8 @@ let playerClientIds = new Set(); // IDs OpenFront liés au compte connecté
 let playerAliases = new Set(); // Anciens pseudonymes trouvés via l'API OpenFront
 let playerGameIds = new Set(); // gameIds vérifiés via le public ID (match exact)
 let playerSessionMap = new Map(); // gameId → session (pour vérifier hasWon/mode)
-let vipPlayers = new Map(); // username → reward type (pour le style VIP sur le leaderboard speedruns)
-let vipPlayersByPid = new Map(); // publicId → reward type (matching par PUBLIC ID, plus robuste que l'alias)
+let vipPlayers = new Map(); // DISABLED
+
 let vipRewardsRaw = []; // snapshot brut des docs public-rewards (pour rebuild quand les bridges changent)
 let usernameToPid = new Map(); // bridge: username/accountUsername → publicId (depuis ranked.json + public-aliases)
 let uidToPid = new Map(); // bridge: uid → publicId (depuis public-aliases si publicId présent)
@@ -1459,34 +1458,11 @@ function renderLeaderboard(d){
     const age=now-new Date(r.timestamp).getTime();
     const isNew=age<3600000?'<span class="badge-new" data-i18n="run.new">NEW</span>':'';
     const isMeClass = r._isMe ? 'is-me' : '';
-    const rewardType = vipPlayers.get(r.player) || null;
-    const isVip = !!rewardType;
-    // Nouveaux skins utilisent la classe rgb-{type} au lieu de player-{type}
-    const isNewSkinType = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'].includes(rewardType);
-    const cosmeticClass = isVip ? ` is-${rewardType}` : '';
-    const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
-    // Pas de tag/badge rectangle — juste le dégradé sur le pseudo
-    
-    // GG Button Logic
-    const ggData = globalLikes[r.id];
-    const ggCount = ggData ? (ggData.count || 0) : 0;
-    const usersMap = ggData ? (ggData.users || {}) : {};
-    
-    // Vérifier si l'utilisateur connecté actuel a déjà liké cette run
-    const isLiked = currentUser && !!usersMap[currentUser.uid];
-    const activeClass = isLiked ? 'active' : '';
-    
-    const ggBtn = `<button class="gg-btn ${activeClass}" onclick="toggleGG('${r.id}', event)" id="gg-btn-${r.id}" title="GG!">
-      <svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-9c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-      <span id="gg-count-${r.id}">${ggCount > 0 ? ggCount : ''}</span>
-    </button>`;
-
     const overlayImg = getPlayerOverlay(r.player, "speedruns");
     const overlayClass = overlayImg ? ' has-overlay' : '';
     const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
     let displayName = r.player;
     let expandBtn = '';
-    const skinIconHtml = rewardType && getSkinIcon(rewardType) ? `<span class="skin-icon">${getSkinIcon(rewardType)}</span>` : '';
     if (currentMode === 'team_custom' && r.player && r.player.includes(' + ')) {
       const parts = r.player.split(' + ');
       if (parts.length > 5) {
@@ -1494,7 +1470,6 @@ function renderLeaderboard(d){
         expandBtn = `<button class="team-expand-btn" onclick="event.stopPropagation();this.parentElement.querySelector('.team-full').style.display='inline';this.style.display='none'" title="Voir tous les joueurs">+${parts.length - 5} de plus</button><span class="team-full" style="display:none">${r.player}</span>`;
       }
     }
-    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+skinIconHtml+displayName+diff+isNew+'</div>'+expandBtn+'<a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
   }).join("");
   if(d.runs.length>show)html+='<button class="see-more-btn" onclick="seeMore(\''+esc(d.map)+'\')">Voir plus ('+(d.runs.length-show)+' restants)</button>';
   document.getElementById("leaderboard").innerHTML=html;
@@ -1614,76 +1589,6 @@ function renderGlobal(){
     globalLeaderboard.slice(0,50).map((p,i)=>{
       const rc = i===0?'gold':i===1?'silver':i===2?'bronze':'';
       const isMeClass = p._isMe ? 'is-me' : '';
-      const rewardType = vipPlayers.get(p.player) || null;
-      const isVip = !!rewardType;
-      const isNewSkinType = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'].includes(rewardType);
-      const cosmeticClass = isVip ? ` is-${rewardType}` : '';
-      const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
-      const overlayImg = getPlayerOverlay(p.player, "dashboard");
-      const overlayClass = overlayImg ? ' has-overlay' : '';
-      const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
-      const _skinIconP = rewardType && getSkinIcon(rewardType) ? `<span class="skin-icon">${getSkinIcon(rewardType)}</span>` : '';
-      const playerInner = '<span class="global-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(p.player)+'\')">'+_skinIconP+p.player+'</span>';
-      return '<tr class="'+isMeClass+cosmeticClass+'"><td class="global-rank '+rc+'">'+(i+1)+'</td><td class="global-player-cell" onclick="showPlayer(\''+esc(p.player)+'\')">'+playerInner+'</td><td class="global-points">'+p.points+'</td><td class="global-wins">'+p.wins+'</td></tr>';
-    }).join("")+'</tbody></table>';
-}
-function renderHof(){
-  const c=document.getElementById("hof-list");
-  if(globalLeaderboard.length<1){c.innerHTML='<div class="empty-state"><p>Pas encore de joueurs</p></div>';return}
-  c.innerHTML=globalLeaderboard.slice(0,3).map((p,i)=>{
-    const rank=getRank(p.points);
-    return '<div class="hof-card hof-'+(i+1)+'"><div class="hof-name" onclick="showPlayer(\''+esc(p.player)+'\')">'+p.player+'</div><div class="hof-rank" style="color:'+rank.color+'">'+rank.name+'</div><div class="hof-pts">'+p.points+' pts</div><div class="hof-detail">'+p.golds+' 1er · '+p.silvers+' 2e · '+p.bronzes+' 3e</div></div>';
-  }).join("");
-}
-function renderCompare(){
-  const c=document.getElementById("compare-list");
-  if(comparePlayers.length<2){
-    c.innerHTML='<div class="empty-state"><h3>'+window.t("compare.empty_title")+'</h3><p>'+window.t("compare.empty_desc")+'</p></div>';
-    return;
-  }
-  const p1=playerStats[comparePlayers[0]],p2=playerStats[comparePlayers[1]];
-  if(!p1||!p2){
-    c.innerHTML='<div class="empty-state"><p>'+window.t("search.no_player")+'</p></div>';
-    return;
-  }
-  const r1=getRank(p1.points),r2=getRank(p2.points);
-  const rows=[
-    {label:window.t("compare.rank"),v1:r1.name,v2:r2.name},
-    {label:window.t("compare.points"),v1:p1.points,v2:p2.points},
-    {label:window.t("compare.gold"),v1:p1.golds,v2:p2.golds},
-    {label:window.t("compare.silver"),v1:p1.silvers,v2:p2.silvers},
-    {label:window.t("compare.bronze"),v1:p1.bronzes,v2:p2.bronzes},
-    {label:window.t("compare.wins"),v1:p1.wins,v2:p2.wins},
-    {label:window.t("compare.maps"),v1:p1.maps.size,v2:p2.maps.size},
-    {label:window.t("compare.avg_time"),v1:formatTime(Math.round(p1.totalTime/p1.wins)),v2:formatTime(Math.round(p2.totalTime/p2.wins))},
-    {label:window.t("compare.max_streak"),v1:p1.maxStreak,v2:p2.maxStreak}
-  ];
-  c.innerHTML='<table class="global-table"><thead><tr><th></th><th class="global-player" onclick="showPlayer(\''+esc(p1.player)+'\')">'+p1.player+'</th><th class="global-player" onclick="showPlayer(\''+esc(p2.player)+'\')">'+p2.player+'</th></tr></thead><tbody>'+
-    rows.map(r=>'<tr><td class="compare-label">'+r.label+'</td><td class="compare-val">'+r.v1+'</td><td class="compare-val">'+r.v2+'</td></tr>').join("")+
-    '</tbody></table>';
-}
-function addCompare(name){
-  if(comparePlayers.includes(name))comparePlayers=comparePlayers.filter(p=>p!==name);
-  else if(comparePlayers.length>=2)comparePlayers=[comparePlayers[1],name];
-  else comparePlayers.push(name);
-  renderCompare();updateCompareInputs();
-}
-function updateCompareInputs(){
-  const i1=document.getElementById('cmp1'),i2=document.getElementById('cmp2');
-  if(i1)i1.value=comparePlayers[0]||'';if(i2)i2.value=comparePlayers[1]||'';
-}
-function searchCompare(id){
-  const q=document.getElementById(id).value.toLowerCase().trim();
-  const c=document.getElementById(id+'-results');
-  if(!q){c.innerHTML='';return}
-  const m=globalLeaderboard.filter(p=>p.player.toLowerCase().includes(q)).slice(0,3);
-  c.innerHTML=m.map(p=>'<div class="cmp-result" onclick="addCompare(\''+esc(p.player)+'\');document.getElementById(\''+id+'-results\').innerHTML=\'\'">'+p.player+' ('+p.points+' pts)</div>').join("");
-}
-function renderCharts(){
-  renderPopularMaps();
-  renderDistChart();
-}
-
 function renderPopularMaps(){
   const sortedMaps=Object.entries(_mapTotalCounts).sort((a,b)=>b[1]-a[1]).slice(0,10);
   const maxCount=Math.max(...sortedMaps.map(x=>x[1]),1);
@@ -2200,10 +2105,9 @@ function renderRankedTable(players) {
 
     // Cosmetic/VIP styling — matching par PUBLIC ID (prioritaire), fallback username
     const rewardType = getRankedRewardType(p.public_id, p.username, p.accountUsername);
-    const isVip = !!rewardType;
-    const isNewSkinType = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'].includes(rewardType);
+    
     const cosmeticRowClass = isVip ? ` is-${rewardType}` : '';
-    const cosmeticNameClass = isVip ? (isNewSkinType ? ` rgb-${rewardType}` : ` player-${rewardType}`) : '';
+    const cosmeticNameClass = "";
 
     // Player overlay (plaque nominative)
     const overlayImg = getPlayerOverlay(p.username, "ranked");
@@ -2220,7 +2124,7 @@ function renderRankedTable(players) {
           <div style="display:flex;align-items:center;gap:6px">
             ${favBtn}
             <span class="${cosmeticNameClass} ranked-player-name${overlayClass}"${overlayStyle} style="color: var(--text); text-decoration: none; font-weight: 500; position: relative; display: inline-block; padding-right: ${overlayImg ? '120px' : '0'};">
-              ${rewardType && getSkinIcon(rewardType) ? `<span class="skin-icon">${getSkinIcon(rewardType)}</span>` : ''}${p.clanTag ? `<span style="color:var(--text3);font-size:0.9em;margin-right:4px;">[${esc(p.clanTag)}]</span>` : ''}${esc(p.username)}
+              ${p.clanTag ? `<span style="color:var(--text3);font-size:0.9em;margin-right:4px;">[${esc(p.clanTag)}]</span>` : ''}${esc(p.username)}
             </span>
           </div>
         </td>
@@ -2596,9 +2500,6 @@ async function showRankedPlayerModal(publicId, username) {
   if (nameEl) nameEl.textContent = username;
   // Apply cosmetic styling — matching par PUBLIC ID (prioritaire), fallback username
   const rewardType = getRankedRewardType(publicId, username, null);
-  const isNewSkinType = ['cyberpunk','sunset','aurore','pastel','gold','volcano','ocean','miami','toxic','chroma','prism'].includes(rewardType);
-  if (rewardType && isNewSkinType) {
-    nameEl.className = `rgb-${rewardType}`;
   } else if (rewardType) {
     nameEl.className = `player-${rewardType}`;
   } else {
