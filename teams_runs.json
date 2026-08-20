@@ -45476,6 +45476,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T22:43:40.160Z",
       "url": "https://openfront.io/game/6X8vFsmD"
+    },
+    {
+      "id": "LoB6zJ4r",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Little",
+          "clientID": "o5DvHYKN",
+          "clanTag": null
+        },
+        {
+          "username": "LordSpirit",
+          "clientID": "SYCTqEjV",
+          "clanTag": null
+        },
+        {
+          "username": "Shadow Forge",
+          "clientID": "F62mWn2t",
+          "clanTag": "IT"
+        }
+      ],
+      "map": "World",
+      "duration_s": 601,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T23:01:18.749Z",
+      "url": "https://openfront.io/game/LoB6zJ4r"
+    },
+    {
+      "id": "cJWnE1vt",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "TLON",
+          "clientID": "uwWEx1es",
+          "clanTag": null
+        },
+        {
+          "username": "Metalodead",
+          "clientID": "twLkUnXA",
+          "clanTag": null
+        },
+        {
+          "username": "taR",
+          "clientID": "8KPTYRA9",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 622,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T23:00:25.704Z",
+      "url": "https://openfront.io/game/cJWnE1vt"
     }
   ],
   "quads": [
