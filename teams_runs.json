@@ -67298,6 +67298,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T19:34:04.816Z",
       "url": "https://openfront.io/game/QuELXADq"
+    },
+    {
+      "id": "5eZkVbwS",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Blasphemous Fish",
+          "clientID": "ijB7s1fz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "JesusIsKing",
+          "clientID": "9KxyLLxq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "zapallodulce",
+          "clientID": "1e3NtKum",
+          "clanTag": null
+        },
+        {
+          "username": "loom",
+          "clientID": "puaA5Z8T",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 829,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T19:45:45.030Z",
+      "url": "https://openfront.io/game/5eZkVbwS"
     }
   ],
   "team_custom": [
@@ -76355,6 +76390,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T19:42:42.845Z",
       "url": "https://openfront.io/game/797T3Lnv"
+    },
+    {
+      "id": "mPJ2HqYw",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mucusor",
+          "clientID": "P64Kkypn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Dreamer",
+          "clientID": "urJQhkvW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonLion8",
+          "clientID": "7dpsN8Fw",
+          "clanTag": null
+        },
+        {
+          "username": "Uncle Ben",
+          "clientID": "cBSHS22y",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGarnet3",
+          "clientID": "K2rkajam",
+          "clanTag": null
+        },
+        {
+          "username": "NoAlliances",
+          "clientID": "UL2Qp7rT",
+          "clanTag": null
+        },
+        {
+          "username": "Lovetopwn",
+          "clientID": "bVD79MxD",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T19:49:38.764Z",
+      "url": "https://openfront.io/game/mPJ2HqYw"
     }
   ],
   "hvn": [
