@@ -18242,6 +18242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T17:36:45.591Z",
       "url": "https://openfront.io/game/op5kiKqn"
+    },
+    {
+      "id": "Z1oTxvqF",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonTurquoise5",
+          "clientID": "VCgV4ddK",
+          "clanTag": null
+        },
+        {
+          "username": "Hooray",
+          "clientID": "cWhHUyYK",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 572,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T17:52:56.141Z",
+      "url": "https://openfront.io/game/Z1oTxvqF"
     }
   ],
   "trios": [
@@ -41536,6 +41561,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T17:50:07.956Z",
       "url": "https://openfront.io/game/mQRL8KK1"
+    },
+    {
+      "id": "njRACoi7",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Spartanic",
+          "clientID": "FdurTyUA",
+          "clanTag": null
+        },
+        {
+          "username": "youngho",
+          "clientID": "f1ogBVZM",
+          "clanTag": null
+        },
+        {
+          "username": "YARRRR",
+          "clientID": "9wENk1pj",
+          "clanTag": "FRIEN"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 835,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T17:47:57.292Z",
+      "url": "https://openfront.io/game/njRACoi7"
     }
   ],
   "quads": [
