@@ -2678,3 +2678,61 @@ button:active:not(:disabled),
 .team-expand-btn{display:inline-flex;align-items:center;padding:2px 8px;margin-left:6px;background:var(--accent-subtle);color:var(--accent);border:1px solid var(--accent-border);border-radius:var(--radius-pill);font-size:11px;font-weight:600;font-family:var(--mono);cursor:pointer;transition:all var(--dur) var(--ease);-webkit-tap-highlight-color:transparent;vertical-align:middle}
 .team-expand-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 .team-expand-btn:active{transform:scale(.95)}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   🎨 SKIN ICONS — Pixel art à côté des pseudos
+   ═══════════════════════════════════════════════════════════════════════════ */
+.skin-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 3px rgba(255, 107, 0, 0.3));
+  animation: skin-icon-float 3s ease-in-out infinite;
+}
+.skin-icon svg {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+@keyframes skin-icon-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+/* Glow effect matching the skin type */
+.is-fire .skin-icon { filter: drop-shadow(0 0 4px rgba(255, 69, 0, 0.6)); }
+.is-ice .skin-icon { filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.6)); }
+.is-gold .skin-icon { filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6)); }
+.is-rainbow .skin-icon { filter: drop-shadow(0 0 4px rgba(255, 0, 224, 0.4)); animation: skin-icon-rainbow-glow 2s linear infinite; }
+.is-neon .skin-icon { filter: drop-shadow(0 0 4px rgba(0, 255, 0, 0.7)); }
+.is-purple .skin-icon { filter: drop-shadow(0 0 4px rgba(147, 51, 234, 0.6)); }
+.is-sunset .skin-icon { filter: drop-shadow(0 0 4px rgba(255, 140, 0, 0.5)); }
+.is-ocean .skin-icon { filter: drop-shadow(0 0 4px rgba(0, 153, 204, 0.5)); }
+.is-silver .skin-icon { filter: drop-shadow(0 0 4px rgba(192, 192, 192, 0.5)); }
+.is-bronze .skin-icon { filter: drop-shadow(0 0 4px rgba(205, 127, 50, 0.5)); }
+.is-diamond .skin-icon { filter: drop-shadow(0 0 4px rgba(185, 242, 255, 0.6)); }
+.is-inferno .skin-icon { filter: drop-shadow(0 0 5px rgba(226, 0, 0, 0.7)); }
+.is-emerald .skin-icon { filter: drop-shadow(0 0 4px rgba(0, 255, 127, 0.5)); }
+.is-galaxy .skin-icon { filter: drop-shadow(0 0 4px rgba(157, 92, 255, 0.5)); }
+
+@keyframes skin-icon-rainbow-glow {
+  0% { filter: drop-shadow(0 0 4px rgba(255,0,0,0.5)); }
+  16% { filter: drop-shadow(0 0 4px rgba(255,165,0,0.5)); }
+  33% { filter: drop-shadow(0 0 4px rgba(255,255,0,0.5)); }
+  50% { filter: drop-shadow(0 0 4px rgba(0,255,0,0.5)); }
+  66% { filter: drop-shadow(0 0 4px rgba(0,153,255,0.5)); }
+  83% { filter: drop-shadow(0 0 4px rgba(139,0,255,0.5)); }
+  100% { filter: drop-shadow(0 0 4px rgba(255,0,224,0.5)); }
+}
+
+/* Mobile: smaller icons */
+@media (max-width: 768px) {
+  .skin-icon svg { width: 14px; height: 14px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skin-icon { animation: none; }
+}
