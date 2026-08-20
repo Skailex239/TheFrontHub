@@ -64233,6 +64233,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T16:35:09.610Z",
       "url": "https://openfront.io/game/h1hsH4CF"
+    },
+    {
+      "id": "38HPwcEX",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Muhmor",
+          "clientID": "45AqqEpd",
+          "clanTag": "SIML"
+        },
+        {
+          "username": "nofun",
+          "clientID": "f7uCVJGE",
+          "clanTag": null
+        },
+        {
+          "username": "_JustSurvive_",
+          "clientID": "9iC6cFEe",
+          "clanTag": null
+        },
+        {
+          "username": "AnonChariot7",
+          "clientID": "zPAMfRvf",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1688,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T16:33:37.016Z",
+      "url": "https://openfront.io/game/38HPwcEX"
     }
   ],
   "team_custom": [
@@ -70865,6 +70900,141 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T16:43:12.591Z",
       "url": "https://openfront.io/game/EiAwxZGn"
+    },
+    {
+      "id": "mjVH4aib",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Imperial Army",
+          "clientID": "e1aE12Si",
+          "clanTag": null
+        },
+        {
+          "username": "fuygufye",
+          "clientID": "GxMXwmy6",
+          "clanTag": null
+        },
+        {
+          "username": "Notting Hill",
+          "clientID": "yNEmS1oZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonOmen1",
+          "clientID": "jqkmdCei",
+          "clanTag": null
+        },
+        {
+          "username": "bokomaru",
+          "clientID": "eYncaiwW",
+          "clanTag": null
+        },
+        {
+          "username": "Dardania",
+          "clientID": "qQKLctUd",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T16:48:04.439Z",
+      "url": "https://openfront.io/game/mjVH4aib"
+    },
+    {
+      "id": "byFkqfpp",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon999",
+          "clientID": "ddq4fLTi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Vienny ahh dih",
+          "clientID": "aRdd4x1U",
+          "clanTag": null
+        },
+        {
+          "username": "Ibetrading",
+          "clientID": "PgUrXory",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ravenhelm",
+          "clientID": "JWagM2zn",
+          "clanTag": null
+        },
+        {
+          "username": "Sheephead85",
+          "clientID": "DJFUriEU",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T16:50:20.095Z",
+      "url": "https://openfront.io/game/byFkqfpp"
+    },
+    {
+      "id": "E5w8hF4b",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon454",
+          "clientID": "JSgnfjdn",
+          "clanTag": null
+        },
+        {
+          "username": "I like sending troops",
+          "clientID": "hjkNy17u",
+          "clanTag": null
+        },
+        {
+          "username": "LUSITAN",
+          "clientID": "ic22wKpU",
+          "clanTag": null
+        },
+        {
+          "username": "AnoNIELS",
+          "clientID": "8V1X6JLW",
+          "clanTag": null
+        },
+        {
+          "username": "wilfredo",
+          "clientID": "Nie1mXv5",
+          "clanTag": "PN"
+        },
+        {
+          "username": "Gutter Creature",
+          "clientID": "HfUF4ukh",
+          "clanTag": null
+        },
+        {
+          "username": "AnonJungle6",
+          "clientID": "tuifF1yx",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 765,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T16:49:55.067Z",
+      "url": "https://openfront.io/game/E5w8hF4b"
     }
   ],
   "hvn": [
