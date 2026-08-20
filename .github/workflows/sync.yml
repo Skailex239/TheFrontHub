@@ -24,7 +24,7 @@ on:
 
 concurrency:
   group: auto-sync-v2
-  cancel-in-progress: false  # ⚡ NEVER cancel running syncs — let them finish
+  cancel-in-progress: true  # Annule les runs en attente (mais pas ceux déjà démarrés)
 
 jobs:
   sync-standard:
@@ -224,14 +224,14 @@ jobs:
           done
 
   retrigger:
-    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard, sync-player-games]
+    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard]
     runs-on: ubuntu-latest
     permissions:
       actions: write
     steps:
       - name: Retrigger self (continuous loop)
         run: |
-          echo "🔄 Re-déclenchement du workflow unifié (boucle continue)."
+          echo "🔄 Re-déclenchement du workflow (5 syncs rapides terminés, sync-player-games continue en parallèle)."
           gh workflow run sync.yml \
             --repo ${{ github.repository }} \
             --ref main
