@@ -19517,6 +19517,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T20:27:28.167Z",
       "url": "https://openfront.io/game/MrZp1Fcv"
+    },
+    {
+      "id": "z1Lr3zTk",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Turtle",
+          "clientID": "ae8CUZH3",
+          "clanTag": null
+        },
+        {
+          "username": "Rastafari",
+          "clientID": "n8xvu5DM",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 387,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:04:14.445Z",
+      "url": "https://openfront.io/game/z1Lr3zTk"
     }
   ],
   "trios": [
@@ -43891,6 +43916,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T20:37:52.328Z",
       "url": "https://openfront.io/game/M9Q5VhJ7"
+    },
+    {
+      "id": "Kdg4JPdm",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "mahdi6765",
+          "clientID": "1ryHMYKK",
+          "clanTag": null
+        },
+        {
+          "username": "test",
+          "clientID": "T2uTaTg3",
+          "clanTag": null
+        },
+        {
+          "username": "zeleph",
+          "clientID": "rzQxgVBZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 844,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:57:25.528Z",
+      "url": "https://openfront.io/game/Kdg4JPdm"
     }
   ],
   "quads": [
