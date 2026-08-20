@@ -64008,6 +64008,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T16:24:00.913Z",
       "url": "https://openfront.io/game/XuXJ9668"
+    },
+    {
+      "id": "kivDDaYi",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Clem",
+          "clientID": "uCAzmUt5",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "TitanesquePaf",
+          "clientID": "o993zvNW",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "US ARMY",
+          "clientID": "8TuHhqxX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHarbor2",
+          "clientID": "er815UfV",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 927,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T16:33:48.523Z",
+      "url": "https://openfront.io/game/kivDDaYi"
     }
   ],
   "team_custom": [
@@ -70505,6 +70540,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T16:37:05.742Z",
       "url": "https://openfront.io/game/FHS8JSkC"
+    },
+    {
+      "id": "VMQ9pyGc",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Volques Tectosages",
+          "clientID": "ZhxQGukF",
+          "clanTag": "413"
+        },
+        {
+          "username": "Sanchooz",
+          "clientID": "NAJ1Axai",
+          "clanTag": null
+        },
+        {
+          "username": "Volcano",
+          "clientID": "fadqqpz6",
+          "clanTag": null
+        },
+        {
+          "username": "Datteln",
+          "clientID": "7rAxVPds",
+          "clanTag": null
+        },
+        {
+          "username": "Newmaterial",
+          "clientID": "7hMgSkic",
+          "clanTag": null
+        },
+        {
+          "username": "SuperViper999",
+          "clientID": "524t3ZRU",
+          "clanTag": "OE"
+        },
+        {
+          "username": "LuMorgantu",
+          "clientID": "kELsn2Cx",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 2173,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T16:13:09.209Z",
+      "url": "https://openfront.io/game/VMQ9pyGc"
     }
   ],
   "hvn": [
