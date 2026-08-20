@@ -31756,6 +31756,121 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T13:45:43.296Z",
       "url": "https://openfront.io/game/AhMGu4QY"
+    },
+    {
+      "id": "TVHMgATz",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "norfo799",
+          "clientID": "1sdr1p22",
+          "clanTag": null
+        },
+        {
+          "username": "G13RAVEN",
+          "clientID": "6yjPkgXy",
+          "clanTag": null
+        },
+        {
+          "username": "frogo_",
+          "clientID": "sBK4nthJ",
+          "clanTag": null
+        },
+        {
+          "username": "Spare666M6",
+          "clientID": "E7gPeznJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBridge1",
+          "clientID": "7MHRsnkp",
+          "clanTag": null
+        },
+        {
+          "username": "Raven3",
+          "clientID": "Q6RfNQZ7",
+          "clanTag": null
+        },
+        {
+          "username": "Comune di Treviso",
+          "clientID": "XeFUySxp",
+          "clanTag": "TV"
+        },
+        {
+          "username": "AnonAnon",
+          "clientID": "vdJ8oX9U",
+          "clanTag": null
+        },
+        {
+          "username": "Pimpdaddyweston",
+          "clientID": "yS6hMVsX",
+          "clanTag": null
+        },
+        {
+          "username": "Anon075",
+          "clientID": "NGfnmQwX",
+          "clanTag": null
+        },
+        {
+          "username": "begging u",
+          "clientID": "x6eZxmvJ",
+          "clanTag": null
+        },
+        {
+          "username": "tako",
+          "clientID": "PTuWGTpU",
+          "clanTag": null
+        },
+        {
+          "username": "SaveEuropeAct",
+          "clientID": "YAjS4XKN",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Romper",
+          "clientID": "oC3t63nq",
+          "clanTag": null
+        },
+        {
+          "username": "Anon970",
+          "clientID": "LmvzSM51",
+          "clanTag": null
+        },
+        {
+          "username": "Legio Custodes",
+          "clientID": "k86cT5CF",
+          "clanTag": "40K"
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "KCZquR8a",
+          "clanTag": null
+        },
+        {
+          "username": "Valicor",
+          "clientID": "kWH1Rh57",
+          "clanTag": "FAIL"
+        },
+        {
+          "username": "Cat",
+          "clientID": "841bn57d",
+          "clanTag": null
+        },
+        {
+          "username": "ABOBA",
+          "clientID": "BgSkVHB5",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 475,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T13:45:22.269Z",
+      "url": "https://openfront.io/game/TVHMgATz"
     }
   ],
   "trios": [
@@ -67182,6 +67297,81 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T13:39:54.912Z",
       "url": "https://openfront.io/game/NDo6xKmT"
+    },
+    {
+      "id": "ptiSka4v",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Alph",
+          "clientID": "vN29TFqP",
+          "clanTag": "POKKA"
+        },
+        {
+          "username": "Leia",
+          "clientID": "Rmskajyq",
+          "clanTag": null
+        },
+        {
+          "username": "Lunatic",
+          "clientID": "UFTq9smG",
+          "clanTag": null
+        },
+        {
+          "username": "Pixie",
+          "clientID": "Z3ysoKUu",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 641,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T13:42:54.593Z",
+      "url": "https://openfront.io/game/ptiSka4v"
+    },
+    {
+      "id": "JRyAdtj9",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Z3z3zzzzz",
+          "clientID": "NEhWgDgv",
+          "clanTag": null
+        },
+        {
+          "username": "K __ K",
+          "clientID": "DznRNAGR",
+          "clanTag": "SOS"
+        },
+        {
+          "username": "Steve",
+          "clientID": "VLpxeXeY",
+          "clanTag": null
+        },
+        {
+          "username": "amesas",
+          "clientID": "RMWhwzom",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "QggSW8Gr",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 958,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T13:38:01.288Z",
+      "url": "https://openfront.io/game/JRyAdtj9"
     }
   ],
   "quads": [
