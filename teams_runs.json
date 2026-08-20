@@ -66348,6 +66348,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T19:05:59.434Z",
       "url": "https://openfront.io/game/Qu5J6cZE"
+    },
+    {
+      "id": "TJvZ78wE",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Elephant",
+          "clientID": "Dh1KmNWT",
+          "clanTag": null
+        },
+        {
+          "username": "The Bank",
+          "clientID": "eTSqyWJG",
+          "clanTag": null
+        },
+        {
+          "username": "vig",
+          "clientID": "2YtJAnjk",
+          "clanTag": "HI"
+        },
+        {
+          "username": "That Dude",
+          "clientID": "AGxKxhQv",
+          "clanTag": "TAGAZ"
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 981,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 116,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T19:03:09.245Z",
+      "url": "https://openfront.io/game/TJvZ78wE"
     }
   ],
   "team_custom": [
