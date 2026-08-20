@@ -17062,6 +17062,29 @@
       "numPlayers": 57,
       "timestamp": "2026-08-19T23:27:11.543Z",
       "url": "https://openfront.io/game/AqKZjRt7"
+    },
+    {
+      "id": "nWihvzai",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "dizy",
+          "clientID": "AnEJRTez",
+          "clanTag": "KAKAH"
+        },
+        {
+          "username": "Vavou",
+          "clientID": "fJBK1ger",
+          "clanTag": "KAKAH"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1280,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "timestamp": "2026-08-19T23:54:30.404Z",
+      "url": "https://openfront.io/game/nWihvzai"
     }
   ],
   "trios": [
@@ -47011,6 +47034,34 @@
       "numPlayers": 52,
       "timestamp": "2026-08-19T23:10:22.462Z",
       "url": "https://openfront.io/game/F6qT7uTS"
+    },
+    {
+      "id": "FdpSdKxw",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Old Valyria",
+          "clientID": "2gqiZPt7",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSapphire1",
+          "clientID": "6r7aHrG4",
+          "clanTag": null
+        },
+        {
+          "username": "Anon659",
+          "clientID": "MJWEQTHK",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 1106,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "timestamp": "2026-08-19T23:57:36.602Z",
+      "url": "https://openfront.io/game/FdpSdKxw"
     }
   ],
   "quads": [
@@ -82653,6 +82704,39 @@
       "numPlayers": 60,
       "timestamp": "2026-08-19T23:44:41.216Z",
       "url": "https://openfront.io/game/6ePqF5uw"
+    },
+    {
+      "id": "ZwPzmNoe",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "JunMkt",
+          "clientID": "mHCBr64A",
+          "clanTag": null
+        },
+        {
+          "username": "Freaky Thursday",
+          "clientID": "oJubrRNJ",
+          "clanTag": null
+        },
+        {
+          "username": "Booyah",
+          "clientID": "KmBsPXih",
+          "clanTag": "GLHF"
+        },
+        {
+          "username": "Luke",
+          "clientID": "AXXuJRoC",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1984,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "timestamp": "2026-08-19T23:38:48.325Z",
+      "url": "https://openfront.io/game/ZwPzmNoe"
     }
   ]
 }
