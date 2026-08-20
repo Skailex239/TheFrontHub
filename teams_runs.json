@@ -69493,6 +69493,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T21:34:32.611Z",
       "url": "https://openfront.io/game/EYsf3mty"
+    },
+    {
+      "id": "YQ8dC5Qu",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Saira",
+          "clientID": "oV2b6Dk5",
+          "clanTag": null
+        },
+        {
+          "username": "7777",
+          "clientID": "fzDboqfh",
+          "clanTag": null
+        },
+        {
+          "username": "Zero",
+          "clientID": "JQmn2WU5",
+          "clanTag": null
+        },
+        {
+          "username": "fang yuan",
+          "clientID": "6YKKL8Ap",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 872,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T21:43:05.293Z",
+      "url": "https://openfront.io/game/YQ8dC5Qu"
+    },
+    {
+      "id": "M7pBm5o9",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonOrangutan",
+          "clientID": "a7vSyMfB",
+          "clanTag": null
+        },
+        {
+          "username": "France",
+          "clientID": "5Cz21SJ4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSpider8",
+          "clientID": "twodYfvn",
+          "clanTag": "GAY"
+        },
+        {
+          "username": "ICanHelp",
+          "clientID": "4wjSrACB",
+          "clanTag": "NICE"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1435,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 99,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T21:33:18.015Z",
+      "url": "https://openfront.io/game/M7pBm5o9"
     }
   ],
   "team_custom": [
@@ -79800,6 +79870,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T21:18:59.960Z",
       "url": "https://openfront.io/game/5ESuYmsk"
+    },
+    {
+      "id": "XEqkG1YJ",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Jezza",
+          "clientID": "5XWc7LyM",
+          "clanTag": null
+        },
+        {
+          "username": "Yellow Turban Rebellion",
+          "clientID": "ijSDy4mY",
+          "clanTag": "MYTH"
+        },
+        {
+          "username": "Mouse",
+          "clientID": "ttcsNhBP",
+          "clanTag": null
+        },
+        {
+          "username": "AnonObelisk8",
+          "clientID": "PQ7WKrXg",
+          "clanTag": null
+        },
+        {
+          "username": "epervier96",
+          "clientID": "ZsYRfkng",
+          "clanTag": null
+        },
+        {
+          "username": "Troops to frontlines",
+          "clientID": "wBpQBu2h",
+          "clanTag": "SEND"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 662,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T21:45:55.986Z",
+      "url": "https://openfront.io/game/XEqkG1YJ"
     }
   ],
   "hvn": [
