@@ -33341,6 +33341,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:51:03.074Z",
       "url": "https://openfront.io/game/7nKn61k9"
+    },
+    {
+      "id": "gwmmZvpX",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Raven",
+          "clientID": "aSYNaRiu",
+          "clanTag": "GG"
+        },
+        {
+          "username": "TURKEY",
+          "clientID": "4Jmk5uyr",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 508,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T15:02:08.284Z",
+      "url": "https://openfront.io/game/gwmmZvpX"
+    },
+    {
+      "id": "An9n7uBo",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Alexander",
+          "clientID": "VgX2KzMJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOnyx5",
+          "clientID": "nruiLEe1",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 523,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T15:01:46.778Z",
+      "url": "https://openfront.io/game/An9n7uBo"
     }
   ],
   "trios": [
@@ -118826,6 +118876,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T14:54:26.830Z",
       "url": "https://openfront.io/game/pqSNsJsw"
+    },
+    {
+      "id": "bzLMygFE",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Alekso",
+          "clientID": "MLkCWg3h",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Zolar C",
+          "clientID": "PwX6C6Ev",
+          "clanTag": "UN"
+        },
+        {
+          "username": "OUN UPA Enjoyer",
+          "clientID": "hrijYNTV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonBronze6",
+          "clientID": "r5gSe32P",
+          "clanTag": null
+        },
+        {
+          "username": "mitoman",
+          "clientID": "SyZjQCNQ",
+          "clanTag": null
+        },
+        {
+          "username": "The Rising",
+          "clientID": "aXtn22kW",
+          "clanTag": null
+        },
+        {
+          "username": "Up Nort",
+          "clientID": "tWvY7kNp",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 637,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T14:59:44.649Z",
+      "url": "https://openfront.io/game/bzLMygFE"
     }
   ],
   "hvn": [
