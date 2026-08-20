@@ -18717,6 +18717,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:37:24.498Z",
       "url": "https://openfront.io/game/UrJtQgFi"
+    },
+    {
+      "id": "gmmbv8Hp",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonCamel7",
+          "clientID": "5YYhQtRj",
+          "clanTag": null
+        },
+        {
+          "username": "PARS",
+          "clientID": "2qy7JceJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 447,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:49:47.309Z",
+      "url": "https://openfront.io/game/gmmbv8Hp"
     }
   ],
   "trios": [
@@ -42221,6 +42246,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T18:40:49.245Z",
       "url": "https://openfront.io/game/X6bqAaJF"
+    },
+    {
+      "id": "7AhAcGrM",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "trade",
+          "clientID": "i2Wwo6ef",
+          "clanTag": "FROJO"
+        },
+        {
+          "username": "Carrland",
+          "clientID": "VpCid786",
+          "clanTag": null
+        },
+        {
+          "username": "if u nuke i cry",
+          "clientID": "4sab3766",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2012,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T18:25:19.721Z",
+      "url": "https://openfront.io/game/7AhAcGrM"
     }
   ],
   "quads": [
