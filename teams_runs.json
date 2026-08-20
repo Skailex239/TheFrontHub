@@ -17044,6 +17044,24 @@
       "numPlayers": 38,
       "timestamp": "2026-08-19T22:17:21.374Z",
       "url": "https://openfront.io/game/s7eyhUuY"
+    },
+    {
+      "id": "AqKZjRt7",
+      "team": "Team 25",
+      "players": [
+        {
+          "username": "Jester",
+          "clientID": "6HNnETP4",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 2050,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-19T23:27:11.543Z",
+      "url": "https://openfront.io/game/AqKZjRt7"
     }
   ],
   "trios": [
@@ -82569,6 +82587,72 @@
       "numPlayers": 44,
       "timestamp": "2026-08-19T23:08:20.822Z",
       "url": "https://openfront.io/game/n6T1YxTQ"
+    },
+    {
+      "id": "FuyT2Ya4",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "278K",
+          "clientID": "pqYiNzMz",
+          "clanTag": null
+        },
+        {
+          "username": "Feed me troops",
+          "clientID": "D2C725WY",
+          "clanTag": null
+        },
+        {
+          "username": "Government",
+          "clientID": "tJMaHHhZ",
+          "clanTag": "STATE"
+        },
+        {
+          "username": "Wubs",
+          "clientID": "f6WtGDgH",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 770,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "timestamp": "2026-08-19T23:42:22.062Z",
+      "url": "https://openfront.io/game/FuyT2Ya4"
+    },
+    {
+      "id": "6ePqF5uw",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "M7mD",
+          "clientID": "XsPVEkof",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "cheesecake",
+          "clientID": "A76NHKuK",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "missouri",
+          "clientID": "cDokcTxj",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "leonardoguillen",
+          "clientID": "aExVABYp",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 884,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "timestamp": "2026-08-19T23:44:41.216Z",
+      "url": "https://openfront.io/game/6ePqF5uw"
     }
   ]
 }
