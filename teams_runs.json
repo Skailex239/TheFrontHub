@@ -18567,6 +18567,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:28:03.893Z",
       "url": "https://openfront.io/game/hwbzeTZw"
+    },
+    {
+      "id": "ztfFjqCw",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "poulet",
+          "clientID": "scuiKsZU",
+          "clanTag": null
+        },
+        {
+          "username": "Suce un Poney",
+          "clientID": "pWSFQfkY",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 726,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:33:47.235Z",
+      "url": "https://openfront.io/game/ztfFjqCw"
     }
   ],
   "trios": [
@@ -74025,6 +74050,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T18:21:50.514Z",
       "url": "https://openfront.io/game/sJEPtCfv"
+    },
+    {
+      "id": "UezWwMv1",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "UrDadLeftYou",
+          "clientID": "i99u7Bpw",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Icey",
+          "clientID": "1nxLioxw",
+          "clanTag": "JR"
+        },
+        {
+          "username": "john_pn",
+          "clientID": "BYWtbKpr",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Ammo",
+          "clientID": "z4pAxEhM",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Jesus is the way",
+          "clientID": "7YxqFVB9",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Kirch1nator",
+          "clientID": "Jocp8taF",
+          "clanTag": "JR"
+        },
+        {
+          "username": "nencoo",
+          "clientID": "RejXzY9a",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 615,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T18:34:23.779Z",
+      "url": "https://openfront.io/game/UezWwMv1"
     }
   ],
   "hvn": [
