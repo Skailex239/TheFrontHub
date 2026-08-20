@@ -18792,6 +18792,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:57:51.395Z",
       "url": "https://openfront.io/game/PgD5JT6s"
+    },
+    {
+      "id": "BX27aNz9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "shush",
+          "clientID": "A5hPzF91",
+          "clanTag": "KSTR"
+        },
+        {
+          "username": "arta",
+          "clientID": "Bbj9F2AC",
+          "clanTag": "AIUR"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 450,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:06:19.947Z",
+      "url": "https://openfront.io/game/BX27aNz9"
     }
   ],
   "trios": [
@@ -42326,6 +42351,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T18:25:19.721Z",
       "url": "https://openfront.io/game/7AhAcGrM"
+    },
+    {
+      "id": "jsoL1bCv",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "noobland",
+          "clientID": "Jq3hvamZ",
+          "clanTag": null
+        },
+        {
+          "username": "ARMAN",
+          "clientID": "vwJV5C7Y",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRuby2",
+          "clientID": "JfiLx2nS",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 492,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:04:26.341Z",
+      "url": "https://openfront.io/game/jsoL1bCv"
     }
   ],
   "quads": [
@@ -74750,6 +74805,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T18:48:31.237Z",
       "url": "https://openfront.io/game/6b36VtaM"
+    },
+    {
+      "id": "QgBai7yZ",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Panzani AUSSI FAIT DES KEBA",
+          "clientID": "VwW1DFmZ",
+          "clanTag": "PNGHJ"
+        },
+        {
+          "username": "hormona lisa",
+          "clientID": "B7CdC3f4",
+          "clanTag": null
+        },
+        {
+          "username": "Urbs Aeterna",
+          "clientID": "1Vb9VWNP",
+          "clanTag": null
+        },
+        {
+          "username": "Poison",
+          "clientID": "tMhndZ3S",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCitadel",
+          "clientID": "2uKKLFcA",
+          "clanTag": null
+        },
+        {
+          "username": "Kitchen",
+          "clientID": "umncdNCv",
+          "clanTag": null
+        },
+        {
+          "username": "Titlandia",
+          "clientID": "1RNdhHjm",
+          "clanTag": "BOYS"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 902,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 95,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T18:59:13.500Z",
+      "url": "https://openfront.io/game/QgBai7yZ"
     }
   ],
   "hvn": [
