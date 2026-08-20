@@ -43691,6 +43691,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:44:14.708Z",
       "url": "https://openfront.io/game/Vzvc5AKx"
+    },
+    {
+      "id": "fJWzWBgM",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "loyal_kek",
+          "clientID": "72uDyj3o",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "hq1GuKa8",
+          "clanTag": null
+        },
+        {
+          "username": "Borysrzep",
+          "clientID": "FCe3KyJN",
+          "clanTag": "PL"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 512,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:52:17.703Z",
+      "url": "https://openfront.io/game/fJWzWBgM"
+    },
+    {
+      "id": "roLwwh2z",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Truus",
+          "clientID": "1X8on7su",
+          "clanTag": null
+        },
+        {
+          "username": "AcidDrinker",
+          "clientID": "CbYttCBD",
+          "clanTag": null
+        },
+        {
+          "username": "bald bandit",
+          "clientID": "7NtoP5VV",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 871,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 122,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:46:55.865Z",
+      "url": "https://openfront.io/game/roLwwh2z"
     }
   ],
   "quads": [
@@ -78110,6 +78170,96 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T20:42:42.621Z",
       "url": "https://openfront.io/game/g9iz8LpF"
+    },
+    {
+      "id": "GqN7s3Dc",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonGeyser2",
+          "clientID": "t7jiYkj8",
+          "clanTag": null
+        },
+        {
+          "username": "Slovakistan",
+          "clientID": "nWJFXPm2",
+          "clanTag": null
+        },
+        {
+          "username": "Anon891",
+          "clientID": "PgmYNGwu",
+          "clanTag": null
+        },
+        {
+          "username": "BigYOSH",
+          "clientID": "s9m4gbWm",
+          "clanTag": "YOSH"
+        },
+        {
+          "username": "RichBlub",
+          "clientID": "afvDRttC",
+          "clanTag": "YOSH"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1108,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T20:41:55.575Z",
+      "url": "https://openfront.io/game/GqN7s3Dc"
+    },
+    {
+      "id": "3CvyoDP5",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "SpyZ",
+          "clientID": "wWSBvBSd",
+          "clanTag": null
+        },
+        {
+          "username": "ICE_KING",
+          "clientID": "Jg4henzX",
+          "clanTag": "AT"
+        },
+        {
+          "username": "sushi",
+          "clientID": "C8c81fqY",
+          "clanTag": null
+        },
+        {
+          "username": "Balls",
+          "clientID": "rxypZsH4",
+          "clanTag": "EU"
+        },
+        {
+          "username": "WhyPeopleStupid",
+          "clientID": "i2YbRoNR",
+          "clanTag": "BEER"
+        },
+        {
+          "username": "AnonViolet",
+          "clientID": "7hptGuNJ",
+          "clanTag": null
+        },
+        {
+          "username": "PreciousBubbles",
+          "clientID": "EByvWEnv",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 925,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T20:45:25.277Z",
+      "url": "https://openfront.io/game/3CvyoDP5"
     }
   ],
   "hvn": [
