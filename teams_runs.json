@@ -18542,6 +18542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:26:42.307Z",
       "url": "https://openfront.io/game/6yZFLv98"
+    },
+    {
+      "id": "hwbzeTZw",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "pas de bras",
+          "clientID": "THWevtzY",
+          "clanTag": null
+        },
+        {
+          "username": "Esq",
+          "clientID": "dLuKCueD",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 774,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:28:03.893Z",
+      "url": "https://openfront.io/game/hwbzeTZw"
     }
   ],
   "trios": [
@@ -73860,6 +73885,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T18:15:58.152Z",
       "url": "https://openfront.io/game/5WZufemd"
+    },
+    {
+      "id": "5C7JUwDo",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonLotus3",
+          "clientID": "jWY2pf52",
+          "clanTag": null
+        },
+        {
+          "username": "MaxiIt",
+          "clientID": "43pUxRup",
+          "clanTag": null
+        },
+        {
+          "username": "Willi",
+          "clientID": "QVK7b9Fy",
+          "clanTag": "MOMMY"
+        },
+        {
+          "username": "Anon436",
+          "clientID": "QdmSQCjJ",
+          "clanTag": null
+        },
+        {
+          "username": "Byte",
+          "clientID": "njQVwUVB",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToucan6",
+          "clientID": "Mr2xQBHH",
+          "clanTag": null
+        },
+        {
+          "username": "Emperor Hirohito",
+          "clientID": "PyUua6PX",
+          "clanTag": "JP"
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1204,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 115,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T18:21:28.999Z",
+      "url": "https://openfront.io/game/5C7JUwDo"
+    },
+    {
+      "id": "pgizzsng",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Anon724",
+          "clientID": "q8ZUnspf",
+          "clanTag": null
+        },
+        {
+          "username": "Anon595",
+          "clientID": "FV6npiqS",
+          "clanTag": null
+        },
+        {
+          "username": "lo2oz",
+          "clientID": "2MSujrZ3",
+          "clanTag": "LB"
+        },
+        {
+          "username": "ali farhat",
+          "clientID": "ufWUDD14",
+          "clanTag": "LB"
+        },
+        {
+          "username": "Spare Me I Have A Cat",
+          "clientID": "yUrBGnC3",
+          "clanTag": null
+        },
+        {
+          "username": "GOKTURK",
+          "clientID": "dRyzyygV",
+          "clanTag": null
+        },
+        {
+          "username": "infinity Empire",
+          "clientID": "FjMGwhYW",
+          "clanTag": "IE"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 723,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T18:29:42.004Z",
+      "url": "https://openfront.io/game/pgizzsng"
     }
   ],
   "hvn": [
