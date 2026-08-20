@@ -19792,6 +19792,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T20:53:05.252Z",
       "url": "https://openfront.io/game/zzBDFPMs"
+    },
+    {
+      "id": "A78NJJW6",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "zycsss",
+          "clientID": "m7aZoPZz",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "FUFU",
+          "clientID": "gYzvs9D3",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 492,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T21:29:49.167Z",
+      "url": "https://openfront.io/game/A78NJJW6"
     }
   ],
   "trios": [
@@ -44376,6 +44401,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T21:24:50.865Z",
       "url": "https://openfront.io/game/Re1KhaRE"
+    },
+    {
+      "id": "jCQUuQoh",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "gaa",
+          "clientID": "JQf3NtwT",
+          "clanTag": null
+        },
+        {
+          "username": "FRIENDLY",
+          "clientID": "gn5UiFjd",
+          "clanTag": null
+        },
+        {
+          "username": "Canadia",
+          "clientID": "HXzC6WPi",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 910,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T21:21:07.115Z",
+      "url": "https://openfront.io/game/jCQUuQoh"
     }
   ],
   "quads": [
@@ -69093,6 +69148,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T21:10:17.847Z",
       "url": "https://openfront.io/game/gFwpLbsd"
+    },
+    {
+      "id": "n4krTyYX",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonOcean",
+          "clientID": "usZyW9Vu",
+          "clanTag": null
+        },
+        {
+          "username": "kingtaz",
+          "clientID": "QuAmJNx2",
+          "clanTag": "BUB"
+        },
+        {
+          "username": "Mills",
+          "clientID": "TopdNLPj",
+          "clanTag": "BUB"
+        },
+        {
+          "username": "Anon1854",
+          "clientID": "4s4ru4Yy",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 601,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T21:27:33.522Z",
+      "url": "https://openfront.io/game/n4krTyYX"
     }
   ],
   "team_custom": [
