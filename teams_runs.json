@@ -20592,6 +20592,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T23:17:35.792Z",
       "url": "https://openfront.io/game/C6jsXvDx"
+    },
+    {
+      "id": "KNy4ARhU",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Nodark1",
+          "clientID": "ss3R77tg",
+          "clanTag": null
+        },
+        {
+          "username": "BZH FTW",
+          "clientID": "rohsngGB",
+          "clanTag": "BZH"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 1061,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T23:26:25.827Z",
+      "url": "https://openfront.io/game/KNy4ARhU"
     }
   ],
   "trios": [
@@ -45686,6 +45711,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T23:00:25.704Z",
       "url": "https://openfront.io/game/cJWnE1vt"
+    },
+    {
+      "id": "GNzCdrCu",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Hungary",
+          "clientID": "L4r5Aye7",
+          "clanTag": "HUN"
+        },
+        {
+          "username": "Nope",
+          "clientID": "CPFHWDfq",
+          "clanTag": null
+        },
+        {
+          "username": "tilinazo",
+          "clientID": "Zcw5nGZq",
+          "clanTag": "FLAG"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 761,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T23:31:48.642Z",
+      "url": "https://openfront.io/game/GNzCdrCu"
     }
   ],
   "quads": [
