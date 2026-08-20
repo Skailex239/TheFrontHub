@@ -1,27 +1,27 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-20T10:54:48.621Z",
-  "lastSyncedAt": "2026-08-20T10:54:46.059Z",
-  "totalGames": 3090,
+  "computedAt": "2026-08-20T12:35:14.250Z",
+  "lastSyncedAt": "2026-08-20T12:35:12.214Z",
+  "totalGames": 3095,
   "careerWins": {
     "ffaCasual": 496,
     "ffaRanked": 262,
-    "teamCasual": 331,
+    "teamCasual": 332,
     "teamRanked": 118
   },
-  "totalWins": 1207,
-  "points": 6995,
-  "level": 69,
-  "levelProgress": 95,
-  "levelNextAt": 7000,
+  "totalWins": 1208,
+  "points": 7000,
+  "level": 70,
+  "levelProgress": 0,
+  "levelNextAt": 7100,
   "nextMilestones": {
     "wins": {
-      "current": 1207,
+      "current": 1208,
       "target": 2000
     },
     "playtime": {
-      "current": 746,
+      "current": 747,
       "target": 1000
     },
     "maps": {
@@ -39,25 +39,25 @@
     4
   ],
   "formatted": {
-    "points": "6 995",
-    "totalWins": "1 207",
-    "totalGames": "3 090",
-    "totalPlaytime": "31j 2h",
-    "totalPlaytimeCompact": "31j 2h",
+    "points": "7 000",
+    "totalWins": "1 208",
+    "totalGames": "3 095",
+    "totalPlaytime": "31j 3h",
+    "totalPlaytimeCompact": "31j 3h",
     "avgGameDuration": "14m 29s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "746h"
+    "totalPlaytimeHours": "747h"
   },
   "playtime": {
-    "totalSec": 2687211,
-    "avgGameSec": 869.647572815534,
+    "totalSec": 2691006,
+    "avgGameSec": 869.4688206785137,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1593,
-        "playtimeSec": 1604312,
+        "games": 1594,
+        "playtimeSec": 1606552,
         "wins": 496
       },
       "ffaRanked": {
@@ -66,9 +66,9 @@
         "wins": 262
       },
       "teamCasual": {
-        "games": 909,
-        "playtimeSec": 926381,
-        "wins": 331
+        "games": 913,
+        "playtimeSec": 927936,
+        "wins": 332
       },
       "teamRanked": {
         "games": 189,
@@ -78,25 +78,25 @@
     }
   },
   "results": {
-    "victory": 1207,
-    "defeat": 1251,
-    "incomplete": 632
+    "victory": 1208,
+    "defeat": 1253,
+    "incomplete": 634
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 496,
-      "wins": 319,
-      "losses": 177,
-      "playtimeSec": 262336,
-      "avgDuration": 528.9032258064516,
-      "winRate": 0.6431451612903226,
-      "lastPlayed": 1787161693175,
+      "count": 498,
+      "wins": 320,
+      "losses": 178,
+      "playtimeSec": 263399,
+      "avgDuration": 528.9136546184739,
+      "winRate": 0.642570281124498,
+      "lastPlayed": 1787225877137,
       "formatted": {
-        "playtime": "3j 0h",
+        "playtime": "3j 1h",
         "avgDuration": "8m",
         "winRate": "64%",
-        "lastPlayed": "19/08/26"
+        "lastPlayed": "20/08/26"
       }
     },
     {
@@ -1108,6 +1108,22 @@
       }
     },
     {
+      "map": "China",
+      "count": 2,
+      "wins": 0,
+      "losses": 2,
+      "playtimeSec": 2913,
+      "avgDuration": 1456.5,
+      "winRate": 0,
+      "lastPlayed": 1787226669990,
+      "formatted": {
+        "playtime": "48m",
+        "avgDuration": "24m",
+        "winRate": "0%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "France",
       "count": 2,
       "wins": 1,
@@ -1316,22 +1332,6 @@
       }
     },
     {
-      "map": "China",
-      "count": 1,
-      "wins": 0,
-      "losses": 1,
-      "playtimeSec": 673,
-      "avgDuration": 673,
-      "winRate": 0,
-      "lastPlayed": 1786016616256,
-      "formatted": {
-        "playtime": "11m",
-        "avgDuration": "11m",
-        "winRate": "0%",
-        "lastPlayed": "06/08/26"
-      }
-    },
-    {
       "map": "Levant",
       "count": 1,
       "wins": 1,
@@ -1427,7 +1427,7 @@
       208,
       194,
       74,
-      161,
+      166,
       226,
       222,
       218,
@@ -1443,7 +1443,7 @@
       272,
       456,
       443,
-      388,
+      393,
       360,
       523,
       648
@@ -1905,7 +1905,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 4,
+    "current": 0,
     "best": 42
   },
   "achievements": {
@@ -1981,6 +1981,39 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "DUA5Em4q",
+      "start": "2026-08-20T11:51:09.990Z",
+      "map": "China",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 2240,
+      "totalPlayers": 87,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "vt3GRBMy",
+      "start": "2026-08-20T11:37:57.137Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 430,
+      "totalPlayers": 5,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
+    {
+      "gameId": "y1bomHMi",
+      "start": "2026-08-20T11:13:09.085Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 633,
+      "totalPlayers": 5,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
     {
       "gameId": "j6PD3Wr3",
       "start": "2026-08-20T09:09:58.780Z",
@@ -2165,39 +2198,6 @@
       "result": "defeat",
       "durationSeconds": 528,
       "totalPlayers": 13,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "heCMi5iQ",
-      "start": "2026-08-14T18:15:01.515Z",
-      "map": "Russia",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 1429,
-      "totalPlayers": 44,
-      "rankedType": "unranked",
-      "category": "teamCasual"
-    },
-    {
-      "gameId": "KrBrZvuR",
-      "start": "2026-08-14T16:17:41.506Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 276,
-      "totalPlayers": 2,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "mKQynxwB",
-      "start": "2026-08-14T15:57:06.215Z",
-      "map": "Juan De Fuca Strait",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 1048,
-      "totalPlayers": 67,
       "rankedType": "unranked",
       "category": "teamCasual"
     }
