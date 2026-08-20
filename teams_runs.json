@@ -43056,6 +43056,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:48:00.666Z",
       "url": "https://openfront.io/game/mJEX5vzD"
+    },
+    {
+      "id": "hBCX2gJE",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bob",
+          "clientID": "TCbfu7HC",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Salmon",
+          "clientID": "yXF1zYLh",
+          "clanTag": null
+        },
+        {
+          "username": "Army of GOD",
+          "clientID": "S96UkPJY",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 506,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:55:28.632Z",
+      "url": "https://openfront.io/game/hBCX2gJE"
+    },
+    {
+      "id": "KgscnkeM",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "BZH",
+          "clientID": "TE3VAxP2",
+          "clanTag": null
+        },
+        {
+          "username": "Donald gump",
+          "clientID": "TmGSPaG6",
+          "clanTag": "FRANC"
+        },
+        {
+          "username": "Dr3vN",
+          "clientID": "ZUuKGafu",
+          "clanTag": "IR"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 576,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:54:08.545Z",
+      "url": "https://openfront.io/game/KgscnkeM"
     }
   ],
   "quads": [
