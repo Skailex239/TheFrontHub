@@ -2497,12 +2497,8 @@ async function showRankedPlayerModal(publicId, username) {
   const statsEl = document.getElementById('ranked-modal-player-stats');
   const gamesEl = document.getElementById('ranked-modal-games');
   
-  if (nameEl) nameEl.textContent = username;
-  // Apply cosmetic styling — matching par PUBLIC ID (prioritaire), fallback username
-  const rewardType = getRankedRewardType(publicId, username, null);
-  } else if (rewardType) {
-    nameEl.className = `player-${rewardType}`;
-  } else {
+  if (nameEl) {
+    nameEl.textContent = username;
     nameEl.className = '';
   }
   if (statsEl) statsEl.textContent = 'Chargement...';
