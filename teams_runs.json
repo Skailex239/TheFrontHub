@@ -19167,6 +19167,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T19:24:52.193Z",
       "url": "https://openfront.io/game/8gdBDSQH"
+    },
+    {
+      "id": "oahBm3e6",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TheSkitsOne",
+          "clientID": "iUa15QSt",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Blossom",
+          "clientID": "vgu5WC9a",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 542,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:51:36.374Z",
+      "url": "https://openfront.io/game/oahBm3e6"
     }
   ],
   "trios": [
@@ -43001,6 +43026,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:43:50.920Z",
       "url": "https://openfront.io/game/U4Pm43gJ"
+    },
+    {
+      "id": "mJEX5vzD",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Chitam",
+          "clientID": "uwzFMfoG",
+          "clanTag": null
+        },
+        {
+          "username": "LOVE",
+          "clientID": "LynmMzDX",
+          "clanTag": "ROS"
+        },
+        {
+          "username": "Cobra",
+          "clientID": "dR8xrdp9",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 806,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:48:00.666Z",
+      "url": "https://openfront.io/game/mJEX5vzD"
     }
   ],
   "quads": [
