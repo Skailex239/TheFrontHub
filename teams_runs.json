@@ -33116,6 +33116,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:20:27.589Z",
       "url": "https://openfront.io/game/LEyRiHU9"
+    },
+    {
+      "id": "rofn9RoR",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "EverySingleTime",
+          "clientID": "UCUx6q63",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AnonSlate5",
+          "clientID": "SBaCgWc5",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 1096,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:28:30.109Z",
+      "url": "https://openfront.io/game/rofn9RoR"
+    },
+    {
+      "id": "tNHhapXu",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RiLee",
+          "clientID": "wpkw4za2",
+          "clanTag": "UN"
+        },
+        {
+          "username": "House Baratheon",
+          "clientID": "HRVk9s4y",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 2188,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:10:16.961Z",
+      "url": "https://openfront.io/game/tNHhapXu"
     }
   ],
   "trios": [
@@ -117851,6 +117901,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T14:37:08.676Z",
       "url": "https://openfront.io/game/WGW27e3y"
+    },
+    {
+      "id": "mnK3nqGy",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RiLee",
+          "clientID": "ECxLi2LN",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Lucid",
+          "clientID": "DNhK6Emf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSquirrel5",
+          "clientID": "RGCMCgV7",
+          "clanTag": null
+        },
+        {
+          "username": "Bass Pro Shops",
+          "clientID": "9WJL6qfU",
+          "clanTag": null
+        },
+        {
+          "username": "Kobra",
+          "clientID": "7k1wZX3g",
+          "clanTag": null
+        },
+        {
+          "username": "Roboute Guilliman",
+          "clientID": "cGBEieSb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "tungtung",
+          "clientID": "hUWiaL81",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 994,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T14:30:46.754Z",
+      "url": "https://openfront.io/game/mnK3nqGy"
+    },
+    {
+      "id": "1FX8TLyb",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "oncenot",
+          "clientID": "9p1fTj8E",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Dragon",
+          "clientID": "RYRw69ac",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Bubbles",
+          "clientID": "krRLgdNF",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Nomad",
+          "clientID": "iuzAVQLU",
+          "clanTag": "NU"
+        },
+        {
+          "username": "ali",
+          "clientID": "C7GdSdrd",
+          "clanTag": "NU"
+        },
+        {
+          "username": "TheMannFoot",
+          "clientID": "mSkaCgGF",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Anon753",
+          "clientID": "W4Mq1Vt8",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T14:34:41.506Z",
+      "url": "https://openfront.io/game/1FX8TLyb"
     }
   ],
   "hvn": [
