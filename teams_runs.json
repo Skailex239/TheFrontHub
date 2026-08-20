@@ -65723,6 +65723,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T18:22:25.049Z",
       "url": "https://openfront.io/game/w4fEyk51"
+    },
+    {
+      "id": "4mj7jqfd",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "lEgion",
+          "clientID": "1XT4ek8k",
+          "clanTag": null
+        },
+        {
+          "username": "Le roi de la tour",
+          "clientID": "9RCTaR3b",
+          "clanTag": "BMN"
+        },
+        {
+          "username": "appi itto",
+          "clientID": "zoSojQUi",
+          "clanTag": null
+        },
+        {
+          "username": "cruel",
+          "clientID": "snpJs9RM",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 729,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T18:26:05.267Z",
+      "url": "https://openfront.io/game/4mj7jqfd"
+    },
+    {
+      "id": "9yJob8wL",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Leave me alone",
+          "clientID": "89ncycUu",
+          "clanTag": "XYZ"
+        },
+        {
+          "username": "AnonBronze8",
+          "clientID": "HWRYgvN7",
+          "clanTag": null
+        },
+        {
+          "username": "ARAGON",
+          "clientID": "W2YhNZnN",
+          "clanTag": null
+        },
+        {
+          "username": "ENGLAND",
+          "clientID": "CJBTYZB6",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1149,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T18:20:17.915Z",
+      "url": "https://openfront.io/game/9yJob8wL"
     }
   ],
   "team_custom": [
@@ -80512,6 +80582,86 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T18:17:27.247Z",
       "url": "https://openfront.io/game/VYnTt5Au"
+    },
+    {
+      "id": "Fq814GPF",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Roubignole",
+          "clientID": "DwkBckqt",
+          "clanTag": null
+        },
+        {
+          "username": "ShviliShvili",
+          "clientID": "P8HYGP9J",
+          "clanTag": null
+        },
+        {
+          "username": "Aquacephale",
+          "clientID": "LFTDM4m7",
+          "clanTag": null
+        },
+        {
+          "username": "Anon057",
+          "clientID": "oe2oSkp9",
+          "clanTag": "ROW"
+        },
+        {
+          "username": "Peaceful",
+          "clientID": "JEhJWjyo",
+          "clanTag": null
+        },
+        {
+          "username": "Amirhosein",
+          "clientID": "LjADN6Gy",
+          "clanTag": null
+        },
+        {
+          "username": "Itachibss",
+          "clientID": "bRTJQQXZ",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Ragnar",
+          "clientID": "DwV79sgM",
+          "clanTag": "200"
+        },
+        {
+          "username": "Schussl",
+          "clientID": "oCz9wfX9",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Linoz",
+          "clientID": "haPn3UHS",
+          "clanTag": null
+        },
+        {
+          "username": "PeronCiOdjechal",
+          "clientID": "6PebRdPq",
+          "clanTag": "PL"
+        },
+        {
+          "username": "AnonRiver2",
+          "clientID": "ULpZupEm",
+          "clanTag": null
+        },
+        {
+          "username": "Rohan",
+          "clientID": "9vWimboB",
+          "clanTag": "LOTR"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 1680,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 41,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T18:11:22.837Z",
+      "url": "https://openfront.io/game/Fq814GPF"
     }
   ]
 }
