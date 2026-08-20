@@ -33316,6 +33316,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:54:53.358Z",
       "url": "https://openfront.io/game/UfFUVfZi"
+    },
+    {
+      "id": "7nKn61k9",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Rinzler",
+          "clientID": "RHtQmYWh",
+          "clanTag": "BE"
+        },
+        {
+          "username": "Cool man",
+          "clientID": "Jo1aQv54",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1026,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:51:03.074Z",
+      "url": "https://openfront.io/game/7nKn61k9"
     }
   ],
   "trios": [
@@ -69532,6 +69557,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T14:48:09.368Z",
       "url": "https://openfront.io/game/1Z54HY7n"
+    },
+    {
+      "id": "1MQScsRK",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "PKMZ",
+          "clientID": "ga6m61Xz",
+          "clanTag": "TPP"
+        },
+        {
+          "username": "Pacifist",
+          "clientID": "6hZ1a8SS",
+          "clanTag": null
+        },
+        {
+          "username": "stropi",
+          "clientID": "cVLX2RZJ",
+          "clanTag": "420"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1295,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T14:45:52.740Z",
+      "url": "https://openfront.io/game/1MQScsRK"
     }
   ],
   "quads": [
