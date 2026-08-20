@@ -18867,6 +18867,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T19:12:58.392Z",
       "url": "https://openfront.io/game/aSJai9Gk"
+    },
+    {
+      "id": "rUeNjswF",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "greatascender",
+          "clientID": "7JNR5PpC",
+          "clanTag": null
+        },
+        {
+          "username": "Empire",
+          "clientID": "scQXPZiQ",
+          "clanTag": "JAPAN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:54:20.628Z",
+      "url": "https://openfront.io/game/rUeNjswF"
     }
   ],
   "trios": [
@@ -42491,6 +42516,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:16:18.633Z",
       "url": "https://openfront.io/game/s6YzpoEQ"
+    },
+    {
+      "id": "v2PkSTV5",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "world peace",
+          "clientID": "VppBXf5Z",
+          "clanTag": "PAL"
+        },
+        {
+          "username": "Anon212",
+          "clientID": "HJTVZpHb",
+          "clanTag": null
+        },
+        {
+          "username": "Zay",
+          "clientID": "vMNEau7d",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 705,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:13:48.946Z",
+      "url": "https://openfront.io/game/v2PkSTV5"
     }
   ],
   "quads": [
