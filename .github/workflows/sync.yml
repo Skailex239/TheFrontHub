@@ -24,7 +24,7 @@ on:
 
 concurrency:
   group: auto-sync-v2
-  cancel-in-progress: true
+  cancel-in-progress: false  # ⚡ NEVER cancel running syncs — let them finish
 
 jobs:
   sync-standard:
