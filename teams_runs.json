@@ -17592,6 +17592,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:24:53.464Z",
       "url": "https://openfront.io/game/Lup2Yt9F"
+    },
+    {
+      "id": "k7jzuocU",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PiloN",
+          "clientID": "6tcQBzpG",
+          "clanTag": null
+        },
+        {
+          "username": "Khell",
+          "clientID": "NCTJeDaN",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:21:15.744Z",
+      "url": "https://openfront.io/game/k7jzuocU"
     }
   ],
   "trios": [
@@ -75457,6 +75482,106 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T16:22:47.833Z",
       "url": "https://openfront.io/game/gi3kPTi7"
+    },
+    {
+      "id": "2S9pcCNq",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "vMv2N6nk",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench5",
+          "clientID": "9A4unYqa",
+          "clanTag": null
+        },
+        {
+          "username": "DRuNk PIrAte",
+          "clientID": "n7TXdtBs",
+          "clanTag": null
+        },
+        {
+          "username": "OhGG",
+          "clientID": "AS7iD9zz",
+          "clanTag": null
+        },
+        {
+          "username": "Llamacommander",
+          "clientID": "KAZxHGuy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCitadel7",
+          "clientID": "39M4NrW1",
+          "clanTag": null
+        },
+        {
+          "username": "The One",
+          "clientID": "rwqFaPHm",
+          "clanTag": null
+        },
+        {
+          "username": "Sparrow",
+          "clientID": "BpEtMg3j",
+          "clanTag": null
+        },
+        {
+          "username": "YERHAMUKALLAH",
+          "clientID": "KZMKC3dL",
+          "clanTag": "53"
+        },
+        {
+          "username": "Quentin77",
+          "clientID": "ETpHEiuV",
+          "clanTag": null
+        },
+        {
+          "username": "Saint223",
+          "clientID": "pUvmUikM",
+          "clanTag": "SAI"
+        },
+        {
+          "username": "AnonZebra8",
+          "clientID": "bMGMndw2",
+          "clanTag": null
+        },
+        {
+          "username": "Kiritimati Sevdalisi",
+          "clientID": "M9RNBwNQ",
+          "clanTag": "53"
+        },
+        {
+          "username": "Ment",
+          "clientID": "i5Rqj1Wc",
+          "clanTag": null
+        },
+        {
+          "username": "Rex",
+          "clientID": "GFZTebE1",
+          "clanTag": null
+        },
+        {
+          "username": "FactSphere.net",
+          "clientID": "kgqCQkei",
+          "clanTag": "CHEM"
+        },
+        {
+          "username": "Azakiro",
+          "clientID": "o2TCStjc",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 564,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T16:25:37.005Z",
+      "url": "https://openfront.io/game/2S9pcCNq"
     }
   ]
 }
