@@ -47371,6 +47371,34 @@
       "numPlayers": 48,
       "timestamp": "2026-08-20T02:46:49.877Z",
       "url": "https://openfront.io/game/yEMXhSWZ"
+    },
+    {
+      "id": "4rFdWqfi",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Boshuria",
+          "clientID": "eskqb44u",
+          "clanTag": null
+        },
+        {
+          "username": "Balooga Wale",
+          "clientID": "HvRqjx6G",
+          "clanTag": "TN"
+        },
+        {
+          "username": "Thorongil",
+          "clientID": "VoimvoR7",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1092,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "timestamp": "2026-08-20T03:46:51.716Z",
+      "url": "https://openfront.io/game/4rFdWqfi"
     }
   ],
   "quads": [
@@ -83369,6 +83397,34 @@
       "numPlayers": 55,
       "timestamp": "2026-08-20T03:39:00.219Z",
       "url": "https://openfront.io/game/HhCk1gvv"
+    },
+    {
+      "id": "48AxGvnK",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "jah",
+          "clientID": "3tGZBmi1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Delphi Scholar",
+          "clientID": "B4yjfiDi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Toasty",
+          "clientID": "ZqWvdet3",
+          "clanTag": null
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1005,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "timestamp": "2026-08-20T03:59:49.040Z",
+      "url": "https://openfront.io/game/48AxGvnK"
     }
   ]
 }
