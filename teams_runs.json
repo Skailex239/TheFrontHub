@@ -18842,6 +18842,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T18:47:28.161Z",
       "url": "https://openfront.io/game/zgmh4HJP"
+    },
+    {
+      "id": "aSJai9Gk",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Hutzi",
+          "clientID": "756vMJHK",
+          "clanTag": "DEATH"
+        },
+        {
+          "username": "Folk Valley",
+          "clientID": "Nhaz4yNX",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 652,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T19:12:58.392Z",
+      "url": "https://openfront.io/game/aSJai9Gk"
     }
   ],
   "trios": [
@@ -75165,6 +75190,151 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T19:03:36.282Z",
       "url": "https://openfront.io/game/P5hUqDd2"
+    },
+    {
+      "id": "Yc1XwFcn",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Spare Me I Have A Cat",
+          "clientID": "cqDC1RQp",
+          "clanTag": null
+        },
+        {
+          "username": "fuckfascism",
+          "clientID": "b9vKup5N",
+          "clanTag": null
+        },
+        {
+          "username": "Beans",
+          "clientID": "M7wgPLHK",
+          "clanTag": null
+        },
+        {
+          "username": "Anon80909",
+          "clientID": "w4aNYUXU",
+          "clanTag": null
+        },
+        {
+          "username": "Qariban",
+          "clientID": "AKfgFPDP",
+          "clanTag": null
+        },
+        {
+          "username": "Odysseus",
+          "clientID": "1Y7oQDBn",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 730,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T19:11:41.312Z",
+      "url": "https://openfront.io/game/Yc1XwFcn"
+    },
+    {
+      "id": "wXJGcemN",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonOracle8",
+          "clientID": "YSLhEaF3",
+          "clanTag": null
+        },
+        {
+          "username": "agione",
+          "clientID": "VQXjqx2L",
+          "clanTag": null
+        },
+        {
+          "username": "Dream",
+          "clientID": "FxJB3i5r",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Loderic",
+          "clientID": "AneCTPfJ",
+          "clanTag": null
+        },
+        {
+          "username": "Wolf2244",
+          "clientID": "qaiLCTLL",
+          "clanTag": null
+        },
+        {
+          "username": "XYZ",
+          "clientID": "rBJVJCDy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThistle8",
+          "clientID": "WivZSSkd",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 553,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T19:14:46.520Z",
+      "url": "https://openfront.io/game/wXJGcemN"
+    },
+    {
+      "id": "QULVBb1b",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "mr.balls",
+          "clientID": "3CNYtrpT",
+          "clanTag": null
+        },
+        {
+          "username": "Vinz",
+          "clientID": "VAoLedHz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ekna",
+          "clientID": "Cxg1Jytj",
+          "clanTag": null
+        },
+        {
+          "username": "Haliom",
+          "clientID": "ziWtKm92",
+          "clanTag": null
+        },
+        {
+          "username": "FRANCE",
+          "clientID": "7zcgPCGC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Richman555",
+          "clientID": "VTuD4oTf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSlate2",
+          "clientID": "nTocWLUD",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 847,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T19:09:53.200Z",
+      "url": "https://openfront.io/game/QULVBb1b"
     }
   ],
   "hvn": [
