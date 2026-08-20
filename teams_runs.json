@@ -65428,6 +65428,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T17:56:18.359Z",
       "url": "https://openfront.io/game/UyvAxBCT"
+    },
+    {
+      "id": "Ne5A8RBJ",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonComet5",
+          "clientID": "EK771LZx",
+          "clanTag": null
+        },
+        {
+          "username": "TrainChooChoo",
+          "clientID": "d3iEVPrU",
+          "clanTag": "MMM"
+        },
+        {
+          "username": "INA STRIKER",
+          "clientID": "wPkDddYL",
+          "clanTag": "IND"
+        },
+        {
+          "username": "AnonMoss7",
+          "clientID": "dvfrkqK6",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T18:09:38.721Z",
+      "url": "https://openfront.io/game/Ne5A8RBJ"
     }
   ],
   "team_custom": [
@@ -73265,6 +73300,101 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T17:58:15.495Z",
       "url": "https://openfront.io/game/QNX1Nohz"
+    },
+    {
+      "id": "gfteNKD9",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Anon795",
+          "clientID": "aqkeEB1M",
+          "clanTag": null
+        },
+        {
+          "username": "ANURAG",
+          "clientID": "Y2NsXxvL",
+          "clanTag": "APG"
+        },
+        {
+          "username": "Moss3",
+          "clientID": "N9Tdk4fa",
+          "clanTag": null
+        },
+        {
+          "username": "Niraj",
+          "clientID": "LxkawX8K",
+          "clanTag": "APG"
+        },
+        {
+          "username": "MKCharlie",
+          "clientID": "AKjAhbLB",
+          "clanTag": "ARG"
+        },
+        {
+          "username": "Morty",
+          "clientID": "pw7qtPcL",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 751,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T18:10:21.266Z",
+      "url": "https://openfront.io/game/gfteNKD9"
+    },
+    {
+      "id": "gvvWFbr6",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "jklaze",
+          "clientID": "Cr4qXwyK",
+          "clanTag": "SVAP"
+        },
+        {
+          "username": "Error",
+          "clientID": "SQH2gdbb",
+          "clanTag": null
+        },
+        {
+          "username": "Dyrhan",
+          "clientID": "ictHbKuM",
+          "clanTag": "SVAP"
+        },
+        {
+          "username": "AnonMonsoon4",
+          "clientID": "xmiCpsC3",
+          "clanTag": null
+        },
+        {
+          "username": "Taywin",
+          "clientID": "gcv4yggf",
+          "clanTag": null
+        },
+        {
+          "username": "MattSiegward",
+          "clientID": "7LFiQb1c",
+          "clanTag": "SVAP"
+        },
+        {
+          "username": "lukas",
+          "clientID": "fmQHS5sy",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 887,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T18:09:09.190Z",
+      "url": "https://openfront.io/game/gvvWFbr6"
     }
   ],
   "hvn": [
