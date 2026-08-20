@@ -67637,6 +67637,116 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T13:38:01.288Z",
       "url": "https://openfront.io/game/JRyAdtj9"
+    },
+    {
+      "id": "Nrs9zxPT",
+      "mode": "trios",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "ABN",
+          "clientID": "dXSVsAWc",
+          "clanTag": null
+        },
+        {
+          "username": "Peach",
+          "clientID": "zqEthQTo",
+          "clanTag": "MANGO"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1007,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T13:43:55.174Z",
+      "url": "https://openfront.io/game/Nrs9zxPT"
+    },
+    {
+      "id": "9BUjwa3m",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "if u nuke i cry",
+          "clientID": "1JB5axWj",
+          "clanTag": null
+        },
+        {
+          "username": "Lorent",
+          "clientID": "QcVa2TQE",
+          "clanTag": null
+        },
+        {
+          "username": "apo zeeken",
+          "clientID": "PFTox7pL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Bokkaikoku",
+          "clientID": "vUQ8wGMn",
+          "clanTag": null
+        },
+        {
+          "username": "Pouet",
+          "clientID": "6mNvgLAe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MG42",
+          "clientID": "zsmwZGJi",
+          "clanTag": null
+        },
+        {
+          "username": "mxmus",
+          "clientID": "WLSs7Dop",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonMoss5",
+          "clientID": "s9MDDXMN",
+          "clanTag": null
+        },
+        {
+          "username": "Zeon 0079",
+          "clientID": "Zxz9m4PV",
+          "clanTag": "ZB"
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "FLHok8LX",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "LVxutnY4",
+          "clanTag": null
+        },
+        {
+          "username": "Valicor",
+          "clientID": "eDiF3ZNV",
+          "clanTag": "FAIL"
+        },
+        {
+          "username": "poo",
+          "clientID": "rGzpsVGg",
+          "clanTag": null
+        },
+        {
+          "username": "tako",
+          "clientID": "YNy1JgVZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T13:54:07.837Z",
+      "url": "https://openfront.io/game/9BUjwa3m"
     }
   ],
   "quads": [
@@ -108474,6 +108584,56 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T13:44:53.743Z",
       "url": "https://openfront.io/game/xThVi9cg"
+    },
+    {
+      "id": "thceJU75",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "SlopeHunter",
+          "clientID": "uT67G1ZX",
+          "clanTag": "DN"
+        },
+        {
+          "username": "BABULICIOUS",
+          "clientID": "nR75d1vS",
+          "clanTag": null
+        },
+        {
+          "username": "LUPIN",
+          "clientID": "MqpWHRao",
+          "clanTag": null
+        },
+        {
+          "username": "Kumgod",
+          "clientID": "xXGh1at7",
+          "clanTag": "KR"
+        },
+        {
+          "username": "Kaladin",
+          "clientID": "1LXCX4WK",
+          "clanTag": "ROMAN"
+        },
+        {
+          "username": "AnonLighthouse3",
+          "clientID": "HYG2hryE",
+          "clanTag": null
+        },
+        {
+          "username": "AnitaDee",
+          "clientID": "k8FBkkqF",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 3006,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T13:11:56.034Z",
+      "url": "https://openfront.io/game/thceJU75"
     }
   ],
   "team_custom": [
