@@ -33091,6 +33091,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:21:00.127Z",
       "url": "https://openfront.io/game/r62ERmdh"
+    },
+    {
+      "id": "LEyRiHU9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kantazemo",
+          "clientID": "KmZvNn5n",
+          "clanTag": null
+        },
+        {
+          "username": "DETERMINED",
+          "clientID": "v77Cgxi7",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1454,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T14:20:27.589Z",
+      "url": "https://openfront.io/game/LEyRiHU9"
     }
   ],
   "trios": [
@@ -69097,6 +69122,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T14:28:02.586Z",
       "url": "https://openfront.io/game/Uuh479YV"
+    },
+    {
+      "id": "eQJjcYu6",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "USMANOAH",
+          "clientID": "yezutynf",
+          "clanTag": "BOF"
+        },
+        {
+          "username": "MAMAMAMAMAMMAMAMAMAMAMAMAMA",
+          "clientID": "isFRQhVU",
+          "clanTag": null
+        },
+        {
+          "username": "Troop sender",
+          "clientID": "h4S3ooNq",
+          "clanTag": "ZZZ"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 731,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 99,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T14:34:12.474Z",
+      "url": "https://openfront.io/game/eQJjcYu6"
+    },
+    {
+      "id": "DxA8b8M2",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PreciousBubbles",
+          "clientID": "UxRhCgTZ",
+          "clanTag": null
+        },
+        {
+          "username": "ChubbyTiger",
+          "clientID": "BWi3EKvd",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "The 5 Star Football Icon",
+          "clientID": "dAyasMht",
+          "clanTag": "UA"
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 604,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T14:35:49.638Z",
+      "url": "https://openfront.io/game/DxA8b8M2"
     }
   ],
   "quads": [
@@ -117731,6 +117816,41 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T14:14:07.189Z",
       "url": "https://openfront.io/game/PAkRJzCW"
+    },
+    {
+      "id": "WGW27e3y",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Goobers United",
+          "clientID": "midH7UoS",
+          "clanTag": "GU"
+        },
+        {
+          "username": "HIDE",
+          "clientID": "kEbCTtYF",
+          "clanTag": null
+        },
+        {
+          "username": "MANDUNAN",
+          "clientID": "qgPDjKNj",
+          "clanTag": null
+        },
+        {
+          "username": "Moravia",
+          "clientID": "7o4CCtmA",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 478,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T14:37:08.676Z",
+      "url": "https://openfront.io/game/WGW27e3y"
     }
   ],
   "hvn": [
