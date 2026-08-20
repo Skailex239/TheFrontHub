@@ -47555,6 +47555,34 @@
       "numPlayers": 39,
       "timestamp": "2026-08-20T04:48:45.052Z",
       "url": "https://openfront.io/game/g8dBd3Pb"
+    },
+    {
+      "id": "rVLgPj52",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Trade_with_me",
+          "clientID": "7Z1b1xyu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mamdani",
+          "clientID": "tWBE4Juu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "rival space",
+          "clientID": "Zkgx9xas",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1110,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "timestamp": "2026-08-20T05:45:17.073Z",
+      "url": "https://openfront.io/game/rVLgPj52"
     }
   ],
   "quads": [
@@ -83693,6 +83721,67 @@
       "numPlayers": 29,
       "timestamp": "2026-08-20T05:28:12.501Z",
       "url": "https://openfront.io/game/MXPSSvE3"
+    },
+    {
+      "id": "2Em6ovBS",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Emanresu",
+          "clientID": "jeb8bXvb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon734",
+          "clientID": "rx1Sj4DB",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ZYXVW",
+          "clientID": "6TGTBB85",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTimber3",
+          "clientID": "sB55y6yf",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 788,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "timestamp": "2026-08-20T05:49:23.325Z",
+      "url": "https://openfront.io/game/2Em6ovBS"
+    },
+    {
+      "id": "yFYKZ7W4",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "card hock",
+          "clientID": "2v7SYHua",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Hercegovac",
+          "clientID": "PAbrMzC5",
+          "clanTag": null
+        },
+        {
+          "username": "Sikosiko",
+          "clientID": "j3Br7h8h",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1541,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "timestamp": "2026-08-20T05:35:27.972Z",
+      "url": "https://openfront.io/game/yFYKZ7W4"
     }
   ]
 }
