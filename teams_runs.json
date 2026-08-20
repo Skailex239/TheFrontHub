@@ -42436,6 +42436,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:07:55.580Z",
       "url": "https://openfront.io/game/3dDvB7iT"
+    },
+    {
+      "id": "s6YzpoEQ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "hormona lisa",
+          "clientID": "28ENr3uD",
+          "clanTag": null
+        },
+        {
+          "username": "Tlapka",
+          "clientID": "JwGwMwLu",
+          "clanTag": "STER"
+        },
+        {
+          "username": "Jeremy",
+          "clientID": "M1zbNnA7",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 369,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:16:18.633Z",
+      "url": "https://openfront.io/game/s6YzpoEQ"
     }
   ],
   "quads": [
@@ -66383,6 +66413,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T19:03:09.245Z",
       "url": "https://openfront.io/game/TJvZ78wE"
+    },
+    {
+      "id": "JGucKhPp",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DelusiveBroccoli.iXaU",
+          "clientID": "BAYqExeq",
+          "clanTag": null
+        },
+        {
+          "username": "Low APM High BPM",
+          "clientID": "Sac4ZHSP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Esq",
+          "clientID": "7qxPFZQT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon0000000001",
+          "clientID": "X2DVMmdR",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 667,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T19:11:10.280Z",
+      "url": "https://openfront.io/game/JGucKhPp"
+    },
+    {
+      "id": "fE4qXFNk",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AjdoTATA",
+          "clientID": "6Bd5aJey",
+          "clanTag": "MNE"
+        },
+        {
+          "username": "TTT",
+          "clientID": "q2LUJsZ1",
+          "clanTag": null
+        },
+        {
+          "username": "Cetinjski",
+          "clientID": "MYEog1R1",
+          "clanTag": "MNE"
+        },
+        {
+          "username": "Vaske",
+          "clientID": "7M5Ga2Dq",
+          "clanTag": "MNE"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1113,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T19:03:52.301Z",
+      "url": "https://openfront.io/game/fE4qXFNk"
     }
   ],
   "team_custom": [
