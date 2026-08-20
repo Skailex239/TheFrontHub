@@ -68027,6 +68027,71 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T13:51:23.657Z",
       "url": "https://openfront.io/game/Z7eupZSZ"
+    },
+    {
+      "id": "KnNpfc9z",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "CHOCTAW",
+          "clientID": "EaKEMBak",
+          "clanTag": "TRIBE"
+        },
+        {
+          "username": "AnonSpider3",
+          "clientID": "VEK1Ri6D",
+          "clanTag": null
+        },
+        {
+          "username": "SpecialHorces",
+          "clientID": "KUnhDaEM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOcean6",
+          "clientID": "GBeP36pS",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnchor2",
+          "clientID": "AgsUiMWu",
+          "clanTag": null
+        },
+        {
+          "username": "trade",
+          "clientID": "Vc2Rp4yq",
+          "clanTag": null
+        },
+        {
+          "username": "chanjin babo",
+          "clientID": "FvYUoyWB",
+          "clanTag": "KOREA"
+        },
+        {
+          "username": "RustyQueen.aFcw",
+          "clientID": "V3Z9EaT5",
+          "clanTag": null
+        },
+        {
+          "username": "The Holy Phidantian Empire",
+          "clientID": "8u9vMcnq",
+          "clanTag": null
+        },
+        {
+          "username": "DeineMutter",
+          "clientID": "DHvmiP6Z",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 712,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T13:55:53.456Z",
+      "url": "https://openfront.io/game/KnNpfc9z"
     }
   ],
   "quads": [
@@ -115906,6 +115971,61 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T13:50:05.068Z",
       "url": "https://openfront.io/game/hWjYaybC"
+    },
+    {
+      "id": "LzijvZLh",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Sherk",
+          "clientID": "gyiYXSkz",
+          "clanTag": null
+        },
+        {
+          "username": "LSCpansa",
+          "clientID": "FmjAQKen",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonTulip",
+          "clientID": "8XyoDAcm",
+          "clanTag": null
+        },
+        {
+          "username": "chienprankeur",
+          "clientID": "B7EpTvy4",
+          "clanTag": "MNG"
+        },
+        {
+          "username": "AnonFlame",
+          "clientID": "v9oKtWd1",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToucan2",
+          "clientID": "Fz94GJPt",
+          "clanTag": null
+        },
+        {
+          "username": "Sumac",
+          "clientID": "cKV5zHyT",
+          "clanTag": null
+        },
+        {
+          "username": "Screever",
+          "clientID": "CJqMXhr4",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T13:52:17.211Z",
+      "url": "https://openfront.io/game/LzijvZLh"
     }
   ],
   "hvn": [
