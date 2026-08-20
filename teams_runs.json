@@ -33491,6 +33491,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T15:14:13.017Z",
       "url": "https://openfront.io/game/Hp7EDg2v"
+    },
+    {
+      "id": "bFVKRFAY",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Supercellian",
+          "clientID": "53mXCoCx",
+          "clanTag": "ITAM"
+        },
+        {
+          "username": "FantasticSoldier.TNNi",
+          "clientID": "oyvCXtzi",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 2147,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T14:51:57.648Z",
+      "url": "https://openfront.io/game/bFVKRFAY"
+    },
+    {
+      "id": "ytn8nqHx",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "NWm",
+          "clientID": "jcsU1DAv",
+          "clanTag": null
+        },
+        {
+          "username": "eeb",
+          "clientID": "rg57vhQv",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 459,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T15:21:43.000Z",
+      "url": "https://openfront.io/game/ytn8nqHx"
     }
   ],
   "trios": [
@@ -111084,6 +111134,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T15:03:03.843Z",
       "url": "https://openfront.io/game/crcBvu7e"
+    },
+    {
+      "id": "6fmMNFdw",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Sam.",
+          "clientID": "ZHNxFNEX",
+          "clanTag": null
+        },
+        {
+          "username": "DramaticKitty.O5PX",
+          "clientID": "TdTqYePU",
+          "clanTag": null
+        },
+        {
+          "username": "Visca",
+          "clientID": "um7FaZ28",
+          "clanTag": "AP"
+        },
+        {
+          "username": "korea",
+          "clientID": "DZSfQyMz",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 450,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T15:20:24.923Z",
+      "url": "https://openfront.io/game/6fmMNFdw"
     }
   ],
   "team_custom": [
