@@ -43606,6 +43606,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:33:13.525Z",
       "url": "https://openfront.io/game/JshmEekx"
+    },
+    {
+      "id": "dfR4ssbt",
+      "mode": "trios",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Ridraax",
+          "clientID": "BCQQJUk5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ENBO",
+          "clientID": "EdVX6Nhj",
+          "clanTag": "UN"
+        },
+        {
+          "username": "apple",
+          "clientID": "wSWvmi8b",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1313,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T20:32:12.962Z",
+      "url": "https://openfront.io/game/dfR4ssbt"
     }
   ],
   "quads": [
@@ -77975,6 +78005,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T20:43:17.657Z",
       "url": "https://openfront.io/game/DzBxaCKK"
+    },
+    {
+      "id": "g9iz8LpF",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "nono du 18",
+          "clientID": "CHSdZKbU",
+          "clanTag": null
+        },
+        {
+          "username": "Gale",
+          "clientID": "Tx91q9Sc",
+          "clanTag": null
+        },
+        {
+          "username": "Etris",
+          "clientID": "cXviRYF6",
+          "clanTag": null
+        },
+        {
+          "username": "Steviemaster",
+          "clientID": "EArfs2b5",
+          "clanTag": null
+        },
+        {
+          "username": "Rook",
+          "clientID": "kzydaMNA",
+          "clanTag": null
+        },
+        {
+          "username": "MT45",
+          "clientID": "QnjP6Ycu",
+          "clanTag": "MX"
+        },
+        {
+          "username": "Spare Me I Have A Cat",
+          "clientID": "N3AV6cM6",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 694,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T20:42:42.621Z",
+      "url": "https://openfront.io/game/g9iz8LpF"
     }
   ],
   "hvn": [
