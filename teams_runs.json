@@ -70167,6 +70167,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T15:38:52.057Z",
       "url": "https://openfront.io/game/HwAuG8Nu"
+    },
+    {
+      "id": "vspjxy66",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "equa",
+          "clientID": "S2VMmr3F",
+          "clanTag": null
+        },
+        {
+          "username": "SFR",
+          "clientID": "KTKNKs7k",
+          "clanTag": null
+        },
+        {
+          "username": "Uh oh",
+          "clientID": "Hak1Lcn8",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1003,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:34:39.314Z",
+      "url": "https://openfront.io/game/vspjxy66"
     }
   ],
   "quads": [
@@ -111694,6 +111724,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T15:15:42.114Z",
       "url": "https://openfront.io/game/RYbxEoJv"
+    },
+    {
+      "id": "7f5Dvh2k",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "oncenot",
+          "clientID": "aTwEP4Up",
+          "clanTag": "NU"
+        },
+        {
+          "username": "POE",
+          "clientID": "yDnfHURq",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Casual",
+          "clientID": "Pcsyijui",
+          "clanTag": "NU"
+        },
+        {
+          "username": "DexTheTrump",
+          "clientID": "BWodr3gm",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 734,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T15:38:23.534Z",
+      "url": "https://openfront.io/game/7f5Dvh2k"
     }
   ],
   "team_custom": [
