@@ -42626,6 +42626,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T19:17:05.676Z",
       "url": "https://openfront.io/game/HY7F3hX8"
+    },
+    {
+      "id": "sFth2VEJ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "StewPot",
+          "clientID": "qd9TnBfP",
+          "clanTag": null
+        },
+        {
+          "username": "Bulbul",
+          "clientID": "4JNbKxs9",
+          "clanTag": "POL"
+        },
+        {
+          "username": "DEEZ",
+          "clientID": "HtnNjGft",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 547,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T19:31:23.656Z",
+      "url": "https://openfront.io/game/sFth2VEJ"
     }
   ],
   "quads": [
@@ -66748,6 +66778,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T19:23:03.088Z",
       "url": "https://openfront.io/game/MXXyU4bF"
+    },
+    {
+      "id": "WjRBDnWK",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Tos",
+          "clientID": "DtVNt3S9",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "Ros",
+          "clientID": "P1qL2rYF",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "Los",
+          "clientID": "fbUTW9Wd",
+          "clanTag": "LLL"
+        },
+        {
+          "username": "Anon101",
+          "clientID": "9YucePNk",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 911,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T19:27:05.861Z",
+      "url": "https://openfront.io/game/WjRBDnWK"
     }
   ],
   "team_custom": [
