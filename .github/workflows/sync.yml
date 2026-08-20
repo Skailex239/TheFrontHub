@@ -1,24 +1,22 @@
 name: Auto Sync
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Combined sync pipeline: speedruns (standard + compact) + teams + ranked.
+# ⚡ UNIFIED SYNC PIPELINE — All sync jobs in ONE workflow
 #
-# Runs as a CONTINUOUS LOOP via unconditional self-retrigger:
-#   - The final `retrigger` job ALWAYS fires (no condition) and re-dispatches
-#     THIS workflow → back-to-back execution 24/7, even when idle.
-#   - cancel-in-progress: true prevents pile-up if a new run starts while the
-#     previous one is still going (safe — each run does a fresh checkout).
-#   - The cron */5 is a safety net backup in case a run fails to retrigger.
+# Categories (sequential, 1 by 1):
+#   1. sync-standard    — FFA speedruns (normal)
+#   2. sync-compact     — FFA speedruns (compact)
+#   3. sync-teams       — Team games (Duos/Trios/Quads/Custom/HvN)
+#   4. sync-ranked      — Ranked 1v1 + 2v2
+#   5. sync-dashboard   — Dashboard scores
+#   6. sync-player-games — Player games + stats
 #
-# Previously this was split across sync.yml + sync-ranked.yml, which caused
-# git-push race conditions (both pushing to main concurrently). Now everything
-# is sequential in ONE workflow → only one push at a time, no races.
+# All jobs share the SAME concurrency group → only ONE sync at a time.
 # ─────────────────────────────────────────────────────────────────────────────
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -30,8 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      committed: ${{ steps.commit-standard.outputs.committed }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,7 +42,6 @@ jobs:
           OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
           SYNC_HISTORY_WINDOWS: "500"
       - name: Commit et push (standard)
-        id: commit-standard
         run: |
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
@@ -54,22 +49,19 @@ jobs:
           for f in runs_public.json.gz runs.json.gz clans.json clans.json.gz news.json news.json.gz seen.json checkpoint.json; do
             [ -f "$f" ] && git add "$f"
           done
-          git diff --cached --quiet && { echo "no changes standard"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git diff --cached --quiet && { echo "no changes standard"; exit 0; }
           git commit -m "[auto] sync"
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git pull --rebase --autostash origin main && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep $((i * 3))
           done
-          echo "committed=false" >> $GITHUB_OUTPUT
 
   sync-compact:
     needs: sync-standard
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      committed: ${{ steps.commit-compact.outputs.committed }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -84,7 +76,6 @@ jobs:
           OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
           COMPACT_HISTORY_WINDOWS: "500"
       - name: Commit et push (compact)
-        id: commit-compact
         run: |
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
@@ -92,22 +83,19 @@ jobs:
           for f in runs_compact_public.json.gz runs_compact.json.gz seen_compact.json checkpoint_compact.json; do
             [ -f "$f" ] && git add "$f"
           done
-          git diff --cached --quiet && { echo "no changes compact"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git diff --cached --quiet && { echo "no changes compact"; exit 0; }
           git commit -m "[auto] sync compact"
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git pull --rebase --autostash origin main && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep $((i * 3))
           done
-          echo "committed=false" >> $GITHUB_OUTPUT
 
   sync-teams:
-    needs: [sync-standard, sync-compact]
+    needs: sync-compact
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      committed: ${{ steps.commit-teams.outputs.committed }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -121,7 +109,6 @@ jobs:
         env:
           OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
       - name: Commit et push (teams)
-        id: commit-teams
         run: |
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
@@ -129,22 +116,19 @@ jobs:
           for f in teams_runs.json teams_runs.json.gz teams_seen.json teams_checkpoint.json teams_public.json teams_public.json.gz; do
             [ -f "$f" ] && git add "$f" -f
           done
-          git diff --cached --quiet && { echo "no changes teams"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git diff --cached --quiet && { echo "no changes teams"; exit 0; }
           git commit -m "[auto] sync teams"
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git pull --rebase --autostash origin main && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep $((i * 3))
           done
-          echo "committed=false" >> $GITHUB_OUTPUT
 
   sync-ranked:
     needs: sync-teams
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      committed: ${{ steps.commit-ranked.outputs.committed }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -158,32 +142,25 @@ jobs:
         env:
           OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
       - name: Commit et push (ranked)
-        id: commit-ranked
         run: |
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Untrack ungzipped history files (now in .gitignore) so they don't
-          # block git pull --rebase with "unstaged changes". Only .gz versions
-          # are committed to the repo.
           git rm --cached ranked_history.json ranked_2v2_history.json 2>/dev/null || true
           for f in ranked.json ranked.json.gz ranked_history.json.gz ranked_2v2_history.json.gz; do [ -f "$f" ] && git add "$f" -f; done
-          git diff --cached --quiet && { echo "no changes ranked"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git diff --cached --quiet && { echo "no changes ranked"; exit 0; }
           git commit -m "[auto] sync ranked"
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git pull --rebase --autostash origin main && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep $((i * 3))
           done
-          echo "committed=false" >> $GITHUB_OUTPUT
 
   sync-dashboard:
     needs: sync-ranked
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      committed: ${{ steps.commit-dashboard.outputs.committed }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -196,44 +173,68 @@ jobs:
       - run: node sync-dashboard.js
         env:
           OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
-      - name: Commit et push (dashboard scores)
-        id: commit-dashboard
+      - name: Commit et push (dashboard)
         run: |
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           for f in dashboard_scores.json dashboard_scores.json.gz; do [ -f "$f" ] && git add "$f" -f; done
-          git diff --cached --quiet && { echo "no changes dashboard"; echo "committed=false" >> $GITHUB_OUTPUT; exit 0; }
+          git diff --cached --quiet && { echo "no changes dashboard"; exit 0; }
           git commit -m "[auto] sync dashboard scores"
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main && git push && echo "committed=true" >> $GITHUB_OUTPUT && exit 0
+            git pull --rebase --autostash origin main && git push && exit 0
             git rebase --abort 2>/dev/null || true
             sleep $((i * 3))
           done
-          echo "committed=false" >> $GITHUB_OUTPUT
+
+  sync-player-games:
+    needs: sync-dashboard
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Detect new players from Firebase
+        run: node detect-new-players.js || true
+        env:
+          OPENFRONT_SKAILEX_ACCESS: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+      - name: Sync player games
+        run: node sync-player-games.js
+        env:
+          SKAILEX_ACCESS_TOKEN: ${{ secrets.OPENFRONT_SKAILEX_ACCESS }}
+      - name: Compute player stats
+        run: node compute-player-stats.js
+      - name: Commit et push (player games + stats)
+        run: |
+          rm -rf node_modules package.json package-lock.json 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sync-players.json player-data/*.json player-stats/*.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "no changes player games"; exit 0; }
+          git commit -m "[auto] sync player games + stats"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
 
   retrigger:
-    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard]
+    needs: [sync-standard, sync-compact, sync-teams, sync-ranked, sync-dashboard, sync-player-games]
     runs-on: ubuntu-latest
-    # ── UNCONDITIONAL self-retrigger — continuous loop 24/7 ──
-    # Always re-dispatches this workflow, regardless of whether changes were
-    # committed. This ensures the sync runs back-to-back forever, even when
-    # idle. The cron */5 is just a backup in case a run crashes.
-    # (concurrency.cancel-in-progress: true prevents pile-up)
     permissions:
       actions: write
     steps:
       - name: Retrigger self (continuous loop)
         run: |
-          echo "🔄 Re-déclenchement du workflow (boucle continue, inconditionnel)."
+          echo "🔄 Re-déclenchement du workflow unifié (boucle continue)."
           gh workflow run sync.yml \
-            --repo ${{ github.repository }} \
-            --ref main
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Retrigger deploy-pages (backup — le push le déclenche déjà automatiquement)
-        run: |
-          gh workflow run deploy-pages.yml \
             --repo ${{ github.repository }} \
             --ref main
         env:
