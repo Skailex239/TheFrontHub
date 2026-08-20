@@ -33391,6 +33391,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T15:01:46.778Z",
       "url": "https://openfront.io/game/An9n7uBo"
+    },
+    {
+      "id": "MvxoCQt8",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Arasaka",
+          "clientID": "uLUVj8tA",
+          "clanTag": "24"
+        },
+        {
+          "username": "Seoul",
+          "clientID": "BPfnj4eF",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 564,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T15:04:18.919Z",
+      "url": "https://openfront.io/game/MvxoCQt8"
     }
   ],
   "trios": [
@@ -69637,6 +69662,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T14:45:52.740Z",
       "url": "https://openfront.io/game/1MQScsRK"
+    },
+    {
+      "id": "gPw35ahe",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "mito trader",
+          "clientID": "sqxiixMG",
+          "clanTag": null
+        },
+        {
+          "username": "The One",
+          "clientID": "8i8duobC",
+          "clanTag": null
+        },
+        {
+          "username": "Z3z3zzzzz",
+          "clientID": "4XtPxRMZ",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:00:26.195Z",
+      "url": "https://openfront.io/game/gPw35ahe"
     }
   ],
   "quads": [
@@ -118926,6 +118981,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T14:59:44.649Z",
       "url": "https://openfront.io/game/bzLMygFE"
+    },
+    {
+      "id": "oBEYbxpC",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Lazer be",
+          "clientID": "GCofWo2G",
+          "clanTag": null
+        },
+        {
+          "username": "hicka",
+          "clientID": "gjkwQuLK",
+          "clanTag": "GG"
+        },
+        {
+          "username": "Arpi",
+          "clientID": "xPWKNDoZ",
+          "clanTag": "GG"
+        },
+        {
+          "username": "Rawezh",
+          "clientID": "fw65NUS8",
+          "clanTag": null
+        },
+        {
+          "username": "Mr. Sandman",
+          "clientID": "kxvmCosF",
+          "clanTag": "WAT"
+        },
+        {
+          "username": "Grunt line",
+          "clientID": "XiP58BdE",
+          "clanTag": "ARM"
+        },
+        {
+          "username": "AnonHarp",
+          "clientID": "zoKxUDx6",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1042,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T14:55:30.391Z",
+      "url": "https://openfront.io/game/oBEYbxpC"
+    },
+    {
+      "id": "n78Hw5Hc",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "UnhuggedToday",
+          "clientID": "bNcQswJX",
+          "clanTag": null
+        },
+        {
+          "username": "Bug",
+          "clientID": "xYcLnXA6",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "9kjswxVe",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZebra9",
+          "clientID": "ZvKbBf11",
+          "clanTag": "BR"
+        },
+        {
+          "username": "AnonZenith7",
+          "clientID": "rrveeCQv",
+          "clanTag": "BR"
+        },
+        {
+          "username": "Geschrei",
+          "clientID": "zXpwX1Nu",
+          "clanTag": null
+        },
+        {
+          "username": "Iran",
+          "clientID": "cgCjpgzY",
+          "clanTag": "IRAN"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1826,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T14:41:49.475Z",
+      "url": "https://openfront.io/game/n78Hw5Hc"
     }
   ],
   "hvn": [
