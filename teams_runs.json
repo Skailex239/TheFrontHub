@@ -18617,6 +18617,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T18:35:32.357Z",
       "url": "https://openfront.io/game/6DENwsjg"
+    },
+    {
+      "id": "qxvvcrAZ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Orka",
+          "clientID": "q7FBhxRM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonDeer4",
+          "clientID": "KygcNsGY",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 557,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T18:42:32.364Z",
+      "url": "https://openfront.io/game/qxvvcrAZ"
     }
   ],
   "trios": [
@@ -42061,6 +42086,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T18:11:50.370Z",
       "url": "https://openfront.io/game/479bFYV9"
+    },
+    {
+      "id": "ZAEnu83x",
+      "mode": "trios",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "SHAH",
+          "clientID": "5sfKPHga",
+          "clanTag": null
+        },
+        {
+          "username": "Anon910",
+          "clientID": "oBhyBoFE",
+          "clanTag": null
+        },
+        {
+          "username": "Luxembourg",
+          "clientID": "Rfyu8UiN",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1251,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T18:31:17.591Z",
+      "url": "https://openfront.io/game/ZAEnu83x"
     }
   ],
   "quads": [
