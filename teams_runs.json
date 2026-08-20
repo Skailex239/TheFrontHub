@@ -33266,6 +33266,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T14:37:47.226Z",
       "url": "https://openfront.io/game/KVXnG4wc"
+    },
+    {
+      "id": "TgFBKMDp",
+      "mode": "duos",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "BaCkStAbBeR67",
+          "clientID": "CoazfGaa",
+          "clanTag": null
+        },
+        {
+          "username": "Valdrec",
+          "clientID": "by9AvW9M",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 661,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T14:48:31.389Z",
+      "url": "https://openfront.io/game/TgFBKMDp"
     }
   ],
   "trios": [
@@ -69452,6 +69477,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T14:24:20.861Z",
       "url": "https://openfront.io/game/uvvEA9Kv"
+    },
+    {
+      "id": "1Z54HY7n",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "lady gaga",
+          "clientID": "aJe5LyzK",
+          "clanTag": "ENZO"
+        },
+        {
+          "username": "0.5 star campground",
+          "clientID": "BvG6zWqQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon75014",
+          "clientID": "hhak8w98",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 724,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T14:48:09.368Z",
+      "url": "https://openfront.io/game/1Z54HY7n"
     }
   ],
   "quads": [
@@ -118496,6 +118551,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T14:40:22.891Z",
       "url": "https://openfront.io/game/jXyEDp6a"
+    },
+    {
+      "id": "RFW4K3m7",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Baset Empire",
+          "clientID": "PaVh8k2F",
+          "clanTag": null
+        },
+        {
+          "username": "Lietuva",
+          "clientID": "n2PL4SN8",
+          "clanTag": null
+        },
+        {
+          "username": "Fro",
+          "clientID": "CWyqeUcW",
+          "clanTag": "MR"
+        },
+        {
+          "username": "MY CAT ATE MY NAME",
+          "clientID": "ALEtUtpQ",
+          "clanTag": null
+        },
+        {
+          "username": "BITWE",
+          "clientID": "5QsxRXey",
+          "clanTag": null
+        },
+        {
+          "username": "SSONG",
+          "clientID": "ZnoVpiEo",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1228,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T14:39:01.314Z",
+      "url": "https://openfront.io/game/RFW4K3m7"
     }
   ],
   "hvn": [
