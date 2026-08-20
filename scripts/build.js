@@ -54,6 +54,8 @@ const targets = [
   // gets inlined (otherwise the browser looks for /dist/shared/firebase-config.js which 404s)
   { entry: "auth.js",        out: "auth.min.js",         bundled: true },
   { entry: "tournois-icons.js", out: "tournois-icons.min.js", bundled: false },
+  // Tutorial (no imports, just standalone)
+  { entry: "tutorial.js",    out: "tutorial.min.js",     bundled: false },
 ];
 
 const watch = process.argv.includes("--watch");

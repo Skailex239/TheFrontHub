@@ -2488,3 +2488,190 @@ button:active:not(:disabled),
 :root[data-theme="dark"] .tfh-footer-discord:hover {
   background: #7983F5;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   🎓 TUTORIEL — Système de guide interactif (première visite)
+   Spotlight sur l'élément + tooltip avec boutons "Suivant" / "Passer"
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.tfh-tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 9999;
+  cursor: pointer;
+  animation: tfh-tutorial-fade-in 0.3s var(--ease-out);
+}
+
+@keyframes tfh-tutorial-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Spotlight = halo lumineux sur l'élément ciblé.
+   Astuce : box-shadow avec spread 9999px crée un "masque" autour de l'élément. */
+.tfh-tutorial-spotlight {
+  position: fixed;
+  border-radius: var(--radius);
+  border: 2px solid var(--accent);
+  background: transparent;
+  /* Box-shadow géant pour assombrir tout sauf l'élément ciblé */
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.55);
+  z-index: 10000;
+  pointer-events: none;
+  transition: top 0.3s var(--ease-out),
+              left 0.3s var(--ease-out),
+              width 0.3s var(--ease-out),
+              height 0.3s var(--ease-out);
+  animation: tfh-tutorial-pulse 2s ease-in-out infinite;
+}
+
+@keyframes tfh-tutorial-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.55),
+                0 0 0 4px rgba(255, 107, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.55),
+                0 0 0 8px rgba(255, 107, 0, 0.15);
+  }
+}
+
+/* Tooltip = boîte de dialogue avec texte + boutons */
+.tfh-tutorial-tooltip {
+  position: fixed;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  max-width: 340px;
+  width: calc(100vw - 32px);
+  z-index: 10001;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  animation: tfh-tutorial-pop-in 0.3s var(--ease-out);
+  font-family: var(--f);
+}
+
+@keyframes tfh-tutorial-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tfh-tutorial-progress {
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  color: var(--fg-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: var(--space-2);
+}
+
+.tfh-tutorial-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--fg);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.3;
+}
+
+.tfh-tutorial-text {
+  font-size: var(--text-sm);
+  color: var(--fg-secondary);
+  line-height: 1.6;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.tfh-tutorial-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tfh-tutorial-skip {
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  font-family: var(--f);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: all var(--dur) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.tfh-tutorial-skip:hover {
+  background: var(--bg-subtle);
+  color: var(--fg);
+}
+.tfh-tutorial-skip:active {
+  transform: scale(0.97);
+}
+
+.tfh-tutorial-next {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  font-family: var(--f);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.tfh-tutorial-next:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--orange-glow);
+}
+.tfh-tutorial-next:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}
+
+/* ── TUTORIEL RESPONSIVE ────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .tfh-tutorial-tooltip {
+    max-width: calc(100vw - 32px);
+    padding: var(--space-4);
+  }
+  .tfh-tutorial-title {
+    font-size: var(--text-base);
+  }
+  .tfh-tutorial-text {
+    font-size: var(--text-xs);
+  }
+  .tfh-tutorial-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+  .tfh-tutorial-skip,
+  .tfh-tutorial-next {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tfh-tutorial-overlay,
+  .tfh-tutorial-spotlight,
+  .tfh-tutorial-tooltip {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -51,15 +51,6 @@ FOOTER_HTML = """
         <li><a href="https://openfront.io" target="_blank" rel="noreferrer">Jouer à OpenFront ↗</a></li>
       </ul>
     </div>
-
-    <div class="tfh-footer-col">
-      <h4 class="tfh-footer-title">Ressources</h4>
-      <ul class="tfh-footer-links">
-        <li><a href="https://github.com/Skailex239/TheFrontHub" target="_blank" rel="noreferrer">GitHub ↗</a></li>
-        <li><a href="https://github.com/openfrontio/OpenFrontIO" target="_blank" rel="noreferrer">OpenFrontIO (jeu) ↗</a></li>
-        <li><a href="https://openfront.io" target="_blank" rel="noreferrer">Site officiel ↗</a></li>
-      </ul>
-    </div>
   </div>
 
   <div class="tfh-footer-bottom">

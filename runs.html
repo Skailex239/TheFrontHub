@@ -12,7 +12,7 @@
   <link rel="preload" href="runs_public.json.gz" as="fetch" crossorigin="anonymous">
   <link rel="preload" href="runs_compact_public.json.gz" as="fetch" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <link rel="stylesheet" href="styles.css?v=61" />
+    <link rel="stylesheet" href="styles.css?v=63" />
     <link rel="stylesheet" href="animations.css?v=6" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="animations.css?v=6"></noscript>
     <link rel="stylesheet" href="toast.css">
@@ -71,7 +71,8 @@
 <script src="dist/animations.min.js?v=1" defer></script>
     <script src="dist/toast.min.js?v=1"></script>
     <script src="dist/runs.min.js?v=1"></script>
-    <script>
+    <script type="module" src="dist/tutorial.min.js?v=2"></script>
+<script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js?v=9').catch(e => console.warn('[SW] Registration failed:', e));
@@ -109,15 +110,6 @@
       <ul class="tfh-footer-links">
         <li><a href="profile.html">Mon profil</a></li>
         <li><a href="https://openfront.io" target="_blank" rel="noreferrer">Jouer à OpenFront ↗</a></li>
-      </ul>
-    </div>
-
-    <div class="tfh-footer-col">
-      <h4 class="tfh-footer-title">Ressources</h4>
-      <ul class="tfh-footer-links">
-        <li><a href="https://github.com/Skailex239/TheFrontHub" target="_blank" rel="noreferrer">GitHub ↗</a></li>
-        <li><a href="https://github.com/openfrontio/OpenFrontIO" target="_blank" rel="noreferrer">OpenFrontIO (jeu) ↗</a></li>
-        <li><a href="https://openfront.io" target="_blank" rel="noreferrer">Site officiel ↗</a></li>
       </ul>
     </div>
   </div>
