@@ -20042,6 +20042,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:02:16.585Z",
       "url": "https://openfront.io/game/SSVGV9QH"
+    },
+    {
+      "id": "kGWBxq7P",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "onyxagata",
+          "clientID": "XSWL9c7j",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Jorgen",
+          "clientID": "hcXH6ykG",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 398,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:13:44.309Z",
+      "url": "https://openfront.io/game/kGWBxq7P"
+    },
+    {
+      "id": "TzdN6yKn",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Cavalry Charge",
+          "clientID": "rJFZcRH3",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "gPZJCWpt",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 774,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:07:42.407Z",
+      "url": "https://openfront.io/game/TzdN6yKn"
     }
   ],
   "trios": [
@@ -44926,6 +44976,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T21:55:41.650Z",
       "url": "https://openfront.io/game/ttLT1gqf"
+    },
+    {
+      "id": "hAMq5UVW",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Guisado",
+          "clientID": "vsCvGzDg",
+          "clanTag": "UN"
+        },
+        {
+          "username": "nabu",
+          "clientID": "eaimU8gQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "pzky",
+          "clientID": "HAC9aNFU",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1512,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T21:54:49.591Z",
+      "url": "https://openfront.io/game/hAMq5UVW"
     }
   ],
   "quads": [
@@ -80405,6 +80485,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T22:00:54.986Z",
       "url": "https://openfront.io/game/9qB74EuU"
+    },
+    {
+      "id": "RoyyEiYh",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonLantern4",
+          "clientID": "qPQ2AsKG",
+          "clanTag": null
+        },
+        {
+          "username": "ROMAN EMPIRE",
+          "clientID": "8mbEQvza",
+          "clanTag": null
+        },
+        {
+          "username": "ashkan",
+          "clientID": "RcVaXMGb",
+          "clanTag": null
+        },
+        {
+          "username": "kevinuniversal",
+          "clientID": "8bwfezXc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "yorkshire pudding",
+          "clientID": "nbgxj13s",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Oscarwins",
+          "clientID": "GKtwo7Cz",
+          "clanTag": null
+        },
+        {
+          "username": "GodDrops",
+          "clientID": "4WgUGJTg",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 701,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T22:07:07.873Z",
+      "url": "https://openfront.io/game/RoyyEiYh"
     }
   ],
   "hvn": [
