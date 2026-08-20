@@ -70107,6 +70107,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T15:27:27.854Z",
       "url": "https://openfront.io/game/pkAeXQPd"
+    },
+    {
+      "id": "mJdaohfU",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Attack the strongest player",
+          "clientID": "FNB1ZuUm",
+          "clanTag": null
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "h4Uzhk4g",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGong9",
+          "clientID": "dsZQBm3d",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 603,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:38:08.024Z",
+      "url": "https://openfront.io/game/mJdaohfU"
+    },
+    {
+      "id": "HwAuG8Nu",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mac Orion",
+          "clientID": "J2yfGwbJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Byzantium",
+          "clientID": "WxCoV5sN",
+          "clanTag": null
+        },
+        {
+          "username": "Anon655",
+          "clientID": "daQH22fr",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 604,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 17,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:38:52.057Z",
+      "url": "https://openfront.io/game/HwAuG8Nu"
     }
   ],
   "quads": [
