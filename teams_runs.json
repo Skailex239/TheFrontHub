@@ -103604,6 +103604,66 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T12:41:35.787Z",
       "url": "https://openfront.io/game/ca6nUWKX"
+    },
+    {
+      "id": "V1R5Tgwc",
+      "mode": "quads",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Anon868",
+          "clientID": "uBoGgQDQ",
+          "clanTag": null
+        },
+        {
+          "username": "Piratas",
+          "clientID": "qRP5zyaF",
+          "clanTag": "BR"
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1591,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T12:33:09.260Z",
+      "url": "https://openfront.io/game/V1R5Tgwc"
+    },
+    {
+      "id": "8k4eFqXL",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Big",
+          "clientID": "Ug4S9opc",
+          "clanTag": null
+        },
+        {
+          "username": "Alioooooo",
+          "clientID": "vASi1BEJ",
+          "clanTag": "IR"
+        },
+        {
+          "username": "Iran Empire",
+          "clientID": "DSnnnEzY",
+          "clanTag": "IR"
+        },
+        {
+          "username": "AnonZeppelin1",
+          "clientID": "jsRJKs67",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 5237,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T11:33:37.870Z",
+      "url": "https://openfront.io/game/8k4eFqXL"
     }
   ],
   "team_custom": [
