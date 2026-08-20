@@ -1,31 +1,31 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-20T16:18:35.577Z",
-  "lastSyncedAt": "2026-08-20T16:18:33.119Z",
-  "totalGames": 2184,
+  "computedAt": "2026-08-20T16:20:57.795Z",
+  "lastSyncedAt": "2026-08-20T16:20:54.853Z",
+  "totalGames": 2185,
   "careerWins": {
-    "ffaCasual": 377,
+    "ffaCasual": 378,
     "ffaRanked": 325,
     "teamCasual": 47,
     "teamRanked": 63
   },
-  "totalWins": 812,
-  "points": 4393,
-  "level": 43,
-  "levelProgress": 93,
-  "levelNextAt": 4400,
+  "totalWins": 813,
+  "points": 4403,
+  "level": 44,
+  "levelProgress": 3,
+  "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 812,
+      "current": 813,
       "target": 1000
     },
     "playtime": {
-      "current": 551,
+      "current": 552,
       "target": 1000
     },
     "maps": {
-      "current": 96,
+      "current": 97,
       "target": 100
     }
   },
@@ -39,26 +39,26 @@
     10
   ],
   "formatted": {
-    "points": "4 393",
-    "totalWins": "812",
-    "totalGames": "2 184",
-    "totalPlaytime": "22j 23h",
-    "totalPlaytimeCompact": "22j 23h",
+    "points": "4 403",
+    "totalWins": "813",
+    "totalGames": "2 185",
+    "totalPlaytime": "23j 0h",
+    "totalPlaytimeCompact": "23j 0h",
     "avgGameDuration": "15m 9s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "551h"
+    "totalPlaytimeHours": "552h"
   },
   "playtime": {
-    "totalSec": 1985858,
-    "avgGameSec": 909.275641025641,
+    "totalSec": 1987338,
+    "avgGameSec": 909.5368421052632,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1390,
-        "playtimeSec": 1607979,
-        "wins": 377
+        "games": 1391,
+        "playtimeSec": 1609459,
+        "wins": 378
       },
       "ffaRanked": {
         "games": 494,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 812,
+    "victory": 813,
     "defeat": 1045,
     "incomplete": 327
   },
@@ -1460,6 +1460,22 @@
       }
     },
     {
+      "map": "Balkhash",
+      "count": 1,
+      "wins": 1,
+      "losses": 0,
+      "playtimeSec": 1480,
+      "avgDuration": 1480,
+      "winRate": 1,
+      "lastPlayed": 1787241275004,
+      "formatted": {
+        "playtime": "24m",
+        "avgDuration": "24m",
+        "winRate": "100%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "Clearwater Lakes",
       "count": 1,
       "wins": 0,
@@ -1639,7 +1655,7 @@
       130,
       143,
       136,
-      200,
+      201,
       200,
       225,
       194,
@@ -1651,7 +1667,7 @@
       302,
       225,
       300,
-      326,
+      327,
       346,
       364,
       321
@@ -1864,8 +1880,8 @@
       },
       {
         "date": "20/08/2026",
-        "count": 1,
-        "playtimeSec": 1859
+        "count": 2,
+        "playtimeSec": 3339
       },
       {
         "date": "21/01/2026",
@@ -2113,7 +2129,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 15
   },
   "achievements": {
@@ -2189,6 +2205,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "NpmSCt5V",
+      "start": "2026-08-20T15:54:35.004Z",
+      "map": "Balkhash",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1480,
+      "totalPlayers": 80,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "N6eVPwDo",
       "start": "2026-08-20T08:17:07.396Z",
@@ -2394,17 +2421,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 263,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "eWm73K52",
-      "start": "2026-08-17T21:26:44.256Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 365,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"

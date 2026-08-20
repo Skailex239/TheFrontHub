@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-20T16:18:33.119Z",
+  "lastSyncedAt": "2026-08-20T16:20:54.853Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 2184,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.7,
+  "totalGames": 2185,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "NpmSCt5V",
+      "start": "2026-08-20T15:54:35.004Z",
+      "durationSeconds": 1480,
+      "map": "Balkhash",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 80,
+      "username": "Anto",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "N6eVPwDo",
       "start": "2026-08-20T08:17:07.396Z",
