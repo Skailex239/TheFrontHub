@@ -20092,6 +20092,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T22:07:42.407Z",
       "url": "https://openfront.io/game/TzdN6yKn"
+    },
+    {
+      "id": "3AzEny3R",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "andc2600",
+          "clientID": "FrN1VSd4",
+          "clanTag": "TRADE"
+        },
+        {
+          "username": "Fih",
+          "clientID": "BTKPtoeh",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 938,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T22:05:41.796Z",
+      "url": "https://openfront.io/game/3AzEny3R"
     }
   ],
   "trios": [
@@ -69898,6 +69923,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T21:52:48.446Z",
       "url": "https://openfront.io/game/GGxYxuMk"
+    },
+    {
+      "id": "XKgoeCBS",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "MagyarPeter",
+          "clientID": "s3pqTdAR",
+          "clanTag": null
+        },
+        {
+          "username": "openu",
+          "clientID": "Yrx8ptZH",
+          "clanTag": "CAPT"
+        },
+        {
+          "username": "benkage123",
+          "clientID": "WuhS63N2",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTemple3",
+          "clientID": "V5nAbZg7",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 763,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T22:10:07.070Z",
+      "url": "https://openfront.io/game/XKgoeCBS"
     }
   ],
   "team_custom": [
