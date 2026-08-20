@@ -43231,6 +43231,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T20:04:26.153Z",
       "url": "https://openfront.io/game/ssRAnDwS"
+    },
+    {
+      "id": "toJt9ord",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Plant",
+          "clientID": "WjqSNjh4",
+          "clanTag": null
+        },
+        {
+          "username": "Amin",
+          "clientID": "KV7FHG87",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSlate7",
+          "clientID": "b4UPMjok",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1072,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T20:02:54.557Z",
+      "url": "https://openfront.io/game/toJt9ord"
     }
   ],
   "quads": [
@@ -76960,6 +76990,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-20T20:00:51.440Z",
       "url": "https://openfront.io/game/ZaFDcVYF"
+    },
+    {
+      "id": "HtewoTQz",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Praxi",
+          "clientID": "tAgiCS5x",
+          "clanTag": null
+        },
+        {
+          "username": "Silverfurby",
+          "clientID": "UTn4tS2H",
+          "clanTag": "THE"
+        },
+        {
+          "username": "silvercroket",
+          "clientID": "fuhiBCqN",
+          "clanTag": "THE"
+        },
+        {
+          "username": "Kuddel",
+          "clientID": "hF7N6qWp",
+          "clanTag": null
+        },
+        {
+          "username": "Bretagne lover xxl",
+          "clientID": "mXxjAVjc",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "fuckfascism",
+          "clientID": "aAtoxs1u",
+          "clanTag": null
+        },
+        {
+          "username": "Madchazzer",
+          "clientID": "nbLJf2X1",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T20:01:37.490Z",
+      "url": "https://openfront.io/game/HtewoTQz"
     }
   ],
   "hvn": [
