@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-20T17:41:02.789Z",
-  "lastSyncedAt": "2026-08-20T17:41:01.146Z",
-  "totalGames": 3096,
+  "computedAt": "2026-08-20T17:43:09.188Z",
+  "lastSyncedAt": "2026-08-20T17:43:07.634Z",
+  "totalGames": 3097,
   "careerWins": {
     "ffaCasual": 496,
     "ffaRanked": 262,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 747,
+      "current": 748,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "7 000",
     "totalWins": "1 208",
-    "totalGames": "3 096",
-    "totalPlaytime": "31j 3h",
-    "totalPlaytimeCompact": "31j 3h",
-    "avgGameDuration": "14m 29s",
+    "totalGames": "3 097",
+    "totalPlaytime": "31j 4h",
+    "totalPlaytimeCompact": "31j 4h",
+    "avgGameDuration": "14m 30s",
     "longestGame": "9h 22m",
     "winrate": "39%",
-    "totalPlaytimeHours": "747h"
+    "totalPlaytimeHours": "748h"
   },
   "playtime": {
-    "totalSec": 2691885,
-    "avgGameSec": 869.4718992248062,
+    "totalSec": 2695203,
+    "avgGameSec": 870.262512108492,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1595,
-        "playtimeSec": 1607431,
+        "games": 1596,
+        "playtimeSec": 1610749,
         "wins": 496
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1208,
-    "defeat": 1254,
+    "defeat": 1255,
     "incomplete": 634
   },
   "maps": [
@@ -1108,6 +1108,22 @@
       }
     },
     {
+      "map": "Levant",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "playtimeSec": 4036,
+      "avgDuration": 2018,
+      "winRate": 0.5,
+      "lastPlayed": 1787244336253,
+      "formatted": {
+        "playtime": "1h 7m",
+        "avgDuration": "33m",
+        "winRate": "50%",
+        "lastPlayed": "20/08/26"
+      }
+    },
+    {
       "map": "China",
       "count": 2,
       "wins": 0,
@@ -1332,22 +1348,6 @@
       }
     },
     {
-      "map": "Levant",
-      "count": 1,
-      "wins": 1,
-      "losses": 0,
-      "playtimeSec": 718,
-      "avgDuration": 718,
-      "winRate": 1,
-      "lastPlayed": 1785930817818,
-      "formatted": {
-        "playtime": "11m",
-        "avgDuration": "11m",
-        "winRate": "100%",
-        "lastPlayed": "05/08/26"
-      }
-    },
-    {
       "map": "Warship Warship",
       "count": 1,
       "wins": 0,
@@ -1432,7 +1432,7 @@
       222,
       218,
       284,
-      404,
+      405,
       163,
       247,
       138,
@@ -1443,7 +1443,7 @@
       272,
       456,
       443,
-      394,
+      395,
       360,
       523,
       648
@@ -1993,6 +1993,17 @@
       "category": "ffaCasual"
     },
     {
+      "gameId": "JyDPscho",
+      "start": "2026-08-20T16:45:36.253Z",
+      "map": "Levant",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 3318,
+      "totalPlayers": 99,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "DUA5Em4q",
       "start": "2026-08-20T11:51:09.990Z",
       "map": "China",
@@ -2187,17 +2198,6 @@
       "result": "defeat",
       "durationSeconds": 31,
       "totalPlayers": 1,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "etCWpHVQ",
-      "start": "2026-08-18T08:17:21.594Z",
-      "map": "Australia",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 631,
-      "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
     }

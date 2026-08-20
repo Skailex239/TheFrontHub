@@ -1,11 +1,11 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "lastSyncedAt": "2026-08-20T17:41:01.146Z",
+  "lastSyncedAt": "2026-08-20T17:43:07.634Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 3096,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.3,
+  "totalGames": 3097,
+  "newGamesThisSync": 1,
   "games": [
     {
       "gameId": "zsD8Y2rQ",
@@ -18,6 +18,20 @@
       "rankedType": "unranked",
       "result": "defeat",
       "totalPlayers": 82,
+      "username": "Skailex",
+      "clanTag": "LBU"
+    },
+    {
+      "gameId": "JyDPscho",
+      "start": "2026-08-20T16:45:36.253Z",
+      "durationSeconds": 3318,
+      "map": "Levant",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 99,
       "username": "Skailex",
       "clanTag": "LBU"
     },
