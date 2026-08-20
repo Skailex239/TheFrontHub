@@ -1,17 +1,20 @@
 name: Auto Sync
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ⚡ UNIFIED SYNC PIPELINE — All sync jobs in ONE workflow
+# ⚡ UNIFIED SYNC PIPELINE — All 6 syncs in PARALLEL + retrigger at the end
 #
-# Categories (sequential, 1 by 1):
-#   1. sync-standard    — FFA speedruns (normal)
-#   2. sync-compact     — FFA speedruns (compact)
-#   3. sync-teams       — Team games (Duos/Trios/Quads/Custom/HvN)
-#   4. sync-ranked      — Ranked 1v1 + 2v2
-#   5. sync-dashboard   — Dashboard scores
-#   6. sync-player-games — Player games + stats
+# Each sync writes to DIFFERENT files → no file conflicts:
+#   - sync-standard     → runs.json.gz, seen.json, checkpoint.json
+#   - sync-compact      → runs_compact.json.gz, seen_compact.json
+#   - sync-teams        → teams_runs.json, teams_seen.json
+#   - sync-ranked       → ranked.json, ranked_history.json
+#   - sync-dashboard    → dashboard_scores.json
+#   - sync-player-games → player-data/, player-stats/
 #
-# All jobs share the SAME concurrency group → only ONE sync at a time.
+# All 6 run in PARALLEL (no needs: between them). Git push conflicts are
+# handled by the retry loop (git pull --rebase --autostash, 5 attempts).
+#
+# The retrigger job waits for ALL 6 to finish, then re-dispatches the workflow.
 # ─────────────────────────────────────────────────────────────────────────────
 
 on:
@@ -58,7 +61,6 @@ jobs:
           done
 
   sync-compact:
-    needs: sync-standard
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -92,7 +94,6 @@ jobs:
           done
 
   sync-teams:
-    needs: sync-compact
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -125,7 +126,6 @@ jobs:
           done
 
   sync-ranked:
-    needs: sync-teams
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -157,7 +157,6 @@ jobs:
           done
 
   sync-dashboard:
-    needs: sync-ranked
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -188,7 +187,6 @@ jobs:
           done
 
   sync-player-games:
-    needs: sync-dashboard
     runs-on: ubuntu-latest
     permissions:
       contents: write
