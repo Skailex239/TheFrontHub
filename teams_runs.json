@@ -17144,6 +17144,52 @@
       "numPlayers": 29,
       "timestamp": "2026-08-20T02:21:16.238Z",
       "url": "https://openfront.io/game/rSqauSZB"
+    },
+    {
+      "id": "qXc3nTnQ",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "AnonNebula5",
+          "clientID": "KZYGjXfE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonKoala9",
+          "clientID": "qcsf6cxg",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1084,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 31,
+      "timestamp": "2026-08-20T03:29:11.031Z",
+      "url": "https://openfront.io/game/qXc3nTnQ"
+    },
+    {
+      "id": "ausURmvB",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "TryingTooHard67",
+          "clientID": "EpkD9GFJ",
+          "clanTag": null
+        },
+        {
+          "username": "Elon Musk",
+          "clientID": "kHLpFZBQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "timestamp": "2026-08-20T03:26:26.861Z",
+      "url": "https://openfront.io/game/ausURmvB"
     }
   ],
   "trios": [
@@ -83272,6 +83318,39 @@
       "numPlayers": 41,
       "timestamp": "2026-08-20T03:16:52.764Z",
       "url": "https://openfront.io/game/MsdW5Wf1"
+    },
+    {
+      "id": "iXUNBnwH",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "GulfOfAmerica",
+          "clientID": "8WQLUUJ2",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Indian ingame",
+          "clientID": "PRGMfaiD",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Caribbean Catastrophe",
+          "clientID": "7Wi2gu1A",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Pacific Motion",
+          "clientID": "3hkjKP1T",
+          "clanTag": "WTR"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1676,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "timestamp": "2026-08-20T03:14:51.637Z",
+      "url": "https://openfront.io/game/iXUNBnwH"
     }
   ]
 }
