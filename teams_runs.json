@@ -33566,6 +33566,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T15:09:54.751Z",
       "url": "https://openfront.io/game/dX6RvBon"
+    },
+    {
+      "id": "5YTx4EQQ",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Arracheur 2 Tana",
+          "clientID": "g3SVRp7k",
+          "clanTag": "LOVE"
+        },
+        {
+          "username": "AzuLa prime",
+          "clientID": "AyAg6Wvg",
+          "clanTag": "LOVE"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1620,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 83,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T15:13:32.479Z",
+      "url": "https://openfront.io/game/5YTx4EQQ"
     }
   ],
   "trios": [
@@ -69842,6 +69867,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T15:00:26.195Z",
       "url": "https://openfront.io/game/gPw35ahe"
+    },
+    {
+      "id": "kgJmgfWZ",
+      "mode": "trios",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "2a1b0t",
+          "clientID": "xCJ5kZRU",
+          "clanTag": null
+        },
+        {
+          "username": "RoccoSiffredi",
+          "clientID": "uGJ67cu3",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "don Corleone",
+          "clientID": "BrGN7jtN",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 994,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-20T15:23:05.586Z",
+      "url": "https://openfront.io/game/kgJmgfWZ"
     }
   ],
   "quads": [
@@ -111334,6 +111389,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T15:19:11.345Z",
       "url": "https://openfront.io/game/GQeioYQB"
+    },
+    {
+      "id": "RYbxEoJv",
+      "mode": "quads",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "send troops if im cooking",
+          "clientID": "JERNM58Z",
+          "clanTag": null
+        },
+        {
+          "username": "POLAR",
+          "clientID": "Rto3rhnS",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Liot",
+          "clientID": "3uPCgcsz",
+          "clanTag": null
+        },
+        {
+          "username": "anon",
+          "clientID": "2bEw6yrA",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1467,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T15:15:42.114Z",
+      "url": "https://openfront.io/game/RYbxEoJv"
     }
   ],
   "team_custom": [
