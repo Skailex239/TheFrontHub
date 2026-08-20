@@ -1238,3 +1238,158 @@
 :root.dark .pf-game-result.loss { background: rgba(220,80,80,.18);  color: #F87171; }
 :root.dark .pf-error-banner     { background: rgba(255,120,80,.15); border-color: rgba(255,120,80,.45); }
 :root.dark .pf-show-all:hover   { background: var(--bg-muted); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   🎨 PROFIL — Stats grid moderne + chips + clan tag
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Stats grid : 6 cards en grille responsive */
+.pf-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Stat card */
+.pf-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  transition: all 0.2s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.pf-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.8;
+}
+
+.pf-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-color: var(--border-strong);
+}
+
+/* Couleurs par stat */
+.pf-stat-orange::before { background: #FF6B00; }
+.pf-stat-blue::before   { background: #3B82F6; }
+.pf-stat-green::before   { background: #10B981; }
+.pf-stat-purple::before   { background: #9333EA; }
+.pf-stat-red::before      { background: #EF4444; }
+.pf-stat-gold::before     { background: #F59E0B; }
+
+.pf-stat-icon {
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.pf-stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--fg);
+  font-family: var(--f);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.pf-stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Chips d'info secondaire */
+.pf-extra-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pf-extra-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--mono);
+  color: var(--fg-secondary);
+  background: var(--bg-muted);
+  border-radius: var(--radius-pill);
+}
+
+/* Clan tag badge */
+.pf-clan-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-pill);
+}
+
+/* ── Responsive stats grid ── */
+@media (max-width: 1024px) {
+  .pf-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pf-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pf-stat-card {
+    padding: 12px 6px;
+  }
+  .pf-stat-value {
+    font-size: 20px;
+  }
+  .pf-stat-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .pf-stat-card {
+    padding: 10px 4px;
+  }
+  .pf-stat-value {
+    font-size: 18px;
+  }
+  .pf-stat-label {
+    font-size: 10px;
+  }
+}
+
+/* Dark mode */
+:root[data-theme="dark"] .pf-stat-card,
+:root.dark .pf-stat-card {
+  background: var(--bg-subtle);
+}
