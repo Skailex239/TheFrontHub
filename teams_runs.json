@@ -70393,6 +70393,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T22:21:09.331Z",
       "url": "https://openfront.io/game/2HaGbWgR"
+    },
+    {
+      "id": "9rbVVecd",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RoLo",
+          "clientID": "9Hzzf41M",
+          "clanTag": null
+        },
+        {
+          "username": "whereami",
+          "clientID": "oWAG5YkZ",
+          "clanTag": null
+        },
+        {
+          "username": "Republic of Toast",
+          "clientID": "TWfaACuz",
+          "clanTag": null
+        },
+        {
+          "username": "3mshtar",
+          "clientID": "bNghVkcr",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 993,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T22:33:36.566Z",
+      "url": "https://openfront.io/game/9rbVVecd"
     }
   ],
   "team_custom": [
