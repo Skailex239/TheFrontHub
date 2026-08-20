@@ -217,19 +217,36 @@ async function main() {
       console.log(`[${new Date(windowEnd).toISOString()}] ${progress}`);
     }
 
-    // Fetch all Team games in this window (Option B)
-    const url = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000`;
-    const data = await fetchWithRetry(url);
-    if (!data) continue;
+    // Fetch all Team games in this window (Option B — 2 requests: regular + offset if truncated)
+    const url1 = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000`;
+    const data1 = await fetchWithRetry(url1);
+    if (!data1) {
+      cursor = new Date(windowStart);
+      continue;
+    }
+    let games = Array.isArray(data1) ? data1 : (data1.games || []);
 
-    const games = Array.isArray(data) ? data : (data.games || []);
+    // If 1000 games returned, fetch next page
+    if (games.length === 1000) {
+      const url2 = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000&offset=1000`;
+      const data2 = await fetchWithRetry(url2);
+      if (data2) {
+        const moreGames = Array.isArray(data2) ? data2 : (data2.games || []);
+        games = [...games, ...moreGames];
+        console.log(`  ⚠️ Fenêtre ${new Date(windowEnd).toISOString().slice(11, 19)}: ${games.length} games (pagination)`);
+      }
+    }
+
     const candidates = games.filter(g =>
       g.type === "Public" &&
       (g.numPlayers || 0) >= MIN_HUMANS &&
       g.game && !seen.has(g.game)
     );
 
-    if (candidates.length === 0) continue;
+    if (candidates.length === 0) {
+      cursor = new Date(windowStart);
+      continue;
+    }
 
     // Fetch detail in parallel chunks
     for (let c = 0; c < candidates.length; c += DETAIL_CONCURRENCY) {

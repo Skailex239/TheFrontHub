@@ -217,6 +217,11 @@ function extractTeamRun(raw) {
 }
 
 // ── Sync recent (last 2h, accumulate) ──
+// Strategy: 2 requests per 30s window
+//   - Request 1: mode=Team (no playerTeams filter) → fetches up to 1000 games
+//   - Request 2: if request 1 hit the 1000-limit (Content-Range indicates more),
+//                fetch with offset=1000 to get remaining games
+// This avoids missing games on busy periods where a single 30s window has >1000 Team games.
 async function syncRecent() {
   console.log(`[teams] 🔄 Sync récente — ${new Date().toISOString()}`);
   const seen = loadSeen();
@@ -230,18 +235,44 @@ async function syncRecent() {
 
   const windows = buildWindows30s(ago, now);
   console.log(`[teams] ${windows.length} fenêtres de 30s (~${Math.round((now - ago) / 60000)} min, max 2h, filtre Public Team ≥10p)`);
+  console.log(`[teams] 2 requêtes max par fenêtre (1 normale + 1 avec offset si >1000 games)`);
 
   let totalNew = 0;
+  let totalApiCalls = 0;
   const newRunsByMode = emptyRuns();
-  const gameIdsToFetch = []; // { gameId }
+  const gameIdsToFetch = []; // { gameId, playerTeams }
 
-  // Phase 1: fetch game lists in each window (Option B: ONE request per window)
+  // Phase 1: fetch game lists in each window (Option B — 2 requests max per window)
   for (const { start, end } of windows) {
-    const url = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000`;
-    const data = await fetchWithRetry(url);
-    if (!data) continue;
-    const games = Array.isArray(data) ? data : (data.games || []);
-    for (const g of games) {
+    // Request 1: regular
+    const url1 = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000`;
+    const data1 = await fetchWithRetry(url1);
+    totalApiCalls++;
+    let games1 = [];
+    let totalInWindow = 0;
+    if (data1) {
+      games1 = Array.isArray(data1) ? data1 : (data1.games || []);
+      totalInWindow = games1.length;
+    }
+
+    // Request 2: only if request 1 returned 1000 games (might be truncated)
+    let games2 = [];
+    if (games1.length === 1000) {
+      const url2 = `${API_BASE}/public/games?start=${start.toISOString()}&end=${end.toISOString()}&type=Public&mode=Team&limit=1000&offset=1000`;
+      const data2 = await fetchWithRetry(url2);
+      totalApiCalls++;
+      if (data2) {
+        games2 = Array.isArray(data2) ? data2 : (data2.games || []);
+        totalInWindow += games2.length;
+      }
+    }
+
+    if (totalInWindow > 1000) {
+      console.log(`[teams] ⚠️ Fenêtre ${start.toISOString().slice(11, 19)}: ${totalInWindow} games (pagination utilisée)`);
+    }
+
+    const allGames = [...games1, ...games2];
+    for (const g of allGames) {
       if (g.type !== "Public") continue;
       if ((g.numPlayers || 0) < MIN_HUMANS) continue;
       const gameId = g.game || g.gameId;
@@ -251,7 +282,7 @@ async function syncRecent() {
     if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
   }
 
-  console.log(`[teams] ${gameIdsToFetch.length} games candidates à fetcher`);
+  console.log(`[teams] ${gameIdsToFetch.length} games candidates à fetcher (${totalApiCalls} appels API)`);
 
   // Phase 2: fetch game details in parallel chunks
   const chunks = [];
@@ -301,7 +332,7 @@ async function syncRecent() {
   cp.last_sync_time = String(Date.now());
   saveCheckpoint(cp);
 
-  console.log(`[teams] ✅ Sync récente terminée — ${totalNew} nouveaux runs`);
+  console.log(`[teams] ✅ Sync récente terminée — ${totalNew} nouveaux runs (${totalApiCalls} appels API)`);
 
   // Generate public payload
   generatePublicPayload(runs);
@@ -388,11 +419,23 @@ async function syncHistory(maxWindows = DEFAULT_HISTORY_WINDOWS) {
       break;
     }
 
-    // Option B: ONE request per window (instead of one per mode)
-    const url = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000`;
-    const data = await fetchWithRetry(url);
-    if (!data) continue;
-    const games = Array.isArray(data) ? data : (data.games || []);
+    // Option B: 2 requests per window (regular + offset if truncated)
+    const url1 = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000`;
+    const data1 = await fetchWithRetry(url1);
+    if (!data1) continue;
+    let games = Array.isArray(data1) ? data1 : (data1.games || []);
+
+    // If 1000 games returned, fetch next page (offset=1000)
+    if (games.length === 1000) {
+      const url2 = `${API_BASE}/public/games?start=${new Date(windowStart).toISOString()}&end=${new Date(windowEnd).toISOString()}&type=Public&mode=Team&limit=1000&offset=1000`;
+      const data2 = await fetchWithRetry(url2);
+      if (data2) {
+        const moreGames = Array.isArray(data2) ? data2 : (data2.games || []);
+        games = [...games, ...moreGames];
+        console.log(`[teams-history] ⚠️ Fenêtre ${new Date(windowEnd).toISOString().slice(11, 19)}: ${games.length} games (pagination utilisée)`);
+      }
+    }
+
     for (const g of games) {
       if (g.type !== "Public") continue;
       if ((g.numPlayers || 0) < MIN_HUMANS) continue;
