@@ -19217,6 +19217,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T19:51:18.361Z",
       "url": "https://openfront.io/game/eJYuBTkY"
+    },
+    {
+      "id": "Wbwi1kJC",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonBeetle",
+          "clientID": "h77sbXey",
+          "clanTag": null
+        },
+        {
+          "username": "lRGC",
+          "clientID": "X6Fs2GA2",
+          "clanTag": "IR"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 408,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:15:21.348Z",
+      "url": "https://openfront.io/game/Wbwi1kJC"
+    },
+    {
+      "id": "XdxtqnMs",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PeesALittle",
+          "clientID": "S7ZjGeLC",
+          "clanTag": null
+        },
+        {
+          "username": "Er Cole33",
+          "clientID": "gCSg4Zvo",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 671,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T20:11:03.587Z",
+      "url": "https://openfront.io/game/XdxtqnMs"
     }
   ],
   "trios": [
@@ -77040,6 +77090,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T20:01:37.490Z",
       "url": "https://openfront.io/game/HtewoTQz"
+    },
+    {
+      "id": "pysJMT73",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LeFish",
+          "clientID": "QNbWwBAo",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Blossom",
+          "clientID": "CKagKC49",
+          "clanTag": "JR"
+        },
+        {
+          "username": "zmess",
+          "clientID": "KpaUXLvB",
+          "clanTag": "JR"
+        },
+        {
+          "username": "aestrixs",
+          "clientID": "Twtv1dpF",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Pokimane",
+          "clientID": "mTJRkLVj",
+          "clanTag": "JR"
+        },
+        {
+          "username": "bro",
+          "clientID": "aaUoLkk1",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Mister Mount Rushmore",
+          "clientID": "9yuWUdZq",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 794,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T20:08:00.395Z",
+      "url": "https://openfront.io/game/pysJMT73"
     }
   ],
   "hvn": [
