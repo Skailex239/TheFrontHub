@@ -18192,6 +18192,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T17:35:36.023Z",
       "url": "https://openfront.io/game/41V3Wupp"
+    },
+    {
+      "id": "18YDyQ25",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "NeedHugs",
+          "clientID": "PpV6rpCG",
+          "clanTag": null
+        },
+        {
+          "username": "Arverni",
+          "clientID": "SMRomWrx",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 520,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T17:42:49.957Z",
+      "url": "https://openfront.io/game/18YDyQ25"
+    },
+    {
+      "id": "op5kiKqn",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AjdoTATA",
+          "clientID": "EBhc9cU3",
+          "clanTag": "MNE"
+        },
+        {
+          "username": "Peaceful",
+          "clientID": "m1nd81iw",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 779,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T17:36:45.591Z",
+      "url": "https://openfront.io/game/op5kiKqn"
     }
   ],
   "trios": [
@@ -72215,6 +72265,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T17:31:43.791Z",
       "url": "https://openfront.io/game/M8BfDCT7"
+    },
+    {
+      "id": "DsKavPK7",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Is there life on Mars",
+          "clientID": "1LMCB8FP",
+          "clanTag": null
+        },
+        {
+          "username": "Fra",
+          "clientID": "EuNt168E",
+          "clanTag": "002"
+        },
+        {
+          "username": "HouseRedknight",
+          "clientID": "jz1tfcRM",
+          "clanTag": "BE"
+        },
+        {
+          "username": "Ill",
+          "clientID": "pQGngVg6",
+          "clanTag": null
+        },
+        {
+          "username": "GhenghisDong",
+          "clientID": "edjJ4Cbf",
+          "clanTag": "8EQD"
+        },
+        {
+          "username": "Sadness333",
+          "clientID": "YFiKBRvR",
+          "clanTag": null
+        },
+        {
+          "username": "Big Muscles",
+          "clientID": "QUdtaLPJ",
+          "clanTag": "JKZ"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1019,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-20T17:33:20.895Z",
+      "url": "https://openfront.io/game/DsKavPK7"
+    },
+    {
+      "id": "uNWQcQsB",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "floetus",
+          "clientID": "tNP955h1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Kim Jong Un",
+          "clientID": "HL8vP7YG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SUPPORT YOU",
+          "clientID": "taXGgMAE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NukaCola",
+          "clientID": "YWp9AcY5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "HEY IM BUILDIN HERE",
+          "clientID": "5FX77KFy",
+          "clanTag": "UN"
+        },
+        {
+          "username": "mjs",
+          "clientID": "kkpZmqdM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "little Kingdom DK",
+          "clientID": "oTtk7TTD",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 571,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T17:40:05.263Z",
+      "url": "https://openfront.io/game/uNWQcQsB"
     }
   ],
   "hvn": [
