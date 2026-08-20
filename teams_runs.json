@@ -17417,6 +17417,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T15:36:01.884Z",
       "url": "https://openfront.io/game/Fm4dxSzn"
+    },
+    {
+      "id": "HH5upmyg",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "captain necrose",
+          "clientID": "tLFA3zvR",
+          "clanTag": "VZ"
+        },
+        {
+          "username": "Plati",
+          "clientID": "pfEueLmg",
+          "clanTag": "BZH"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 797,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T15:47:03.040Z",
+      "url": "https://openfront.io/game/HH5upmyg"
     }
   ],
   "trios": [
@@ -40201,6 +40226,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T15:43:01.810Z",
       "url": "https://openfront.io/game/8XzXUwtE"
+    },
+    {
+      "id": "oQXmTthZ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon991",
+          "clientID": "28tUr985",
+          "clanTag": null
+        },
+        {
+          "username": "Blaaaah",
+          "clientID": "hXms47d7",
+          "clanTag": "NERV"
+        },
+        {
+          "username": "The Norderlandian empire",
+          "clientID": "fDZgYBye",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 659,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:49:25.204Z",
+      "url": "https://openfront.io/game/oQXmTthZ"
+    },
+    {
+      "id": "KzmR5tLk",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Volk",
+          "clientID": "djbhJjLc",
+          "clanTag": "GRAND"
+        },
+        {
+          "username": "LordKnoedel",
+          "clientID": "5X7xvQZ9",
+          "clanTag": null
+        },
+        {
+          "username": "Enter your username",
+          "clientID": "bZNfgCGh",
+          "clanTag": "A6"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 476,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T15:55:12.056Z",
+      "url": "https://openfront.io/game/KzmR5tLk"
     }
   ],
   "quads": [
@@ -63168,6 +63253,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-20T15:39:37.116Z",
       "url": "https://openfront.io/game/vQa9auVG"
+    },
+    {
+      "id": "ReN2Wr2j",
+      "mode": "quads",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "sXqCubLH",
+          "clanTag": null
+        },
+        {
+          "username": "eppsteinn",
+          "clientID": "15AKnRBm",
+          "clanTag": "KIRK"
+        },
+        {
+          "username": "mercuries",
+          "clientID": "5rJfnYz5",
+          "clanTag": null
+        },
+        {
+          "username": "brokenfishy",
+          "clientID": "cXWsNJMk",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T15:34:54.821Z",
+      "url": "https://openfront.io/game/ReN2Wr2j"
     }
   ],
   "team_custom": [
@@ -74012,6 +74132,146 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T15:42:05.245Z",
       "url": "https://openfront.io/game/qS5HjxzX"
+    },
+    {
+      "id": "DP2fwrGX",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Anon578",
+          "clientID": "U2zkD1Dx",
+          "clanTag": null
+        },
+        {
+          "username": "Tonitoni",
+          "clientID": "HYTuk5kL",
+          "clanTag": "RON"
+        },
+        {
+          "username": "Sind",
+          "clientID": "w9LZ693q",
+          "clanTag": null
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "eZNDBExc",
+          "clanTag": null
+        },
+        {
+          "username": "WildCoconut.toQ7",
+          "clientID": "8XqpN6MT",
+          "clanTag": null
+        },
+        {
+          "username": "AnonIvory4",
+          "clientID": "9xBYZDnT",
+          "clanTag": null
+        },
+        {
+          "username": "Stef",
+          "clientID": "27nLUNZU",
+          "clanTag": "RON"
+        },
+        {
+          "username": "joop",
+          "clientID": "gHvqgYZt",
+          "clanTag": null
+        },
+        {
+          "username": "Expert",
+          "clientID": "QuyyakJY",
+          "clanTag": "SOK"
+        },
+        {
+          "username": "Atlas",
+          "clientID": "jhutoL9n",
+          "clanTag": null
+        },
+        {
+          "username": "pengin",
+          "clientID": "5pUuN2Zv",
+          "clanTag": null
+        },
+        {
+          "username": "moneyman",
+          "clientID": "eomqUoxC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "DerPleb",
+          "clientID": "6BaVUVvA",
+          "clanTag": null
+        },
+        {
+          "username": "Arisszz",
+          "clientID": "tYncLvkR",
+          "clanTag": null
+        },
+        {
+          "username": "minow",
+          "clientID": "mwTUP9oY",
+          "clanTag": null
+        },
+        {
+          "username": "sos",
+          "clientID": "T4ojeT5g",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLagoon8",
+          "clientID": "m3WjMcJE",
+          "clanTag": null
+        },
+        {
+          "username": "EMPIEmpire Genjis_Khan",
+          "clientID": "oU2dDkun",
+          "clanTag": "LUCAS"
+        },
+        {
+          "username": "shatteron",
+          "clientID": "b8Fdx2qF",
+          "clanTag": null
+        },
+        {
+          "username": "SHIKAJIKA",
+          "clientID": "uCkSHeGG",
+          "clanTag": null
+        },
+        {
+          "username": "Empire thomas de lacroix",
+          "clientID": "F1fWt2NK",
+          "clanTag": null
+        },
+        {
+          "username": "Andor",
+          "clientID": "wbQLFiym",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Just Trading",
+          "clientID": "P86JMggo",
+          "clanTag": "PACE"
+        },
+        {
+          "username": "Peach",
+          "clientID": "ZtJ2EnrK",
+          "clanTag": "MANGO"
+        },
+        {
+          "username": "0008",
+          "clientID": "YPoWEMXS",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 838,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T15:50:09.242Z",
+      "url": "https://openfront.io/game/DP2fwrGX"
     }
   ]
 }
