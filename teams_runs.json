@@ -17842,6 +17842,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T16:30:39.319Z",
       "url": "https://openfront.io/game/z5zHZhz9"
+    },
+    {
+      "id": "58LnBE4T",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Byte",
+          "clientID": "QT6x9u9V",
+          "clanTag": null
+        },
+        {
+          "username": "mehdi",
+          "clientID": "doyc7L8o",
+          "clanTag": "MANGA"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 486,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T17:00:24.266Z",
+      "url": "https://openfront.io/game/58LnBE4T"
+    },
+    {
+      "id": "BpMeKGy9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mile77",
+          "clientID": "1k8aBVGV",
+          "clanTag": null
+        },
+        {
+          "username": "House of Bolkiah",
+          "clientID": "1QxgKWze",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 517,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T16:57:31.058Z",
+      "url": "https://openfront.io/game/BpMeKGy9"
     }
   ],
   "trios": [
@@ -40986,6 +41036,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-20T16:44:39.696Z",
       "url": "https://openfront.io/game/R6KXzrHx"
+    },
+    {
+      "id": "ynCLKgLj",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "NOWIK",
+          "clientID": "SPziruRx",
+          "clanTag": "AST"
+        },
+        {
+          "username": "PreciousBubbles",
+          "clientID": "yyeiwVYB",
+          "clanTag": null
+        },
+        {
+          "username": "MARS",
+          "clientID": "cmxNGRtA",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 541,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T16:59:44.219Z",
+      "url": "https://openfront.io/game/ynCLKgLj"
     }
   ],
   "quads": [
@@ -64303,6 +64383,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T16:52:47.256Z",
       "url": "https://openfront.io/game/HjVM3eyS"
+    },
+    {
+      "id": "JUExM9uz",
+      "mode": "quads",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Beforethisafternoon",
+          "clientID": "THwvhSoN",
+          "clanTag": null
+        },
+        {
+          "username": "PetoZabijak",
+          "clientID": "wkXdq3Ks",
+          "clanTag": "PO"
+        },
+        {
+          "username": "AnonScepter1",
+          "clientID": "5s3vx5F5",
+          "clanTag": null
+        },
+        {
+          "username": "Dutnik",
+          "clientID": "g8jngo2i",
+          "clanTag": "PO"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 951,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-20T16:52:00.709Z",
+      "url": "https://openfront.io/game/JUExM9uz"
     }
   ],
   "team_custom": [
