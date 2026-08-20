@@ -1483,7 +1483,16 @@ function renderLeaderboard(d){
     const overlayImg = getPlayerOverlay(r.player, "speedruns");
     const overlayClass = overlayImg ? ' has-overlay' : '';
     const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
-    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+r.player+diff+isNew+'</div><a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
+    let displayName = r.player;
+    let expandBtn = '';
+    if (currentMode === 'team_custom' && r.player && r.player.includes(' + ')) {
+      const parts = r.player.split(' + ');
+      if (parts.length > 5) {
+        displayName = parts.slice(0, 5).join(' + ') + ' + ...';
+        expandBtn = `<button class="team-expand-btn" onclick="event.stopPropagation();this.parentElement.querySelector('.team-full').style.display='inline';this.style.display='none'" title="Voir tous les joueurs">+${parts.length - 5} de plus</button><span class="team-full" style="display:none">${r.player}</span>`;
+      }
+    }
+    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+displayName+diff+isNew+'</div>'+expandBtn+'<a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
   }).join("");
   if(d.runs.length>show)html+='<button class="see-more-btn" onclick="seeMore(\''+esc(d.map)+'\')">Voir plus ('+(d.runs.length-show)+' restants)</button>';
   document.getElementById("leaderboard").innerHTML=html;
