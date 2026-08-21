@@ -55056,6 +55056,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T15:00:07.200Z",
       "url": "https://openfront.io/game/XoUd3pnJ"
+    },
+    {
+      "id": "G98eDsVQ",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Joey Outlaw",
+          "clientID": "bQxL2G1c",
+          "clanTag": "UN"
+        },
+        {
+          "username": "pilote",
+          "clientID": "Kgp6mc8Q",
+          "clanTag": "PIX"
+        },
+        {
+          "username": "beluca",
+          "clientID": "jCBQZgmC",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 620,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T15:05:31.054Z",
+      "url": "https://openfront.io/game/G98eDsVQ"
+    },
+    {
+      "id": "o59JHv3K",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonMeteor3",
+          "clientID": "V9k3XTJx",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "nm3ajVTX",
+          "clanTag": null
+        },
+        {
+          "username": "Tario",
+          "clientID": "krREprNL",
+          "clanTag": "AMP"
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 1067,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:56:09.938Z",
+      "url": "https://openfront.io/game/o59JHv3K"
     }
   ],
   "quads": [
@@ -104210,6 +104270,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T14:52:49.239Z",
       "url": "https://openfront.io/game/ydJuMPKP"
+    },
+    {
+      "id": "FN9CvLgx",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "METI",
+          "clientID": "eJnx7cdr",
+          "clanTag": "IR"
+        },
+        {
+          "username": "FUFU",
+          "clientID": "4cWJiNQu",
+          "clanTag": null
+        },
+        {
+          "username": "Polar Bears",
+          "clientID": "ge8zRcGe",
+          "clanTag": "BEAR"
+        },
+        {
+          "username": "vinland",
+          "clientID": "ArZ2fpfa",
+          "clanTag": null
+        },
+        {
+          "username": "Timmy",
+          "clientID": "N44vpsoy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShovel7",
+          "clientID": "BL72kVyo",
+          "clanTag": null
+        },
+        {
+          "username": "GreenPerl",
+          "clientID": "vGd8i8Vv",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 855,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T15:01:24.780Z",
+      "url": "https://openfront.io/game/FN9CvLgx"
     }
   ],
   "hvn": [
