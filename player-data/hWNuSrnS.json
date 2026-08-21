@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-21T08:28:05.216Z",
+  "lastSyncedAt": "2026-08-21T08:29:56.682Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 3804,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.4,
+  "totalGames": 3805,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "pmopMysm",
+      "start": "2026-08-21T08:19:15.852Z",
+      "durationSeconds": 592,
+      "map": "Europe Classic",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "1v1",
+      "result": "victory",
+      "totalPlayers": 2,
+      "username": "Nvr_Kn",
+      "clanTag": "CACA"
+    },
     {
       "gameId": "J2uKpk6q",
       "start": "2026-08-21T07:32:01.619Z",
