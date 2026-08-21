@@ -71443,6 +71443,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T23:59:24.851Z",
       "url": "https://openfront.io/game/5mGFd18a"
+    },
+    {
+      "id": "EureuBmW",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonViolin4",
+          "clientID": "W8t53U66",
+          "clanTag": null
+        },
+        {
+          "username": "Blackovy",
+          "clientID": "85uhA5TR",
+          "clanTag": "EGP"
+        },
+        {
+          "username": "Anon891",
+          "clientID": "QUgsaghJ",
+          "clanTag": null
+        },
+        {
+          "username": "eli",
+          "clientID": "UFymuNHX",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 930,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 27,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T00:01:29.972Z",
+      "url": "https://openfront.io/game/EureuBmW"
     }
   ],
   "team_custom": [
