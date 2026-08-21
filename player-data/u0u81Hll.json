@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-21T10:22:48.517Z",
+  "lastSyncedAt": "2026-08-21T10:24:48.338Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 2196,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.3,
+  "totalGames": 2197,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "Jksq1atb",
+      "start": "2026-08-21T10:07:36.445Z",
+      "durationSeconds": 980,
+      "map": "Lisbon",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 53,
+      "username": "Road to 1600",
+      "clanTag": null
+    },
     {
       "gameId": "yQizy5Ry",
       "start": "2026-08-21T09:52:00.003Z",

@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T10:22:50.540Z",
-  "lastSyncedAt": "2026-08-21T10:22:48.517Z",
-  "totalGames": 2196,
+  "computedAt": "2026-08-21T10:24:51.284Z",
+  "lastSyncedAt": "2026-08-21T10:24:48.338Z",
+  "totalGames": 2197,
   "careerWins": {
     "ffaCasual": 383,
     "ffaRanked": 328,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 456",
     "totalWins": "821",
-    "totalGames": "2 196",
+    "totalGames": "2 197",
     "totalPlaytime": "23j 2h",
     "totalPlaytimeCompact": "23j 2h",
     "avgGameDuration": "15m 8s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "554h"
   },
   "playtime": {
-    "totalSec": 1995469,
-    "avgGameSec": 908.6835154826958,
+    "totalSec": 1996449,
+    "avgGameSec": 908.7159763313609,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1398,
-        "playtimeSec": 1616090,
+        "games": 1399,
+        "playtimeSec": 1617070,
         "wins": 383
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 821,
-    "defeat": 1047,
+    "defeat": 1048,
     "incomplete": 328
   },
   "maps": [
@@ -740,6 +740,22 @@
       }
     },
     {
+      "map": "Lisbon",
+      "count": 12,
+      "wins": 5,
+      "losses": 7,
+      "playtimeSec": 15271,
+      "avgDuration": 1272.5833333333333,
+      "winRate": 0.4166666666666667,
+      "lastPlayed": 1787306856445,
+      "formatted": {
+        "playtime": "4h 14m",
+        "avgDuration": "21m",
+        "winRate": "42%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Hong Kong",
       "count": 12,
       "wins": 6,
@@ -785,22 +801,6 @@
         "avgDuration": "20m",
         "winRate": "42%",
         "lastPlayed": "04/06/26"
-      }
-    },
-    {
-      "map": "Lisbon",
-      "count": 11,
-      "wins": 5,
-      "losses": 6,
-      "playtimeSec": 14291,
-      "avgDuration": 1299.1818181818182,
-      "winRate": 0.45454545454545453,
-      "lastPlayed": 1786722244416,
-      "formatted": {
-        "playtime": "3h 58m",
-        "avgDuration": "21m",
-        "winRate": "45%",
-        "lastPlayed": "14/08/26"
       }
     },
     {
@@ -1666,7 +1666,7 @@
       15,
       43,
       70,
-      75,
+      76,
       125,
       130,
       143,
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      350,
+      351,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 4,
-        "playtimeSec": 4649
+        "count": 5,
+        "playtimeSec": 5629
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 4,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "Jksq1atb",
+      "start": "2026-08-21T10:07:36.445Z",
+      "map": "Lisbon",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 980,
+      "totalPlayers": 53,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "yQizy5Ry",
       "start": "2026-08-21T09:52:00.003Z",
@@ -2427,17 +2438,6 @@
       "result": "victory",
       "durationSeconds": 1188,
       "totalPlayers": 54,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "c8PRERdt",
-      "start": "2026-08-19T10:02:20.211Z",
-      "map": "Hecate Strait",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1084,
-      "totalPlayers": 75,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
