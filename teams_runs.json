@@ -26842,6 +26842,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:07:35.875Z",
       "url": "https://openfront.io/game/ePZkBc6K"
+    },
+    {
+      "id": "MwPeJUmP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ANON2",
+          "clientID": "Sgf72RP4",
+          "clanTag": null
+        },
+        {
+          "username": "Adrian",
+          "clientID": "8DZDtdPY",
+          "clanTag": "ACE"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:14:00.281Z",
+      "url": "https://openfront.io/game/MwPeJUmP"
+    },
+    {
+      "id": "R79Qtdjc",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "najsamak",
+          "clientID": "ftsYDrwF",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFern3",
+          "clientID": "p93hczTC",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 595,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:12:48.703Z",
+      "url": "https://openfront.io/game/R79Qtdjc"
     }
   ],
   "trios": [
