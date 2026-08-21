@@ -28042,6 +28042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:32:32.773Z",
       "url": "https://openfront.io/game/tRgJgVb9"
+    },
+    {
+      "id": "dvethoGV",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "afkWashingGrandma",
+          "clientID": "UQzr8zdv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSphinx4",
+          "clientID": "aypbsW6u",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 549,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:36:04.010Z",
+      "url": "https://openfront.io/game/dvethoGV"
     }
   ],
   "trios": [
@@ -58536,6 +58561,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:34:38.914Z",
       "url": "https://openfront.io/game/QixGbE8Y"
+    },
+    {
+      "id": "8MJowxzN",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Duckling",
+          "clientID": "MHdEboeV",
+          "clanTag": null
+        },
+        {
+          "username": "CCCP",
+          "clientID": "bY1EMyqo",
+          "clanTag": "BEL"
+        },
+        {
+          "username": "AnonClay4",
+          "clientID": "qVvLJX5H",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 542,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:37:36.623Z",
+      "url": "https://openfront.io/game/8MJowxzN"
     }
   ],
   "quads": [
@@ -89728,6 +89783,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T19:10:25.361Z",
       "url": "https://openfront.io/game/XxeZH3nk"
+    },
+    {
+      "id": "8maeybTM",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSeal1",
+          "clientID": "wiVg9pZq",
+          "clanTag": null
+        },
+        {
+          "username": "Farfa",
+          "clientID": "z6B1ETSH",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSphinx7",
+          "clientID": "zP5UdyDR",
+          "clanTag": null
+        },
+        {
+          "username": "Uncle Ben",
+          "clientID": "oo33aras",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 491,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T19:37:25.153Z",
+      "url": "https://openfront.io/game/8maeybTM"
     }
   ],
   "team_custom": [
