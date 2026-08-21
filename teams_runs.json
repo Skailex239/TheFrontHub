@@ -25617,6 +25617,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T13:47:43.563Z",
       "url": "https://openfront.io/game/oDN4Rpme"
+    },
+    {
+      "id": "6Xitsbxm",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon852",
+          "clientID": "TJs39dxi",
+          "clanTag": null
+        },
+        {
+          "username": "JT2756",
+          "clientID": "JRdouC5j",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1085,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:44:00.305Z",
+      "url": "https://openfront.io/game/6Xitsbxm"
     }
   ],
   "trios": [
@@ -101850,6 +101875,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T13:46:00.938Z",
       "url": "https://openfront.io/game/PFvCvvG1"
+    },
+    {
+      "id": "yq11jmS2",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Zamunda",
+          "clientID": "1USsTxqc",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "SpringBamboo",
+          "clientID": "RTcfopSK",
+          "clanTag": "CCP"
+        },
+        {
+          "username": "AnonPlow3",
+          "clientID": "58EeQqdT",
+          "clanTag": null
+        },
+        {
+          "username": "Harfa",
+          "clientID": "Qj6ESQWV",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "Landia",
+          "clientID": "KBbBsMf2",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "DSTRYHMS",
+          "clientID": "STySVBEH",
+          "clanTag": "42"
+        },
+        {
+          "username": "AnonUnicorn6",
+          "clientID": "ScHAEwda",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 652,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T13:51:54.844Z",
+      "url": "https://openfront.io/game/yq11jmS2"
     }
   ],
   "hvn": [
