@@ -23267,6 +23267,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:46:49.460Z",
       "url": "https://openfront.io/game/juLfsqJZ"
+    },
+    {
+      "id": "qUpc8EFe",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ABOBA",
+          "clientID": "uBWYJ8sG",
+          "clanTag": null
+        },
+        {
+          "username": "MightyWizard.Sp17",
+          "clientID": "tYhxGCia",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1199,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T08:14:19.083Z",
+      "url": "https://openfront.io/game/qUpc8EFe"
+    },
+    {
+      "id": "J57yJLfD",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Normandy",
+          "clientID": "bxH8kE47",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVelvet5",
+          "clientID": "G5ujAfZm",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1286,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T08:13:13.533Z",
+      "url": "https://openfront.io/game/J57yJLfD"
     }
   ],
   "trios": [
@@ -50401,6 +50451,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T08:16:20.696Z",
       "url": "https://openfront.io/game/HVA2DfYa"
+    },
+    {
+      "id": "CEcbgJK7",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Edouard1er",
+          "clientID": "Xuumtwbu",
+          "clanTag": null
+        },
+        {
+          "username": "Pvt Baldrick",
+          "clientID": "Qhy8rfeE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLake2",
+          "clientID": "nMWnU8mY",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 555,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T08:25:11.704Z",
+      "url": "https://openfront.io/game/CEcbgJK7"
     }
   ],
   "quads": [
