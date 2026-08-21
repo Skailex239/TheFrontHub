@@ -53761,6 +53761,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T13:18:54.163Z",
       "url": "https://openfront.io/game/fscjiAdi"
+    },
+    {
+      "id": "qnw56gnd",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "ItsMuffin",
+          "clientID": "Ektheii9",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "DefNotEddie",
+          "clientID": "LB646S6j",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "Dex",
+          "clientID": "oG8PexY2",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 1379,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T13:17:36.580Z",
+      "url": "https://openfront.io/game/qnw56gnd"
+    },
+    {
+      "id": "zzKDBaW1",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Joker",
+          "clientID": "oqbATj7T",
+          "clanTag": null
+        },
+        {
+          "username": "Albert",
+          "clientID": "8VigfbSH",
+          "clanTag": "CH"
+        },
+        {
+          "username": "ShadowFax",
+          "clientID": "PE8rVKKb",
+          "clanTag": "EN"
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 705,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T13:28:02.280Z",
+      "url": "https://openfront.io/game/zzKDBaW1"
     }
   ],
   "quads": [
@@ -82538,6 +82598,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T13:15:30.942Z",
       "url": "https://openfront.io/game/7HNS7fCE"
+    },
+    {
+      "id": "Q9rf7evx",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Youp",
+          "clientID": "3zEePGjW",
+          "clanTag": null
+        },
+        {
+          "username": "Lozka",
+          "clientID": "yRgjTbBd",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "Castella",
+          "clientID": "LS1dtgtf",
+          "clanTag": null
+        },
+        {
+          "username": "Kidowa",
+          "clientID": "gE8k8EM9",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 887,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T13:24:58.584Z",
+      "url": "https://openfront.io/game/Q9rf7evx"
     }
   ],
   "team_custom": [
