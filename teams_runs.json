@@ -22617,6 +22617,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:00:21.759Z",
       "url": "https://openfront.io/game/QSVMJtDe"
+    },
+    {
+      "id": "ggymBfVE",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon412",
+          "clientID": "VXbSE8Ho",
+          "clanTag": null
+        },
+        {
+          "username": "DONT BLOCK YOUR TEAMMATE",
+          "clientID": "LnmNdRBD",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 584,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:03:44.452Z",
+      "url": "https://openfront.io/game/ggymBfVE"
     }
   ],
   "trios": [
@@ -75893,6 +75918,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T06:31:46.499Z",
       "url": "https://openfront.io/game/Tum21T1L"
+    },
+    {
+      "id": "33fGQnPZ",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Charley Patton",
+          "clientID": "7yZwr4qy",
+          "clanTag": null
+        },
+        {
+          "username": "Anon194",
+          "clientID": "LXK23ZiM",
+          "clanTag": null
+        },
+        {
+          "username": "Vandenberg",
+          "clientID": "sLmqDoUc",
+          "clanTag": null
+        },
+        {
+          "username": "Kos1nx",
+          "clientID": "r21d1EzR",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 579,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T07:04:58.008Z",
+      "url": "https://openfront.io/game/33fGQnPZ"
     }
   ],
   "team_custom": [
