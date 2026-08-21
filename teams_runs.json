@@ -27417,6 +27417,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T18:03:27.990Z",
       "url": "https://openfront.io/game/Lhw6k3fn"
+    },
+    {
+      "id": "K9qfXCZa",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Noji",
+          "clientID": "kA1ShRee",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark9",
+          "clientID": "DDkXY5sj",
+          "clanTag": null
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 571,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T18:26:52.552Z",
+      "url": "https://openfront.io/game/K9qfXCZa"
     }
   ],
   "trios": [
@@ -88103,6 +88128,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T18:10:10.421Z",
       "url": "https://openfront.io/game/2mT5h9G9"
+    },
+    {
+      "id": "eKHZjkCL",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ZazZ",
+          "clientID": "5fJ6qc4v",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Zilka",
+          "clientID": "41e1gSfb",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Bulb007",
+          "clientID": "aCq1Ax99",
+          "clanTag": "JR"
+        },
+        {
+          "username": "clement",
+          "clientID": "BKNiCqdm",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 507,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T18:27:43.614Z",
+      "url": "https://openfront.io/game/eKHZjkCL"
     }
   ],
   "team_custom": [
@@ -110445,6 +110505,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T18:19:25.048Z",
       "url": "https://openfront.io/game/obVAvxic"
+    },
+    {
+      "id": "iBfWe1CQ",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonTimber3",
+          "clientID": "zbdFP5ej",
+          "clanTag": null
+        },
+        {
+          "username": "Anon3 2 1",
+          "clientID": "apFKdNTx",
+          "clanTag": "GNG"
+        },
+        {
+          "username": "milmil",
+          "clientID": "4MP2sMfC",
+          "clanTag": null
+        },
+        {
+          "username": "shad",
+          "clientID": "bfiUDKv9",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield6",
+          "clientID": "c9QzUfc9",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 917,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T18:22:02.738Z",
+      "url": "https://openfront.io/game/iBfWe1CQ"
     }
   ],
   "hvn": [
