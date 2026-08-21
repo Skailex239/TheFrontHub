@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-21T09:44:27.369Z",
+  "lastSyncedAt": "2026-08-21T09:46:26.638Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 3805,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 3806,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "jqkDkSL1",
+      "start": "2026-08-21T09:30:57.828Z",
+      "durationSeconds": 914,
+      "map": "Baja California",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 60,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "pmopMysm",
       "start": "2026-08-21T08:19:15.852Z",

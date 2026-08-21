@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-21T09:44:29.347Z",
-  "lastSyncedAt": "2026-08-21T09:44:27.369Z",
-  "totalGames": 3805,
+  "computedAt": "2026-08-21T09:46:29.300Z",
+  "lastSyncedAt": "2026-08-21T09:46:26.638Z",
+  "totalGames": 3806,
   "careerWins": {
-    "ffaCasual": 272,
+    "ffaCasual": 273,
     "ffaRanked": 1420,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1980,
-  "points": 5032,
+  "totalWins": 1981,
+  "points": 5042,
   "level": 50,
-  "levelProgress": 32,
+  "levelProgress": 42,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1980,
+      "current": 1981,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "5 032",
-    "totalWins": "1 980",
-    "totalGames": "3 805",
+    "points": "5 042",
+    "totalWins": "1 981",
+    "totalGames": "3 806",
     "totalPlaytime": "31j 2h",
     "totalPlaytimeCompact": "31j 2h",
     "avgGameDuration": "11m 46s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "746h"
   },
   "playtime": {
-    "totalSec": 2686636,
-    "avgGameSec": 706.080420499343,
+    "totalSec": 2687550,
+    "avgGameSec": 706.1350499211771,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1090,
-        "playtimeSec": 1317516,
-        "wins": 272
+        "games": 1091,
+        "playtimeSec": 1318430,
+        "wins": 273
       },
       "ffaRanked": {
         "games": 1914,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1980,
+    "victory": 1981,
     "defeat": 1493,
     "incomplete": 332
   },
@@ -1092,6 +1092,22 @@
       }
     },
     {
+      "map": "Baja California",
+      "count": 3,
+      "wins": 2,
+      "losses": 1,
+      "playtimeSec": 2681,
+      "avgDuration": 893.6666666666666,
+      "winRate": 0.6666666666666666,
+      "lastPlayed": 1787304657828,
+      "formatted": {
+        "playtime": "44m",
+        "avgDuration": "14m",
+        "winRate": "67%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Finger Lakes",
       "count": 3,
       "wins": 1,
@@ -1329,22 +1345,6 @@
         "avgDuration": "14m",
         "winRate": "50%",
         "lastPlayed": "01/07/26"
-      }
-    },
-    {
-      "map": "Baja California",
-      "count": 2,
-      "wins": 1,
-      "losses": 1,
-      "playtimeSec": 1767,
-      "avgDuration": 883.5,
-      "winRate": 0.5,
-      "lastPlayed": 1781013187065,
-      "formatted": {
-        "playtime": "29m",
-        "avgDuration": "14m",
-        "winRate": "50%",
-        "lastPlayed": "09/06/26"
       }
     },
     {
@@ -1601,7 +1601,7 @@
       39,
       59,
       90,
-      76,
+      77,
       95,
       100,
       91,
@@ -1620,7 +1620,7 @@
       589,
       493,
       556,
-      484,
+      485,
       576,
       560
     ],
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 2,
+    "current": 3,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "jqkDkSL1",
+      "start": "2026-08-21T09:30:57.828Z",
+      "map": "Baja California",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 914,
+      "totalPlayers": 60,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "pmopMysm",
       "start": "2026-08-21T08:19:15.852Z",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "defeat",
       "durationSeconds": 489,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "fN99NsXp",
-      "start": "2026-08-19T16:15:55.144Z",
-      "map": "Asia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 157,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
