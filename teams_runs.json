@@ -80553,6 +80553,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T11:31:51.086Z",
       "url": "https://openfront.io/game/aHU2BSU3"
+    },
+    {
+      "id": "LiwrGbBm",
+      "mode": "quads",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "who",
+          "clientID": "7M7AntYy",
+          "clanTag": null
+        },
+        {
+          "username": "Luke",
+          "clientID": "W6tCMKcn",
+          "clanTag": null
+        },
+        {
+          "username": "Romanette",
+          "clientID": "LDtokDMn",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Sultan",
+          "clientID": "deMmpdZM",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 857,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T11:42:27.273Z",
+      "url": "https://openfront.io/game/LiwrGbBm"
     }
   ],
   "team_custom": [
