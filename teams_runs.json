@@ -59126,6 +59126,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T20:20:49.902Z",
       "url": "https://openfront.io/game/A292m29i"
+    },
+    {
+      "id": "YFJHscBy",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "GERONIMO",
+          "clientID": "ZMZMCSXa",
+          "clanTag": "GG"
+        },
+        {
+          "username": "General Claws",
+          "clientID": "RUSnTQND",
+          "clanTag": "GG"
+        },
+        {
+          "username": "WanderFront",
+          "clientID": "vETVNGxL",
+          "clanTag": "GG"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 885,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T20:19:31.315Z",
+      "url": "https://openfront.io/game/YFJHscBy"
     }
   ],
   "quads": [
@@ -113960,6 +113990,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T20:02:41.742Z",
       "url": "https://openfront.io/game/Gni1aVbs"
+    },
+    {
+      "id": "Kj1mZphr",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Morek772",
+          "clientID": "sQrMggqW",
+          "clanTag": "CWL"
+        },
+        {
+          "username": "husarz pawcio",
+          "clientID": "siGpnEjM",
+          "clanTag": null
+        },
+        {
+          "username": "wyrwasik21",
+          "clientID": "6KWzLL1n",
+          "clanTag": "CWL"
+        },
+        {
+          "username": "poilu",
+          "clientID": "3cxUwmWY",
+          "clanTag": "BIT"
+        },
+        {
+          "username": "LookingForPeace",
+          "clientID": "nM8qopmH",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 1201,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T20:13:33.459Z",
+      "url": "https://openfront.io/game/Kj1mZphr"
     }
   ],
   "hvn": [
