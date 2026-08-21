@@ -52056,6 +52056,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T11:00:11.115Z",
       "url": "https://openfront.io/game/kfReAx1u"
+    },
+    {
+      "id": "3EZxqvJb",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Talnor",
+          "clientID": "GVKieqYh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Zambezi",
+          "clientID": "3v6XNVfV",
+          "clanTag": null
+        },
+        {
+          "username": "SeeMeesSeal",
+          "clientID": "E314KYFh",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 757,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:14:50.577Z",
+      "url": "https://openfront.io/game/3EZxqvJb"
+    },
+    {
+      "id": "PViXSrJo",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Yes Rico_Kaboom",
+          "clientID": "q3SmyJJi",
+          "clanTag": null
+        },
+        {
+          "username": "Tyran",
+          "clientID": "ZAtYmcGf",
+          "clanTag": "ITALY"
+        },
+        {
+          "username": "CIOMAG",
+          "clientID": "PLzM937k",
+          "clanTag": "SON"
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 609,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:18:58.817Z",
+      "url": "https://openfront.io/game/PViXSrJo"
     }
   ],
   "quads": [
@@ -96835,6 +96895,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T11:01:36.220Z",
       "url": "https://openfront.io/game/B552UKHK"
+    },
+    {
+      "id": "JPjTHEVy",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "kodak",
+          "clientID": "HT8s2JNN",
+          "clanTag": null
+        },
+        {
+          "username": "Republic of Lion furries",
+          "clientID": "4cbm572f",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Bretagne lover xxl",
+          "clientID": "NqLGRkX9",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "Kakashka",
+          "clientID": "4X2X5YW2",
+          "clanTag": null
+        },
+        {
+          "username": "Bohmuckl",
+          "clientID": "aFKpM6TG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLagoon8",
+          "clientID": "KtcdWFrN",
+          "clanTag": null
+        },
+        {
+          "username": "LIA_lia5",
+          "clientID": "kxvwSWFM",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1193,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T11:08:05.140Z",
+      "url": "https://openfront.io/game/JPjTHEVy"
     }
   ],
   "hvn": [
