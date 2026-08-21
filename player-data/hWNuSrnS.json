@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-21T07:10:58.405Z",
+  "lastSyncedAt": "2026-08-21T07:12:33.246Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 3801,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.7,
+  "totalGames": 3802,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "2yq4WrVT",
+      "start": "2026-08-21T06:53:56.365Z",
+      "durationSeconds": 1042,
+      "map": "Montreal",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 93,
+      "username": "Nvr_Kn",
+      "clanTag": "CACA"
+    },
     {
       "gameId": "u1tZwzd5",
       "start": "2026-08-20T17:50:15.965Z",
