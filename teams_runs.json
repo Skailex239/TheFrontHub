@@ -27217,6 +27217,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:50:25.634Z",
       "url": "https://openfront.io/game/C2842wfr"
+    },
+    {
+      "id": "ywyCJSwf",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Ciutat Comtal",
+          "clientID": "oTHVrER1",
+          "clanTag": null
+        },
+        {
+          "username": "REDACTED",
+          "clientID": "xc29jwu2",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 642,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:56:07.006Z",
+      "url": "https://openfront.io/game/ywyCJSwf"
     }
   ],
   "trios": [
@@ -109535,6 +109560,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T17:46:44.422Z",
       "url": "https://openfront.io/game/yiBkGR9n"
+    },
+    {
+      "id": "QauoNt12",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "fuckfascism",
+          "clientID": "5EMJUrtW",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThistle4",
+          "clientID": "Pmk9jpvy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGarnet8",
+          "clientID": "LQhNYj9j",
+          "clanTag": null
+        },
+        {
+          "username": "FireFoxXyZ",
+          "clientID": "XmBTzSKq",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTornado5",
+          "clientID": "CyR4f6RN",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1597,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T17:40:09.976Z",
+      "url": "https://openfront.io/game/QauoNt12"
     }
   ],
   "hvn": [
