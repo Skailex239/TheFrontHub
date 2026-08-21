@@ -81983,6 +81983,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T12:22:29.258Z",
       "url": "https://openfront.io/game/oEQUTcEt"
+    },
+    {
+      "id": "4MQrbpFz",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "victoria3",
+          "clientID": "s9kFqHbm",
+          "clanTag": "IT"
+        },
+        {
+          "username": "just watcher",
+          "clientID": "XqT3njFk",
+          "clanTag": null
+        },
+        {
+          "username": "kep",
+          "clientID": "gnASzdqw",
+          "clanTag": null
+        },
+        {
+          "username": "poulet",
+          "clientID": "sujqF57y",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 510,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T12:56:38.882Z",
+      "url": "https://openfront.io/game/4MQrbpFz"
     }
   ],
   "team_custom": [
@@ -100045,6 +100080,96 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T12:48:36.877Z",
       "url": "https://openfront.io/game/BMQYLZyT"
+    },
+    {
+      "id": "aGwcBCSZ",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Azzertor",
+          "clientID": "u18qPfNW",
+          "clanTag": "RCS"
+        },
+        {
+          "username": "idkvoidprobably",
+          "clientID": "DNpxskqB",
+          "clanTag": null
+        },
+        {
+          "username": "Kuromatae",
+          "clientID": "GrKUQmH1",
+          "clanTag": "RCS"
+        },
+        {
+          "username": "NEVER full send troops",
+          "clientID": "f8Zuo1U9",
+          "clanTag": null
+        },
+        {
+          "username": "554",
+          "clientID": "uGYnYVAf",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 1254,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T12:45:17.156Z",
+      "url": "https://openfront.io/game/aGwcBCSZ"
+    },
+    {
+      "id": "6NYSBgKY",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Protogen",
+          "clientID": "HoWnDvah",
+          "clanTag": "DOUG"
+        },
+        {
+          "username": "Wallins",
+          "clientID": "oopyNWtR",
+          "clanTag": null
+        },
+        {
+          "username": "MohamedHassan007",
+          "clientID": "v8NjsnRh",
+          "clanTag": null
+        },
+        {
+          "username": "NadereKhuban",
+          "clientID": "TGu53Vwz",
+          "clanTag": null
+        },
+        {
+          "username": "Brandenburger",
+          "clientID": "Xhj5A6HK",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonGinger3",
+          "clientID": "rWrGUs61",
+          "clanTag": null
+        },
+        {
+          "username": "Anon079",
+          "clientID": "6wjRsJEJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1164,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T12:46:53.759Z",
+      "url": "https://openfront.io/game/6NYSBgKY"
     }
   ],
   "hvn": [
