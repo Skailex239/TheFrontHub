@@ -24592,6 +24592,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:59:59.394Z",
       "url": "https://openfront.io/game/rz9Beaf7"
+    },
+    {
+      "id": "XXhQz4ke",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BIG JEFF",
+          "clientID": "GeocdxKM",
+          "clanTag": "KISS"
+        },
+        {
+          "username": "Anon699",
+          "clientID": "MZQe1N7s",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 573,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:59:15.352Z",
+      "url": "https://openfront.io/game/XXhQz4ke"
+    },
+    {
+      "id": "LMsBEqAc",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Leo",
+          "clientID": "2cMmx8pZ",
+          "clanTag": null
+        },
+        {
+          "username": "Tererere",
+          "clientID": "91cfK2Gh",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 727,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:56:04.153Z",
+      "url": "https://openfront.io/game/LMsBEqAc"
     }
   ],
   "trios": [
@@ -52476,6 +52526,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T11:48:00.646Z",
       "url": "https://openfront.io/game/1bqLg6dq"
+    },
+    {
+      "id": "ZUpye5dm",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Pedram",
+          "clientID": "GMKyJ532",
+          "clanTag": "SSP"
+        },
+        {
+          "username": "LoudRainbow.bTvt",
+          "clientID": "5RF3wSXy",
+          "clanTag": null
+        },
+        {
+          "username": "Mitochondrian Free State",
+          "clientID": "XBfQEwZZ",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:52:27.919Z",
+      "url": "https://openfront.io/game/ZUpye5dm"
     }
   ],
   "quads": [
@@ -111942,6 +112022,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T11:48:15.655Z",
       "url": "https://openfront.io/game/RyR1BjPT"
+    },
+    {
+      "id": "Dd4nSEQa",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Frida11",
+          "clientID": "WREwvqvt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPulley7",
+          "clientID": "cx44zSjJ",
+          "clanTag": null
+        },
+        {
+          "username": "Dig",
+          "clientID": "Jqczvewj",
+          "clanTag": "ZIP"
+        },
+        {
+          "username": "great empire",
+          "clientID": "b5LRWp68",
+          "clanTag": null
+        },
+        {
+          "username": "BouncyMonster.O9tC",
+          "clientID": "npfsWXSJ",
+          "clanTag": null
+        },
+        {
+          "username": "Van Darkholme",
+          "clientID": "6rGB9VPL",
+          "clanTag": null
+        },
+        {
+          "username": "Bonjour",
+          "clientID": "wEd1aDD2",
+          "clanTag": "YEP"
+        },
+        {
+          "username": "cbestern",
+          "clientID": "PLVgZdNt",
+          "clanTag": null
+        },
+        {
+          "username": "Serdar",
+          "clientID": "ex2B5sVY",
+          "clanTag": "GY"
+        },
+        {
+          "username": "SMC",
+          "clientID": "a5iLAUgw",
+          "clanTag": "SMC"
+        },
+        {
+          "username": "ALFAIBOSS",
+          "clientID": "nVoXzZQw",
+          "clanTag": null
+        },
+        {
+          "username": "Vandrou",
+          "clientID": "jLAtTsGz",
+          "clanTag": null
+        },
+        {
+          "username": "chacha",
+          "clientID": "wmuKQNaH",
+          "clanTag": null
+        },
+        {
+          "username": "Burungy",
+          "clientID": "SebuKgY6",
+          "clanTag": "BEL"
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1319,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T11:46:08.023Z",
+      "url": "https://openfront.io/game/Dd4nSEQa"
     }
   ]
 }
