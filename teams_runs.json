@@ -48491,6 +48491,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T04:56:26.806Z",
       "url": "https://openfront.io/game/sL1e8EC9"
+    },
+    {
+      "id": "w696CCF7",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "csonic235",
+          "clientID": "c7a9yrDL",
+          "clanTag": null
+        },
+        {
+          "username": "AstralCocktail.6nD8",
+          "clientID": "z9mmrNr3",
+          "clanTag": null
+        },
+        {
+          "username": "FreshTuborg",
+          "clientID": "8q89Fn4L",
+          "clanTag": "DK"
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T05:12:52.284Z",
+      "url": "https://openfront.io/game/w696CCF7"
     }
   ],
   "quads": [
@@ -74818,6 +74848,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T03:44:40.921Z",
       "url": "https://openfront.io/game/jhi4kGsN"
+    },
+    {
+      "id": "oEAew6Hn",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Benjamin",
+          "clientID": "hcTku2ZG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTuba9",
+          "clientID": "uweMSCKw",
+          "clanTag": null
+        },
+        {
+          "username": "Netanyahu holy war",
+          "clientID": "97r1Lrj5",
+          "clanTag": "ISR"
+        },
+        {
+          "username": "CrazyThunder.YlON",
+          "clientID": "UYNSTf5P",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 722,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T05:13:18.814Z",
+      "url": "https://openfront.io/game/oEAew6Hn"
     }
   ],
   "team_custom": [
