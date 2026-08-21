@@ -20742,6 +20742,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T23:54:23.523Z",
       "url": "https://openfront.io/game/T9mthahE"
+    },
+    {
+      "id": "4CZiGcxu",
+      "mode": "duos",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Yao",
+          "clientID": "WgQbmKAx",
+          "clanTag": "HOST"
+        },
+        {
+          "username": "love ur mom",
+          "clientID": "SaHzW15D",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1337,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-20T23:43:40.857Z",
+      "url": "https://openfront.io/game/4CZiGcxu"
     }
   ],
   "trios": [
@@ -82675,6 +82700,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-20T23:54:10.005Z",
       "url": "https://openfront.io/game/dsYgzSc7"
+    },
+    {
+      "id": "9ZbiSTR9",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "bot",
+          "clientID": "ub4XBTo4",
+          "clanTag": null
+        },
+        {
+          "username": "Meow",
+          "clientID": "yCfMT7mu",
+          "clanTag": null
+        },
+        {
+          "username": "Heisenberg",
+          "clientID": "w1pECeRP",
+          "clanTag": "BLK"
+        },
+        {
+          "username": "Antho",
+          "clientID": "P29TVR7G",
+          "clanTag": "BLK"
+        },
+        {
+          "username": "Nongnong",
+          "clientID": "FnCYmYQz",
+          "clanTag": null
+        },
+        {
+          "username": "Canada",
+          "clientID": "PPRT87WB",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 978,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 7,
+      "timestamp": "2026-08-20T23:49:13.729Z",
+      "url": "https://openfront.io/game/9ZbiSTR9"
     }
   ],
   "hvn": [
@@ -92982,6 +93052,81 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-20T23:36:41.432Z",
       "url": "https://openfront.io/game/NAnN5ZJT"
+    },
+    {
+      "id": "XuCbof3P",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Flitzkrieg",
+          "clientID": "yxthFH8w",
+          "clanTag": null
+        },
+        {
+          "username": "Wotan",
+          "clientID": "BmD41skS",
+          "clanTag": "THULE"
+        },
+        {
+          "username": "Reiner Winkler",
+          "clientID": "3ys9F6Fm",
+          "clanTag": null
+        },
+        {
+          "username": "The_Morrocan",
+          "clientID": "Q5kxRbLq",
+          "clanTag": null
+        },
+        {
+          "username": "Scrubbicus",
+          "clientID": "eknskdkz",
+          "clanTag": "SCRUB"
+        },
+        {
+          "username": "AnonHelmet",
+          "clientID": "2Mehqhwq",
+          "clanTag": null
+        },
+        {
+          "username": "Bosnian Trader",
+          "clientID": "YxnHJKkB",
+          "clanTag": "TRADE"
+        },
+        {
+          "username": "Peace",
+          "clientID": "MU6Nt48X",
+          "clanTag": null
+        },
+        {
+          "username": "Anon616",
+          "clientID": "SzqaBiep",
+          "clanTag": null
+        },
+        {
+          "username": "Raliric",
+          "clientID": "qe5GBgqR",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBlizzard",
+          "clientID": "YV9Q8gXE",
+          "clanTag": null
+        },
+        {
+          "username": "TradingCo",
+          "clientID": "VJBuA4d2",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1118,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-20T23:47:00.566Z",
+      "url": "https://openfront.io/game/XuCbof3P"
     }
   ]
 }
