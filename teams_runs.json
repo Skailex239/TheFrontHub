@@ -28967,6 +28967,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:02:13.604Z",
       "url": "https://openfront.io/game/z4fZzrFK"
+    },
+    {
+      "id": "5XDtfY8r",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Jammy",
+          "clientID": "Yhnyq7TW",
+          "clanTag": "TU"
+        },
+        {
+          "username": "Comie123",
+          "clientID": "12m4DAca",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1114,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T21:59:53.477Z",
+      "url": "https://openfront.io/game/5XDtfY8r"
     }
   ],
   "trios": [
@@ -92428,6 +92453,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T22:00:58.533Z",
       "url": "https://openfront.io/game/VWNFiuPm"
+    },
+    {
+      "id": "GzHHHtAf",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "never gonna give you up",
+          "clientID": "TppKvXJ3",
+          "clanTag": "RP"
+        },
+        {
+          "username": "Guiscard",
+          "clientID": "zUpc9VzG",
+          "clanTag": "RP"
+        },
+        {
+          "username": "Veyshnoria",
+          "clientID": "mMKaz8e6",
+          "clanTag": "RP"
+        },
+        {
+          "username": "AnonSugar8",
+          "clientID": "xxN1XLDQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 2003,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T21:44:17.473Z",
+      "url": "https://openfront.io/game/GzHHHtAf"
     }
   ],
   "team_custom": [
