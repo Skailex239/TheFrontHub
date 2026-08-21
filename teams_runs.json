@@ -51006,6 +51006,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T09:08:53.368Z",
       "url": "https://openfront.io/game/424AaPrp"
+    },
+    {
+      "id": "ADC1UrDC",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "golden eagle",
+          "clientID": "jaykdSRh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "RWWW",
+          "clientID": "c9xPwovc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBison9",
+          "clientID": "qenN1QJx",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1023,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T09:16:52.615Z",
+      "url": "https://openfront.io/game/ADC1UrDC"
     }
   ],
   "quads": [
@@ -78243,6 +78273,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T09:15:19.598Z",
       "url": "https://openfront.io/game/LKgSzf51"
+    },
+    {
+      "id": "KPBJxUG8",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "The Future Foundation",
+          "clientID": "Ytgnyxw1",
+          "clanTag": "4444"
+        },
+        {
+          "username": "Cho",
+          "clientID": "AeANeT7w",
+          "clanTag": null
+        },
+        {
+          "username": "TradeMogul",
+          "clientID": "GTz9fVPM",
+          "clanTag": "CAN"
+        },
+        {
+          "username": "Venetian Empire",
+          "clientID": "59uTF2ve",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 805,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T09:18:32.615Z",
+      "url": "https://openfront.io/game/KPBJxUG8"
     }
   ],
   "team_custom": [
