@@ -54756,6 +54756,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:23:04.366Z",
       "url": "https://openfront.io/game/byuV5jgg"
+    },
+    {
+      "id": "5giNArfT",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Marshal King",
+          "clientID": "L8BprPnS",
+          "clanTag": null
+        },
+        {
+          "username": "Megabob",
+          "clientID": "rRTJuhHd",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Amirkhan",
+          "clientID": "ZQYMnzfQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 504,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:47:53.899Z",
+      "url": "https://openfront.io/game/5giNArfT"
     }
   ],
   "quads": [
@@ -103625,6 +103655,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T14:43:43.149Z",
       "url": "https://openfront.io/game/vf7d3ML8"
+    },
+    {
+      "id": "3AjA7fDL",
+      "mode": "team_custom",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "Wombaticus",
+          "clientID": "M4tQyFE5",
+          "clanTag": "VAT"
+        },
+        {
+          "username": "SCORPION",
+          "clientID": "UXuzocwg",
+          "clanTag": "TR"
+        },
+        {
+          "username": "pride pride pride",
+          "clientID": "QF3D5vbh",
+          "clanTag": null
+        },
+        {
+          "username": "woo",
+          "clientID": "pAmxBBnT",
+          "clanTag": null
+        },
+        {
+          "username": "poulet",
+          "clientID": "1UetKwm7",
+          "clanTag": null
+        },
+        {
+          "username": "Brandenburger",
+          "clientID": "uNSgXYeC",
+          "clanTag": "NU"
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "UKgyqWXf",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 716,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T14:44:39.215Z",
+      "url": "https://openfront.io/game/3AjA7fDL"
     }
   ],
   "hvn": [
