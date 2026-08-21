@@ -28442,6 +28442,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:29:23.412Z",
       "url": "https://openfront.io/game/9VW9PqL9"
+    },
+    {
+      "id": "NSToVevX",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Erteschio",
+          "clientID": "g5yFE9Ah",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "SDRome",
+          "clientID": "WCaxygu9",
+          "clanTag": "OPS"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1206,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T20:22:45.032Z",
+      "url": "https://openfront.io/game/NSToVevX"
     }
   ],
   "trios": [
@@ -59266,6 +59291,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T20:25:42.704Z",
       "url": "https://openfront.io/game/TzWfHsdi"
+    },
+    {
+      "id": "WeFDFo4j",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Fih",
+          "clientID": "tmmKVpze",
+          "clanTag": null
+        },
+        {
+          "username": "Unite phantom",
+          "clientID": "ERSHwLWP",
+          "clanTag": null
+        },
+        {
+          "username": "sone1001",
+          "clientID": "gseDTJFQ",
+          "clanTag": "QQQ"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 885,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T20:28:59.383Z",
+      "url": "https://openfront.io/game/WeFDFo4j"
     }
   ],
   "quads": [
