@@ -49361,6 +49361,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T06:59:51.728Z",
       "url": "https://openfront.io/game/egbouENA"
+    },
+    {
+      "id": "kUUwRDR8",
+      "mode": "trios",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "AnonCamel9",
+          "clientID": "3DTbT87q",
+          "clanTag": null
+        },
+        {
+          "username": "DIO",
+          "clientID": "2Kb2q9Xy",
+          "clanTag": "BY"
+        },
+        {
+          "username": "Girst",
+          "clientID": "5DQfhhen",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 1029,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T06:54:15.880Z",
+      "url": "https://openfront.io/game/kUUwRDR8"
     }
   ],
   "quads": [
