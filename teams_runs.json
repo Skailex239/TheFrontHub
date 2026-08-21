@@ -54266,6 +54266,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T13:53:40.963Z",
       "url": "https://openfront.io/game/szM3gPsG"
+    },
+    {
+      "id": "JnM8huwU",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Antifa",
+          "clientID": "TY7vYpfa",
+          "clanTag": "161"
+        },
+        {
+          "username": "Leave Me Alone",
+          "clientID": "NhrzJJ6X",
+          "clanTag": "FFS"
+        },
+        {
+          "username": "BaeGubDog_Hunter",
+          "clientID": "LUxfHygA",
+          "clanTag": "KOR"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 573,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:03:32.624Z",
+      "url": "https://openfront.io/game/JnM8huwU"
     }
   ],
   "quads": [
@@ -102300,6 +102330,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T13:55:44.096Z",
       "url": "https://openfront.io/game/izLs9K7S"
+    },
+    {
+      "id": "zryZkRcJ",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Nopzy",
+          "clientID": "xFy9qPzS",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "grille pain",
+          "clientID": "ULuXBBm7",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "AnonTimber3",
+          "clientID": "auTU8EvA",
+          "clanTag": null
+        },
+        {
+          "username": "Zouheir_",
+          "clientID": "WYQJekVo",
+          "clanTag": null
+        },
+        {
+          "username": "bibi bay bay",
+          "clientID": "zRjgbBCg",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "Me71YLJj",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 1005,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T13:57:13.676Z",
+      "url": "https://openfront.io/game/zryZkRcJ"
     }
   ],
   "hvn": [
