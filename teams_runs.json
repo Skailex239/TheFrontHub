@@ -24992,6 +24992,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:19:03.057Z",
       "url": "https://openfront.io/game/zXy42jtF"
+    },
+    {
+      "id": "wixSLmc9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonYacht5",
+          "clientID": "5tHL7EFC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBanner4",
+          "clientID": "fdk1Afzb",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 608,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:31:29.817Z",
+      "url": "https://openfront.io/game/wixSLmc9"
+    },
+    {
+      "id": "eQqkyESJ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GOY GOAT",
+          "clientID": "jLU56AhT",
+          "clanTag": "42"
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "PsLzmxij",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 498,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:35:05.066Z",
+      "url": "https://openfront.io/game/eQqkyESJ"
     }
   ],
   "trios": [
@@ -99005,6 +99055,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T12:15:12.820Z",
       "url": "https://openfront.io/game/NpeRn5Ns"
+    },
+    {
+      "id": "A1XUtKaM",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Bitco",
+          "clientID": "gFRQkv11",
+          "clanTag": null
+        },
+        {
+          "username": "AnonoMist",
+          "clientID": "3KXdpLdu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTorch4",
+          "clientID": "VtAdV7y8",
+          "clanTag": null
+        },
+        {
+          "username": "Dobryak",
+          "clientID": "qSfBtmb8",
+          "clanTag": "BN"
+        },
+        {
+          "username": "Anon374",
+          "clientID": "L2teXGPy",
+          "clanTag": null
+        },
+        {
+          "username": "TURAN",
+          "clientID": "AJMzBEHj",
+          "clanTag": "TR"
+        },
+        {
+          "username": "blob",
+          "clientID": "rvR9vF4n",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 827,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T12:27:56.604Z",
+      "url": "https://openfront.io/game/A1XUtKaM"
+    },
+    {
+      "id": "UnaA6wvP",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TonyTwoShoes",
+          "clientID": "cat5tK3x",
+          "clanTag": null
+        },
+        {
+          "username": "chrüsimüsi",
+          "clientID": "UMb2R5Qm",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Builder",
+          "clientID": "569VWLcw",
+          "clanTag": null
+        },
+        {
+          "username": "OxO",
+          "clientID": "sRKNR9xp",
+          "clanTag": null
+        },
+        {
+          "username": "JEONGSUN",
+          "clientID": "gGc2F1cq",
+          "clanTag": null
+        },
+        {
+          "username": "murta",
+          "clientID": "MjDRH8oJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Toast",
+          "clientID": "7GwmYqo3",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 998,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 115,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T12:25:11.437Z",
+      "url": "https://openfront.io/game/UnaA6wvP"
     }
   ],
   "hvn": [
