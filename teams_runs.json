@@ -26792,6 +26792,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:54:53.059Z",
       "url": "https://openfront.io/game/VN5d2atc"
+    },
+    {
+      "id": "AWVNvuha",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "klon",
+          "clientID": "vKavo2yo",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonGeyser7",
+          "clientID": "Tczb1ETS",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 514,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:01:13.447Z",
+      "url": "https://openfront.io/game/AWVNvuha"
     }
   ],
   "trios": [
@@ -107785,6 +107810,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T16:57:19.207Z",
       "url": "https://openfront.io/game/yCrUoakQ"
+    },
+    {
+      "id": "twzoE4jT",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Jackdaw",
+          "clientID": "12zwC1TY",
+          "clanTag": null
+        },
+        {
+          "username": "imperatorX",
+          "clientID": "TN8Q6nfA",
+          "clanTag": "FUZE"
+        },
+        {
+          "username": "Torch77",
+          "clientID": "kwRe5n5B",
+          "clanTag": "FUZE"
+        },
+        {
+          "username": "AnonMeteor",
+          "clientID": "uGYXWXDj",
+          "clanTag": null
+        },
+        {
+          "username": "AR_EB4",
+          "clientID": "eXW9zbTj",
+          "clanTag": "EB4"
+        },
+        {
+          "username": "woo",
+          "clientID": "XuF5Bg19",
+          "clanTag": null
+        },
+        {
+          "username": "XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "clientID": "jmvbL39f",
+          "clanTag": "XXXXX"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1177,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:50:07.769Z",
+      "url": "https://openfront.io/game/twzoE4jT"
+    },
+    {
+      "id": "YnVDpXiw",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "noob",
+          "clientID": "tfjLzTNT",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "AnonBlizzard1",
+          "clientID": "QngqLqfU",
+          "clanTag": null
+        },
+        {
+          "username": "The Free World",
+          "clientID": "G4Si5Qr7",
+          "clanTag": null
+        },
+        {
+          "username": "WanderFront",
+          "clientID": "9N1Z4sK1",
+          "clanTag": "GG"
+        },
+        {
+          "username": "Bill Cypher",
+          "clientID": "t4xoJBuB",
+          "clanTag": null
+        },
+        {
+          "username": "GERONIMO",
+          "clientID": "9wcyefuj",
+          "clanTag": "GG"
+        },
+        {
+          "username": "chain",
+          "clientID": "rrPTAkwh",
+          "clanTag": "LIMIT"
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 601,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:59:50.355Z",
+      "url": "https://openfront.io/game/YnVDpXiw"
     }
   ],
   "hvn": [
