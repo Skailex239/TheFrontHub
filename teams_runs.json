@@ -24492,6 +24492,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:40:28.164Z",
       "url": "https://openfront.io/game/pEGk3pFf"
+    },
+    {
+      "id": "vfBGotXe",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SleepySnail.2JIy",
+          "clientID": "H4CdyxxT",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilTater",
+          "clientID": "iTph4J1A",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 686,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:41:58.749Z",
+      "url": "https://openfront.io/game/vfBGotXe"
+    },
+    {
+      "id": "pC136VMX",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "greven",
+          "clientID": "6SPcuXFH",
+          "clanTag": null
+        },
+        {
+          "username": "Pow",
+          "clientID": "s6ANhQwS",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 496,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:44:58.465Z",
+      "url": "https://openfront.io/game/pC136VMX"
     }
   ],
   "trios": [
@@ -52256,6 +52306,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T11:30:57.531Z",
       "url": "https://openfront.io/game/N9xhTHQ7"
+    },
+    {
+      "id": "sE2u4twL",
+      "mode": "trios",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "Im Trying My Best",
+          "clientID": "CEh9UzsS",
+          "clanTag": null
+        },
+        {
+          "username": "Roman Empire",
+          "clientID": "kTVG1u4K",
+          "clanTag": "ITALI"
+        },
+        {
+          "username": "IRGC",
+          "clientID": "aJECXxsU",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1737,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T11:25:55.722Z",
+      "url": "https://openfront.io/game/sE2u4twL"
     }
   ],
   "quads": [
