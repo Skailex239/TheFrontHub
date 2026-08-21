@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-21T07:35:57.636Z",
-  "lastSyncedAt": "2026-08-21T07:35:54.880Z",
-  "totalGames": 3802,
+  "computedAt": "2026-08-21T07:38:23.896Z",
+  "lastSyncedAt": "2026-08-21T07:38:21.748Z",
+  "totalGames": 3803,
   "careerWins": {
     "ffaCasual": 271,
     "ffaRanked": 1419,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "5 021",
     "totalWins": "1 978",
-    "totalGames": "3 802",
+    "totalGames": "3 803",
     "totalPlaytime": "31j 1h",
     "totalPlaytimeCompact": "31j 1h",
     "avgGameDuration": "11m 45s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "745h"
   },
   "playtime": {
-    "totalSec": 2682439,
-    "avgGameSec": 705.5336664913203,
+    "totalSec": 2683518,
+    "avgGameSec": 705.63186957665,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1088,
-        "playtimeSec": 1313911,
+        "games": 1089,
+        "playtimeSec": 1314990,
         "wins": 271
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1978,
-    "defeat": 1492,
+    "defeat": 1493,
     "incomplete": 332
   },
   "maps": [
@@ -788,6 +788,22 @@
       }
     },
     {
+      "map": "Giant World Map",
+      "count": 10,
+      "wins": 4,
+      "losses": 6,
+      "playtimeSec": 17032,
+      "avgDuration": 1703.2,
+      "winRate": 0.4,
+      "lastPlayed": 1787296696790,
+      "formatted": {
+        "playtime": "4h 43m",
+        "avgDuration": "28m",
+        "winRate": "40%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Balkans",
       "count": 10,
       "wins": 1,
@@ -817,22 +833,6 @@
         "avgDuration": "21m",
         "winRate": "20%",
         "lastPlayed": "15/08/26"
-      }
-    },
-    {
-      "map": "Giant World Map",
-      "count": 9,
-      "wins": 4,
-      "losses": 5,
-      "playtimeSec": 15953,
-      "avgDuration": 1772.5555555555557,
-      "winRate": 0.4444444444444444,
-      "lastPlayed": 1786953708022,
-      "formatted": {
-        "playtime": "4h 25m",
-        "avgDuration": "29m",
-        "winRate": "44%",
-        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1599,7 +1599,7 @@
       25,
       22,
       39,
-      57,
+      58,
       89,
       76,
       95,
@@ -1620,7 +1620,7 @@
       589,
       493,
       556,
-      481,
+      482,
       576,
       560
     ],
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "cGVsUG5i",
+      "start": "2026-08-21T07:18:16.790Z",
+      "map": "Giant World Map",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1079,
+      "totalPlayers": 55,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "2yq4WrVT",
       "start": "2026-08-21T06:53:56.365Z",
       "map": "Montreal",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 356,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "dGfnJuCA",
-      "start": "2026-08-19T15:31:51.248Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 189,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
