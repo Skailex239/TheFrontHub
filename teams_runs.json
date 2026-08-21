@@ -25942,6 +25942,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:45:18.247Z",
       "url": "https://openfront.io/game/9qb5Wqoh"
+    },
+    {
+      "id": "3uWPQAJM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonShark5",
+          "clientID": "XeJSczwM",
+          "clanTag": null
+        },
+        {
+          "username": "Steve",
+          "clientID": "bCqAwQpD",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 609,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:52:09.685Z",
+      "url": "https://openfront.io/game/3uWPQAJM"
+    },
+    {
+      "id": "QvbWATGP",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonKangaroo9",
+          "clientID": "VCqhRZsz",
+          "clanTag": "AURA"
+        },
+        {
+          "username": "Grrrrr",
+          "clientID": "4nYB8vGE",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1061,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:45:48.282Z",
+      "url": "https://openfront.io/game/QvbWATGP"
     }
   ],
   "trios": [
@@ -54846,6 +54896,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:49:18.496Z",
       "url": "https://openfront.io/game/PH4bZGQd"
+    },
+    {
+      "id": "imHZXuSw",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Upper Bavaria",
+          "clientID": "s5bZLGXL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon114514",
+          "clientID": "wZAdw6ja",
+          "clanTag": null
+        },
+        {
+          "username": "kamisama",
+          "clientID": "AAmKu8qq",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 555,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:53:32.278Z",
+      "url": "https://openfront.io/game/imHZXuSw"
     }
   ],
   "quads": [
@@ -84183,6 +84263,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:42:57.103Z",
       "url": "https://openfront.io/game/nY749yoM"
+    },
+    {
+      "id": "coDEyrH3",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonMonkey7",
+          "clientID": "4MLTBGcn",
+          "clanTag": null
+        },
+        {
+          "username": "8008",
+          "clientID": "GcNB6gpW",
+          "clanTag": "BIG"
+        },
+        {
+          "username": "Korea",
+          "clientID": "YSHQy2Nj",
+          "clanTag": null
+        },
+        {
+          "username": "WeirdPancake 1st",
+          "clientID": "J28H5g1n",
+          "clanTag": "BOB"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 912,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:48:13.420Z",
+      "url": "https://openfront.io/game/coDEyrH3"
     }
   ],
   "team_custom": [
