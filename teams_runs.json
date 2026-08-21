@@ -47761,6 +47761,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T03:26:56.323Z",
       "url": "https://openfront.io/game/MwE5chsL"
+    },
+    {
+      "id": "qYHMS31j",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Do not feed OoO",
+          "clientID": "vNUsHJrK",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Saqdi",
+          "clientID": "F4Z9KjFt",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Bob",
+          "clientID": "NaLoe1ie",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 853,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T03:39:32.601Z",
+      "url": "https://openfront.io/game/qYHMS31j"
     }
   ],
   "quads": [
@@ -86515,6 +86545,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T03:32:04.644Z",
       "url": "https://openfront.io/game/JSwkzW9v"
+    },
+    {
+      "id": "vv3Akteo",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Toasty",
+          "clientID": "kujjd1Vd",
+          "clanTag": null
+        },
+        {
+          "username": "FrugFemboy",
+          "clientID": "ZKFBrWdQ",
+          "clanTag": "FEM"
+        },
+        {
+          "username": "white horse on red backgrou",
+          "clientID": "X6sXmAWB",
+          "clanTag": null
+        },
+        {
+          "username": "Popi",
+          "clientID": "jPYM4d3A",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTurquoise5",
+          "clientID": "ynggPnhP",
+          "clanTag": null
+        },
+        {
+          "username": "P5K",
+          "clientID": "7rTb8G8h",
+          "clanTag": null
+        },
+        {
+          "username": "ETA",
+          "clientID": "BPReKRkv",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 965,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T03:37:31.479Z",
+      "url": "https://openfront.io/game/vv3Akteo"
     }
   ],
   "hvn": [
