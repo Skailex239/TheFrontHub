@@ -74193,6 +74193,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T03:48:56.194Z",
       "url": "https://openfront.io/game/7inwwH1K"
+    },
+    {
+      "id": "awJrrbdJ",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Csoy84",
+          "clientID": "4ygcP9UD",
+          "clanTag": null
+        },
+        {
+          "username": "Big Z",
+          "clientID": "eUyx7PCa",
+          "clanTag": null
+        },
+        {
+          "username": "mngr",
+          "clientID": "NhoevJoX",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anon011",
+          "clientID": "QhzEiJRC",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 886,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T04:17:43.569Z",
+      "url": "https://openfront.io/game/awJrrbdJ"
     }
   ],
   "team_custom": [
@@ -87190,6 +87225,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T04:11:26.658Z",
       "url": "https://openfront.io/game/aDo5za8J"
+    },
+    {
+      "id": "XxfNxX94",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "BigBallsBarry",
+          "clientID": "owkVvSLY",
+          "clanTag": "MHS"
+        },
+        {
+          "username": "TradeTrain",
+          "clientID": "9R73F1GH",
+          "clanTag": null
+        },
+        {
+          "username": "JAMIEGUNTHERRAWTHER",
+          "clientID": "nV9oLyPE",
+          "clanTag": "MHS"
+        },
+        {
+          "username": "white horse on red backgrou",
+          "clientID": "9noNrEZW",
+          "clanTag": null
+        },
+        {
+          "username": "IeSharpie",
+          "clientID": "TV7nHyaP",
+          "clanTag": "TSX"
+        },
+        {
+          "username": "NoAlliances",
+          "clientID": "xhM8AVDv",
+          "clanTag": null
+        },
+        {
+          "username": "Das Scrooge",
+          "clientID": "yZYjMrYU",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 2037,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T03:57:11.707Z",
+      "url": "https://openfront.io/game/XxfNxX94"
     }
   ],
   "hvn": [
