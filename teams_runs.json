@@ -28892,6 +28892,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T21:37:42.971Z",
       "url": "https://openfront.io/game/ay1JF3iG"
+    },
+    {
+      "id": "8tEvD5y2",
+      "mode": "duos",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "methighs",
+          "clientID": "npTdZqYs",
+          "clanTag": "UNC"
+        },
+        {
+          "username": "Train Me",
+          "clientID": "4SaK5PS1",
+          "clanTag": "UNC"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 712,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T21:47:35.693Z",
+      "url": "https://openfront.io/game/8tEvD5y2"
     }
   ],
   "trios": [
