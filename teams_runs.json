@@ -22942,6 +22942,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T07:45:39.395Z",
       "url": "https://openfront.io/game/TqmGcwsf"
+    },
+    {
+      "id": "LJSMvetj",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ABC",
+          "clientID": "BmsPaCBb",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "VegasBreaks",
+          "clientID": "QdNJ1ZHn",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 692,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:49:56.148Z",
+      "url": "https://openfront.io/game/LJSMvetj"
+    },
+    {
+      "id": "HbgUc6tY",
+      "mode": "duos",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "SotayOP",
+          "clientID": "rwhQCVKp",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AnonScarlet",
+          "clientID": "X9eKB5Ng",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1478,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T07:36:48.365Z",
+      "url": "https://openfront.io/game/HbgUc6tY"
     }
   ],
   "trios": [
@@ -49866,6 +49916,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T07:45:54.410Z",
       "url": "https://openfront.io/game/mmUsSxde"
+    },
+    {
+      "id": "az76Piqw",
+      "mode": "trios",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "RedAly",
+          "clientID": "9KB1oN4V",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench1",
+          "clientID": "2w7FiQYX",
+          "clanTag": null
+        },
+        {
+          "username": "trade friend",
+          "clientID": "7cSV74Wm",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 2292,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T07:23:19.580Z",
+      "url": "https://openfront.io/game/az76Piqw"
     }
   ],
   "quads": [
