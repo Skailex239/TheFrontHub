@@ -26542,6 +26542,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:23:50.109Z",
       "url": "https://openfront.io/game/x39gYns8"
+    },
+    {
+      "id": "Egb2hjTs",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Rosa",
+          "clientID": "kxM5dF71",
+          "clanTag": "LENA"
+        },
+        {
+          "username": "ShadowFax",
+          "clientID": "1bLmTkoo",
+          "clanTag": "EN"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 346,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:32:24.621Z",
+      "url": "https://openfront.io/game/Egb2hjTs"
+    },
+    {
+      "id": "6bxNrjeZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Joker",
+          "clientID": "zpZMLKQb",
+          "clanTag": null
+        },
+        {
+          "username": "the General",
+          "clientID": "zN7Qsa57",
+          "clanTag": "P9FG0"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 812,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:24:22.143Z",
+      "url": "https://openfront.io/game/6bxNrjeZ"
     }
   ],
   "trios": [
@@ -56016,6 +56066,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T16:04:58.974Z",
       "url": "https://openfront.io/game/izQhXKYZ"
+    },
+    {
+      "id": "ZLt7a7fx",
+      "mode": "trios",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Feed OoO",
+          "clientID": "yvVqu4WP",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Saqdi",
+          "clientID": "oUB3bL62",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "SwampKing",
+          "clientID": "RkZCbYYs",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 975,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T16:21:59.997Z",
+      "url": "https://openfront.io/game/ZLt7a7fx"
     }
   ],
   "quads": [
@@ -106830,6 +106910,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T16:23:22.074Z",
       "url": "https://openfront.io/game/ThuHbWzg"
+    },
+    {
+      "id": "G2tHWEc4",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Alberto",
+          "clientID": "zMVPL9tp",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "grille pain",
+          "clientID": "MVytfBzv",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Okinawa",
+          "clientID": "oQM3LUPp",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "ProfessorSployer",
+          "clientID": "7edJikcU",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Pushinek",
+          "clientID": "rNYFfQor",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 470,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 25,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:30:01.995Z",
+      "url": "https://openfront.io/game/G2tHWEc4"
     }
   ],
   "hvn": [
