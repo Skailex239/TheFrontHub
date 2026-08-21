@@ -27942,6 +27942,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:16:35.787Z",
       "url": "https://openfront.io/game/yBbuP64C"
+    },
+    {
+      "id": "QztKCcmC",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Amaruu",
+          "clientID": "bEqe4eNZ",
+          "clanTag": "MNG"
+        },
+        {
+          "username": "MrBigMacke",
+          "clientID": "nTZ14PQ8",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 988,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T19:21:28.587Z",
+      "url": "https://openfront.io/game/QztKCcmC"
+    },
+    {
+      "id": "Z9rPxcHE",
+      "mode": "duos",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Caribbean Catastrophe",
+          "clientID": "AB7getQR",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Pacific Motion",
+          "clientID": "qTNVH4Cy",
+          "clanTag": "WTR"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1382,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T19:14:38.652Z",
+      "url": "https://openfront.io/game/Z9rPxcHE"
     }
   ],
   "trios": [
@@ -58316,6 +58366,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:19:59.001Z",
       "url": "https://openfront.io/game/c3Z9Uwnu"
+    },
+    {
+      "id": "b97sNNWM",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Asierasdfghf.cat",
+          "clientID": "mmw9QZuG",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AnonLagoon9",
+          "clientID": "rJuc9SZT",
+          "clanTag": null
+        },
+        {
+          "username": "Anon420",
+          "clientID": "Gjgq6KMa",
+          "clanTag": "BSL"
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 856,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:22:15.130Z",
+      "url": "https://openfront.io/game/b97sNNWM"
     }
   ],
   "quads": [
@@ -89403,6 +89483,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T19:19:47.503Z",
       "url": "https://openfront.io/game/9HWUNPR8"
+    },
+    {
+      "id": "Us9ZNjYq",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "WEWEWE",
+          "clientID": "HRxyg9vc",
+          "clanTag": null
+        },
+        {
+          "username": "Mojee",
+          "clientID": "s2zgLQJ6",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Make Europe Great Again",
+          "clientID": "pVsWwVGS",
+          "clanTag": null
+        },
+        {
+          "username": "wanderer",
+          "clientID": "TgE9CGdT",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 803,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T19:23:10.184Z",
+      "url": "https://openfront.io/game/Us9ZNjYq"
     }
   ],
   "team_custom": [
@@ -112320,6 +112435,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T19:17:44.362Z",
       "url": "https://openfront.io/game/sqrZkTkm"
+    },
+    {
+      "id": "iHGgeCqZ",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bob",
+          "clientID": "HpLddHLV",
+          "clanTag": "JIM"
+        },
+        {
+          "username": "Jim",
+          "clientID": "q6syb456",
+          "clanTag": "JIM"
+        },
+        {
+          "username": "gekkespeler",
+          "clientID": "3WCrhdxW",
+          "clanTag": null
+        },
+        {
+          "username": "Prasa28",
+          "clientID": "3pwEB6oY",
+          "clanTag": null
+        },
+        {
+          "username": "Trade",
+          "clientID": "Uu2CQneL",
+          "clanTag": "JIM"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1033,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T19:20:49.554Z",
+      "url": "https://openfront.io/game/iHGgeCqZ"
     }
   ],
   "hvn": [
