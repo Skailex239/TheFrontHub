@@ -28942,6 +28942,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:01:27.557Z",
       "url": "https://openfront.io/game/zvyngxda"
+    },
+    {
+      "id": "z4fZzrFK",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Malishess",
+          "clientID": "CXNhwu3i",
+          "clanTag": null
+        },
+        {
+          "username": "f4321",
+          "clientID": "h5XrgY8P",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 613,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:02:13.604Z",
+      "url": "https://openfront.io/game/z4fZzrFK"
     }
   ],
   "trios": [
@@ -116695,6 +116720,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T21:56:03.730Z",
       "url": "https://openfront.io/game/3iSukrZD"
+    },
+    {
+      "id": "ZUagF3vE",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Trakinas",
+          "clientID": "8D5kqduf",
+          "clanTag": null
+        },
+        {
+          "username": "Gale",
+          "clientID": "JmnsSecM",
+          "clanTag": null
+        },
+        {
+          "username": "PeterPanSmells",
+          "clientID": "LPZxnB1v",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTurtle9",
+          "clientID": "QgcdKobf",
+          "clanTag": null
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "tTTzdSvc",
+          "clanTag": null
+        },
+        {
+          "username": "Borbuchinho",
+          "clientID": "dP7fd8BY",
+          "clanTag": null
+        },
+        {
+          "username": "Ney2JR",
+          "clientID": "F81bAMFg",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1402,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T21:49:17.311Z",
+      "url": "https://openfront.io/game/ZUagF3vE"
     }
   ],
   "hvn": [
