@@ -22417,6 +22417,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T06:25:11.096Z",
       "url": "https://openfront.io/game/RvC7MJ8w"
+    },
+    {
+      "id": "aZzgpqZn",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "teniroo",
+          "clientID": "mkSssBPW",
+          "clanTag": "TERUM"
+        },
+        {
+          "username": "TaiArashi",
+          "clientID": "ZbAWxe2b",
+          "clanTag": "TERUM"
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 1067,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T06:30:27.401Z",
+      "url": "https://openfront.io/game/aZzgpqZn"
     }
   ],
   "trios": [
@@ -89345,6 +89370,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T06:28:25.774Z",
       "url": "https://openfront.io/game/1gmrSnDs"
+    },
+    {
+      "id": "UPZYj7TD",
+      "mode": "team_custom",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "Negative",
+          "clientID": "j2Pfm35t",
+          "clanTag": null
+        },
+        {
+          "username": "wolverine",
+          "clientID": "S8xEpF9y",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTruffle3",
+          "clientID": "Sa3DD8Cs",
+          "clanTag": null
+        },
+        {
+          "username": "Tavorom",
+          "clientID": "UvFggDCy",
+          "clanTag": "IRGC"
+        },
+        {
+          "username": "TRUE",
+          "clientID": "8RVWFoys",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2005,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T06:14:19.479Z",
+      "url": "https://openfront.io/game/UPZYj7TD"
     }
   ],
   "hvn": [
