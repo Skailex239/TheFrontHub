@@ -83218,6 +83218,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T13:54:08.493Z",
       "url": "https://openfront.io/game/ctwDkuXf"
+    },
+    {
+      "id": "e8HAJJP4",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "NOR",
+          "clientID": "auFeomdP",
+          "clanTag": "UN"
+        },
+        {
+          "username": "xHyperz",
+          "clientID": "nGWfKeJp",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Send troops",
+          "clientID": "xt43t6aW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Amnese",
+          "clientID": "JxuM3goH",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 623,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T14:01:27.973Z",
+      "url": "https://openfront.io/game/e8HAJJP4"
+    },
+    {
+      "id": "huMyqeDn",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Lasombra",
+          "clientID": "FzBj6o3p",
+          "clanTag": "UN"
+        },
+        {
+          "username": "DeLoVaN",
+          "clientID": "HGdqyEQz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "YOU",
+          "clientID": "2DVDGku7",
+          "clanTag": null
+        },
+        {
+          "username": "alireza...",
+          "clientID": "fGtApBXZ",
+          "clanTag": "GN"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 448,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:03:41.105Z",
+      "url": "https://openfront.io/game/huMyqeDn"
     }
   ],
   "team_custom": [
@@ -102180,6 +102250,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T13:52:36.887Z",
       "url": "https://openfront.io/game/seSNS8Nc"
+    },
+    {
+      "id": "izLs9K7S",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "LTU",
+          "clientID": "e5p9XJKP",
+          "clanTag": null
+        },
+        {
+          "username": "MoonBot.Hogp",
+          "clientID": "pAT6LNbr",
+          "clanTag": null
+        },
+        {
+          "username": "Low APM High BPM",
+          "clientID": "bsUuUQ7L",
+          "clanTag": "UN"
+        },
+        {
+          "username": "dontkillme",
+          "clientID": "m67HEdku",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonEclipse4",
+          "clientID": "WASwfmwk",
+          "clanTag": null
+        },
+        {
+          "username": "Anon213",
+          "clientID": "6zCYjLha",
+          "clanTag": null
+        },
+        {
+          "username": "Anon891",
+          "clientID": "GtdGPst3",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 892,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T13:55:44.096Z",
+      "url": "https://openfront.io/game/izLs9K7S"
     }
   ],
   "hvn": [
