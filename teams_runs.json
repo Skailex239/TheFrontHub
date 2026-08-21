@@ -25892,6 +25892,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:26:26.579Z",
       "url": "https://openfront.io/game/4oEpnU2s"
+    },
+    {
+      "id": "MLACGHsa",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "United Units",
+          "clientID": "JpVivSqK",
+          "clanTag": "UU"
+        },
+        {
+          "username": "asd105",
+          "clientID": "vvVuecUy",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 906,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T14:38:23.797Z",
+      "url": "https://openfront.io/game/MLACGHsa"
+    },
+    {
+      "id": "9qb5Wqoh",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "jXrP72jG",
+          "clanTag": null
+        },
+        {
+          "username": "Samilistan",
+          "clientID": "cyN3dh97",
+          "clanTag": "ROKAZ"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 432,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:45:18.247Z",
+      "url": "https://openfront.io/game/9qb5Wqoh"
     }
   ],
   "trios": [
@@ -84008,6 +84058,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:37:02.806Z",
       "url": "https://openfront.io/game/ufrKNbm5"
+    },
+    {
+      "id": "nY749yoM",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonLantern8",
+          "clientID": "Y6pBw5Ks",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage8",
+          "clientID": "8NamroYz",
+          "clanTag": null
+        },
+        {
+          "username": "369",
+          "clientID": "dVcVfdhA",
+          "clanTag": "CN"
+        },
+        {
+          "username": "peace",
+          "clientID": "kCL42HyY",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 650,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:42:57.103Z",
+      "url": "https://openfront.io/game/nY749yoM"
     }
   ],
   "team_custom": [
@@ -103490,6 +103575,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T14:34:57.595Z",
       "url": "https://openfront.io/game/TK2YB68B"
+    },
+    {
+      "id": "vf7d3ML8",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bubbles",
+          "clientID": "SxinVKNB",
+          "clanTag": "NU"
+        },
+        {
+          "username": "I eat rocks",
+          "clientID": "oxZiPr5C",
+          "clanTag": "NU"
+        },
+        {
+          "username": "M7md",
+          "clientID": "yFdXWPoT",
+          "clanTag": "NU"
+        },
+        {
+          "username": "_0_Train Me",
+          "clientID": "E6TZjWfR",
+          "clanTag": "NU"
+        },
+        {
+          "username": "oncenot",
+          "clientID": "96ebJJmx",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Wonder",
+          "clientID": "Ysm6Y2i1",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Senpo",
+          "clientID": "FCfdZwyn",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 644,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T14:43:43.149Z",
+      "url": "https://openfront.io/game/vf7d3ML8"
     }
   ],
   "hvn": [
