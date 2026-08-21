@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T18:48:28.784Z",
-  "lastSyncedAt": "2026-08-21T18:48:26.399Z",
-  "totalGames": 2203,
+  "computedAt": "2026-08-21T18:50:53.546Z",
+  "lastSyncedAt": "2026-08-21T18:50:50.656Z",
+  "totalGames": 2204,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
-    "teamCasual": 47,
+    "teamCasual": 48,
     "teamRanked": 66
   },
-  "totalWins": 825,
-  "points": 4469,
+  "totalWins": 826,
+  "points": 4474,
   "level": 44,
-  "levelProgress": 69,
+  "levelProgress": 74,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 825,
+      "current": 826,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 469",
-    "totalWins": "825",
-    "totalGames": "2 203",
+    "points": "4 474",
+    "totalWins": "826",
+    "totalGames": "2 204",
     "totalPlaytime": "23j 4h",
     "totalPlaytimeCompact": "23j 4h",
     "avgGameDuration": "15m 8s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "556h"
   },
   "playtime": {
-    "totalSec": 2001801,
-    "avgGameSec": 908.6704493871993,
+    "totalSec": 2002471,
+    "avgGameSec": 908.5621597096189,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -66,9 +66,9 @@
         "wins": 328
       },
       "teamCasual": {
-        "games": 199,
-        "playtimeSec": 182957,
-        "wins": 47
+        "games": 200,
+        "playtimeSec": 183627,
+        "wins": 48
       },
       "teamRanked": {
         "games": 104,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 825,
+    "victory": 826,
     "defeat": 1049,
     "incomplete": 329
   },
@@ -868,6 +868,22 @@
       }
     },
     {
+      "map": "Amazon River",
+      "count": 8,
+      "wins": 4,
+      "losses": 4,
+      "playtimeSec": 9952,
+      "avgDuration": 1244,
+      "winRate": 0.5,
+      "lastPlayed": 1787337557871,
+      "formatted": {
+        "playtime": "2h 45m",
+        "avgDuration": "20m",
+        "winRate": "50%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Northwest Passage",
       "count": 8,
       "wins": 5,
@@ -961,22 +977,6 @@
         "avgDuration": "16m",
         "winRate": "38%",
         "lastPlayed": "19/06/26"
-      }
-    },
-    {
-      "map": "Amazon River",
-      "count": 7,
-      "wins": 3,
-      "losses": 4,
-      "playtimeSec": 9282,
-      "avgDuration": 1326,
-      "winRate": 0.42857142857142855,
-      "lastPlayed": 1783879031969,
-      "formatted": {
-        "playtime": "2h 34m",
-        "avgDuration": "22m",
-        "winRate": "43%",
-        "lastPlayed": "12/07/26"
       }
     },
     {
@@ -1674,7 +1674,7 @@
       201,
       202,
       227,
-      201,
+      202,
       149,
       146,
       152
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      357,
+      358,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 11,
-        "playtimeSec": 10981
+        "count": 12,
+        "playtimeSec": 11651
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 4,
+    "current": 5,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "eRgiKBz7",
+      "start": "2026-08-21T18:39:17.871Z",
+      "map": "Amazon River",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 670,
+      "totalPlayers": 35,
+      "rankedType": "unranked",
+      "category": "teamCasual"
+    },
     {
       "gameId": "3Qm6V4Mt",
       "start": "2026-08-21T18:27:51.118Z",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 216,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "oC6fP4Fb",
-      "start": "2026-08-19T18:19:50.148Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 396,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"

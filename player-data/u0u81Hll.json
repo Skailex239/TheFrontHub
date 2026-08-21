@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-21T18:48:26.399Z",
+  "lastSyncedAt": "2026-08-21T18:50:50.656Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 2203,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.8,
+  "totalGames": 2204,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "eRgiKBz7",
+      "start": "2026-08-21T18:39:17.871Z",
+      "durationSeconds": 670,
+      "map": "Amazon River",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "Duos",
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 35,
+      "username": "Toan",
+      "clanTag": "SERGE"
+    },
     {
       "gameId": "3Qm6V4Mt",
       "start": "2026-08-21T18:27:51.118Z",
