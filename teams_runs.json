@@ -22442,6 +22442,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T06:30:27.401Z",
       "url": "https://openfront.io/game/aZzgpqZn"
+    },
+    {
+      "id": "2GnyM3r3",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "stank",
+          "clientID": "NBzhrUan",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Vladimir Volfovich Zhirik",
+          "clientID": "CEPMWEba",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 776,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T06:37:49.356Z",
+      "url": "https://openfront.io/game/2GnyM3r3"
     }
   ],
   "trios": [
@@ -49036,6 +49061,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T06:26:47.683Z",
       "url": "https://openfront.io/game/75SCwrbg"
+    },
+    {
+      "id": "i6hocEYP",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "7trr5r9Z",
+          "clanTag": null
+        },
+        {
+          "username": "Zolar C",
+          "clientID": "UX2cUJqr",
+          "clanTag": "UN"
+        },
+        {
+          "username": "QWQ",
+          "clientID": "U8i8rSLE",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 964,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T06:33:32.607Z",
+      "url": "https://openfront.io/game/i6hocEYP"
+    },
+    {
+      "id": "GkyWFy7K",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "DADDY",
+          "clientID": "7LrcNdFg",
+          "clanTag": "MOMMY"
+        },
+        {
+          "username": "GnosticDemiurge",
+          "clientID": "oiHdMKFJ",
+          "clanTag": null
+        },
+        {
+          "username": "FancyAlien.lkwu",
+          "clientID": "J1NxTnMR",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 883,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T06:35:49.239Z",
+      "url": "https://openfront.io/game/GkyWFy7K"
     }
   ],
   "quads": [
