@@ -20917,6 +20917,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T00:36:14.151Z",
       "url": "https://openfront.io/game/DA8WH1MW"
+    },
+    {
+      "id": "F3SSo7N7",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonScarlet",
+          "clientID": "cswrXbzi",
+          "clanTag": null
+        },
+        {
+          "username": "szef",
+          "clientID": "r3UBPWPu",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1026,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T00:40:40.933Z",
+      "url": "https://openfront.io/game/F3SSo7N7"
     }
   ],
   "trios": [
@@ -83610,6 +83635,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T00:38:15.267Z",
       "url": "https://openfront.io/game/zFspy6QW"
+    },
+    {
+      "id": "M3cs3kyk",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bob",
+          "clientID": "A8JCYjH3",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Feed OoO",
+          "clientID": "L19dSyUG",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Silver",
+          "clientID": "ejdNrUps",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "PartyPancakes12",
+          "clientID": "gwJfw8hV",
+          "clanTag": null
+        },
+        {
+          "username": "Palm Beach Pete",
+          "clientID": "eZSwjRUV",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "MedievalMold",
+          "clientID": "agfc3HdY",
+          "clanTag": null
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 736,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T00:46:04.783Z",
+      "url": "https://openfront.io/game/M3cs3kyk"
     }
   ],
   "hvn": [
