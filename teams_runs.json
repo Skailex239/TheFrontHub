@@ -47876,6 +47876,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T03:55:12.079Z",
       "url": "https://openfront.io/game/7XbD1nFj"
+    },
+    {
+      "id": "6GdwNYU2",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cristianjakk",
+          "clientID": "G4gqmvvg",
+          "clanTag": "UWU"
+        },
+        {
+          "username": "XxviolaculosconcacaxX",
+          "clientID": "94tscjML",
+          "clanTag": "UWU"
+        },
+        {
+          "username": "AnonVelvet4",
+          "clientID": "LDrBoUQ6",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 822,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T03:59:38.373Z",
+      "url": "https://openfront.io/game/6GdwNYU2"
     }
   ],
   "quads": [
@@ -73993,6 +74023,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T03:42:37.804Z",
       "url": "https://openfront.io/game/QDGwVCdG"
+    },
+    {
+      "id": "7inwwH1K",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "joe",
+          "clientID": "Z5QgeysM",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Grigori",
+          "clientID": "KzYjGxoP",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Napoleon",
+          "clientID": "jX6ui3nX",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Big Z",
+          "clientID": "eVoSurHf",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1500,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T03:48:56.194Z",
+      "url": "https://openfront.io/game/7inwwH1K"
     }
   ],
   "team_custom": [
