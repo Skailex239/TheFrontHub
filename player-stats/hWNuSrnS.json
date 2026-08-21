@@ -1,27 +1,27 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-21T08:14:12.954Z",
-  "lastSyncedAt": "2026-08-21T08:14:10.725Z",
-  "totalGames": 3803,
+  "computedAt": "2026-08-21T08:16:29.486Z",
+  "lastSyncedAt": "2026-08-21T08:16:27.497Z",
+  "totalGames": 3804,
   "careerWins": {
-    "ffaCasual": 271,
+    "ffaCasual": 272,
     "ffaRanked": 1419,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1978,
-  "points": 5021,
+  "totalWins": 1979,
+  "points": 5031,
   "level": 50,
-  "levelProgress": 21,
+  "levelProgress": 31,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1978,
+      "current": 1979,
       "target": 2000
     },
     "playtime": {
-      "current": 745,
+      "current": 746,
       "target": 1000
     },
     "maps": {
@@ -39,26 +39,26 @@
     6
   ],
   "formatted": {
-    "points": "5 021",
-    "totalWins": "1 978",
-    "totalGames": "3 803",
-    "totalPlaytime": "31j 1h",
-    "totalPlaytimeCompact": "31j 1h",
-    "avgGameDuration": "11m 45s",
+    "points": "5 031",
+    "totalWins": "1 979",
+    "totalGames": "3 804",
+    "totalPlaytime": "31j 2h",
+    "totalPlaytimeCompact": "31j 2h",
+    "avgGameDuration": "11m 46s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "745h"
+    "totalPlaytimeHours": "746h"
   },
   "playtime": {
-    "totalSec": 2683518,
-    "avgGameSec": 705.63186957665,
+    "totalSec": 2686044,
+    "avgGameSec": 706.1104100946372,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1089,
-        "playtimeSec": 1314990,
-        "wins": 271
+        "games": 1090,
+        "playtimeSec": 1317516,
+        "wins": 272
       },
       "ffaRanked": {
         "games": 1913,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1978,
+    "victory": 1979,
     "defeat": 1493,
     "incomplete": 332
   },
@@ -500,6 +500,22 @@
       }
     },
     {
+      "map": "Mare Nostrum",
+      "count": 22,
+      "wins": 2,
+      "losses": 20,
+      "playtimeSec": 34037,
+      "avgDuration": 1547.1363636363637,
+      "winRate": 0.09090909090909091,
+      "lastPlayed": 1787297521619,
+      "formatted": {
+        "playtime": "9h 27m",
+        "avgDuration": "25m",
+        "winRate": "9%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "New York City",
       "count": 22,
       "wins": 7,
@@ -529,22 +545,6 @@
         "avgDuration": "17m",
         "winRate": "48%",
         "lastPlayed": "19/08/26"
-      }
-    },
-    {
-      "map": "Mare Nostrum",
-      "count": 21,
-      "wins": 1,
-      "losses": 20,
-      "playtimeSec": 31511,
-      "avgDuration": 1500.5238095238096,
-      "winRate": 0.047619047619047616,
-      "lastPlayed": 1786957817029,
-      "formatted": {
-        "playtime": "8h 45m",
-        "avgDuration": "25m",
-        "winRate": "5%",
-        "lastPlayed": "17/08/26"
       }
     },
     {
@@ -1599,7 +1599,7 @@
       25,
       22,
       39,
-      58,
+      59,
       89,
       76,
       95,
@@ -1620,7 +1620,7 @@
       589,
       493,
       556,
-      482,
+      483,
       576,
       560
     ],
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "J2uKpk6q",
+      "start": "2026-08-21T07:32:01.619Z",
+      "map": "Mare Nostrum",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 2526,
+      "totalPlayers": 93,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "cGVsUG5i",
       "start": "2026-08-21T07:18:16.790Z",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "defeat",
       "durationSeconds": 624,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "TfEgWFZH",
-      "start": "2026-08-19T15:36:24.556Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 356,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
