@@ -93418,6 +93418,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T22:56:03.389Z",
       "url": "https://openfront.io/game/BsPQeyYR"
+    },
+    {
+      "id": "tjJupv3L",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Apollo",
+          "clientID": "gECzoeXw",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Woda",
+          "clientID": "eK5LzuCF",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "TeNa",
+          "clientID": "UnzYK1ZW",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "SkinnySnail.NLZG",
+          "clientID": "Kp4vKN5y",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 962,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T23:17:21.316Z",
+      "url": "https://openfront.io/game/tjJupv3L"
     }
   ],
   "team_custom": [
@@ -118275,6 +118310,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T23:08:57.273Z",
       "url": "https://openfront.io/game/BYhQDKye"
+    },
+    {
+      "id": "PdUqzoLN",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "esco",
+          "clientID": "uVzVG8ZK",
+          "clanTag": null
+        },
+        {
+          "username": "Wiki.fomb",
+          "clientID": "aQBwH3M9",
+          "clanTag": null
+        },
+        {
+          "username": "Tigoch",
+          "clientID": "ZLtZmEGE",
+          "clanTag": "UA"
+        },
+        {
+          "username": "Moria",
+          "clientID": "Fs4VF3MZ",
+          "clanTag": null
+        },
+        {
+          "username": "Vydeogamz",
+          "clientID": "7CRccct2",
+          "clanTag": "777"
+        },
+        {
+          "username": "Belgium",
+          "clientID": "Agk3DsV4",
+          "clanTag": null
+        },
+        {
+          "username": "Da Warboss",
+          "clientID": "wTjdDU4A",
+          "clanTag": "POOB"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T23:22:38.199Z",
+      "url": "https://openfront.io/game/PdUqzoLN"
     }
   ],
   "hvn": [
