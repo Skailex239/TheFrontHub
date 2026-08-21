@@ -1,27 +1,27 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-21T11:06:03.487Z",
-  "lastSyncedAt": "2026-08-21T11:06:00.690Z",
-  "totalGames": 3809,
+  "computedAt": "2026-08-21T11:08:16.959Z",
+  "lastSyncedAt": "2026-08-21T11:08:14.923Z",
+  "totalGames": 3810,
   "careerWins": {
-    "ffaCasual": 273,
+    "ffaCasual": 274,
     "ffaRanked": 1420,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1981,
-  "points": 5042,
+  "totalWins": 1982,
+  "points": 5052,
   "level": 50,
-  "levelProgress": 42,
+  "levelProgress": 52,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1981,
+      "current": 1982,
       "target": 2000
     },
     "playtime": {
-      "current": 747,
+      "current": 748,
       "target": 1000
     },
     "maps": {
@@ -39,26 +39,26 @@
     6
   ],
   "formatted": {
-    "points": "5 042",
-    "totalWins": "1 981",
-    "totalGames": "3 809",
-    "totalPlaytime": "31j 3h",
-    "totalPlaytimeCompact": "31j 3h",
-    "avgGameDuration": "11m 46s",
+    "points": "5 052",
+    "totalWins": "1 982",
+    "totalGames": "3 810",
+    "totalPlaytime": "31j 4h",
+    "totalPlaytimeCompact": "31j 4h",
+    "avgGameDuration": "11m 47s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "747h"
+    "totalPlaytimeHours": "748h"
   },
   "playtime": {
-    "totalSec": 2692509,
-    "avgGameSec": 706.8808086111841,
+    "totalSec": 2694002,
+    "avgGameSec": 707.0871391076115,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1094,
-        "playtimeSec": 1323389,
-        "wins": 273
+        "games": 1095,
+        "playtimeSec": 1324882,
+        "wins": 274
       },
       "ffaRanked": {
         "games": 1914,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1981,
+    "victory": 1982,
     "defeat": 1496,
     "incomplete": 332
   },
@@ -661,18 +661,18 @@
     },
     {
       "map": "Dyslexdria",
-      "count": 14,
-      "wins": 7,
+      "count": 15,
+      "wins": 8,
       "losses": 7,
-      "playtimeSec": 31377,
-      "avgDuration": 2241.214285714286,
-      "winRate": 0.5,
-      "lastPlayed": 1787212993451,
+      "playtimeSec": 32870,
+      "avgDuration": 2191.3333333333335,
+      "winRate": 0.5333333333333333,
+      "lastPlayed": 1787308976022,
       "formatted": {
-        "playtime": "8h 42m",
-        "avgDuration": "37m",
-        "winRate": "50%",
-        "lastPlayed": "20/08/26"
+        "playtime": "9h 7m",
+        "avgDuration": "36m",
+        "winRate": "53%",
+        "lastPlayed": "21/08/26"
       }
     },
     {
@@ -1602,7 +1602,7 @@
       59,
       90,
       79,
-      96,
+      97,
       100,
       91,
       143,
@@ -1620,7 +1620,7 @@
       589,
       493,
       556,
-      488,
+      489,
       576,
       560
     ],
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "42u4S6ju",
+      "start": "2026-08-21T10:42:56.022Z",
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1493,
+      "totalPlayers": 101,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "XMGd1x7X",
       "start": "2026-08-21T10:15:30.412Z",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 300,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "2RRwsMk8",
-      "start": "2026-08-19T16:45:01.208Z",
-      "map": "Asia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 278,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
