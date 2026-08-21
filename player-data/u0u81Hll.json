@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-21T08:20:30.095Z",
+  "lastSyncedAt": "2026-08-21T08:22:18.031Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 2193,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.4,
+  "totalGames": 2194,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "hkGCfBbm",
+      "start": "2026-08-21T08:05:13.570Z",
+      "durationSeconds": 913,
+      "map": "Two Lakes",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 77,
+      "username": "Road to 1600",
+      "clanTag": null
+    },
     {
       "gameId": "X5p5a2TZ",
       "start": "2026-08-21T07:36:41.366Z",
