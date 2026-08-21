@@ -53596,6 +53596,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T13:00:48.168Z",
       "url": "https://openfront.io/game/XCC719MR"
+    },
+    {
+      "id": "fB9UD39s",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "bibi bay bay",
+          "clientID": "Y6FBa9TV",
+          "clanTag": null
+        },
+        {
+          "username": "MaskedMagnate",
+          "clientID": "XLHHviwP",
+          "clanTag": null
+        },
+        {
+          "username": "Fan Hellsing",
+          "clientID": "44tNCNHZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 575,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T13:15:08.422Z",
+      "url": "https://openfront.io/game/fB9UD39s"
+    },
+    {
+      "id": "FYyN6xcz",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Borysrzep",
+          "clientID": "9Tvig27X",
+          "clanTag": "PL"
+        },
+        {
+          "username": "444",
+          "clientID": "N1GH8PMA",
+          "clanTag": null
+        },
+        {
+          "username": "Legrandfilsdemadamemorel",
+          "clientID": "NC7YZKib",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 919,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T13:08:08.891Z",
+      "url": "https://openfront.io/game/FYyN6xcz"
     }
   ],
   "quads": [
@@ -100750,6 +100810,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T13:13:04.787Z",
       "url": "https://openfront.io/game/LLe3zrFx"
+    },
+    {
+      "id": "9tiPxjwY",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Devil",
+          "clientID": "CwpuLTqs",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nopzy",
+          "clientID": "Hp73y7zh",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "cle a molette",
+          "clientID": "huDg4pfp",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Anon757",
+          "clientID": "YxMPjQoR",
+          "clanTag": null
+        },
+        {
+          "username": "Belisarius",
+          "clientID": "M5buQVB8",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 780,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T13:11:28.671Z",
+      "url": "https://openfront.io/game/9tiPxjwY"
     }
   ],
   "hvn": [
