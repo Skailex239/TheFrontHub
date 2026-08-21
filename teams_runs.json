@@ -58396,6 +58396,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:22:15.130Z",
       "url": "https://openfront.io/game/b97sNNWM"
+    },
+    {
+      "id": "8gga1fui",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon220",
+          "clientID": "yC6r7cw5",
+          "clanTag": null
+        },
+        {
+          "username": "WATCH UR 6",
+          "clientID": "R9aJFJem",
+          "clanTag": "AKA"
+        },
+        {
+          "username": "KORD",
+          "clientID": "jEdCfRPv",
+          "clanTag": "RPITI"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 838,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:26:22.864Z",
+      "url": "https://openfront.io/game/8gga1fui"
     }
   ],
   "quads": [
@@ -89518,6 +89548,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T19:23:10.184Z",
       "url": "https://openfront.io/game/Us9ZNjYq"
+    },
+    {
+      "id": "CakXE1Wx",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Tcheno",
+          "clientID": "FrHTEVHA",
+          "clanTag": null
+        },
+        {
+          "username": "AnonValley8",
+          "clientID": "uZCZDAoT",
+          "clanTag": null
+        },
+        {
+          "username": "your friend",
+          "clientID": "jNKxT3p2",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon656",
+          "clientID": "QCYNtNzi",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 670,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T19:27:11.420Z",
+      "url": "https://openfront.io/game/CakXE1Wx"
     }
   ],
   "team_custom": [
