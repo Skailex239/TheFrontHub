@@ -27017,6 +27017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:20:45.695Z",
       "url": "https://openfront.io/game/1JisFvZy"
+    },
+    {
+      "id": "SpTZWCn4",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Binyamin",
+          "clientID": "Vdz4nCkK",
+          "clanTag": "IYKYK"
+        },
+        {
+          "username": "Dannie Grow",
+          "clientID": "dbfDRLd7",
+          "clanTag": "IYKYK"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:24:54.936Z",
+      "url": "https://openfront.io/game/SpTZWCn4"
     }
   ],
   "trios": [
@@ -125407,6 +125432,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T17:10:50.077Z",
       "url": "https://openfront.io/game/fKbvJheJ"
+    },
+    {
+      "id": "PWyuH1t5",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Dont build dumb rails",
+          "clientID": "hXNJVo72",
+          "clanTag": null
+        },
+        {
+          "username": "Azymcalys",
+          "clientID": "rE81v1nK",
+          "clanTag": "LIFE"
+        },
+        {
+          "username": "Balta",
+          "clientID": "D95T7DuA",
+          "clanTag": null
+        },
+        {
+          "username": "silvercroket",
+          "clientID": "5L7L9EFt",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Silverfurby",
+          "clientID": "v3JeMVdh",
+          "clanTag": "THE"
+        },
+        {
+          "username": "attard",
+          "clientID": "gJdFhtnZ",
+          "clanTag": null
+        },
+        {
+          "username": "TryingTooHard67",
+          "clientID": "bMwFPVJa",
+          "clanTag": null
+        },
+        {
+          "username": "Terraformer",
+          "clientID": "p3EmPEwL",
+          "clanTag": "FR"
+        },
+        {
+          "username": "GitHub",
+          "clientID": "yzN2M5nG",
+          "clanTag": null
+        },
+        {
+          "username": "VOC",
+          "clientID": "HZw2XU8Z",
+          "clanTag": null
+        },
+        {
+          "username": "Jam",
+          "clientID": "QMrS9gS1",
+          "clanTag": null
+        },
+        {
+          "username": "Qweppy",
+          "clientID": "x2BQdC5g",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRainbow7",
+          "clientID": "hFprTapf",
+          "clanTag": null
+        },
+        {
+          "username": "folk",
+          "clientID": "V6EzRpvr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCactus6",
+          "clientID": "fg5qEhtD",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1279,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 37,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T17:18:13.534Z",
+      "url": "https://openfront.io/game/PWyuH1t5"
     }
   ]
 }
