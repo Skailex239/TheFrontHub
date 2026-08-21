@@ -21142,6 +21142,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T01:19:55.008Z",
       "url": "https://openfront.io/game/FDMt8m6m"
+    },
+    {
+      "id": "JWmgZn7B",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "srt",
+          "clientID": "MHFVzo56",
+          "clanTag": "313"
+        },
+        {
+          "username": "Communist",
+          "clientID": "LpMTbG2W",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 746,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T01:24:18.280Z",
+      "url": "https://openfront.io/game/JWmgZn7B"
+    },
+    {
+      "id": "Mm7fYcci",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "kashul",
+          "clientID": "n2BNcSKk",
+          "clanTag": null
+        },
+        {
+          "username": "Igivutroopsifuprotec",
+          "clientID": "gDgALKYu",
+          "clanTag": "BOOT"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 822,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T01:25:16.340Z",
+      "url": "https://openfront.io/game/Mm7fYcci"
     }
   ],
   "trios": [
