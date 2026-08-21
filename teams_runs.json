@@ -23392,6 +23392,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T08:32:00.636Z",
       "url": "https://openfront.io/game/1G4PWwXZ"
+    },
+    {
+      "id": "sYoBdXCA",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Mo0l",
+          "clientID": "dubKcnQc",
+          "clanTag": null
+        },
+        {
+          "username": "SaCaR",
+          "clientID": "j6DZRe6s",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 925,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T08:35:28.854Z",
+      "url": "https://openfront.io/game/sYoBdXCA"
     }
   ],
   "trios": [
@@ -92305,6 +92330,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T08:37:26.467Z",
       "url": "https://openfront.io/game/4iuZc1cP"
+    },
+    {
+      "id": "cVEgLs56",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "pzky",
+          "clientID": "5qY2yNck",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BINASH",
+          "clientID": "rJdy87hK",
+          "clanTag": null
+        },
+        {
+          "username": "uWurm",
+          "clientID": "xdPPfeHc",
+          "clanTag": "UWU"
+        },
+        {
+          "username": "AnonPulley",
+          "clientID": "Z8DUXzgq",
+          "clanTag": null
+        },
+        {
+          "username": "Soulzz",
+          "clientID": "4LmT7dQP",
+          "clanTag": null
+        },
+        {
+          "username": "TradeMogul",
+          "clientID": "munvkENx",
+          "clanTag": "CAN"
+        },
+        {
+          "username": "AnonLeather2",
+          "clientID": "69HqQV9p",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1342,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T08:28:13.394Z",
+      "url": "https://openfront.io/game/cVEgLs56"
     }
   ],
   "hvn": [
