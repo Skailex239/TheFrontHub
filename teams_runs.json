@@ -85728,6 +85728,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T15:57:44.535Z",
       "url": "https://openfront.io/game/2adSgWqV"
+    },
+    {
+      "id": "VT2M3W9B",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonPlow9",
+          "clientID": "qrCpRCdQ",
+          "clanTag": null
+        },
+        {
+          "username": "mobina",
+          "clientID": "AK6a9ziL",
+          "clanTag": "TG"
+        },
+        {
+          "username": "AnonSpider",
+          "clientID": "rjhgMHHy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOwl7",
+          "clientID": "VcchzHpQ",
+          "clanTag": "TG"
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 697,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T16:03:49.407Z",
+      "url": "https://openfront.io/game/VT2M3W9B"
     }
   ],
   "team_custom": [
@@ -106160,6 +106195,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T15:57:23.506Z",
       "url": "https://openfront.io/game/Bfc3z4zk"
+    },
+    {
+      "id": "AtPnBCsk",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Pacmans Cloacah",
+          "clientID": "9EGrWN94",
+          "clanTag": "UN"
+        },
+        {
+          "username": "TraderSt",
+          "clientID": "88niyDFL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Roomba",
+          "clientID": "NuzgBe3e",
+          "clanTag": null
+        },
+        {
+          "username": "QwertySpain",
+          "clientID": "jNqRBQfD",
+          "clanTag": null
+        },
+        {
+          "username": "LzySkyGaming",
+          "clientID": "cwTL97Nn",
+          "clanTag": "IT"
+        },
+        {
+          "username": "AnonA",
+          "clientID": "KWAwhedK",
+          "clanTag": null
+        },
+        {
+          "username": "Flask",
+          "clientID": "zNKSzSgH",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 943,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:01:22.235Z",
+      "url": "https://openfront.io/game/AtPnBCsk"
     }
   ],
   "hvn": [
