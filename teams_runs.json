@@ -24442,6 +24442,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:18:16.770Z",
       "url": "https://openfront.io/game/ZkbSYV5u"
+    },
+    {
+      "id": "vVnqjzUn",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kuba",
+          "clientID": "ZJtdHR26",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSpider4",
+          "clientID": "Rymo2kmD",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 585,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:35:59.872Z",
+      "url": "https://openfront.io/game/vVnqjzUn"
     }
   ],
   "trios": [
@@ -80318,6 +80343,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T11:30:18.993Z",
       "url": "https://openfront.io/game/DPSx745P"
+    },
+    {
+      "id": "zGwdEYRG",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "BunnyKisses67",
+          "clientID": "HQK9StxR",
+          "clanTag": null
+        },
+        {
+          "username": "baero55",
+          "clientID": "7Y9VtdKs",
+          "clanTag": null
+        },
+        {
+          "username": "Rosa",
+          "clientID": "ipyuc7n5",
+          "clanTag": "LENA"
+        },
+        {
+          "username": "AnonWhisper",
+          "clientID": "y2mw3Qdu",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1379,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T11:21:50.992Z",
+      "url": "https://openfront.io/game/zGwdEYRG"
     }
   ],
   "team_custom": [
