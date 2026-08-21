@@ -59321,6 +59321,96 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T20:28:59.383Z",
       "url": "https://openfront.io/game/WeFDFo4j"
+    },
+    {
+      "id": "hxMaJGkC",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kohout",
+          "clientID": "1U7bJJwQ",
+          "clanTag": "TRISO"
+        },
+        {
+          "username": "Friendly Pirates",
+          "clientID": "BmUjxHWT",
+          "clanTag": null
+        },
+        {
+          "username": "Arialis",
+          "clientID": "kUYcjzEx",
+          "clanTag": "TRISO"
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 537,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T20:38:04.014Z",
+      "url": "https://openfront.io/game/hxMaJGkC"
+    },
+    {
+      "id": "YQfFac4r",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Ano Ghiaccio",
+          "clientID": "kgTikEFT",
+          "clanTag": "DEES"
+        },
+        {
+          "username": "Vitello Tonnato",
+          "clientID": "t34fibkc",
+          "clanTag": "DEES"
+        },
+        {
+          "username": "Devouring Swarm",
+          "clientID": "XsLVWX1B",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 671,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T20:35:35.851Z",
+      "url": "https://openfront.io/game/YQfFac4r"
+    },
+    {
+      "id": "avR5A9kh",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BoomieSan",
+          "clientID": "RbkitEj1",
+          "clanTag": null
+        },
+        {
+          "username": "onlytrading",
+          "clientID": "2btQKcAr",
+          "clanTag": null
+        },
+        {
+          "username": "tiny",
+          "clientID": "ApRBVvAF",
+          "clanTag": "USA"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 943,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T20:31:44.578Z",
+      "url": "https://openfront.io/game/avR5A9kh"
     }
   ],
   "quads": [
