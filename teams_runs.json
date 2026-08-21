@@ -21092,6 +21092,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T01:11:25.453Z",
       "url": "https://openfront.io/game/pnykohRP"
+    },
+    {
+      "id": "mGLvzMYD",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BOB",
+          "clientID": "kM5qMnEH",
+          "clanTag": null
+        },
+        {
+          "username": "joggisibal",
+          "clientID": "DQEVKuJY",
+          "clanTag": "DEV"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 931,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T01:08:38.262Z",
+      "url": "https://openfront.io/game/mGLvzMYD"
     }
   ],
   "trios": [
@@ -46606,6 +46631,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T01:04:33.006Z",
       "url": "https://openfront.io/game/Q2722Jv4"
+    },
+    {
+      "id": "WcVZJvzm",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "pon iusrsrsrtuddjfghdyfgdhj",
+          "clientID": "vmEa74ZF",
+          "clanTag": null
+        },
+        {
+          "username": "Horb",
+          "clientID": "aE62Erm6",
+          "clanTag": "FARM"
+        },
+        {
+          "username": "koori",
+          "clientID": "en8LExai",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T01:13:25.074Z",
+      "url": "https://openfront.io/game/WcVZJvzm"
     }
   ],
   "quads": [
@@ -72198,6 +72253,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T01:03:10.942Z",
       "url": "https://openfront.io/game/Sq6tedxU"
+    },
+    {
+      "id": "MRmpcx2S",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Some1",
+          "clientID": "J6iTKTAo",
+          "clanTag": null
+        },
+        {
+          "username": "LastNameEon",
+          "clientID": "qkxiec19",
+          "clanTag": null
+        },
+        {
+          "username": "Mama Eu 7x1",
+          "clientID": "e59YqcNb",
+          "clanTag": "BR"
+        },
+        {
+          "username": "MorePylons",
+          "clientID": "MCCtu4cF",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1066,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T01:07:19.184Z",
+      "url": "https://openfront.io/game/MRmpcx2S"
     }
   ],
   "team_custom": [
