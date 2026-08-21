@@ -28842,6 +28842,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T21:40:46.223Z",
       "url": "https://openfront.io/game/ouZU825v"
+    },
+    {
+      "id": "GPSaUbL7",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Erteschio",
+          "clientID": "fPv643Gs",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "SDRome",
+          "clientID": "HmvBFZ15",
+          "clanTag": "OPS"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1053,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T21:30:09.283Z",
+      "url": "https://openfront.io/game/GPSaUbL7"
     }
   ],
   "trios": [
