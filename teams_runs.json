@@ -25817,6 +25817,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:27:18.136Z",
       "url": "https://openfront.io/game/5ftFTWJ7"
+    },
+    {
+      "id": "edYoHPhc",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Tung",
+          "clientID": "tz6tnuyD",
+          "clanTag": "TUNG"
+        },
+        {
+          "username": "Theventreur",
+          "clientID": "34nSKvHD",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1878,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:15:12.343Z",
+      "url": "https://openfront.io/game/edYoHPhc"
+    },
+    {
+      "id": "H5ULZ8PT",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "USA",
+          "clientID": "HYWTk1wy",
+          "clanTag": null
+        },
+        {
+          "username": "extractmetrics.com",
+          "clientID": "t13EUkAW",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 699,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:35:15.617Z",
+      "url": "https://openfront.io/game/H5ULZ8PT"
     }
   ],
   "trios": [
@@ -103340,6 +103390,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T14:28:26.207Z",
       "url": "https://openfront.io/game/7VzZUzjG"
+    },
+    {
+      "id": "TK2YB68B",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "brrr",
+          "clientID": "ZRkbDgGE",
+          "clanTag": null
+        },
+        {
+          "username": "Uncle Ben",
+          "clientID": "dtPaYbpJ",
+          "clanTag": null
+        },
+        {
+          "username": "kinaly",
+          "clientID": "c1iCJV51",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NCR",
+          "clientID": "DWgeVRgf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Kurdistan",
+          "clientID": "gSVU4yzz",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 670,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T14:34:57.595Z",
+      "url": "https://openfront.io/game/TK2YB68B"
     }
   ],
   "hvn": [
