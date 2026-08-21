@@ -27342,6 +27342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T18:06:00.325Z",
       "url": "https://openfront.io/game/9KhzYsTa"
+    },
+    {
+      "id": "9ruXPToU",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonRabbit9",
+          "clientID": "8rV7p6eK",
+          "clanTag": null
+        },
+        {
+          "username": "LVS",
+          "clientID": "NDPr7n88",
+          "clanTag": "FLT"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1297,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:54:29.401Z",
+      "url": "https://openfront.io/game/9ruXPToU"
     }
   ],
   "trios": [
@@ -57236,6 +57261,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T18:00:34.777Z",
       "url": "https://openfront.io/game/tyENzKWz"
+    },
+    {
+      "id": "6tD6SZca",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Wizky",
+          "clientID": "EUSX1FEU",
+          "clanTag": "213"
+        },
+        {
+          "username": "Sanchosc",
+          "clientID": "PLnBRxCX",
+          "clanTag": "213"
+        },
+        {
+          "username": "WhoWho",
+          "clientID": "HRV4ftBD",
+          "clanTag": "TAG"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 731,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T18:06:24.671Z",
+      "url": "https://openfront.io/game/6tD6SZca"
     }
   ],
   "quads": [
