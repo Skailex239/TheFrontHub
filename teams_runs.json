@@ -27817,6 +27817,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:08:58.264Z",
       "url": "https://openfront.io/game/hjwTj2Zh"
+    },
+    {
+      "id": "nNwVStJZ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Infiny",
+          "clientID": "VrhhJHn5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Flamingo",
+          "clientID": "kj39bUQX",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 300,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:23:22.185Z",
+      "url": "https://openfront.io/game/nNwVStJZ"
+    },
+    {
+      "id": "JrTyC8Qt",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon...",
+          "clientID": "GErJkF8d",
+          "clanTag": "AMAMR"
+        },
+        {
+          "username": "Lil Rat",
+          "clientID": "U6NmhK3h",
+          "clanTag": "RAT"
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 427,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:23:54.227Z",
+      "url": "https://openfront.io/game/JrTyC8Qt"
+    },
+    {
+      "id": "M2LuaDbz",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Iman",
+          "clientID": "rzFi7mJ5",
+          "clanTag": "IRI"
+        },
+        {
+          "username": "AnonCrimson1",
+          "clientID": "4u1AfBXY",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1126,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:09:55.329Z",
+      "url": "https://openfront.io/game/M2LuaDbz"
     }
   ],
   "trios": [
@@ -129967,6 +130042,51 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T19:06:07.088Z",
       "url": "https://openfront.io/game/chu1hNrV"
+    },
+    {
+      "id": "D8NM6wjm",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Gives troops",
+          "clientID": "kuXWBWMY",
+          "clanTag": null
+        },
+        {
+          "username": "Ancapistan",
+          "clientID": "k3oSpioE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark9",
+          "clientID": "28FMPND8",
+          "clanTag": null
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "XK61epaS",
+          "clanTag": null
+        },
+        {
+          "username": "3 nations in a coat",
+          "clientID": "dnWxY961",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHelmet6",
+          "clientID": "S1GWkSLD",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 953,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 11,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T19:14:54.661Z",
+      "url": "https://openfront.io/game/D8NM6wjm"
     }
   ]
 }
