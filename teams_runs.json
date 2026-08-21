@@ -24892,6 +24892,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:13:38.225Z",
       "url": "https://openfront.io/game/DjPBHz3s"
+    },
+    {
+      "id": "fAp9vdCN",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonOpal7",
+          "clientID": "VoUbTecG",
+          "clanTag": null
+        },
+        {
+          "username": "AI......",
+          "clientID": "98dQPWQN",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1030,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:18:35.527Z",
+      "url": "https://openfront.io/game/fAp9vdCN"
     }
   ],
   "trios": [
@@ -52896,6 +52921,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T12:19:40.106Z",
       "url": "https://openfront.io/game/Nc2XLcEm"
+    },
+    {
+      "id": "qpDCfNoZ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "test",
+          "clientID": "QgN2C7hz",
+          "clanTag": null
+        },
+        {
+          "username": "Anon840",
+          "clientID": "4MNmWoET",
+          "clanTag": "001"
+        },
+        {
+          "username": "Engineer",
+          "clientID": "TVpG1E4v",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 790,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T12:22:52.783Z",
+      "url": "https://openfront.io/game/qpDCfNoZ"
     }
   ],
   "quads": [
@@ -81253,6 +81308,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T12:21:32.689Z",
       "url": "https://openfront.io/game/UYKo3wWQ"
+    },
+    {
+      "id": "AvsKjndU",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AG1130",
+          "clientID": "BErkc3ud",
+          "clanTag": null
+        },
+        {
+          "username": "Dro",
+          "clientID": "v94VKodC",
+          "clanTag": null
+        },
+        {
+          "username": "SeeMeesSeal",
+          "clientID": "sGaAuvwf",
+          "clanTag": null
+        },
+        {
+          "username": "CHAMCHI",
+          "clientID": "2ysBgLcD",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T12:21:20.174Z",
+      "url": "https://openfront.io/game/AvsKjndU"
     }
   ],
   "team_custom": [
