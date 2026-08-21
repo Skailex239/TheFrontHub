@@ -29567,6 +29567,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T23:12:31.508Z",
       "url": "https://openfront.io/game/CEvAud7D"
+    },
+    {
+      "id": "GVLDkxF6",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "bread",
+          "clientID": "ZWdt2TH4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Oceania",
+          "clientID": "wHujEJeR",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 394,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T23:45:19.721Z",
+      "url": "https://openfront.io/game/GVLDkxF6"
     }
   ],
   "trios": [
@@ -93663,6 +93688,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T23:34:36.460Z",
       "url": "https://openfront.io/game/AhdbttTh"
+    },
+    {
+      "id": "i9JeJXJc",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AoR",
+          "clientID": "xz8Txjza",
+          "clanTag": "FE"
+        },
+        {
+          "username": "Pouk",
+          "clientID": "192riLFU",
+          "clanTag": null
+        },
+        {
+          "username": "if you teammate_act like it",
+          "clientID": "9twKAVDp",
+          "clanTag": "SELAM"
+        },
+        {
+          "username": "Island Hobo",
+          "clientID": "pXLMRH6p",
+          "clanTag": "USA"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 752,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T23:38:43.256Z",
+      "url": "https://openfront.io/game/i9JeJXJc"
     }
   ],
   "team_custom": [
