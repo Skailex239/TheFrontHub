@@ -59926,6 +59926,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T21:14:10.313Z",
       "url": "https://openfront.io/game/QdFhKEQq"
+    },
+    {
+      "id": "WXRSPAsY",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "the goat",
+          "clientID": "tors6J2V",
+          "clanTag": null
+        },
+        {
+          "username": "Bluesytown77",
+          "clientID": "7kq6bxwE",
+          "clanTag": null
+        },
+        {
+          "username": "Ascaric",
+          "clientID": "ZvcN5Sh9",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 453,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T21:26:40.071Z",
+      "url": "https://openfront.io/game/WXRSPAsY"
     }
   ],
   "quads": [
@@ -134867,6 +134897,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T21:12:30.719Z",
       "url": "https://openfront.io/game/ajw2fU99"
+    },
+    {
+      "id": "6Ki3dVFJ",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "DAC",
+          "clientID": "qzkyvyVD",
+          "clanTag": null
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "SEfpntUY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRainbow5",
+          "clientID": "NNJe5ALA",
+          "clanTag": null
+        },
+        {
+          "username": "Pebber",
+          "clientID": "TryQdK1L",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CTRL W TO TRADE",
+          "clientID": "fwaTiWKb",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTimber1",
+          "clientID": "kxQ81qB6",
+          "clanTag": null
+        },
+        {
+          "username": "StickyChocolate.gIFU",
+          "clientID": "2XKQXCUL",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonsoon9",
+          "clientID": "3RK6p3Lc",
+          "clanTag": null
+        },
+        {
+          "username": "MrBodycatcher",
+          "clientID": "2FMpFC6P",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hot Boy Yugoslavia",
+          "clientID": "HMpzH4qG",
+          "clanTag": "SFRJ"
+        },
+        {
+          "username": "Weewooooo",
+          "clientID": "7wnWDwXp",
+          "clanTag": null
+        },
+        {
+          "username": "Cinix",
+          "clientID": "gKp47U7h",
+          "clanTag": null
+        },
+        {
+          "username": "Ziel",
+          "clientID": "rm3iZ6VS",
+          "clanTag": null
+        },
+        {
+          "username": "Jumpingquasar",
+          "clientID": "pdgJiu4q",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1135,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T21:15:15.379Z",
+      "url": "https://openfront.io/game/6Ki3dVFJ"
     }
   ]
 }
