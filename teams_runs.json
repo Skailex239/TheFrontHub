@@ -29367,6 +29367,81 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T22:50:01.011Z",
       "url": "https://openfront.io/game/PVyf4gMF"
+    },
+    {
+      "id": "16A7kTgr",
+      "mode": "duos",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Imperium of Mankind",
+          "clientID": "88w4f2Z8",
+          "clanTag": null
+        },
+        {
+          "username": "Anon916",
+          "clientID": "7Hh2VmZy",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 1570,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T22:41:20.467Z",
+      "url": "https://openfront.io/game/16A7kTgr"
+    },
+    {
+      "id": "nDN477N9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Flying Dutchman",
+          "clientID": "v6S36gMw",
+          "clanTag": null
+        },
+        {
+          "username": "ScrewTheTrees",
+          "clientID": "RT69Hzht",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 508,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:54:01.752Z",
+      "url": "https://openfront.io/game/nDN477N9"
+    },
+    {
+      "id": "za8r7itv",
+      "mode": "duos",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "___",
+          "clientID": "GoJ3GTkJ",
+          "clanTag": "OG"
+        },
+        {
+          "username": "Fruchty",
+          "clientID": "nXx8Zoar",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1307,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 37,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T22:45:48.247Z",
+      "url": "https://openfront.io/game/za8r7itv"
     }
   ],
   "trios": [
