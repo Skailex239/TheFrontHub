@@ -28292,6 +28292,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:17:55.705Z",
       "url": "https://openfront.io/game/bQ8Ptxbn"
+    },
+    {
+      "id": "jyUuyens",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "aggressive",
+          "clientID": "BdraLf5p",
+          "clanTag": "UN"
+        },
+        {
+          "username": "yune",
+          "clientID": "rCsW4KQP",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 697,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:12:50.435Z",
+      "url": "https://openfront.io/game/jyUuyens"
     }
   ],
   "trios": [
@@ -90333,6 +90358,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:08:06.077Z",
       "url": "https://openfront.io/game/YVty2aqK"
+    },
+    {
+      "id": "GpMod98Q",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BobaPanda1026",
+          "clientID": "HhaQoKpa",
+          "clanTag": null
+        },
+        {
+          "username": "Anon891",
+          "clientID": "ynZ96QEa",
+          "clanTag": null
+        },
+        {
+          "username": "TinyAndroid.5YKk",
+          "clientID": "Vb7MRnZa",
+          "clanTag": null
+        },
+        {
+          "username": "ines2512",
+          "clientID": "ejJ41CpN",
+          "clanTag": "MUMU"
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T20:13:47.480Z",
+      "url": "https://openfront.io/game/GpMod98Q"
+    },
+    {
+      "id": "TKk4cwwo",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "upthealleyway",
+          "clientID": "SuJDaUay",
+          "clanTag": "CYAN"
+        },
+        {
+          "username": "huss valley",
+          "clientID": "1VNYWrST",
+          "clanTag": "CYAN"
+        },
+        {
+          "username": "Cyan",
+          "clientID": "TF1nEwPg",
+          "clanTag": "CYAN"
+        },
+        {
+          "username": "hus valley",
+          "clientID": "PkUryzbR",
+          "clanTag": "CYAN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1190,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T20:06:55.984Z",
+      "url": "https://openfront.io/game/TKk4cwwo"
     }
   ],
   "team_custom": [
