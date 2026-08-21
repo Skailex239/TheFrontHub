@@ -26117,6 +26117,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T15:07:37.696Z",
       "url": "https://openfront.io/game/QkvriyLt"
+    },
+    {
+      "id": "YZeKSYDg",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ICE",
+          "clientID": "9K5FA6WL",
+          "clanTag": null
+        },
+        {
+          "username": "Timber1",
+          "clientID": "gegPSV9c",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1069,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:08:29.749Z",
+      "url": "https://openfront.io/game/YZeKSYDg"
+    },
+    {
+      "id": "YY7MGuPM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonRiddle4",
+          "clientID": "ak7GXLEL",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonsoon3",
+          "clientID": "97NmcexH",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 708,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:13:58.115Z",
+      "url": "https://openfront.io/game/YY7MGuPM"
     }
   ],
   "trios": [
@@ -84708,6 +84758,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:46:44.829Z",
       "url": "https://openfront.io/game/Mp8H9Fgs"
+    },
+    {
+      "id": "2jvk4WDr",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Ring",
+          "clientID": "abUnYNNP",
+          "clanTag": "UNO"
+        },
+        {
+          "username": "ZXC",
+          "clientID": "BP2HkFy2",
+          "clanTag": "666"
+        },
+        {
+          "username": "JustTrading",
+          "clientID": "W1mFSjwD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTruffle7",
+          "clientID": "j1zfDQap",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 687,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T15:15:15.207Z",
+      "url": "https://openfront.io/game/2jvk4WDr"
     }
   ],
   "team_custom": [
