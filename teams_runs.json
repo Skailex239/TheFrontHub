@@ -21567,6 +21567,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T02:47:33.854Z",
       "url": "https://openfront.io/game/4wyNpC6j"
+    },
+    {
+      "id": "5kUhoFR1",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonTemple",
+          "clientID": "5P7QL1b2",
+          "clanTag": null
+        },
+        {
+          "username": "Crusader",
+          "clientID": "tqefwb7x",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 422,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T02:50:38.555Z",
+      "url": "https://openfront.io/game/5kUhoFR1"
     }
   ],
   "trios": [
@@ -73258,6 +73283,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T02:40:31.922Z",
       "url": "https://openfront.io/game/HypHfhwQ"
+    },
+    {
+      "id": "W82Brsxx",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "RADA",
+          "clientID": "NhSUF4bp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTulip4",
+          "clientID": "SvdWk6Ba",
+          "clanTag": null
+        },
+        {
+          "username": "KILKILKIL",
+          "clientID": "q4mecsik",
+          "clanTag": "LG"
+        },
+        {
+          "username": "AnonCitadel1",
+          "clientID": "whF42VjN",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 761,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T02:46:50.323Z",
+      "url": "https://openfront.io/game/W82Brsxx"
     }
   ],
   "team_custom": [
