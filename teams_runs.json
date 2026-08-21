@@ -80438,6 +80438,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T11:33:49.211Z",
       "url": "https://openfront.io/game/VYvPvxNt"
+    },
+    {
+      "id": "aHU2BSU3",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Jakistam3",
+          "clientID": "bW8q3pRL",
+          "clanTag": null
+        },
+        {
+          "username": "Deglem",
+          "clientID": "tB72T8kD",
+          "clanTag": null
+        },
+        {
+          "username": "ssr",
+          "clientID": "cwS7S1Q8",
+          "clanTag": null
+        },
+        {
+          "username": "Joe",
+          "clientID": "dgym1LoN",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1092,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T11:31:51.086Z",
+      "url": "https://openfront.io/game/aHU2BSU3"
     }
   ],
   "team_custom": [
@@ -97545,6 +97580,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T11:35:40.829Z",
       "url": "https://openfront.io/game/7QVojwLC"
+    },
+    {
+      "id": "EV63QnMb",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "KIMCHIPOWER",
+          "clientID": "tVTx6UoD",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Kakiru",
+          "clientID": "eLbycENg",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "aerokorb",
+          "clientID": "5MX4adCk",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "bibigo",
+          "clientID": "3MzPHk6U",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "SpaceUs",
+          "clientID": "KER1GndX",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "CHAMCHI",
+          "clientID": "XpWFCcWU",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "hexab",
+          "clientID": "V3uKXJyT",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 568,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T11:41:03.200Z",
+      "url": "https://openfront.io/game/EV63QnMb"
+    },
+    {
+      "id": "o1X54kQS",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Minuts",
+          "clientID": "5NEkDQhu",
+          "clanTag": "NEXT"
+        },
+        {
+          "username": "Anon011",
+          "clientID": "6wyfPk46",
+          "clanTag": null
+        },
+        {
+          "username": "IT_GUY",
+          "clientID": "p1dsbsKu",
+          "clanTag": "NEXT"
+        },
+        {
+          "username": "Omega",
+          "clientID": "gviL5nC9",
+          "clanTag": null
+        },
+        {
+          "username": "reza shah",
+          "clientID": "6eyE8x1X",
+          "clanTag": "RIP"
+        },
+        {
+          "username": "tos",
+          "clientID": "R1D5sryh",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPrairie8",
+          "clientID": "ZFpKSyn1",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 953,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T11:33:10.664Z",
+      "url": "https://openfront.io/game/o1X54kQS"
     }
   ],
   "hvn": [
