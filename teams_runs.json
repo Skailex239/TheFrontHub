@@ -26067,6 +26067,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:55:15.890Z",
       "url": "https://openfront.io/game/nV4adAWj"
+    },
+    {
+      "id": "rir6YX3E",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Legan320",
+          "clientID": "JyT6hVdq",
+          "clanTag": "OO"
+        },
+        {
+          "username": "Anon060",
+          "clientID": "PwSazkDM",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 530,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:03:33.415Z",
+      "url": "https://openfront.io/game/rir6YX3E"
     }
   ],
   "trios": [
@@ -55001,6 +55026,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:53:32.278Z",
       "url": "https://openfront.io/game/imHZXuSw"
+    },
+    {
+      "id": "XoUd3pnJ",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Olympe",
+          "clientID": "g2Qk4aNb",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "nico",
+          "clientID": "QwKfFga5",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "gualla777",
+          "clientID": "YS1WDUQm",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T15:00:07.200Z",
+      "url": "https://openfront.io/game/XoUd3pnJ"
     }
   ],
   "quads": [
@@ -84373,6 +84428,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:48:13.420Z",
       "url": "https://openfront.io/game/coDEyrH3"
+    },
+    {
+      "id": "3wec1og6",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DuckyDuck",
+          "clientID": "bFzTA47s",
+          "clanTag": null
+        },
+        {
+          "username": "SUPPORT YOU",
+          "clientID": "7BcHFA5q",
+          "clanTag": "UN"
+        },
+        {
+          "username": "migu pequeno",
+          "clientID": "TvKshrsx",
+          "clanTag": "UN"
+        },
+        {
+          "username": "slt",
+          "clientID": "2Xh8soPE",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 826,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:58:09.571Z",
+      "url": "https://openfront.io/game/3wec1og6"
+    },
+    {
+      "id": "gGvKybQS",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "i revenge every attack",
+          "clientID": "bkps8hQo",
+          "clanTag": null
+        },
+        {
+          "username": "TerraOstile",
+          "clientID": "F2Z6ig2r",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "RAMTIN",
+          "clientID": "iT2eskRs",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPulley7",
+          "clientID": "v87E1NbQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1423,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:49:41.016Z",
+      "url": "https://openfront.io/game/gGvKybQS"
     }
   ],
   "team_custom": [
