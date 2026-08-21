@@ -1238,3 +1238,725 @@
 :root.dark .pf-game-result.loss { background: rgba(220,80,80,.18);  color: #F87171; }
 :root.dark .pf-error-banner     { background: rgba(255,120,80,.15); border-color: rgba(255,120,80,.45); }
 :root.dark .pf-show-all:hover   { background: var(--bg-muted); }
+
+/* ════════════════════════════════════════════════════════════════
+   COCKPIT — Profile stats dashboard (renderPrecomputedStats)
+   Grid 2 colonnes : métriques + anneaux + cat-bars + weekday (gauche)
+                   actions + level + sparkline + streaks (droite)
+   + sections full-width : recent games + map stats
+   ════════════════════════════════════════════════════════════════ */
+
+/* Sync badge — above the grid */
+.cockpit-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  margin-bottom: 14px;
+  background: var(--accent-subtle, rgba(255,107,0,.08));
+  color: var(--accent);
+  border: 1px solid var(--accent-border, rgba(255,107,0,.22));
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+.cockpit-sync-badge svg { flex-shrink: 0; }
+
+/* Chips inside the profile header card (cockpit-status-meta) */
+.cockpit-status-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+.cockpit-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+}
+.cockpit-chip svg { color: var(--text3); flex-shrink: 0; }
+.cockpit-chip-level  { color: var(--accent); border-color: var(--accent-border, rgba(255,107,0,.22)); background: var(--accent-subtle, rgba(255,107,0,.08)); }
+.cockpit-chip-level svg { color: var(--accent); }
+.cockpit-chip-streak.is-active {
+  color: #c2410c;
+  background: rgba(234,88,12,.10);
+  border-color: rgba(234,88,12,.32);
+}
+.cockpit-chip-streak.is-active svg { color: #ea580c; }
+
+/* ── Grid layout ── */
+.cockpit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 4px;
+}
+.cockpit-left,
+.cockpit-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+@media (max-width: 960px) {
+  .cockpit-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Card base (override the +20px margin rule above for grid layout) ── */
+.cockpit-grid .cockpit-card,
+.cockpit-grid + .cockpit-card {
+  margin-top: 0;
+}
+.cockpit-grid .cockpit-card {
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.cockpit-grid .cockpit-card:hover {
+  border-color: var(--accent-border, rgba(255,107,0,.22));
+  box-shadow: 0 4px 14px rgba(0,0,0,.05);
+}
+
+/* Card header (title + sub) */
+.cockpit-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+.cockpit-card-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -.005em;
+}
+.cockpit-card-sub {
+  font-size: 12px;
+  color: var(--text3);
+  font-weight: 500;
+}
+
+/* ── Metric widgets (4 cards: Wins / Winrate / Games / Cartes) ── */
+.cockpit-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media (max-width: 640px) {
+  .cockpit-metrics { grid-template-columns: repeat(2, 1fr); }
+}
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+  transition: transform var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.metric-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--accent);
+  opacity: .85;
+}
+.metric-card[data-metric="winrate"]::before { background: #10b981; }
+.metric-card[data-metric="games"]::before   { background: #6366f1; }
+.metric-card[data-metric="maps"]::before     { background: #a855f7; }
+.metric-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border, rgba(255,107,0,.22));
+}
+.metric-card-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+.metric-card-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+}
+
+/* ── Progress rings ── */
+.cockpit-rings-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cockpit-rings-svg-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-rings-svg {
+  display: block;
+}
+.progress-rings-center-pct {
+  font-size: 26px;
+  font-weight: 800;
+  fill: var(--text);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+}
+.progress-rings-center-sub {
+  font-size: 10px;
+  font-weight: 600;
+  fill: var(--text3);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.cockpit-rings-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+.ring-legend-item {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.ring-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ring-legend-label {
+  color: var(--text2);
+  font-weight: 600;
+}
+.ring-legend-value {
+  color: var(--text);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 12.5px;
+}
+
+/* ── Category bars (temps par catégorie) ── */
+.cat-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cat-bar-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+.cat-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+}
+.cat-bar-label > span:first-child {
+  font-weight: 600;
+  color: var(--text);
+}
+.cat-bar-hours {
+  color: var(--text3);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.cat-bar-track {
+  height: 8px;
+  background: var(--bg-muted);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.cat-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  width: 0;
+  transition: width 1.1s cubic-bezier(.4,0,.2,1);
+}
+.cat-bar-sub {
+  font-size: 11px;
+  color: var(--text3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Weekday bars (activité par jour) ── */
+.weekday-bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  height: 120px;
+  align-items: end;
+  padding: 4px 2px 0;
+}
+.weekday-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  cursor: default;
+}
+.weekday-bar-track {
+  flex: 1;
+  width: 100%;
+  max-width: 28px;
+  background: var(--bg-muted);
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.weekday-bar-fill {
+  width: 100%;
+  background: linear-gradient(180deg, var(--accent) 0%, #c2410c 100%);
+  border-radius: 6px 6px 0 0;
+  height: 0;
+  transition: height 1.1s cubic-bezier(.4,0,.2,1);
+  min-height: 2px;
+}
+.weekday-bar-col.is-peak .weekday-bar-fill {
+  background: linear-gradient(180deg, #f97316 0%, #b45309 100%);
+  box-shadow: 0 0 12px rgba(249,115,22,.4);
+}
+.weekday-bar-label {
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+/* ── Action list (Prochaine action) ── */
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.action-item {
+  display: grid;
+  grid-template-columns: 18px 18px 1fr;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--dur) var(--ease);
+}
+.action-item:hover {
+  background: var(--accent-subtle, rgba(255,107,0,.08));
+  border-color: var(--accent-border, rgba(255,107,0,.22));
+  transform: translateX(2px);
+}
+.action-arrow {
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.action-item:hover .action-arrow {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+.action-icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+}
+.action-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.action-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.action-sub {
+  font-size: 11.5px;
+  color: var(--text3);
+}
+.action-item.action-share {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.action-item.action-share:hover {
+  background: #e85d00;
+  border-color: #e85d00;
+}
+.action-item.action-share .action-arrow,
+.action-item.action-share .action-icon { color: #fff; }
+.action-item.action-share .action-title { color: #fff; }
+.action-item.action-share .action-sub { color: rgba(255,255,255,.85); }
+
+/* ── Level bar ── */
+.level-bar-track {
+  height: 12px;
+  background: var(--bg-muted);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.level-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #f97316 100%);
+  border-radius: var(--radius-pill);
+  width: 0;
+  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 0 10px rgba(255,107,0,.25);
+}
+.level-bar-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text3);
+  font-variant-numeric: tabular-nums;
+}
+.level-bar-stats > span:first-child {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── Sparkline (7 derniers jours) ── */
+.sparkline-wrap {
+  width: 100%;
+  margin-top: 4px;
+}
+.sparkline-svg {
+  display: block;
+  width: 100%;
+}
+.sparkline-path {
+  filter: drop-shadow(0 1px 2px rgba(255,107,0,.15));
+}
+.sparkline-axis {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 6px;
+  font-size: 10px;
+  color: var(--text3);
+  text-align: center;
+  font-weight: 600;
+}
+.sparkline-axis > span:first-child,
+.sparkline-axis > span:last-child {
+  text-align: left;
+  font-weight: 700;
+  color: var(--text2);
+}
+.sparkline-axis > span:last-child { text-align: right; }
+
+/* ── Streaks (2 cards: current + best) ── */
+.streaks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.streak-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: all var(--dur) var(--ease);
+}
+.streak-item.is-active {
+  background: linear-gradient(135deg, rgba(255,107,0,.08), rgba(234,88,12,.06));
+  border-color: rgba(234,88,12,.32);
+}
+.streak-icon {
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+}
+.streak-item.is-active .streak-icon { color: #ea580c; }
+.streak-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.streak-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+}
+.streak-item.is-active .streak-value { color: #ea580c; }
+
+/* ── Recent games (full width) ── */
+.cockpit-recent-games,
+.cockpit-maps {
+  margin-top: 16px;
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+}
+.cockpit-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.recent-game-row {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.recent-game-row:hover {
+  background: var(--accent-subtle, rgba(255,107,0,.06));
+  border-color: var(--accent-border, rgba(255,107,0,.22));
+  transform: translateX(2px);
+}
+.recent-game-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.recent-game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.recent-game-map {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recent-game-meta {
+  font-size: 11.5px;
+  color: var(--text3);
+}
+.recent-game-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  text-align: right;
+}
+.recent-game-result {
+  font-size: 12px;
+  font-weight: 700;
+}
+.recent-game-date {
+  font-size: 11px;
+  color: var(--text3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Map stats table ── */
+.cockpit-maps-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.cockpit-maps-toggle:hover {
+  background: var(--accent-subtle, rgba(255,107,0,.08));
+  color: var(--accent);
+  border-color: var(--accent-border, rgba(255,107,0,.22));
+}
+.cockpit-maps-body { display: block; }
+.map-stats-table-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.map-stats-table-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+}
+.cockpit-maps-body:not(.is-open) .map-stats-table-scroll {
+  max-height: 360px;
+}
+.map-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+.map-stats-table thead {
+  position: sticky;
+  top: 0;
+  background: var(--bg-muted);
+  z-index: 1;
+}
+.map-stats-table th,
+.map-stats-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.map-stats-table th {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+.map-stats-table tbody tr {
+  transition: background var(--dur-fast) var(--ease);
+}
+.map-stats-table tbody tr:hover {
+  background: var(--accent-subtle, rgba(255,107,0,.06));
+}
+.map-stats-table td.num { text-align: right; font-weight: 600; color: var(--text); }
+.map-stats-table td.map-name { font-weight: 600; color: var(--text); }
+
+/* ── Loading & fallback ── */
+.cockpit-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 13px;
+}
+.cockpit-loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: cockpit-spin .8s linear infinite;
+}
+@keyframes cockpit-spin { to { transform: rotate(360deg); } }
+
+.cockpit-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-top: 16px;
+}
+.cockpit-fallback-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-subtle, rgba(255,107,0,.08));
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cockpit-fallback h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.cockpit-fallback p {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--text3);
+  max-width: 380px;
+  line-height: 1.5;
+}
+.cockpit-fallback-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.cockpit-fallback-btn:hover {
+  background: #e85d00;
+  transform: translateY(-1px);
+}
+
+/* ── Dark mode overrides for cockpit ── */
+:root.dark .cockpit-sync-badge {
+  background: rgba(255,107,0,.14);
+  border-color: rgba(255,107,0,.32);
+  color: #fb923c;
+}
+:root.dark .metric-card { box-shadow: 0 1px 2px rgba(0,0,0,.18); }
+:root.dark .recent-game-row:hover,
+:root.dark .map-stats-table tbody tr:hover { background: rgba(255,107,0,.08); }
+:root.dark .map-stats-table thead { background: var(--bg-muted); }

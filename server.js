@@ -461,6 +461,15 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // Serve player-stats JSON files dynamically (player-stats/*.json)
+  if (pathname.startsWith("/player-stats/")) {
+    const filePath = path.join(STATIC_DIR, pathname.slice(1));
+    if (fs.existsSync(filePath) && filePath.endsWith(".json")) {
+      sendFile(res, 200, filePath, "application/json; charset=utf-8");
+      return;
+    }
+  }
+
   if (staticMap[pathname]) {
     const [file, type] = staticMap[pathname];
     sendFile(res, 200, path.join(STATIC_DIR, file), type);
