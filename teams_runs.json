@@ -50901,6 +50901,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T08:47:33.070Z",
       "url": "https://openfront.io/game/nbzoGQhG"
+    },
+    {
+      "id": "424AaPrp",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Kingdom of France",
+          "clientID": "gCp8bjbu",
+          "clanTag": null
+        },
+        {
+          "username": "colorblind",
+          "clientID": "w61PCHBt",
+          "clanTag": null
+        },
+        {
+          "username": "PIZDA",
+          "clientID": "rEysvz3Y",
+          "clanTag": "LOL"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 587,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T09:08:53.368Z",
+      "url": "https://openfront.io/game/424AaPrp"
     }
   ],
   "quads": [
@@ -93250,6 +93280,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T09:02:45.976Z",
       "url": "https://openfront.io/game/kZd7KqfH"
+    },
+    {
+      "id": "crmCNG36",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Leonidas",
+          "clientID": "27nfJy1H",
+          "clanTag": "300"
+        },
+        {
+          "username": "rohos",
+          "clientID": "v3aNdift",
+          "clanTag": null
+        },
+        {
+          "username": "AZE",
+          "clientID": "nu2K2rca",
+          "clanTag": null
+        },
+        {
+          "username": "Vinland",
+          "clientID": "v6FCHija",
+          "clanTag": null
+        },
+        {
+          "username": "DDONG",
+          "clientID": "XvJETRin",
+          "clanTag": "MEGA"
+        },
+        {
+          "username": "nani",
+          "clientID": "KmqzTnCE",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 711,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T09:06:28.701Z",
+      "url": "https://openfront.io/game/crmCNG36"
     }
   ],
   "hvn": [
