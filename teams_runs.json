@@ -23492,6 +23492,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T08:49:37.693Z",
       "url": "https://openfront.io/game/PD27WRjB"
+    },
+    {
+      "id": "JjvahEAC",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "The 5 Star Football Icon",
+          "clientID": "kjQUGXv2",
+          "clanTag": "UA"
+        },
+        {
+          "username": "GRE",
+          "clientID": "JRNt3Wtr",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 791,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T08:52:56.390Z",
+      "url": "https://openfront.io/game/JjvahEAC"
     }
   ],
   "trios": [
@@ -50686,6 +50711,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T08:42:29.281Z",
       "url": "https://openfront.io/game/5ufX1gda"
+    },
+    {
+      "id": "8es5QSoa",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "danthekitty",
+          "clientID": "kpbeoPw4",
+          "clanTag": "DCREW"
+        },
+        {
+          "username": "_0_Firedan",
+          "clientID": "cZCfBPeT",
+          "clanTag": "DCREW"
+        },
+        {
+          "username": "pzky",
+          "clientID": "9dgtvF1L",
+          "clanTag": "DCREW"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 846,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T08:52:19.852Z",
+      "url": "https://openfront.io/game/8es5QSoa"
     }
   ],
   "quads": [
@@ -77608,6 +77663,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T08:41:38.230Z",
       "url": "https://openfront.io/game/711DwVJo"
+    },
+    {
+      "id": "ydt4vZAK",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SEND TROOPS FRONTLINE IDIOT",
+          "clientID": "Zse7EYYW",
+          "clanTag": "NOAFK"
+        },
+        {
+          "username": "Goldbach",
+          "clientID": "tht7Feuy",
+          "clanTag": null
+        },
+        {
+          "username": "Anon143",
+          "clientID": "p6vTg6wr",
+          "clanTag": null
+        },
+        {
+          "username": "lompo",
+          "clientID": "idp9et7d",
+          "clanTag": "FLART"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 918,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:50:14.222Z",
+      "url": "https://openfront.io/game/ydt4vZAK"
     }
   ],
   "team_custom": [
@@ -92725,6 +92815,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T08:24:20.654Z",
       "url": "https://openfront.io/game/y5Acb56V"
+    },
+    {
+      "id": "hQMGrHP4",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "dogaeng",
+          "clientID": "Xe38DCxn",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSnail3",
+          "clientID": "9ETPBGWy",
+          "clanTag": null
+        },
+        {
+          "username": "PowerPotato.G0yi",
+          "clientID": "qSXxkodw",
+          "clanTag": null
+        },
+        {
+          "username": "skulli",
+          "clientID": "ZNLiv6e1",
+          "clanTag": null
+        },
+        {
+          "username": "UserName",
+          "clientID": "vB2M84fd",
+          "clanTag": "NU"
+        },
+        {
+          "username": "NCR",
+          "clientID": "9G75E3uu",
+          "clanTag": null
+        },
+        {
+          "username": "Minamas",
+          "clientID": "MEFMimkF",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 764,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T08:54:16.965Z",
+      "url": "https://openfront.io/game/hQMGrHP4"
     }
   ],
   "hvn": [
