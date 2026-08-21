@@ -25392,6 +25392,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T13:30:37.437Z",
       "url": "https://openfront.io/game/mWKAyzcN"
+    },
+    {
+      "id": "SDYdKw81",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonOcean5",
+          "clientID": "J9DPLdyc",
+          "clanTag": null
+        },
+        {
+          "username": "Crusader",
+          "clientID": "VzXxNepQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1019,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:27:16.725Z",
+      "url": "https://openfront.io/game/SDYdKw81"
+    },
+    {
+      "id": "Dg6wQm4d",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Emerita Augusta",
+          "clientID": "JrtUbUTt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnvil1",
+          "clientID": "JZB9BFmz",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:32:08.532Z",
+      "url": "https://openfront.io/game/Dg6wQm4d"
+    },
+    {
+      "id": "iqqD37D5",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "John Zellig",
+          "clientID": "i72WXKhG",
+          "clanTag": "VOC"
+        },
+        {
+          "username": "WhoWho",
+          "clientID": "Qw8S416h",
+          "clanTag": "TAG"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 902,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:29:09.339Z",
+      "url": "https://openfront.io/game/iqqD37D5"
     }
   ],
   "trios": [
@@ -82723,6 +82798,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T13:33:21.604Z",
       "url": "https://openfront.io/game/JLLZyEfA"
+    },
+    {
+      "id": "E9rNCugA",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Akira",
+          "clientID": "BMif1CgM",
+          "clanTag": null
+        },
+        {
+          "username": "Novus",
+          "clientID": "yp6UJyd8",
+          "clanTag": null
+        },
+        {
+          "username": "Repurika",
+          "clientID": "MZN1tw5V",
+          "clanTag": null
+        },
+        {
+          "username": "OXLONG",
+          "clientID": "TKUgUGx7",
+          "clanTag": "TITO"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 718,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T13:32:45.078Z",
+      "url": "https://openfront.io/game/E9rNCugA"
     }
   ],
   "team_custom": [
@@ -101350,6 +101460,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T13:23:55.512Z",
       "url": "https://openfront.io/game/yyEpubBF"
+    },
+    {
+      "id": "bGcjpXSx",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Ali723",
+          "clientID": "udrAPJFq",
+          "clanTag": null
+        },
+        {
+          "username": "bass",
+          "clientID": "SKizLZK9",
+          "clanTag": null
+        },
+        {
+          "username": "Nuts",
+          "clientID": "Ewh3ubAt",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "beni",
+          "clientID": "d6BtDGdX",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "AnonQuartz",
+          "clientID": "LpKRRWiB",
+          "clanTag": null
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "me6kr2Hv",
+          "clanTag": null
+        },
+        {
+          "username": "Antifa",
+          "clientID": "mYji8kQW",
+          "clanTag": "161"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 656,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T13:34:14.683Z",
+      "url": "https://openfront.io/game/bGcjpXSx"
     }
   ],
   "hvn": [
