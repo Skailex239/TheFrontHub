@@ -93593,6 +93593,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T23:17:21.316Z",
       "url": "https://openfront.io/game/tjJupv3L"
+    },
+    {
+      "id": "jusiJp36",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Yellow Turban Rebellion",
+          "clientID": "hE8yrEKS",
+          "clanTag": "MYTH"
+        },
+        {
+          "username": "Bohemia",
+          "clientID": "SEcx8MVz",
+          "clanTag": null
+        },
+        {
+          "username": "Arshi",
+          "clientID": "FEgfCc1j",
+          "clanTag": "ARSHI"
+        },
+        {
+          "username": "USSR",
+          "clientID": "ZvZMUw5J",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 849,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 87,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T23:30:53.230Z",
+      "url": "https://openfront.io/game/jusiJp36"
+    },
+    {
+      "id": "AhdbttTh",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "LEGION",
+          "clientID": "wgfp7TjY",
+          "clanTag": null
+        },
+        {
+          "username": "Mr.Almafa",
+          "clientID": "8i4R42hd",
+          "clanTag": null
+        },
+        {
+          "username": "DegZZ",
+          "clientID": "Wsa3NTkv",
+          "clanTag": null
+        },
+        {
+          "username": "FactoryMogging",
+          "clientID": "2PeEw5A5",
+          "clanTag": "POPE"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 669,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T23:34:36.460Z",
+      "url": "https://openfront.io/game/AhdbttTh"
     }
   ],
   "team_custom": [
