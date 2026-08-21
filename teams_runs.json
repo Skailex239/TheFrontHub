@@ -25867,6 +25867,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:35:15.617Z",
       "url": "https://openfront.io/game/H5ULZ8PT"
+    },
+    {
+      "id": "4oEpnU2s",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "dux",
+          "clientID": "tVVQKCd3",
+          "clanTag": null
+        },
+        {
+          "username": "noob",
+          "clientID": "CVRkfvN7",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1499,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:26:26.579Z",
+      "url": "https://openfront.io/game/4oEpnU2s"
     }
   ],
   "trios": [
@@ -83948,6 +83973,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:29:45.789Z",
       "url": "https://openfront.io/game/qXJYyw82"
+    },
+    {
+      "id": "ufrKNbm5",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonBee8",
+          "clientID": "44MnvgTb",
+          "clanTag": null
+        },
+        {
+          "username": "____",
+          "clientID": "8ZJM5wXm",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSugar7",
+          "clientID": "dwConbwf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOctopus7",
+          "clientID": "E8YJyGHs",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 889,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:37:02.806Z",
+      "url": "https://openfront.io/game/ufrKNbm5"
     }
   ],
   "team_custom": [
