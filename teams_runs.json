@@ -23242,6 +23242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T08:08:58.272Z",
       "url": "https://openfront.io/game/4Uj6TeCJ"
+    },
+    {
+      "id": "juLfsqJZ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Diet_Cong_TanPha_KeThu",
+          "clientID": "HcuG9QgP",
+          "clanTag": null
+        },
+        {
+          "username": "A Humble Trader",
+          "clientID": "hZGhbhRy",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 2451,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:46:49.460Z",
+      "url": "https://openfront.io/game/juLfsqJZ"
     }
   ],
   "trios": [
@@ -50316,6 +50341,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T08:08:09.728Z",
       "url": "https://openfront.io/game/K9bBLs8x"
+    },
+    {
+      "id": "ATecigAj",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonGinger7",
+          "clientID": "hhJ68QSy",
+          "clanTag": null
+        },
+        {
+          "username": "Putin",
+          "clientID": "EdKaQfKc",
+          "clanTag": null
+        },
+        {
+          "username": "wahh",
+          "clientID": "R5BizBZg",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 516,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T08:18:29.812Z",
+      "url": "https://openfront.io/game/ATecigAj"
     }
   ],
   "quads": [
