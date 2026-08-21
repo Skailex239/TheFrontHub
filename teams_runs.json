@@ -26092,6 +26092,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T15:03:33.415Z",
       "url": "https://openfront.io/game/rir6YX3E"
+    },
+    {
+      "id": "QkvriyLt",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "DefNotEddie",
+          "clientID": "ejD9K6w5",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "Dex",
+          "clientID": "xspfZPtc",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 780,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 37,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T15:07:37.696Z",
+      "url": "https://openfront.io/game/QkvriyLt"
     }
   ],
   "trios": [
