@@ -29642,6 +29642,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T23:39:43.821Z",
       "url": "https://openfront.io/game/EC1egHo2"
+    },
+    {
+      "id": "kwYTVVDF",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Ridox",
+          "clientID": "3C4fUk1J",
+          "clanTag": "SKOG"
+        },
+        {
+          "username": "TripleOSeven",
+          "clientID": "AFL9u37a",
+          "clanTag": "BTC"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 2885,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 97,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T23:07:01.642Z",
+      "url": "https://openfront.io/game/kwYTVVDF"
     }
   ],
   "trios": [
@@ -118830,6 +118855,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T23:32:53.865Z",
       "url": "https://openfront.io/game/rj9ji6TY"
+    },
+    {
+      "id": "RHj8tj1i",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Spoingus",
+          "clientID": "DtPGDnGf",
+          "clanTag": null
+        },
+        {
+          "username": "Tom",
+          "clientID": "9DXpJeaY",
+          "clanTag": null
+        },
+        {
+          "username": "gulketili",
+          "clientID": "gTeW3F7T",
+          "clanTag": null
+        },
+        {
+          "username": "astroid4_et",
+          "clientID": "KFqndVxm",
+          "clanTag": null
+        },
+        {
+          "username": "KittyFlame123789",
+          "clientID": "4JUmAjjN",
+          "clanTag": null
+        },
+        {
+          "username": "cyrus",
+          "clientID": "gZZdXtTB",
+          "clanTag": "IR"
+        },
+        {
+          "username": "Alisa Kujo",
+          "clientID": "A5rw5bPo",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1041,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T23:37:29.661Z",
+      "url": "https://openfront.io/game/RHj8tj1i"
+    },
+    {
+      "id": "YAk92J1T",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "BunnyKisses67",
+          "clientID": "S3buwSou",
+          "clanTag": null
+        },
+        {
+          "username": "Forest",
+          "clientID": "H3rdASSQ",
+          "clanTag": null
+        },
+        {
+          "username": "Horb",
+          "clientID": "gvbF1B7U",
+          "clanTag": "FARM"
+        },
+        {
+          "username": "BST",
+          "clientID": "ZvmWzNMv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLotus9",
+          "clientID": "cNxAZrHL",
+          "clanTag": null
+        },
+        {
+          "username": "Ali.g1",
+          "clientID": "Zg7j2CoW",
+          "clanTag": "IR"
+        },
+        {
+          "username": "cchubbywalrus",
+          "clientID": "beCe7yhS",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 852,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T23:41:23.450Z",
+      "url": "https://openfront.io/game/YAk92J1T"
     }
   ],
   "hvn": [
