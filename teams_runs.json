@@ -29267,6 +29267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:37:51.240Z",
       "url": "https://openfront.io/game/buVwpJms"
+    },
+    {
+      "id": "34HhL3k9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon988",
+          "clientID": "Gb1yFX24",
+          "clanTag": null
+        },
+        {
+          "username": "Supreme Mito Prophecy",
+          "clientID": "kPCDfcJf",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 844,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:40:28.412Z",
+      "url": "https://openfront.io/game/34HhL3k9"
     }
   ],
   "trios": [
@@ -60811,6 +60836,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T22:44:49.686Z",
       "url": "https://openfront.io/game/83iDsjjP"
+    },
+    {
+      "id": "9yMVQGit",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Bum Raypur",
+          "clientID": "Ss7shmvX",
+          "clanTag": null
+        },
+        {
+          "username": "openu",
+          "clientID": "BCAw4Exs",
+          "clanTag": "CAPT"
+        },
+        {
+          "username": "Anon810",
+          "clientID": "7QVABRnf",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1043,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T22:36:12.622Z",
+      "url": "https://openfront.io/game/9yMVQGit"
+    },
+    {
+      "id": "bqEzHcXh",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GOGO",
+          "clientID": "F1xjJ4G6",
+          "clanTag": "AXIOS"
+        },
+        {
+          "username": "t1t1Ro",
+          "clientID": "qpQYJhoX",
+          "clanTag": "ANT"
+        },
+        {
+          "username": "Anagoge",
+          "clientID": "pHdqUt5D",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 399,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T22:48:00.900Z",
+      "url": "https://openfront.io/game/bqEzHcXh"
     }
   ],
   "quads": [
@@ -137517,6 +137602,66 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T22:23:49.619Z",
       "url": "https://openfront.io/game/LedrAD8A"
+    },
+    {
+      "id": "mhy3HthC",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "CTRL W TO TRADE",
+          "clientID": "j2LY887h",
+          "clanTag": null
+        },
+        {
+          "username": "Marius Daerus",
+          "clientID": "GucwMD8t",
+          "clanTag": null
+        },
+        {
+          "username": "EnG",
+          "clientID": "zJEEPhot",
+          "clanTag": null
+        },
+        {
+          "username": "raccoon",
+          "clientID": "ZjG7rcpc",
+          "clanTag": null
+        },
+        {
+          "username": "Shadow",
+          "clientID": "cvtQKRRh",
+          "clanTag": "SG"
+        },
+        {
+          "username": "Nexus",
+          "clientID": "4L5oQvcd",
+          "clanTag": null
+        },
+        {
+          "username": "The Lidless Eye",
+          "clientID": "83SqntMj",
+          "clanTag": "LOTR"
+        },
+        {
+          "username": "AnonMonkey2",
+          "clientID": "ye4VSnsL",
+          "clanTag": null
+        },
+        {
+          "username": "Super Poop Loop",
+          "clientID": "YF6VVtMm",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 748,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T22:41:00.442Z",
+      "url": "https://openfront.io/game/mhy3HthC"
     }
   ]
 }
