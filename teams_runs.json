@@ -27492,6 +27492,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T18:38:26.808Z",
       "url": "https://openfront.io/game/z6c1w7ab"
+    },
+    {
+      "id": "eRgiKBz7",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "freuneu",
+          "clientID": "QfBKuYEL",
+          "clanTag": "SERGE"
+        },
+        {
+          "username": "Toan",
+          "clientID": "knS65qVE",
+          "clanTag": "SERGE"
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T18:39:17.871Z",
+      "url": "https://openfront.io/game/eRgiKBz7"
+    },
+    {
+      "id": "WAvffS5j",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "4CZTKRz8",
+          "clanTag": null
+        },
+        {
+          "username": "Jupeen",
+          "clientID": "tnHkgUkt",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 2002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T18:17:37.416Z",
+      "url": "https://openfront.io/game/WAvffS5j"
     }
   ],
   "trios": [
@@ -110910,6 +110960,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T18:29:30.737Z",
       "url": "https://openfront.io/game/ZJQ4ys3T"
+    },
+    {
+      "id": "i8ShBKmJ",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "asdasds",
+          "clientID": "BhgC2A9i",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFrost1",
+          "clientID": "RyxrhkwK",
+          "clanTag": null
+        },
+        {
+          "username": "Letha Trade",
+          "clientID": "Q4sWUmku",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "Anon654",
+          "clientID": "roQuxzJt",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "SnPGWzJH",
+          "clanTag": null
+        },
+        {
+          "username": "Mourang",
+          "clientID": "Qhi6BNKT",
+          "clanTag": "ZOV"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 944,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T18:35:07.576Z",
+      "url": "https://openfront.io/game/i8ShBKmJ"
     }
   ],
   "hvn": [
