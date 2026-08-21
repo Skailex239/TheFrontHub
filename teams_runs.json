@@ -53076,6 +53076,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T12:22:52.783Z",
       "url": "https://openfront.io/game/qpDCfNoZ"
+    },
+    {
+      "id": "2FSSCg7q",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "samuele",
+          "clientID": "ticfPRNT",
+          "clanTag": null
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "PL2nc18e",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBlizzard9",
+          "clientID": "ouG9JaG9",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 847,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T12:32:43.405Z",
+      "url": "https://openfront.io/game/2FSSCg7q"
     }
   ],
   "quads": [
@@ -81468,6 +81498,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T12:21:20.174Z",
       "url": "https://openfront.io/game/AvsKjndU"
+    },
+    {
+      "id": "DaLgr2Ho",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "541K",
+          "clientID": "gwC5ex6k",
+          "clanTag": null
+        },
+        {
+          "username": "Koloooft",
+          "clientID": "tR7Swbmn",
+          "clanTag": null
+        },
+        {
+          "username": "Yoto",
+          "clientID": "KPvsKzQJ",
+          "clanTag": null
+        },
+        {
+          "username": "LoveRafitsa",
+          "clientID": "7JFdDeZt",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 757,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T12:34:43.532Z",
+      "url": "https://openfront.io/game/DaLgr2Ho"
     }
   ],
   "team_custom": [
