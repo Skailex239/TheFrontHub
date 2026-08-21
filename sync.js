@@ -63,7 +63,7 @@ function resolveHistoryWindowLimit(argv) {
 }
 
 const RECENT_MAX_MS = 3 * 60 * 60 * 1_000;
-const RECENT_OVERLAP_MS = 10 * 60 * 1_000;
+const RECENT_OVERLAP_MS = 30 * 60 * 1_000;  // 30 min overlap (was 10)
 const GAMES_LIST_FILTER = "type=Public&mode=Free%20For%20All";
 
 const WINDOW_SATURATION_THRESHOLD = 45;
