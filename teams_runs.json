@@ -22567,6 +22567,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T06:54:56.923Z",
       "url": "https://openfront.io/game/gyVVYY6d"
+    },
+    {
+      "id": "7NhKTbr4",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "koori",
+          "clientID": "WyB9zff8",
+          "clanTag": null
+        },
+        {
+          "username": "Jinny",
+          "clientID": "CPvpUjaK",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 887,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T06:50:56.162Z",
+      "url": "https://openfront.io/game/7NhKTbr4"
+    },
+    {
+      "id": "QSVMJtDe",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "UMyNYbLg",
+          "clanTag": null
+        },
+        {
+          "username": "Anon304",
+          "clientID": "ghrne56F",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 425,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:00:21.759Z",
+      "url": "https://openfront.io/game/QSVMJtDe"
     }
   ],
   "trios": [
@@ -89800,6 +89850,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T06:44:23.234Z",
       "url": "https://openfront.io/game/MBdmExFZ"
+    },
+    {
+      "id": "HXBUdbvR",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RICKY",
+          "clientID": "75ALQYAo",
+          "clanTag": null
+        },
+        {
+          "username": "AnonComet",
+          "clientID": "hHjAtao8",
+          "clanTag": null
+        },
+        {
+          "username": "Pacific Motion",
+          "clientID": "bLkeRAwY",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Caribbean Catastrophe",
+          "clientID": "zufSJLiS",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Mazitor.INDIA",
+          "clientID": "EsmVyocj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWhisper5",
+          "clientID": "qtzurNf6",
+          "clanTag": null
+        },
+        {
+          "username": "Please donate",
+          "clientID": "uK57qcjb",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 904,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T06:51:54.217Z",
+      "url": "https://openfront.io/game/HXBUdbvR"
     }
   ],
   "hvn": [
