@@ -29467,6 +29467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:53:16.212Z",
       "url": "https://openfront.io/game/E1Gek9Vy"
+    },
+    {
+      "id": "FCk59hNS",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "methighs",
+          "clientID": "E9CKE1y6",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "LeVi",
+          "clientID": "A5F58wdW",
+          "clanTag": "NUB"
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 796,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T23:04:53.999Z",
+      "url": "https://openfront.io/game/FCk59hNS"
     }
   ],
   "trios": [
