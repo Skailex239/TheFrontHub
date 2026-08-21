@@ -63,7 +63,7 @@ let _allGamesCache = null; // toutes les games paginées (pour playtime + map st
 let _allGamesLoading = false;
 let _mapStatsSortBy = "count";
 let _mapStatsShowAll = false;
-let _rewardCardState = { publicId: null, ownedSkins: [], activeSkinId: null };
+// _rewardCardState supprimé
 
 // VIP skin: publicId → rewardType (matching par PUBLIC ID, pas par alias)
 let vipPlayersByPid = new Map();
@@ -289,7 +289,7 @@ function renderPublicProfile(username, publicId) {
       skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
     }
     nameEl.appendChild(skinSpan);
-    applySkinToElement(skinSpan, publicId, true);
+    // applySkinToElement supprimé
   }
 
   const badgeEl = document.getElementById("profile-public-badge");
@@ -363,7 +363,7 @@ function renderHero(user, profile) {
       skinSpan.style.setProperty("--overlay-img", `url('${overlayImg}')`);
     }
     nameEl.appendChild(skinSpan);
-    applySkinToElement(skinSpan, profile.publicId, true);
+    // applySkinToElement supprimé
   }
 
   const badgeEl = document.getElementById("profile-public-badge");
@@ -1314,105 +1314,22 @@ async function refreshOwnedSkins(publicId) {
   if (!gallery) return;
 
   try {
-    const { ownedSkins, activeSkinId } = await fetchOwnedSkins(publicId);
-    _rewardCardState.ownedSkins = ownedSkins;
-    _rewardCardState.activeSkinId = activeSkinId;
-    if (countEl) countEl.textContent = ownedSkins.filter((s) => s.skinId !== DEFAULT_SKIN_ID).length;
-    renderSkinsGallery(ownedSkins, activeSkinId);
+    // fetchOwnedSkins supprimé
+    
+    
+    
+    
   } catch (e) {
     console.warn("[profile] refreshOwnedSkins failed:", e);
     gallery.innerHTML = `<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">Erreur de chargement</div>`;
   }
 }
 
-function renderSkinsGallery(ownedSkins, activeSkinId) {
-  const gallery = document.getElementById("skins-gallery");
-  if (!gallery) return;
+// renderSkinsGallery supprimé
 
-  const ownedIds = new Set(ownedSkins.map((s) => s.skinId));
-  const allSkins = [getSkin(DEFAULT_SKIN_ID), ...getUnlockableSkins()];
+// handleRedeem supprimé
 
-  gallery.innerHTML = allSkins.map((skin) => {
-    const isOwned = skin.id === DEFAULT_SKIN_ID || ownedIds.has(skin.id);
-    const isActive = (skin.id === DEFAULT_SKIN_ID && (!activeSkinId || activeSkinId === DEFAULT_SKIN_ID)) || activeSkinId === skin.id;
-    const ownedEntry = ownedSkins.find((s) => s.skinId === skin.id);
-    const rarity = RARITY_META[skin.rarity];
-
-    if (!isOwned) {
-      return `
-        <div class="skin-card locked" title="${esc(skin.description)}">
-          <svg class="skin-locked-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          <div class="skin-preview"><span class="${skin.cssClass}" style="opacity:0.3">${esc(skin.name)}</span></div>
-          <div class="skin-name">${esc(skin.name)}</div>
-          <span class="skin-rarity-badge" style="color:${rarity.color};background:${rarity.bg}">${rarity.label}</span>
-          <div style="margin-top:4px;font-size:10px;color:var(--text3)">Verrouillé</div>
-        </div>
-      `;
-    }
-
-    return `
-      <button type="button" class="skin-card ${isActive ? 'active' : ''}" data-skin-id="${esc(skin.id)}" title="${esc(skin.description)}">
-        ${isActive ? '<span style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:50%;background:var(--orange);color:#fff;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>' : ''}
-        <div class="skin-preview"><span class="${skin.cssClass}">${esc(skin.name)}</span></div>
-        <div class="skin-name">${esc(skin.name)}</div>
-        <span class="skin-rarity-badge" style="color:${rarity.color};background:${rarity.bg}">${rarity.label}</span>
-        ${ownedEntry && ownedEntry.redeemedAt ? `<span class="skin-redeemed-date">Depuis le ${formatFrenchDate(new Date(ownedEntry.redeemedAt).getTime())}</span>` : ''}
-        ${isActive ? '<span class="skin-active-badge">● Actif</span>' : ''}
-      </button>
-    `;
-  }).join("");
-
-  // Wire up activate buttons
-  gallery.querySelectorAll(".skin-card[data-skin-id]").forEach((card) => {
-    card.addEventListener("click", () => handleActivate(card.dataset.skinId));
-  });
-}
-
-async function handleRedeem() {
-  const input = document.getElementById("reward-code-input");
-  const btn = document.getElementById("reward-code-submit");
-  if (!input || !input.value.trim()) return;
-
-  const code = input.value.trim();
-  const publicId = _rewardCardState.publicId;
-  if (!publicId) return;
-
-  btn.disabled = true;
-  btn.innerHTML = `<div class="games-loading-spinner" style="width:14px;height:14px"></div> Validation…`;
-
-  try {
-    const result = await redeemCode(code, publicId);
-    if (result.alreadyOwned) {
-      showToast(result.message, "info");
-    } else {
-      showToast(result.message || `Skin "${result.skinName}" débloqué !`, "success");
-    }
-    input.value = "";
-    await refreshOwnedSkins(publicId);
-    // Refresh the hero name skin
-    if (currentProfile) renderHero(currentUser, currentProfile);
-  } catch (e) {
-    showToast(e.message || "Code invalide", "error");
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Valider`;
-  }
-}
-
-async function handleActivate(skinId) {
-  const publicId = _rewardCardState.publicId;
-  if (!publicId) return;
-  try {
-    const result = await activateSkin(publicId, skinId);
-    _rewardCardState.activeSkinId = result.activeSkinId;
-    showToast(skinId === DEFAULT_SKIN_ID ? "Skin standard activé" : `Skin "${getSkin(skinId).name}" activé`, "success");
-    renderSkinsGallery(_rewardCardState.ownedSkins, result.activeSkinId);
-    // Refresh hero name
-    if (currentProfile) renderHero(currentUser, currentProfile);
-  } catch (e) {
-    showToast(e.message || "Activation impossible", "error");
-  }
-}
+// handleActivate supprimé
 
 /* ════════════════════════════════════════════════════════════════
    CAREER STATS OVERVIEW + CHARTS

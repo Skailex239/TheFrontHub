@@ -1485,7 +1485,7 @@ function renderLeaderboard(d){
     const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
     let displayName = r.player;
     let expandBtn = '';
-    const skinIconHtml = rewardType && getSkinIcon(rewardType) ? `<span class="skin-icon">${getSkinIcon(rewardType)}</span>` : '';
+    
     if (currentMode === 'team_custom' && r.player && r.player.includes(' + ')) {
       const parts = r.player.split(' + ');
       if (parts.length > 5) {
@@ -1493,7 +1493,7 @@ function renderLeaderboard(d){
         expandBtn = `<button class="team-expand-btn" onclick="event.stopPropagation();this.parentElement.querySelector('.team-full').style.display='inline';this.style.display='none'" title="Voir tous les joueurs">+${parts.length - 5} de plus</button><span class="team-full" style="display:none">${r.player}</span>`;
       }
     }
-    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+skinIconHtml+displayName+diff+isNew+'</div>'+expandBtn+'<a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
+    return '<div class="run-row '+isMeClass+cosmeticClass+'"><div class="run-rank '+rc+'">'+(i+1)+'</div><div class="run-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(r.player)+'\')">'+displayName+diff+isNew+'</div>'+expandBtn+'<a class="run-replay" href="'+getRunUrl(r)+'" target="_blank" title="Voir le replay">&#9654;</a><div class="run-time">'+formatTime(r.duration_s)+'</div><div class="run-gap">'+gap+'</div>'+ggBtn+'</div>';
   }).join("");
   if(d.runs.length>show)html+='<button class="see-more-btn" onclick="seeMore(\''+esc(d.map)+'\')">Voir plus ('+(d.runs.length-show)+' restants)</button>';
   document.getElementById("leaderboard").innerHTML=html;
@@ -1621,8 +1621,7 @@ function renderGlobal(){
       const overlayImg = getPlayerOverlay(p.player, "dashboard");
       const overlayClass = overlayImg ? ' has-overlay' : '';
       const overlayStyle = overlayImg ? ` style="--overlay-img:url('${overlayImg.replace(/'/g,"%27")}')"` : '';
-      const _skinIconP = rewardType && getSkinIcon(rewardType) ? `<span class="skin-icon">${getSkinIcon(rewardType)}</span>` : '';
-      const playerInner = '<span class="global-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(p.player)+'\')">'+_skinIconP+p.player+'</span>';
+      const playerInner = '<span class="global-player'+cosmeticNameClass+overlayClass+'"'+overlayStyle+' onclick="showPlayer(\''+esc(p.player)+'\')">'+p.player+'</span>';
       return '<tr class="'+isMeClass+cosmeticClass+'"><td class="global-rank '+rc+'">'+(i+1)+'</td><td class="global-player-cell" onclick="showPlayer(\''+esc(p.player)+'\')">'+playerInner+'</td><td class="global-points">'+p.points+'</td><td class="global-wins">'+p.wins+'</td></tr>';
     }).join("")+'</tbody></table>';
 }
@@ -2219,7 +2218,6 @@ function renderRankedTable(players) {
           <div style="display:flex;align-items:center;gap:6px">
             ${favBtn}
             <span class="${cosmeticNameClass} ranked-player-name${overlayClass}"${overlayStyle} style="color: var(--text); text-decoration: none; font-weight: 500; position: relative; display: inline-block; padding-right: ${overlayImg ? '120px' : '0'};">
-              ${rewardType && getSkinIcon(rewardType) ? `<span class="skin-icon">${getSkinIcon(rewardType)}</span>` : ''}${p.clanTag ? `<span style="color:var(--text3);font-size:0.9em;margin-right:4px;">[${esc(p.clanTag)}]</span>` : ''}${esc(p.username)}
             </span>
           </div>
         </td>
