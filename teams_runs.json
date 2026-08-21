@@ -27292,6 +27292,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:41:44.098Z",
       "url": "https://openfront.io/game/KY7K2PmR"
+    },
+    {
+      "id": "G5GE6fmV",
+      "mode": "duos",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "peaceful trader",
+          "clientID": "zTHuKjEa",
+          "clanTag": null
+        },
+        {
+          "username": "Folk Valley",
+          "clientID": "EzrDU4ou",
+          "clanTag": "GIG"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 2406,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T17:31:12.346Z",
+      "url": "https://openfront.io/game/G5GE6fmV"
     }
   ],
   "trios": [
@@ -126707,6 +126732,86 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T17:51:00.666Z",
       "url": "https://openfront.io/game/ubjhMTe4"
+    },
+    {
+      "id": "hoRAjBLW",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "LEA",
+          "clientID": "woXtYvHC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGoblin",
+          "clientID": "UnzKJ7ws",
+          "clanTag": null
+        },
+        {
+          "username": "Make Europe Great Again",
+          "clientID": "DgJoM9wp",
+          "clanTag": null
+        },
+        {
+          "username": "Fabrik",
+          "clientID": "vF8CSrwU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSlate5",
+          "clientID": "3yJCgasJ",
+          "clanTag": null
+        },
+        {
+          "username": "DICTATOR MBAPPE",
+          "clientID": "b7FRU6vT",
+          "clanTag": null
+        },
+        {
+          "username": "POSEIDON",
+          "clientID": "LhmMBuJj",
+          "clanTag": null
+        },
+        {
+          "username": "BLUB",
+          "clientID": "bQ32Pym5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThunder2",
+          "clientID": "mZBH2p74",
+          "clanTag": null
+        },
+        {
+          "username": "Anon087",
+          "clientID": "Y8Rq2iWo",
+          "clanTag": null
+        },
+        {
+          "username": "___",
+          "clientID": "z4dVTrgs",
+          "clanTag": "UNI"
+        },
+        {
+          "username": "Ave Cesar",
+          "clientID": "KYjTcDb5",
+          "clanTag": null
+        },
+        {
+          "username": "NerdyButterfly.FUxc",
+          "clientID": "SrpLNh9Y",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1405,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T17:48:06.497Z",
+      "url": "https://openfront.io/game/hoRAjBLW"
     }
   ]
 }
