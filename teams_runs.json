@@ -83503,6 +83503,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:16:00.894Z",
       "url": "https://openfront.io/game/VfCnYe5k"
+    },
+    {
+      "id": "8mUMG58k",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonFjord6",
+          "clientID": "dTrhVBjr",
+          "clanTag": null
+        },
+        {
+          "username": "start in the middle",
+          "clientID": "tMqv7oFF",
+          "clanTag": "NEVER"
+        },
+        {
+          "username": "sanozama",
+          "clientID": "YhBArVtZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonClay1",
+          "clientID": "rZrKoxud",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 976,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:10:46.572Z",
+      "url": "https://openfront.io/game/8mUMG58k"
     }
   ],
   "team_custom": [
@@ -102750,6 +102785,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T14:07:27.852Z",
       "url": "https://openfront.io/game/sSHpfPuu"
+    },
+    {
+      "id": "kbC8xk8o",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LoL",
+          "clientID": "RzAUVgyZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRiddle2",
+          "clientID": "RdmkzYFn",
+          "clanTag": null
+        },
+        {
+          "username": "WOOBAO",
+          "clientID": "kk2wXYpm",
+          "clanTag": "BAO"
+        },
+        {
+          "username": "YOUNGBAO",
+          "clientID": "VkythyvN",
+          "clanTag": "BAO"
+        },
+        {
+          "username": "YUNBAO",
+          "clientID": "XLV2ChJG",
+          "clanTag": "BAO"
+        },
+        {
+          "username": "Zubao",
+          "clientID": "4gzMf6sH",
+          "clanTag": "BAO"
+        },
+        {
+          "username": "JUNBAO",
+          "clientID": "15mJzyaf",
+          "clanTag": "BAO"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1387,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T14:04:34.677Z",
+      "url": "https://openfront.io/game/kbC8xk8o"
     }
   ],
   "hvn": [
