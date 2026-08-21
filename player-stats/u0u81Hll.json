@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T08:04:16.480Z",
-  "lastSyncedAt": "2026-08-21T08:04:13.521Z",
-  "totalGames": 2192,
+  "computedAt": "2026-08-21T08:06:11.894Z",
+  "lastSyncedAt": "2026-08-21T08:06:09.852Z",
+  "totalGames": 2193,
   "careerWins": {
-    "ffaCasual": 379,
+    "ffaCasual": 380,
     "ffaRanked": 328,
     "teamCasual": 47,
     "teamRanked": 63
   },
-  "totalWins": 817,
-  "points": 4416,
+  "totalWins": 818,
+  "points": 4426,
   "level": 44,
-  "levelProgress": 16,
+  "levelProgress": 26,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 817,
+      "current": 818,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 416",
-    "totalWins": "817",
-    "totalGames": "2 192",
+    "points": "4 426",
+    "totalWins": "818",
+    "totalGames": "2 193",
     "totalPlaytime": "23j 1h",
     "totalPlaytimeCompact": "23j 1h",
     "avgGameDuration": "15m 8s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "553h"
   },
   "playtime": {
-    "totalSec": 1990820,
-    "avgGameSec": 908.220802919708,
+    "totalSec": 1992479,
+    "avgGameSec": 908.5631554947561,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1394,
-        "playtimeSec": 1611441,
-        "wins": 379
+        "games": 1395,
+        "playtimeSec": 1613100,
+        "wins": 380
       },
       "ffaRanked": {
         "games": 498,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 817,
+    "victory": 818,
     "defeat": 1047,
     "incomplete": 328
   },
@@ -261,18 +261,18 @@
     },
     {
       "map": "Pluto",
-      "count": 31,
-      "wins": 12,
+      "count": 32,
+      "wins": 13,
       "losses": 19,
-      "playtimeSec": 38381,
-      "avgDuration": 1238.0967741935483,
-      "winRate": 0.3870967741935484,
-      "lastPlayed": 1786898127973,
+      "playtimeSec": 40040,
+      "avgDuration": 1251.25,
+      "winRate": 0.40625,
+      "lastPlayed": 1787297801366,
       "formatted": {
-        "playtime": "10h 39m",
+        "playtime": "11h 7m",
         "avgDuration": "20m",
-        "winRate": "39%",
-        "lastPlayed": "16/08/26"
+        "winRate": "41%",
+        "lastPlayed": "21/08/26"
       }
     },
     {
@@ -1663,7 +1663,7 @@
       1,
       1,
       5,
-      14,
+      15,
       41,
       69,
       75,
@@ -1684,16 +1684,11 @@
       225,
       300,
       334,
-      346,
+      347,
       364,
       321
     ],
     "byDay": [
-      {
-        "date": "14/03/2026",
-        "count": 14,
-        "playtimeSec": 18093
-      },
       {
         "date": "14/04/2026",
         "count": 23,
@@ -1913,6 +1908,11 @@
         "date": "21/06/2026",
         "count": 29,
         "playtimeSec": 27950
+      },
+      {
+        "date": "21/08/2026",
+        "count": 1,
+        "playtimeSec": 1659
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "X5p5a2TZ",
+      "start": "2026-08-21T07:36:41.366Z",
+      "map": "Pluto",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1659,
+      "totalPlayers": 95,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "CVhLwWFx",
       "start": "2026-08-20T18:47:07.130Z",
@@ -2427,17 +2438,6 @@
       "result": "victory",
       "durationSeconds": 376,
       "totalPlayers": 1,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "NStoN3bw",
-      "start": "2026-08-18T10:21:43.752Z",
-      "map": "China",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1110,
-      "totalPlayers": 45,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
