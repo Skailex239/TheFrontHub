@@ -28592,6 +28592,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:53:08.495Z",
       "url": "https://openfront.io/game/go4KbTgf"
+    },
+    {
+      "id": "WizFnoJd",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "OPENFRONT",
+          "clientID": "jmCakZRm",
+          "clanTag": null
+        },
+        {
+          "username": "Shimeon",
+          "clientID": "gVfBmSFW",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1198,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:44:30.443Z",
+      "url": "https://openfront.io/game/WizFnoJd"
+    },
+    {
+      "id": "nnjre4K6",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "The Real Kadoow",
+          "clientID": "b6FwhYCg",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Alberto",
+          "clientID": "TR84cAK9",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 339,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:58:45.856Z",
+      "url": "https://openfront.io/game/nnjre4K6"
     }
   ],
   "trios": [
@@ -114970,6 +115020,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T20:50:01.770Z",
       "url": "https://openfront.io/game/GwE97CZ1"
+    },
+    {
+      "id": "AURUsWpm",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TREXXED",
+          "clientID": "h2dTu3Yy",
+          "clanTag": "NU"
+        },
+        {
+          "username": "FLiPFLAVA",
+          "clientID": "N77wMKrL",
+          "clanTag": "NU"
+        },
+        {
+          "username": "MediCato",
+          "clientID": "tRHoKPxJ",
+          "clanTag": "NU"
+        },
+        {
+          "username": "bahma",
+          "clientID": "wvGGYJHm",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Iceblock",
+          "clientID": "P4LFVWgB",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Confederacy",
+          "clientID": "j35fiqiQ",
+          "clanTag": "NU"
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "KbxQTygq",
+          "clanTag": null
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 578,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T20:55:13.653Z",
+      "url": "https://openfront.io/game/AURUsWpm"
     }
   ],
   "hvn": [
