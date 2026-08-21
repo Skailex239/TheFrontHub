@@ -73548,6 +73548,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T02:57:49.976Z",
       "url": "https://openfront.io/game/vWvYpziE"
+    },
+    {
+      "id": "58UJNrLJ",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "kingklopp",
+          "clientID": "8bDM9CLa",
+          "clanTag": null
+        },
+        {
+          "username": "krog",
+          "clientID": "DojwpFP6",
+          "clanTag": null
+        },
+        {
+          "username": "HAHA KAKA JAJA",
+          "clientID": "koa4rsDT",
+          "clanTag": "BAN"
+        },
+        {
+          "username": "wattman",
+          "clientID": "ue7XHMkG",
+          "clanTag": "BAN"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 838,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T03:02:25.248Z",
+      "url": "https://openfront.io/game/58UJNrLJ"
     }
   ],
   "team_custom": [
@@ -97102,6 +97137,126 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T02:48:14.901Z",
       "url": "https://openfront.io/game/WdgusfFS"
+    },
+    {
+      "id": "gxmeJFBZ",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "LiShaoran",
+          "clientID": "pDikWKDd",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "JuuOh",
+          "clientID": "vT7pnX64",
+          "clanTag": null
+        },
+        {
+          "username": "Kingdom of Prussia",
+          "clientID": "iuLjRajt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonComet3",
+          "clientID": "BtmfVdiK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLocket8",
+          "clientID": "ok5wcZn7",
+          "clanTag": null
+        },
+        {
+          "username": "Dino",
+          "clientID": "gj7uCa5V",
+          "clanTag": "TC"
+        },
+        {
+          "username": "Monk",
+          "clientID": "U2mnw6Z5",
+          "clanTag": "TC"
+        },
+        {
+          "username": "MAXIM",
+          "clientID": "nxu2zaJD",
+          "clanTag": null
+        },
+        {
+          "username": "USSR",
+          "clientID": "digzUNYG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGecko3",
+          "clientID": "1SMiUdbA",
+          "clanTag": null
+        },
+        {
+          "username": ".Obama.",
+          "clientID": "ty8Vsxm6",
+          "clanTag": null
+        },
+        {
+          "username": "AnonIvory4",
+          "clientID": "5NiXX1xd",
+          "clanTag": null
+        },
+        {
+          "username": "nima",
+          "clientID": "YCBV3sjm",
+          "clanTag": "CAO"
+        },
+        {
+          "username": "SPCX333",
+          "clientID": "u1e9tyr8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTruffle4",
+          "clientID": "oE9oMqsD",
+          "clanTag": null
+        },
+        {
+          "username": "Petrov",
+          "clientID": "79hfFF8A",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLeather3",
+          "clientID": "FutQzWJU",
+          "clanTag": null
+        },
+        {
+          "username": "RADA",
+          "clientID": "ecSpauBN",
+          "clanTag": null
+        },
+        {
+          "username": "turboglorp",
+          "clientID": "JjkKnkSi",
+          "clanTag": null
+        },
+        {
+          "username": "Balls or Balls",
+          "clientID": "K7jycm26",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonOnyx1",
+          "clientID": "toKWHbpB",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1315,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T02:54:50.294Z",
+      "url": "https://openfront.io/game/gxmeJFBZ"
     }
   ]
 }
