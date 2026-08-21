@@ -81533,6 +81533,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T12:34:43.532Z",
       "url": "https://openfront.io/game/DaLgr2Ho"
+    },
+    {
+      "id": "VFDDxu7p",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Darth JarJar Binks",
+          "clientID": "EFezNao8",
+          "clanTag": null
+        },
+        {
+          "username": "Kaffesump",
+          "clientID": "YNZs2AhK",
+          "clanTag": "V60"
+        },
+        {
+          "username": "AnonAmethyst4",
+          "clientID": "qxpNZPG3",
+          "clanTag": null
+        },
+        {
+          "username": "NonozGastoni",
+          "clientID": "CP39UZdx",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T12:36:59.691Z",
+      "url": "https://openfront.io/game/VFDDxu7p"
     }
   ],
   "team_custom": [
@@ -99320,6 +99355,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T12:17:32.470Z",
       "url": "https://openfront.io/game/WzrJayjK"
+    },
+    {
+      "id": "k4zgZXdh",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "bacon",
+          "clientID": "6rXtcsAw",
+          "clanTag": null
+        },
+        {
+          "username": "beomboom",
+          "clientID": "q9Dd1z8s",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield9",
+          "clientID": "7rwfpL61",
+          "clanTag": null
+        },
+        {
+          "username": "Unia Polsko Litewska",
+          "clientID": "ajUnDqns",
+          "clanTag": "GUROM"
+        },
+        {
+          "username": "Peace And Love",
+          "clientID": "LPjvYcdB",
+          "clanTag": null
+        },
+        {
+          "username": "FUFU",
+          "clientID": "oSdAUsi6",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1064,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T12:30:58.281Z",
+      "url": "https://openfront.io/game/k4zgZXdh"
     }
   ],
   "hvn": [
