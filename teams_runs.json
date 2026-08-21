@@ -29142,6 +29142,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:25:22.271Z",
       "url": "https://openfront.io/game/ZV8hmceo"
+    },
+    {
+      "id": "WVny9fBM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "MAP Accelerationism",
+          "clientID": "GB4jceqk",
+          "clanTag": null
+        },
+        {
+          "username": "Caesar",
+          "clientID": "QMfjpq6f",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 478,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:31:49.314Z",
+      "url": "https://openfront.io/game/WVny9fBM"
     }
   ],
   "trios": [
@@ -60626,6 +60651,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T22:18:13.651Z",
       "url": "https://openfront.io/game/Bby4Ahoj"
+    },
+    {
+      "id": "LzafSfzD",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "LEBON",
+          "clientID": "8D5pyW6Q",
+          "clanTag": "QDT"
+        },
+        {
+          "username": "SIMSIM la frime",
+          "clientID": "JXjDPjwA",
+          "clanTag": "QDT"
+        },
+        {
+          "username": "Berrrrrrrrrrrrrrrrrnie",
+          "clientID": "dr3WjEUB",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1647,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T22:11:27.217Z",
+      "url": "https://openfront.io/game/LzafSfzD"
     }
   ],
   "quads": [
@@ -117415,6 +117470,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T22:19:16.738Z",
       "url": "https://openfront.io/game/BLdS5g2s"
+    },
+    {
+      "id": "RxnfnF1V",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Devil66601",
+          "clientID": "Gcc9q5PB",
+          "clanTag": "JK"
+        },
+        {
+          "username": "JlZK",
+          "clientID": "9W2XfNfN",
+          "clanTag": "JK"
+        },
+        {
+          "username": "Galod",
+          "clientID": "UScCJM7X",
+          "clanTag": "JK"
+        },
+        {
+          "username": "LePeloche",
+          "clientID": "uGhLtxZV",
+          "clanTag": "JK"
+        },
+        {
+          "username": "Ziablowwwwwww",
+          "clientID": "vPYsZaWF",
+          "clanTag": "JK"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 534,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T22:32:15.847Z",
+      "url": "https://openfront.io/game/RxnfnF1V"
     }
   ],
   "hvn": [
