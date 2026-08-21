@@ -29542,6 +29542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T23:28:47.592Z",
       "url": "https://openfront.io/game/1KEZUcRS"
+    },
+    {
+      "id": "CEvAud7D",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "The Great Alexander",
+          "clientID": "SNxB7gwS",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "WRvnAo4R",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1625,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T23:12:31.508Z",
+      "url": "https://openfront.io/game/CEvAud7D"
     }
   ],
   "trios": [
@@ -61266,6 +61291,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T23:25:16.357Z",
       "url": "https://openfront.io/game/hSr99Qod"
+    },
+    {
+      "id": "jz17GFVS",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ray",
+          "clientID": "EaxEEqBo",
+          "clanTag": "SY"
+        },
+        {
+          "username": "The Holy See",
+          "clientID": "ef6EbD3Y",
+          "clanTag": null
+        },
+        {
+          "username": "Pyrohex",
+          "clientID": "Yjft6Qmq",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 733,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T23:27:37.510Z",
+      "url": "https://openfront.io/game/jz17GFVS"
     }
   ],
   "quads": [
@@ -118415,6 +118470,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T23:22:38.199Z",
       "url": "https://openfront.io/game/PdUqzoLN"
+    },
+    {
+      "id": "HTwEH5m8",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "JlZK",
+          "clientID": "EXVQLyCa",
+          "clanTag": "JK"
+        },
+        {
+          "username": "Picsou",
+          "clientID": "JZM5HsJm",
+          "clanTag": "JK"
+        },
+        {
+          "username": "LePeloche",
+          "clientID": "GfnnpUN2",
+          "clanTag": "JK"
+        },
+        {
+          "username": "Richterspruch",
+          "clientID": "G7gRWrAx",
+          "clanTag": null
+        },
+        {
+          "username": "ScrewTheTrees",
+          "clientID": "oYkWSFLJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLocket2",
+          "clientID": "JwwhHyh6",
+          "clanTag": null
+        },
+        {
+          "username": "MagickalHack",
+          "clientID": "xH5AL5c4",
+          "clanTag": "RBRN"
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1086,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T23:21:33.633Z",
+      "url": "https://openfront.io/game/HTwEH5m8"
     }
   ],
   "hvn": [
