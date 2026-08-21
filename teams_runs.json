@@ -23517,6 +23517,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T08:52:56.390Z",
       "url": "https://openfront.io/game/JjvahEAC"
+    },
+    {
+      "id": "DxtaPB4V",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PORT",
+          "clientID": "UNcrc5zm",
+          "clanTag": null
+        },
+        {
+          "username": "Alekso",
+          "clientID": "kXYr2Kqd",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:00:42.346Z",
+      "url": "https://openfront.io/game/DxtaPB4V"
+    },
+    {
+      "id": "e7mQNLyn",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LOOOOOOOOOOOOL",
+          "clientID": "6gEHm7mU",
+          "clanTag": null
+        },
+        {
+          "username": "XxGamerXDDxD",
+          "clientID": "gQho6o7C",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 472,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:00:15.319Z",
+      "url": "https://openfront.io/game/e7mQNLyn"
+    },
+    {
+      "id": "jv1hKU9Y",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Aeon",
+          "clientID": "WYWDiAmt",
+          "clanTag": "AST"
+        },
+        {
+          "username": "ohno",
+          "clientID": "7e9GmS7E",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 311,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:04:05.073Z",
+      "url": "https://openfront.io/game/jv1hKU9Y"
     }
   ],
   "trios": [
@@ -77698,6 +77773,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T08:50:14.222Z",
       "url": "https://openfront.io/game/ydt4vZAK"
+    },
+    {
+      "id": "7FJ87nMd",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ALPES MARITIMES",
+          "clientID": "wyqFkLK7",
+          "clanTag": null
+        },
+        {
+          "username": "sebaloh",
+          "clientID": "NYuGVCbV",
+          "clanTag": null
+        },
+        {
+          "username": "LuMorgantu",
+          "clientID": "WhQWhdxH",
+          "clanTag": null
+        },
+        {
+          "username": "Russia",
+          "clientID": "bK89RFN9",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 804,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:55:22.529Z",
+      "url": "https://openfront.io/game/7FJ87nMd"
+    },
+    {
+      "id": "Z1SZ4NJR",
+      "mode": "quads",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "TSM",
+          "clientID": "RKAzpNzt",
+          "clanTag": null
+        },
+        {
+          "username": "Learn2sendTroops",
+          "clientID": "VPuCLAYt",
+          "clanTag": null
+        },
+        {
+          "username": "smithy",
+          "clientID": "EDMCgEAA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "dWJtq1xU",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1093,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T08:50:58.272Z",
+      "url": "https://openfront.io/game/Z1SZ4NJR"
     }
   ],
   "team_custom": [
@@ -92865,6 +93010,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T08:54:16.965Z",
       "url": "https://openfront.io/game/hQMGrHP4"
+    },
+    {
+      "id": "apvaRDKF",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Pay Gorn",
+          "clientID": "iZiCSPSZ",
+          "clanTag": "MSBOX"
+        },
+        {
+          "username": "SnowBunnySlayer",
+          "clientID": "e9WvpHSY",
+          "clanTag": "MSBOX"
+        },
+        {
+          "username": "RiGKu",
+          "clientID": "K5nHRg96",
+          "clanTag": "MSBOX"
+        },
+        {
+          "username": "he men cow",
+          "clientID": "roY1qxhG",
+          "clanTag": "MSBOX"
+        },
+        {
+          "username": "PITIPIWPIW WIWWIW",
+          "clientID": "Baw186xD",
+          "clanTag": "MSBOX"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T08:38:25.530Z",
+      "url": "https://openfront.io/game/apvaRDKF"
     }
   ],
   "hvn": [
