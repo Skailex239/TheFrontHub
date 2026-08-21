@@ -77083,6 +77083,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T08:07:24.192Z",
       "url": "https://openfront.io/game/aZc4QZqE"
+    },
+    {
+      "id": "Swmrgjkm",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "252K",
+          "clientID": "hcDLqdZH",
+          "clanTag": null
+        },
+        {
+          "username": "LetsDoIt1",
+          "clientID": "N1ZJwYkm",
+          "clanTag": null
+        },
+        {
+          "username": "wopjjjdf",
+          "clientID": "ReLMKGYg",
+          "clanTag": null
+        },
+        {
+          "username": "Anonsky",
+          "clientID": "t9LN66nm",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 517,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:23:17.595Z",
+      "url": "https://openfront.io/game/Swmrgjkm"
     }
   ],
   "team_custom": [
@@ -91770,6 +91805,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T08:03:43.485Z",
       "url": "https://openfront.io/game/Pc64KUVu"
+    },
+    {
+      "id": "7BBW9ihC",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LuMorgantu",
+          "clientID": "mckmBpxY",
+          "clanTag": null
+        },
+        {
+          "username": "ILLUMümin",
+          "clientID": "fTgrfZLX",
+          "clanTag": "TURK"
+        },
+        {
+          "username": "WhiteWhale.7guU",
+          "clientID": "yg8qbE9c",
+          "clanTag": null
+        },
+        {
+          "username": "Smile",
+          "clientID": "Dot6aAGt",
+          "clanTag": null
+        },
+        {
+          "username": "brrr",
+          "clientID": "fEfLa3Pi",
+          "clanTag": null
+        },
+        {
+          "username": "Sir Mullich",
+          "clientID": "e8u29bjc",
+          "clanTag": "HOMM"
+        },
+        {
+          "username": "AnonSnail3",
+          "clientID": "4aG15rzM",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 840,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T08:17:37.262Z",
+      "url": "https://openfront.io/game/7BBW9ihC"
     }
   ],
   "hvn": [
