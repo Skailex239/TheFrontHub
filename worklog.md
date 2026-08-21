@@ -2127,3 +2127,74 @@ Stage Summary:
 - Players with 0 weekly activity are NOT archived (no noise).
 - ⚠️ BACKFILL LIMITATION: impossible to recreate past weeks (already overwritten). The first Monday after deployment = S1, the 2nd = S2, etc. History grows from now.
 - Live on GitHub Pages (commit 3d18434, deploy triggered). The CI will start archiving Mondays — the first S1 will appear next Monday (2026-08-24 or 2026-08-31 depending on timezone edge cases).
+
+---
+Task ID: 31
+Agent: main (Z.ai Code)
+Task: Implement 4 Atlas features — Deep-link URL + Zoom/pan + Insights dashboard + Comparison mode.
+
+Work Log:
+- Sub-agent audit (Explore, Task 31 prep) identified the Atlas as a mature static catalog (105 maps, 720 flags, world SVG map with d3-geo, detail modal with nation overlay, 6 category filters) but missing several structuring features.
+
+Implementation (atlas.js +500 lines, atlas.css +510 lines):
+
+1. **Deep-link URL** (?map=, ?cat=, ?nation=):
+   - parseUrlParams() + updateUrl() helpers
+   - loadAtlas() reads ?cat and ?nation at startup, applies them before initial render
+   - ?map=<slug> opens the detail modal after the render (setTimeout 100ms)
+   - URL is live-updated on filter change, search change, modal open, modal close
+   - Closing modal cleans ?map= from URL
+
+2. **Zoom/pan world map** (no d3-zoom dependency — vanilla JS):
+   - mapTransform state = {x, y, k} (translate + scale)
+   - Wheel zoom centered on cursor: converts mouse position to SVG coords, preserves world coord under cursor
+   - Click+drag pan (mouse), touch pan (single finger), pinch zoom (2 fingers)
+   - 3 zoom buttons: + / − / reset (top-right of map)
+   - Hint text "Molette pour zoomer · Glisser pour déplacer" (top-left)
+   - SVG cursor: grab/grabbing
+   - Pins still clickable (filter on e.target.closest('.atlas-svg-pin'))
+   - Range k ∈ [1, 8]
+
+3. **Atlas Insights dashboard** (collapsible <details>):
+   - Top 10 cartes par taille (px²): horizontal orange bars, clickable → opens detail
+   - Distribution joueurs max: 5-bucket vertical bar chart (≤10 / 11-25 / 26-50 / 51-100 / >100)
+   - Répartition par catégorie: SVG donut chart (R_OUTER=60, R_INNER=32, CENTER=80) with 5 colored arcs + legend + center text "105 cartes"
+   - Top 5 densité de nations: horizontal purple bars (nations per 1000 land tiles)
+   - Responsive: 4 cols desktop, 2 tablet, 1 mobile
+
+4. **Mode comparison**:
+   - Each map card gets a + button (top-right corner, 28×28)
+   - Click toggles selection (max 3, FIFO)
+   - Selected cards: orange border + 2px shadow + filled checkmark icon
+   - Sticky comparison bar at bottom shows selected thumbnails + count + "Comparer →" button + "Vider" button
+   - Click "Comparer" opens comparison modal:
+     * Side-by-side table: 160px sticky "Critère" col + N×1fr for each map
+     * Header: thumbnail + name + "Voir détails →" button (closes comparison, opens detail)
+     * 9 rows: Catégorie (colored), Dimensions, Pixels totaux, Joueurs max (highlighted orange), Nations (highlighted), % terre, % eau, Fréquence playlist (highlighted), Géolocalisée
+   - Esc closes modal
+
+Bonus features (cheap to add):
+- Search input (200ms debounce): matches on display_name, translated_name, slug, AND nations[].name (e.g. "sparta" finds the Aegean map). Search cleared via × button.
+- Sort dropdown: default / A→Z / size / players max / nations / playlist / % land
+- Empty state: "Aucune carte ne correspond à votre recherche."
+
+Cache-bust:
+- atlas.css v7 → v8
+- atlas.min.js v1 → v2 (rebuilt)
+- SW v13 → v14 (CACHE_NAME + sw.js?v=14 in all 7 HTML files)
+
+Local verification via agent-browser + VLM:
+- Insights dashboard (8/10): "4 panneaux statistiques distincts" — Top 10 taille with orange bars (Giant World #1 at 8.0M, Hawaii #2, Japan #3), distribution histogram (51-100 bucket highest at 47 maps), donut chart with center "105 CARTES" and legend (Continentales 10, Régionales 66, Autres mondes 16, Arcade 9, Tournoi 4), top 5 density purple bars (Oceania 22n, World 72n, etc.). Search + sort present.
+- Comparison modal (8/10): "3 cartes comparées" (Achiran, Aegean, Africa), 9 critères, joueurs max/nations/playlist highlighted orange, vignettes + "Voir détails" buttons.
+- Deep-link ?map=africa: verified modal opens with title "Africa", URL stays ?map=africa&fresh=...
+- Compare bar: appears at bottom with 3/3 count, "Comparer →" button enabled after 2+ selections.
+
+Captures in /home/z/my-project/download/atlas-v2/ (6 screenshots).
+
+Committed: d555721 → rebased onto 3 auto-sync commits → final 0c00d5c.
+Pushed: bbb5ea4..0c00d5c main -> main ✓
+
+Stage Summary:
+- Atlas v2 is live on GitHub Pages with all 4 features + search + sort + empty state bonus.
+- VLM scores: 8/10 on both Insights dashboard and Comparison modal.
+- Files modified: atlas.js (~370 → ~870 lines), atlas.css (~135 → ~645 lines), atlas.html (version bumps), all 7 HTML files (SW v14), sw.js (CACHE_NAME v14).
