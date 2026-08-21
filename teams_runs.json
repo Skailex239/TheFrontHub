@@ -79103,6 +79103,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T10:14:03.825Z",
       "url": "https://openfront.io/game/gYUXEGyS"
+    },
+    {
+      "id": "XAJo7MAb",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Gio",
+          "clientID": "BWgm3wrh",
+          "clanTag": "MYM"
+        },
+        {
+          "username": "Fcedric",
+          "clientID": "36bewEvA",
+          "clanTag": "MYM"
+        },
+        {
+          "username": "Rody",
+          "clientID": "F8mwft5G",
+          "clanTag": "MYM"
+        },
+        {
+          "username": "parsaplayer",
+          "clientID": "CoverpWz",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1224,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T10:15:02.889Z",
+      "url": "https://openfront.io/game/XAJo7MAb"
     }
   ],
   "team_custom": [
@@ -95230,6 +95265,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T10:20:07.193Z",
       "url": "https://openfront.io/game/1W37WFXu"
+    },
+    {
+      "id": "48a6tRUW",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Doge",
+          "clientID": "fxfUQRdE",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "KhBy88pt",
+          "clanTag": null
+        },
+        {
+          "username": "Anon256",
+          "clientID": "JN4iC3nP",
+          "clanTag": null
+        },
+        {
+          "username": "German Empire",
+          "clientID": "FhPnoVuN",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Cavalty Charge",
+          "clientID": "BgZkBziD",
+          "clanTag": null
+        },
+        {
+          "username": "anon123",
+          "clientID": "zWjYbdNK",
+          "clanTag": null
+        },
+        {
+          "username": "Orthros",
+          "clientID": "BEPyfS3o",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 666,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T10:23:06.365Z",
+      "url": "https://openfront.io/game/48a6tRUW"
     }
   ],
   "hvn": [
