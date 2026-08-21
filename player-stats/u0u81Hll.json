@@ -1,27 +1,27 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T08:58:37.031Z",
-  "lastSyncedAt": "2026-08-21T08:58:35.177Z",
-  "totalGames": 2194,
+  "computedAt": "2026-08-21T09:00:39.203Z",
+  "lastSyncedAt": "2026-08-21T09:00:37.022Z",
+  "totalGames": 2195,
   "careerWins": {
-    "ffaCasual": 381,
+    "ffaCasual": 382,
     "ffaRanked": 328,
     "teamCasual": 47,
     "teamRanked": 63
   },
-  "totalWins": 819,
-  "points": 4436,
+  "totalWins": 820,
+  "points": 4446,
   "level": 44,
-  "levelProgress": 36,
+  "levelProgress": 46,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 819,
+      "current": 820,
       "target": 1000
     },
     "playtime": {
-      "current": 553,
+      "current": 554,
       "target": 1000
     },
     "maps": {
@@ -39,26 +39,26 @@
     10
   ],
   "formatted": {
-    "points": "4 436",
-    "totalWins": "819",
-    "totalGames": "2 194",
-    "totalPlaytime": "23j 1h",
-    "totalPlaytimeCompact": "23j 1h",
+    "points": "4 446",
+    "totalWins": "820",
+    "totalGames": "2 195",
+    "totalPlaytime": "23j 2h",
+    "totalPlaytimeCompact": "23j 2h",
     "avgGameDuration": "15m 8s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "553h"
+    "totalPlaytimeHours": "554h"
   },
   "playtime": {
-    "totalSec": 1993392,
-    "avgGameSec": 908.5651777575205,
+    "totalSec": 1994573,
+    "avgGameSec": 908.6892938496583,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1396,
-        "playtimeSec": 1614013,
-        "wins": 381
+        "games": 1397,
+        "playtimeSec": 1615194,
+        "wins": 382
       },
       "ffaRanked": {
         "games": 498,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 819,
+    "victory": 820,
     "defeat": 1047,
     "incomplete": 328
   },
@@ -356,6 +356,22 @@
       }
     },
     {
+      "map": "San Francisco",
+      "count": 23,
+      "wins": 6,
+      "losses": 17,
+      "playtimeSec": 34974,
+      "avgDuration": 1520.608695652174,
+      "winRate": 0.2608695652173913,
+      "lastPlayed": 1787301514548,
+      "formatted": {
+        "playtime": "9h 42m",
+        "avgDuration": "25m",
+        "winRate": "26%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Gateway to the Atlantic",
       "count": 23,
       "wins": 5,
@@ -369,22 +385,6 @@
         "avgDuration": "21m",
         "winRate": "22%",
         "lastPlayed": "26/07/26"
-      }
-    },
-    {
-      "map": "San Francisco",
-      "count": 22,
-      "wins": 5,
-      "losses": 17,
-      "playtimeSec": 33793,
-      "avgDuration": 1536.0454545454545,
-      "winRate": 0.22727272727272727,
-      "lastPlayed": 1786802773006,
-      "formatted": {
-        "playtime": "9h 23m",
-        "avgDuration": "25m",
-        "winRate": "23%",
-        "lastPlayed": "15/08/26"
       }
     },
     {
@@ -1664,7 +1664,7 @@
       1,
       5,
       15,
-      42,
+      43,
       69,
       75,
       125,
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      348,
+      349,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 2,
-        "playtimeSec": 2572
+        "count": 3,
+        "playtimeSec": 3753
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 2,
+    "current": 3,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "SDPYp8R7",
+      "start": "2026-08-21T08:38:34.548Z",
+      "map": "San Francisco",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1181,
+      "totalPlayers": 89,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "hkGCfBbm",
       "start": "2026-08-21T08:05:13.570Z",
@@ -2427,17 +2438,6 @@
       "result": "victory",
       "durationSeconds": 881,
       "totalPlayers": 56,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "FmbJL2ji",
-      "start": "2026-08-18T17:45:17.245Z",
-      "map": "Hecate Strait",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 3016,
-      "totalPlayers": 108,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
