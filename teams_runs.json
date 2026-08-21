@@ -23692,6 +23692,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T09:12:03.561Z",
       "url": "https://openfront.io/game/KQPGjpcB"
+    },
+    {
+      "id": "pSrwiiRM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FactoryMan",
+          "clientID": "1ngGgT1e",
+          "clanTag": "SITH"
+        },
+        {
+          "username": "AnonOwl5",
+          "clientID": "DYCVJUpw",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 556,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:26:18.445Z",
+      "url": "https://openfront.io/game/pSrwiiRM"
     }
   ],
   "trios": [
@@ -78308,6 +78333,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T09:18:32.615Z",
       "url": "https://openfront.io/game/KPBJxUG8"
+    },
+    {
+      "id": "XLnpp6bH",
+      "mode": "quads",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "moineau loukoum",
+          "clientID": "Yhvg1m6a",
+          "clanTag": null
+        },
+        {
+          "username": "LuMorgantu",
+          "clientID": "MnaCpMv5",
+          "clanTag": null
+        },
+        {
+          "username": "BlasDeLezo",
+          "clientID": "TtrFeDou",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "British Expeditionary Force",
+          "clientID": "7iAbpaFk",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 955,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T09:20:25.637Z",
+      "url": "https://openfront.io/game/XLnpp6bH"
     }
   ],
   "team_custom": [
