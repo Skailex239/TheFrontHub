@@ -23992,6 +23992,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T10:11:07.174Z",
       "url": "https://openfront.io/game/DKBCqWmY"
+    },
+    {
+      "id": "bgRiKpwT",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Lardonfou",
+          "clientID": "aVq1T9cZ",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Tigrou",
+          "clientID": "zJ9Xout2",
+          "clanTag": "III"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1256,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:05:27.298Z",
+      "url": "https://openfront.io/game/bgRiKpwT"
     }
   ],
   "trios": [
@@ -51456,6 +51481,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T10:01:02.537Z",
       "url": "https://openfront.io/game/oEJmwyid"
+    },
+    {
+      "id": "zzHBLaep",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "placeholder",
+          "clientID": "BTNCGcMu",
+          "clanTag": null
+        },
+        {
+          "username": "TRANSJOY",
+          "clientID": "cyBvqaoc",
+          "clanTag": "LGBT"
+        },
+        {
+          "username": "MMike",
+          "clientID": "tov5iHNh",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 778,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T10:13:21.797Z",
+      "url": "https://openfront.io/game/zzHBLaep"
     }
   ],
   "quads": [
