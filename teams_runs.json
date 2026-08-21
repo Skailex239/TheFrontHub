@@ -92618,6 +92618,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T21:44:17.473Z",
       "url": "https://openfront.io/game/GzHHHtAf"
+    },
+    {
+      "id": "7JH6xcak",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "ScrewTheTrees",
+          "clientID": "9mWdWwom",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTulip7",
+          "clientID": "VFqjwH8o",
+          "clanTag": null
+        },
+        {
+          "username": "TradeMogul",
+          "clientID": "6jVLJwHi",
+          "clanTag": "CAN"
+        },
+        {
+          "username": "Hieronymus",
+          "clientID": "y9xsjuHB",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 994,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T22:13:26.852Z",
+      "url": "https://openfront.io/game/7JH6xcak"
     }
   ],
   "team_custom": [
@@ -117135,6 +117170,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T22:09:26.094Z",
       "url": "https://openfront.io/game/ohpyunYH"
+    },
+    {
+      "id": "Pht9hrBy",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "fuckfascism",
+          "clientID": "4Kt748Ms",
+          "clanTag": null
+        },
+        {
+          "username": "TryingTooHard67",
+          "clientID": "5f3Ei6ck",
+          "clanTag": null
+        },
+        {
+          "username": "Pyrohex",
+          "clientID": "WuFRqWYz",
+          "clanTag": null
+        },
+        {
+          "username": "Fruchty",
+          "clientID": "Gz9CXmA3",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShadow1",
+          "clientID": "NdCg1gxM",
+          "clanTag": null
+        },
+        {
+          "username": "cusma420",
+          "clientID": "PK7a1j2o",
+          "clanTag": null
+        },
+        {
+          "username": "D_D",
+          "clientID": "a1AHQQ8k",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 791,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T22:15:52.506Z",
+      "url": "https://openfront.io/game/Pht9hrBy"
+    },
+    {
+      "id": "BLdS5g2s",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Hii",
+          "clientID": "VHL4MFuP",
+          "clanTag": "HII"
+        },
+        {
+          "username": "nobody",
+          "clientID": "xvBDFCCK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHelmet8",
+          "clientID": "v2w4yCp3",
+          "clanTag": null
+        },
+        {
+          "username": "money makeing ally",
+          "clientID": "RcQWEyq7",
+          "clanTag": null
+        },
+        {
+          "username": "Zay",
+          "clientID": "GU8L6GY5",
+          "clanTag": null
+        },
+        {
+          "username": "ToonyVivian",
+          "clientID": "urCnr1U9",
+          "clanTag": "BALD"
+        },
+        {
+          "username": "AnonZenith5",
+          "clientID": "j1Ua8Gqp",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 570,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T22:19:16.738Z",
+      "url": "https://openfront.io/game/BLdS5g2s"
     }
   ],
   "hvn": [
