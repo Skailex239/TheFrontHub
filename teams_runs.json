@@ -54786,6 +54786,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:47:53.899Z",
       "url": "https://openfront.io/game/5giNArfT"
+    },
+    {
+      "id": "Z4m6esCU",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonRiver9",
+          "clientID": "ShEXNZF8",
+          "clanTag": null
+        },
+        {
+          "username": "Fabs",
+          "clientID": "bPSfE9vs",
+          "clanTag": null
+        },
+        {
+          "username": "Lawnmower Association",
+          "clientID": "uq2PC2Vi",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1130,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:41:27.019Z",
+      "url": "https://openfront.io/game/Z4m6esCU"
+    },
+    {
+      "id": "PH4bZGQd",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RiLee",
+          "clientID": "q276DEa5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Im so small leave me be",
+          "clientID": "yREW9tMY",
+          "clanTag": null
+        },
+        {
+          "username": "CUCU",
+          "clientID": "U8E6rYEB",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 623,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:49:18.496Z",
+      "url": "https://openfront.io/game/PH4bZGQd"
     }
   ],
   "quads": [
@@ -103705,6 +103765,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T14:44:39.215Z",
       "url": "https://openfront.io/game/3AjA7fDL"
+    },
+    {
+      "id": "uRAGxdQk",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "MommysLilStinker",
+          "clientID": "uqp61ZXm",
+          "clanTag": null
+        },
+        {
+          "username": "SteroS",
+          "clientID": "kWatAb38",
+          "clanTag": null
+        },
+        {
+          "username": "milmil",
+          "clientID": "tiBvxLCx",
+          "clanTag": null
+        },
+        {
+          "username": "Barbary",
+          "clientID": "YXSKCe6y",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage9",
+          "clientID": "7RaV4fCe",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1227,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T14:40:31.945Z",
+      "url": "https://openfront.io/game/uRAGxdQk"
     }
   ],
   "hvn": [
