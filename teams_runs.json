@@ -21592,6 +21592,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T02:50:38.555Z",
       "url": "https://openfront.io/game/5kUhoFR1"
+    },
+    {
+      "id": "HYM7DkH9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Derek",
+          "clientID": "akPfDNQV",
+          "clanTag": "PUH"
+        },
+        {
+          "username": "OLIVARS",
+          "clientID": "fTikXedN",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1516,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T02:34:35.080Z",
+      "url": "https://openfront.io/game/HYM7DkH9"
     }
   ],
   "trios": [
@@ -47376,6 +47401,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T01:41:57.431Z",
       "url": "https://openfront.io/game/tTitVLPN"
+    },
+    {
+      "id": "JtSTFko8",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "zuzuzuJP",
+          "clientID": "FdAKfFa8",
+          "clanTag": null
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "Urj3ft7N",
+          "clanTag": null
+        },
+        {
+          "username": "Jean Luc Melenchon",
+          "clientID": "dE7v1Zt7",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 916,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T02:44:52.204Z",
+      "url": "https://openfront.io/game/JtSTFko8"
     }
   ],
   "quads": [
