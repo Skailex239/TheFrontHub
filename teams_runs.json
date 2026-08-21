@@ -55171,6 +55171,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T15:03:16.900Z",
       "url": "https://openfront.io/game/GjsP3fWa"
+    },
+    {
+      "id": "im8RPbsZ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Fried",
+          "clientID": "NiPzPryn",
+          "clanTag": null
+        },
+        {
+          "username": "gold",
+          "clientID": "XR2WTGKf",
+          "clanTag": "GD"
+        },
+        {
+          "username": "Hainaut",
+          "clientID": "4jettZnq",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 787,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T15:10:50.403Z",
+      "url": "https://openfront.io/game/im8RPbsZ"
+    },
+    {
+      "id": "dgTRh2BN",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LedZeppelin",
+          "clientID": "3k9irv2H",
+          "clanTag": "AST"
+        },
+        {
+          "username": "what the sigma",
+          "clientID": "h6arNkDt",
+          "clanTag": null
+        },
+        {
+          "username": "napoleon Empire",
+          "clientID": "yVrGErWV",
+          "clanTag": "GG"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 905,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T15:09:53.844Z",
+      "url": "https://openfront.io/game/dgTRh2BN"
     }
   ],
   "quads": [
@@ -84613,6 +84673,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:49:41.016Z",
       "url": "https://openfront.io/game/gGvKybQS"
+    },
+    {
+      "id": "Mp8H9Fgs",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Goule Disco",
+          "clientID": "AaJEPKGH",
+          "clanTag": "LBR"
+        },
+        {
+          "username": "AnonSteel1",
+          "clientID": "ub5QPhrb",
+          "clanTag": null
+        },
+        {
+          "username": "LACH 92",
+          "clientID": "earwbLbp",
+          "clanTag": "FLYAN"
+        },
+        {
+          "username": "easy peasy",
+          "clientID": "tRsqpYCo",
+          "clanTag": "BVB"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 2207,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:46:44.829Z",
+      "url": "https://openfront.io/game/Mp8H9Fgs"
     }
   ],
   "team_custom": [
@@ -104525,6 +104620,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T14:57:29.530Z",
       "url": "https://openfront.io/game/63FZgLxo"
+    },
+    {
+      "id": "SUSR1YiV",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Vandenberg",
+          "clientID": "Br9wKmDK",
+          "clanTag": null
+        },
+        {
+          "username": "popolino_666",
+          "clientID": "7chr5ZQc",
+          "clanTag": null
+        },
+        {
+          "username": "ali",
+          "clientID": "eUoZzU1D",
+          "clanTag": "IR"
+        },
+        {
+          "username": "Anon",
+          "clientID": "UgTYxXPQ",
+          "clanTag": null
+        },
+        {
+          "username": "Your Friend",
+          "clientID": "8LcotSTE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSled1",
+          "clientID": "fBeEo6qg",
+          "clanTag": null
+        },
+        {
+          "username": "WAYLO",
+          "clientID": "e6S7sbTk",
+          "clanTag": "UK"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1499,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T14:59:50.689Z",
+      "url": "https://openfront.io/game/SUSR1YiV"
     }
   ],
   "hvn": [
