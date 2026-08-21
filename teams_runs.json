@@ -83863,6 +83863,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:24:04.432Z",
       "url": "https://openfront.io/game/AM3DLTiA"
+    },
+    {
+      "id": "qXJYyw82",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Vojta",
+          "clientID": "gFuRBAh5",
+          "clanTag": "07"
+        },
+        {
+          "username": "Anon402",
+          "clientID": "648HWxvK",
+          "clanTag": null
+        },
+        {
+          "username": "Jadn36",
+          "clientID": "DhWEkEK3",
+          "clanTag": "KOREA"
+        },
+        {
+          "username": "AnonRiddle3",
+          "clientID": "KARewWSv",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 826,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:29:45.789Z",
+      "url": "https://openfront.io/game/qXJYyw82"
     }
   ],
   "team_custom": [
@@ -103210,6 +103245,101 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T14:25:50.040Z",
       "url": "https://openfront.io/game/cXmLPuno"
+    },
+    {
+      "id": "5ZmD6iHm",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bingo",
+          "clientID": "M7WYvtj9",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "Prasa28",
+          "clientID": "aYGukjuN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVolcano",
+          "clientID": "LCVdnvzR",
+          "clanTag": null
+        },
+        {
+          "username": "Cuddly Penguin",
+          "clientID": "FpnJdrhM",
+          "clanTag": null
+        },
+        {
+          "username": "big train",
+          "clientID": "2X7g2gij",
+          "clanTag": "BR"
+        },
+        {
+          "username": "AnonTimber1",
+          "clientID": "6GVNuUxg",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 663,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T14:32:06.429Z",
+      "url": "https://openfront.io/game/5ZmD6iHm"
+    },
+    {
+      "id": "7VzZUzjG",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "3.14",
+          "clientID": "CbmwxuT2",
+          "clanTag": null
+        },
+        {
+          "username": "Mjewmjew",
+          "clientID": "ubMQWiA6",
+          "clanTag": null
+        },
+        {
+          "username": "Romania",
+          "clientID": "Ev4XvvMR",
+          "clanTag": null
+        },
+        {
+          "username": "Gigio",
+          "clientID": "JKKT61bD",
+          "clanTag": "SV"
+        },
+        {
+          "username": "PJFRY",
+          "clientID": "vW1TYHii",
+          "clanTag": "SV"
+        },
+        {
+          "username": "Cathal",
+          "clientID": "PvwedwPB",
+          "clanTag": null
+        },
+        {
+          "username": "PIROCUDO",
+          "clientID": "tbKUPE4A",
+          "clanTag": "PIROK"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 956,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T14:28:26.207Z",
+      "url": "https://openfront.io/game/7VzZUzjG"
     }
   ],
   "hvn": [
