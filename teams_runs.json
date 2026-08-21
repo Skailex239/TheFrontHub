@@ -24567,6 +24567,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:45:44.505Z",
       "url": "https://openfront.io/game/ZtWmipbq"
+    },
+    {
+      "id": "rz9Beaf7",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Grr",
+          "clientID": "UpGXVxmw",
+          "clanTag": null
+        },
+        {
+          "username": "QQQ",
+          "clientID": "mwHB4Hv2",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 406,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:59:59.394Z",
+      "url": "https://openfront.io/game/rz9Beaf7"
     }
   ],
   "trios": [
@@ -52421,6 +52446,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T11:49:25.738Z",
       "url": "https://openfront.io/game/S5kUgGjd"
+    },
+    {
+      "id": "1bqLg6dq",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Faker1557",
+          "clientID": "GCL7GR1v",
+          "clanTag": "T1"
+        },
+        {
+          "username": "AnonTornado7",
+          "clientID": "XDWQarmP",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Worst player ever",
+          "clientID": "kKCpFob2",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1037,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:48:00.646Z",
+      "url": "https://openfront.io/game/1bqLg6dq"
     }
   ],
   "quads": [
