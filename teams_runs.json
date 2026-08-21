@@ -25242,6 +25242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:57:06.912Z",
       "url": "https://openfront.io/game/anYjG7A5"
+    },
+    {
+      "id": "frDDs2Rk",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "nren",
+          "clientID": "GcxiYyCM",
+          "clanTag": null
+        },
+        {
+          "username": "FanaticTradeAbuser",
+          "clientID": "DZiuMmry",
+          "clanTag": "BE"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1085,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:57:37.950Z",
+      "url": "https://openfront.io/game/frDDs2Rk"
     }
   ],
   "trios": [
@@ -53486,6 +53511,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T13:03:08.410Z",
       "url": "https://openfront.io/game/4439mLtj"
+    },
+    {
+      "id": "tW9BkcS6",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "rome",
+          "clientID": "sZYy1e56",
+          "clanTag": null
+        },
+        {
+          "username": "POUPIPOUPIPOUPIPOU",
+          "clientID": "XyYiEaQw",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCastle9",
+          "clientID": "MiFvjtuQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T13:05:35.666Z",
+      "url": "https://openfront.io/game/tW9BkcS6"
+    },
+    {
+      "id": "XCC719MR",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Cuddly Penguin",
+          "clientID": "YgwhYnuM",
+          "clanTag": null
+        },
+        {
+          "username": "Haudenosaunee Confederacy",
+          "clientID": "GPdicE12",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LITTLE SPARTA",
+          "clientID": "rkCRs4Kw",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 897,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T13:00:48.168Z",
+      "url": "https://openfront.io/game/XCC719MR"
     }
   ],
   "quads": [
@@ -100405,6 +100490,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T12:56:28.872Z",
       "url": "https://openfront.io/game/fU71gx8n"
+    },
+    {
+      "id": "1ipeHdCm",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "florida man",
+          "clientID": "92ADkS9m",
+          "clanTag": null
+        },
+        {
+          "username": "Domolix90",
+          "clientID": "9JVWE4hi",
+          "clanTag": "PL"
+        },
+        {
+          "username": "AnonEmber7",
+          "clientID": "nVyNNUzz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLighthouse6",
+          "clientID": "ePx1jdnz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark5",
+          "clientID": "bgkiaK4F",
+          "clanTag": null
+        },
+        {
+          "username": "Cryncorp",
+          "clientID": "mZwNhTSJ",
+          "clanTag": "NOR"
+        },
+        {
+          "username": "TradeTime",
+          "clientID": "SBsqhXzH",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 801,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T13:02:38.370Z",
+      "url": "https://openfront.io/game/1ipeHdCm"
     }
   ],
   "hvn": [
