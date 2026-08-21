@@ -1,27 +1,27 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T18:32:17.541Z",
-  "lastSyncedAt": "2026-08-21T18:32:14.529Z",
-  "totalGames": 2202,
+  "computedAt": "2026-08-21T18:34:32.390Z",
+  "lastSyncedAt": "2026-08-21T18:34:29.448Z",
+  "totalGames": 2203,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
     "teamCasual": 47,
-    "teamRanked": 65
+    "teamRanked": 66
   },
-  "totalWins": 824,
-  "points": 4468,
+  "totalWins": 825,
+  "points": 4469,
   "level": 44,
-  "levelProgress": 68,
+  "levelProgress": 69,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 824,
+      "current": 825,
       "target": 1000
     },
     "playtime": {
-      "current": 555,
+      "current": 556,
       "target": 1000
     },
     "maps": {
@@ -39,19 +39,19 @@
     10
   ],
   "formatted": {
-    "points": "4 468",
-    "totalWins": "824",
-    "totalGames": "2 202",
-    "totalPlaytime": "23j 3h",
-    "totalPlaytimeCompact": "23j 3h",
+    "points": "4 469",
+    "totalWins": "825",
+    "totalGames": "2 203",
+    "totalPlaytime": "23j 4h",
+    "totalPlaytimeCompact": "23j 4h",
     "avgGameDuration": "15m 8s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "555h"
+    "totalPlaytimeHours": "556h"
   },
   "playtime": {
-    "totalSec": 2001459,
-    "avgGameSec": 908.9277929155313,
+    "totalSec": 2001801,
+    "avgGameSec": 908.6704493871993,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -71,14 +71,14 @@
         "wins": 47
       },
       "teamRanked": {
-        "games": 103,
-        "playtimeSec": 29352,
-        "wins": 65
+        "games": 104,
+        "playtimeSec": 29694,
+        "wins": 66
       }
     }
   },
   "results": {
-    "victory": 824,
+    "victory": 825,
     "defeat": 1049,
     "incomplete": 329
   },
@@ -117,18 +117,18 @@
     },
     {
       "map": "Asia",
-      "count": 116,
-      "wins": 69,
+      "count": 117,
+      "wins": 70,
       "losses": 47,
-      "playtimeSec": 53311,
-      "avgDuration": 459.57758620689657,
-      "winRate": 0.5948275862068966,
-      "lastPlayed": 1787251263260,
+      "playtimeSec": 53653,
+      "avgDuration": 458.5726495726496,
+      "winRate": 0.5982905982905983,
+      "lastPlayed": 1787336871118,
       "formatted": {
-        "playtime": "14h 48m",
+        "playtime": "14h 54m",
         "avgDuration": "7m",
-        "winRate": "59%",
-        "lastPlayed": "20/08/26"
+        "winRate": "60%",
+        "lastPlayed": "21/08/26"
       }
     },
     {
@@ -1674,7 +1674,7 @@
       201,
       202,
       227,
-      200,
+      201,
       149,
       146,
       152
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      356,
+      357,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 10,
-        "playtimeSec": 10639
+        "count": 11,
+        "playtimeSec": 10981
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 3,
+    "current": 4,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "3Qm6V4Mt",
+      "start": "2026-08-21T18:27:51.118Z",
+      "map": "Asia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 342,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "LXKVvyy6",
       "start": "2026-08-21T18:18:16.456Z",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 396,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "xnozEbWD",
-      "start": "2026-08-19T18:14:16.277Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 294,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
