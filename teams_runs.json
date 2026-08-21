@@ -27767,6 +27767,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:10:08.341Z",
       "url": "https://openfront.io/game/AuJCurj3"
+    },
+    {
+      "id": "tDnSH5Ay",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Handy",
+          "clientID": "hqHZedL8",
+          "clanTag": null
+        },
+        {
+          "username": "Potatismos",
+          "clientID": "LGAfB2pr",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 711,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:08:12.721Z",
+      "url": "https://openfront.io/game/tDnSH5Ay"
     }
   ],
   "trios": [
@@ -58051,6 +58076,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:04:04.968Z",
       "url": "https://openfront.io/game/F3vJUVdm"
+    },
+    {
+      "id": "XTBLqvQU",
+      "mode": "trios",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Seb",
+          "clientID": "dZMQ9kJy",
+          "clanTag": null
+        },
+        {
+          "username": "michael jordan",
+          "clientID": "VaKbkGLx",
+          "clanTag": null
+        },
+        {
+          "username": "kosovo_cool",
+          "clientID": "YGohPuZD",
+          "clanTag": "KS"
+        }
+      ],
+      "map": "World",
+      "duration_s": 914,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T19:04:19.976Z",
+      "url": "https://openfront.io/game/XTBLqvQU"
     }
   ],
   "quads": [
