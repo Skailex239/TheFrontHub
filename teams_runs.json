@@ -49836,6 +49836,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T07:24:49.681Z",
       "url": "https://openfront.io/game/pbVqerih"
+    },
+    {
+      "id": "mmUsSxde",
+      "mode": "trios",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Big Chungus",
+          "clientID": "48FdX2PC",
+          "clanTag": null
+        },
+        {
+          "username": "ILikeTrains",
+          "clientID": "Z2L6EmA5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHarbor2",
+          "clientID": "EW249QNW",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 815,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T07:45:54.410Z",
+      "url": "https://openfront.io/game/mmUsSxde"
     }
   ],
   "quads": [
@@ -91065,6 +91095,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T07:33:28.725Z",
       "url": "https://openfront.io/game/8u8mkCTt"
+    },
+    {
+      "id": "P7soqq6V",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Puigdemont",
+          "clientID": "bqZx2uD3",
+          "clanTag": null
+        },
+        {
+          "username": "SHARE TROOPS PLS",
+          "clientID": "QUzs8tqr",
+          "clanTag": null
+        },
+        {
+          "username": "Anon190",
+          "clientID": "U8P3A9rh",
+          "clanTag": null
+        },
+        {
+          "username": "Tilak 6",
+          "clientID": "LKCZHgQv",
+          "clanTag": null
+        },
+        {
+          "username": "Sakartvelo",
+          "clientID": "KBZXpKMD",
+          "clanTag": "MR"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T07:44:02.791Z",
+      "url": "https://openfront.io/game/P7soqq6V"
     }
   ],
   "hvn": [
