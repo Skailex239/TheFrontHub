@@ -61156,6 +61156,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T23:00:16.170Z",
       "url": "https://openfront.io/game/DGyyn4ce"
+    },
+    {
+      "id": "Drugd5Zz",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LowPT",
+          "clientID": "F57y5ysm",
+          "clanTag": "2DRO"
+        },
+        {
+          "username": "p2dro",
+          "clientID": "jfpJfwCG",
+          "clanTag": "2DRO"
+        },
+        {
+          "username": "stayhard",
+          "clientID": "9F5fVzDR",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 598,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T23:14:44.638Z",
+      "url": "https://openfront.io/game/Drugd5Zz"
     }
   ],
   "quads": [
