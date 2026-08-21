@@ -24542,6 +24542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:44:58.465Z",
       "url": "https://openfront.io/game/pC136VMX"
+    },
+    {
+      "id": "ZtWmipbq",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Steve",
+          "clientID": "NDkuCBRL",
+          "clanTag": null
+        },
+        {
+          "username": "Neighbour",
+          "clientID": "1C28MoRz",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 983,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:45:44.505Z",
+      "url": "https://openfront.io/game/ZtWmipbq"
     }
   ],
   "trios": [
@@ -52366,6 +52391,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T11:44:43.441Z",
       "url": "https://openfront.io/game/Ep4Xb6Mv"
+    },
+    {
+      "id": "S5kUgGjd",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonOnyx9",
+          "clientID": "4MmsyGCd",
+          "clanTag": null
+        },
+        {
+          "username": "Kobra",
+          "clientID": "3eFZfWMS",
+          "clanTag": null
+        },
+        {
+          "username": "fierce",
+          "clientID": "zUfvhhV7",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 815,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:49:25.738Z",
+      "url": "https://openfront.io/game/S5kUgGjd"
     }
   ],
   "quads": [
@@ -97925,6 +97980,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T11:43:04.318Z",
       "url": "https://openfront.io/game/tRMUL5HL"
+    },
+    {
+      "id": "hncnabZ3",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BLAH",
+          "clientID": "tLHTEhs5",
+          "clanTag": null
+        },
+        {
+          "username": "PreciousBubbles",
+          "clientID": "B9zES665",
+          "clanTag": null
+        },
+        {
+          "username": "Bomb Merchant",
+          "clientID": "wwb7Q11H",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonTruffle7",
+          "clientID": "R1B2fvbs",
+          "clanTag": null
+        },
+        {
+          "username": "pzky",
+          "clientID": "KMufeVG8",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 688,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T11:50:34.297Z",
+      "url": "https://openfront.io/game/hncnabZ3"
     }
   ],
   "hvn": [
@@ -111747,6 +111842,51 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T11:39:20.588Z",
       "url": "https://openfront.io/game/NqkEkSMx"
+    },
+    {
+      "id": "RyR1BjPT",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Asgardu",
+          "clientID": "FVLbnnoQ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOpal7",
+          "clientID": "gT46z6JM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEclipse",
+          "clientID": "Mc4uerE3",
+          "clanTag": null
+        },
+        {
+          "username": "Japan",
+          "clientID": "mMjMXDPL",
+          "clanTag": null
+        },
+        {
+          "username": "snib",
+          "clientID": "pgmrAsyP",
+          "clanTag": null
+        },
+        {
+          "username": "AlejIbarrola",
+          "clientID": "eE9EsdUg",
+          "clanTag": "CAT"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 822,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 10,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T11:48:15.655Z",
+      "url": "https://openfront.io/game/RyR1BjPT"
     }
   ]
 }
