@@ -47516,6 +47516,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T02:53:22.713Z",
       "url": "https://openfront.io/game/HAibJLeX"
+    },
+    {
+      "id": "kQNWqqAB",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "HOW TO PLAY",
+          "clientID": "f8dUZJi7",
+          "clanTag": null
+        },
+        {
+          "username": "let me live",
+          "clientID": "GzuRf9na",
+          "clanTag": "HELP"
+        },
+        {
+          "username": "IsendUtroops UsendMeNudes",
+          "clientID": "8QaYkXnV",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 635,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T03:00:56.660Z",
+      "url": "https://openfront.io/game/kQNWqqAB"
     }
   ],
   "quads": [
@@ -73458,6 +73488,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T02:46:50.323Z",
       "url": "https://openfront.io/game/W82Brsxx"
+    },
+    {
+      "id": "vWvYpziE",
+      "mode": "quads",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Brazil",
+          "clientID": "2KtLqLg1",
+          "clanTag": null
+        },
+        {
+          "username": "AnonValley3",
+          "clientID": "V3B5jUyJ",
+          "clanTag": null
+        },
+        {
+          "username": "Viceroyalty of Bubo",
+          "clientID": "NWtHUUHc",
+          "clanTag": null
+        },
+        {
+          "username": "WeTradeWeWin",
+          "clientID": "fbYme73b",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 758,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T02:57:49.976Z",
+      "url": "https://openfront.io/game/vWvYpziE"
     }
   ],
   "team_custom": [
