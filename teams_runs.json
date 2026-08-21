@@ -28667,6 +28667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:56:24.201Z",
       "url": "https://openfront.io/game/cGJXAF4F"
+    },
+    {
+      "id": "DTXX8pqS",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "bob",
+          "clientID": "kAoZDpYN",
+          "clanTag": "420"
+        },
+        {
+          "username": "Critical Diesel",
+          "clientID": "v4MAW3hX",
+          "clanTag": "420"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 2518,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T20:28:23.840Z",
+      "url": "https://openfront.io/game/DTXX8pqS"
     }
   ],
   "trios": [
@@ -133972,6 +133997,136 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T20:45:38.506Z",
       "url": "https://openfront.io/game/L27FSifT"
+    },
+    {
+      "id": "XhTGz3nT",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonFern",
+          "clientID": "BJRurziU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFrost7",
+          "clientID": "v2hb3tS5",
+          "clanTag": null
+        },
+        {
+          "username": "Urza",
+          "clientID": "PXwtnnCp",
+          "clanTag": null
+        },
+        {
+          "username": "Byzantine Empire",
+          "clientID": "KVTYyzLC",
+          "clanTag": null
+        },
+        {
+          "username": "Money Printer",
+          "clientID": "pKkT754m",
+          "clanTag": null
+        },
+        {
+          "username": "FemmeBoy",
+          "clientID": "uJ2rwmGM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Flamingo",
+          "clientID": "ghtDJ1Ad",
+          "clanTag": null
+        },
+        {
+          "username": "Crumpets",
+          "clientID": "xEYUbC3V",
+          "clanTag": null
+        },
+        {
+          "username": "CTRL W FOR TRADE",
+          "clientID": "CQJxxqTs",
+          "clanTag": null
+        },
+        {
+          "username": "Nao sei Jogar",
+          "clientID": "CoR7uM15",
+          "clanTag": "BRA"
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "Q2PPssuD",
+          "clanTag": null
+        },
+        {
+          "username": "krog",
+          "clientID": "UdQ61upg",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage9",
+          "clientID": "Ckh7Njyx",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCook",
+          "clientID": "ssP6kkFV",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTiger4",
+          "clientID": "da4XmRip",
+          "clanTag": null
+        },
+        {
+          "username": "WASD31",
+          "clientID": "A84rwqGh",
+          "clanTag": null
+        },
+        {
+          "username": "Dying",
+          "clientID": "fN7bZEDA",
+          "clanTag": "USS"
+        },
+        {
+          "username": "AnonValley8",
+          "clientID": "VFT5YzHB",
+          "clanTag": null
+        },
+        {
+          "username": "Pandemic",
+          "clientID": "XshvyPUJ",
+          "clanTag": null
+        },
+        {
+          "username": "Cavalry Charge",
+          "clientID": "6BkpHFk1",
+          "clanTag": null
+        },
+        {
+          "username": "SoS",
+          "clientID": "SkZeA24X",
+          "clanTag": "THE"
+        },
+        {
+          "username": "SoHard",
+          "clientID": "MUrpZDzK",
+          "clanTag": null
+        },
+        {
+          "username": "voltasasur",
+          "clientID": "jBXMHdxe",
+          "clanTag": "BRU"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 608,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T21:01:35.026Z",
+      "url": "https://openfront.io/game/XhTGz3nT"
     }
   ]
 }
