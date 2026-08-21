@@ -107160,6 +107160,86 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T16:30:01.995Z",
       "url": "https://openfront.io/game/G2tHWEc4"
+    },
+    {
+      "id": "qdZLsfSh",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Okinawa",
+          "clientID": "YMPq1fKU",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Alberto",
+          "clientID": "sgfuaayb",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Flooo",
+          "clientID": "7x9tbu1e",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "am5ZvhiD",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "grille pain",
+          "clientID": "ibJfU9t6",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 458,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T16:40:01.096Z",
+      "url": "https://openfront.io/game/qdZLsfSh"
+    },
+    {
+      "id": "r7aPPwz3",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "258",
+          "clientID": "3hewA6n2",
+          "clanTag": "UN"
+        },
+        {
+          "username": "srt",
+          "clientID": "hydo2SnK",
+          "clanTag": "313"
+        },
+        {
+          "username": "SODA",
+          "clientID": "SaD2zJet",
+          "clanTag": "UN"
+        },
+        {
+          "username": "IwillBetray",
+          "clientID": "YNNLW46X",
+          "clanTag": null
+        },
+        {
+          "username": "Mito",
+          "clientID": "rHVdycRG",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 677,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T16:35:06.801Z",
+      "url": "https://openfront.io/game/r7aPPwz3"
     }
   ],
   "hvn": [
