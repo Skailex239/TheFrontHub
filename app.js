@@ -2218,6 +2218,7 @@ function renderRankedTable(players) {
           <div style="display:flex;align-items:center;gap:6px">
             ${favBtn}
             <span class="${cosmeticNameClass} ranked-player-name${overlayClass}"${overlayStyle} style="color: var(--text); text-decoration: none; font-weight: 500; position: relative; display: inline-block; padding-right: ${overlayImg ? '120px' : '0'};">
+              ${p.clanTag ? `<span style="color:var(--text3);font-size:0.9em;margin-right:4px;">[${esc(p.clanTag)}]</span>` : ''}${esc(p.username)}
             </span>
           </div>
         </td>
