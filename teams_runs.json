@@ -22917,6 +22917,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:43:11.245Z",
       "url": "https://openfront.io/game/8YQcYfzo"
+    },
+    {
+      "id": "TqmGcwsf",
+      "mode": "duos",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Lazar Spinola",
+          "clientID": "mdauXNKE",
+          "clanTag": null
+        },
+        {
+          "username": "Girlboss",
+          "clientID": "JSDWMsVy",
+          "clanTag": "SLAY"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 746,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T07:45:39.395Z",
+      "url": "https://openfront.io/game/TqmGcwsf"
     }
   ],
   "trios": [
@@ -76453,6 +76478,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T07:22:23.035Z",
       "url": "https://openfront.io/game/37CZfVQp"
+    },
+    {
+      "id": "wCKqAdRf",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Zurzula",
+          "clientID": "MaC3NNyM",
+          "clanTag": null
+        },
+        {
+          "username": "xluvarrrr",
+          "clientID": "xacydkE9",
+          "clanTag": "ASH"
+        },
+        {
+          "username": "ApeTeammates",
+          "clientID": "9JYrRWqU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTorch9",
+          "clientID": "ApVkS15F",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1120,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T07:38:14.950Z",
+      "url": "https://openfront.io/game/wCKqAdRf"
     }
   ],
   "team_custom": [
