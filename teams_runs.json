@@ -58131,6 +58131,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T19:04:19.976Z",
       "url": "https://openfront.io/game/XTBLqvQU"
+    },
+    {
+      "id": "FmgFYM32",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Sovereign Democracy",
+          "clientID": "HEByWFYa",
+          "clanTag": null
+        },
+        {
+          "username": "Empire of Netherlands",
+          "clientID": "zUT5vjMB",
+          "clanTag": "JOPA"
+        },
+        {
+          "username": "Carakyla",
+          "clientID": "L9JXDAee",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 822,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T19:11:26.433Z",
+      "url": "https://openfront.io/game/FmgFYM32"
     }
   ],
   "quads": [
@@ -89078,6 +89108,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T18:58:13.625Z",
       "url": "https://openfront.io/game/k9RmB4Ct"
+    },
+    {
+      "id": "NsFHek5e",
+      "mode": "quads",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Ania",
+          "clientID": "LGc6RvQu",
+          "clanTag": null
+        },
+        {
+          "username": "Brottoman",
+          "clientID": "jCQPiEfg",
+          "clanTag": "TR"
+        },
+        {
+          "username": "Pixy Man of Docker",
+          "clientID": "qbq8MN5w",
+          "clanTag": null
+        },
+        {
+          "username": "Anon891",
+          "clientID": "UhSRV9Qv",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 815,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T19:11:11.923Z",
+      "url": "https://openfront.io/game/NsFHek5e"
+    },
+    {
+      "id": "tRdRLg8F",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "I am a Teamplayer",
+          "clientID": "YfBmh9ew",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Kerosene",
+          "clientID": "ugdreA85",
+          "clanTag": null
+        },
+        {
+          "username": "Anthom366",
+          "clientID": "nCpWMLFf",
+          "clanTag": null
+        },
+        {
+          "username": "smoothie",
+          "clientID": "S4RTGUSL",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2564,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T18:42:36.103Z",
+      "url": "https://openfront.io/game/tRdRLg8F"
     }
   ],
   "team_custom": [
