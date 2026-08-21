@@ -24842,6 +24842,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T12:09:01.441Z",
       "url": "https://openfront.io/game/5Ur84gCu"
+    },
+    {
+      "id": "vEdHx5Vd",
+      "mode": "duos",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "NekiKrc",
+          "clientID": "Aq3whEdE",
+          "clanTag": null
+        },
+        {
+          "username": "Goeff",
+          "clientID": "3USDkbUo",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1430,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T12:07:00.325Z",
+      "url": "https://openfront.io/game/vEdHx5Vd"
+    },
+    {
+      "id": "DjPBHz3s",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Moldova",
+          "clientID": "bPNebXC8",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AAA",
+          "clientID": "zH9GVTJ5",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1080,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:13:38.225Z",
+      "url": "https://openfront.io/game/DjPBHz3s"
     }
   ],
   "trios": [
@@ -52786,6 +52836,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T11:55:07.075Z",
       "url": "https://openfront.io/game/9P8LQ37y"
+    },
+    {
+      "id": "NFMsFcX1",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon261",
+          "clientID": "wuwb2fDC",
+          "clanTag": null
+        },
+        {
+          "username": "Kiwiland empire",
+          "clientID": "9HheJAgT",
+          "clanTag": "UNION"
+        },
+        {
+          "username": "Root Beer Empire",
+          "clientID": "k92HwPR1",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1244,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T12:10:17.023Z",
+      "url": "https://openfront.io/game/NFMsFcX1"
     }
   ],
   "quads": [
@@ -81073,6 +81153,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T11:53:59.509Z",
       "url": "https://openfront.io/game/qYSADhnG"
+    },
+    {
+      "id": "Xg4VEKry",
+      "mode": "quads",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Mcmuff",
+          "clientID": "cTjAJQnm",
+          "clanTag": "DNK"
+        },
+        {
+          "username": "Just Give Me Your Troops",
+          "clientID": "aDzttBcu",
+          "clanTag": null
+        },
+        {
+          "username": "Ricky",
+          "clientID": "6G1dWEBC",
+          "clanTag": null
+        },
+        {
+          "username": "openu",
+          "clientID": "Wvb1GTSy",
+          "clanTag": "CAPT"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1056,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T12:13:09.697Z",
+      "url": "https://openfront.io/game/Xg4VEKry"
     }
   ],
   "team_custom": [
@@ -112567,6 +112682,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T11:46:08.023Z",
       "url": "https://openfront.io/game/Dd4nSEQa"
+    },
+    {
+      "id": "zi6SGAJV",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Moi Le Faux",
+          "clientID": "FnfTTwMc",
+          "clanTag": null
+        },
+        {
+          "username": "Aron7337",
+          "clientID": "UDkLFiYu",
+          "clanTag": null
+        },
+        {
+          "username": "Colonia Universalis",
+          "clientID": "n4mXAoqD",
+          "clanTag": null
+        },
+        {
+          "username": "Anon772",
+          "clientID": "nSihTH21",
+          "clanTag": null
+        },
+        {
+          "username": "TryingTooHard67",
+          "clientID": "9nuUhzHR",
+          "clanTag": null
+        },
+        {
+          "username": "Moneymoney",
+          "clientID": "KbhLReKM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOracle6",
+          "clientID": "jtPDUghX",
+          "clanTag": null
+        },
+        {
+          "username": "OhGG",
+          "clientID": "2Zdr31Eb",
+          "clanTag": null
+        },
+        {
+          "username": "neko",
+          "clientID": "2o5SzvSa",
+          "clanTag": null
+        },
+        {
+          "username": "Amdyr",
+          "clientID": "kS7LBp8L",
+          "clanTag": null
+        },
+        {
+          "username": "Gatran Empire",
+          "clientID": "JGXyCxLc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGarnet3",
+          "clientID": "GMQciPfW",
+          "clanTag": null
+        },
+        {
+          "username": "ToTheBitterEnd",
+          "clientID": "FQfG6mQj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPearl8",
+          "clientID": "XKg4o7pc",
+          "clanTag": null
+        },
+        {
+          "username": "iLoveFeet",
+          "clientID": "YzTtcJfY",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 612,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T12:20:19.624Z",
+      "url": "https://openfront.io/game/zi6SGAJV"
     }
   ]
 }
