@@ -79848,6 +79848,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T11:02:27.763Z",
       "url": "https://openfront.io/game/MsHeNga2"
+    },
+    {
+      "id": "5BaHLaWz",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Choomah",
+          "clientID": "bGxfQKce",
+          "clanTag": null
+        },
+        {
+          "username": "Fatboy",
+          "clientID": "D29naeDg",
+          "clanTag": null
+        },
+        {
+          "username": "Goblin",
+          "clientID": "EPTZxqEx",
+          "clanTag": null
+        },
+        {
+          "username": "MOSTAKBER",
+          "clientID": "DF37Z6cr",
+          "clanTag": "KIR"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 880,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T11:03:28.831Z",
+      "url": "https://openfront.io/game/5BaHLaWz"
     }
   ],
   "team_custom": [
@@ -96605,6 +96640,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T10:53:36.185Z",
       "url": "https://openfront.io/game/QCX2ZL5B"
+    },
+    {
+      "id": "B552UKHK",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "PreciousBubbles",
+          "clientID": "6AKoYZ4m",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSpider6",
+          "clientID": "43s1c3K5",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "itsalltrains",
+          "clientID": "Zq3kXvBZ",
+          "clanTag": null
+        },
+        {
+          "username": "deadmantellsnotale",
+          "clientID": "8HLVWvLo",
+          "clanTag": "FRIEN"
+        },
+        {
+          "username": "yeyeeey",
+          "clientID": "ikj49N4u",
+          "clanTag": null
+        },
+        {
+          "username": "Iran",
+          "clientID": "GDvzTAkX",
+          "clanTag": null
+        },
+        {
+          "username": "Your Friendly Helper Anon",
+          "clientID": "CU7XiVk2",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 933,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T11:01:36.220Z",
+      "url": "https://openfront.io/game/B552UKHK"
     }
   ],
   "hvn": [
