@@ -77488,6 +77488,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T08:39:37.108Z",
       "url": "https://openfront.io/game/nS6NFBEY"
+    },
+    {
+      "id": "L6uoyAsn",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "BOUGATSA",
+          "clientID": "iNsszBX9",
+          "clanTag": null
+        },
+        {
+          "username": "Nico",
+          "clientID": "8axFvRu9",
+          "clanTag": "FARM"
+        },
+        {
+          "username": "ZZZ",
+          "clientID": "LUmbEkAi",
+          "clanTag": null
+        },
+        {
+          "username": "MRJ Djevel",
+          "clientID": "CcF4ou8x",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 883,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:41:55.248Z",
+      "url": "https://openfront.io/game/L6uoyAsn"
+    },
+    {
+      "id": "711DwVJo",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Dom",
+          "clientID": "8ATZqsFV",
+          "clanTag": "SQD"
+        },
+        {
+          "username": "AnonScepter8",
+          "clientID": "AcGXQZ8e",
+          "clanTag": null
+        },
+        {
+          "username": "Ewil789",
+          "clientID": "kE58jo9p",
+          "clanTag": null
+        },
+        {
+          "username": "SMC",
+          "clientID": "b1xevECG",
+          "clanTag": "SMC"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 951,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:41:38.230Z",
+      "url": "https://openfront.io/game/711DwVJo"
     }
   ],
   "team_custom": [
@@ -92505,6 +92575,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T08:28:13.394Z",
       "url": "https://openfront.io/game/cVEgLs56"
+    },
+    {
+      "id": "BMrXeECw",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Anon062",
+          "clientID": "aqUyCRLu",
+          "clanTag": null
+        },
+        {
+          "username": "Shap111",
+          "clientID": "CohJqk6Y",
+          "clanTag": "AST"
+        },
+        {
+          "username": "rentflo",
+          "clientID": "A8bgfcDc",
+          "clanTag": null
+        },
+        {
+          "username": "Anon12",
+          "clientID": "mb4DndPo",
+          "clanTag": null
+        },
+        {
+          "username": "magnuskebab",
+          "clientID": "NxxNtESd",
+          "clanTag": null
+        },
+        {
+          "username": "FluffyPepper",
+          "clientID": "3LALijUb",
+          "clanTag": "PB"
+        },
+        {
+          "username": "ULTRA",
+          "clientID": "U6hqSPPe",
+          "clanTag": "HUAWE"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 742,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T08:44:36.393Z",
+      "url": "https://openfront.io/game/BMrXeECw"
+    },
+    {
+      "id": "y5Acb56V",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BabyGucciButt",
+          "clientID": "aYZTzh4q",
+          "clanTag": "BTC"
+        },
+        {
+          "username": "TripleOSeven",
+          "clientID": "YhmWjDSQ",
+          "clanTag": "BTC"
+        },
+        {
+          "username": "AnonThistle3",
+          "clientID": "sXT5Z9CH",
+          "clanTag": null
+        },
+        {
+          "username": "guy",
+          "clientID": "tJvkaBjq",
+          "clanTag": null
+        },
+        {
+          "username": "ttr",
+          "clientID": "maGsfKeY",
+          "clanTag": "RRT"
+        },
+        {
+          "username": "Fakyz10",
+          "clientID": "JT2RLcch",
+          "clanTag": null
+        },
+        {
+          "username": "YUI",
+          "clientID": "rBeRKKML",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2059,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T08:24:20.654Z",
+      "url": "https://openfront.io/game/y5Acb56V"
     }
   ],
   "hvn": [
