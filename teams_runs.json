@@ -47791,6 +47791,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T03:39:32.601Z",
       "url": "https://openfront.io/game/qYHMS31j"
+    },
+    {
+      "id": "fUEpHDhH",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "TradeTime",
+          "clientID": "9CgcgUux",
+          "clanTag": null
+        },
+        {
+          "username": "Aboriginal Empire",
+          "clientID": "KSx4Cn36",
+          "clanTag": null
+        },
+        {
+          "username": "Menocchio",
+          "clientID": "aXb3PLiH",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 620,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T03:44:06.893Z",
+      "url": "https://openfront.io/game/fUEpHDhH"
     }
   ],
   "quads": [
@@ -73873,6 +73903,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T03:28:23.917Z",
       "url": "https://openfront.io/game/QQZhWbtG"
+    },
+    {
+      "id": "QDGwVCdG",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Anon Anon Anon Anon Anon",
+          "clientID": "kmexDibV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ShadowMan",
+          "clientID": "ezLw6VSs",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonFern3",
+          "clientID": "pnywnQR6",
+          "clanTag": null
+        },
+        {
+          "username": "Fox",
+          "clientID": "2Ki3yi4r",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 737,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T03:42:37.804Z",
+      "url": "https://openfront.io/game/QDGwVCdG"
     }
   ],
   "team_custom": [
@@ -86595,6 +86660,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T03:37:31.479Z",
       "url": "https://openfront.io/game/vv3Akteo"
+    },
+    {
+      "id": "qQWAeL2W",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon751",
+          "clientID": "yRyDCHmf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonClay1",
+          "clientID": "jU4ZjP43",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLotus5",
+          "clientID": "WBf3r8H1",
+          "clanTag": null
+        },
+        {
+          "username": "HAHA KAKA JAJA",
+          "clientID": "rG9ajMS6",
+          "clanTag": "BAN"
+        },
+        {
+          "username": "wattman",
+          "clientID": "yJeYEj1X",
+          "clanTag": "BAN"
+        },
+        {
+          "username": "088",
+          "clientID": "7thqazYs",
+          "clanTag": null
+        },
+        {
+          "username": "AnonElephant1",
+          "clientID": "QYwVMR7m",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1249,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T03:35:41.357Z",
+      "url": "https://openfront.io/game/qQWAeL2W"
     }
   ],
   "hvn": [
