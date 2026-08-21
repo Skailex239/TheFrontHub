@@ -22192,6 +22192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T05:16:17.985Z",
       "url": "https://openfront.io/game/wybikKqP"
+    },
+    {
+      "id": "9uvVf5wG",
+      "mode": "duos",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "the_juice_did_it",
+          "clientID": "NvHqCXnk",
+          "clanTag": "DPA"
+        },
+        {
+          "username": "ZEMOUR",
+          "clientID": "aWuK7wFe",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1613,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T05:05:23.838Z",
+      "url": "https://openfront.io/game/9uvVf5wG"
     }
   ],
   "trios": [
