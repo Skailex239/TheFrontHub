@@ -28717,6 +28717,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:59:30.394Z",
       "url": "https://openfront.io/game/SKeDb2uX"
+    },
+    {
+      "id": "UJv29bDv",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ascaric",
+          "clientID": "zJJFn6vR",
+          "clanTag": null
+        },
+        {
+          "username": "JosD92",
+          "clientID": "BZ2B9V4U",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1279,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T21:02:54.619Z",
+      "url": "https://openfront.io/game/UJv29bDv"
     }
   ],
   "trios": [
@@ -59841,6 +59866,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T21:14:50.347Z",
       "url": "https://openfront.io/game/cpARy9Cq"
+    },
+    {
+      "id": "DpuDLNBT",
+      "mode": "trios",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "tommsen",
+          "clientID": "m3GuogM1",
+          "clanTag": null
+        },
+        {
+          "username": "burgund",
+          "clientID": "Y2UHjywz",
+          "clanTag": "AOE"
+        },
+        {
+          "username": "AnonWindmill9",
+          "clientID": "ZXEuSQuA",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1428,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T21:00:33.471Z",
+      "url": "https://openfront.io/game/DpuDLNBT"
     }
   ],
   "quads": [
@@ -115495,6 +115550,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T21:02:09.072Z",
       "url": "https://openfront.io/game/HPokqd14"
+    },
+    {
+      "id": "rPBCUtrT",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Sauko",
+          "clientID": "Z5xtrgsy",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Spiix",
+          "clientID": "fJPZ6nns",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Fox",
+          "clientID": "adRw4rRL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SHAH",
+          "clientID": "exQAzdgL",
+          "clanTag": null
+        },
+        {
+          "username": "Doraa",
+          "clientID": "okp4rVfq",
+          "clanTag": null
+        },
+        {
+          "username": "Alekso",
+          "clientID": "b948aGNF",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 767,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T21:13:08.261Z",
+      "url": "https://openfront.io/game/rPBCUtrT"
     }
   ],
   "hvn": [
