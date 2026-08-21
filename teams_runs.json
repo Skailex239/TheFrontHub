@@ -22267,6 +22267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T05:40:28.955Z",
       "url": "https://openfront.io/game/AM8s9G8w"
+    },
+    {
+      "id": "D3qcHnMQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "nekozeeeeeee",
+          "clientID": "59ciCAQj",
+          "clanTag": null
+        },
+        {
+          "username": "LmXeo",
+          "clientID": "GP3rSeqr",
+          "clanTag": "BC"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 544,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T06:07:33.575Z",
+      "url": "https://openfront.io/game/D3qcHnMQ"
     }
   ],
   "trios": [
@@ -88895,6 +88920,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T05:52:33.700Z",
       "url": "https://openfront.io/game/ssFdfU3t"
+    },
+    {
+      "id": "FAcaoPiG",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Sif",
+          "clientID": "qsZN1kzU",
+          "clanTag": null
+        },
+        {
+          "username": "Cordas",
+          "clientID": "2ydTuDEm",
+          "clanTag": "KONNI"
+        },
+        {
+          "username": "trade union",
+          "clientID": "yVRdcqVC",
+          "clanTag": null
+        },
+        {
+          "username": "Trakinas",
+          "clientID": "em4VtS4Q",
+          "clanTag": null
+        },
+        {
+          "username": "Hahahaha",
+          "clientID": "ZXw4vXhd",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 807,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T06:02:33.780Z",
+      "url": "https://openfront.io/game/FAcaoPiG"
     }
   ],
   "hvn": [
