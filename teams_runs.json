@@ -24267,6 +24267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T10:42:40.504Z",
       "url": "https://openfront.io/game/vvg1VCRm"
+    },
+    {
+      "id": "SwMVnEyP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "aerokorb",
+          "clientID": "6J4ySNAw",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "SpaceUs",
+          "clientID": "6SnaYPut",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 655,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:53:01.645Z",
+      "url": "https://openfront.io/game/SwMVnEyP"
     }
   ],
   "trios": [
@@ -51821,6 +51846,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T10:45:55.710Z",
       "url": "https://openfront.io/game/d2uZ52PB"
+    },
+    {
+      "id": "NkRGBokg",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "_0_TRADE",
+          "clientID": "aWo2v2GY",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Refrigerators",
+          "clientID": "vhy8GKqJ",
+          "clanTag": "AST"
+        },
+        {
+          "username": "M613",
+          "clientID": "JtYwiXrm",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 741,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T10:51:02.016Z",
+      "url": "https://openfront.io/game/NkRGBokg"
     }
   ],
   "quads": [
