@@ -28367,6 +28367,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:09:25.181Z",
       "url": "https://openfront.io/game/639em2Dv"
+    },
+    {
+      "id": "hUjipfso",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Arialis",
+          "clientID": "ETf1v6c4",
+          "clanTag": "TRISO"
+        },
+        {
+          "username": "Kohout",
+          "clientID": "y4okwJLL",
+          "clanTag": "TRISO"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 916,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T20:17:27.184Z",
+      "url": "https://openfront.io/game/hUjipfso"
     }
   ],
   "trios": [
@@ -59041,6 +59066,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:45:49.644Z",
       "url": "https://openfront.io/game/aZSixA6N"
+    },
+    {
+      "id": "rcThzyWz",
+      "mode": "trios",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "kmh",
+          "clientID": "MpkUfm57",
+          "clanTag": null
+        },
+        {
+          "username": "Edwins",
+          "clientID": "NR267Lqw",
+          "clanTag": "TKT"
+        },
+        {
+          "username": "AnonTopaz3",
+          "clientID": "aggajmup",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 1036,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T20:14:42.030Z",
+      "url": "https://openfront.io/game/rcThzyWz"
+    },
+    {
+      "id": "A292m29i",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "amirahsan",
+          "clientID": "Wt3ukc14",
+          "clanTag": null
+        },
+        {
+          "username": "Moria",
+          "clientID": "5AaWiwAo",
+          "clanTag": null
+        },
+        {
+          "username": "sssss9",
+          "clientID": "XfNyxk4K",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 747,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T20:20:49.902Z",
+      "url": "https://openfront.io/game/A292m29i"
     }
   ],
   "quads": [
@@ -90548,6 +90633,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:21:01.408Z",
       "url": "https://openfront.io/game/odNM6FzH"
+    },
+    {
+      "id": "euSUMy2x",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonPyramid8",
+          "clientID": "3edhyryr",
+          "clanTag": null
+        },
+        {
+          "username": "MYSTIUC",
+          "clientID": "3uTztr47",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Baptised in Tears",
+          "clientID": "hMnk3nVD",
+          "clanTag": null
+        },
+        {
+          "username": "Ripto",
+          "clientID": "wXZBcVZv",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1602,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T20:06:39.967Z",
+      "url": "https://openfront.io/game/euSUMy2x"
     }
   ],
   "team_custom": [
