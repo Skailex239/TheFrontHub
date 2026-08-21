@@ -21667,6 +21667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T03:04:11.375Z",
       "url": "https://openfront.io/game/PGQ1XWiH"
+    },
+    {
+      "id": "jopSHeXN",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "The Seaward",
+          "clientID": "HeTuSafd",
+          "clanTag": "LUMS"
+        },
+        {
+          "username": "Bombidaro",
+          "clientID": "kpCZJgpm",
+          "clanTag": "LUMS"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1202,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T03:11:48.349Z",
+      "url": "https://openfront.io/game/jopSHeXN"
     }
   ],
   "trios": [
@@ -47571,6 +47596,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T03:00:56.660Z",
       "url": "https://openfront.io/game/kQNWqqAB"
+    },
+    {
+      "id": "JVgoDG3i",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Trollsky in my butski",
+          "clientID": "q6oFvU2p",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "thejuicedidnineeleven",
+          "clientID": "4Bzd7udZ",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Anoniminity",
+          "clientID": "gn3xyao8",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 532,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T03:24:51.699Z",
+      "url": "https://openfront.io/game/JVgoDG3i"
+    },
+    {
+      "id": "kPpSPS4b",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "NanasLilMan",
+          "clientID": "Zw18ArZN",
+          "clanTag": null
+        },
+        {
+          "username": "RedAly",
+          "clientID": "r1etNUiL",
+          "clanTag": null
+        },
+        {
+          "username": "Daimyo Koda",
+          "clientID": "gyFrDSw6",
+          "clanTag": "GARS"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T03:16:56.190Z",
+      "url": "https://openfront.io/game/kPpSPS4b"
     }
   ],
   "quads": [
@@ -97402,6 +97487,81 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T03:07:14.066Z",
       "url": "https://openfront.io/game/efZeVJYJ"
+    },
+    {
+      "id": "69Zkjijb",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Ryoshiba",
+          "clientID": "9HkwnXD6",
+          "clanTag": "JP"
+        },
+        {
+          "username": "Heaven",
+          "clientID": "acYZFUm4",
+          "clanTag": null
+        },
+        {
+          "username": "manki",
+          "clientID": "36B5HTwa",
+          "clanTag": null
+        },
+        {
+          "username": "Crumpets",
+          "clientID": "agPtrrNk",
+          "clanTag": null
+        },
+        {
+          "username": "General",
+          "clientID": "dGgSouFn",
+          "clanTag": null
+        },
+        {
+          "username": "yup",
+          "clientID": "NWqcVtCv",
+          "clanTag": null
+        },
+        {
+          "username": "Bluepogi",
+          "clientID": "k5HsLtwd",
+          "clanTag": "FOX"
+        },
+        {
+          "username": "Codex_Test",
+          "clientID": "nKC65h9S",
+          "clanTag": null
+        },
+        {
+          "username": "OOO",
+          "clientID": "LTx8QbZb",
+          "clanTag": null
+        },
+        {
+          "username": "Kamikaze",
+          "clientID": "nhBmudJk",
+          "clanTag": null
+        },
+        {
+          "username": "AJGutz",
+          "clientID": "g6BbCWoe",
+          "clanTag": null
+        },
+        {
+          "username": "Long Live Palestine",
+          "clientID": "oBiLVdwD",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1538,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 62,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T03:06:19.512Z",
+      "url": "https://openfront.io/game/69Zkjijb"
     }
   ]
 }
