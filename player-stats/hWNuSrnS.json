@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-21T09:57:32.255Z",
-  "lastSyncedAt": "2026-08-21T09:57:29.715Z",
-  "totalGames": 3806,
+  "computedAt": "2026-08-21T09:59:39.793Z",
+  "lastSyncedAt": "2026-08-21T09:59:37.034Z",
+  "totalGames": 3807,
   "careerWins": {
     "ffaCasual": 273,
     "ffaRanked": 1420,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 746,
+      "current": 747,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "5 042",
     "totalWins": "1 981",
-    "totalGames": "3 806",
-    "totalPlaytime": "31j 2h",
-    "totalPlaytimeCompact": "31j 2h",
+    "totalGames": "3 807",
+    "totalPlaytime": "31j 3h",
+    "totalPlaytimeCompact": "31j 3h",
     "avgGameDuration": "11m 46s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "746h"
+    "totalPlaytimeHours": "747h"
   },
   "playtime": {
-    "totalSec": 2687550,
-    "avgGameSec": 706.1350499211771,
+    "totalSec": 2689809,
+    "avgGameSec": 706.5429472025216,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1091,
-        "playtimeSec": 1318430,
+        "games": 1092,
+        "playtimeSec": 1320689,
         "wins": 273
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1981,
-    "defeat": 1493,
+    "defeat": 1494,
     "incomplete": 332
   },
   "maps": [
@@ -724,6 +724,22 @@
       }
     },
     {
+      "map": "Indian Subcontinent",
+      "count": 11,
+      "wins": 2,
+      "losses": 9,
+      "playtimeSec": 14925,
+      "avgDuration": 1356.8181818181818,
+      "winRate": 0.18181818181818182,
+      "lastPlayed": 1787303985632,
+      "formatted": {
+        "playtime": "4h 8m",
+        "avgDuration": "22m",
+        "winRate": "18%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Great Lakes",
       "count": 11,
       "wins": 2,
@@ -817,22 +833,6 @@
         "avgDuration": "24m",
         "winRate": "10%",
         "lastPlayed": "19/08/26"
-      }
-    },
-    {
-      "map": "Indian Subcontinent",
-      "count": 10,
-      "wins": 2,
-      "losses": 8,
-      "playtimeSec": 12666,
-      "avgDuration": 1266.6,
-      "winRate": 0.2,
-      "lastPlayed": 1786808185180,
-      "formatted": {
-        "playtime": "3h 31m",
-        "avgDuration": "21m",
-        "winRate": "20%",
-        "lastPlayed": "15/08/26"
       }
     },
     {
@@ -1601,7 +1601,7 @@
       39,
       59,
       90,
-      77,
+      78,
       95,
       100,
       91,
@@ -1620,7 +1620,7 @@
       589,
       493,
       556,
-      485,
+      486,
       576,
       560
     ],
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 3,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2165,6 +2165,17 @@
       "result": "victory",
       "durationSeconds": 914,
       "totalPlayers": 60,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
+      "gameId": "Azjo3vFe",
+      "start": "2026-08-21T09:19:45.632Z",
+      "map": "Indian Subcontinent",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 2259,
+      "totalPlayers": 97,
       "rankedType": "unranked",
       "category": "ffaCasual"
     },
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 356,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "mrop4Gph",
-      "start": "2026-08-19T16:19:58.447Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "defeat",
-      "durationSeconds": 489,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
