@@ -25642,6 +25642,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T13:44:00.305Z",
       "url": "https://openfront.io/game/6Xitsbxm"
+    },
+    {
+      "id": "6At5qRLu",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "n33xt",
+          "clientID": "KzhCQTVh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CrazyPunk.S2cp",
+          "clientID": "KoA4aeyf",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 924,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:48:44.627Z",
+      "url": "https://openfront.io/game/6At5qRLu"
     }
   ],
   "trios": [
@@ -83103,6 +83128,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T13:36:52.820Z",
       "url": "https://openfront.io/game/LTFtqAHF"
+    },
+    {
+      "id": "ctwDkuXf",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "GoudaleBienFraiche",
+          "clientID": "Yhr6EmeH",
+          "clanTag": null
+        },
+        {
+          "username": "Josland",
+          "clientID": "XeN4kWbe",
+          "clanTag": null
+        },
+        {
+          "username": "Arthur Figgis",
+          "clientID": "RsxJ9ReF",
+          "clanTag": null
+        },
+        {
+          "username": "Leo",
+          "clientID": "neTRvZn6",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 639,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T13:54:08.493Z",
+      "url": "https://openfront.io/game/ctwDkuXf"
     }
   ],
   "team_custom": [
