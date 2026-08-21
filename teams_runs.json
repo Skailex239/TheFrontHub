@@ -25117,6 +25117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:47:15.780Z",
       "url": "https://openfront.io/game/Vbke8v3b"
+    },
+    {
+      "id": "cGsVFj6s",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonWrench5",
+          "clientID": "QkaJJXrs",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLagoon8",
+          "clientID": "Yv8SHaTC",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 511,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:50:18.484Z",
+      "url": "https://openfront.io/game/cGsVFj6s"
     }
   ],
   "trios": [
@@ -99795,6 +99820,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T12:42:57.030Z",
       "url": "https://openfront.io/game/Sphb6VLb"
+    },
+    {
+      "id": "nzYnRr41",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "angpanman",
+          "clientID": "6yoh2tEA",
+          "clanTag": null
+        },
+        {
+          "username": "Will",
+          "clientID": "o8HSxGYd",
+          "clanTag": null
+        },
+        {
+          "username": "boxed",
+          "clientID": "3BbZCUhh",
+          "clanTag": null
+        },
+        {
+          "username": "Sweden",
+          "clientID": "AEveLGTk",
+          "clanTag": null
+        },
+        {
+          "username": "murta",
+          "clientID": "2wKKZaRv",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Novus",
+          "clientID": "13S4m3VE",
+          "clanTag": null
+        },
+        {
+          "username": "TheWildRose",
+          "clientID": "GkgaMS1e",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 899,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T12:44:33.618Z",
+      "url": "https://openfront.io/game/nzYnRr41"
     }
   ],
   "hvn": [
