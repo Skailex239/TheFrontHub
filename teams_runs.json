@@ -23117,6 +23117,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:59:57.765Z",
       "url": "https://openfront.io/game/nNmnXJav"
+    },
+    {
+      "id": "NkWj1RX4",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "tiiimmmmmmm",
+          "clientID": "9mptaqXA",
+          "clanTag": "BBS"
+        },
+        {
+          "username": "arta",
+          "clientID": "GC1Xpnek",
+          "clanTag": "AIUR"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T08:09:25.298Z",
+      "url": "https://openfront.io/game/NkWj1RX4"
+    },
+    {
+      "id": "L1xCgAzw",
+      "mode": "duos",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Miks",
+          "clientID": "e97TAvEM",
+          "clanTag": "AHOJ"
+        },
+        {
+          "username": "BossRatt",
+          "clientID": "jbp5oNdK",
+          "clanTag": "AHOJ"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 983,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 61,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T08:03:17.965Z",
+      "url": "https://openfront.io/game/L1xCgAzw"
+    },
+    {
+      "id": "iz3h2Dr8",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PITIPIWPIW WIWWIW",
+          "clientID": "ER2uBT2s",
+          "clanTag": "MSBOX"
+        },
+        {
+          "username": "RiGKu",
+          "clientID": "RangTys1",
+          "clanTag": "MSBOX"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 491,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T08:11:47.947Z",
+      "url": "https://openfront.io/game/iz3h2Dr8"
     }
   ],
   "trios": [
@@ -50101,6 +50176,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T07:51:21.740Z",
       "url": "https://openfront.io/game/7hRL3B9R"
+    },
+    {
+      "id": "6A9h4YwY",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "pericles",
+          "clientID": "n6MtmQWi",
+          "clanTag": "ATH"
+        },
+        {
+          "username": "Miku",
+          "clientID": "v1VnEEfV",
+          "clanTag": null
+        },
+        {
+          "username": "shinplest",
+          "clientID": "TQXcJxNF",
+          "clanTag": "BIG"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1058,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T08:01:16.348Z",
+      "url": "https://openfront.io/game/6A9h4YwY"
     }
   ],
   "quads": [
