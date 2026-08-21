@@ -28992,6 +28992,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T21:59:53.477Z",
       "url": "https://openfront.io/game/5XDtfY8r"
+    },
+    {
+      "id": "QKusN3kS",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "I did it for love",
+          "clientID": "awZpZrQ8",
+          "clanTag": null
+        },
+        {
+          "username": "Caesar",
+          "clientID": "kPUeidDA",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 755,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:07:09.926Z",
+      "url": "https://openfront.io/game/QKusN3kS"
     }
   ],
   "trios": [
@@ -116915,6 +116940,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T21:58:14.876Z",
       "url": "https://openfront.io/game/krKUDMii"
+    },
+    {
+      "id": "XDc5Njeh",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Remo Driver",
+          "clientID": "jfuRHVdy",
+          "clanTag": null
+        },
+        {
+          "username": "viva espanita",
+          "clientID": "XKXxKVH7",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "m8qTkMNu",
+          "clanTag": null
+        },
+        {
+          "username": "The Nightfly",
+          "clientID": "BZNA5BzD",
+          "clanTag": null
+        },
+        {
+          "username": "BirKar",
+          "clientID": "qqLn1jB7",
+          "clanTag": "001"
+        },
+        {
+          "username": "Ziablowwwwwww",
+          "clientID": "aWAAEZ6v",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1605,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T21:53:42.072Z",
+      "url": "https://openfront.io/game/XDc5Njeh"
     }
   ],
   "hvn": [
