@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-21T10:39:32.287Z",
-  "lastSyncedAt": "2026-08-21T10:39:29.569Z",
-  "totalGames": 3808,
+  "computedAt": "2026-08-21T10:41:34.160Z",
+  "lastSyncedAt": "2026-08-21T10:41:32.178Z",
+  "totalGames": 3809,
   "careerWins": {
     "ffaCasual": 273,
     "ffaRanked": 1420,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "5 042",
     "totalWins": "1 981",
-    "totalGames": "3 808",
+    "totalGames": "3 809",
     "totalPlaytime": "31j 3h",
     "totalPlaytimeCompact": "31j 3h",
     "avgGameDuration": "11m 46s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "747h"
   },
   "playtime": {
-    "totalSec": 2690976,
-    "avgGameSec": 706.6638655462185,
+    "totalSec": 2692509,
+    "avgGameSec": 706.8808086111841,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1093,
-        "playtimeSec": 1321856,
+        "games": 1094,
+        "playtimeSec": 1323389,
         "wins": 273
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1981,
-    "defeat": 1495,
+    "defeat": 1496,
     "incomplete": 332
   },
   "maps": [
@@ -1284,6 +1284,22 @@
       }
     },
     {
+      "map": "Russia",
+      "count": 2,
+      "wins": 1,
+      "losses": 1,
+      "playtimeSec": 2476,
+      "avgDuration": 1238,
+      "winRate": 0.5,
+      "lastPlayed": 1787307330412,
+      "formatted": {
+        "playtime": "41m",
+        "avgDuration": "20m",
+        "winRate": "50%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Juan De Fuca Strait",
       "count": 2,
       "wins": 1,
@@ -1425,22 +1441,6 @@
         "avgDuration": "22m",
         "winRate": "0%",
         "lastPlayed": "08/08/26"
-      }
-    },
-    {
-      "map": "Russia",
-      "count": 1,
-      "wins": 1,
-      "losses": 0,
-      "playtimeSec": 943,
-      "avgDuration": 943,
-      "winRate": 1,
-      "lastPlayed": 1786065755774,
-      "formatted": {
-        "playtime": "15m",
-        "avgDuration": "15m",
-        "winRate": "100%",
-        "lastPlayed": "07/08/26"
       }
     },
     {
@@ -1602,7 +1602,7 @@
       59,
       90,
       79,
-      95,
+      96,
       100,
       91,
       143,
@@ -1620,7 +1620,7 @@
       589,
       493,
       556,
-      487,
+      488,
       576,
       560
     ],
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "XMGd1x7X",
+      "start": "2026-08-21T10:15:30.412Z",
+      "map": "Russia",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1533,
+      "totalPlayers": 63,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "umo13QnY",
       "start": "2026-08-21T09:47:57.767Z",
       "map": "Africa",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 278,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "v3SntnT5",
-      "start": "2026-08-19T16:38:28.767Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 360,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
