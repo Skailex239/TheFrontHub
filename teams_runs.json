@@ -25292,6 +25292,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T13:12:01.212Z",
       "url": "https://openfront.io/game/LDrZ2wbb"
+    },
+    {
+      "id": "dtfWNvYu",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Floki_railroads",
+          "clientID": "YMH18xqk",
+          "clanTag": null
+        },
+        {
+          "username": "yayasai",
+          "clientID": "fHp9ahk2",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 555,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:16:43.019Z",
+      "url": "https://openfront.io/game/dtfWNvYu"
+    },
+    {
+      "id": "Yw2BpVvt",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonWindmill4",
+          "clientID": "yjCzE5GA",
+          "clanTag": null
+        },
+        {
+          "username": "BuildCloser",
+          "clientID": "raP5Uguh",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 927,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:10:49.137Z",
+      "url": "https://openfront.io/game/Yw2BpVvt"
+    },
+    {
+      "id": "PkadTD2z",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "MIAOOMIXX",
+          "clientID": "VwaL4cxg",
+          "clanTag": "FIDO"
+        },
+        {
+          "username": "Crusader",
+          "clientID": "GdTtYmd5",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1031,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T13:08:35.448Z",
+      "url": "https://openfront.io/game/PkadTD2z"
     }
   ],
   "trios": [
@@ -82363,6 +82438,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T13:09:48.052Z",
       "url": "https://openfront.io/game/6WFK6568"
+    },
+    {
+      "id": "jmsoAzS1",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonLantern8",
+          "clientID": "MU8hzmfm",
+          "clanTag": null
+        },
+        {
+          "username": "throat goat",
+          "clientID": "Xy9QxeNv",
+          "clanTag": null
+        },
+        {
+          "username": "Anon",
+          "clientID": "W6AmYZuv",
+          "clanTag": null
+        },
+        {
+          "username": "Peace And Love",
+          "clientID": "obSoAVJU",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 984,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T13:09:03.480Z",
+      "url": "https://openfront.io/game/jmsoAzS1"
+    },
+    {
+      "id": "7HNS7fCE",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "WordUp",
+          "clientID": "f1XETAmQ",
+          "clanTag": null
+        },
+        {
+          "username": "HAYRI",
+          "clientID": "ZtpQZbxt",
+          "clanTag": "TURK"
+        },
+        {
+          "username": "AnonTurkey7",
+          "clientID": "cQcFjFAx",
+          "clanTag": null
+        },
+        {
+          "username": "Sorry",
+          "clientID": "ArukXMgD",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 597,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T13:15:30.942Z",
+      "url": "https://openfront.io/game/7HNS7fCE"
     }
   ],
   "team_custom": [
