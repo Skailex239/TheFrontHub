@@ -27992,6 +27992,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T19:14:38.652Z",
       "url": "https://openfront.io/game/Z9rPxcHE"
+    },
+    {
+      "id": "ay4gxEV4",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BORT",
+          "clientID": "m4KSaSLy",
+          "clanTag": null
+        },
+        {
+          "username": "GerloGelato",
+          "clientID": "a9NGBd8Y",
+          "clanTag": "SUCA"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 376,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:35:33.474Z",
+      "url": "https://openfront.io/game/ay4gxEV4"
     }
   ],
   "trios": [
@@ -58426,6 +58451,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:26:22.864Z",
       "url": "https://openfront.io/game/8gga1fui"
+    },
+    {
+      "id": "2ufWKzsx",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "KGB",
+          "clientID": "Fyz6UnMT",
+          "clanTag": null
+        },
+        {
+          "username": "Lassius Big",
+          "clientID": "DhRZkPCU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEmber7",
+          "clientID": "QijWM3Xu",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1345,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:20:19.026Z",
+      "url": "https://openfront.io/game/2ufWKzsx"
     }
   ],
   "quads": [
@@ -89583,6 +89638,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T19:27:11.420Z",
       "url": "https://openfront.io/game/CakXE1Wx"
+    },
+    {
+      "id": "XxeZH3nk",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Dannie Grow",
+          "clientID": "Z2TRRm3s",
+          "clanTag": "IYKYK"
+        },
+        {
+          "username": "Sasuke",
+          "clientID": "AEw7oVQD",
+          "clanTag": "CH"
+        },
+        {
+          "username": "Binyamin",
+          "clientID": "ub1Pgdt8",
+          "clanTag": "IYKYK"
+        },
+        {
+          "username": "IRAN",
+          "clientID": "CJigYDby",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1921,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T19:10:25.361Z",
+      "url": "https://openfront.io/game/XxeZH3nk"
     }
   ],
   "team_custom": [
