@@ -61321,6 +61321,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T23:27:37.510Z",
       "url": "https://openfront.io/game/jz17GFVS"
+    },
+    {
+      "id": "quLp4Nqv",
+      "mode": "trios",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "messi",
+          "clientID": "BogJUM5D",
+          "clanTag": null
+        },
+        {
+          "username": "Leave me alone",
+          "clientID": "Xqi8Cai3",
+          "clanTag": "XYZ"
+        },
+        {
+          "username": "Estradiol 2mg",
+          "clientID": "dJntmixY",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1037,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T23:24:50.337Z",
+      "url": "https://openfront.io/game/quLp4Nqv"
     }
   ],
   "quads": [
