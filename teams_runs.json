@@ -26742,6 +26742,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:44:49.420Z",
       "url": "https://openfront.io/game/P8xtcuMJ"
+    },
+    {
+      "id": "LoMuxU71",
+      "mode": "duos",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "ATF",
+          "clientID": "7VVcwegy",
+          "clanTag": null
+        },
+        {
+          "username": "RAIN",
+          "clientID": "G5dBRzeq",
+          "clanTag": "ESP"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1166,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T16:48:11.140Z",
+      "url": "https://openfront.io/game/LoMuxU71"
+    },
+    {
+      "id": "VN5d2atc",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "TREXXED",
+          "clientID": "PaZCCzED",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Dil1234567",
+          "clientID": "L6gBajBp",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:54:53.059Z",
+      "url": "https://openfront.io/game/VN5d2atc"
     }
   ],
   "trios": [
