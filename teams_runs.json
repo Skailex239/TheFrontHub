@@ -21517,6 +21517,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T02:29:57.799Z",
       "url": "https://openfront.io/game/CV7XXg9z"
+    },
+    {
+      "id": "91Q7hPYQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Neon",
+          "clientID": "zKLkmSRM",
+          "clanTag": "112"
+        },
+        {
+          "username": "b0zeman",
+          "clientID": "RgvosxjS",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 610,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T02:35:49.652Z",
+      "url": "https://openfront.io/game/91Q7hPYQ"
     }
   ],
   "trios": [
@@ -73138,6 +73163,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T01:44:12.059Z",
       "url": "https://openfront.io/game/yZoSUMuX"
+    },
+    {
+      "id": "gn6LrwC2",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Helvetia",
+          "clientID": "rHdpQfRe",
+          "clanTag": "CHE"
+        },
+        {
+          "username": "Trakinas",
+          "clientID": "Xo4gC7Yi",
+          "clanTag": null
+        },
+        {
+          "username": "ARRY",
+          "clientID": "hPocWGme",
+          "clanTag": null
+        },
+        {
+          "username": "ext drippy",
+          "clientID": "ZB4P2kut",
+          "clanTag": "DIDDY"
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 1303,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T02:25:29.037Z",
+      "url": "https://openfront.io/game/gn6LrwC2"
     }
   ],
   "team_custom": [
@@ -85570,6 +85630,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T01:34:27.982Z",
       "url": "https://openfront.io/game/aPBnUtYb"
+    },
+    {
+      "id": "iRGSFWh9",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "ZophZero",
+          "clientID": "6ZndQkB7",
+          "clanTag": null
+        },
+        {
+          "username": "Algeria",
+          "clientID": "XisV6t1q",
+          "clanTag": "ALG"
+        },
+        {
+          "username": "noob k",
+          "clientID": "NiMwAt2Q",
+          "clanTag": null
+        },
+        {
+          "username": "PeterPanSmells",
+          "clientID": "tsbHU8Bg",
+          "clanTag": null
+        },
+        {
+          "username": "Kind Trader",
+          "clientID": "J51YvFm8",
+          "clanTag": "HIM"
+        },
+        {
+          "username": "Anon810",
+          "clientID": "1121BBpq",
+          "clanTag": null
+        },
+        {
+          "username": "cosmos272",
+          "clientID": "GzAfsLLE",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 702,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T02:32:17.440Z",
+      "url": "https://openfront.io/game/iRGSFWh9"
     }
   ],
   "hvn": [
