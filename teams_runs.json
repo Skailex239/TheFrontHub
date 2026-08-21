@@ -29442,6 +29442,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T22:45:48.247Z",
       "url": "https://openfront.io/game/za8r7itv"
+    },
+    {
+      "id": "E1Gek9Vy",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "inhale noodle",
+          "clientID": "dLhSgYXn",
+          "clanTag": null
+        },
+        {
+          "username": "CitiesOnLines",
+          "clientID": "YGkibZW1",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1266,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:53:16.212Z",
+      "url": "https://openfront.io/game/E1Gek9Vy"
     }
   ],
   "trios": [
@@ -61046,6 +61071,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T22:48:00.900Z",
       "url": "https://openfront.io/game/bqEzHcXh"
+    },
+    {
+      "id": "VemDV8HH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "A Humble Trader",
+          "clientID": "phmhSo14",
+          "clanTag": null
+        },
+        {
+          "username": "John 3.16",
+          "clientID": "53pweTHK",
+          "clanTag": null
+        },
+        {
+          "username": "Mulberry",
+          "clientID": "iVFnetTs",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 689,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T23:02:15.812Z",
+      "url": "https://openfront.io/game/VemDV8HH"
+    },
+    {
+      "id": "DGyyn4ce",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "mjs",
+          "clientID": "qTmv3D8a",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonBat3",
+          "clientID": "sPFeK5B8",
+          "clanTag": null
+        },
+        {
+          "username": "Forgotten Neanderthals",
+          "clientID": "ZygVM3Gb",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 863,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T23:00:16.170Z",
+      "url": "https://openfront.io/game/DGyyn4ce"
     }
   ],
   "quads": [
