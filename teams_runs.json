@@ -26167,6 +26167,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T15:13:58.115Z",
       "url": "https://openfront.io/game/YY7MGuPM"
+    },
+    {
+      "id": "8PEgxbUt",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Demon29",
+          "clientID": "PSx1V2QY",
+          "clanTag": null
+        },
+        {
+          "username": "Sigh",
+          "clientID": "gqChEvbv",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 984,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:22:09.345Z",
+      "url": "https://openfront.io/game/8PEgxbUt"
     }
   ],
   "trios": [
@@ -104930,6 +104955,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T14:59:50.689Z",
       "url": "https://openfront.io/game/SUSR1YiV"
+    },
+    {
+      "id": "Fgbegwnu",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Noah",
+          "clientID": "SoknCocC",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "paire de roi",
+          "clientID": "1ASd6Xo1",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "MEV EN STRING",
+          "clientID": "rnFsixmS",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "THEO SANS BOUT",
+          "clientID": "yRp8UidS",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "wnaroj3Q",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 875,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T15:24:33.341Z",
+      "url": "https://openfront.io/game/Fgbegwnu"
     }
   ],
   "hvn": [
