@@ -23842,6 +23842,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T09:48:04.774Z",
       "url": "https://openfront.io/game/77A9Z2TE"
+    },
+    {
+      "id": "ERdoHDau",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "horusHeresy",
+          "clientID": "oAradfeZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Jazz1418",
+          "clientID": "gDJKYuFX",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 620,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:50:36.420Z",
+      "url": "https://openfront.io/game/ERdoHDau"
     }
   ],
   "trios": [
@@ -51216,6 +51241,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T09:33:45.892Z",
       "url": "https://openfront.io/game/81k2rKfL"
+    },
+    {
+      "id": "3kcDSXc7",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "xeqhon",
+          "clientID": "j26KDEYg",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonMagenta7",
+          "clientID": "HN87qakM",
+          "clanTag": null
+        },
+        {
+          "username": "noiplesugger",
+          "clientID": "MDRcv8Vz",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 705,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T09:49:31.360Z",
+      "url": "https://openfront.io/game/3kcDSXc7"
     }
   ],
   "quads": [
