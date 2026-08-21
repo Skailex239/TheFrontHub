@@ -22167,6 +22167,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T05:02:22.654Z",
       "url": "https://openfront.io/game/djBKKdEt"
+    },
+    {
+      "id": "wybikKqP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bonaparte",
+          "clientID": "Zpg1587T",
+          "clanTag": null
+        },
+        {
+          "username": "CooperShelda",
+          "clientID": "QmbT4exC",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T05:16:17.985Z",
+      "url": "https://openfront.io/game/wybikKqP"
     }
   ],
   "trios": [
