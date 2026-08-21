@@ -93218,6 +93218,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T22:21:14.906Z",
       "url": "https://openfront.io/game/h2wzKZyb"
+    },
+    {
+      "id": "BsPQeyYR",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TREXXED",
+          "clientID": "EkFXDTnm",
+          "clanTag": "NU"
+        },
+        {
+          "username": "cheesecake",
+          "clientID": "H4H46xat",
+          "clanTag": "NU"
+        },
+        {
+          "username": "onyxagata",
+          "clientID": "tiMNKk8C",
+          "clanTag": "NU"
+        },
+        {
+          "username": "FLiPFLAVA",
+          "clientID": "ur2WJffp",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 770,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T22:56:03.389Z",
+      "url": "https://openfront.io/game/BsPQeyYR"
     }
   ],
   "team_custom": [
@@ -117975,6 +118010,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T22:31:21.780Z",
       "url": "https://openfront.io/game/ZVarPnWC"
+    },
+    {
+      "id": "UjBSSyU8",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Galod",
+          "clientID": "euzkMBgj",
+          "clanTag": "JK"
+        },
+        {
+          "username": "Picsou",
+          "clientID": "N4bGCXuR",
+          "clanTag": "JK"
+        },
+        {
+          "username": "JlZK",
+          "clientID": "R25juVVj",
+          "clanTag": "JK"
+        },
+        {
+          "username": "AnonIndigo9",
+          "clientID": "tEDkprJB",
+          "clanTag": null
+        },
+        {
+          "username": "LePeloche",
+          "clientID": "NM2jJmQk",
+          "clanTag": "JK"
+        },
+        {
+          "username": "Mouse",
+          "clientID": "AE6JAFQy",
+          "clanTag": null
+        },
+        {
+          "username": "Mora",
+          "clientID": "TqeUyyZW",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 687,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T22:59:14.611Z",
+      "url": "https://openfront.io/game/UjBSSyU8"
     }
   ],
   "hvn": [
