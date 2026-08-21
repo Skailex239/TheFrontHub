@@ -20692,6 +20692,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-20T23:44:16.394Z",
       "url": "https://openfront.io/game/AP5BvNXF"
+    },
+    {
+      "id": "1fNvsGAs",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Hardened Criminal",
+          "clientID": "YHox2DpJ",
+          "clanTag": null
+        },
+        {
+          "username": "NOGODPLEASENO",
+          "clientID": "G55SqcqN",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 567,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T23:54:52.555Z",
+      "url": "https://openfront.io/game/1fNvsGAs"
+    },
+    {
+      "id": "T9mthahE",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "German Democratic Republic",
+          "clientID": "GK6sK4oh",
+          "clanTag": "AST"
+        },
+        {
+          "username": "novc",
+          "clientID": "r3msH2rB",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 627,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-20T23:54:23.523Z",
+      "url": "https://openfront.io/game/T9mthahE"
     }
   ],
   "trios": [
@@ -45846,6 +45896,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-20T23:33:42.249Z",
       "url": "https://openfront.io/game/Ahu1DNMp"
+    },
+    {
+      "id": "aVniYJRN",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ROCKS D XEBEC",
+          "clientID": "W9fKeEBg",
+          "clanTag": "PIRAT"
+        },
+        {
+          "username": "FriendlyTrades",
+          "clientID": "wjnKciVS",
+          "clanTag": null
+        },
+        {
+          "username": "FluffyPhoenix.FmOd",
+          "clientID": "wTvepqaJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 760,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 89,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T23:51:14.841Z",
+      "url": "https://openfront.io/game/aVniYJRN"
+    },
+    {
+      "id": "93TYWedF",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "TheCutieMewMewPonies",
+          "clientID": "cq7EHLhy",
+          "clanTag": "FREE"
+        },
+        {
+          "username": "ISRAEL",
+          "clientID": "Qdg2dPsJ",
+          "clanTag": null
+        },
+        {
+          "username": "Darkness",
+          "clientID": "NWambHzr",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1034,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "playerTeams": 3,
+      "timestamp": "2026-08-20T23:46:24.037Z",
+      "url": "https://openfront.io/game/93TYWedF"
     }
   ],
   "quads": [
@@ -82515,6 +82625,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-20T23:42:28.779Z",
       "url": "https://openfront.io/game/sap5nPwr"
+    },
+    {
+      "id": "dsYgzSc7",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonBronze1",
+          "clientID": "aXLoBFbu",
+          "clanTag": null
+        },
+        {
+          "username": "lol 072",
+          "clientID": "hNhpFx1U",
+          "clanTag": null
+        },
+        {
+          "username": "kingdom of uwu",
+          "clientID": "YERESV1q",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench",
+          "clientID": "R2eBC7tX",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "4T4MSAoY",
+          "clanTag": null
+        },
+        {
+          "username": "SüsseEsmeralda",
+          "clientID": "Au824roc",
+          "clanTag": "KAZ"
+        },
+        {
+          "username": "pppp",
+          "clientID": "CRabYuMj",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 661,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-20T23:54:10.005Z",
+      "url": "https://openfront.io/game/dsYgzSc7"
     }
   ],
   "hvn": [
