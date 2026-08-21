@@ -27442,6 +27442,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T18:26:52.552Z",
       "url": "https://openfront.io/game/K9qfXCZa"
+    },
+    {
+      "id": "XgbhhCeQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSilence9",
+          "clientID": "E7FwxXMV",
+          "clanTag": null
+        },
+        {
+          "username": "nashe",
+          "clientID": "NaHu5LC6",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 540,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T18:34:20.037Z",
+      "url": "https://openfront.io/game/XgbhhCeQ"
     }
   ],
   "trios": [
@@ -57516,6 +57541,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T18:15:04.745Z",
       "url": "https://openfront.io/game/fXbuM6Aq"
+    },
+    {
+      "id": "XrwULXQC",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonTundra7",
+          "clientID": "YJByZhfW",
+          "clanTag": null
+        },
+        {
+          "username": "Jackdaw",
+          "clientID": "gP5kM2bD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSquirrel1",
+          "clientID": "9y4sejfv",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 781,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T18:30:54.819Z",
+      "url": "https://openfront.io/game/XrwULXQC"
     }
   ],
   "quads": [
