@@ -389,7 +389,9 @@ async function syncRecent() {
     if (WINDOW_DELAY > 0) await sleep(WINDOW_DELAY);
   }
 
-  if (totalNew > 0) saveRuns(runs);
+  // Toujours régénérer le payload public, même sans nouvelles runs
+  // car les "50 runs les plus récentes" peuvent avoir changé
+  saveRuns(runs);
   saveSeen(seen);
 
   cp.last_sync_time = String(Date.now());
