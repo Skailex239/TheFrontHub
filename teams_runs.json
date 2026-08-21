@@ -22542,6 +22542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T06:48:54.517Z",
       "url": "https://openfront.io/game/PAtWRgsF"
+    },
+    {
+      "id": "gyVVYY6d",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "UnhuggedToday",
+          "clientID": "ohoTSxqd",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToken",
+          "clientID": "zjwb8rB5",
+          "clanTag": "427"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 347,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T06:54:56.923Z",
+      "url": "https://openfront.io/game/gyVVYY6d"
     }
   ],
   "trios": [
@@ -101607,6 +101632,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T06:12:46.899Z",
       "url": "https://openfront.io/game/eMJFVFPw"
+    },
+    {
+      "id": "9sfCiBKJ",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Prawdziwy Skurwysyn",
+          "clientID": "iWPQqu3A",
+          "clanTag": "LOL"
+        },
+        {
+          "username": "Jean Pierre Coffe",
+          "clientID": "KnZ3Sy8j",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTornado6",
+          "clientID": "CYou49Hv",
+          "clanTag": null
+        },
+        {
+          "username": "FreezyGiraffe.yZtp",
+          "clientID": "asd2z1jp",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "RFbpJr2B",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark5",
+          "clientID": "kSsBejLs",
+          "clanTag": null
+        },
+        {
+          "username": "Landicakes",
+          "clientID": "3prrTZpa",
+          "clanTag": null
+        },
+        {
+          "username": "GazaHospital",
+          "clientID": "fK1Xn1Nd",
+          "clanTag": null
+        },
+        {
+          "username": "prvaprvi",
+          "clientID": "C1MW5311",
+          "clanTag": null
+        },
+        {
+          "username": "ZNZ",
+          "clientID": "wdxr9q2h",
+          "clanTag": null
+        },
+        {
+          "username": "Soulzz",
+          "clientID": "sjbjrPp9",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnchor6",
+          "clientID": "ZxCM4xQG",
+          "clanTag": null
+        },
+        {
+          "username": "Grandaddydih",
+          "clientID": "tTKSsNee",
+          "clanTag": "CAPPY"
+        },
+        {
+          "username": "Anon977",
+          "clientID": "eEae2s77",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 759,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 25,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T06:50:13.606Z",
+      "url": "https://openfront.io/game/9sfCiBKJ"
     }
   ]
 }
