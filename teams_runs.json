@@ -50371,6 +50371,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T08:18:29.812Z",
       "url": "https://openfront.io/game/ATecigAj"
+    },
+    {
+      "id": "HVA2DfYa",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonFrost",
+          "clientID": "v7KQupwm",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFlame9",
+          "clientID": "EmZc4kBa",
+          "clanTag": null
+        },
+        {
+          "username": "NewNorway",
+          "clientID": "iCxmhLSa",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 979,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T08:16:20.696Z",
+      "url": "https://openfront.io/game/HVA2DfYa"
     }
   ],
   "quads": [
@@ -91855,6 +91885,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T08:17:37.262Z",
       "url": "https://openfront.io/game/7BBW9ihC"
+    },
+    {
+      "id": "VLDtbuoB",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Dainihonteikoku",
+          "clientID": "htPwYF8P",
+          "clanTag": null
+        },
+        {
+          "username": "Sneddonia",
+          "clientID": "B7A3BWJD",
+          "clanTag": null
+        },
+        {
+          "username": "just let me trade",
+          "clientID": "Bnu4g8xo",
+          "clanTag": "GE"
+        },
+        {
+          "username": "Empire du Timistan",
+          "clientID": "LCSpz82E",
+          "clanTag": null
+        },
+        {
+          "username": "Mo0l",
+          "clientID": "2MSe9qkJ",
+          "clanTag": null
+        },
+        {
+          "username": "lessbefriends",
+          "clientID": "RBTu41N1",
+          "clanTag": "GEO"
+        },
+        {
+          "username": "AnonGoat1",
+          "clientID": "7apXUw3G",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 791,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T08:20:30.430Z",
+      "url": "https://openfront.io/game/VLDtbuoB"
     }
   ],
   "hvn": [
