@@ -92393,6 +92393,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T21:49:30.814Z",
       "url": "https://openfront.io/game/FnCudCtV"
+    },
+    {
+      "id": "VWNFiuPm",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "FUFU",
+          "clientID": "6efVtAAN",
+          "clanTag": null
+        },
+        {
+          "username": ".Z.",
+          "clientID": "ySnmzQ83",
+          "clanTag": "EU"
+        },
+        {
+          "username": "cos",
+          "clientID": "1xiyvo4Q",
+          "clanTag": "RO"
+        },
+        {
+          "username": "Sasanid",
+          "clientID": "JM76q77p",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T22:00:58.533Z",
+      "url": "https://openfront.io/game/VWNFiuPm"
     }
   ],
   "team_custom": [
@@ -116770,6 +116805,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T21:49:17.311Z",
       "url": "https://openfront.io/game/ZUagF3vE"
+    },
+    {
+      "id": "krKUDMii",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "Xvuj7g6p",
+          "clanTag": null
+        },
+        {
+          "username": "x900",
+          "clientID": "pHGZ2RJh",
+          "clanTag": null
+        },
+        {
+          "username": "dub",
+          "clientID": "sgMBLF1L",
+          "clanTag": "CHILE"
+        },
+        {
+          "username": "BENJAJA69",
+          "clientID": "HaLwsBc5",
+          "clanTag": "CHILE"
+        },
+        {
+          "username": "lululemerlu",
+          "clientID": "W9tAjPTd",
+          "clanTag": "FSC"
+        },
+        {
+          "username": "hefestus",
+          "clientID": "f74LQd45",
+          "clanTag": null
+        },
+        {
+          "username": "Escapism",
+          "clientID": "vjYvW2Pb",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 973,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T21:58:14.876Z",
+      "url": "https://openfront.io/game/krKUDMii"
     }
   ],
   "hvn": [
