@@ -52336,6 +52336,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T11:25:55.722Z",
       "url": "https://openfront.io/game/sE2u4twL"
+    },
+    {
+      "id": "Ep4Xb6Mv",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Oxul",
+          "clientID": "7YZ9T7qW",
+          "clanTag": null
+        },
+        {
+          "username": "VentiCZE",
+          "clientID": "WLrzH99c",
+          "clanTag": "CZ"
+        },
+        {
+          "username": "AnonCitadel5",
+          "clientID": "UvidKCKU",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 755,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:44:43.441Z",
+      "url": "https://openfront.io/game/Ep4Xb6Mv"
     }
   ],
   "quads": [
@@ -111577,6 +111607,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T11:08:43.672Z",
       "url": "https://openfront.io/game/Nttj4tA8"
+    },
+    {
+      "id": "NqkEkSMx",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Duce Empire",
+          "clientID": "MU9PDqJu",
+          "clanTag": "EU"
+        },
+        {
+          "username": "AnonRooster",
+          "clientID": "ZNEwY7a9",
+          "clanTag": null
+        },
+        {
+          "username": "The Temple",
+          "clientID": "QnJ3QVgc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "redhorse26",
+          "clientID": "Kotci7ph",
+          "clanTag": null
+        },
+        {
+          "username": "Chico",
+          "clientID": "g464KtvK",
+          "clanTag": "ZHIZH"
+        },
+        {
+          "username": "Kael",
+          "clientID": "94CoYDVp",
+          "clanTag": "CY"
+        },
+        {
+          "username": "BozkurtBey",
+          "clientID": "m4nquXqK",
+          "clanTag": "TR"
+        },
+        {
+          "username": "Tim",
+          "clientID": "cRfiJXKQ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPearl2",
+          "clientID": "r97XN3cU",
+          "clanTag": null
+        },
+        {
+          "username": "Cl5",
+          "clientID": "six9NzMq",
+          "clanTag": null
+        },
+        {
+          "username": "Log",
+          "clientID": "7sP3g7zZ",
+          "clanTag": "EU"
+        },
+        {
+          "username": "dave",
+          "clientID": "WhNhM9Um",
+          "clanTag": null
+        },
+        {
+          "username": "IIJAAJIJAIJIA",
+          "clientID": "RnbpFc2M",
+          "clanTag": null
+        },
+        {
+          "username": "Your Island Sidekick",
+          "clientID": "S7KWueQF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Galatone",
+          "clientID": "WuFd1JCM",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1075,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T11:39:20.588Z",
+      "url": "https://openfront.io/game/NqkEkSMx"
     }
   ]
 }
