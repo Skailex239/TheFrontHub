@@ -23892,6 +23892,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T10:00:28.500Z",
       "url": "https://openfront.io/game/LTwqDRKL"
+    },
+    {
+      "id": "17om7pzS",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "CaughtByUsernamePolice",
+          "clientID": "9k9CweYB",
+          "clanTag": "1984"
+        },
+        {
+          "username": "CensorshipBureau",
+          "clientID": "dkhvhW2n",
+          "clanTag": "1984"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T09:54:24.642Z",
+      "url": "https://openfront.io/game/17om7pzS"
     }
   ],
   "trios": [
@@ -78803,6 +78828,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T09:21:24.654Z",
       "url": "https://openfront.io/game/1zUHKFEM"
+    },
+    {
+      "id": "oZwUrpXT",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Humpty",
+          "clientID": "WQN2Phbn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "USSR",
+          "clientID": "53Q7v4f5",
+          "clanTag": null
+        },
+        {
+          "username": "team me owo",
+          "clientID": "FPWdTANx",
+          "clanTag": null
+        },
+        {
+          "username": "Send troops",
+          "clientID": "YYedMuhF",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 739,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T10:04:47.264Z",
+      "url": "https://openfront.io/game/oZwUrpXT"
     }
   ],
   "team_custom": [
@@ -94740,6 +94800,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T10:04:27.746Z",
       "url": "https://openfront.io/game/Au4ooGwz"
+    },
+    {
+      "id": "4e2chYVp",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "GBR",
+          "clientID": "2t2ajtyw",
+          "clanTag": null
+        },
+        {
+          "username": "Ost Deutschland",
+          "clientID": "zQfGPDU6",
+          "clanTag": "EU"
+        },
+        {
+          "username": "aussie man",
+          "clientID": "rsWWffZF",
+          "clanTag": null
+        },
+        {
+          "username": "Anon433",
+          "clientID": "uGqQur3g",
+          "clanTag": null
+        },
+        {
+          "username": "asterisk",
+          "clientID": "2ijqieJz",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 2075,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 115,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T09:43:23.966Z",
+      "url": "https://openfront.io/game/4e2chYVp"
     }
   ],
   "hvn": [
