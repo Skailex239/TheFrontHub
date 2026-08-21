@@ -28392,6 +28392,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T20:17:27.184Z",
       "url": "https://openfront.io/game/hUjipfso"
+    },
+    {
+      "id": "wGUVj2pM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Z3z3zzzzz",
+          "clientID": "vbRw92VW",
+          "clanTag": null
+        },
+        {
+          "username": "Perfektor",
+          "clientID": "fEcsL33D",
+          "clanTag": "EHRE"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 959,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:22:18.498Z",
+      "url": "https://openfront.io/game/wGUVj2pM"
+    },
+    {
+      "id": "9VW9PqL9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cobalt",
+          "clientID": "Rm1DDPKQ",
+          "clanTag": null
+        },
+        {
+          "username": "BraveMango.sXv8",
+          "clientID": "LV9o5YgU",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:29:23.412Z",
+      "url": "https://openfront.io/game/9VW9PqL9"
     }
   ],
   "trios": [
@@ -59186,6 +59236,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T19:59:52.542Z",
       "url": "https://openfront.io/game/1werRNZL"
+    },
+    {
+      "id": "TzWfHsdi",
+      "mode": "trios",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "DAITANIC",
+          "clientID": "jF2Dzk7u",
+          "clanTag": "26"
+        },
+        {
+          "username": "ah26",
+          "clientID": "ozkZkGNf",
+          "clanTag": "26"
+        },
+        {
+          "username": "Jack Sparrow",
+          "clientID": "4zYELupL",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 720,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T20:25:42.704Z",
+      "url": "https://openfront.io/game/TzWfHsdi"
     }
   ],
   "quads": [
@@ -90728,6 +90808,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:06:39.967Z",
       "url": "https://openfront.io/game/euSUMy2x"
+    },
+    {
+      "id": "Dxiud3p3",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "zarch",
+          "clientID": "ycChoGxA",
+          "clanTag": "BGE"
+        },
+        {
+          "username": "AnonCastle4",
+          "clientID": "DrUKEDsJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTimber1",
+          "clientID": "z8yaLEVm",
+          "clanTag": null
+        },
+        {
+          "username": "Weirdistan",
+          "clientID": "ZZhLEZx4",
+          "clanTag": "226"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 754,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T20:25:59.214Z",
+      "url": "https://openfront.io/game/Dxiud3p3"
     }
   ],
   "team_custom": [
@@ -114060,6 +114175,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T20:13:33.459Z",
       "url": "https://openfront.io/game/Kj1mZphr"
+    },
+    {
+      "id": "Uuvms9SC",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Pyrohex",
+          "clientID": "RP4odVMp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSpider9",
+          "clientID": "iwWuyCMU",
+          "clanTag": "BAD"
+        },
+        {
+          "username": "AnonMagenta3",
+          "clientID": "RA7k6xJL",
+          "clanTag": null
+        },
+        {
+          "username": "LetsDoIt1",
+          "clientID": "SXjZyzHt",
+          "clanTag": null
+        },
+        {
+          "username": "DanilaPrime",
+          "clientID": "KXqqimcU",
+          "clanTag": null
+        },
+        {
+          "username": "Anon049",
+          "clientID": "gwZJsKKS",
+          "clanTag": null
+        },
+        {
+          "username": "Cavalry Charge",
+          "clientID": "Yu3prLXU",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 924,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T20:23:50.095Z",
+      "url": "https://openfront.io/game/Uuvms9SC"
     }
   ],
   "hvn": [
