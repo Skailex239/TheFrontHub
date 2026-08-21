@@ -28467,6 +28467,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T20:22:45.032Z",
       "url": "https://openfront.io/game/NSToVevX"
+    },
+    {
+      "id": "rPKGzCai",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Pawns",
+          "clientID": "s65DcC7g",
+          "clanTag": "CHESS"
+        },
+        {
+          "username": "ARIANA",
+          "clientID": "KRLjytKL",
+          "clanTag": "AA"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 556,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:40:42.699Z",
+      "url": "https://openfront.io/game/rPKGzCai"
     }
   ],
   "trios": [
