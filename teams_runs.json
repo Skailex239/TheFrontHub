@@ -22692,6 +22692,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:04:35.996Z",
       "url": "https://openfront.io/game/ZxtzB8Hd"
+    },
+    {
+      "id": "37StAsRd",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonTemple",
+          "clientID": "gA6wmJme",
+          "clanTag": null
+        },
+        {
+          "username": "AZE",
+          "clientID": "dnwujgJ2",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1083,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:05:32.553Z",
+      "url": "https://openfront.io/game/37StAsRd"
     }
   ],
   "trios": [
@@ -102177,6 +102202,101 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T06:50:13.606Z",
       "url": "https://openfront.io/game/9sfCiBKJ"
+    },
+    {
+      "id": "L2cyZsTy",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonLizard5",
+          "clientID": "reV8ZEqV",
+          "clanTag": null
+        },
+        {
+          "username": "Soulzz",
+          "clientID": "z7wYBEGG",
+          "clanTag": null
+        },
+        {
+          "username": "KIMSANGDO",
+          "clientID": "bknjQHnw",
+          "clanTag": null
+        },
+        {
+          "username": "Esq",
+          "clientID": "iRDP6o8W",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Olek",
+          "clientID": "RuhzmkLW",
+          "clanTag": null
+        },
+        {
+          "username": "Nicean Empire",
+          "clientID": "P7T8FMKo",
+          "clanTag": "GER"
+        },
+        {
+          "username": "MaximusPrime",
+          "clientID": "dCy859jb",
+          "clanTag": "TOP2"
+        },
+        {
+          "username": "WHO",
+          "clientID": "WygYptXr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCactus4",
+          "clientID": "gawva9GP",
+          "clanTag": null
+        },
+        {
+          "username": "The Cross Guild",
+          "clientID": "ZdP4ouuY",
+          "clanTag": null
+        },
+        {
+          "username": "4T3",
+          "clientID": "hKQFpLEB",
+          "clanTag": "MT"
+        },
+        {
+          "username": "AnonShovel9",
+          "clientID": "KxJ4tRiA",
+          "clanTag": null
+        },
+        {
+          "username": "011",
+          "clientID": "zhhwdWX9",
+          "clanTag": null
+        },
+        {
+          "username": "gladiator",
+          "clientID": "r8Q1LFcR",
+          "clanTag": "HALO"
+        },
+        {
+          "username": "chosimja",
+          "clientID": "ePDLfnpv",
+          "clanTag": "UN"
+        },
+        {
+          "username": "...",
+          "clientID": "gB5xSKCy",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 884,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 37,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T07:07:41.176Z",
+      "url": "https://openfront.io/game/L2cyZsTy"
     }
   ]
 }
