@@ -48201,6 +48201,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T04:33:41.474Z",
       "url": "https://openfront.io/game/idqgKuoD"
+    },
+    {
+      "id": "FBSPnXJS",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "bazergus",
+          "clientID": "uKDrW7pg",
+          "clanTag": null
+        },
+        {
+          "username": "Upsi",
+          "clientID": "C7kgAT8k",
+          "clanTag": null
+        },
+        {
+          "username": "pride pride pride",
+          "clientID": "V5Gc5pNA",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T04:40:08.842Z",
+      "url": "https://openfront.io/game/FBSPnXJS"
     }
   ],
   "quads": [
