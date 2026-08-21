@@ -28067,6 +28067,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:36:04.010Z",
       "url": "https://openfront.io/game/dvethoGV"
+    },
+    {
+      "id": "deBB8pm3",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Trusty Trump",
+          "clientID": "xUEHG7Dz",
+          "clanTag": null
+        },
+        {
+          "username": "Owl",
+          "clientID": "8QRsjeQw",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1355,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:28:54.544Z",
+      "url": "https://openfront.io/game/deBB8pm3"
     }
   ],
   "trios": [
@@ -58591,6 +58616,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:37:36.623Z",
       "url": "https://openfront.io/game/8MJowxzN"
+    },
+    {
+      "id": "6ApoTNxA",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "FENERBAHCE",
+          "clientID": "86438zzz",
+          "clanTag": null
+        },
+        {
+          "username": "shayan_s2024",
+          "clientID": "wdFtmnio",
+          "clanTag": "EVIL"
+        },
+        {
+          "username": "Anon827",
+          "clientID": "Vz8y3TdP",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 596,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:42:14.432Z",
+      "url": "https://openfront.io/game/6ApoTNxA"
     }
   ],
   "quads": [
