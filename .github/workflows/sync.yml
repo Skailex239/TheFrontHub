@@ -179,7 +179,7 @@ jobs:
           rm -rf node_modules package.json package-lock.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in dashboard_scores.json dashboard_scores.json.gz; do [ -f "$f" ] && git add "$f" -f; done
+          for f in dashboard_scores.json dashboard_scores.json.gz dashboard_scores_history.json dashboard_scores_history.json.gz; do [ -f "$f" ] && git add "$f" -f; done
           git diff --cached --quiet && { echo "no changes dashboard"; exit 0; }
           git commit -m "[auto] sync dashboard scores"
           for i in 1 2 3 4 5; do

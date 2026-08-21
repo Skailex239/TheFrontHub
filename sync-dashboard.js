@@ -20,6 +20,9 @@ import { API_BASE, openFrontFetch, hasExemption } from "./openfront-api.js";
 
 const PLAYERS_FILE = "data/players.json";
 const OUTPUT_FILE = "dashboard_scores.json";
+const HISTORY_FILE = "dashboard_scores_history.json";
+const HISTORY_GZ_FILE = "dashboard_scores_history.json.gz";
+const MAX_WEEKS_HISTORY = 52;  // ~1 an d'historique hebdo, FIFO
 const CONCURRENCY = 8;
 const FIRESTORE_BASE = "https://firestore.googleapis.com/v1/projects/openfront-speedrun/databases/(default)/documents";
 
@@ -218,6 +221,35 @@ async function fetchWeeklyWins(publicId) {
   }
 }
 
+// ── Historique hebdomadaire (archive des snapshots précédents) ──
+// On charge l'historique existant. Si la semaine du snapshot courant a changé
+// par rapport au snapshot précédent (transition lundi), on push l'ancien snapshot
+// dans l'historique avant d'écrire le nouveau. Cap MAX_WEEKS_HISTORY par joueur (FIFO).
+function loadWeekHistory() {
+  try {
+    const raw = fs.readFileSync(HISTORY_FILE, "utf8");
+    return JSON.parse(raw);
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveWeekHistory(history) {
+  // Prune : ne garder que les MAX_WEEKS_HISTORY dernières semaines par joueur
+  for (const pid of Object.keys(history)) {
+    const arr = history[pid];
+    if (Array.isArray(arr) && arr.length > MAX_WEEKS_HISTORY) {
+      history[pid] = arr.slice(-MAX_WEEKS_HISTORY);
+    } else if (!Array.isArray(arr) || arr.length === 0) {
+      delete history[pid];
+    }
+  }
+  const json = JSON.stringify(history);
+  fs.writeFileSync(HISTORY_FILE, json);
+  fs.writeFileSync(HISTORY_GZ_FILE, zlib.gzipSync(json));
+  console.log(`[dashboard-sync] 📚 Historique hebdo: ${Object.keys(history).length} joueurs, ${(json.length / 1024).toFixed(0)} KB`);
+}
+
 async function main() {
   console.log("[dashboard-sync] 🚀 Démarrage");
   if (hasExemption()) console.log("[dashboard-sync] 🔑 Exemption active");
@@ -321,6 +353,58 @@ async function main() {
   }
 
   results.sort((a, b) => b.points - a.points);
+
+  // ── Archive hebdomadaire : si la semaine du snapshot courant a changé
+  //    par rapport au snapshot précédent (transition lundi), on push chaque
+  //    player de l'ANCIEN snapshot dans l'historique avec son rank calculé
+  //    par tri sur weekly_points. ──
+  let history = loadWeekHistory();
+  let prevWeekStart = null;
+  try {
+    const prevRaw = fs.readFileSync(OUTPUT_FILE, "utf8");
+    const prevData = JSON.parse(prevRaw);
+    if (prevData && prevData.weekStart) prevWeekStart = prevData.weekStart;
+    // Archive uniquement si transition de semaine détectée
+    if (prevWeekStart && prevWeekStart !== weekStartIso && prevData && Array.isArray(prevData.players)) {
+      // Trie par weekly_points décroissant pour calculer le rank de la semaine archivée
+      const prevSorted = [...prevData.players].sort((a, b) => (b.weekly_points || 0) - (a.weekly_points || 0));
+      let archived = 0;
+      prevSorted.forEach((p, idx) => {
+        if (!p.publicId) return;
+        // Snap seulement si le joueur a eu au moins 1 activity cette semaine-là
+        // (évite d'archiver des joueurs à 0 partout qui n'ont pas joué)
+        const hasActivity = (p.weekly_points || 0) > 0
+          || (p.weekly_ffa_casual || 0) > 0
+          || (p.weekly_ffa_ranked || 0) > 0
+          || (p.weekly_team_casual || 0) > 0
+          || (p.weekly_team_ranked || 0) > 0;
+        if (!hasActivity) return;
+        if (!history[p.publicId]) history[p.publicId] = [];
+        history[p.publicId].push({
+          weekStart: prevData.weekStart,
+          weekEnd: weekStartIso,
+          points: p.points || 0,
+          weekly_points: p.weekly_points || 0,
+          weekly_ffa_casual: p.weekly_ffa_casual || 0,
+          weekly_ffa_ranked: p.weekly_ffa_ranked || 0,
+          weekly_team_casual: p.weekly_team_casual || 0,
+          weekly_team_ranked: p.weekly_team_ranked || 0,
+          elo: p.elo || null,
+          peak_elo: p.peak_elo || null,
+          rank: idx + 1,
+        });
+        archived++;
+      });
+      console.log(`[dashboard-sync] 📚 Transition de semaine détectée (${prevWeekStart} → ${weekStartIso}) — ${archived} joueurs archivés`);
+    } else if (!prevWeekStart) {
+      console.log(`[dashboard-sync] 📚 Premier run (pas d'ancien snapshot) — pas d'archive`);
+    } else {
+      console.log(`[dashboard-sync] 📚 Même semaine (toujours ${weekStartIso}) — pas d'archive`);
+    }
+  } catch (e) {
+    console.warn(`[dashboard-sync] Lecture ancien snapshot pour archivage échouée (non-bloquant): ${e.message}`);
+  }
+  saveWeekHistory(history);
 
   const output = {
     lastUpdate: new Date().toISOString(),

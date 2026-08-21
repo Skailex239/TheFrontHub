@@ -394,6 +394,8 @@ const server = http.createServer(async (req, res) => {
     "/dashboard_ranking.json": ["dashboard_ranking.json", "application/json; charset=utf-8"],
     "/dashboard_scores.json": ["dashboard_scores.json", "application/json; charset=utf-8"],
     "/dashboard_scores.json.gz": ["dashboard_scores.json.gz", "application/gzip"],
+    "/dashboard_scores_history.json": ["dashboard_scores_history.json", "application/json; charset=utf-8"],
+    "/dashboard_scores_history.json.gz": ["dashboard_scores_history.json.gz", "application/gzip"],
     "/checkpoint.json": ["checkpoint.json", "application/json; charset=utf-8"],
     "/checkpoint_compact.json": ["checkpoint_compact.json", "application/json; charset=utf-8"],
     // Atlas data

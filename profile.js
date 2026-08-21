@@ -466,6 +466,7 @@ async function loadStats(publicId) {
   // ── Week stats from dashboard_scores.json (official data) — non-blocking ──
   (async () => {
     let weekScore = 0, weekRank = "—", weekFFA = 0, weekTeam = 0, weekTotalPoints = 0;
+    let weekHistory = [];  // [{weekStart, weekly_points, weekly_ffa_casual, ...}, ...] (sans la semaine courante)
     try {
       const scoresRes = await fetch("dashboard_scores.json.gz", { cache: "force-cache" });
       let scoresData = null;
@@ -488,6 +489,24 @@ async function loadStats(publicId) {
           const rankIdx = weeklySorted.findIndex(p => p.publicId === publicId);
           weekRank = rankIdx >= 0 ? rankIdx + 1 : "—";
 
+          // Fetch l'historique des semaines précédentes (depuis dashboard_scores_history.json.gz)
+          try {
+            let historyData = null;
+            const histRes = await fetch("dashboard_scores_history.json.gz", { cache: "force-cache" });
+            if (histRes.ok) {
+              const ds = new DecompressionStream("gzip");
+              historyData = await new Response(histRes.body.pipeThrough(ds)).json();
+            } else {
+              const fallback = await fetch("dashboard_scores_history.json");
+              if (fallback.ok) historyData = await fallback.json();
+            }
+            if (historyData && Array.isArray(historyData[publicId])) {
+              weekHistory = historyData[publicId];
+            }
+          } catch (histErr) {
+            console.warn("[profile] Week history load failed:", histErr.message);
+          }
+
           // Store for the chart
           window._profileWeekData = {
             ffa: weekFFA,
@@ -503,6 +522,8 @@ async function loadStats(publicId) {
             allTimePoints: entry.points || 0,
             allTimeFfa: entry.ffa_casual || 0,
             allTimeTeam: entry.team_casual || 0,
+            // Historique des semaines précédentes (S1, S2, ... sans la semaine courante qui sera ajoutée en queue par renderWeeklyChart)
+            history: weekHistory,
           };
         }
       }
@@ -1004,14 +1025,60 @@ function renderWeeklyChart() {
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, W, H);
 
-  // ── Data: 1 week for now (Week 1). Will expand as history accumulates. ──
-  const weeks = ["Week 1"];
-  const rankedScore = data.ffaRanked + data.teamRanked;
+  // ── Data: build N weeks from history + current week ──
+  // history = [{weekStart, weekly_points, weekly_ffa_casual, weekly_ffa_ranked, weekly_team_casual, weekly_team_ranked, rank}, ...]
+  // La semaine courante (data) est ajoutée en queue → S1, S2, ..., S-courante
+  const histWeeks = Array.isArray(data.history) ? data.history : [];
+  // Build array of week records (history first, current week last)
+  const allWeeks = [
+    ...histWeeks.map(h => ({
+      ffa: (h.weekly_ffa_casual || 0) + (h.weekly_ffa_ranked || 0),
+      team: (h.weekly_team_casual || 0) + (h.weekly_team_ranked || 0),
+      rankedScore: (h.weekly_ffa_ranked || 0) + (h.weekly_team_ranked || 0),
+      total: h.weekly_points || 0,
+      rank: h.rank || "—",
+      weekStart: h.weekStart,
+      ffaCasual: h.weekly_ffa_casual || 0,
+      ffaRanked: h.weekly_ffa_ranked || 0,
+      teamCasual: h.weekly_team_casual || 0,
+      teamRanked: h.weekly_team_ranked || 0,
+      allTimePoints: h.points || 0,
+    })),
+    {
+      ffa: data.ffa,
+      team: data.team,
+      rankedScore: data.ffaRanked + data.teamRanked,
+      total: data.total,
+      rank: data.rank,
+      weekStart: data.weekStart,
+      ffaCasual: data.ffaCasual,
+      ffaRanked: data.ffaRanked,
+      teamCasual: data.teamCasual,
+      teamRanked: data.teamRanked,
+      allTimePoints: data.allTimePoints,
+    },
+  ];
+  // Labels : "S1", "S2", ..., "S-courante" (la dernière = semaine en cours)
+  const weeks = allWeeks.map((w, i) => i === allWeeks.length - 1 ? "S" + (i + 1) + " (live)" : "S" + (i + 1));
+
+  // Build series with N points each
   const series = [
-    { label: "FFA", color: "#ef4444", points: [{ score: data.ffa, rank: data.rank, detail: { wins: data.ffaCasual } }] },
-    { label: "Team", color: "#2196f3", points: [{ score: data.team, rank: data.rank, detail: { wins: data.teamCasual } }] },
-    { label: "Class\u00e9", color: "#9333ea", points: [{ score: rankedScore, rank: data.rank, detail: { ffa1v1: data.ffaRanked, team2v2: data.teamRanked } }] },
-    { label: "Total", color: "#111827", points: [{ score: data.total, rank: data.rank, detail: { ffa: data.ffa, team: data.team, ranked: rankedScore, allTime: data.allTimePoints } }] },
+    {
+      label: "FFA", color: "#ef4444",
+      points: allWeeks.map(w => ({ score: w.ffa, rank: w.rank, detail: { wins: w.ffaCasual } })),
+    },
+    {
+      label: "Team", color: "#2196f3",
+      points: allWeeks.map(w => ({ score: w.team, rank: w.rank, detail: { wins: w.teamCasual } })),
+    },
+    {
+      label: "Class\u00e9", color: "#9333ea",
+      points: allWeeks.map(w => ({ score: w.rankedScore, rank: w.rank, detail: { ffa1v1: w.ffaRanked, team2v2: w.teamRanked } })),
+    },
+    {
+      label: "Total", color: "#111827",
+      points: allWeeks.map(w => ({ score: w.total, rank: w.rank, detail: { ffa: w.ffa, team: w.team, ranked: w.rankedScore, allTime: w.allTimePoints } })),
+    },
   ];
 
   // Store point positions for hover detection
