@@ -22017,6 +22017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T04:42:05.954Z",
       "url": "https://openfront.io/game/5yca5KWg"
+    },
+    {
+      "id": "nr4XLUXJ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BunnyKisses67",
+          "clientID": "18vDeC1N",
+          "clanTag": null
+        },
+        {
+          "username": "AmishMan1234",
+          "clientID": "cFJhqtfh",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1367,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T04:45:34.172Z",
+      "url": "https://openfront.io/game/nr4XLUXJ"
     }
   ],
   "trios": [
@@ -48281,6 +48306,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T04:40:08.842Z",
       "url": "https://openfront.io/game/FBSPnXJS"
+    },
+    {
+      "id": "CD4PHzX9",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "stank",
+          "clientID": "9NNFjbQj",
+          "clanTag": "AST"
+        },
+        {
+          "username": "DAR",
+          "clientID": "Y8DhLUtR",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Vladimir Volfovich Zhirik",
+          "clientID": "PkBYgBcj",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 932,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T04:52:42.599Z",
+      "url": "https://openfront.io/game/CD4PHzX9"
     }
   ],
   "quads": [
