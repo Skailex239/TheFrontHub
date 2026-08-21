@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T20:48:03.942Z",
-  "lastSyncedAt": "2026-08-21T20:48:01.342Z",
-  "totalGames": 2213,
+  "computedAt": "2026-08-21T20:50:24.151Z",
+  "lastSyncedAt": "2026-08-21T20:50:21.139Z",
+  "totalGames": 2214,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
     "teamCasual": 48,
-    "teamRanked": 71
+    "teamRanked": 72
   },
-  "totalWins": 831,
-  "points": 4479,
+  "totalWins": 832,
+  "points": 4480,
   "level": 44,
-  "levelProgress": 79,
+  "levelProgress": 80,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 831,
+      "current": 832,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 479",
-    "totalWins": "831",
-    "totalGames": "2 213",
+    "points": "4 480",
+    "totalWins": "832",
+    "totalGames": "2 214",
     "totalPlaytime": "23j 4h",
     "totalPlaytimeCompact": "23j 4h",
     "avgGameDuration": "15m 5s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "556h"
   },
   "playtime": {
-    "totalSec": 2004649,
-    "avgGameSec": 905.8513330320832,
+    "totalSec": 2005035,
+    "avgGameSec": 905.6165311653117,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -71,14 +71,14 @@
         "wins": 48
       },
       "teamRanked": {
-        "games": 113,
-        "playtimeSec": 31872,
-        "wins": 71
+        "games": 114,
+        "playtimeSec": 32258,
+        "wins": 72
       }
     }
   },
   "results": {
-    "victory": 831,
+    "victory": 832,
     "defeat": 1050,
     "incomplete": 332
   },
@@ -133,15 +133,15 @@
     },
     {
       "map": "Europe Classic",
-      "count": 95,
-      "wins": 57,
+      "count": 96,
+      "wins": 58,
       "losses": 38,
-      "playtimeSec": 36043,
-      "avgDuration": 379.4,
-      "winRate": 0.6,
-      "lastPlayed": 1787335814926,
+      "playtimeSec": 36429,
+      "avgDuration": 379.46875,
+      "winRate": 0.6041666666666666,
+      "lastPlayed": 1787344945311,
       "formatted": {
-        "playtime": "10h 0m",
+        "playtime": "10h 7m",
         "avgDuration": "6m",
         "winRate": "60%",
         "lastPlayed": "21/08/26"
@@ -1676,7 +1676,7 @@
       227,
       202,
       152,
-      152,
+      153,
       152
     ],
     "byWeekday": [
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      367,
+      368,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 21,
-        "playtimeSec": 13829
+        "count": 22,
+        "playtimeSec": 14215
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 2,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "y1hSvadG",
+      "start": "2026-08-21T20:42:25.311Z",
+      "map": "Europe Classic",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 386,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "WcRaX3R7",
       "start": "2026-08-21T20:35:53.863Z",
@@ -2426,17 +2437,6 @@
       "mode": "Free For All",
       "result": "victory",
       "durationSeconds": 336,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
-    },
-    {
-      "gameId": "sA2r6Hfr",
-      "start": "2026-08-20T18:36:32.435Z",
-      "map": "Asia",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 167,
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
