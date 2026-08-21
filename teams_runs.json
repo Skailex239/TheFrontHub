@@ -54381,6 +54381,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:00:46.420Z",
       "url": "https://openfront.io/game/D9hBqCvP"
+    },
+    {
+      "id": "nur2HuEf",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonXZ",
+          "clientID": "nufD1D6E",
+          "clanTag": "GEO"
+        },
+        {
+          "username": "Mo0l",
+          "clientID": "1CtUrdYR",
+          "clanTag": null
+        },
+        {
+          "username": "kosmosa",
+          "clientID": "ZUM7bxkn",
+          "clanTag": "GEO"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 894,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:11:07.094Z",
+      "url": "https://openfront.io/game/nur2HuEf"
     }
   ],
   "quads": [
@@ -83403,6 +83433,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:03:41.105Z",
       "url": "https://openfront.io/game/huMyqeDn"
+    },
+    {
+      "id": "KyEjYjA6",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Biden",
+          "clientID": "1Pcu63L6",
+          "clanTag": "NU"
+        },
+        {
+          "username": "oncenot",
+          "clientID": "BaWvAEmr",
+          "clanTag": "NU"
+        },
+        {
+          "username": "I eat rocks",
+          "clientID": "qSEoRZm8",
+          "clanTag": "NU"
+        },
+        {
+          "username": "TREXXED",
+          "clientID": "ECbdXXj4",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 409,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:19:09.104Z",
+      "url": "https://openfront.io/game/KyEjYjA6"
+    },
+    {
+      "id": "VfCnYe5k",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Owl Boy",
+          "clientID": "UnKGydX7",
+          "clanTag": null
+        },
+        {
+          "username": "Hasan",
+          "clientID": "QkTFEnVp",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Peace And Love",
+          "clientID": "5egkvCVK",
+          "clanTag": null
+        },
+        {
+          "username": "TradeTime",
+          "clientID": "L5VSJQrv",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 617,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:16:00.894Z",
+      "url": "https://openfront.io/game/VfCnYe5k"
     }
   ],
   "team_custom": [
@@ -102560,6 +102660,96 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T14:02:08.014Z",
       "url": "https://openfront.io/game/jHoi3DYF"
+    },
+    {
+      "id": "iFcfAD11",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DeLoVaN",
+          "clientID": "tFDznXqb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon the Great",
+          "clientID": "W5i5H3Fq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ENd of Heat",
+          "clientID": "y22SiJbv",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Tala23.",
+          "clientID": "Q3bdwhjc",
+          "clanTag": null
+        },
+        {
+          "username": "Bred",
+          "clientID": "6AsVe78h",
+          "clanTag": null
+        },
+        {
+          "username": "Tomawar40",
+          "clientID": "f5ccuyGM",
+          "clanTag": null
+        },
+        {
+          "username": "Anon568",
+          "clientID": "rKnVPX6J",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 702,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T14:13:15.735Z",
+      "url": "https://openfront.io/game/iFcfAD11"
+    },
+    {
+      "id": "sSHpfPuu",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Andi",
+          "clientID": "uSgqazkZ",
+          "clanTag": "HYX"
+        },
+        {
+          "username": "CZE",
+          "clientID": "HoF41w2q",
+          "clanTag": null
+        },
+        {
+          "username": "TIBI",
+          "clientID": "62rdpU32",
+          "clanTag": "HYX"
+        },
+        {
+          "username": "Marian",
+          "clientID": "z6CE1u9A",
+          "clanTag": "HYX"
+        },
+        {
+          "username": "INEVITABLE",
+          "clientID": "vYJnVHin",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1116,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T14:07:27.852Z",
+      "url": "https://openfront.io/game/sSHpfPuu"
     }
   ],
   "hvn": [
