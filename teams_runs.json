@@ -87868,6 +87868,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T17:52:39.779Z",
       "url": "https://openfront.io/game/6rE69QNt"
+    },
+    {
+      "id": "Nf3XxHvt",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Gio",
+          "clientID": "TZa9hq3f",
+          "clanTag": "MYM"
+        },
+        {
+          "username": "Fcedric",
+          "clientID": "sZX9PuM6",
+          "clanTag": "MYM"
+        },
+        {
+          "username": "Rody",
+          "clientID": "YskvcL4C",
+          "clanTag": "MYM"
+        },
+        {
+          "username": "Troop sender",
+          "clientID": "cG11v52p",
+          "clanTag": "MYM"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 1033,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T18:05:35.132Z",
+      "url": "https://openfront.io/game/Nf3XxHvt"
+    },
+    {
+      "id": "pBDd5obD",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "clement",
+          "clientID": "zMrxy535",
+          "clanTag": "JR"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "4Y7bCmai",
+          "clanTag": "JR"
+        },
+        {
+          "username": "DougyJr",
+          "clientID": "Yo3YpUDM",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Ziyad",
+          "clientID": "4z4c2nL4",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 326,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T18:19:53.087Z",
+      "url": "https://openfront.io/game/pBDd5obD"
     }
   ],
   "team_custom": [
@@ -110065,6 +110135,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T17:57:59.120Z",
       "url": "https://openfront.io/game/LdRZesYZ"
+    },
+    {
+      "id": "xFAtM71j",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "kokodiu",
+          "clientID": "rqukBdms",
+          "clanTag": "STER"
+        },
+        {
+          "username": "Someone",
+          "clientID": "Ai2vAkhq",
+          "clanTag": null
+        },
+        {
+          "username": "Anon338",
+          "clientID": "gSeXdZMQ",
+          "clanTag": null
+        },
+        {
+          "username": "Kerchick",
+          "clientID": "opvnPNMT",
+          "clanTag": null
+        },
+        {
+          "username": "JP_Ogikubo",
+          "clientID": "gxLAv6NW",
+          "clanTag": null
+        },
+        {
+          "username": "Bet",
+          "clientID": "8FERbLX5",
+          "clanTag": "GOY"
+        },
+        {
+          "username": "UtterlyPatheticTransport",
+          "clientID": "9L1jiJdF",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 125,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T18:07:48.781Z",
+      "url": "https://openfront.io/game/xFAtM71j"
     }
   ],
   "hvn": [
