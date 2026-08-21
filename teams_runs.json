@@ -28317,6 +28317,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:12:50.435Z",
       "url": "https://openfront.io/game/jyUuyens"
+    },
+    {
+      "id": "HVBBmt66",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Goth",
+          "clientID": "of1PjMic",
+          "clanTag": null
+        },
+        {
+          "username": "TR_Kara_Empire",
+          "clientID": "W8vt6F8b",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 629,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:19:53.840Z",
+      "url": "https://openfront.io/game/HVBBmt66"
+    },
+    {
+      "id": "639em2Dv",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Alberto",
+          "clientID": "dJRjsYgs",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "mvb",
+          "clientID": "CGdQig6N",
+          "clanTag": "MEOW"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1291,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:09:25.181Z",
+      "url": "https://openfront.io/game/639em2Dv"
     }
   ],
   "trios": [
@@ -90463,6 +90513,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:15:35.576Z",
       "url": "https://openfront.io/game/KAhHCwja"
+    },
+    {
+      "id": "odNM6FzH",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Jickyleprince",
+          "clientID": "YjC8fWwP",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "AnonPearl7",
+          "clientID": "57xQ3k8Q",
+          "clanTag": null
+        },
+        {
+          "username": "IRGC",
+          "clientID": "GmQcwhWC",
+          "clanTag": "IRI"
+        },
+        {
+          "username": "67676767",
+          "clientID": "mf31yZ6H",
+          "clanTag": "PAK"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 497,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T20:21:01.408Z",
+      "url": "https://openfront.io/game/odNM6FzH"
     }
   ],
   "team_custom": [
