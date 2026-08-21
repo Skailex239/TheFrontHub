@@ -47986,6 +47986,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T04:01:39.523Z",
       "url": "https://openfront.io/game/1EQH35GE"
+    },
+    {
+      "id": "QdJnjkZv",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon746",
+          "clientID": "TGao29dz",
+          "clanTag": null
+        },
+        {
+          "username": "noplan",
+          "clientID": "8He4YENG",
+          "clanTag": null
+        },
+        {
+          "username": "Shadowwalker",
+          "clientID": "9PXEH7DV",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 861,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T04:08:15.469Z",
+      "url": "https://openfront.io/game/QdJnjkZv"
     }
   ],
   "quads": [
