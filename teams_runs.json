@@ -24742,6 +24742,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:50:58.325Z",
       "url": "https://openfront.io/game/sUuiwyNQ"
+    },
+    {
+      "id": "KSpMdvqW",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Victorius69",
+          "clientID": "fGnug5ht",
+          "clanTag": null
+        },
+        {
+          "username": "Anon000",
+          "clientID": "Xqh9spAa",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 362,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:20:35.141Z",
+      "url": "https://openfront.io/game/KSpMdvqW"
+    },
+    {
+      "id": "bGUsR8mQ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "crediblebulb",
+          "clientID": "GVKPwKDo",
+          "clanTag": null
+        },
+        {
+          "username": "HOFF",
+          "clientID": "iNxbtmQb",
+          "clanTag": "HUN"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1082,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:09:18.959Z",
+      "url": "https://openfront.io/game/bGUsR8mQ"
+    },
+    {
+      "id": "iRKTXL8j",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "kinaly",
+          "clientID": "fmSfMumz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Oatland",
+          "clientID": "f9Jbq4z4",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 609,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:16:38.916Z",
+      "url": "https://openfront.io/game/iRKTXL8j"
     }
   ],
   "trios": [
@@ -98470,6 +98545,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T12:12:56.190Z",
       "url": "https://openfront.io/game/6rveEh6V"
+    },
+    {
+      "id": "K33eEV4W",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Ave Maria",
+          "clientID": "3dCMEbx8",
+          "clanTag": "GOD"
+        },
+        {
+          "username": "Kuur",
+          "clientID": "4HbAqwuv",
+          "clanTag": null
+        },
+        {
+          "username": "trade",
+          "clientID": "UJEECKq2",
+          "clanTag": null
+        },
+        {
+          "username": "LaSalle",
+          "clientID": "x9tMRVgT",
+          "clanTag": null
+        },
+        {
+          "username": "Alnair",
+          "clientID": "KRdRFZ12",
+          "clanTag": null
+        },
+        {
+          "username": "ABSOLUTION",
+          "clientID": "w9foeZUz",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 927,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T12:11:27.094Z",
+      "url": "https://openfront.io/game/K33eEV4W"
     }
   ],
   "hvn": [
