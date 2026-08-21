@@ -78483,6 +78483,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T09:23:23.269Z",
       "url": "https://openfront.io/game/ASj4BQPA"
+    },
+    {
+      "id": "n64ixbcC",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon205",
+          "clientID": "tDKQcfcg",
+          "clanTag": null
+        },
+        {
+          "username": "Anon149",
+          "clientID": "edeYBdSE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLotus3",
+          "clientID": "Cym2SkXS",
+          "clanTag": null
+        },
+        {
+          "username": "FANTOM",
+          "clientID": "iBeLZbUW",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1305,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T09:30:52.209Z",
+      "url": "https://openfront.io/game/n64ixbcC"
     }
   ],
   "team_custom": [
@@ -94170,6 +94205,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T09:21:14.646Z",
       "url": "https://openfront.io/game/bVWeGfX9"
+    },
+    {
+      "id": "pS9KL5dz",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "hosein",
+          "clientID": "Mv5p2ctX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSloth1",
+          "clientID": "Pg75oN2m",
+          "clanTag": null
+        },
+        {
+          "username": "Mucusor",
+          "clientID": "Ev8Fty62",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ardwen",
+          "clientID": "f8BcwBFS",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLantern4",
+          "clientID": "mogL1Pgu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSteam3",
+          "clientID": "ZHpB5tbQ",
+          "clanTag": null
+        },
+        {
+          "username": "sss",
+          "clientID": "AJv8pRoq",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 779,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T09:39:31.230Z",
+      "url": "https://openfront.io/game/pS9KL5dz"
     }
   ],
   "hvn": [
