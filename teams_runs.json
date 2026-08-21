@@ -28217,6 +28217,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T20:04:58.873Z",
       "url": "https://openfront.io/game/HX5WFhUE"
+    },
+    {
+      "id": "HkzknfJ4",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonBanner7",
+          "clientID": "DKfFUh1F",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRelic3",
+          "clientID": "TCZ5XqvZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 445,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:10:49.786Z",
+      "url": "https://openfront.io/game/HkzknfJ4"
     }
   ],
   "trios": [
@@ -90223,6 +90248,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:03:40.270Z",
       "url": "https://openfront.io/game/uoQDrqJg"
+    },
+    {
+      "id": "YVty2aqK",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "bigchinchin",
+          "clientID": "Lrgo7Bwt",
+          "clanTag": null
+        },
+        {
+          "username": "AusserKontrolle",
+          "clientID": "YWxJ7kvd",
+          "clanTag": null
+        },
+        {
+          "username": "France",
+          "clientID": "9KMecruC",
+          "clanTag": null
+        },
+        {
+          "username": "FBK",
+          "clientID": "A7BWJcrv",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 632,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T20:08:06.077Z",
+      "url": "https://openfront.io/game/YVty2aqK"
     }
   ],
   "team_custom": [
