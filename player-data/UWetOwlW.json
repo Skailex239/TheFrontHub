@@ -1,12 +1,26 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "lastSyncedAt": "2026-08-21T07:23:43.272Z",
+  "lastSyncedAt": "2026-08-21T07:25:50.655Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.4,
-  "totalGames": 3101,
-  "newGamesThisSync": 0,
+  "totalGames": 3102,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "YA7Vd3F2",
+      "start": "2026-08-21T07:13:43.517Z",
+      "durationSeconds": 647,
+      "map": "Australia",
+      "mode": "Free For All",
+      "type": "Private",
+      "playerTeams": "2",
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 2,
+      "username": "Skailex",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "QFdcFYyp",
       "start": "2026-08-21T07:01:44.842Z",
