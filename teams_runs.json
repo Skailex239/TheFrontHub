@@ -60061,6 +60061,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T21:21:34.285Z",
       "url": "https://openfront.io/game/3ytzpbGW"
+    },
+    {
+      "id": "edjyEZKn",
+      "mode": "trios",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "nico",
+          "clientID": "w6NQjaaS",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "Olympe",
+          "clientID": "q8jYpRj4",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "AnonPlow8",
+          "clientID": "n5crWqix",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1529,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T21:18:18.062Z",
+      "url": "https://openfront.io/game/edjyEZKn"
     }
   ],
   "quads": [
@@ -91988,6 +92018,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T21:25:51.034Z",
       "url": "https://openfront.io/game/CBmcYHVo"
+    },
+    {
+      "id": "RdBoWjQd",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Endorfinn",
+          "clientID": "b8dpbgsn",
+          "clanTag": "FFF"
+        },
+        {
+          "username": "ratbalhar",
+          "clientID": "Ex622BiT",
+          "clanTag": "FFF"
+        },
+        {
+          "username": "captain blacksmith",
+          "clientID": "41ETL44h",
+          "clanTag": "FFF"
+        },
+        {
+          "username": "Saddam Hussein",
+          "clientID": "kMG7gYLW",
+          "clanTag": "FFF"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1341,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T21:20:35.713Z",
+      "url": "https://openfront.io/game/RdBoWjQd"
     }
   ],
   "team_custom": [
@@ -115990,6 +116055,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T21:27:46.143Z",
       "url": "https://openfront.io/game/S6Aq9RHX"
+    },
+    {
+      "id": "frdtEvw8",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "bahma",
+          "clientID": "yQKfnM1A",
+          "clanTag": "NU"
+        },
+        {
+          "username": "TREXXED",
+          "clientID": "ufMEurCx",
+          "clanTag": "NU"
+        },
+        {
+          "username": "FLiPFLAVA",
+          "clientID": "d4qhMcaq",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonIndigo6",
+          "clientID": "WS4EDAER",
+          "clanTag": null
+        },
+        {
+          "username": "Yamato",
+          "clientID": "mJYFPmQS",
+          "clanTag": null
+        },
+        {
+          "username": "JazxestII",
+          "clientID": "42KG2yhV",
+          "clanTag": null
+        },
+        {
+          "username": "Du Feke",
+          "clientID": "iXsBmQFa",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 649,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T21:31:26.898Z",
+      "url": "https://openfront.io/game/frdtEvw8"
     }
   ],
   "hvn": [
