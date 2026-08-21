@@ -28017,6 +28017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:35:33.474Z",
       "url": "https://openfront.io/game/ay4gxEV4"
+    },
+    {
+      "id": "tRgJgVb9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SulingNinja",
+          "clientID": "dKsdCbxZ",
+          "clanTag": null
+        },
+        {
+          "username": "Shadow",
+          "clientID": "4YfuvWpE",
+          "clanTag": "SG"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 710,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:32:32.773Z",
+      "url": "https://openfront.io/game/tRgJgVb9"
     }
   ],
   "trios": [
@@ -58481,6 +58506,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:20:19.026Z",
       "url": "https://openfront.io/game/2ufWKzsx"
+    },
+    {
+      "id": "QixGbE8Y",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "xMix",
+          "clientID": "sw19drzb",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "Sancta Marta",
+          "clientID": "A39EN1Wb",
+          "clanTag": null
+        },
+        {
+          "username": "barga",
+          "clientID": "zGWxwq5v",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 601,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:34:38.914Z",
+      "url": "https://openfront.io/game/QixGbE8Y"
     }
   ],
   "quads": [
