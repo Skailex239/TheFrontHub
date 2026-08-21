@@ -21117,6 +21117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T01:08:38.262Z",
       "url": "https://openfront.io/game/mGLvzMYD"
+    },
+    {
+      "id": "FDMt8m6m",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JUST TRADE",
+          "clientID": "pV2qEeMS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rhodium",
+          "clientID": "oDPJiLfL",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 363,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 37,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T01:19:55.008Z",
+      "url": "https://openfront.io/game/FDMt8m6m"
     }
   ],
   "trios": [
@@ -46661,6 +46686,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T01:13:25.074Z",
       "url": "https://openfront.io/game/WcVZJvzm"
+    },
+    {
+      "id": "X3gzVqdn",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Umbria",
+          "clientID": "LUADuWsH",
+          "clanTag": null
+        },
+        {
+          "username": "ya waley elne3m",
+          "clientID": "5x9D4q6W",
+          "clanTag": "EGY"
+        },
+        {
+          "username": "Japan",
+          "clientID": "idp5yHq4",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T01:15:46.226Z",
+      "url": "https://openfront.io/game/X3gzVqdn"
     }
   ],
   "quads": [
@@ -84245,6 +84300,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T00:51:12.627Z",
       "url": "https://openfront.io/game/Xi91uwV6"
+    },
+    {
+      "id": "Z5j81uZX",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonSloth6",
+          "clientID": "Q7xYAQtg",
+          "clanTag": null
+        },
+        {
+          "username": "Trollsky in my butski",
+          "clientID": "yJCgHKHB",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "BLACK BEARDS BEST",
+          "clientID": "JheWvjFG",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Alex",
+          "clientID": "CXDXE7ve",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Anon748",
+          "clientID": "WV8VTzSf",
+          "clanTag": null
+        },
+        {
+          "username": "Ein",
+          "clientID": "vhTg4hx7",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 891,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T01:12:18.514Z",
+      "url": "https://openfront.io/game/Z5j81uZX"
     }
   ],
   "hvn": [
