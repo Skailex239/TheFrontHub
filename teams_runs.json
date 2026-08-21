@@ -91438,6 +91438,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:40:05.660Z",
       "url": "https://openfront.io/game/QhkGR8Ux"
+    },
+    {
+      "id": "86QVFedu",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Kotnaschersfaust",
+          "clientID": "HiWLJ22f",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Dotrax",
+          "clientID": "GSHo6qXR",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "ORIUS",
+          "clientID": "aksQJXMe",
+          "clanTag": "GREG"
+        },
+        {
+          "username": "Markus",
+          "clientID": "1j4AMkir",
+          "clanTag": "GREG"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1312,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T20:54:10.062Z",
+      "url": "https://openfront.io/game/86QVFedu"
     }
   ],
   "team_custom": [
@@ -115205,6 +115240,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T20:52:25.944Z",
       "url": "https://openfront.io/game/V3QNfCvf"
+    },
+    {
+      "id": "MqwH5a5H",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Screwed Place",
+          "clientID": "duGvh4ZV",
+          "clanTag": null
+        },
+        {
+          "username": "Guiscard",
+          "clientID": "PqxiWQ7E",
+          "clanTag": "RP"
+        },
+        {
+          "username": "never gonna give you up",
+          "clientID": "LPN929KR",
+          "clanTag": "RP"
+        },
+        {
+          "username": "Veyshnoria",
+          "clientID": "RQeKiwAd",
+          "clanTag": "RP"
+        },
+        {
+          "username": "YourBestFriend",
+          "clientID": "nFpc5mCa",
+          "clanTag": null
+        },
+        {
+          "username": "UserName",
+          "clientID": "8kKRVHKg",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "MGaB5odJ",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 626,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T21:04:25.697Z",
+      "url": "https://openfront.io/game/MqwH5a5H"
+    },
+    {
+      "id": "HPokqd14",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Anon835",
+          "clientID": "wGMnRFVg",
+          "clanTag": null
+        },
+        {
+          "username": "ZXC",
+          "clientID": "81VGZHXj",
+          "clanTag": "666"
+        },
+        {
+          "username": "roro",
+          "clientID": "N8V2TNpk",
+          "clanTag": "BG"
+        },
+        {
+          "username": "AnonLagoon2",
+          "clientID": "iRNn4CYS",
+          "clanTag": null
+        },
+        {
+          "username": "100Patates",
+          "clientID": "V3hZzCRr",
+          "clanTag": null
+        },
+        {
+          "username": "shootox",
+          "clientID": "cDxSn1zM",
+          "clanTag": null
+        },
+        {
+          "username": "Franing",
+          "clientID": "NdT2U7re",
+          "clanTag": "ESP"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 783,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T21:02:09.072Z",
+      "url": "https://openfront.io/game/HPokqd14"
     }
   ],
   "hvn": [
