@@ -22492,6 +22492,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T06:17:47.173Z",
       "url": "https://openfront.io/game/NfiEFEy8"
+    },
+    {
+      "id": "TWck2eps",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bob Semple",
+          "clientID": "m4FGd2RT",
+          "clanTag": null
+        },
+        {
+          "username": "Fused",
+          "clientID": "z6m2Af4o",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 972,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T06:38:51.914Z",
+      "url": "https://openfront.io/game/TWck2eps"
+    },
+    {
+      "id": "PAtWRgsF",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "brrr",
+          "clientID": "W7X42fwY",
+          "clanTag": null
+        },
+        {
+          "username": "najsamak",
+          "clientID": "b4rrzCu6",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 398,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T06:48:54.517Z",
+      "url": "https://openfront.io/game/PAtWRgsF"
     }
   ],
   "trios": [
@@ -89595,6 +89645,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T06:33:19.098Z",
       "url": "https://openfront.io/game/v18nUbHD"
+    },
+    {
+      "id": "X92Bq8Sf",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Charley Patton",
+          "clientID": "46FYsqQu",
+          "clanTag": null
+        },
+        {
+          "username": "ILOVENETANYAHU",
+          "clientID": "SGRXbZzg",
+          "clanTag": "GOY"
+        },
+        {
+          "username": "Vandenberg",
+          "clientID": "2p7tsWzV",
+          "clanTag": null
+        },
+        {
+          "username": "Petrov",
+          "clientID": "kebW6Ch3",
+          "clanTag": null
+        },
+        {
+          "username": "COUSINS",
+          "clientID": "73oN9qZE",
+          "clanTag": "ILUV"
+        },
+        {
+          "username": "AnonAnvil7",
+          "clientID": "D9qkQaZL",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVelvet4",
+          "clientID": "nMR8hRKj",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 852,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 97,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T06:41:30.563Z",
+      "url": "https://openfront.io/game/X92Bq8Sf"
     }
   ],
   "hvn": [
