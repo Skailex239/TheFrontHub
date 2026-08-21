@@ -28142,6 +28142,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:50:33.952Z",
       "url": "https://openfront.io/game/4ndHz6TC"
+    },
+    {
+      "id": "WYJPBmF7",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon999",
+          "clientID": "soh5LPMt",
+          "clanTag": null
+        },
+        {
+          "username": "CsongorBurger",
+          "clientID": "DsnaTuZa",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:57:43.410Z",
+      "url": "https://openfront.io/game/WYJPBmF7"
+    },
+    {
+      "id": "piHX1hkq",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Fatal1ty",
+          "clientID": "E2hJNWjz",
+          "clanTag": "EU"
+        },
+        {
+          "username": "meres",
+          "clientID": "47HMP9fj",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 728,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:56:58.861Z",
+      "url": "https://openfront.io/game/piHX1hkq"
     }
   ],
   "trios": [
@@ -113170,6 +113220,91 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T19:32:06.753Z",
       "url": "https://openfront.io/game/X4X2HsdC"
+    },
+    {
+      "id": "fidaDtuh",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "uRx",
+          "clientID": "DQky1NYU",
+          "clanTag": "BEAU"
+        },
+        {
+          "username": "cowdud",
+          "clientID": "1S8JFg2H",
+          "clanTag": null
+        },
+        {
+          "username": "Zeno",
+          "clientID": "DfKVez8c",
+          "clanTag": null
+        },
+        {
+          "username": "shh",
+          "clientID": "TWEBS355",
+          "clanTag": null
+        },
+        {
+          "username": "hzballa",
+          "clientID": "VLxDWcvT",
+          "clanTag": "HH"
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 1222,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T19:48:53.848Z",
+      "url": "https://openfront.io/game/fidaDtuh"
+    },
+    {
+      "id": "SSZJfgua",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Aldradach",
+          "clientID": "jeP4m3cZ",
+          "clanTag": null
+        },
+        {
+          "username": "Evalyn",
+          "clientID": "tZisCCqj",
+          "clanTag": null
+        },
+        {
+          "username": "House Stark",
+          "clientID": "nfAUjCHJ",
+          "clanTag": null
+        },
+        {
+          "username": "Dubs",
+          "clientID": "rGtfH1Lm",
+          "clanTag": null
+        },
+        {
+          "username": "Asher Goldschmidt",
+          "clientID": "Cof5nTtU",
+          "clanTag": "FUNNY"
+        },
+        {
+          "username": "AnonDodo9",
+          "clientID": "8Ms5oWHh",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2102,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T19:37:15.089Z",
+      "url": "https://openfront.io/game/SSZJfgua"
     }
   ],
   "hvn": [
