@@ -24192,6 +24192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T10:14:48.377Z",
       "url": "https://openfront.io/game/J11T3PY7"
+    },
+    {
+      "id": "PiiV1rfo",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ortakoy spor",
+          "clientID": "SckjGWRe",
+          "clanTag": null
+        },
+        {
+          "username": "Anon600",
+          "clientID": "jRKTSXBz",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 505,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:44:49.631Z",
+      "url": "https://openfront.io/game/PiiV1rfo"
     }
   ],
   "trios": [
@@ -79378,6 +79403,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T10:29:25.209Z",
       "url": "https://openfront.io/game/tHgQ4QJK"
+    },
+    {
+      "id": "wkYwNSKn",
+      "mode": "quads",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "AnonLake8",
+          "clientID": "fPtqVt9M",
+          "clanTag": null
+        },
+        {
+          "username": "Zmeskyy",
+          "clientID": "1jMCgDA6",
+          "clanTag": "EXECU"
+        },
+        {
+          "username": "Azeus",
+          "clientID": "CayYqZxU",
+          "clanTag": null
+        },
+        {
+          "username": "ebeebe",
+          "clientID": "Su1a8Nd5",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier France",
+      "duration_s": 1252,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T10:31:38.838Z",
+      "url": "https://openfront.io/game/wkYwNSKn"
+    },
+    {
+      "id": "CavE9hTw",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "RusEmpire",
+          "clientID": "qEt3GQ2d",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTimber",
+          "clientID": "KYUMS42i",
+          "clanTag": null
+        },
+        {
+          "username": "SendTroopsToFront",
+          "clientID": "rY77VvJZ",
+          "clanTag": "EST"
+        },
+        {
+          "username": "BaechuGuk",
+          "clientID": "LZrDxdGV",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 570,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T10:43:05.529Z",
+      "url": "https://openfront.io/game/CavE9hTw"
     }
   ],
   "team_custom": [
@@ -95750,6 +95845,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T10:27:17.105Z",
       "url": "https://openfront.io/game/1psnXVDk"
+    },
+    {
+      "id": "kWUriUHN",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonLantern8",
+          "clientID": "QuAtkVCT",
+          "clanTag": null
+        },
+        {
+          "username": "youafkinidiotprobs",
+          "clientID": "NAmBdx2N",
+          "clanTag": "GB"
+        },
+        {
+          "username": "itsalltrains",
+          "clientID": "CpB27Wbi",
+          "clanTag": null
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "BeZbQFNY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTuba3",
+          "clientID": "ge71CqT3",
+          "clanTag": null
+        },
+        {
+          "username": "Fatboy",
+          "clientID": "E1utVtBi",
+          "clanTag": null
+        },
+        {
+          "username": "Anon042",
+          "clientID": "CJyAgUhF",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1380,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T10:29:13.200Z",
+      "url": "https://openfront.io/game/kWUriUHN"
     }
   ],
   "hvn": [
