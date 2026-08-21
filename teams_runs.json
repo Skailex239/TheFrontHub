@@ -23592,6 +23592,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T09:04:05.073Z",
       "url": "https://openfront.io/game/jv1hKU9Y"
+    },
+    {
+      "id": "uu2b111W",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonShadow",
+          "clientID": "etgksGzb",
+          "clanTag": "7785"
+        },
+        {
+          "username": "4T3",
+          "clientID": "xVntAhhv",
+          "clanTag": "MT"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 692,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:00:31.836Z",
+      "url": "https://openfront.io/game/uu2b111W"
     }
   ],
   "trios": [
@@ -50816,6 +50841,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T08:52:19.852Z",
       "url": "https://openfront.io/game/8es5QSoa"
+    },
+    {
+      "id": "EGbheHBD",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonCompass1",
+          "clientID": "Ugt785Vs",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSquid2",
+          "clientID": "VSs5zQJ5",
+          "clanTag": null
+        },
+        {
+          "username": "nesutokun",
+          "clientID": "7GYJ2Gtk",
+          "clanTag": "SATO"
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T08:57:53.181Z",
+      "url": "https://openfront.io/game/EGbheHBD"
     }
   ],
   "quads": [
@@ -77843,6 +77898,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T08:50:58.272Z",
       "url": "https://openfront.io/game/Z1SZ4NJR"
+    },
+    {
+      "id": "T55iAsag",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TryingTooHard67",
+          "clientID": "dGNeKgyg",
+          "clanTag": null
+        },
+        {
+          "username": "coolcool123123",
+          "clientID": "h38gNDBK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLotus8",
+          "clientID": "XbDHZLtp",
+          "clanTag": null
+        },
+        {
+          "username": "TzaiThungh",
+          "clientID": "JgzziDo6",
+          "clanTag": "GER"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 1545,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:45:06.927Z",
+      "url": "https://openfront.io/game/T55iAsag"
+    },
+    {
+      "id": "y4pFcwi5",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Smu",
+          "clientID": "fQBZBaFX",
+          "clanTag": null
+        },
+        {
+          "username": "Anon12",
+          "clientID": "nVRWFY5u",
+          "clanTag": null
+        },
+        {
+          "username": "TWUNK",
+          "clientID": "LLhqQzcS",
+          "clanTag": null
+        },
+        {
+          "username": "I Help Defend",
+          "clientID": "mgFbNLXt",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 542,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T09:01:33.910Z",
+      "url": "https://openfront.io/game/y4pFcwi5"
     }
   ],
   "team_custom": [
