@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-21T10:05:33.752Z",
+  "lastSyncedAt": "2026-08-21T10:07:51.432Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 3807,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.2,
+  "totalGames": 3808,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "umo13QnY",
+      "start": "2026-08-21T09:47:57.767Z",
+      "durationSeconds": 1167,
+      "map": "Africa",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 51,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "jqkDkSL1",
       "start": "2026-08-21T09:30:57.828Z",

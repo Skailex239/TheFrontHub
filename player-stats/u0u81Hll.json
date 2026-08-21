@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T10:05:37.609Z",
-  "lastSyncedAt": "2026-08-21T10:05:34.545Z",
-  "totalGames": 2195,
+  "computedAt": "2026-08-21T10:07:54.799Z",
+  "lastSyncedAt": "2026-08-21T10:07:51.854Z",
+  "totalGames": 2196,
   "careerWins": {
-    "ffaCasual": 382,
+    "ffaCasual": 383,
     "ffaRanked": 328,
     "teamCasual": 47,
     "teamRanked": 63
   },
-  "totalWins": 820,
-  "points": 4446,
+  "totalWins": 821,
+  "points": 4456,
   "level": 44,
-  "levelProgress": 46,
+  "levelProgress": 56,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 820,
+      "current": 821,
       "target": 1000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     10
   ],
   "formatted": {
-    "points": "4 446",
-    "totalWins": "820",
-    "totalGames": "2 195",
+    "points": "4 456",
+    "totalWins": "821",
+    "totalGames": "2 196",
     "totalPlaytime": "23j 2h",
     "totalPlaytimeCompact": "23j 2h",
     "avgGameDuration": "15m 8s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "554h"
   },
   "playtime": {
-    "totalSec": 1994573,
-    "avgGameSec": 908.6892938496583,
+    "totalSec": 1995469,
+    "avgGameSec": 908.6835154826958,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1397,
-        "playtimeSec": 1615194,
-        "wins": 382
+        "games": 1398,
+        "playtimeSec": 1616090,
+        "wins": 383
       },
       "ffaRanked": {
         "games": 498,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 820,
+    "victory": 821,
     "defeat": 1047,
     "incomplete": 328
   },
@@ -277,18 +277,18 @@
     },
     {
       "map": "Britannia",
-      "count": 29,
-      "wins": 12,
+      "count": 30,
+      "wins": 13,
       "losses": 17,
-      "playtimeSec": 34506,
-      "avgDuration": 1189.8620689655172,
-      "winRate": 0.41379310344827586,
-      "lastPlayed": 1786817151666,
+      "playtimeSec": 35402,
+      "avgDuration": 1180.0666666666666,
+      "winRate": 0.43333333333333335,
+      "lastPlayed": 1787305920003,
       "formatted": {
-        "playtime": "9h 35m",
+        "playtime": "9h 50m",
         "avgDuration": "19m",
-        "winRate": "41%",
-        "lastPlayed": "15/08/26"
+        "winRate": "43%",
+        "lastPlayed": "21/08/26"
       }
     },
     {
@@ -1665,7 +1665,7 @@
       5,
       15,
       43,
-      69,
+      70,
       75,
       125,
       130,
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      349,
+      350,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 3,
-        "playtimeSec": 3753
+        "count": 4,
+        "playtimeSec": 4649
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 3,
+    "current": 4,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "yQizy5Ry",
+      "start": "2026-08-21T09:52:00.003Z",
+      "map": "Britannia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 896,
+      "totalPlayers": 57,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "SDPYp8R7",
       "start": "2026-08-21T08:38:34.548Z",
@@ -2427,17 +2438,6 @@
       "result": "defeat",
       "durationSeconds": 1084,
       "totalPlayers": 75,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "uUKRHcxB",
-      "start": "2026-08-19T07:00:49.564Z",
-      "map": "Yenisei",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 881,
-      "totalPlayers": 56,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
