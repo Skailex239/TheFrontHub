@@ -25717,6 +25717,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:11:53.644Z",
       "url": "https://openfront.io/game/tKvQ2TVW"
+    },
+    {
+      "id": "aWsZNU9s",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LuMorgantu",
+          "clientID": "fwat5aAj",
+          "clanTag": null
+        },
+        {
+          "username": "J1N",
+          "clientID": "VzgcZEZp",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 835,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:16:55.460Z",
+      "url": "https://openfront.io/game/aWsZNU9s"
+    },
+    {
+      "id": "VqhXsFw6",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "House Lannister",
+          "clientID": "grqwAzFx",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Builder",
+          "clientID": "G5GUZaB7",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 833,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:17:50.023Z",
+      "url": "https://openfront.io/game/VqhXsFw6"
+    },
+    {
+      "id": "gnYBNasS",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonFjord",
+          "clientID": "2tF1Mq9M",
+          "clanTag": null
+        },
+        {
+          "username": "Repix",
+          "clientID": "qsTkucv8",
+          "clanTag": "ALMA"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 461,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:23:29.888Z",
+      "url": "https://openfront.io/game/gnYBNasS"
     }
   ],
   "trios": [
@@ -54411,6 +54486,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:11:07.094Z",
       "url": "https://openfront.io/game/nur2HuEf"
+    },
+    {
+      "id": "NbXUKbti",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "ItsMuffin",
+          "clientID": "WPUwpx5V",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "Dex",
+          "clientID": "TB65KtZj",
+          "clanTag": "30ME"
+        },
+        {
+          "username": "DefNotEddie",
+          "clientID": "zwfAizGh",
+          "clanTag": "30ME"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1206,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T14:08:59.964Z",
+      "url": "https://openfront.io/game/NbXUKbti"
     }
   ],
   "quads": [
@@ -83538,6 +83643,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:10:46.572Z",
       "url": "https://openfront.io/game/8mUMG58k"
+    },
+    {
+      "id": "SoFv9gUN",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "john",
+          "clientID": "1ZEdoLvf",
+          "clanTag": null
+        },
+        {
+          "username": "Wolololololo",
+          "clientID": "faPDPHa7",
+          "clanTag": "ARGY"
+        },
+        {
+          "username": "chill trader",
+          "clientID": "wBVo9SgL",
+          "clanTag": null
+        },
+        {
+          "username": "driftmark",
+          "clientID": "YJe91pEc",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 616,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:19:19.613Z",
+      "url": "https://openfront.io/game/SoFv9gUN"
+    },
+    {
+      "id": "a74p9Uno",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonVanilla7",
+          "clientID": "KAUiSFpm",
+          "clanTag": null
+        },
+        {
+          "username": "Kidowa",
+          "clientID": "N2TmjD5b",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Anon471",
+          "clientID": "PAhrKy9g",
+          "clanTag": null
+        },
+        {
+          "username": "Frog",
+          "clientID": "zirX1cRz",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 757,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:19:43.147Z",
+      "url": "https://openfront.io/game/a74p9Uno"
     }
   ],
   "team_custom": [
