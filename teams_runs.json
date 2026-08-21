@@ -85543,6 +85543,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T15:31:07.297Z",
       "url": "https://openfront.io/game/5m8CzQBJ"
+    },
+    {
+      "id": "avw8SUyg",
+      "mode": "quads",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "NapoleonTheGreat",
+          "clientID": "4ZVSMjUh",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ben Dover",
+          "clientID": "LMqSYhne",
+          "clanTag": null
+        },
+        {
+          "username": "peaceful trader",
+          "clientID": "dd2UVepo",
+          "clanTag": null
+        },
+        {
+          "username": "BET ON KASH.BOT",
+          "clientID": "ZdvTW5m8",
+          "clanTag": "KASH"
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1168,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T15:46:12.297Z",
+      "url": "https://openfront.io/game/avw8SUyg"
     }
   ],
   "team_custom": [
@@ -105785,6 +105820,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T15:44:24.189Z",
       "url": "https://openfront.io/game/wJCxPZXb"
+    },
+    {
+      "id": "LsKAJMYL",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonIndigo4",
+          "clientID": "f56Wt7HW",
+          "clanTag": null
+        },
+        {
+          "username": "Ryoshiba",
+          "clientID": "RQvUwrMm",
+          "clanTag": "JP"
+        },
+        {
+          "username": "Profesional_CZ",
+          "clientID": "i51ybZXN",
+          "clanTag": "PROF"
+        },
+        {
+          "username": "AnonMeteor2",
+          "clientID": "raqiavUe",
+          "clanTag": null
+        },
+        {
+          "username": "rawrr",
+          "clientID": "KPEzR83V",
+          "clanTag": null
+        },
+        {
+          "username": "Fricadelle",
+          "clientID": "QwwdZp2R",
+          "clanTag": "BEL"
+        },
+        {
+          "username": "AnonTalisman3",
+          "clientID": "8diLYdo8",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 921,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T15:49:26.011Z",
+      "url": "https://openfront.io/game/LsKAJMYL"
+    },
+    {
+      "id": "jvQ8Epg8",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bear",
+          "clientID": "rirfy89N",
+          "clanTag": null
+        },
+        {
+          "username": "pippo",
+          "clientID": "MV3Ct66n",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "._. 67",
+          "clientID": "CRVmT3Mn",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "AnonBanner6",
+          "clientID": "cY7dHVSV",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFern8",
+          "clientID": "CzKDHvsv",
+          "clanTag": null
+        },
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "9heZMYc3",
+          "clanTag": null
+        },
+        {
+          "username": "TOWGA",
+          "clientID": "ikJqCk5g",
+          "clanTag": "WALES"
+        }
+      ],
+      "map": "China",
+      "duration_s": 1011,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 95,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T15:47:10.863Z",
+      "url": "https://openfront.io/game/jvQ8Epg8"
     }
   ],
   "hvn": [
