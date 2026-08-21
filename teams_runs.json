@@ -28117,6 +28117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:45:27.632Z",
       "url": "https://openfront.io/game/HxELWGk4"
+    },
+    {
+      "id": "4ndHz6TC",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "herwego",
+          "clientID": "6KxchBys",
+          "clanTag": "BVB"
+        },
+        {
+          "username": "Ben Dover",
+          "clientID": "RAKr1ucK",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 725,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:50:33.952Z",
+      "url": "https://openfront.io/game/4ndHz6TC"
     }
   ],
   "trios": [
@@ -58701,6 +58726,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T19:47:18.257Z",
       "url": "https://openfront.io/game/NpN534V2"
+    },
+    {
+      "id": "77AU54Jv",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Tok",
+          "clientID": "A2snjgFm",
+          "clanTag": null
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "GJo55wVM",
+          "clanTag": null
+        },
+        {
+          "username": "Sweat",
+          "clientID": "mXbHwMzH",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 593,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:52:27.074Z",
+      "url": "https://openfront.io/game/77AU54Jv"
+    },
+    {
+      "id": "y7RCFcVv",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ZoomerBloomer",
+          "clientID": "sWbvzTsV",
+          "clanTag": null
+        },
+        {
+          "username": "Ninjamonkey3904",
+          "clientID": "8YExBgU4",
+          "clanTag": "YURI"
+        },
+        {
+          "username": "pete",
+          "clientID": "CTLm7NS8",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 801,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T19:49:46.905Z",
+      "url": "https://openfront.io/game/y7RCFcVv"
     }
   ],
   "quads": [
@@ -112970,6 +113055,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T19:34:12.379Z",
       "url": "https://openfront.io/game/pm2Xb6nq"
+    },
+    {
+      "id": "X4X2HsdC",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "TrashBoat",
+          "clientID": "JvaZsGgc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOmen5",
+          "clientID": "3qXB3zff",
+          "clanTag": null
+        },
+        {
+          "username": "CCAA",
+          "clientID": "uDAGjEE6",
+          "clanTag": null
+        },
+        {
+          "username": "mitochondria",
+          "clientID": "WT3QdvRm",
+          "clanTag": null
+        },
+        {
+          "username": "Fruland",
+          "clientID": "JbKESocS",
+          "clanTag": "FRU"
+        },
+        {
+          "username": "Indian Women Respecter",
+          "clientID": "jJSBsDEZ",
+          "clanTag": null
+        },
+        {
+          "username": "milmil",
+          "clientID": "umD5EeSS",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1816,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 119,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T19:32:06.753Z",
+      "url": "https://openfront.io/game/X4X2HsdC"
     }
   ],
   "hvn": [
