@@ -24317,6 +24317,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:00:35.646Z",
       "url": "https://openfront.io/game/S9Pv3B7x"
+    },
+    {
+      "id": "qy1Y5FK4",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Naoya27th",
+          "clientID": "gKasCbai",
+          "clanTag": null
+        },
+        {
+          "username": "Commune de Paris",
+          "clientID": "KRTzZe4f",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 618,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:03:39.341Z",
+      "url": "https://openfront.io/game/qy1Y5FK4"
+    },
+    {
+      "id": "2fZSph2L",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSkunk",
+          "clientID": "rrHvc2he",
+          "clanTag": null
+        },
+        {
+          "username": "Scooby",
+          "clientID": "RtQBjgGt",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 610,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:02:57.298Z",
+      "url": "https://openfront.io/game/2fZSph2L"
     }
   ],
   "trios": [
@@ -51901,6 +51951,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T10:51:02.016Z",
       "url": "https://openfront.io/game/NkRGBokg"
+    },
+    {
+      "id": "kfReAx1u",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Uncle Ben",
+          "clientID": "5jy6cudP",
+          "clanTag": null
+        },
+        {
+          "username": "minnoby",
+          "clientID": "YRUSKFNw",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonKangaroo",
+          "clientID": "koLZLotz",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 853,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T11:00:11.115Z",
+      "url": "https://openfront.io/game/kfReAx1u"
     }
   ],
   "quads": [
@@ -79733,6 +79813,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T10:52:28.618Z",
       "url": "https://openfront.io/game/GVAKDTga"
+    },
+    {
+      "id": "MsHeNga2",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonFern1",
+          "clientID": "2NBFiDVp",
+          "clanTag": null
+        },
+        {
+          "username": "OTK",
+          "clientID": "S7eUUwCu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "HNT",
+          "clientID": "zCTMPG5D",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonZeppelin4",
+          "clientID": "azfUjZxz",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 629,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T11:02:27.763Z",
+      "url": "https://openfront.io/game/MsHeNga2"
     }
   ],
   "team_custom": [
@@ -96445,6 +96560,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T10:56:10.353Z",
       "url": "https://openfront.io/game/dAuupcxJ"
+    },
+    {
+      "id": "QCX2ZL5B",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Dobrok",
+          "clientID": "CfzMksnv",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "tsA4yWzb",
+          "clanTag": null
+        },
+        {
+          "username": "Yes Rico_Kaboom",
+          "clientID": "r11X3Juv",
+          "clanTag": null
+        },
+        {
+          "username": "Lovat",
+          "clientID": "aTbyrFrb",
+          "clanTag": "EU"
+        },
+        {
+          "username": "alvarocc_sfc",
+          "clientID": "FymAtZwU",
+          "clanTag": null
+        },
+        {
+          "username": "BaechuGuk",
+          "clientID": "Y5Fcpesd",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1226,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T10:53:36.185Z",
+      "url": "https://openfront.io/game/QCX2ZL5B"
     }
   ],
   "hvn": [
