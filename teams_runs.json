@@ -86088,6 +86088,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T16:14:08.049Z",
       "url": "https://openfront.io/game/Dh82duXS"
+    },
+    {
+      "id": "zkjGLSn6",
+      "mode": "quads",
+      "team": "Team 16",
+      "players": [
+        {
+          "username": "Dominican Republic",
+          "clientID": "wPsaMFKJ",
+          "clanTag": null
+        },
+        {
+          "username": "novalpz",
+          "clientID": "VpzpzXKR",
+          "clanTag": null
+        },
+        {
+          "username": "Sasi",
+          "clientID": "dsVW6jZr",
+          "clanTag": "KING"
+        },
+        {
+          "username": "Charley Patton",
+          "clientID": "L62E3uTf",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1323,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T16:12:42.459Z",
+      "url": "https://openfront.io/game/zkjGLSn6"
     }
   ],
   "team_custom": [
@@ -106705,6 +106740,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T16:16:37.203Z",
       "url": "https://openfront.io/game/gFRKxajg"
+    },
+    {
+      "id": "tEL58MAt",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonRat2",
+          "clientID": "xMUNjcBE",
+          "clanTag": null
+        },
+        {
+          "username": "Alx",
+          "clientID": "bXZU4LdF",
+          "clanTag": null
+        },
+        {
+          "username": "Vexal",
+          "clientID": "1UWDXkwd",
+          "clanTag": null
+        },
+        {
+          "username": "Gonndon",
+          "clientID": "Ks5N5gvE",
+          "clanTag": "228"
+        },
+        {
+          "username": "New Army",
+          "clientID": "kVh6nwbv",
+          "clanTag": "228"
+        },
+        {
+          "username": "Napoleon",
+          "clientID": "zTphwRt1",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 896,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T16:19:59.399Z",
+      "url": "https://openfront.io/game/tEL58MAt"
     }
   ],
   "hvn": [
