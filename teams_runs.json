@@ -24242,6 +24242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T10:50:20.470Z",
       "url": "https://openfront.io/game/A8RBg7vk"
+    },
+    {
+      "id": "vvg1VCRm",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "CIOMAG",
+          "clientID": "jYZyuGev",
+          "clanTag": "SON"
+        },
+        {
+          "username": "Macndi",
+          "clientID": "GtGYMmAN",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1133,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:42:40.504Z",
+      "url": "https://openfront.io/game/vvg1VCRm"
     }
   ],
   "trios": [
@@ -79558,6 +79583,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T10:43:05.529Z",
       "url": "https://openfront.io/game/CavE9hTw"
+    },
+    {
+      "id": "B5mtYR4Z",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonPrairie",
+          "clientID": "fX6CaD3B",
+          "clanTag": null
+        },
+        {
+          "username": "herpderp",
+          "clientID": "XKeNypNC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLinen4",
+          "clientID": "HUMTPPXt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHarbor6",
+          "clientID": "nHUE39X1",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 785,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 111,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T10:48:11.341Z",
+      "url": "https://openfront.io/game/B5mtYR4Z"
     }
   ],
   "team_custom": [
@@ -96080,6 +96140,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T10:44:19.606Z",
       "url": "https://openfront.io/game/CoL793J1"
+    },
+    {
+      "id": "BN9LpvXG",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Rondeh",
+          "clientID": "b4Y4725r",
+          "clanTag": null
+        },
+        {
+          "username": "Amin Tijay",
+          "clientID": "k2iVMqWz",
+          "clanTag": "TIJ"
+        },
+        {
+          "username": "Joker",
+          "clientID": "isCXxEhC",
+          "clanTag": null
+        },
+        {
+          "username": "Elin",
+          "clientID": "eszna8sm",
+          "clanTag": "CN"
+        },
+        {
+          "username": "one",
+          "clientID": "hTszakCS",
+          "clanTag": "CN"
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "Ve7mPh5h",
+          "clanTag": null
+        },
+        {
+          "username": "ROKA",
+          "clientID": "G2CCnd1Z",
+          "clanTag": "0815"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1050,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T10:43:44.070Z",
+      "url": "https://openfront.io/game/BN9LpvXG"
     }
   ],
   "hvn": [
