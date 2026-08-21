@@ -26917,6 +26917,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:09:10.977Z",
       "url": "https://openfront.io/game/NBzCTw3x"
+    },
+    {
+      "id": "QPhBNF9k",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "CyberLeek67",
+          "clientID": "zruBp3un",
+          "clanTag": null
+        },
+        {
+          "username": "Kuks",
+          "clientID": "EMVwUqk3",
+          "clanTag": "RNCH"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 964,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:11:11.092Z",
+      "url": "https://openfront.io/game/QPhBNF9k"
+    },
+    {
+      "id": "nJcK9B1p",
+      "mode": "duos",
+      "team": "Team 24",
+      "players": [
+        {
+          "username": "Ghesboro",
+          "clientID": "5x6weYBS",
+          "clanTag": null
+        },
+        {
+          "username": "Will INT Traders",
+          "clientID": "Wt2DRgYx",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 2845,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T16:39:52.091Z",
+      "url": "https://openfront.io/game/nJcK9B1p"
     }
   ],
   "trios": [
@@ -86948,6 +86998,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T17:13:31.251Z",
       "url": "https://openfront.io/game/gWjMPxmy"
+    },
+    {
+      "id": "Y6QNbQvr",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonCrocodile1",
+          "clientID": "tD95Ztx8",
+          "clanTag": null
+        },
+        {
+          "username": "flockopops",
+          "clientID": "do4uunMA",
+          "clanTag": null
+        },
+        {
+          "username": "PAFF ET TAFF",
+          "clientID": "6oCRbVSX",
+          "clanTag": "FR"
+        },
+        {
+          "username": "AnonThunder4",
+          "clientID": "TWiUHdR9",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1126,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T17:07:50.390Z",
+      "url": "https://openfront.io/game/Y6QNbQvr"
     }
   ],
   "team_custom": [
