@@ -26467,6 +26467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:09:47.278Z",
       "url": "https://openfront.io/game/uHs1uABe"
+    },
+    {
+      "id": "mp7x7YaE",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SpaceUs",
+          "clientID": "k972KrTn",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Poppy",
+          "clientID": "c8whkjzV",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1644,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:56:16.942Z",
+      "url": "https://openfront.io/game/mp7x7YaE"
     }
   ],
   "trios": [
@@ -55881,6 +55906,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T16:00:36.192Z",
       "url": "https://openfront.io/game/rez5FN7C"
+    },
+    {
+      "id": "8nPcjGkH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TryingTooHard67",
+          "clientID": "tEnGeugF",
+          "clanTag": null
+        },
+        {
+          "username": "ENd of Heat",
+          "clientID": "77RK6F4w",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PROUT MangeurDeSaucisson",
+          "clientID": "wxvpR639",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 491,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T16:15:48.154Z",
+      "url": "https://openfront.io/game/8nPcjGkH"
     }
   ],
   "quads": [
@@ -85918,6 +85973,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T16:07:24.131Z",
       "url": "https://openfront.io/game/E3NpXXtD"
+    },
+    {
+      "id": "Dh82duXS",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Borg",
+          "clientID": "CU79SxMR",
+          "clanTag": null
+        },
+        {
+          "username": "Jesus is the way",
+          "clientID": "vVSZuFFX",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonTurquoise9",
+          "clientID": "hacobL4v",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Teutonic Order",
+          "clientID": "YjDsdnkH",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 644,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T16:14:08.049Z",
+      "url": "https://openfront.io/game/Dh82duXS"
     }
   ],
   "team_custom": [
