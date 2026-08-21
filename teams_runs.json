@@ -27467,6 +27467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T18:34:20.037Z",
       "url": "https://openfront.io/game/XgbhhCeQ"
+    },
+    {
+      "id": "z6c1w7ab",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bulb007",
+          "clientID": "EjSDoaqv",
+          "clanTag": "JR"
+        },
+        {
+          "username": "SAM",
+          "clientID": "evJF5r1s",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 377,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T18:38:26.808Z",
+      "url": "https://openfront.io/game/z6c1w7ab"
     }
   ],
   "trios": [
@@ -57571,6 +57596,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T18:30:54.819Z",
       "url": "https://openfront.io/game/XrwULXQC"
+    },
+    {
+      "id": "heZZSqHL",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "M19",
+          "clientID": "ckU3ML6H",
+          "clanTag": null
+        },
+        {
+          "username": "FirePeach.yw6A",
+          "clientID": "7p3Tmdu5",
+          "clanTag": null
+        },
+        {
+          "username": "Melad",
+          "clientID": "M4c1oQN8",
+          "clanTag": "69"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1414,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T18:23:11.817Z",
+      "url": "https://openfront.io/game/heZZSqHL"
     }
   ],
   "quads": [
@@ -110775,6 +110830,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T18:24:39.398Z",
       "url": "https://openfront.io/game/Mi22DNKa"
+    },
+    {
+      "id": "ZJQ4ys3T",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonGinger2",
+          "clientID": "M6caHiGd",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBeetle3",
+          "clientID": "qAFHZY2j",
+          "clanTag": null
+        },
+        {
+          "username": "CCAA",
+          "clientID": "1pANhiQX",
+          "clanTag": null
+        },
+        {
+          "username": "Rato",
+          "clientID": "EKqiAtGp",
+          "clanTag": null
+        },
+        {
+          "username": "Anon416",
+          "clientID": "4eGkKmXp",
+          "clanTag": null
+        },
+        {
+          "username": "United Squirrel Front",
+          "clientID": "eUxf3cL7",
+          "clanTag": null
+        },
+        {
+          "username": "felisson",
+          "clientID": "oiB4DQAS",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 894,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T18:29:30.737Z",
+      "url": "https://openfront.io/game/ZJQ4ys3T"
     }
   ],
   "hvn": [
