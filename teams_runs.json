@@ -28817,6 +28817,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T21:10:18.065Z",
       "url": "https://openfront.io/game/hH4rcfAE"
+    },
+    {
+      "id": "ouZU825v",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Das Scrooge",
+          "clientID": "gaqj6CPG",
+          "clanTag": null
+        },
+        {
+          "username": "Hellenic Republic",
+          "clientID": "SoV8ucJi",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 293,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T21:40:46.223Z",
+      "url": "https://openfront.io/game/ouZU825v"
     }
   ],
   "trios": [
@@ -60091,6 +60116,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T21:18:18.062Z",
       "url": "https://openfront.io/game/edjyEZKn"
+    },
+    {
+      "id": "Bh7DiAs8",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "110",
+          "clientID": "puWDfyLU",
+          "clanTag": null
+        },
+        {
+          "username": "Daywalker",
+          "clientID": "75WT4SCx",
+          "clanTag": "USSR"
+        },
+        {
+          "username": "Stal",
+          "clientID": "xTHEedeW",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 633,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T21:34:51.710Z",
+      "url": "https://openfront.io/game/Bh7DiAs8"
     }
   ],
   "quads": [
@@ -116105,6 +116160,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T21:31:26.898Z",
       "url": "https://openfront.io/game/frdtEvw8"
+    },
+    {
+      "id": "Zj2hVFvR",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Kloesoe",
+          "clientID": "VZeue16s",
+          "clanTag": "NL"
+        },
+        {
+          "username": "Ahhhh",
+          "clientID": "JR1WiX7W",
+          "clanTag": null
+        },
+        {
+          "username": "RUSHANFEDERASHEN",
+          "clientID": "2FaUsLEi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGlacier6",
+          "clientID": "VBMyszQS",
+          "clanTag": null
+        },
+        {
+          "username": "Hollandie",
+          "clientID": "Wukq1Jg7",
+          "clanTag": "NL"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 765,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T21:32:21.478Z",
+      "url": "https://openfront.io/game/Zj2hVFvR"
     }
   ],
   "hvn": [
