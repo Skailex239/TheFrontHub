@@ -25692,6 +25692,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T13:58:30.756Z",
       "url": "https://openfront.io/game/TV2YPzL8"
+    },
+    {
+      "id": "tKvQ2TVW",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "3seVtjh2",
+          "clanTag": null
+        },
+        {
+          "username": "Bolshevik",
+          "clientID": "darpE2TW",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 468,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:11:53.644Z",
+      "url": "https://openfront.io/game/tKvQ2TVW"
     }
   ],
   "trios": [
@@ -54296,6 +54321,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T14:03:32.624Z",
       "url": "https://openfront.io/game/JnM8huwU"
+    },
+    {
+      "id": "gg1ZuK2m",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "blob",
+          "clientID": "DhSHy2Xm",
+          "clanTag": "200"
+        },
+        {
+          "username": "Ragnar",
+          "clientID": "cjk9P6Po",
+          "clanTag": "200"
+        },
+        {
+          "username": "LOULOUJETAIME",
+          "clientID": "HUZxS6Si",
+          "clanTag": "200"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1253,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T13:59:59.362Z",
+      "url": "https://openfront.io/game/gg1ZuK2m"
+    },
+    {
+      "id": "D9hBqCvP",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "moncius",
+          "clientID": "7aUvsRsP",
+          "clanTag": "CN"
+        },
+        {
+          "username": "Elin",
+          "clientID": "tvazC1Yg",
+          "clanTag": "CN"
+        },
+        {
+          "username": "one",
+          "clientID": "rkd9QHd2",
+          "clanTag": "CN"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1226,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:00:46.420Z",
+      "url": "https://openfront.io/game/D9hBqCvP"
     }
   ],
   "quads": [
