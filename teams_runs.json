@@ -23942,6 +23942,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T10:11:42.207Z",
       "url": "https://openfront.io/game/QNjaXvs7"
+    },
+    {
+      "id": "YnhC2jTJ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ttr",
+          "clientID": "mF8QhCA2",
+          "clanTag": "RRT"
+        },
+        {
+          "username": "LOST Academic",
+          "clientID": "FN7UEpE4",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 942,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 111,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:08:19.492Z",
+      "url": "https://openfront.io/game/YnhC2jTJ"
+    },
+    {
+      "id": "DKBCqWmY",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Kuba",
+          "clientID": "b45FtPpr",
+          "clanTag": null
+        },
+        {
+          "username": "Anno1999",
+          "clientID": "ppFuWrkr",
+          "clanTag": "LIG"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 808,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 109,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:11:07.174Z",
+      "url": "https://openfront.io/game/DKBCqWmY"
     }
   ],
   "trios": [
