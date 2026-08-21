@@ -2069,3 +2069,61 @@ Stage Summary:
 - Score went from 6.5/10 (broken layout) to 8/10 (production-ready cockpit).
 - Live on GitHub Pages (commit 2ef1160, deploy triggered).
 - Files modified: profile.css (+720 lines), profile.html (versions bumps), sw.js (CACHE_NAME v12), server.js (+/player-stats/ route), all 7 HTML files (SW version bump), public/ mirror synced.
+
+---
+Task ID: 30
+Agent: main (Z.ai Code)
+Task: Weekly history archive — instead of replacing the weekly snapshot each Monday, preserve S1/S2/S3... so player profiles show ranking fluctuation over time.
+
+Work Log:
+- Sub-agent audit (Explore) identified root cause: sync-dashboard.js (every 5 min, GitHub Actions) computes weekly stats with getWeekStartMs(Date.now()) = Monday 00:00 Paris cutoff. When Monday arrives, the cutoff moves forward → weekly_* reset to 0, and the previous week's snapshot is OVERWRITTEN via fs.writeFileSync() with NO archive. The 'Points par semaine' chart in profile.js was hardcoded to weeks=['Week 1'] (single point) because there was no historical data to feed it. The chart code itself (xForIndex, line drawing for 2+ points, rank circle, movement arrows ↑↓ for i>0) was ALREADY written for N weeks but never executed.
+
+Modifications (6 files):
+
+1. **sync-dashboard.js** (+~80 lines):
+   - Added HISTORY_FILE='dashboard_scores_history.json' + HISTORY_GZ_FILE + MAX_WEEKS_HISTORY=52 constants
+   - Added loadWeekHistory() + saveWeekHistory() helpers (modeled on sync-ranked.js pattern)
+   - Before fs.writeFileSync(OUTPUT_FILE), reads the previous snapshot from disk. If prevData.weekStart !== newWeekStartIso (Monday transition detected), pushes each previous-week player into dashboard_scores_history.json (Map<publicId, WeekSnap[]>) with their rank computed by sorting on weekly_points. Skips players with 0 activity (no archived noise). saveWeekHistory() prunes to MAX_WEEKS_HISTORY per player (FIFO) and writes both .json + .json.gz.
+   - Console logs the transition detection for CI debugging.
+
+2. **.github/workflows/sync.yml** (1 line): Added 'dashboard_scores_history.json dashboard_scores_history.json.gz' to the git add -f list in the sync-dashboard job.
+
+3. **profile.js loadStats()** (+~30 lines):
+   - After fetching dashboard_scores.json.gz (or fallback .json), also fetches dashboard_scores_history.json.gz (or fallback .json)
+   - Extracts history[publicId] array (if present)
+   - Stores in window._profileWeekData.history = [{weekStart, weekly_points, weekly_ffa_casual, weekly_ffa_ranked, weekly_team_casual, weekly_team_ranked, elo, peak_elo, rank}, ...]
+   - Graceful catch if history file is missing (early days before first Monday transition)
+
+4. **profile.js renderWeeklyChart()** (~40 lines refactored):
+   - Replaced hardcoded 'const weeks = ["Week 1"]' with dynamic N-week construction
+   - Builds allWeeks[] = [...history.map(normalize), currentWeek]
+   - Weeks labeled 'S1', 'S2', ..., 'S-courante (live)'
+   - series[*].points now has N points (was 1) — FFA/Team/Classé/Total × N weeks
+   - The pre-existing chart code (xForIndex, line drawing for 2+ points, rank circle, movement arrows ↑↓ for i>0) is unchanged and now executes properly.
+
+5. **server.js** (+2 lines): Added /dashboard_scores_history.json + .gz to staticMap for local dev (GitHub Pages serves them as static files).
+
+6. **Cache-bust**: profile.min.js v9 → v10, SW v12 → v13 (CACHE_NAME + sw.js?v= in all 7 HTML pages).
+
+Testing locally:
+- Simulated 3 historical weeks for Skailex (UWetOwlW) + Nvr_Kn (hWNuSrnS) using node -e script that creates dashboard_scores_history.json.gz with weeks having increasing points/ranks.
+- Loaded /profile.html?pid=UWetOwlW — verified via JS eval that _profileWeekData.history has 3 entries with ranks [42, 35, 30] and current week = rank 38.
+- Captured chart screenshot and VLM-verified:
+  * 4 X-axis labels visible: S1, S2, S3, S4 (live)
+  * Black line connects Total points between weeks (4 points)
+  * FFA/Team/Classé lines also connect (4 points each)
+  * Total points have white circles with rank inside (#42 → #35 → #30 → #38)
+  * Green ↑ arrow at S2 (#35<#42) and S3 (#30<#35)
+  * Red ↓ arrow at S4-live (#38>#30)
+  * VLM score: 8/10
+
+Committed: a4fa036 → rebased onto 3 auto-sync commits → final 3d18434.
+Pushed: c947358..3d18434 main -> main ✓
+
+Stage Summary:
+- Weekly history is now preserved (S1, S2, S3, ... S-current (live)) instead of being overwritten on Monday.
+- Cap 52 weeks (~1 year) per player, FIFO.
+- Archive only happens on actual Monday transition (not every run) — checked via prevData.weekStart !== newWeekStartIso.
+- Players with 0 weekly activity are NOT archived (no noise).
+- ⚠️ BACKFILL LIMITATION: impossible to recreate past weeks (already overwritten). The first Monday after deployment = S1, the 2nd = S2, etc. History grows from now.
+- Live on GitHub Pages (commit 3d18434, deploy triggered). The CI will start archiving Mondays — the first S1 will appear next Monday (2026-08-24 or 2026-08-31 depending on timezone edge cases).
