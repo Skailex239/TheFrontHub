@@ -26017,6 +26017,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T14:54:33.350Z",
       "url": "https://openfront.io/game/aScpQf2Z"
+    },
+    {
+      "id": "d8HQaeEM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Ninja 2.0",
+          "clientID": "QNvUiuLj",
+          "clanTag": null
+        },
+        {
+          "username": "Czechomoldovoaustroslovakia",
+          "clientID": "7dL5oQX6",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 514,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:01:43.297Z",
+      "url": "https://openfront.io/game/d8HQaeEM"
+    },
+    {
+      "id": "nV4adAWj",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "mitochondria",
+          "clientID": "QKG1MffF",
+          "clanTag": null
+        },
+        {
+          "username": "nibbletz",
+          "clientID": "GJFXKePh",
+          "clanTag": "HORT"
+        }
+      ],
+      "map": "France",
+      "duration_s": 830,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T14:55:15.890Z",
+      "url": "https://openfront.io/game/nV4adAWj"
     }
   ],
   "trios": [
@@ -103995,6 +104045,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T14:47:18.870Z",
       "url": "https://openfront.io/game/XwmQZAP1"
+    },
+    {
+      "id": "ydJuMPKP",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Fox",
+          "clientID": "QcDzBz4f",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Nope",
+          "clientID": "ZuR5WuKA",
+          "clanTag": null
+        },
+        {
+          "username": "Alnair",
+          "clientID": "2Qwm9PVE",
+          "clanTag": null
+        },
+        {
+          "username": "LUCY PINE",
+          "clientID": "ihTneF9w",
+          "clanTag": "LC"
+        },
+        {
+          "username": "apple",
+          "clientID": "9iW4hrtA",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1053,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T14:52:49.239Z",
+      "url": "https://openfront.io/game/ydJuMPKP"
     }
   ],
   "hvn": [
