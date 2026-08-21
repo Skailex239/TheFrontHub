@@ -53396,6 +53396,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T12:40:18.873Z",
       "url": "https://openfront.io/game/N7CDPXLz"
+    },
+    {
+      "id": "P3mo2P1s",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Eigen_Vector",
+          "clientID": "B3AeiSUf",
+          "clanTag": null
+        },
+        {
+          "username": "LOVE",
+          "clientID": "KVHhCMPM",
+          "clanTag": "ROS"
+        },
+        {
+          "username": "Anon075",
+          "clientID": "8kEaRV8f",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 772,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T12:56:03.839Z",
+      "url": "https://openfront.io/game/P3mo2P1s"
     }
   ],
   "quads": [
@@ -100220,6 +100250,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T12:46:53.759Z",
       "url": "https://openfront.io/game/6NYSBgKY"
+    },
+    {
+      "id": "yaf7ZB3Y",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonLocket9",
+          "clientID": "sNXwJYoJ",
+          "clanTag": null
+        },
+        {
+          "username": "Joyeon",
+          "clientID": "MB5KhRhr",
+          "clanTag": null
+        },
+        {
+          "username": "tauseef_10",
+          "clientID": "fmR6PRu3",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZenith",
+          "clientID": "ZxEHH1Pt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVolcano4",
+          "clientID": "Go9UjVyu",
+          "clanTag": null
+        },
+        {
+          "username": "Knight",
+          "clientID": "WrrDtqkD",
+          "clanTag": "SO"
+        },
+        {
+          "username": "Elin",
+          "clientID": "K8GENEMb",
+          "clanTag": "CN"
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 591,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 125,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T12:59:54.599Z",
+      "url": "https://openfront.io/game/yaf7ZB3Y"
     }
   ],
   "hvn": [
