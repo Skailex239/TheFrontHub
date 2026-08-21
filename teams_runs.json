@@ -26642,6 +26642,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:26:07.263Z",
       "url": "https://openfront.io/game/Tm9j9JfX"
+    },
+    {
+      "id": "mXZj7SxT",
+      "mode": "duos",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Juztonia",
+          "clientID": "bYJxkExG",
+          "clanTag": null
+        },
+        {
+          "username": "Anon180",
+          "clientID": "FQGdaQwi",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1480,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T16:19:40.885Z",
+      "url": "https://openfront.io/game/mXZj7SxT"
     }
   ],
   "trios": [
@@ -86318,6 +86343,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T16:22:36.039Z",
       "url": "https://openfront.io/game/HjuNTyF6"
+    },
+    {
+      "id": "Xip13uoE",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Legitime seigneur",
+          "clientID": "uogbVSiT",
+          "clanTag": null
+        },
+        {
+          "username": "JeSuisGentil",
+          "clientID": "aSL4xqnC",
+          "clanTag": "DOG"
+        },
+        {
+          "username": "Laravel",
+          "clientID": "N99NjA7L",
+          "clanTag": "DOG"
+        },
+        {
+          "username": "Carlota",
+          "clientID": "htiyNUCv",
+          "clanTag": "DOG"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 603,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T16:36:12.349Z",
+      "url": "https://openfront.io/game/Xip13uoE"
+    },
+    {
+      "id": "u8FeUYQM",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "GerloGelato",
+          "clientID": "3UuSDFkh",
+          "clanTag": "SUCA"
+        },
+        {
+          "username": "bebeneto",
+          "clientID": "f4YGWyhK",
+          "clanTag": null
+        },
+        {
+          "username": "dasce",
+          "clientID": "g8K9dwuQ",
+          "clanTag": null
+        },
+        {
+          "username": "HoneyBearUF",
+          "clientID": "whxL82y6",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 598,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T16:35:48.332Z",
+      "url": "https://openfront.io/game/u8FeUYQM"
     }
   ],
   "team_custom": [
