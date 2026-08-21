@@ -50581,6 +50581,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T08:25:11.704Z",
       "url": "https://openfront.io/game/CEcbgJK7"
+    },
+    {
+      "id": "5ufX1gda",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Sancta Marta",
+          "clientID": "2n8jvMBm",
+          "clanTag": null
+        },
+        {
+          "username": "your party",
+          "clientID": "wSiosg9E",
+          "clanTag": "YA"
+        },
+        {
+          "username": "gimme money",
+          "clientID": "xsXGAE7R",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 617,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T08:42:29.281Z",
+      "url": "https://openfront.io/game/5ufX1gda"
     }
   ],
   "quads": [
@@ -77363,6 +77393,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T08:34:01.260Z",
       "url": "https://openfront.io/game/h7qo57Jv"
+    },
+    {
+      "id": "RKuWk4yT",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonCompass",
+          "clientID": "dBDifap5",
+          "clanTag": null
+        },
+        {
+          "username": "FreezyGiraffe.yZtp",
+          "clientID": "Tua6nkSS",
+          "clanTag": null
+        },
+        {
+          "username": "Nath",
+          "clientID": "gtE1CW6a",
+          "clanTag": "LPBDC"
+        },
+        {
+          "username": "AnonPlow8",
+          "clientID": "27T26FUg",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1159,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T08:34:28.786Z",
+      "url": "https://openfront.io/game/RKuWk4yT"
+    },
+    {
+      "id": "nS6NFBEY",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "HNT",
+          "clientID": "nfKDfcj6",
+          "clanTag": "UN"
+        },
+        {
+          "username": "KiriKiri",
+          "clientID": "g1f22M5o",
+          "clanTag": "UN"
+        },
+        {
+          "username": "JWP",
+          "clientID": "VAo2ExLb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "AuRTLm17",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 855,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T08:39:37.108Z",
+      "url": "https://openfront.io/game/nS6NFBEY"
     }
   ],
   "team_custom": [
