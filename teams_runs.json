@@ -26292,6 +26292,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T15:26:38.996Z",
       "url": "https://openfront.io/game/LuCT2vZS"
+    },
+    {
+      "id": "HZjKVWjY",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "CHAMCHI",
+          "clientID": "J8vnacbx",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Poppy",
+          "clientID": "6BBee1DV",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 451,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:43:16.609Z",
+      "url": "https://openfront.io/game/HZjKVWjY"
     }
   ],
   "trios": [
@@ -55496,6 +55521,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T15:36:56.178Z",
       "url": "https://openfront.io/game/ra6zMc8n"
+    },
+    {
+      "id": "eZP1Jxp7",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "leon9850",
+          "clientID": "ib3mX4VF",
+          "clanTag": null
+        },
+        {
+          "username": "o_0",
+          "clientID": "hsZvrJZc",
+          "clanTag": null
+        },
+        {
+          "username": "piombo1",
+          "clientID": "NtYmP1TU",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 640,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T15:41:49.539Z",
+      "url": "https://openfront.io/game/eZP1Jxp7"
+    },
+    {
+      "id": "PNZR4ZCX",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonTemple6",
+          "clientID": "UQQqoi6u",
+          "clanTag": null
+        },
+        {
+          "username": "Palawan",
+          "clientID": "YhYDy47i",
+          "clanTag": null
+        },
+        {
+          "username": "Triple T",
+          "clientID": "j7K9NxUt",
+          "clanTag": "TUNG"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 714,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T15:38:49.313Z",
+      "url": "https://openfront.io/game/PNZR4ZCX"
     }
   ],
   "quads": [
