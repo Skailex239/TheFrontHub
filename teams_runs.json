@@ -21817,6 +21817,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T04:05:38.296Z",
       "url": "https://openfront.io/game/J5JPADwV"
+    },
+    {
+      "id": "QFyKpL27",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonLeather3",
+          "clientID": "FbDskg9f",
+          "clanTag": null
+        },
+        {
+          "username": "Dominion of Doom",
+          "clientID": "a9QVgAgU",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 453,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T04:08:45.513Z",
+      "url": "https://openfront.io/game/QFyKpL27"
     }
   ],
   "trios": [
@@ -47931,6 +47956,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T03:59:38.373Z",
       "url": "https://openfront.io/game/6GdwNYU2"
+    },
+    {
+      "id": "1EQH35GE",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "DAR",
+          "clientID": "tiwJ7T7E",
+          "clanTag": "AST"
+        },
+        {
+          "username": "stank",
+          "clientID": "m6L4kuBF",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Vladimir Volfovich Zhirik",
+          "clientID": "yYVEJ1S2",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 903,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T04:01:39.523Z",
+      "url": "https://openfront.io/game/1EQH35GE"
     }
   ],
   "quads": [
