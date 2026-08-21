@@ -79138,6 +79138,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T10:15:02.889Z",
       "url": "https://openfront.io/game/XAJo7MAb"
+    },
+    {
+      "id": "62cNi4NA",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Brain",
+          "clientID": "dTYX4MSk",
+          "clanTag": null
+        },
+        {
+          "username": "WEWEWE",
+          "clientID": "rLGRmmPM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCompass5",
+          "clientID": "yW3Fy3SD",
+          "clanTag": null
+        },
+        {
+          "username": "kich",
+          "clientID": "V6p6AAhx",
+          "clanTag": "DFF"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 906,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T10:22:10.803Z",
+      "url": "https://openfront.io/game/62cNi4NA"
     }
   ],
   "team_custom": [
