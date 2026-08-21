@@ -23667,6 +23667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T09:05:31.646Z",
       "url": "https://openfront.io/game/3HjWdhTK"
+    },
+    {
+      "id": "KQPGjpcB",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Aeon",
+          "clientID": "v7yAcNvr",
+          "clanTag": "AST"
+        },
+        {
+          "username": "BoomBoomTelAviv",
+          "clientID": "8kt88ByY",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 817,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T09:12:03.561Z",
+      "url": "https://openfront.io/game/KQPGjpcB"
     }
   ],
   "trios": [
