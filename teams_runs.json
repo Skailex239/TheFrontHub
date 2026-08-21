@@ -49416,6 +49416,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T06:54:15.880Z",
       "url": "https://openfront.io/game/kUUwRDR8"
+    },
+    {
+      "id": "KRfS6JPH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mr Noob",
+          "clientID": "vN79Guqx",
+          "clanTag": null
+        },
+        {
+          "username": "1888",
+          "clientID": "WBMhRTTy",
+          "clanTag": null
+        },
+        {
+          "username": "tao",
+          "clientID": "6izhjUPB",
+          "clanTag": "VN"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 508,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T07:06:46.631Z",
+      "url": "https://openfront.io/game/KRfS6JPH"
     }
   ],
   "quads": [
@@ -90020,6 +90050,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T06:51:54.217Z",
       "url": "https://openfront.io/game/HXBUdbvR"
+    },
+    {
+      "id": "3qTShxgh",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Quality Learing Center",
+          "clientID": "S8YkcqDF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "little Kingdom DK",
+          "clientID": "aBB3XuVV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "red_bull_",
+          "clientID": "E4q1ZhCK",
+          "clanTag": null
+        },
+        {
+          "username": "HUSOBEY15",
+          "clientID": "bKpFz7Uy",
+          "clanTag": "UN"
+        },
+        {
+          "username": "I.R",
+          "clientID": "gv6YEc2G",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnt7",
+          "clientID": "ZxPCPE7A",
+          "clanTag": null
+        },
+        {
+          "username": "DaemeonX",
+          "clientID": "PAU4WcM1",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 743,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T07:02:36.892Z",
+      "url": "https://openfront.io/game/3qTShxgh"
     }
   ],
   "hvn": [
