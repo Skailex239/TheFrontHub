@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-21T18:14:41.881Z",
+  "lastSyncedAt": "2026-08-21T18:16:50.258Z",
   "syncMode": "incremental",
   "syncDurationSec": 0.4,
-  "totalGames": 2200,
-  "newGamesThisSync": 0,
+  "totalGames": 2201,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "orjWyAhT",
+      "start": "2026-08-21T18:10:14.926Z",
+      "durationSeconds": 306,
+      "map": "Europe Classic",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "victory",
+      "totalPlayers": 4,
+      "username": "Toan",
+      "clanTag": null
+    },
     {
       "gameId": "MiLLVMLt",
       "start": "2026-08-21T16:36:54.404Z",
