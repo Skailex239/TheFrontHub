@@ -28867,6 +28867,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T21:30:09.283Z",
       "url": "https://openfront.io/game/GPSaUbL7"
+    },
+    {
+      "id": "ay1JF3iG",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Trouduc",
+          "clientID": "WseXmeAN",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Aldanium",
+          "clientID": "eky2fiWw",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1030,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T21:37:42.971Z",
+      "url": "https://openfront.io/game/ay1JF3iG"
     }
   ],
   "trios": [
@@ -60201,6 +60226,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T21:40:09.196Z",
       "url": "https://openfront.io/game/Y3wRpKA9"
+    },
+    {
+      "id": "YJBL51Va",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Hello",
+          "clientID": "PmTdckiN",
+          "clanTag": null
+        },
+        {
+          "username": "Gros Prout moelleux",
+          "clientID": "4HqCSkAx",
+          "clanTag": null
+        },
+        {
+          "username": "BZH de Bretagne",
+          "clientID": "spwUgqon",
+          "clanTag": "BZH"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1209,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T21:33:31.085Z",
+      "url": "https://openfront.io/game/YJBL51Va"
     }
   ],
   "quads": [
@@ -116330,6 +116385,101 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T21:30:36.327Z",
       "url": "https://openfront.io/game/fFRYJo26"
+    },
+    {
+      "id": "W9KL56M4",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Diet_Cong_TanPha_KeThu",
+          "clientID": "PM1ZxmL3",
+          "clanTag": null
+        },
+        {
+          "username": "Minerd",
+          "clientID": "7Xa7fy3a",
+          "clanTag": "PT"
+        },
+        {
+          "username": "DoubloV",
+          "clientID": "GfiDFobf",
+          "clanTag": null
+        },
+        {
+          "username": "dontuse",
+          "clientID": "65g4dSnB",
+          "clanTag": "NO"
+        },
+        {
+          "username": "blob",
+          "clientID": "Uy1Qt2K4",
+          "clanTag": null
+        },
+        {
+          "username": "TrumpLand",
+          "clientID": "bovcDgNj",
+          "clanTag": null
+        },
+        {
+          "username": "BigPIPI",
+          "clientID": "9YPsjzPo",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1490,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T21:29:25.238Z",
+      "url": "https://openfront.io/game/W9KL56M4"
+    },
+    {
+      "id": "5qjTDZq8",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSled3",
+          "clientID": "Yqfigvz2",
+          "clanTag": null
+        },
+        {
+          "username": "whispeR",
+          "clientID": "v42hYY1t",
+          "clanTag": null
+        },
+        {
+          "username": "Romano",
+          "clientID": "3PTsseaf",
+          "clanTag": "NN"
+        },
+        {
+          "username": "AnonTemple3",
+          "clientID": "HTeu2P7K",
+          "clanTag": "NN"
+        },
+        {
+          "username": "nvs",
+          "clientID": "YMkvJhGc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSugar4",
+          "clientID": "WPRXWhRt",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 728,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T21:42:16.332Z",
+      "url": "https://openfront.io/game/5qjTDZq8"
     }
   ],
   "hvn": [
