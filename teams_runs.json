@@ -28092,6 +28092,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:28:54.544Z",
       "url": "https://openfront.io/game/deBB8pm3"
+    },
+    {
+      "id": "HxELWGk4",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GLORIOUS ARSTOZKA",
+          "clientID": "Rfd4nPUP",
+          "clanTag": null
+        },
+        {
+          "username": "Arracheurdanu",
+          "clientID": "zfCe8gmE",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 598,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T19:45:27.632Z",
+      "url": "https://openfront.io/game/HxELWGk4"
     }
   ],
   "trios": [
@@ -131037,6 +131062,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T19:40:31.322Z",
       "url": "https://openfront.io/game/5mZV5w1F"
+    },
+    {
+      "id": "MCbtEeyQ",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "ORI",
+          "clientID": "uS8XnGSq",
+          "clanTag": null
+        },
+        {
+          "username": "Anon989",
+          "clientID": "4TAyLQE9",
+          "clanTag": null
+        },
+        {
+          "username": "Pablo Escobar",
+          "clientID": "58R28Hek",
+          "clanTag": null
+        },
+        {
+          "username": "AlmostPottyTrained",
+          "clientID": "Qf9AP4Fp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnvil9",
+          "clientID": "rqcaxwSU",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSilence7",
+          "clientID": "oJPtV5g7",
+          "clanTag": null
+        },
+        {
+          "username": "Sparx",
+          "clientID": "5YtJCKzY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShadow4",
+          "clientID": "RDe3hy6u",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTurquoise",
+          "clientID": "cFZU6cRq",
+          "clanTag": null
+        },
+        {
+          "username": "Nott",
+          "clientID": "VmPCNX4Y",
+          "clanTag": null
+        },
+        {
+          "username": "GerloGelato",
+          "clientID": "2AWBc8Pd",
+          "clanTag": "SUCA"
+        },
+        {
+          "username": "EccentricWarrior.iOAo",
+          "clientID": "rZcMzGfH",
+          "clanTag": null
+        },
+        {
+          "username": "Ohio",
+          "clientID": "LU79AC3g",
+          "clanTag": null
+        },
+        {
+          "username": "MostSereneRepublicOfVenice",
+          "clientID": "wJs3AzTy",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 678,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 17,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T19:44:22.564Z",
+      "url": "https://openfront.io/game/MCbtEeyQ"
     }
   ]
 }
