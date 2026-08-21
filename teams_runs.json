@@ -26817,6 +26817,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:01:13.447Z",
       "url": "https://openfront.io/game/AWVNvuha"
+    },
+    {
+      "id": "ePZkBc6K",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Boko",
+          "clientID": "RcveF6vj",
+          "clanTag": null
+        },
+        {
+          "username": "Zoe",
+          "clientID": "sbLiQQoa",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 637,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:07:35.875Z",
+      "url": "https://openfront.io/game/ePZkBc6K"
     }
   ],
   "trios": [
@@ -56501,6 +56526,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T16:41:40.201Z",
       "url": "https://openfront.io/game/QWm3DGP8"
+    },
+    {
+      "id": "f9SAbjPz",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Venice",
+          "clientID": "U8T93ffM",
+          "clanTag": null
+        },
+        {
+          "username": "Jackdaw",
+          "clientID": "52ZeevuH",
+          "clanTag": null
+        },
+        {
+          "username": "Fl0r1an",
+          "clientID": "5sR21d1g",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 422,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T17:11:46.120Z",
+      "url": "https://openfront.io/game/f9SAbjPz"
     }
   ],
   "quads": [
@@ -86748,6 +86803,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T16:57:28.209Z",
       "url": "https://openfront.io/game/E529tM5f"
+    },
+    {
+      "id": "ottUhAvc",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "BRUHBRUHBRUH",
+          "clientID": "oxBYMv3n",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Richelieu",
+          "clientID": "Tkdix3iN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEclipse1",
+          "clientID": "BUj9RpRh",
+          "clanTag": null
+        },
+        {
+          "username": "SEND GOLD FOR TROOPS",
+          "clientID": "yrnmYD7A",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1893,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T16:47:48.621Z",
+      "url": "https://openfront.io/game/ottUhAvc"
     }
   ],
   "team_custom": [
@@ -108010,6 +108100,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T16:59:05.310Z",
       "url": "https://openfront.io/game/FsmSA9Zh"
+    },
+    {
+      "id": "ejSX5Z1x",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "TOP_1_",
+          "clientID": "Puu8oFZK",
+          "clanTag": "VI"
+        },
+        {
+          "username": "Jonesyandbeast",
+          "clientID": "T5ddaojw",
+          "clanTag": null
+        },
+        {
+          "username": "Israel Space Agency",
+          "clientID": "1YswCebk",
+          "clanTag": null
+        },
+        {
+          "username": "Hip",
+          "clientID": "8wFLwfxG",
+          "clanTag": null
+        },
+        {
+          "username": "Pixie",
+          "clientID": "Lpuk7fPf",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1369,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:56:11.636Z",
+      "url": "https://openfront.io/game/ejSX5Z1x"
     }
   ],
   "hvn": [
