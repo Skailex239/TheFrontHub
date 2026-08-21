@@ -22092,6 +22092,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T05:08:34.027Z",
       "url": "https://openfront.io/game/xyWQ1N8v"
+    },
+    {
+      "id": "gQYNVbYZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Gryfin",
+          "clientID": "mUdunPsd",
+          "clanTag": null
+        },
+        {
+          "username": "Mr Wiggles",
+          "clientID": "mZ4uTchn",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 498,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T05:10:51.158Z",
+      "url": "https://openfront.io/game/gQYNVbYZ"
+    },
+    {
+      "id": "CuFXxsQB",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Why",
+          "clientID": "GchAz58u",
+          "clanTag": "CZSK"
+        },
+        {
+          "username": "NoAlliances",
+          "clientID": "eJ9imhxy",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 1060,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T05:03:04.184Z",
+      "url": "https://openfront.io/game/CuFXxsQB"
     }
   ],
   "trios": [
@@ -48386,6 +48436,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T04:52:42.599Z",
       "url": "https://openfront.io/game/CD4PHzX9"
+    },
+    {
+      "id": "sL1e8EC9",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AngryFry",
+          "clientID": "bacNcq5X",
+          "clanTag": null
+        },
+        {
+          "username": "syreq",
+          "clientID": "9jRBx7qn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SEND TROOPS",
+          "clientID": "V4CopfoJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1319,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T04:56:26.806Z",
+      "url": "https://openfront.io/game/sL1e8EC9"
     }
   ],
   "quads": [
@@ -74678,6 +74758,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T04:48:53.374Z",
       "url": "https://openfront.io/game/ppXDa9od"
+    },
+    {
+      "id": "jhi4kGsN",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Lizard",
+          "clientID": "9QdBBKJE",
+          "clanTag": null
+        },
+        {
+          "username": "Nardo RS",
+          "clientID": "ZwNYPwXh",
+          "clanTag": "AUDI"
+        },
+        {
+          "username": "AnonTulip5",
+          "clientID": "TpGdtRWj",
+          "clanTag": null
+        },
+        {
+          "username": "SDMakas",
+          "clientID": "2aGuSmvo",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 5766,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T03:44:40.921Z",
+      "url": "https://openfront.io/game/jhi4kGsN"
     }
   ],
   "team_custom": [
