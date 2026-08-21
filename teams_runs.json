@@ -26492,6 +26492,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T15:56:16.942Z",
       "url": "https://openfront.io/game/mp7x7YaE"
+    },
+    {
+      "id": "s5BydTxw",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "pouleto",
+          "clientID": "fHREw7wC",
+          "clanTag": null
+        },
+        {
+          "username": "Cooties",
+          "clientID": "9YLppwTi",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 801,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:18:07.802Z",
+      "url": "https://openfront.io/game/s5BydTxw"
+    },
+    {
+      "id": "x39gYns8",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Builder",
+          "clientID": "yxZyjRwY",
+          "clanTag": null
+        },
+        {
+          "username": "Mopi",
+          "clientID": "dULMDmxM",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 564,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:23:50.109Z",
+      "url": "https://openfront.io/game/x39gYns8"
     }
   ],
   "trios": [
@@ -106605,6 +106655,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T16:05:50.033Z",
       "url": "https://openfront.io/game/Fst4Xn4h"
+    },
+    {
+      "id": "gFRKxajg",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Troy",
+          "clientID": "wVN2AkYc",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "Jickyleprince",
+          "clientID": "ysKjp1HV",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "Hepa",
+          "clientID": "4ho1kRPb",
+          "clanTag": null
+        },
+        {
+          "username": "o_o",
+          "clientID": "CF63zYJq",
+          "clanTag": null
+        },
+        {
+          "username": "Communist Union",
+          "clientID": "gfd5hbz2",
+          "clanTag": null
+        },
+        {
+          "username": "popolino_666",
+          "clientID": "7WZRTHqc",
+          "clanTag": null
+        },
+        {
+          "username": "DexTheTrump",
+          "clientID": "oLo4RY4P",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 937,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:16:37.203Z",
+      "url": "https://openfront.io/game/gFRKxajg"
     }
   ],
   "hvn": [
