@@ -54006,6 +54006,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T13:19:44.206Z",
       "url": "https://openfront.io/game/MuLJrcpL"
+    },
+    {
+      "id": "ZUHPiwWm",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GGx",
+          "clientID": "xr7Taxfx",
+          "clanTag": null
+        },
+        {
+          "username": "pipi",
+          "clientID": "y2EmXX8c",
+          "clanTag": "DJIR"
+        },
+        {
+          "username": "Ggaba",
+          "clientID": "xKoC2z4i",
+          "clanTag": "DJIR"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 940,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T13:36:31.307Z",
+      "url": "https://openfront.io/game/ZUHPiwWm"
     }
   ],
   "quads": [
@@ -101565,6 +101595,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T13:34:14.683Z",
       "url": "https://openfront.io/game/bGcjpXSx"
+    },
+    {
+      "id": "Af38TVWZ",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Curdy",
+          "clientID": "R8eBy7yE",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTurquoise1",
+          "clientID": "ZBprkmHo",
+          "clanTag": null
+        },
+        {
+          "username": "LAYSTERRR",
+          "clientID": "pWuTpzgx",
+          "clanTag": "AX"
+        },
+        {
+          "username": "URSS",
+          "clientID": "xjpdKDLd",
+          "clanTag": null
+        },
+        {
+          "username": "CARTHAGE",
+          "clientID": "yqahWe9N",
+          "clanTag": "AX"
+        },
+        {
+          "username": "Mercurrial",
+          "clientID": "6qTCBsme",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 781,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T13:39:48.519Z",
+      "url": "https://openfront.io/game/Af38TVWZ"
     }
   ],
   "hvn": [
