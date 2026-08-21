@@ -24042,6 +24042,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T10:09:00.037Z",
       "url": "https://openfront.io/game/xp7yAcxM"
+    },
+    {
+      "id": "DwEB9UMy",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonRuby6",
+          "clientID": "bGgoHB8d",
+          "clanTag": null
+        },
+        {
+          "username": "Codex_5.6Sol_high",
+          "clientID": "b235YHkj",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 669,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:21:50.284Z",
+      "url": "https://openfront.io/game/DwEB9UMy"
+    },
+    {
+      "id": "JMQ4FKkp",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JediVad",
+          "clientID": "1e3hmdoh",
+          "clanTag": "UA"
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "SQcQj1aT",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 782,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:18:58.119Z",
+      "url": "https://openfront.io/game/JMQ4FKkp"
     }
   ],
   "trios": [
