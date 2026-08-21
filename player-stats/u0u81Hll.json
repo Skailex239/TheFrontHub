@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T13:54:06.193Z",
-  "lastSyncedAt": "2026-08-21T13:54:03.745Z",
-  "totalGames": 2198,
+  "computedAt": "2026-08-21T13:55:58.172Z",
+  "lastSyncedAt": "2026-08-21T13:55:55.808Z",
+  "totalGames": 2199,
   "careerWins": {
     "ffaCasual": 383,
     "ffaRanked": 328,
@@ -21,7 +21,7 @@
       "target": 1000
     },
     "playtime": {
-      "current": 554,
+      "current": 555,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 456",
     "totalWins": "821",
-    "totalGames": "2 198",
-    "totalPlaytime": "23j 2h",
-    "totalPlaytimeCompact": "23j 2h",
+    "totalGames": "2 199",
+    "totalPlaytime": "23j 3h",
+    "totalPlaytimeCompact": "23j 3h",
     "avgGameDuration": "15m 8s",
     "longestGame": "2h 40m",
     "winrate": "37%",
-    "totalPlaytimeHours": "554h"
+    "totalPlaytimeHours": "555h"
   },
   "playtime": {
-    "totalSec": 1996826,
-    "avgGameSec": 908.47406733394,
+    "totalSec": 1998380,
+    "avgGameSec": 908.7676216462028,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1400,
-        "playtimeSec": 1617447,
+        "games": 1401,
+        "playtimeSec": 1619001,
         "wins": 383
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 821,
-    "defeat": 1048,
+    "defeat": 1049,
     "incomplete": 329
   },
   "maps": [
@@ -308,6 +308,22 @@
       }
     },
     {
+      "map": "Mare Nostrum",
+      "count": 28,
+      "wins": 8,
+      "losses": 20,
+      "playtimeSec": 41604,
+      "avgDuration": 1485.857142857143,
+      "winRate": 0.2857142857142857,
+      "lastPlayed": 1787318890293,
+      "formatted": {
+        "playtime": "11h 33m",
+        "avgDuration": "24m",
+        "winRate": "29%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Strait of Gibraltar",
       "count": 28,
       "wins": 10,
@@ -321,22 +337,6 @@
         "avgDuration": "18m",
         "winRate": "36%",
         "lastPlayed": "31/07/26"
-      }
-    },
-    {
-      "map": "Mare Nostrum",
-      "count": 27,
-      "wins": 8,
-      "losses": 19,
-      "playtimeSec": 40050,
-      "avgDuration": 1483.3333333333333,
-      "winRate": 0.2962962962962963,
-      "lastPlayed": 1786819668142,
-      "formatted": {
-        "playtime": "11h 7m",
-        "avgDuration": "24m",
-        "winRate": "30%",
-        "lastPlayed": "15/08/26"
       }
     },
     {
@@ -1669,7 +1669,7 @@
       76,
       125,
       130,
-      144,
+      145,
       136,
       201,
       201,
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      352,
+      353,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 6,
-        "playtimeSec": 6006
+        "count": 7,
+        "playtimeSec": 7560
       },
       {
         "date": "22/01/2026",
@@ -2222,6 +2222,17 @@
   },
   "recentGames": [
     {
+      "gameId": "o4sopUeH",
+      "start": "2026-08-21T13:28:10.293Z",
+      "map": "Mare Nostrum",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1554,
+      "totalPlayers": 113,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "Jksq1atb",
       "start": "2026-08-21T10:07:36.445Z",
       "map": "Lisbon",
@@ -2427,17 +2438,6 @@
       "result": "defeat",
       "durationSeconds": 1610,
       "totalPlayers": 122,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "w4zgex9y",
-      "start": "2026-08-19T11:32:07.603Z",
-      "map": "Black Sea",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 1188,
-      "totalPlayers": 54,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }

@@ -1,11 +1,11 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-21T13:54:03.745Z",
+  "lastSyncedAt": "2026-08-21T13:55:55.808Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 2198,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.5,
+  "totalGames": 2199,
+  "newGamesThisSync": 1,
   "games": [
     {
       "gameId": "jgKJzknw",
@@ -18,6 +18,20 @@
       "rankedType": "unranked",
       "result": "incomplete",
       "totalPlayers": 0,
+      "username": "Road to 1600",
+      "clanTag": null
+    },
+    {
+      "gameId": "o4sopUeH",
+      "start": "2026-08-21T13:28:10.293Z",
+      "durationSeconds": 1554,
+      "map": "Mare Nostrum",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 113,
       "username": "Road to 1600",
       "clanTag": null
     },
