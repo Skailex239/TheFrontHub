@@ -24817,6 +24817,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:16:38.916Z",
       "url": "https://openfront.io/game/iRKTXL8j"
+    },
+    {
+      "id": "5Ur84gCu",
+      "mode": "duos",
+      "team": "Team 21",
+      "players": [
+        {
+          "username": "odbo",
+          "clientID": "ZG57dEkB",
+          "clanTag": null
+        },
+        {
+          "username": "Kanon118",
+          "clientID": "nVVrTqpD",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1247,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T12:09:01.441Z",
+      "url": "https://openfront.io/game/5Ur84gCu"
     }
   ],
   "trios": [
