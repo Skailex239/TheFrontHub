@@ -1,9 +1,9 @@
 {
   "publicId": "UWetOwlW",
   "username": "Skailex.9681",
-  "computedAt": "2026-08-21T07:12:34.851Z",
-  "lastSyncedAt": "2026-08-21T07:12:32.143Z",
-  "totalGames": 3100,
+  "computedAt": "2026-08-21T07:14:18.199Z",
+  "lastSyncedAt": "2026-08-21T07:14:16.081Z",
+  "totalGames": 3101,
   "careerWins": {
     "ffaCasual": 496,
     "ffaRanked": 262,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "7 000",
     "totalWins": "1 208",
-    "totalGames": "3 100",
+    "totalGames": "3 101",
     "totalPlaytime": "31j 5h",
     "totalPlaytimeCompact": "31j 5h",
     "avgGameDuration": "14m 29s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "749h"
   },
   "playtime": {
-    "totalSec": 2696623,
-    "avgGameSec": 869.8783870967742,
+    "totalSec": 2697332,
+    "avgGameSec": 869.8265075782006,
     "longestSec": 33773,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1599,
-        "playtimeSec": 1612169,
+        "games": 1600,
+        "playtimeSec": 1612878,
         "wins": 496
       },
       "ffaRanked": {
@@ -80,7 +80,7 @@
   "results": {
     "victory": 1208,
     "defeat": 1255,
-    "incomplete": 637
+    "incomplete": 638
   },
   "maps": [
     {
@@ -1423,7 +1423,7 @@
       1,
       29,
       146,
-      180,
+      181,
       208,
       194,
       74,
@@ -1444,7 +1444,7 @@
       456,
       443,
       395,
-      363,
+      364,
       523,
       648
     ],
@@ -1471,8 +1471,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 3,
-        "playtimeSec": 1420
+        "count": 4,
+        "playtimeSec": 2129
       },
       {
         "date": "21/11/2025",
