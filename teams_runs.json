@@ -20842,6 +20842,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T00:15:54.875Z",
       "url": "https://openfront.io/game/FQTRFjFY"
+    },
+    {
+      "id": "TusHVW4C",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonGoat8",
+          "clientID": "VRQKkS6X",
+          "clanTag": null
+        },
+        {
+          "username": "Khan_Gujjar",
+          "clientID": "soLKTHrL",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 653,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T00:34:14.013Z",
+      "url": "https://openfront.io/game/TusHVW4C"
+    },
+    {
+      "id": "ek5CtLDP",
+      "mode": "duos",
+      "team": "Team 18",
+      "players": [
+        {
+          "username": "AnonYacht7",
+          "clientID": "dyt8Dci4",
+          "clanTag": null
+        },
+        {
+          "username": "TWUNK",
+          "clientID": "CDoJCebd",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 776,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T00:33:49.980Z",
+      "url": "https://openfront.io/game/ek5CtLDP"
     }
   ],
   "trios": [
@@ -46266,6 +46316,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T00:14:05.263Z",
       "url": "https://openfront.io/game/fJKsu8P7"
+    },
+    {
+      "id": "8xSg8FUP",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Afshar",
+          "clientID": "qZXwU3K4",
+          "clanTag": "AAA"
+        },
+        {
+          "username": "eee",
+          "clientID": "7Agw8pKt",
+          "clanTag": null
+        },
+        {
+          "username": "Charley Patton",
+          "clientID": "cUVUTQiC",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 1235,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T00:25:45.985Z",
+      "url": "https://openfront.io/game/8xSg8FUP"
     }
   ],
   "quads": [
@@ -71683,6 +71763,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T00:08:46.960Z",
       "url": "https://openfront.io/game/xVo7YiFA"
+    },
+    {
+      "id": "oUGxWMPW",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Feeed Me",
+          "clientID": "MQv2H6iF",
+          "clanTag": null
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "1UekffsS",
+          "clanTag": null
+        },
+        {
+          "username": "Jack Frost",
+          "clientID": "sRf5M6xc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark5",
+          "clientID": "o7BVpkGM",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1788,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T00:14:27.781Z",
+      "url": "https://openfront.io/game/oUGxWMPW"
+    },
+    {
+      "id": "zgLCXZbV",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Shinya",
+          "clientID": "TtGJU5tg",
+          "clanTag": null
+        },
+        {
+          "username": "AndrewK",
+          "clientID": "AMxWLKVG",
+          "clanTag": "VIRS"
+        },
+        {
+          "username": "SinapsyTv",
+          "clientID": "M255uh66",
+          "clanTag": null
+        },
+        {
+          "username": "ISMAIL0123",
+          "clientID": "3SqqWZWf",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 934,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T00:28:37.649Z",
+      "url": "https://openfront.io/game/zgLCXZbV"
     }
   ],
   "team_custom": [
