@@ -84793,6 +84793,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T15:15:15.207Z",
       "url": "https://openfront.io/game/2jvk4WDr"
+    },
+    {
+      "id": "PTHSvtqa",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Slovakia",
+          "clientID": "AEg8C9Zq",
+          "clanTag": "SK"
+        },
+        {
+          "username": "De Gaulle",
+          "clientID": "YLHZxfrh",
+          "clanTag": null
+        },
+        {
+          "username": "Skyrim",
+          "clientID": "749g6bo2",
+          "clanTag": "GOAT"
+        },
+        {
+          "username": "LuMorgantu",
+          "clientID": "Ek6HrJ2a",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1216,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T15:08:43.263Z",
+      "url": "https://openfront.io/game/PTHSvtqa"
+    },
+    {
+      "id": "VGg1FsAY",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RiLee",
+          "clientID": "QTGvw7A7",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonPulley1",
+          "clientID": "wJUKZpAn",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRiddle8",
+          "clientID": "MWv5NThe",
+          "clanTag": null
+        },
+        {
+          "username": "Shy.N.Shady",
+          "clientID": "2XpVNiS8",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 972,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T15:13:13.574Z",
+      "url": "https://openfront.io/game/VGg1FsAY"
     }
   ],
   "team_custom": [
