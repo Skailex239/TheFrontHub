@@ -52866,6 +52866,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T12:10:17.023Z",
       "url": "https://openfront.io/game/NFMsFcX1"
+    },
+    {
+      "id": "Nc2XLcEm",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Najwyzsza Izba Kontroli",
+          "clientID": "rCZutjru",
+          "clanTag": "POL"
+        },
+        {
+          "username": "Killer",
+          "clientID": "zu5vxDX5",
+          "clanTag": null
+        },
+        {
+          "username": "DEEZ",
+          "clientID": "m5GmsKNH",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 791,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T12:19:40.106Z",
+      "url": "https://openfront.io/game/Nc2XLcEm"
     }
   ],
   "quads": [
@@ -81188,6 +81218,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T12:13:09.697Z",
       "url": "https://openfront.io/game/Xg4VEKry"
+    },
+    {
+      "id": "UYKo3wWQ",
+      "mode": "quads",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Medics",
+          "clientID": "hRx8d45G",
+          "clanTag": null
+        },
+        {
+          "username": "Breizh",
+          "clientID": "26sjCtzW",
+          "clanTag": null
+        },
+        {
+          "username": "ArsenalUCLwinners",
+          "clientID": "UXcEobyH",
+          "clanTag": null
+        },
+        {
+          "username": "Minamas",
+          "clientID": "RuVQN2U8",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T12:21:32.689Z",
+      "url": "https://openfront.io/game/UYKo3wWQ"
     }
   ],
   "team_custom": [
