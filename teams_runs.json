@@ -24467,6 +24467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:35:59.872Z",
       "url": "https://openfront.io/game/vVnqjzUn"
+    },
+    {
+      "id": "pEGk3pFf",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "GoldRaccoon.yF6P",
+          "clientID": "NBn96iUJ",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "Hh972uM6",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 501,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:40:28.164Z",
+      "url": "https://openfront.io/game/pEGk3pFf"
     }
   ],
   "trios": [
@@ -80378,6 +80403,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T11:21:50.992Z",
       "url": "https://openfront.io/game/zGwdEYRG"
+    },
+    {
+      "id": "VYvPvxNt",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "P18",
+          "clientID": "rkj8GDZ3",
+          "clanTag": "NR18"
+        },
+        {
+          "username": "JACQUES",
+          "clientID": "EvmYhprr",
+          "clanTag": "NR18"
+        },
+        {
+          "username": "Spider Hana",
+          "clientID": "Kjuv2deM",
+          "clanTag": null
+        },
+        {
+          "username": "Tintopia",
+          "clientID": "adV8eg9j",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 823,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T11:33:49.211Z",
+      "url": "https://openfront.io/game/VYvPvxNt"
     }
   ],
   "team_custom": [
@@ -97435,6 +97495,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T11:22:59.060Z",
       "url": "https://openfront.io/game/tnd8DSVi"
+    },
+    {
+      "id": "7QVojwLC",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Imjustababy",
+          "clientID": "e5sUNZYE",
+          "clanTag": null
+        },
+        {
+          "username": "EHGREMIO",
+          "clientID": "GG4HNZ2W",
+          "clanTag": null
+        },
+        {
+          "username": "Deho",
+          "clientID": "Cmr3h6HV",
+          "clanTag": null
+        },
+        {
+          "username": "USSR",
+          "clientID": "FyzMzEpX",
+          "clanTag": null
+        },
+        {
+          "username": "Sloop",
+          "clientID": "s251R43d",
+          "clanTag": null
+        },
+        {
+          "username": "RedAly",
+          "clientID": "4o33iWmQ",
+          "clanTag": null
+        },
+        {
+          "username": "Dark Ages",
+          "clientID": "5Xv71Dah",
+          "clanTag": "IND"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 688,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T11:35:40.829Z",
+      "url": "https://openfront.io/game/7QVojwLC"
     }
   ],
   "hvn": [
