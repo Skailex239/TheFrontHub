@@ -26717,6 +26717,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:34:35.753Z",
       "url": "https://openfront.io/game/ew2Y9zB9"
+    },
+    {
+      "id": "P8xtcuMJ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Eavas",
+          "clientID": "beU4D9MA",
+          "clanTag": null
+        },
+        {
+          "username": "Llamacommander",
+          "clientID": "gMfZnQEH",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 889,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:44:49.420Z",
+      "url": "https://openfront.io/game/P8xtcuMJ"
     }
   ],
   "trios": [
@@ -56341,6 +56366,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T16:44:21.387Z",
       "url": "https://openfront.io/game/CBSnLciE"
+    },
+    {
+      "id": "ZcnhojRv",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonGecko7",
+          "clientID": "ukPdC5XG",
+          "clanTag": null
+        },
+        {
+          "username": "BunnyKisses67",
+          "clientID": "W3p9tsR6",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCrab4",
+          "clientID": "i4MhfDMT",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1118,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T16:42:33.264Z",
+      "url": "https://openfront.io/game/ZcnhojRv"
     }
   ],
   "quads": [
@@ -107470,6 +107525,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T16:37:51.452Z",
       "url": "https://openfront.io/game/VThfpiX7"
+    },
+    {
+      "id": "H6RYPfGS",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Denstone",
+          "clientID": "qAp31Bvf",
+          "clanTag": null
+        },
+        {
+          "username": "I eat rocks",
+          "clientID": "MXTRRdP5",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Merchant Lord",
+          "clientID": "4WfPecpq",
+          "clanTag": null
+        },
+        {
+          "username": "Shrimp",
+          "clientID": "vzpn4gJk",
+          "clanTag": "NU"
+        },
+        {
+          "username": "AnonLighthouse9",
+          "clientID": "hvDyqCtD",
+          "clanTag": null
+        },
+        {
+          "username": "Duca",
+          "clientID": "wNhj7wWS",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 637,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T16:50:32.780Z",
+      "url": "https://openfront.io/game/H6RYPfGS"
     }
   ],
   "hvn": [
