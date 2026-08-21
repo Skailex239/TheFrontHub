@@ -56096,6 +56096,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T16:21:59.997Z",
       "url": "https://openfront.io/game/ZLt7a7fx"
+    },
+    {
+      "id": "zfBJEjQW",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Legion",
+          "clientID": "Wwc7qMTe",
+          "clanTag": null
+        },
+        {
+          "username": "Sancta Marta",
+          "clientID": "3tHtP2PA",
+          "clanTag": null
+        },
+        {
+          "username": "Sadness333",
+          "clientID": "cujtMo1P",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 941,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T16:25:45.742Z",
+      "url": "https://openfront.io/game/zfBJEjQW"
     }
   ],
   "quads": [
@@ -86203,6 +86233,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T16:12:42.459Z",
       "url": "https://openfront.io/game/zkjGLSn6"
+    },
+    {
+      "id": "HjuNTyF6",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "NeedForShips",
+          "clientID": "8pTCno9G",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonGoblin3",
+          "clientID": "PD1h9Fix",
+          "clanTag": null
+        },
+        {
+          "username": "la tortue",
+          "clientID": "XBt1GMha",
+          "clanTag": null
+        },
+        {
+          "username": "PERSHIANA",
+          "clientID": "HKTYNieT",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 1103,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T16:22:36.039Z",
+      "url": "https://openfront.io/game/HjuNTyF6"
     }
   ],
   "team_custom": [
