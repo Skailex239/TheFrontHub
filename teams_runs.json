@@ -78393,6 +78393,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-21T09:20:25.637Z",
       "url": "https://openfront.io/game/XLnpp6bH"
+    },
+    {
+      "id": "ASj4BQPA",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "LZXZX",
+          "clientID": "cozvHozo",
+          "clanTag": null
+        },
+        {
+          "username": "no landlock",
+          "clientID": "RJjLv5Mp",
+          "clanTag": null
+        },
+        {
+          "username": "Chico",
+          "clientID": "H92JmHjG",
+          "clanTag": "ZHIZH"
+        },
+        {
+          "username": "oktay",
+          "clientID": "aLvTEQzY",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 1141,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T09:23:23.269Z",
+      "url": "https://openfront.io/game/ASj4BQPA"
     }
   ],
   "team_custom": [
@@ -93985,6 +94020,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T09:29:16.813Z",
       "url": "https://openfront.io/game/mXNN2cmE"
+    },
+    {
+      "id": "ZmceLPbf",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "jeritoutke",
+          "clientID": "xHhbLrdT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Roro",
+          "clientID": "Bz8ngxdP",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage",
+          "clientID": "dfYDSFJP",
+          "clanTag": null
+        },
+        {
+          "username": "BOUBOU",
+          "clientID": "AraukMrN",
+          "clanTag": null
+        },
+        {
+          "username": "Aztec empire",
+          "clientID": "DBt1Vwbu",
+          "clanTag": null
+        },
+        {
+          "username": "Seraph",
+          "clientID": "Z1t24E8W",
+          "clanTag": "OWARI"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T09:29:50.147Z",
+      "url": "https://openfront.io/game/ZmceLPbf"
     }
   ],
   "hvn": [
