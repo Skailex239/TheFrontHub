@@ -1,12 +1,26 @@
 {
   "publicId": "tqMGOI2Q",
   "username": "Zwiper.2734",
-  "lastSyncedAt": "2026-08-21T15:26:40.288Z",
+  "lastSyncedAt": "2026-08-21T15:29:02.528Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 1994,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 1995,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "tMaikqsr",
+      "start": "2026-08-21T14:55:59.938Z",
+      "durationSeconds": 1844,
+      "map": "Alps",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 90,
+      "username": "Zwiper",
+      "clanTag": "LBU"
+    },
     {
       "gameId": "W6h9q1Lm",
       "start": "2026-08-20T12:47:15.156Z",
