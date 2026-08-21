@@ -24367,6 +24367,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T11:02:57.298Z",
       "url": "https://openfront.io/game/2fZSph2L"
+    },
+    {
+      "id": "tib2MqDZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "momo",
+          "clientID": "MY7tMRh8",
+          "clanTag": null
+        },
+        {
+          "username": "French Emperor",
+          "clientID": "TjT3gSQ9",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1037,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:04:53.430Z",
+      "url": "https://openfront.io/game/tib2MqDZ"
+    },
+    {
+      "id": "6WqhEZWD",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "The Principality of Sealand",
+          "clientID": "HQTkxs9F",
+          "clanTag": null
+        },
+        {
+          "username": "Anon863",
+          "clientID": "zrFKqWha",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1442,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T10:57:52.953Z",
+      "url": "https://openfront.io/game/6WqhEZWD"
     }
   ],
   "trios": [
@@ -79883,6 +79933,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T11:03:28.831Z",
       "url": "https://openfront.io/game/5BaHLaWz"
+    },
+    {
+      "id": "Dckga2Tn",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "axe",
+          "clientID": "D6dR5vNM",
+          "clanTag": "SJH"
+        },
+        {
+          "username": "Muroj Trade Company",
+          "clientID": "yA5kKmfH",
+          "clanTag": "ORTO"
+        },
+        {
+          "username": "SlingShot Merge at GglePlay",
+          "clientID": "mnH3NZrg",
+          "clanTag": "PLAY"
+        },
+        {
+          "username": "Rex",
+          "clientID": "23vqPcMb",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1000,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T11:05:31.973Z",
+      "url": "https://openfront.io/game/Dckga2Tn"
     }
   ],
   "team_custom": [
