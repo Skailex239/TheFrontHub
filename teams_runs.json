@@ -21067,6 +21067,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T00:44:55.199Z",
       "url": "https://openfront.io/game/1pgqm1GH"
+    },
+    {
+      "id": "pnykohRP",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "faaaa",
+          "clientID": "3wemMidg",
+          "clanTag": null
+        },
+        {
+          "username": "sciad",
+          "clientID": "t3Zb68iG",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 418,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T01:11:25.453Z",
+      "url": "https://openfront.io/game/pnykohRP"
     }
   ],
   "trios": [
@@ -46551,6 +46576,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T00:31:33.345Z",
       "url": "https://openfront.io/game/X9AyHydB"
+    },
+    {
+      "id": "Q2722Jv4",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "EnCore",
+          "clientID": "wnN6MB3L",
+          "clanTag": "ECON"
+        },
+        {
+          "username": "AnonIndigo5",
+          "clientID": "5exL9Zp2",
+          "clanTag": null
+        },
+        {
+          "username": "SEND TROOPS",
+          "clientID": "5fUZH4oX",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 829,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T01:04:33.006Z",
+      "url": "https://openfront.io/game/Q2722Jv4"
     }
   ],
   "quads": [
@@ -84015,6 +84070,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T00:57:34.913Z",
       "url": "https://openfront.io/game/4jo73JNs"
+    },
+    {
+      "id": "Xi91uwV6",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSlate8",
+          "clientID": "4Pv7AKpj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTulip6",
+          "clientID": "H7UGxRqN",
+          "clanTag": null
+        },
+        {
+          "username": "UltimateBear",
+          "clientID": "VXUG7MKF",
+          "clanTag": null
+        },
+        {
+          "username": "Roel",
+          "clientID": "AQqpy8kr",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mluvin",
+          "clientID": "TA5rTy8e",
+          "clanTag": null
+        },
+        {
+          "username": "boico",
+          "clientID": "vBL7X1q6",
+          "clanTag": null
+        },
+        {
+          "username": "Anon",
+          "clientID": "iae6khkE",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1656,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T00:51:12.627Z",
+      "url": "https://openfront.io/game/Xi91uwV6"
     }
   ],
   "hvn": [
