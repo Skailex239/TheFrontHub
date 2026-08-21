@@ -26267,6 +26267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T15:39:47.385Z",
       "url": "https://openfront.io/game/A4Htk8fs"
+    },
+    {
+      "id": "LuCT2vZS",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonObelisk1",
+          "clientID": "29SAXqih",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBeetle3",
+          "clientID": "TAUcVvb7",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1339,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T15:26:38.996Z",
+      "url": "https://openfront.io/game/LuCT2vZS"
     }
   ],
   "trios": [
@@ -55441,6 +55466,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T15:35:50.093Z",
       "url": "https://openfront.io/game/Quqb8iTQ"
+    },
+    {
+      "id": "ra6zMc8n",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "BLUB",
+          "clientID": "pmBExRbp",
+          "clanTag": null
+        },
+        {
+          "username": "Zero",
+          "clientID": "6tqGnMvG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGlacier9",
+          "clientID": "jQVwKSvS",
+          "clanTag": null
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 756,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T15:36:56.178Z",
+      "url": "https://openfront.io/game/ra6zMc8n"
     }
   ],
   "quads": [
