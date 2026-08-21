@@ -22042,6 +22042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T04:45:34.172Z",
       "url": "https://openfront.io/game/nr4XLUXJ"
+    },
+    {
+      "id": "vQ3Y75Xq",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LELOLIZE",
+          "clientID": "x77ZTWBK",
+          "clanTag": "PIPI"
+        },
+        {
+          "username": "AnonBison6",
+          "clientID": "fqLpUw4v",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 484,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T05:06:17.394Z",
+      "url": "https://openfront.io/game/vQ3Y75Xq"
     }
   ],
   "trios": [
@@ -74593,6 +74618,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T04:42:46.492Z",
       "url": "https://openfront.io/game/sSMnqJYT"
+    },
+    {
+      "id": "ppXDa9od",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Trakinas",
+          "clientID": "RTvGnJ3h",
+          "clanTag": null
+        },
+        {
+          "username": "USSR",
+          "clientID": "s2YsbLew",
+          "clanTag": null
+        },
+        {
+          "username": "KazakhGaming_",
+          "clientID": "p8v8cbtu",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Alex",
+          "clientID": "qFT6pDka",
+          "clanTag": "BBC"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1435,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T04:48:53.374Z",
+      "url": "https://openfront.io/game/ppXDa9od"
     }
   ],
   "team_custom": [
