@@ -20767,6 +20767,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-20T23:43:40.857Z",
       "url": "https://openfront.io/game/4CZiGcxu"
+    },
+    {
+      "id": "eKBj1kWj",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "KharkovskoyeZlovonie",
+          "clientID": "6ePjKUg8",
+          "clanTag": "RUS"
+        },
+        {
+          "username": "Eigen_Vector",
+          "clientID": "ZmKw9JfX",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 575,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T00:05:59.785Z",
+      "url": "https://openfront.io/game/eKBj1kWj"
     }
   ],
   "trios": [
@@ -71383,6 +71408,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-20T23:30:15.054Z",
       "url": "https://openfront.io/game/FgakdZp3"
+    },
+    {
+      "id": "5mGFd18a",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mongol Horde",
+          "clientID": "1GQkBp4i",
+          "clanTag": "AST"
+        },
+        {
+          "username": "EVERYONE",
+          "clientID": "Qo26wJzG",
+          "clanTag": "ILOVE"
+        },
+        {
+          "username": "Garfield Trader",
+          "clientID": "nxDnMUYQ",
+          "clanTag": null
+        },
+        {
+          "username": "Taik",
+          "clientID": "mNCLAWQA",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 907,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-20T23:59:24.851Z",
+      "url": "https://openfront.io/game/5mGFd18a"
     }
   ],
   "team_custom": [
