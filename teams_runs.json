@@ -26592,6 +26592,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T16:24:22.143Z",
       "url": "https://openfront.io/game/6bxNrjeZ"
+    },
+    {
+      "id": "EkvWzTiw",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Dezzy",
+          "clientID": "v54JhLXx",
+          "clanTag": "BE"
+        },
+        {
+          "username": "Pumpkin",
+          "clientID": "xEvx4oZ2",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 845,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:28:32.400Z",
+      "url": "https://openfront.io/game/EkvWzTiw"
+    },
+    {
+      "id": "Tm9j9JfX",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "GIVETROOPS",
+          "clientID": "CXorUmhw",
+          "clanTag": "UN"
+        },
+        {
+          "username": "duruwa",
+          "clientID": "rWBJTVqg",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 990,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T16:26:07.263Z",
+      "url": "https://openfront.io/game/Tm9j9JfX"
     }
   ],
   "trios": [
