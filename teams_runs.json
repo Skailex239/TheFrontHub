@@ -21967,6 +21967,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T04:32:22.884Z",
       "url": "https://openfront.io/game/mwwMrVev"
+    },
+    {
+      "id": "yEucvwpD",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Damocles",
+          "clientID": "qd3jeP5r",
+          "clanTag": "BOOG"
+        },
+        {
+          "username": "Lego",
+          "clientID": "oYaCZQZ1",
+          "clanTag": "BOOG"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 597,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T04:47:42.802Z",
+      "url": "https://openfront.io/game/yEucvwpD"
+    },
+    {
+      "id": "5yca5KWg",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Demsa",
+          "clientID": "KSefxDeC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCrimson8",
+          "clientID": "4bYxHkj7",
+          "clanTag": null
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 898,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T04:42:05.954Z",
+      "url": "https://openfront.io/game/5yca5KWg"
     }
   ],
   "trios": [
