@@ -28192,6 +28192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T19:56:58.861Z",
       "url": "https://openfront.io/game/piHX1hkq"
+    },
+    {
+      "id": "HX5WFhUE",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Chilliwack",
+          "clientID": "AW4kDPb4",
+          "clanTag": "CAN"
+        },
+        {
+          "username": "Anon217",
+          "clientID": "GtRcsGkK",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 654,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:04:58.873Z",
+      "url": "https://openfront.io/game/HX5WFhUE"
     }
   ],
   "trios": [
@@ -131547,6 +131572,161 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T19:44:22.564Z",
       "url": "https://openfront.io/game/MCbtEeyQ"
+    },
+    {
+      "id": "CciknJyv",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Quick Ben",
+          "clientID": "uK5CLGRY",
+          "clanTag": null
+        },
+        {
+          "username": "Skeels",
+          "clientID": "DQtEyp6S",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Turkulululululmanomenids",
+          "clientID": "FYWVfc9B",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Biff",
+          "clientID": "J7JkGRHk",
+          "clanTag": "UN"
+        },
+        {
+          "username": "APO",
+          "clientID": "bbje31bk",
+          "clanTag": null
+        },
+        {
+          "username": "BORT",
+          "clientID": "k9zW9Z9i",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBeetle1",
+          "clientID": "XKeVz4GJ",
+          "clanTag": null
+        },
+        {
+          "username": "zarch",
+          "clientID": "29VWfuiT",
+          "clanTag": "BGE"
+        },
+        {
+          "username": "ALihan Ersoy",
+          "clientID": "iVmgREpn",
+          "clanTag": "REIS"
+        },
+        {
+          "username": "AnonAmethyst8",
+          "clientID": "UsR1sGFX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFern9",
+          "clientID": "zdaWB2zN",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "T3AVvSxb",
+          "clanTag": null
+        },
+        {
+          "username": "M.P.S",
+          "clientID": "NQEYfkLr",
+          "clanTag": null
+        },
+        {
+          "username": "Vivien",
+          "clientID": "1BPBZDUA",
+          "clanTag": "AVT"
+        },
+        {
+          "username": "AnonUrchin7",
+          "clientID": "HtJthiE1",
+          "clanTag": null
+        },
+        {
+          "username": "Anon335",
+          "clientID": "JrgcUho7",
+          "clanTag": null
+        },
+        {
+          "username": "Wonderland",
+          "clientID": "ESw7D1Wa",
+          "clanTag": "POL"
+        },
+        {
+          "username": "Stalin",
+          "clientID": "hFzr9Ffh",
+          "clanTag": null
+        },
+        {
+          "username": "rattie",
+          "clientID": "NZn3eDMx",
+          "clanTag": null
+        },
+        {
+          "username": "Pecca",
+          "clientID": "SGiWW8aS",
+          "clanTag": null
+        },
+        {
+          "username": "leopoldum",
+          "clientID": "JdydDeJR",
+          "clanTag": null
+        },
+        {
+          "username": "Northumberland",
+          "clientID": "JDgLHrsx",
+          "clanTag": null
+        },
+        {
+          "username": "Muchacho",
+          "clientID": "nPnAb5Mj",
+          "clanTag": "GUSTO"
+        },
+        {
+          "username": "Nobody",
+          "clientID": "Kgi2rLzt",
+          "clanTag": null
+        },
+        {
+          "username": "cocacola",
+          "clientID": "LimYyurX",
+          "clanTag": "DOM"
+        },
+        {
+          "username": "Shadow",
+          "clientID": "ffxQGJLa",
+          "clanTag": "SG"
+        },
+        {
+          "username": "jFlag",
+          "clientID": "ThPauPYG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LVS",
+          "clientID": "kZi3WmhS",
+          "clanTag": "FLT"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 706,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T20:03:18.755Z",
+      "url": "https://openfront.io/game/CciknJyv"
     }
   ]
 }
