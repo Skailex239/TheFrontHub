@@ -28742,6 +28742,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T21:02:54.619Z",
       "url": "https://openfront.io/game/UJv29bDv"
+    },
+    {
+      "id": "aGcV97wX",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "FreeDimension",
+          "clientID": "fH3WVFMF",
+          "clanTag": null
+        },
+        {
+          "username": "Heiderbell",
+          "clientID": "Kh8YSyZJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1043,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T21:18:38.074Z",
+      "url": "https://openfront.io/game/aGcV97wX"
+    },
+    {
+      "id": "DWxv4aKW",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Hosein",
+          "clientID": "ASD89Y9Q",
+          "clanTag": "AST"
+        },
+        {
+          "username": "DERhuso",
+          "clientID": "oYojgBmg",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 546,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T21:28:07.665Z",
+      "url": "https://openfront.io/game/DWxv4aKW"
     }
   ],
   "trios": [
@@ -91848,6 +91898,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T21:16:42.974Z",
       "url": "https://openfront.io/game/EpC9SEUW"
+    },
+    {
+      "id": "CBmcYHVo",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ETICE",
+          "clientID": "9d12X3M1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "destructeurdedinosaure",
+          "clientID": "maaM4n8t",
+          "clanTag": null
+        },
+        {
+          "username": "YEASS",
+          "clientID": "uJ7PcGxd",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Z3R0",
+          "clientID": "tmMD8feg",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 687,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T21:25:51.034Z",
+      "url": "https://openfront.io/game/CBmcYHVo"
     }
   ],
   "team_custom": [
