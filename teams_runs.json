@@ -24717,6 +24717,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T12:05:40.245Z",
       "url": "https://openfront.io/game/nYqyoLuV"
+    },
+    {
+      "id": "sUuiwyNQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "DDZ",
+          "clientID": "idTXR1Jb",
+          "clanTag": null
+        },
+        {
+          "username": "TOTO",
+          "clientID": "tdHQX2Hv",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 2013,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T11:50:58.325Z",
+      "url": "https://openfront.io/game/sUuiwyNQ"
     }
   ],
   "trios": [
@@ -98395,6 +98420,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T12:01:44.013Z",
       "url": "https://openfront.io/game/6dP2mtkk"
+    },
+    {
+      "id": "6rveEh6V",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonPlow2",
+          "clientID": "bPYrqHXP",
+          "clanTag": null
+        },
+        {
+          "username": "SandNI99A",
+          "clientID": "AYaQrcqX",
+          "clanTag": "HUJ"
+        },
+        {
+          "username": "blob",
+          "clientID": "TExPdvdj",
+          "clanTag": null
+        },
+        {
+          "username": "Yotamol",
+          "clientID": "utmFaiNC",
+          "clanTag": "COOL"
+        },
+        {
+          "username": "yooo",
+          "clientID": "Z81Qv5Ty",
+          "clanTag": null
+        },
+        {
+          "username": "ANONE",
+          "clientID": "6YQXJ1Zc",
+          "clanTag": null
+        },
+        {
+          "username": "auauauau",
+          "clientID": "h1QmjRao",
+          "clanTag": "GGG"
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 684,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T12:12:56.190Z",
+      "url": "https://openfront.io/game/6rveEh6V"
     }
   ],
   "hvn": [
