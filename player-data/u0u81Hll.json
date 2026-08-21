@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-21T17:14:50.769Z",
+  "lastSyncedAt": "2026-08-21T17:17:21.683Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 2199,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.8,
+  "totalGames": 2200,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "MiLLVMLt",
+      "start": "2026-08-21T16:36:54.404Z",
+      "durationSeconds": 2417,
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 98,
+      "username": "Toan",
+      "clanTag": null
+    },
     {
       "gameId": "jgKJzknw",
       "start": "2026-08-21T13:36:12.538Z",

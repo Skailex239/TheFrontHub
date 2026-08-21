@@ -1,23 +1,23 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-21T17:14:53.713Z",
-  "lastSyncedAt": "2026-08-21T17:14:50.769Z",
-  "totalGames": 2199,
+  "computedAt": "2026-08-21T17:17:24.746Z",
+  "lastSyncedAt": "2026-08-21T17:17:21.683Z",
+  "totalGames": 2200,
   "careerWins": {
-    "ffaCasual": 383,
+    "ffaCasual": 384,
     "ffaRanked": 328,
     "teamCasual": 47,
     "teamRanked": 63
   },
-  "totalWins": 821,
-  "points": 4456,
+  "totalWins": 822,
+  "points": 4466,
   "level": 44,
-  "levelProgress": 56,
+  "levelProgress": 66,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 821,
+      "current": 822,
       "target": 1000
     },
     "playtime": {
@@ -39,26 +39,26 @@
     10
   ],
   "formatted": {
-    "points": "4 456",
-    "totalWins": "821",
-    "totalGames": "2 199",
+    "points": "4 466",
+    "totalWins": "822",
+    "totalGames": "2 200",
     "totalPlaytime": "23j 3h",
     "totalPlaytimeCompact": "23j 3h",
-    "avgGameDuration": "15m 8s",
+    "avgGameDuration": "15m 9s",
     "longestGame": "2h 40m",
     "winrate": "37%",
     "totalPlaytimeHours": "555h"
   },
   "playtime": {
-    "totalSec": 1998380,
-    "avgGameSec": 908.7676216462028,
+    "totalSec": 2000797,
+    "avgGameSec": 909.4531818181819,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1401,
-        "playtimeSec": 1619001,
-        "wins": 383
+        "games": 1402,
+        "playtimeSec": 1621418,
+        "wins": 384
       },
       "ffaRanked": {
         "games": 498,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 821,
+    "victory": 822,
     "defeat": 1049,
     "incomplete": 329
   },
@@ -452,6 +452,22 @@
       }
     },
     {
+      "map": "Dyslexdria",
+      "count": 19,
+      "wins": 9,
+      "losses": 10,
+      "playtimeSec": 33944,
+      "avgDuration": 1786.5263157894738,
+      "winRate": 0.47368421052631576,
+      "lastPlayed": 1787330214404,
+      "formatted": {
+        "playtime": "9h 25m",
+        "avgDuration": "29m",
+        "winRate": "47%",
+        "lastPlayed": "21/08/26"
+      }
+    },
+    {
       "map": "Alps",
       "count": 19,
       "wins": 3,
@@ -513,22 +529,6 @@
         "avgDuration": "23m",
         "winRate": "22%",
         "lastPlayed": "20/08/26"
-      }
-    },
-    {
-      "map": "Dyslexdria",
-      "count": 18,
-      "wins": 8,
-      "losses": 10,
-      "playtimeSec": 31527,
-      "avgDuration": 1751.5,
-      "winRate": 0.4444444444444444,
-      "lastPlayed": 1786799207932,
-      "formatted": {
-        "playtime": "8h 45m",
-        "avgDuration": "29m",
-        "winRate": "44%",
-        "lastPlayed": "15/08/26"
       }
     },
     {
@@ -1672,7 +1672,7 @@
       145,
       136,
       201,
-      201,
+      202,
       227,
       198,
       149,
@@ -1684,7 +1684,7 @@
       225,
       300,
       334,
-      353,
+      354,
       364,
       321
     ],
@@ -1911,8 +1911,8 @@
       },
       {
         "date": "21/08/2026",
-        "count": 7,
-        "playtimeSec": 7560
+        "count": 8,
+        "playtimeSec": 9977
       },
       {
         "date": "22/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "MiLLVMLt",
+      "start": "2026-08-21T16:36:54.404Z",
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 2417,
+      "totalPlayers": 98,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "o4sopUeH",
       "start": "2026-08-21T13:28:10.293Z",
@@ -2427,17 +2438,6 @@
       "result": "victory",
       "durationSeconds": 913,
       "totalPlayers": 62,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "WUGVoBJD",
-      "start": "2026-08-19T16:01:09.169Z",
-      "map": "Alps",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1610,
-      "totalPlayers": 122,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
