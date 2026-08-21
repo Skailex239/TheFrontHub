@@ -48796,6 +48796,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T05:55:54.889Z",
       "url": "https://openfront.io/game/zdsNhxhr"
+    },
+    {
+      "id": "7Mu77keT",
+      "mode": "trios",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "CrusaderWaffen",
+          "clientID": "1WdtDJ4d",
+          "clanTag": null
+        },
+        {
+          "username": "ApeTeammates",
+          "clientID": "6masxQ9y",
+          "clanTag": null
+        },
+        {
+          "username": "Rawr",
+          "clientID": "RzfKH11d",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1070,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 46,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T05:59:43.611Z",
+      "url": "https://openfront.io/game/7Mu77keT"
     }
   ],
   "quads": [
