@@ -59436,6 +59436,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T20:31:44.578Z",
       "url": "https://openfront.io/game/avR5A9kh"
+    },
+    {
+      "id": "ofsF4yDo",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "WarshipMaxxing",
+          "clientID": "9GUyXdMv",
+          "clanTag": null
+        },
+        {
+          "username": "Hugo",
+          "clientID": "SwNhvkRx",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "goldy",
+          "clientID": "tpiuuKRf",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 827,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T20:37:55.029Z",
+      "url": "https://openfront.io/game/ofsF4yDo"
     }
   ],
   "quads": [
@@ -91013,6 +91043,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T20:25:59.214Z",
       "url": "https://openfront.io/game/Dxiud3p3"
+    },
+    {
+      "id": "ke3PpkEf",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "ARHO",
+          "clientID": "Wbxa2213",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Borg",
+          "clientID": "MjddSRfx",
+          "clanTag": null
+        },
+        {
+          "username": "Ziel",
+          "clientID": "yvFLAQxP",
+          "clanTag": null
+        },
+        {
+          "username": "papier",
+          "clientID": "LA1BXGnV",
+          "clanTag": "100"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 1052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T20:33:45.722Z",
+      "url": "https://openfront.io/game/ke3PpkEf"
     }
   ],
   "team_custom": [
