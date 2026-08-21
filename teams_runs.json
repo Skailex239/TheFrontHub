@@ -60171,6 +60171,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T21:34:51.710Z",
       "url": "https://openfront.io/game/Bh7DiAs8"
+    },
+    {
+      "id": "Y3wRpKA9",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Turan",
+          "clientID": "WTnPaiGm",
+          "clanTag": null
+        },
+        {
+          "username": "Enigma",
+          "clientID": "GQgisYGu",
+          "clanTag": "ITA"
+        },
+        {
+          "username": ". .",
+          "clientID": "ZpQDuzQm",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 729,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T21:40:09.196Z",
+      "url": "https://openfront.io/game/Y3wRpKA9"
     }
   ],
   "quads": [
@@ -116260,6 +116290,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-21T21:32:21.478Z",
       "url": "https://openfront.io/game/Zj2hVFvR"
+    },
+    {
+      "id": "fFRYJo26",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "dfgh",
+          "clientID": "4RHv1Ej7",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "MEV EN STRING",
+          "clientID": "LtHZwEY5",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "THEO SANS NONOCHE",
+          "clientID": "iqA7XkcF",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "Noah",
+          "clientID": "tJotiRJg",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "AnonRainbow2",
+          "clientID": "t2SyGmpH",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1264,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T21:30:36.327Z",
+      "url": "https://openfront.io/game/fFRYJo26"
     }
   ],
   "hvn": [
