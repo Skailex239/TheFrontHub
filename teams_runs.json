@@ -25192,6 +25192,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:54:12.714Z",
       "url": "https://openfront.io/game/2FNy2Nfs"
+    },
+    {
+      "id": "6uimjFH4",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Z3z3zzzzz",
+          "clientID": "xGZztFRt",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFrog3",
+          "clientID": "FbTnfvcX",
+          "clanTag": "MEOW"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 741,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:54:45.245Z",
+      "url": "https://openfront.io/game/6uimjFH4"
+    },
+    {
+      "id": "anYjG7A5",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonCactus1",
+          "clientID": "h9zZdoZ9",
+          "clanTag": null
+        },
+        {
+          "username": "Fenny",
+          "clientID": "ogn4jSkK",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 633,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:57:06.912Z",
+      "url": "https://openfront.io/game/anYjG7A5"
     }
   ],
   "trios": [
