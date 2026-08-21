@@ -54516,6 +54516,96 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T14:08:59.964Z",
       "url": "https://openfront.io/game/NbXUKbti"
+    },
+    {
+      "id": "YLmpuPJ6",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TRADE UNION",
+          "clientID": "FAcsG6LG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Motte",
+          "clientID": "zsDCLczE",
+          "clanTag": "METT"
+        },
+        {
+          "username": "Pomp",
+          "clientID": "qPrXCKWF",
+          "clanTag": "BORT"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 723,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:22:27.333Z",
+      "url": "https://openfront.io/game/YLmpuPJ6"
+    },
+    {
+      "id": "m5tMe72k",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Roma Invicta",
+          "clientID": "yVw5HdRZ",
+          "clanTag": null
+        },
+        {
+          "username": "Tonas",
+          "clientID": "gn4m8USs",
+          "clanTag": "CZE"
+        },
+        {
+          "username": "anon",
+          "clientID": "MeTgbL3A",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1008,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:18:57.098Z",
+      "url": "https://openfront.io/game/m5tMe72k"
+    },
+    {
+      "id": "byuV5jgg",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "nnz",
+          "clientID": "jKeodecb",
+          "clanTag": null
+        },
+        {
+          "username": "Anon957",
+          "clientID": "VmyU1HFg",
+          "clanTag": null
+        },
+        {
+          "username": "Polish kingdom",
+          "clientID": "keDa6MMu",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 612,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T14:23:04.366Z",
+      "url": "https://openfront.io/game/byuV5jgg"
     }
   ],
   "quads": [
@@ -83713,6 +83803,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T14:19:43.147Z",
       "url": "https://openfront.io/game/a74p9Uno"
+    },
+    {
+      "id": "AM3DLTiA",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "mitu",
+          "clientID": "Wbth6NWj",
+          "clanTag": null
+        },
+        {
+          "username": "natutu",
+          "clientID": "VC26idYc",
+          "clanTag": "JP"
+        },
+        {
+          "username": "Azzertor",
+          "clientID": "eQEYhTKr",
+          "clanTag": "RCS"
+        },
+        {
+          "username": "Kouki7",
+          "clientID": "R43yMuqr",
+          "clanTag": "RCS"
+        }
+      ],
+      "map": "France",
+      "duration_s": 689,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T14:24:04.432Z",
+      "url": "https://openfront.io/game/AM3DLTiA"
     }
   ],
   "team_custom": [
