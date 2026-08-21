@@ -51271,6 +51271,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T09:49:31.360Z",
       "url": "https://openfront.io/game/3kcDSXc7"
+    },
+    {
+      "id": "FTfxNbrq",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Zamunda",
+          "clientID": "NauAHRn9",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "AnonRiddle4",
+          "clientID": "6WDuCL1z",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPlow6",
+          "clientID": "WMeJrELj",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 1392,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T09:40:06.758Z",
+      "url": "https://openfront.io/game/FTfxNbrq"
     }
   ],
   "quads": [
@@ -78648,6 +78678,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T09:30:52.209Z",
       "url": "https://openfront.io/game/n64ixbcC"
+    },
+    {
+      "id": "m8oXBmrU",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "patate",
+          "clientID": "pZmrBrUx",
+          "clanTag": null
+        },
+        {
+          "username": "butts",
+          "clientID": "VC3KeufM",
+          "clanTag": null
+        },
+        {
+          "username": "Orechnick",
+          "clientID": "5QTdRXAX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBronze8",
+          "clientID": "nUBmRQHt",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 736,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T09:51:26.969Z",
+      "url": "https://openfront.io/game/m8oXBmrU"
     }
   ],
   "team_custom": [
