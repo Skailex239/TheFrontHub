@@ -29167,6 +29167,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:31:49.314Z",
       "url": "https://openfront.io/game/WVny9fBM"
+    },
+    {
+      "id": "acZGGKGs",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Commonwealth",
+          "clientID": "i2r39Ppj",
+          "clanTag": null
+        },
+        {
+          "username": "Ronaldo",
+          "clientID": "EhkNrcQs",
+          "clanTag": "CCP"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 913,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:28:10.052Z",
+      "url": "https://openfront.io/game/acZGGKGs"
+    },
+    {
+      "id": "EHnaWLbM",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Lassius Big",
+          "clientID": "GeLsGbXM",
+          "clanTag": null
+        },
+        {
+          "username": "FilouSinge",
+          "clientID": "uERGuyYE",
+          "clanTag": "FAH"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 537,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T22:32:49.396Z",
+      "url": "https://openfront.io/game/EHnaWLbM"
     }
   ],
   "trios": [
@@ -137182,6 +137232,111 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T22:22:27.007Z",
       "url": "https://openfront.io/game/negJ7LxU"
+    },
+    {
+      "id": "LedrAD8A",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Kubikula",
+          "clientID": "maLcrAE9",
+          "clanTag": null
+        },
+        {
+          "username": "Chasselas",
+          "clientID": "HKZ8Zi4W",
+          "clanTag": null
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "6nLBKJsM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSeal1",
+          "clientID": "JMw59S3e",
+          "clanTag": null
+        },
+        {
+          "username": "high",
+          "clientID": "GYeKhUiT",
+          "clanTag": null
+        },
+        {
+          "username": "TedoSifona",
+          "clientID": "mzzjHpwS",
+          "clanTag": null
+        },
+        {
+          "username": "FreakNastyy",
+          "clientID": "G7ghxZjA",
+          "clanTag": "RATS"
+        },
+        {
+          "username": "MHAMMAD",
+          "clientID": "MtT1MbNN",
+          "clanTag": "AN"
+        },
+        {
+          "username": "MATINMYNX",
+          "clientID": "N5ptMWdN",
+          "clanTag": null
+        },
+        {
+          "username": "UNION RAT",
+          "clientID": "4cHUSZAY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SapaLot",
+          "clientID": "zG2dLDt6",
+          "clanTag": null
+        },
+        {
+          "username": "Grim Fort",
+          "clientID": "VPCKpsod",
+          "clanTag": null
+        },
+        {
+          "username": "Troia",
+          "clientID": "nHJCtSk8",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Sar",
+          "clientID": "Wos43XFW",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "SLBpJd6G",
+          "clanTag": null
+        },
+        {
+          "username": "JayWasTaken",
+          "clientID": "8Pu8Qfov",
+          "clanTag": null
+        },
+        {
+          "username": "amjad_ashraf",
+          "clientID": "QqksHv8w",
+          "clanTag": null
+        },
+        {
+          "username": "Bugzinga",
+          "clientID": "kmJKHzZX",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1099,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 41,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T22:23:49.619Z",
+      "url": "https://openfront.io/game/LedrAD8A"
     }
   ]
 }
