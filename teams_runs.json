@@ -49251,6 +49251,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T06:39:16.431Z",
       "url": "https://openfront.io/game/GPVn6yPJ"
+    },
+    {
+      "id": "ScEhFry6",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Zamunda",
+          "clientID": "612ijhit",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "supla",
+          "clientID": "yd5cRqiA",
+          "clanTag": null
+        },
+        {
+          "username": "Bobug",
+          "clientID": "mZH2AiR5",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 414,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T06:56:57.054Z",
+      "url": "https://openfront.io/game/ScEhFry6"
     }
   ],
   "quads": [
@@ -89720,6 +89750,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T06:41:30.563Z",
       "url": "https://openfront.io/game/X92Bq8Sf"
+    },
+    {
+      "id": "MBdmExFZ",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Great California Khaganate",
+          "clientID": "HV4eFDAo",
+          "clanTag": null
+        },
+        {
+          "username": "KURDISTAN",
+          "clientID": "G79DBjAh",
+          "clanTag": null
+        },
+        {
+          "username": "Cabbagebir",
+          "clientID": "JQFr43iu",
+          "clanTag": "BRUH"
+        },
+        {
+          "username": "The Cross Guild",
+          "clientID": "3hyxU91o",
+          "clanTag": null
+        },
+        {
+          "username": "AnonObelisk6",
+          "clientID": "JZ3rgCdg",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTemple",
+          "clientID": "eCXYd98r",
+          "clanTag": null
+        },
+        {
+          "username": "Alison Bergers",
+          "clientID": "JEtHP2yh",
+          "clanTag": "AB"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1188,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T06:44:23.234Z",
+      "url": "https://openfront.io/game/MBdmExFZ"
     }
   ],
   "hvn": [
