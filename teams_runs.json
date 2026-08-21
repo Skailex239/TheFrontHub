@@ -23017,6 +23017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:52:10.780Z",
       "url": "https://openfront.io/game/otpPkQYE"
+    },
+    {
+      "id": "y1CsJ4js",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AGX",
+          "clientID": "DmD3hgXw",
+          "clanTag": null
+        },
+        {
+          "username": "NuclearReactor",
+          "clientID": "xXjM4DWh",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "North America",
+      "duration_s": 747,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:53:55.373Z",
+      "url": "https://openfront.io/game/y1CsJ4js"
     }
   ],
   "trios": [
@@ -91240,6 +91265,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T07:44:02.791Z",
       "url": "https://openfront.io/game/P7soqq6V"
+    },
+    {
+      "id": "yQxwoujY",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "b9gabxMT",
+          "clanTag": null
+        },
+        {
+          "username": "yea",
+          "clientID": "2dYngTMT",
+          "clanTag": null
+        },
+        {
+          "username": "_Ye",
+          "clientID": "AFg38GMf",
+          "clanTag": "HH"
+        },
+        {
+          "username": "Siv",
+          "clientID": "DmoWPjL3",
+          "clanTag": null
+        },
+        {
+          "username": "Holy Greek Empire",
+          "clientID": "Sajk58Jz",
+          "clanTag": null
+        },
+        {
+          "username": "Anon762",
+          "clientID": "Bxvdbnys",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMagenta1",
+          "clientID": "jqLcZEop",
+          "clanTag": "6767"
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 1007,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 6,
+      "timestamp": "2026-08-21T07:48:06.033Z",
+      "url": "https://openfront.io/game/yQxwoujY"
     }
   ],
   "hvn": [
