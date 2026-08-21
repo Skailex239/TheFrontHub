@@ -29592,6 +29592,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T23:45:19.721Z",
       "url": "https://openfront.io/game/GVLDkxF6"
+    },
+    {
+      "id": "SuehvziD",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "xMix",
+          "clientID": "cZ49WoFv",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "Shadow",
+          "clientID": "PhP9bKLk",
+          "clanTag": "SG"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 630,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T23:43:18.574Z",
+      "url": "https://openfront.io/game/SuehvziD"
+    },
+    {
+      "id": "EC1egHo2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Cymru",
+          "clientID": "jiEbR68w",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Troy",
+          "clientID": "zPmug9Gq",
+          "clanTag": "SCH"
+        }
+      ],
+      "map": "World",
+      "duration_s": 750,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T23:39:43.821Z",
+      "url": "https://openfront.io/game/EC1egHo2"
     }
   ],
   "trios": [
