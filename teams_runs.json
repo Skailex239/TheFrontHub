@@ -49121,6 +49121,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T06:35:49.239Z",
       "url": "https://openfront.io/game/GkyWFy7K"
+    },
+    {
+      "id": "GPVn6yPJ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonNebula4",
+          "clientID": "qwLR3cdm",
+          "clanTag": null
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "uUrsMSY6",
+          "clanTag": null
+        },
+        {
+          "username": "GreaterTurkey",
+          "clientID": "drkCcZ6p",
+          "clanTag": "TUR"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 750,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T06:39:16.431Z",
+      "url": "https://openfront.io/game/GPVn6yPJ"
     }
   ],
   "quads": [
@@ -89495,6 +89525,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T06:14:19.479Z",
       "url": "https://openfront.io/game/UPZYj7TD"
+    },
+    {
+      "id": "v18nUbHD",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "prada",
+          "clientID": "AUVNkAJc",
+          "clanTag": "UN"
+        },
+        {
+          "username": "plis no poosh",
+          "clientID": "4jbjvamE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Dat Brot is im Ofen",
+          "clientID": "nVjh9JCC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTruffle7",
+          "clientID": "bxQ9hd2j",
+          "clanTag": null
+        },
+        {
+          "username": "Rin",
+          "clientID": "p6TN9Xv8",
+          "clanTag": null
+        },
+        {
+          "username": "ManInTheCastle",
+          "clientID": "bsuTAa5n",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1094,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T06:33:19.098Z",
+      "url": "https://openfront.io/game/v18nUbHD"
     }
   ],
   "hvn": [
