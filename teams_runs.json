@@ -28692,6 +28692,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T20:28:23.840Z",
       "url": "https://openfront.io/game/DTXX8pqS"
+    },
+    {
+      "id": "SKeDb2uX",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Linkin Park",
+          "clientID": "5wAZWfKA",
+          "clanTag": null
+        },
+        {
+          "username": "Anon 67",
+          "clientID": "vEBGz5cC",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 1247,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T20:59:30.394Z",
+      "url": "https://openfront.io/game/SKeDb2uX"
     }
   ],
   "trios": [
@@ -59756,6 +59781,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T20:50:33.799Z",
       "url": "https://openfront.io/game/eDuuwdZp"
+    },
+    {
+      "id": "kfigRaNT",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DAITANIC",
+          "clientID": "z8hDKpQJ",
+          "clanTag": "26"
+        },
+        {
+          "username": "ah26",
+          "clientID": "A2KmfUw3",
+          "clanTag": "26"
+        },
+        {
+          "username": "Anon654",
+          "clientID": "FGqefCnU",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1299,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T20:58:33.840Z",
+      "url": "https://openfront.io/game/kfigRaNT"
     }
   ],
   "quads": [
@@ -91508,6 +91563,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T21:08:03.915Z",
       "url": "https://openfront.io/game/M63wAx7N"
+    },
+    {
+      "id": "mB44CaRb",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "X78wW3Zn",
+          "clanTag": null
+        },
+        {
+          "username": "Quartel",
+          "clientID": "EnbRnWnf",
+          "clanTag": "URSAL"
+        },
+        {
+          "username": "Gobble",
+          "clientID": "YYzmyyS6",
+          "clanTag": null
+        },
+        {
+          "username": "butts",
+          "clientID": "nZjcMeuq",
+          "clanTag": "UP"
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 773,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T21:06:44.834Z",
+      "url": "https://openfront.io/game/mB44CaRb"
     }
   ],
   "team_custom": [
