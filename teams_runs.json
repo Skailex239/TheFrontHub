@@ -29342,6 +29342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T22:43:03.075Z",
       "url": "https://openfront.io/game/AmxNguRB"
+    },
+    {
+      "id": "PVyf4gMF",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Arialis",
+          "clientID": "9MWWmyq2",
+          "clanTag": "TRISO"
+        },
+        {
+          "username": "Kohout",
+          "clientID": "a1QsL61m",
+          "clanTag": "TRISO"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 673,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T22:50:01.011Z",
+      "url": "https://openfront.io/game/PVyf4gMF"
     }
   ],
   "trios": [
