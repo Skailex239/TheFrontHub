@@ -22642,6 +22642,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:03:44.452Z",
       "url": "https://openfront.io/game/ggymBfVE"
+    },
+    {
+      "id": "Suu6VvQG",
+      "mode": "duos",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "SALEH",
+          "clientID": "dQz2HzsN",
+          "clanTag": "SALY"
+        },
+        {
+          "username": "bariavungtau vietnam ae 72",
+          "clientID": "7txF6HMr",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 2034,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T06:43:11.656Z",
+      "url": "https://openfront.io/game/Suu6VvQG"
     }
   ],
   "trios": [
@@ -49446,6 +49471,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T07:06:46.631Z",
       "url": "https://openfront.io/game/KRfS6JPH"
+    },
+    {
+      "id": "o271Tevi",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Rat beats duck always",
+          "clientID": "qHvPW7cK",
+          "clanTag": "BDN"
+        },
+        {
+          "username": "the wordle is trace",
+          "clientID": "htW6ENt5",
+          "clanTag": "BDN"
+        },
+        {
+          "username": "Gearluck",
+          "clientID": "ThTvXkJr",
+          "clanTag": "BDN"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T06:47:56.965Z",
+      "url": "https://openfront.io/game/o271Tevi"
     }
   ],
   "quads": [
