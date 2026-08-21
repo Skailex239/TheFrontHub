@@ -22717,6 +22717,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T07:05:32.553Z",
       "url": "https://openfront.io/game/37StAsRd"
+    },
+    {
+      "id": "kdcNSDd3",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "CooperShelda",
+          "clientID": "GwWFiVvT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "KURSK118",
+          "clientID": "u66bQ2oh",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1183,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T07:11:28.393Z",
+      "url": "https://openfront.io/game/kdcNSDd3"
     }
   ],
   "trios": [
@@ -49551,6 +49576,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T06:47:56.965Z",
       "url": "https://openfront.io/game/o271Tevi"
+    },
+    {
+      "id": "cpZzrBd1",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "1888",
+          "clientID": "ED5ohy66",
+          "clanTag": null
+        },
+        {
+          "username": "sithlurd",
+          "clientID": "xDoNb463",
+          "clanTag": null
+        },
+        {
+          "username": "Anon",
+          "clientID": "BPePzkhA",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T07:19:26.866Z",
+      "url": "https://openfront.io/game/cpZzrBd1"
     }
   ],
   "quads": [
