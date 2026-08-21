@@ -20992,6 +20992,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T00:42:54.095Z",
       "url": "https://openfront.io/game/Mw74okdW"
+    },
+    {
+      "id": "XUkFHN7H",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mulberry",
+          "clientID": "bB7oBi1U",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLizard1",
+          "clientID": "QS8yXGmp",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 900,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T00:57:57.611Z",
+      "url": "https://openfront.io/game/XUkFHN7H"
+    },
+    {
+      "id": "FcTvJ7Qo",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SkyAngel.oapg",
+          "clientID": "AGoR6DRu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLadder2",
+          "clientID": "1yJhMLuk",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 2558,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 106,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T00:30:38.280Z",
+      "url": "https://openfront.io/game/FcTvJ7Qo"
     }
   ],
   "trios": [
@@ -71998,6 +72048,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T00:52:59.756Z",
       "url": "https://openfront.io/game/uW14MVHx"
+    },
+    {
+      "id": "FWkEkKh4",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Feed OoO",
+          "clientID": "zBAbAA3h",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Yuri",
+          "clientID": "shPn4CXo",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Gustavph",
+          "clientID": "emqhRbBc",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "GVM",
+          "clientID": "8G8VsjbQ",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 779,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 37,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-21T01:00:32.936Z",
+      "url": "https://openfront.io/game/FWkEkKh4"
     }
   ],
   "team_custom": [
