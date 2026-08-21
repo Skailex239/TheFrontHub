@@ -24967,6 +24967,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T12:16:12.383Z",
       "url": "https://openfront.io/game/yUT5JRXa"
+    },
+    {
+      "id": "zXy42jtF",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "677891",
+          "clientID": "KrWaJgiD",
+          "clanTag": null
+        },
+        {
+          "username": "Dainihonteikoku",
+          "clientID": "45vRCsfz",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1248,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T12:19:03.057Z",
+      "url": "https://openfront.io/game/zXy42jtF"
     }
   ],
   "trios": [
@@ -98935,6 +98960,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T12:11:27.094Z",
       "url": "https://openfront.io/game/K33eEV4W"
+    },
+    {
+      "id": "NpeRn5Ns",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Anon",
+          "clientID": "a1sVFrLN",
+          "clanTag": null
+        },
+        {
+          "username": "Goule Disco",
+          "clientID": "8JMsQkZD",
+          "clanTag": "LBR"
+        },
+        {
+          "username": "AnonWindmill9",
+          "clientID": "BcSC3vLH",
+          "clanTag": null
+        },
+        {
+          "username": "Muffin",
+          "clientID": "UXFeopu3",
+          "clanTag": "MILK"
+        },
+        {
+          "username": "Hmm...",
+          "clientID": "ZzfwNSvQ",
+          "clanTag": null
+        },
+        {
+          "username": "Grinder",
+          "clientID": "2g6StoL3",
+          "clanTag": "DEF"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1529,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T12:15:12.820Z",
+      "url": "https://openfront.io/game/NpeRn5Ns"
     }
   ],
   "hvn": [
