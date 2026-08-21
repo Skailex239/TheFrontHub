@@ -79018,6 +79018,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T10:04:47.264Z",
       "url": "https://openfront.io/game/oZwUrpXT"
+    },
+    {
+      "id": "gYUXEGyS",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonPumpkin6",
+          "clientID": "CcdDtAtw",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLizard4",
+          "clientID": "aaG983s9",
+          "clanTag": null
+        },
+        {
+          "username": "WhoWho",
+          "clientID": "SR2CNRLC",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "AnonLantern4",
+          "clientID": "M1G5LGpr",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 966,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-21T10:14:03.825Z",
+      "url": "https://openfront.io/game/gYUXEGyS"
     }
   ],
   "team_custom": [
@@ -95095,6 +95130,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-21T10:09:42.584Z",
       "url": "https://openfront.io/game/GJD83bXo"
+    },
+    {
+      "id": "1W37WFXu",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ATAKE TU AR GATAKES",
+          "clientID": "KC7xNzqj",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BECH",
+          "clientID": "uXs9qy3N",
+          "clanTag": null
+        },
+        {
+          "username": "Speedymaza",
+          "clientID": "gw6ic95r",
+          "clanTag": null
+        },
+        {
+          "username": "Send troops",
+          "clientID": "pjKxm8oe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "bomber_nation",
+          "clientID": "3cWmARuj",
+          "clanTag": null
+        },
+        {
+          "username": "Trade",
+          "clientID": "rwvLnC7g",
+          "clanTag": null
+        },
+        {
+          "username": "MaskedMagnate",
+          "clientID": "nEzCYbuC",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 585,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 5,
+      "timestamp": "2026-08-21T10:20:07.193Z",
+      "url": "https://openfront.io/game/1W37WFXu"
     }
   ],
   "hvn": [
