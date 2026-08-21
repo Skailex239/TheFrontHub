@@ -27042,6 +27042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T17:24:54.936Z",
       "url": "https://openfront.io/game/SpTZWCn4"
+    },
+    {
+      "id": "PyYLYV5U",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "skulli",
+          "clientID": "A6DbNWn1",
+          "clanTag": null
+        },
+        {
+          "username": "Big Muscles",
+          "clientID": "DBvNxMDd",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1347,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T17:22:55.827Z",
+      "url": "https://openfront.io/game/PyYLYV5U"
     }
   ],
   "trios": [
@@ -56816,6 +56841,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T17:28:53.698Z",
       "url": "https://openfront.io/game/P6KbyBdE"
+    },
+    {
+      "id": "JzBGY6CF",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "najsamak",
+          "clientID": "3H7pcy7K",
+          "clanTag": null
+        },
+        {
+          "username": "Pap",
+          "clientID": "3s3GryBw",
+          "clanTag": null
+        },
+        {
+          "username": "WhoWho",
+          "clientID": "cEMqBb1L",
+          "clanTag": "TAG"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 433,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T17:37:50.796Z",
+      "url": "https://openfront.io/game/JzBGY6CF"
     }
   ],
   "quads": [
