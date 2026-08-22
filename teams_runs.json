@@ -32392,6 +32392,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:49:28.191Z",
       "url": "https://openfront.io/game/sMbgZqQY"
+    },
+    {
+      "id": "N6GvmSP3",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "FIDES",
+          "clientID": "mqLrQ8LJ",
+          "clanTag": "OKAY"
+        },
+        {
+          "username": "Alright",
+          "clientID": "Fj1EwGNq",
+          "clanTag": "OKAY"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1739,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T09:45:05.945Z",
+      "url": "https://openfront.io/game/N6GvmSP3"
     }
   ],
   "trios": [
