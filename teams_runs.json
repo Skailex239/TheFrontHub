@@ -74851,6 +74851,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T22:42:28.616Z",
       "url": "https://openfront.io/game/ZxpJwvjn"
+    },
+    {
+      "id": "KaPZnrug",
+      "mode": "trios",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Popop",
+          "clientID": "4pyg3adL",
+          "clanTag": null
+        },
+        {
+          "username": "Rysialdo",
+          "clientID": "2GmTYSny",
+          "clanTag": null
+        },
+        {
+          "username": "Borat_The_Kazakh",
+          "clientID": "mrPvtHyb",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 634,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T22:55:21.826Z",
+      "url": "https://openfront.io/game/KaPZnrug"
+    },
+    {
+      "id": "ricRyvwS",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "The Grandma Gary",
+          "clientID": "aovZrv6a",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "T7dYit1G",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "V A L Z",
+          "clientID": "kDSUHgua",
+          "clanTag": "BRAVE"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 660,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T22:54:44.249Z",
+      "url": "https://openfront.io/game/ricRyvwS"
     }
   ],
   "quads": [
@@ -113078,6 +113138,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T22:48:08.646Z",
       "url": "https://openfront.io/game/KHnfnHpK"
+    },
+    {
+      "id": "1GMmnSEk",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "mamad",
+          "clientID": "NDeLXkbz",
+          "clanTag": "110"
+        },
+        {
+          "username": "I not mean only trade",
+          "clientID": "wyHXWrqi",
+          "clanTag": null
+        },
+        {
+          "username": "Daey Abol",
+          "clientID": "3vCQ9FgS",
+          "clanTag": "110"
+        },
+        {
+          "username": "yoy_le_cake_pap_rika",
+          "clientID": "m4yV9b8r",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 749,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T22:53:59.171Z",
+      "url": "https://openfront.io/game/1GMmnSEk"
     }
   ],
   "team_custom": [
