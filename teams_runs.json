@@ -72376,6 +72376,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T18:44:00.841Z",
       "url": "https://openfront.io/game/mW89BT1r"
+    },
+    {
+      "id": "TJ2NqfKc",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Odysseus",
+          "clientID": "M8Hmjq1C",
+          "clanTag": "CR7"
+        },
+        {
+          "username": "Korinthe",
+          "clientID": "ySFiMqrJ",
+          "clanTag": null
+        },
+        {
+          "username": "SIUUUUUUUU",
+          "clientID": "eTCn3VAZ",
+          "clanTag": "CR7"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 1362,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T18:47:02.600Z",
+      "url": "https://openfront.io/game/TJ2NqfKc"
+    },
+    {
+      "id": "GznsezbX",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "au ramxela maq ra",
+          "clientID": "wyF8VRur",
+          "clanTag": "DIDI"
+        },
+        {
+          "username": "Nokia",
+          "clientID": "mgidAzrL",
+          "clanTag": "DIDI"
+        },
+        {
+          "username": "Württemberg",
+          "clientID": "NhoLpj39",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1234,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T18:49:16.784Z",
+      "url": "https://openfront.io/game/GznsezbX"
     }
   ],
   "quads": [
