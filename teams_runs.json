@@ -30042,6 +30042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T00:44:08.445Z",
       "url": "https://openfront.io/game/1miUF7oC"
+    },
+    {
+      "id": "kC7FrPoQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Nobeard",
+          "clientID": "dibB4izU",
+          "clanTag": "ECH"
+        },
+        {
+          "username": "extractmetrics.com",
+          "clientID": "JofcV6jx",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 755,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 62,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T00:55:48.181Z",
+      "url": "https://openfront.io/game/kC7FrPoQ"
     }
   ],
   "trios": [
@@ -120205,6 +120230,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T00:34:38.833Z",
       "url": "https://openfront.io/game/DaHqfCwi"
+    },
+    {
+      "id": "ok57CFkN",
+      "mode": "team_custom",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "Umgah",
+          "clientID": "fN1qUjtx",
+          "clanTag": null
+        },
+        {
+          "username": "supp",
+          "clientID": "AfyaMd4A",
+          "clanTag": null
+        },
+        {
+          "username": "toto",
+          "clientID": "p5M71AH2",
+          "clanTag": "TO"
+        },
+        {
+          "username": "Hullo",
+          "clientID": "uJT7srG6",
+          "clanTag": null
+        },
+        {
+          "username": "ahmad",
+          "clientID": "qwPf48To",
+          "clanTag": "FFA"
+        },
+        {
+          "username": "Kakashka",
+          "clientID": "DB9gYsuq",
+          "clanTag": null
+        },
+        {
+          "username": "Ziel",
+          "clientID": "f2KqUzey",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T00:50:12.813Z",
+      "url": "https://openfront.io/game/ok57CFkN"
     }
   ],
   "hvn": [
