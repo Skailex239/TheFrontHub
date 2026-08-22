@@ -36867,6 +36867,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:26:01.192Z",
       "url": "https://openfront.io/game/NcqMGz27"
+    },
+    {
+      "id": "KyekRRk5",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "whuulfi",
+          "clientID": "CNvVM7kP",
+          "clanTag": "BRP"
+        },
+        {
+          "username": "Makafaka",
+          "clientID": "rAAfVUCT",
+          "clanTag": "P1SUN"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 465,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:29:20.008Z",
+      "url": "https://openfront.io/game/KyekRRk5"
     }
   ],
   "trios": [
@@ -74021,6 +74046,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T20:48:54.605Z",
       "url": "https://openfront.io/game/xyX5Lcqs"
+    },
+    {
+      "id": "xMjLzXBD",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Shumi",
+          "clientID": "XbSNGExi",
+          "clanTag": null
+        },
+        {
+          "username": "Comet",
+          "clientID": "Ci4KqPYK",
+          "clanTag": null
+        },
+        {
+          "username": "KOR",
+          "clientID": "tEARYT4S",
+          "clanTag": "ROK"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 806,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T21:22:42.374Z",
+      "url": "https://openfront.io/game/xMjLzXBD"
     }
   ],
   "quads": [
@@ -148315,6 +148370,96 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T21:01:33.809Z",
       "url": "https://openfront.io/game/RaUk6xEm"
+    },
+    {
+      "id": "fLmepPzV",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Hieronymus",
+          "clientID": "kF4B6Tnu",
+          "clanTag": null
+        },
+        {
+          "username": "TheCinolas",
+          "clientID": "Gs7v7Gqv",
+          "clanTag": "IVDW"
+        },
+        {
+          "username": "H3rr1c0n",
+          "clientID": "L4g7uCpx",
+          "clanTag": "IVDW"
+        },
+        {
+          "username": "Tevry",
+          "clientID": "SsDeZMtu",
+          "clanTag": "IVDW"
+        },
+        {
+          "username": "Germany",
+          "clientID": "5vRhUGie",
+          "clanTag": null
+        },
+        {
+          "username": "KingK",
+          "clientID": "9knQ36RS",
+          "clanTag": "S04"
+        },
+        {
+          "username": "Backroom.",
+          "clientID": "gHvNMz7U",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 978,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T21:20:13.148Z",
+      "url": "https://openfront.io/game/fLmepPzV"
+    },
+    {
+      "id": "cVhC9AL4",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Titus Pullo",
+          "clientID": "9B55VRNC",
+          "clanTag": null
+        },
+        {
+          "username": "flo",
+          "clientID": "5rmNFnBu",
+          "clanTag": "CAMEL"
+        },
+        {
+          "username": "Timothy",
+          "clientID": "YL17HEjh",
+          "clanTag": null
+        },
+        {
+          "username": "dogbreath",
+          "clientID": "6boB8Lyq",
+          "clanTag": null
+        },
+        {
+          "username": "Dumb Muslim Dog",
+          "clientID": "Kz8oiWHv",
+          "clanTag": "M4D"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 989,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T21:20:56.227Z",
+      "url": "https://openfront.io/game/cVhC9AL4"
     }
   ],
   "hvn": [
