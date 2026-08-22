@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-22T12:53:37.453Z",
-  "lastSyncedAt": "2026-08-22T12:53:35.048Z",
-  "totalGames": 2222,
+  "computedAt": "2026-08-22T12:55:43.146Z",
+  "lastSyncedAt": "2026-08-22T12:55:40.101Z",
+  "totalGames": 2223,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 488",
     "totalWins": "840",
-    "totalGames": "2 222",
+    "totalGames": "2 223",
     "totalPlaytime": "23j 5h",
     "totalPlaytimeCompact": "23j 5h",
     "avgGameDuration": "15m 3s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "557h"
   },
   "playtime": {
-    "totalSec": 2008100,
-    "avgGameSec": 903.7353735373538,
+    "totalSec": 2008131,
+    "avgGameSec": 903.3427800269906,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -71,8 +71,8 @@
         "wins": 48
       },
       "teamRanked": {
-        "games": 122,
-        "playtimeSec": 35323,
+        "games": 123,
+        "playtimeSec": 35354,
         "wins": 80
       }
     }
@@ -80,7 +80,7 @@
   "results": {
     "victory": 840,
     "defeat": 1050,
-    "incomplete": 332
+    "incomplete": 333
   },
   "maps": [
     {
@@ -1668,7 +1668,7 @@
       70,
       76,
       127,
-      130,
+      131,
       145,
       136,
       201,
@@ -1685,7 +1685,7 @@
       300,
       334,
       371,
-      369,
+      370,
       321
     ],
     "byDay": [
@@ -1931,8 +1931,8 @@
       },
       {
         "date": "22/08/2026",
-        "count": 5,
-        "playtimeSec": 1483
+        "count": 6,
+        "playtimeSec": 1514
       },
       {
         "date": "23/01/2026",
