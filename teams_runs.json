@@ -108758,6 +108758,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T18:00:39.114Z",
       "url": "https://openfront.io/game/C1ztn4tg"
+    },
+    {
+      "id": "afnCsThm",
+      "mode": "quads",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "Maho",
+          "clientID": "pFmUHWHb",
+          "clanTag": null
+        },
+        {
+          "username": "BobaPanda1026",
+          "clientID": "Zbmzmccu",
+          "clanTag": "TAIWN"
+        },
+        {
+          "username": "007",
+          "clientID": "bZiYKCJb",
+          "clanTag": null
+        },
+        {
+          "username": "AN0NSH4RK1",
+          "clientID": "rtfXQsBq",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 829,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T18:06:31.543Z",
+      "url": "https://openfront.io/game/afnCsThm"
     }
   ],
   "team_custom": [
@@ -143115,6 +143150,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T18:05:28.980Z",
       "url": "https://openfront.io/game/kTCd3LN9"
+    },
+    {
+      "id": "T9rha1h7",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Nopzy",
+          "clientID": "sDtnDRbt",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Devil",
+          "clientID": "psdPbJ88",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "AnonClay4",
+          "clientID": "zXc1gwFA",
+          "clanTag": null
+        },
+        {
+          "username": "Malefice",
+          "clientID": "WS4aFATx",
+          "clanTag": null
+        },
+        {
+          "username": "Anapirat69",
+          "clientID": "JqQhVj2k",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTuba1",
+          "clientID": "KzVhhF8d",
+          "clanTag": null
+        },
+        {
+          "username": "Fresh Fish",
+          "clientID": "zPiJTrVU",
+          "clanTag": "00000"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 708,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T18:09:43.240Z",
+      "url": "https://openfront.io/game/T9rha1h7"
     }
   ],
   "hvn": [
