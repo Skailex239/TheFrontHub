@@ -32417,6 +32417,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T09:45:05.945Z",
       "url": "https://openfront.io/game/N6GvmSP3"
+    },
+    {
+      "id": "uc8Nkxce",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonZenith2",
+          "clientID": "33CkzrF7",
+          "clanTag": null
+        },
+        {
+          "username": "PARS",
+          "clientID": "W74nKXD3",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 650,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 116,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:11:59.072Z",
+      "url": "https://openfront.io/game/uc8Nkxce"
+    },
+    {
+      "id": "tDr9K7Nk",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AK47",
+          "clientID": "SECust6Q",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "LGoJX4JH",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 998,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:06:37.264Z",
+      "url": "https://openfront.io/game/tDr9K7Nk"
     }
   ],
   "trios": [
