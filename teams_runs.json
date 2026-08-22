@@ -32292,6 +32292,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:48:10.620Z",
       "url": "https://openfront.io/game/4kZp4Ywr"
+    },
+    {
+      "id": "JLztvBSe",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Centre Trainman",
+          "clientID": "5JHCQTZr",
+          "clanTag": "ALC"
+        },
+        {
+          "username": "ALocalKoala",
+          "clientID": "vQJqAtjf",
+          "clanTag": "ALC"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 1018,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T09:47:01.556Z",
+      "url": "https://openfront.io/game/JLztvBSe"
+    },
+    {
+      "id": "goaymXi9",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonShield3",
+          "clientID": "AZBMawnT",
+          "clanTag": null
+        },
+        {
+          "username": "whizikxd",
+          "clientID": "4H3CFfsC",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 658,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:51:39.333Z",
+      "url": "https://openfront.io/game/goaymXi9"
     }
   ],
   "trios": [
