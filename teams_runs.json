@@ -36317,6 +36317,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T19:34:46.396Z",
       "url": "https://openfront.io/game/xX6NGbx4"
+    },
+    {
+      "id": "ATaoTXrw",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bojova_Sunka",
+          "clientID": "omRjMhV9",
+          "clanTag": "CZ"
+        },
+        {
+          "username": "MADARA",
+          "clientID": "N5vJfkTH",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 650,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T20:03:47.270Z",
+      "url": "https://openfront.io/game/ATaoTXrw"
     }
   ],
   "trios": [
@@ -110528,6 +110553,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T19:57:26.786Z",
       "url": "https://openfront.io/game/s61FvjxF"
+    },
+    {
+      "id": "5sUsEt26",
+      "mode": "quads",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Polandd",
+          "clientID": "4BAkmzbC",
+          "clanTag": null
+        },
+        {
+          "username": "Spicy",
+          "clientID": "v3BqXCgG",
+          "clanTag": "LV"
+        },
+        {
+          "username": "never forgive",
+          "clientID": "KskXDsfz",
+          "clanTag": "LV"
+        },
+        {
+          "username": "Good for The Soul",
+          "clientID": "N2GFDnpd",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 960,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T19:59:02.928Z",
+      "url": "https://openfront.io/game/5sUsEt26"
+    },
+    {
+      "id": "9Q45sWPT",
+      "mode": "quads",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "NHLassen",
+          "clientID": "8E9HTagg",
+          "clanTag": null
+        },
+        {
+          "username": "The Swedish Trading Co.",
+          "clientID": "PPGAwovu",
+          "clanTag": "SWE"
+        },
+        {
+          "username": "ally",
+          "clientID": "zB25rHFZ",
+          "clanTag": null
+        },
+        {
+          "username": "Ginette Reno",
+          "clientID": "PXje9ZQa",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1488,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T19:51:14.522Z",
+      "url": "https://openfront.io/game/9Q45sWPT"
     }
   ],
   "team_custom": [
