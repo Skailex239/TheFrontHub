@@ -34617,6 +34617,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:39:07.269Z",
       "url": "https://openfront.io/game/u2a4U4s2"
+    },
+    {
+      "id": "Xb5QfHFQ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Nio_Degro",
+          "clientID": "APa2fS1x",
+          "clanTag": null
+        },
+        {
+          "username": "Anon744",
+          "clientID": "fA8wYGFV",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 583,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:05:47.627Z",
+      "url": "https://openfront.io/game/Xb5QfHFQ"
     }
   ],
   "trios": [
@@ -105673,6 +105698,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T14:52:48.363Z",
       "url": "https://openfront.io/game/ZACnHwuq"
+    },
+    {
+      "id": "QRsaUL4D",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonTornado9",
+          "clientID": "9zEFgrF6",
+          "clanTag": null
+        },
+        {
+          "username": "chrüsimüsi",
+          "clientID": "26P7RCVy",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mo0l",
+          "clientID": "vWzYy9uz",
+          "clanTag": null
+        },
+        {
+          "username": "SnugglePuppy",
+          "clientID": "xx5iMm3m",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1133,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T14:55:13.583Z",
+      "url": "https://openfront.io/game/QRsaUL4D"
     }
   ],
   "team_custom": [
