@@ -131820,6 +131820,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T10:58:30.843Z",
       "url": "https://openfront.io/game/jzYdXg2e"
+    },
+    {
+      "id": "UYtriFEx",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Earth beauty",
+          "clientID": "yafAfeA5",
+          "clanTag": null
+        },
+        {
+          "username": "PeRiNa",
+          "clientID": "CPcRsQkm",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOnyx9",
+          "clientID": "TMFBKa3Y",
+          "clanTag": null
+        },
+        {
+          "username": "Big D Harry",
+          "clientID": "QvAPHZvw",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "ivo",
+          "clientID": "9tJDa3Eg",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1825,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T10:45:46.055Z",
+      "url": "https://openfront.io/game/UYtriFEx"
     }
   ],
   "hvn": [
@@ -156142,6 +156182,111 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T10:46:13.081Z",
       "url": "https://openfront.io/game/yKHnZhje"
+    },
+    {
+      "id": "3QvvdJmU",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "T.C.",
+          "clientID": "DE2fQB4K",
+          "clanTag": null
+        },
+        {
+          "username": "Yetti",
+          "clientID": "DecnV5hv",
+          "clanTag": null
+        },
+        {
+          "username": "Berlin",
+          "clientID": "koocaA4x",
+          "clanTag": null
+        },
+        {
+          "username": "Cat",
+          "clientID": "gkoVbErb",
+          "clanTag": null
+        },
+        {
+          "username": "SHAYAN",
+          "clientID": "UJHUimBq",
+          "clanTag": null
+        },
+        {
+          "username": "APO",
+          "clientID": "dUv3UGKR",
+          "clanTag": null
+        },
+        {
+          "username": "FUFU",
+          "clientID": "6Toqs7Tv",
+          "clanTag": null
+        },
+        {
+          "username": "build FACTORIES near me",
+          "clientID": "uaMqa11M",
+          "clanTag": null
+        },
+        {
+          "username": "Luxembourg",
+          "clientID": "DH2PoMER",
+          "clanTag": null
+        },
+        {
+          "username": "wsei",
+          "clientID": "h77NPECA",
+          "clanTag": null
+        },
+        {
+          "username": "Make Europe Great Again",
+          "clientID": "Jp26rum1",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuasar9",
+          "clientID": "ANDWTHix",
+          "clanTag": null
+        },
+        {
+          "username": "aaa",
+          "clientID": "Xvj95v3q",
+          "clanTag": null
+        },
+        {
+          "username": "Falarian empire",
+          "clientID": "nGFh9ZcR",
+          "clanTag": null
+        },
+        {
+          "username": "BRAHMOS",
+          "clientID": "jjmiQiE1",
+          "clanTag": "IND"
+        },
+        {
+          "username": "KEN",
+          "clientID": "vDHdVnNZ",
+          "clanTag": null
+        },
+        {
+          "username": "Torfin",
+          "clientID": "YCxMFBGg",
+          "clanTag": null
+        },
+        {
+          "username": "Ducky",
+          "clientID": "vANYgFyJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 600,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T11:06:22.962Z",
+      "url": "https://openfront.io/game/3QvvdJmU"
     }
   ]
 }
