@@ -35942,6 +35942,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T18:39:12.865Z",
       "url": "https://openfront.io/game/1d6R8UTo"
+    },
+    {
+      "id": "bKQd8aKN",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "UrDadLeftYou",
+          "clientID": "vkg7aWFV",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Psychonaute420",
+          "clientID": "Xuk35M7n",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 323,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T19:07:16.574Z",
+      "url": "https://openfront.io/game/bKQd8aKN"
+    },
+    {
+      "id": "iZFJjZNN",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Lazy",
+          "clientID": "XkL2zJaz",
+          "clanTag": null
+        },
+        {
+          "username": "......",
+          "clientID": "cQuY32QG",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1290,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T18:50:55.378Z",
+      "url": "https://openfront.io/game/iZFJjZNN"
     }
   ],
   "trios": [
@@ -144415,6 +144465,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T18:52:32.474Z",
       "url": "https://openfront.io/game/UzaPoJF4"
+    },
+    {
+      "id": "qtT5LfmE",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Sunrakulom",
+          "clientID": "WAHDZNP7",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Tony Troops",
+          "clientID": "UQdyrRhb",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Nonex",
+          "clientID": "yn3zWvKs",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Flooo",
+          "clientID": "zehKWysQ",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Mortality",
+          "clientID": "77bcmxTA",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "galax",
+          "clientID": "R6rnanFq",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 898,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T18:56:05.668Z",
+      "url": "https://openfront.io/game/qtT5LfmE"
     }
   ],
   "hvn": [
