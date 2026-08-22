@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-22T16:28:07.532Z",
+  "lastSyncedAt": "2026-08-22T16:30:42.971Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 2241,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.7,
+  "totalGames": 2242,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "gcbdKFRX",
+      "start": "2026-08-22T16:19:59.944Z",
+      "durationSeconds": 497,
+      "map": "Australia",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "victory",
+      "totalPlayers": 4,
+      "username": "Toan",
+      "clanTag": "SERGE"
+    },
     {
       "gameId": "wq88kpq3",
       "start": "2026-08-22T16:18:07.835Z",
