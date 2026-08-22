@@ -34417,6 +34417,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:38:21.941Z",
       "url": "https://openfront.io/game/EeRp5AJ8"
+    },
+    {
+      "id": "Gdjn1PcB",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonOrca2",
+          "clientID": "GooJH7jo",
+          "clanTag": null
+        },
+        {
+          "username": "ANT",
+          "clientID": "Hz6MRsRK",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 496,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:46:34.741Z",
+      "url": "https://openfront.io/game/Gdjn1PcB"
     }
   ],
   "trios": [
@@ -69291,6 +69316,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T14:26:11.246Z",
       "url": "https://openfront.io/game/X7dXt333"
+    },
+    {
+      "id": "VPuU5Mjs",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Shmuel Michael Gell",
+          "clientID": "G8oiRWNd",
+          "clanTag": null
+        },
+        {
+          "username": "nha",
+          "clientID": "VWjZQADP",
+          "clanTag": null
+        },
+        {
+          "username": "Kadim",
+          "clientID": "Wjk6GgDk",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1033,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T14:35:43.676Z",
+      "url": "https://openfront.io/game/VPuU5Mjs"
     }
   ],
   "quads": [
