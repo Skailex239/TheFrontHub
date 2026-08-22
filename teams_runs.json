@@ -32517,6 +32517,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T09:51:07.780Z",
       "url": "https://openfront.io/game/YXcesE1S"
+    },
+    {
+      "id": "sGAcsg7m",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JooStar",
+          "clientID": "unMbecGJ",
+          "clanTag": "QWER"
+        },
+        {
+          "username": "AnonRuby9",
+          "clientID": "TwTkanzf",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 398,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:22:12.674Z",
+      "url": "https://openfront.io/game/sGAcsg7m"
     }
   ],
   "trios": [
@@ -66371,6 +66396,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T10:05:31.704Z",
       "url": "https://openfront.io/game/rDAjts6H"
+    },
+    {
+      "id": "62zXAQkk",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "utkubaba07",
+          "clientID": "mdCDW47f",
+          "clanTag": "TURK"
+        },
+        {
+          "username": "Hello",
+          "clientID": "kLYC7i6Y",
+          "clanTag": null
+        },
+        {
+          "username": "give troops",
+          "clientID": "dtfXnoBD",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 784,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T10:16:57.864Z",
+      "url": "https://openfront.io/game/62zXAQkk"
     }
   ],
   "quads": [
