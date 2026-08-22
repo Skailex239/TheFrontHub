@@ -33042,6 +33042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T11:38:04.916Z",
       "url": "https://openfront.io/game/FcKdLRZt"
+    },
+    {
+      "id": "8PBoEJXh",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "azisai",
+          "clientID": "ACYB9pcc",
+          "clanTag": null
+        },
+        {
+          "username": "Sloba",
+          "clientID": "LPAkRNHS",
+          "clanTag": "SRB"
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 560,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:42:58.524Z",
+      "url": "https://openfront.io/game/8PBoEJXh"
     }
   ],
   "trios": [
@@ -102468,6 +102493,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T11:39:19.922Z",
       "url": "https://openfront.io/game/7kkLVaZt"
+    },
+    {
+      "id": "bzpXYjHT",
+      "mode": "quads",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Chinook",
+          "clientID": "gTHwJdTQ",
+          "clanTag": null
+        },
+        {
+          "username": "skibidizob",
+          "clientID": "LYvc5iZ4",
+          "clanTag": "UWU"
+        },
+        {
+          "username": "Year of Animal",
+          "clientID": "tY5bTm3D",
+          "clanTag": null
+        },
+        {
+          "username": "SQD",
+          "clientID": "cumPnYXn",
+          "clanTag": "01"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 975,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T11:36:06.366Z",
+      "url": "https://openfront.io/game/bzpXYjHT"
     }
   ],
   "team_custom": [
