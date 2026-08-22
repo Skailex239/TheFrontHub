@@ -32642,6 +32642,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T10:29:58.108Z",
       "url": "https://openfront.io/game/ZT19RriR"
+    },
+    {
+      "id": "2oqNn5Zy",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Khatir",
+          "clientID": "6kNZKUxd",
+          "clanTag": null
+        },
+        {
+          "username": "KRIEGCORE",
+          "clientID": "mFG25MiS",
+          "clanTag": "O7"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 716,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:43:59.438Z",
+      "url": "https://openfront.io/game/2oqNn5Zy"
     }
   ],
   "trios": [
@@ -101388,6 +101413,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T10:35:43.426Z",
       "url": "https://openfront.io/game/WCyCXcNb"
+    },
+    {
+      "id": "jacCxg2i",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "JpuzQi82",
+          "clanTag": null
+        },
+        {
+          "username": "Collector",
+          "clientID": "GxDgeJpg",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LIVERPOOL",
+          "clientID": "GB97Hgiw",
+          "clanTag": "UN"
+        },
+        {
+          "username": "msi",
+          "clientID": "v12UNCeh",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1645,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T10:29:35.583Z",
+      "url": "https://openfront.io/game/jacCxg2i"
+    },
+    {
+      "id": "5ULJ6o4y",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "cantplayfullgame MITO",
+          "clientID": "y3dVqFWP",
+          "clanTag": null
+        },
+        {
+          "username": "Jaq",
+          "clientID": "KLCzkqs8",
+          "clanTag": null
+        },
+        {
+          "username": "nuker",
+          "clientID": "PPhNhb3o",
+          "clanTag": "UN"
+        },
+        {
+          "username": "lohiij",
+          "clientID": "Zwe7VWvX",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 2072,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 106,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T10:21:25.144Z",
+      "url": "https://openfront.io/game/5ULJ6o4y"
     }
   ],
   "team_custom": [
@@ -131140,6 +131235,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T10:39:36.167Z",
       "url": "https://openfront.io/game/ePmWv8sL"
+    },
+    {
+      "id": "vBQQEMDH",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "not anon",
+          "clientID": "UwfoyNGz",
+          "clanTag": null
+        },
+        {
+          "username": "Primordial Absolute",
+          "clientID": "ZGiRAoDF",
+          "clanTag": "OMNIS"
+        },
+        {
+          "username": "AnonSilence5",
+          "clientID": "Junaww22",
+          "clanTag": null
+        },
+        {
+          "username": "Sweat",
+          "clientID": "naVfx7aw",
+          "clanTag": "NEX"
+        },
+        {
+          "username": "Shpidibaum",
+          "clientID": "Le7PLsXV",
+          "clanTag": null
+        },
+        {
+          "username": "wgrf",
+          "clientID": "1xKKaR9R",
+          "clanTag": null
+        },
+        {
+          "username": "cosmos",
+          "clientID": "vzELcA2o",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1084,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 113,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T10:37:44.069Z",
+      "url": "https://openfront.io/game/vBQQEMDH"
     }
   ],
   "hvn": [
