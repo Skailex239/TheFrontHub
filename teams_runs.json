@@ -31667,6 +31667,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T07:26:45.927Z",
       "url": "https://openfront.io/game/JUTVHZZA"
+    },
+    {
+      "id": "D5GRT37v",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Luchs",
+          "clientID": "tTWNARUM",
+          "clanTag": null
+        },
+        {
+          "username": "zodilla",
+          "clientID": "dYpWzprJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 423,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T07:57:35.958Z",
+      "url": "https://openfront.io/game/D5GRT37v"
+    },
+    {
+      "id": "gdq8zqc7",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FRAFRAFRA",
+          "clientID": "VZd8Mya5",
+          "clanTag": null
+        },
+        {
+          "username": "Microbody",
+          "clientID": "Md3D9fTL",
+          "clanTag": "MICRO"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 787,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T07:52:16.971Z",
+      "url": "https://openfront.io/game/gdq8zqc7"
     }
   ],
   "trios": [
