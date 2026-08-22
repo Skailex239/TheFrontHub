@@ -29692,6 +29692,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-21T23:50:01.981Z",
       "url": "https://openfront.io/game/5jWezo63"
+    },
+    {
+      "id": "29KEMEBY",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "xMix",
+          "clientID": "ALkC2eWB",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "kletus",
+          "clientID": "LDpqBJfH",
+          "clanTag": "ESP"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 917,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-21T23:55:18.310Z",
+      "url": "https://openfront.io/game/29KEMEBY"
     }
   ],
   "trios": [
