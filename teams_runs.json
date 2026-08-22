@@ -32567,6 +32567,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T09:48:38.644Z",
       "url": "https://openfront.io/game/Lu8WFksC"
+    },
+    {
+      "id": "e5T3aF4y",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Made in Germany",
+          "clientID": "4NkpBy5m",
+          "clanTag": "GER"
+        },
+        {
+          "username": "AnonMeteor2",
+          "clientID": "jYHfGnb6",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 659,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:25:13.330Z",
+      "url": "https://openfront.io/game/e5T3aF4y"
     }
   ],
   "trios": [
@@ -101213,6 +101238,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T09:56:33.148Z",
       "url": "https://openfront.io/game/ivA1en69"
+    },
+    {
+      "id": "jdV6cdoV",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Semyon",
+          "clientID": "hkpJvcam",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Seraph",
+          "clientID": "1V9g747i",
+          "clanTag": null
+        },
+        {
+          "username": "Ibro Dirka",
+          "clientID": "cEKWPg2i",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonMedallion4",
+          "clientID": "bMC2EbY4",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1142,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T10:16:05.820Z",
+      "url": "https://openfront.io/game/jdV6cdoV"
     }
   ],
   "team_custom": [
