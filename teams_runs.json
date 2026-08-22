@@ -35742,6 +35742,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T17:47:42.320Z",
       "url": "https://openfront.io/game/yW7GQb17"
+    },
+    {
+      "id": "LsyLRoBi",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DvoRSTA",
+          "clientID": "KUMU7j3R",
+          "clanTag": "DVOR"
+        },
+        {
+          "username": "maharadbar",
+          "clientID": "nbQ8xqPi",
+          "clanTag": "DVOR"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 683,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T18:04:34.927Z",
+      "url": "https://openfront.io/game/LsyLRoBi"
     }
   ],
   "trios": [
@@ -108638,6 +108663,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T17:55:05.261Z",
       "url": "https://openfront.io/game/g8FBkmZ2"
+    },
+    {
+      "id": "C1ztn4tg",
+      "mode": "quads",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "Pico666",
+          "clientID": "8m8RKxc7",
+          "clanTag": null
+        },
+        {
+          "username": "Ainoasta",
+          "clientID": "zZd8TUhL",
+          "clanTag": null
+        },
+        {
+          "username": "Wild",
+          "clientID": "bKhWS32X",
+          "clanTag": null
+        },
+        {
+          "username": "SEND TROOPS",
+          "clientID": "z1ewsdiW",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 885,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T18:00:39.114Z",
+      "url": "https://openfront.io/game/C1ztn4tg"
     }
   ],
   "team_custom": [
