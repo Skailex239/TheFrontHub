@@ -74821,6 +74821,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T22:13:04.246Z",
       "url": "https://openfront.io/game/Hqipz299"
+    },
+    {
+      "id": "ZxpJwvjn",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "onosato",
+          "clientID": "WZ4znLGW",
+          "clanTag": "123"
+        },
+        {
+          "username": "WasNotEnough",
+          "clientID": "JWCTEaGm",
+          "clanTag": null
+        },
+        {
+          "username": "gorg",
+          "clientID": "AyyynKNw",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1075,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T22:42:28.616Z",
+      "url": "https://openfront.io/game/ZxpJwvjn"
     }
   ],
   "quads": [
@@ -113013,6 +113043,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T22:32:46.168Z",
       "url": "https://openfront.io/game/WcdLXWkK"
+    },
+    {
+      "id": "KHnfnHpK",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Umayyad",
+          "clientID": "Rm3AfonG",
+          "clanTag": null
+        },
+        {
+          "username": "S.E.A.F",
+          "clientID": "6uRw6251",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGoober076",
+          "clientID": "kohgKHjk",
+          "clanTag": null
+        },
+        {
+          "username": "Fuchur",
+          "clientID": "HaotCQ5G",
+          "clanTag": "MMD"
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 795,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T22:48:08.646Z",
+      "url": "https://openfront.io/game/KHnfnHpK"
     }
   ],
   "team_custom": [
