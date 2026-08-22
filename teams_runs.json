@@ -102863,6 +102863,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T12:11:54.788Z",
       "url": "https://openfront.io/game/oVLcYYdC"
+    },
+    {
+      "id": "32VwnNFz",
+      "mode": "quads",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "AnonBlizzard4",
+          "clientID": "bwjqrThj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAmethyst",
+          "clientID": "TNDc4KgR",
+          "clanTag": null
+        },
+        {
+          "username": "SotayOP",
+          "clientID": "BJUz3AnQ",
+          "clanTag": "EU"
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "m4RcZnSc",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 686,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T12:13:09.403Z",
+      "url": "https://openfront.io/game/32VwnNFz"
     }
   ],
   "team_custom": [
@@ -158447,6 +158482,86 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T11:53:32.529Z",
       "url": "https://openfront.io/game/fJXZyuRt"
+    },
+    {
+      "id": "nhNSskBb",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Belgain Trade Union",
+          "clientID": "PXEFmyLf",
+          "clanTag": "BEL"
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "pTjESmRQ",
+          "clanTag": null
+        },
+        {
+          "username": "Moi Le Faux",
+          "clientID": "1BBfBbNk",
+          "clanTag": null
+        },
+        {
+          "username": "Gauvner",
+          "clientID": "6dv87nxq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "yesno",
+          "clientID": "zs4FCdhQ",
+          "clanTag": null
+        },
+        {
+          "username": "Hshoter",
+          "clientID": "b7NiAZ6a",
+          "clanTag": null
+        },
+        {
+          "username": "USSR",
+          "clientID": "9NJAvkeR",
+          "clanTag": null
+        },
+        {
+          "username": "Kiro",
+          "clientID": "ARfZaop6",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Gelderland",
+          "clientID": "9x2yMY7d",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSnail2",
+          "clientID": "H4Cn7YUc",
+          "clanTag": null
+        },
+        {
+          "username": "Anon073",
+          "clientID": "oyeVYZZz",
+          "clanTag": null
+        },
+        {
+          "username": "Lang",
+          "clientID": "uQU8zKtw",
+          "clanTag": null
+        },
+        {
+          "username": "kingofgame11",
+          "clientID": "w4ymXstY",
+          "clanTag": null
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 759,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T12:10:41.179Z",
+      "url": "https://openfront.io/game/nhNSskBb"
     }
   ]
 }
