@@ -73301,6 +73301,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T20:17:34.348Z",
       "url": "https://openfront.io/game/oNaHtyQZ"
+    },
+    {
+      "id": "jC1R4mSF",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "bunny19",
+          "clientID": "ysneQXqC",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "TANK",
+          "clientID": "rGJ3Aa19",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "ihihi",
+          "clientID": "zkTMFkxj",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 634,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T20:17:59.370Z",
+      "url": "https://openfront.io/game/jC1R4mSF"
     }
   ],
   "quads": [
@@ -146360,6 +146390,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T19:55:53.606Z",
       "url": "https://openfront.io/game/tpSfHamh"
+    },
+    {
+      "id": "tcAwfRsM",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "nico",
+          "clientID": "KhDcreKA",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "Olympe",
+          "clientID": "FnV1LJAv",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "Mide",
+          "clientID": "p5e6zrLq",
+          "clanTag": null
+        },
+        {
+          "username": "LECRANE",
+          "clientID": "yDkHBnJx",
+          "clanTag": "RSA"
+        },
+        {
+          "username": "Aerouant",
+          "clientID": "4u5RHbJ4",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 944,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T20:13:32.787Z",
+      "url": "https://openfront.io/game/tcAwfRsM"
     }
   ],
   "hvn": [
