@@ -30492,6 +30492,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T02:46:52.596Z",
       "url": "https://openfront.io/game/3WcC48ex"
+    },
+    {
+      "id": "NQZ7yZrU",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AlwaysFullSend",
+          "clientID": "hpTmudUc",
+          "clanTag": null
+        },
+        {
+          "username": "New Hampshire Empire",
+          "clientID": "Xs71hpi2",
+          "clanTag": "NH"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1839,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:36:52.306Z",
+      "url": "https://openfront.io/game/NQZ7yZrU"
     }
   ],
   "trios": [
@@ -95838,6 +95863,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T02:52:11.599Z",
       "url": "https://openfront.io/game/tWm2DSfn"
+    },
+    {
+      "id": "3kBc7c2i",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "thejuiceislews",
+          "clientID": "PoJNEY4i",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Trollsky in my butski",
+          "clientID": "1ss4CHGu",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "BLACK BEARDS CANNON",
+          "clientID": "rnmRJCdS",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Rich",
+          "clientID": "KbWcHSS2",
+          "clanTag": "BBC"
+        }
+      ],
+      "map": "World",
+      "duration_s": 748,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T02:54:36.619Z",
+      "url": "https://openfront.io/game/3kBc7c2i"
     }
   ],
   "team_custom": [
