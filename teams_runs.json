@@ -33967,6 +33967,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T13:33:53.140Z",
       "url": "https://openfront.io/game/acDxXE5N"
+    },
+    {
+      "id": "CkFX8A6Q",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anthov15",
+          "clientID": "opUQZqrU",
+          "clanTag": null
+        },
+        {
+          "username": "Trader",
+          "clientID": "bvsVrXcD",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 525,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:48:03.497Z",
+      "url": "https://openfront.io/game/CkFX8A6Q"
     }
   ],
   "trios": [
@@ -68571,6 +68596,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T13:39:53.724Z",
       "url": "https://openfront.io/game/CPxJ24a2"
+    },
+    {
+      "id": "H12ZpBfo",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "kamisama",
+          "clientID": "hYcV2AeE",
+          "clanTag": null
+        },
+        {
+          "username": "xWallbangx",
+          "clientID": "SDDkG2Uw",
+          "clanTag": null
+        },
+        {
+          "username": "Jon Taffer",
+          "clientID": "w9ppu5m7",
+          "clanTag": "BAR"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 775,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T13:44:41.198Z",
+      "url": "https://openfront.io/game/H12ZpBfo"
     }
   ],
   "quads": [
@@ -104173,6 +104228,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T13:37:18.992Z",
       "url": "https://openfront.io/game/JexmmoXW"
+    },
+    {
+      "id": "8oKi5CjU",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonValley4",
+          "clientID": "ZURhfv4C",
+          "clanTag": null
+        },
+        {
+          "username": "Anon553",
+          "clientID": "VeTTq71H",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOcean3",
+          "clientID": "c1XTZU2M",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion4",
+          "clientID": "KqxEewkJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 576,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T13:46:45.877Z",
+      "url": "https://openfront.io/game/8oKi5CjU"
+    },
+    {
+      "id": "4D3LZ4VY",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Bred",
+          "clientID": "XzC97f6p",
+          "clanTag": null
+        },
+        {
+          "username": "Pluto",
+          "clientID": "mwLm4UzU",
+          "clanTag": null
+        },
+        {
+          "username": "KazakhGaming_",
+          "clientID": "vjjYRZ7m",
+          "clanTag": "BOA"
+        },
+        {
+          "username": "crazy1209",
+          "clientID": "KNAu8BK2",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 642,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T13:46:24.349Z",
+      "url": "https://openfront.io/game/4D3LZ4VY"
     }
   ],
   "team_custom": [
