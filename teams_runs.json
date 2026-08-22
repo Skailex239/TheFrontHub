@@ -35992,6 +35992,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T18:50:55.378Z",
       "url": "https://openfront.io/game/iZFJjZNN"
+    },
+    {
+      "id": "qaL1bkdf",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Djordje Daj Cevap",
+          "clientID": "DKddtrYG",
+          "clanTag": "JUGO"
+        },
+        {
+          "username": "Oozzee",
+          "clientID": "um7Mywzh",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1087,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T18:55:31.133Z",
+      "url": "https://openfront.io/game/qaL1bkdf"
     }
   ],
   "trios": [
@@ -72486,6 +72511,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T18:49:16.784Z",
       "url": "https://openfront.io/game/GznsezbX"
+    },
+    {
+      "id": "kTrkQ41d",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Rotterdam",
+          "clientID": "HBBfwuW9",
+          "clanTag": null
+        },
+        {
+          "username": "Slovakia",
+          "clientID": "YhYkvBtM",
+          "clanTag": "SK"
+        },
+        {
+          "username": "541K",
+          "clientID": "FDJuHbiw",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 945,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:58:03.316Z",
+      "url": "https://openfront.io/game/kTrkQ41d"
     }
   ],
   "quads": [
@@ -144510,6 +144565,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T18:56:05.668Z",
       "url": "https://openfront.io/game/qtT5LfmE"
+    },
+    {
+      "id": "euVNupDf",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "OnlyFronts",
+          "clientID": "5YncRCo8",
+          "clanTag": "BRMB"
+        },
+        {
+          "username": "FUFU",
+          "clientID": "yVR8yu6k",
+          "clanTag": null
+        },
+        {
+          "username": "kiwi",
+          "clientID": "9u1fxuxe",
+          "clanTag": "TT"
+        },
+        {
+          "username": "yanyck",
+          "clientID": "hFi2jef6",
+          "clanTag": null
+        },
+        {
+          "username": "BARAbara",
+          "clientID": "F5ivdA8q",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVanilla1",
+          "clientID": "2ZXRmYLX",
+          "clanTag": null
+        },
+        {
+          "username": "Berend Botje",
+          "clientID": "gberD4Ue",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 927,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T18:58:58.888Z",
+      "url": "https://openfront.io/game/euVNupDf"
     }
   ],
   "hvn": [
