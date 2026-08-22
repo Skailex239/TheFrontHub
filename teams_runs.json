@@ -30167,6 +30167,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T01:15:24.412Z",
       "url": "https://openfront.io/game/eoZGxqCb"
+    },
+    {
+      "id": "FvYx4Kx2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "friends",
+          "clientID": "ctujouF3",
+          "clanTag": "BE"
+        },
+        {
+          "username": "Anon339",
+          "clientID": "XeUK6Mwz",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 486,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T01:20:53.761Z",
+      "url": "https://openfront.io/game/FvYx4Kx2"
     }
   ],
   "trios": [
@@ -94828,6 +94853,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T01:13:04.246Z",
       "url": "https://openfront.io/game/RZQw6Tkv"
+    },
+    {
+      "id": "bpz2CDSG",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Liam",
+          "clientID": "dzCK6VG2",
+          "clanTag": "AB"
+        },
+        {
+          "username": "AndyDeRandy",
+          "clientID": "RjS1fXjK",
+          "clanTag": null
+        },
+        {
+          "username": "Kiss My Royal Paws",
+          "clientID": "2v43Mpnv",
+          "clanTag": null
+        },
+        {
+          "username": "Anon321",
+          "clientID": "k1xPDh9x",
+          "clanTag": null
+        }
+      ],
+      "map": "Chopping Block",
+      "duration_s": 999,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T01:12:34.213Z",
+      "url": "https://openfront.io/game/bpz2CDSG"
     }
   ],
   "team_custom": [
@@ -120650,6 +120710,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T01:18:52.634Z",
       "url": "https://openfront.io/game/NkCCu1RQ"
+    },
+    {
+      "id": "LzcWaV1j",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "EnCore",
+          "clientID": "kdib9PDd",
+          "clanTag": "ECON"
+        },
+        {
+          "username": "Umbria",
+          "clientID": "XUGTWpZd",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBridge2",
+          "clientID": "YoHZPw7t",
+          "clanTag": null
+        },
+        {
+          "username": "WHO ART THOU",
+          "clientID": "GYkTJfer",
+          "clanTag": null
+        },
+        {
+          "username": "Best Korea",
+          "clientID": "QyCeSTHL",
+          "clanTag": null
+        },
+        {
+          "username": "PericlesOfTheStars",
+          "clientID": "LLDRXEHC",
+          "clanTag": "BK"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 780,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T01:16:18.463Z",
+      "url": "https://openfront.io/game/LzcWaV1j"
     }
   ],
   "hvn": [
