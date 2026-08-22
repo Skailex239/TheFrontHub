@@ -66606,6 +66606,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T10:27:59.999Z",
       "url": "https://openfront.io/game/3K3exZjs"
+    },
+    {
+      "id": "jScx3nyD",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "nesutokun",
+          "clientID": "Xvj362T1",
+          "clanTag": "SATO"
+        },
+        {
+          "username": "AnonOctopus4",
+          "clientID": "4TSFYaxy",
+          "clanTag": "SATO"
+        },
+        {
+          "username": "kuroneko",
+          "clientID": "EVtVjnYq",
+          "clanTag": "SATO"
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 952,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T10:43:31.904Z",
+      "url": "https://openfront.io/game/jScx3nyD"
     }
   ],
   "quads": [
@@ -131360,6 +131390,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T10:44:50.496Z",
       "url": "https://openfront.io/game/DYHYUsBU"
+    },
+    {
+      "id": "iVNbpmT3",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonLake4",
+          "clientID": "mbJ6ZB4i",
+          "clanTag": null
+        },
+        {
+          "username": "future",
+          "clientID": "XpKVSsot",
+          "clanTag": "SOP"
+        },
+        {
+          "username": "pitchoune",
+          "clientID": "8z2dQCTV",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCastle",
+          "clientID": "StmZyQsX",
+          "clanTag": null
+        },
+        {
+          "username": "The One",
+          "clientID": "vVcp8t6J",
+          "clanTag": null
+        },
+        {
+          "username": "SwaSton",
+          "clientID": "v2c32vpF",
+          "clanTag": "OPO"
+        },
+        {
+          "username": "ROMAN EMPIRE",
+          "clientID": "5d2BPMfr",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1215,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T10:40:50.225Z",
+      "url": "https://openfront.io/game/iVNbpmT3"
     }
   ],
   "hvn": [
