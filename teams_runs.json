@@ -64361,6 +64361,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T06:22:00.467Z",
       "url": "https://openfront.io/game/i5qcVJVF"
+    },
+    {
+      "id": "sFrZXvhP",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonOracle7",
+          "clientID": "MRXwN2wZ",
+          "clanTag": null
+        },
+        {
+          "username": "Lardonfou",
+          "clientID": "5V7QUKQy",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Trade Aid",
+          "clientID": "h5sarqRF",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 660,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T06:32:24.841Z",
+      "url": "https://openfront.io/game/sFrZXvhP"
     }
   ],
   "quads": [
@@ -98248,6 +98278,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T06:28:11.100Z",
       "url": "https://openfront.io/game/rgBC33eA"
+    },
+    {
+      "id": "wLo1AZmb",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Tomato",
+          "clientID": "jgDtA8ku",
+          "clanTag": null
+        },
+        {
+          "username": "entelechos",
+          "clientID": "eTGHem1T",
+          "clanTag": "THE"
+        },
+        {
+          "username": "empi",
+          "clientID": "CeeCYoCs",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLobster8",
+          "clientID": "F169zx9e",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 711,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T06:30:24.730Z",
+      "url": "https://openfront.io/game/wLo1AZmb"
     }
   ],
   "team_custom": [
