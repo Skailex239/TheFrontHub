@@ -72011,6 +72011,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T18:20:00.526Z",
       "url": "https://openfront.io/game/z5TzFWJL"
+    },
+    {
+      "id": "fg7stmwz",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "MarkoKovac",
+          "clientID": "xDdvYL5v",
+          "clanTag": null
+        },
+        {
+          "username": "Anon212",
+          "clientID": "CjevQrh6",
+          "clanTag": null
+        },
+        {
+          "username": "Putin",
+          "clientID": "ymbpWcZG",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 978,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:19:07.936Z",
+      "url": "https://openfront.io/game/fg7stmwz"
     }
   ],
   "quads": [
@@ -108908,6 +108938,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T18:16:12.179Z",
       "url": "https://openfront.io/game/MW6AS9Qd"
+    },
+    {
+      "id": "4JUWjjjA",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Dimixx",
+          "clientID": "KrRJA1sw",
+          "clanTag": "UN"
+        },
+        {
+          "username": "WALL",
+          "clientID": "ZYWCp8gM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonGecko5",
+          "clientID": "y64Hehip",
+          "clanTag": null
+        },
+        {
+          "username": "SPURS IN 8",
+          "clientID": "G5PpWaZy",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 949,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T18:19:48.003Z",
+      "url": "https://openfront.io/game/4JUWjjjA"
     }
   ],
   "team_custom": [
