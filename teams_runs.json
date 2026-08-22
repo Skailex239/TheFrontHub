@@ -95633,6 +95633,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T01:55:23.840Z",
       "url": "https://openfront.io/game/MGz3jsoS"
+    },
+    {
+      "id": "HRB3HXbK",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "UnhuggedToday",
+          "clientID": "JwZ9neJQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon326",
+          "clientID": "A54p65hN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCactus2",
+          "clientID": "RCA7KfWy",
+          "clanTag": null
+        },
+        {
+          "username": "visons",
+          "clientID": "bzh2FTaU",
+          "clanTag": "EY"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 2686,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T02:03:48.689Z",
+      "url": "https://openfront.io/game/HRB3HXbK"
     }
   ],
   "team_custom": [
@@ -121895,6 +121930,91 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T02:21:13.956Z",
       "url": "https://openfront.io/game/B99R7asU"
+    },
+    {
+      "id": "t3E7AW7r",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "kenneth",
+          "clientID": "5qiTyocg",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rawr",
+          "clientID": "Yyq65uPm",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ports",
+          "clientID": "iGDvX7rN",
+          "clanTag": null
+        },
+        {
+          "username": "JWP",
+          "clientID": "Tx8pPpjz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "BALERION",
+          "clientID": "E2yu8wZy",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1381,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T02:24:52.073Z",
+      "url": "https://openfront.io/game/t3E7AW7r"
+    },
+    {
+      "id": "WQkakBgp",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "STOP IT",
+          "clientID": "8Wbd21rL",
+          "clanTag": null
+        },
+        {
+          "username": "oooooooooooooo",
+          "clientID": "x8GUTT7e",
+          "clanTag": "SWAG"
+        },
+        {
+          "username": "slug",
+          "clientID": "zuakpE2D",
+          "clanTag": "MEOW"
+        },
+        {
+          "username": "Quottle",
+          "clientID": "6NeptJzd",
+          "clanTag": null
+        },
+        {
+          "username": "Jose69",
+          "clientID": "5gDVhpMY",
+          "clanTag": null
+        },
+        {
+          "username": "Clown Nation",
+          "clientID": "sQ1SehKg",
+          "clanTag": "EIRE"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 876,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T02:33:26.970Z",
+      "url": "https://openfront.io/game/WQkakBgp"
     }
   ],
   "hvn": [
