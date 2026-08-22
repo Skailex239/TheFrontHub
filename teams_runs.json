@@ -36617,6 +36617,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:09:13.912Z",
       "url": "https://openfront.io/game/6oUNR96x"
+    },
+    {
+      "id": "WoHhiUzC",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "newyork",
+          "clientID": "3wfmJCz9",
+          "clanTag": null
+        },
+        {
+          "username": "Useless",
+          "clientID": "h2PGH2ve",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:09:37.899Z",
+      "url": "https://openfront.io/game/WoHhiUzC"
+    },
+    {
+      "id": "wzP2YmZE",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Backroom.",
+          "clientID": "CqgEHTyV",
+          "clanTag": null
+        },
+        {
+          "username": "klakier",
+          "clientID": "dT613QVU",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1455,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T20:54:42.666Z",
+      "url": "https://openfront.io/game/wzP2YmZE"
     }
   ],
   "trios": [
@@ -177717,6 +177767,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T21:04:16.538Z",
       "url": "https://openfront.io/game/sL6hkHSW"
+    },
+    {
+      "id": "tZymwAT1",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Wong",
+          "clientID": "yC3cd7mD",
+          "clanTag": null
+        },
+        {
+          "username": "Praxi",
+          "clientID": "eRcbALfB",
+          "clanTag": null
+        },
+        {
+          "username": "Saladin",
+          "clientID": "pQHsgW5U",
+          "clanTag": "UN"
+        },
+        {
+          "username": "7777",
+          "clientID": "TUWoK7gR",
+          "clanTag": null
+        },
+        {
+          "username": "TheMannFoot",
+          "clientID": "eAUY27My",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Bobite",
+          "clientID": "5SL8Zmau",
+          "clanTag": null
+        },
+        {
+          "username": "PowerHouseOfTheCell",
+          "clientID": "j5UxBriD",
+          "clanTag": null
+        },
+        {
+          "username": "Sar",
+          "clientID": "zU11GZ2D",
+          "clanTag": null
+        },
+        {
+          "username": "legion etrangere",
+          "clientID": "sF1BzuGe",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Groningen",
+          "clientID": "cjBLSBSq",
+          "clanTag": null
+        },
+        {
+          "username": "Hoplite",
+          "clientID": "YoY29VQs",
+          "clanTag": null
+        },
+        {
+          "username": "Kovak",
+          "clientID": "YUDFRh68",
+          "clanTag": null
+        },
+        {
+          "username": "whuulfi",
+          "clientID": "TjyisuCN",
+          "clanTag": "BRP"
+        },
+        {
+          "username": "AnonAnchor3",
+          "clientID": "vBAsEYLs",
+          "clanTag": null
+        },
+        {
+          "username": "Anon055",
+          "clientID": "RjsPXdGB",
+          "clanTag": null
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 1061,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T21:00:52.248Z",
+      "url": "https://openfront.io/game/tZymwAT1"
     }
   ]
 }
