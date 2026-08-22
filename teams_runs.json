@@ -31342,6 +31342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T06:47:09.447Z",
       "url": "https://openfront.io/game/ncqaauMJ"
+    },
+    {
+      "id": "G5cocRei",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "breakfast county",
+          "clientID": "CMuKzkpD",
+          "clanTag": "YOINK"
+        },
+        {
+          "username": "AnonPulley1",
+          "clientID": "P4bZCWhC",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 850,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T06:50:07.057Z",
+      "url": "https://openfront.io/game/G5cocRei"
     }
   ],
   "trios": [
@@ -98463,6 +98488,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T06:52:01.223Z",
       "url": "https://openfront.io/game/zQfeyFPM"
+    },
+    {
+      "id": "AfFQ5r1A",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Norman",
+          "clientID": "cFxYphH1",
+          "clanTag": null
+        },
+        {
+          "username": "Snaky",
+          "clientID": "joSiPGkA",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "Ti77en",
+          "clientID": "QkPaS7Ma",
+          "clanTag": null
+        },
+        {
+          "username": "Alabaster",
+          "clientID": "SyZWWBY7",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 984,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T06:47:57.986Z",
+      "url": "https://openfront.io/game/AfFQ5r1A"
     }
   ],
   "team_custom": [
@@ -126340,6 +126400,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T06:36:38.580Z",
       "url": "https://openfront.io/game/Q3FJz8BQ"
+    },
+    {
+      "id": "rb7RuBQi",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "inchAsemAziz",
+          "clientID": "2d8eZSY3",
+          "clanTag": null
+        },
+        {
+          "username": "empi",
+          "clientID": "HVwaYayd",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSnail7",
+          "clientID": "WbVe1cJu",
+          "clanTag": null
+        },
+        {
+          "username": "meh",
+          "clientID": "Dd8q6Wxx",
+          "clanTag": null
+        },
+        {
+          "username": "peter",
+          "clientID": "KWnWiyUQ",
+          "clanTag": null
+        },
+        {
+          "username": "Lardonfou",
+          "clientID": "sMCxSy2i",
+          "clanTag": "FR"
+        },
+        {
+          "username": "patate",
+          "clientID": "mUGzsJiN",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1169,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T06:44:54.806Z",
+      "url": "https://openfront.io/game/rb7RuBQi"
     }
   ],
   "hvn": [
