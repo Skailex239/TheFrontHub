@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-22T09:56:12.885Z",
+  "lastSyncedAt": "2026-08-22T09:58:17.280Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.4,
-  "totalGames": 3811,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 3812,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "ZP5ZYRn2",
+      "start": "2026-08-22T09:06:35.050Z",
+      "durationSeconds": 3075,
+      "map": "Giant World Map",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 53,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "hvWczXbA",
       "start": "2026-08-21T22:06:07.866Z",
