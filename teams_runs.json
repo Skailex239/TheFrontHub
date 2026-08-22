@@ -30417,6 +30417,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T02:28:05.923Z",
       "url": "https://openfront.io/game/BJcRpewm"
+    },
+    {
+      "id": "E5dRE4U1",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Pirate Babarossa",
+          "clientID": "vyqA167T",
+          "clanTag": null
+        },
+        {
+          "username": "factent",
+          "clientID": "J6V36L9g",
+          "clanTag": "AP"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 591,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:46:09.485Z",
+      "url": "https://openfront.io/game/E5dRE4U1"
+    },
+    {
+      "id": "NhkJumz6",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Cobra",
+          "clientID": "8sVUFcGn",
+          "clanTag": null
+        },
+        {
+          "username": "liming",
+          "clientID": "pRx6dAPy",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 662,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:43:42.270Z",
+      "url": "https://openfront.io/game/NhkJumz6"
     }
   ],
   "trios": [
@@ -122095,6 +122145,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T02:32:29.092Z",
       "url": "https://openfront.io/game/cozz7enE"
+    },
+    {
+      "id": "8NfutZNY",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RagingCamper",
+          "clientID": "NYNeDwib",
+          "clanTag": "UN"
+        },
+        {
+          "username": "wanderer",
+          "clientID": "EJEUs18U",
+          "clanTag": "UN"
+        },
+        {
+          "username": "elector",
+          "clientID": "72AM1BkJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOcean3",
+          "clientID": "XxiNSa9V",
+          "clanTag": null
+        },
+        {
+          "username": "SODA",
+          "clientID": "VN6vErkG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "forthe",
+          "clientID": "BrctYKCV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Penguin",
+          "clientID": "YR4jwg9v",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1034,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T02:38:53.203Z",
+      "url": "https://openfront.io/game/8NfutZNY"
     }
   ],
   "hvn": [
