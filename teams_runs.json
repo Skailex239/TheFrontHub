@@ -32267,6 +32267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:21:23.969Z",
       "url": "https://openfront.io/game/5woUCJFP"
+    },
+    {
+      "id": "4kZp4Ywr",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "pal",
+          "clientID": "sLXNNEtn",
+          "clanTag": "UU"
+        },
+        {
+          "username": "Bzh56",
+          "clientID": "jQv6AXVv",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 718,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:48:10.620Z",
+      "url": "https://openfront.io/game/4kZp4Ywr"
     }
   ],
   "trios": [
@@ -129985,6 +130010,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T09:39:49.652Z",
       "url": "https://openfront.io/game/Bc98CM8b"
+    },
+    {
+      "id": "nKNTNfXX",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "kalizone",
+          "clientID": "CrtsruLY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "WOW",
+          "clientID": "BpmjNEWG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCheetah8",
+          "clientID": "pySBgsmH",
+          "clanTag": null
+        },
+        {
+          "username": "DD oil",
+          "clientID": "EtQ2bMzE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Franck provost",
+          "clientID": "Vca13QcY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "The_Enclave",
+          "clientID": "h3DkxNnc",
+          "clanTag": null
+        },
+        {
+          "username": "trackerfront_oqnjxnp6",
+          "clientID": "JwLLwuyh",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 595,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T09:50:35.752Z",
+      "url": "https://openfront.io/game/nKNTNfXX"
+    },
+    {
+      "id": "XHsQbvaC",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Sweat",
+          "clientID": "DYTzwZ4b",
+          "clanTag": "NEX"
+        },
+        {
+          "username": "Anon400",
+          "clientID": "6nrTnExG",
+          "clanTag": null
+        },
+        {
+          "username": "Federation of Super Earth",
+          "clientID": "qK96Eofd",
+          "clanTag": "SEAF"
+        },
+        {
+          "username": "Otankonasu88",
+          "clientID": "7hAyQPRs",
+          "clanTag": null
+        },
+        {
+          "username": "Anon891",
+          "clientID": "nysNWdJA",
+          "clanTag": null
+        },
+        {
+          "username": "Kionz105",
+          "clientID": "ek3cqyHL",
+          "clanTag": null
+        },
+        {
+          "username": "Titlandia",
+          "clientID": "CNjp7nja",
+          "clanTag": "HORDE"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 794,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T09:46:28.025Z",
+      "url": "https://openfront.io/game/XHsQbvaC"
     }
   ],
   "hvn": [
