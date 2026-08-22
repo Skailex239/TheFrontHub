@@ -29967,6 +29967,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T00:26:07.311Z",
       "url": "https://openfront.io/game/i12UJiUX"
+    },
+    {
+      "id": "NgNGkKrC",
+      "mode": "duos",
+      "team": "Team 13",
+      "players": [
+        {
+          "username": "eli",
+          "clientID": "9nxEYdWm",
+          "clanTag": null
+        },
+        {
+          "username": "Shumi",
+          "clientID": "PcUwH8np",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 1064,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T00:38:45.602Z",
+      "url": "https://openfront.io/game/NgNGkKrC"
+    },
+    {
+      "id": "pZdjmxzq",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bridge",
+          "clientID": "ifMZGPyv",
+          "clanTag": null
+        },
+        {
+          "username": "Mandoh",
+          "clientID": "QkPDvRvU",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 921,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T00:42:33.851Z",
+      "url": "https://openfront.io/game/pZdjmxzq"
     }
   ],
   "trios": [
@@ -120030,6 +120080,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T00:32:25.690Z",
       "url": "https://openfront.io/game/V8GeuWvK"
+    },
+    {
+      "id": "KQfS15QN",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Twitch_MehighPlays",
+          "clientID": "i19oxrQ9",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "ZQGybtk4",
+          "clanTag": null
+        },
+        {
+          "username": "Anon234",
+          "clientID": "qT4RojBc",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "France",
+          "clientID": "NG4xfdpo",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "vw_gli",
+          "clientID": "oekNaXMJ",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "Carakyla",
+          "clientID": "r2cnvSPB",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "pro openfront player",
+          "clientID": "KQmqBZeL",
+          "clanTag": "HIGH"
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 676,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T00:45:44.538Z",
+      "url": "https://openfront.io/game/KQfS15QN"
+    },
+    {
+      "id": "DaHqfCwi",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "manki",
+          "clientID": "hPeDPJyy",
+          "clanTag": null
+        },
+        {
+          "username": "Taz",
+          "clientID": "r8aCv9V1",
+          "clanTag": null
+        },
+        {
+          "username": "Smol",
+          "clientID": "4RRnmsHw",
+          "clanTag": "LIL"
+        },
+        {
+          "username": "AnonButterfly5",
+          "clientID": "ckYQvYuh",
+          "clanTag": null
+        },
+        {
+          "username": "deathnote",
+          "clientID": "ECLTwEgX",
+          "clanTag": null
+        },
+        {
+          "username": "wilfredo",
+          "clientID": "M4K8Boky",
+          "clanTag": "PN"
+        },
+        {
+          "username": "MoreDaka",
+          "clientID": "yKSA1wuh",
+          "clanTag": null
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 1292,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T00:34:38.833Z",
+      "url": "https://openfront.io/game/DaHqfCwi"
     }
   ],
   "hvn": [
