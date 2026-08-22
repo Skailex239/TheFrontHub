@@ -71046,6 +71046,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T17:06:47.467Z",
       "url": "https://openfront.io/game/JeL5mfwu"
+    },
+    {
+      "id": "reh9Mjnf",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "aminelelama",
+          "clientID": "tBSDK6L4",
+          "clanTag": "LAMA"
+        },
+        {
+          "username": "HUFY",
+          "clientID": "w2784LDS",
+          "clanTag": "LAMA"
+        },
+        {
+          "username": "BADMOI",
+          "clientID": "vWfMpUeZ",
+          "clanTag": "LAMA"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1284,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T16:55:44.770Z",
+      "url": "https://openfront.io/game/reh9Mjnf"
     }
   ],
   "quads": [
@@ -141235,6 +141265,86 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T16:59:05.477Z",
       "url": "https://openfront.io/game/hShEpQtx"
+    },
+    {
+      "id": "3EmE4nMx",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Train1 man",
+          "clientID": "4D61CrCP",
+          "clanTag": null
+        },
+        {
+          "username": "Good",
+          "clientID": "6cWeAGRG",
+          "clanTag": "APG"
+        },
+        {
+          "username": "noob",
+          "clientID": "JPzdVpgh",
+          "clanTag": null
+        },
+        {
+          "username": "ANURAG",
+          "clientID": "kki9hA19",
+          "clanTag": "APG"
+        },
+        {
+          "username": "Niraj",
+          "clientID": "ZKjjAvsg",
+          "clanTag": "APG"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1138,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T16:58:46.463Z",
+      "url": "https://openfront.io/game/3EmE4nMx"
+    },
+    {
+      "id": "tVRPrCwn",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "folk valley",
+          "clientID": "m9WPr2PA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "VQfQDVNV",
+          "clanTag": null
+        },
+        {
+          "username": "Xenon",
+          "clientID": "cDKgSSUY",
+          "clanTag": null
+        },
+        {
+          "username": "ccd",
+          "clientID": "6dTRi82z",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Kukarkins",
+          "clientID": "ZYWK7iqZ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 922,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T17:02:06.661Z",
+      "url": "https://openfront.io/game/tVRPrCwn"
     }
   ],
   "hvn": [
