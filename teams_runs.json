@@ -93978,6 +93978,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T00:10:20.808Z",
       "url": "https://openfront.io/game/iykuagqW"
+    },
+    {
+      "id": "DZzxo8gB",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Tonton",
+          "clientID": "64LRCVA8",
+          "clanTag": "BFD"
+        },
+        {
+          "username": "Janus",
+          "clientID": "WDK4NNyr",
+          "clanTag": "BFD"
+        },
+        {
+          "username": "FlySuperior",
+          "clientID": "hFi18ZM4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage4",
+          "clientID": "sdz9Jvut",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 560,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T00:12:31.451Z",
+      "url": "https://openfront.io/game/DZzxo8gB"
     }
   ],
   "team_custom": [
@@ -119315,6 +119350,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T00:06:17.031Z",
       "url": "https://openfront.io/game/Ys4muCRU"
+    },
+    {
+      "id": "ewRrvmWm",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonLeather8",
+          "clientID": "yn7zvskq",
+          "clanTag": null
+        },
+        {
+          "username": "Tokin",
+          "clientID": "Vr5MWakY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AffordableGamer",
+          "clientID": "i46cEKe6",
+          "clanTag": "UN"
+        },
+        {
+          "username": "benkage123",
+          "clientID": "3HY81Dzf",
+          "clanTag": null
+        },
+        {
+          "username": "nixie_1",
+          "clientID": "AUpUennr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield7",
+          "clientID": "qCYo3QZA",
+          "clanTag": null
+        },
+        {
+          "username": "Vinz",
+          "clientID": "GDTezSCM",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 979,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T00:05:36.487Z",
+      "url": "https://openfront.io/game/ewRrvmWm"
     }
   ],
   "hvn": [
