@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-22T16:53:32.855Z",
+  "lastSyncedAt": "2026-08-22T16:55:38.303Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 2242,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.2,
+  "totalGames": 2243,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "ims8dRog",
+      "start": "2026-08-22T16:48:15.637Z",
+      "durationSeconds": 319,
+      "map": "Iceland",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "victory",
+      "totalPlayers": 4,
+      "username": "Toan",
+      "clanTag": "SERGE"
+    },
     {
       "gameId": "gcbdKFRX",
       "start": "2026-08-22T16:19:59.944Z",
