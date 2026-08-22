@@ -33767,6 +33767,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T13:28:53.157Z",
       "url": "https://openfront.io/game/7FQig6Wb"
+    },
+    {
+      "id": "M49YH8jE",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LDK",
+          "clientID": "uUwnvBov",
+          "clanTag": null
+        },
+        {
+          "username": "BigUnit1",
+          "clientID": "3MZdUKUo",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 477,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:30:27.825Z",
+      "url": "https://openfront.io/game/M49YH8jE"
+    },
+    {
+      "id": "G6cTaeqw",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonLagoon4",
+          "clientID": "tVRyCDbj",
+          "clanTag": null
+        },
+        {
+          "username": "Backroom.",
+          "clientID": "D9Sn2bPm",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 592,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:27:00.474Z",
+      "url": "https://openfront.io/game/G6cTaeqw"
+    },
+    {
+      "id": "qcTQid4M",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Fortress Europe",
+          "clientID": "kBySJMyp",
+          "clanTag": null
+        },
+        {
+          "username": "Pirata",
+          "clientID": "yuTnJGFf",
+          "clanTag": "PT"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 734,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:25:02.297Z",
+      "url": "https://openfront.io/game/qcTQid4M"
     }
   ],
   "trios": [
@@ -103773,6 +103848,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T13:05:08.390Z",
       "url": "https://openfront.io/game/dSYVJCKL"
+    },
+    {
+      "id": "Xnmbc6pf",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DoomIsIncomming",
+          "clientID": "uZ8EvALj",
+          "clanTag": null
+        },
+        {
+          "username": "SovietCapitalist",
+          "clientID": "TfsZg33V",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "Harfa",
+          "clientID": "NdAcLY47",
+          "clanTag": "STOEP"
+        },
+        {
+          "username": "Landia",
+          "clientID": "fuzDpq2K",
+          "clanTag": "STOEP"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1346,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T13:15:30.370Z",
+      "url": "https://openfront.io/game/Xnmbc6pf"
+    },
+    {
+      "id": "JUry3Jtw",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "AnonSupport",
+          "clientID": "FJrHD8xa",
+          "clanTag": "NU"
+        },
+        {
+          "username": "oncenot",
+          "clientID": "rrzvBgUY",
+          "clanTag": "NU"
+        },
+        {
+          "username": "M7md",
+          "clientID": "iYtFky8g",
+          "clanTag": "NU"
+        },
+        {
+          "username": "malpa200",
+          "clientID": "JkNXQWFD",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 631,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T13:27:56.556Z",
+      "url": "https://openfront.io/game/JUry3Jtw"
     }
   ],
   "team_custom": [
