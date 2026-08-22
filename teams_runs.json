@@ -37567,6 +37567,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T23:27:16.409Z",
       "url": "https://openfront.io/game/AAhayZSc"
+    },
+    {
+      "id": "89WXS7LH",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Pluto",
+          "clientID": "8NTicMKV",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin4",
+          "clientID": "sXceXGzE",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 493,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T23:31:16.804Z",
+      "url": "https://openfront.io/game/89WXS7LH"
     }
   ],
   "trios": [
@@ -113708,6 +113733,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T23:13:21.540Z",
       "url": "https://openfront.io/game/fhBZZTEa"
+    },
+    {
+      "id": "bPFHpDzw",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Dexter",
+          "clientID": "Cy5VP7TC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Hii",
+          "clientID": "Hx6iAMrB",
+          "clanTag": "HII"
+        },
+        {
+          "username": "Predator",
+          "clientID": "bWDHSQxf",
+          "clanTag": null
+        },
+        {
+          "username": "110",
+          "clientID": "wnWMF5ci",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 939,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:23:20.686Z",
+      "url": "https://openfront.io/game/bPFHpDzw"
     }
   ],
   "team_custom": [
@@ -150910,6 +150970,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T22:59:37.386Z",
       "url": "https://openfront.io/game/vvyxdZso"
+    },
+    {
+      "id": "62b5xUNX",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "PericlesOfTheStars",
+          "clientID": "hv5YqSFR",
+          "clanTag": "BK"
+        },
+        {
+          "username": "Mehrad",
+          "clientID": "iEwGuT65",
+          "clanTag": "LORD"
+        },
+        {
+          "username": "Pig",
+          "clientID": "Ysxbmo1b",
+          "clanTag": null
+        },
+        {
+          "username": "croissant au beurre",
+          "clientID": "qgApkTTA",
+          "clanTag": null
+        },
+        {
+          "username": "O___0",
+          "clientID": "z8nvv9iT",
+          "clanTag": null
+        },
+        {
+          "username": "Docterr",
+          "clientID": "gs9D6KnP",
+          "clanTag": "TART"
+        },
+        {
+          "username": "AnonShark6",
+          "clientID": "HYE3jHZs",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 886,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T23:24:58.697Z",
+      "url": "https://openfront.io/game/62b5xUNX"
     }
   ],
   "hvn": [
