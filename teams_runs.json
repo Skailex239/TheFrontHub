@@ -36892,6 +36892,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:29:20.008Z",
       "url": "https://openfront.io/game/KyekRRk5"
+    },
+    {
+      "id": "HC3hcMCs",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bitcoin",
+          "clientID": "bsaKSWDW",
+          "clanTag": "AUT"
+        },
+        {
+          "username": "CunningLinguist",
+          "clientID": "6yXfjwkg",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 783,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:26:52.784Z",
+      "url": "https://openfront.io/game/HC3hcMCs"
     }
   ],
   "trios": [
@@ -148460,6 +148485,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T21:20:56.227Z",
       "url": "https://openfront.io/game/cVhC9AL4"
+    },
+    {
+      "id": "Tu21zMtQ",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "jojo",
+          "clientID": "xrPRiHAU",
+          "clanTag": null
+        },
+        {
+          "username": "Democratic republic of Iran",
+          "clientID": "PD9mfwbB",
+          "clanTag": "IR"
+        },
+        {
+          "username": "ChubbyTiger",
+          "clientID": "VxeBLSjn",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "GoofyPilot.smCU",
+          "clientID": "YabfiPd1",
+          "clanTag": null
+        },
+        {
+          "username": "Anon745",
+          "clientID": "Psr5yJnY",
+          "clanTag": null
+        },
+        {
+          "username": "_Dark",
+          "clientID": "A2iKF81i",
+          "clanTag": null
+        },
+        {
+          "username": "Malefice",
+          "clientID": "4EqE1Mxv",
+          "clanTag": null
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T21:24:43.566Z",
+      "url": "https://openfront.io/game/Tu21zMtQ"
     }
   ],
   "hvn": [
