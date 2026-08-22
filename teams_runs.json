@@ -71106,6 +71106,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T16:58:28.450Z",
       "url": "https://openfront.io/game/XvLHHz3t"
+    },
+    {
+      "id": "iW2UKCxm",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "UUU_",
+          "clientID": "jFhJ9au6",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTulip",
+          "clientID": "F26A1oAM",
+          "clanTag": null
+        },
+        {
+          "username": "Cookie Republic",
+          "clientID": "3Ljy6soF",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 923,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:06:04.421Z",
+      "url": "https://openfront.io/game/iW2UKCxm"
+    },
+    {
+      "id": "YZUFrgoH",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "POL Polska",
+          "clientID": "wT3US9mP",
+          "clanTag": null
+        },
+        {
+          "username": "snack",
+          "clientID": "4ztYCxzF",
+          "clanTag": "MOG"
+        },
+        {
+          "username": "SONdinavian empire",
+          "clientID": "WAawVU19",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 665,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:10:40.338Z",
+      "url": "https://openfront.io/game/YZUFrgoH"
     }
   ],
   "quads": [
@@ -107688,6 +107748,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T16:47:53.101Z",
       "url": "https://openfront.io/game/oftd3hN5"
+    },
+    {
+      "id": "w7ZL2Gon",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BigPIPI",
+          "clientID": "Xc8h5hs9",
+          "clanTag": null
+        },
+        {
+          "username": "robin111",
+          "clientID": "iAkTFYSe",
+          "clanTag": "FIG"
+        },
+        {
+          "username": "ula",
+          "clientID": "HXAu9GUC",
+          "clanTag": "FIG"
+        },
+        {
+          "username": "Weon",
+          "clientID": "mftYPDhN",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1284,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T17:01:09.099Z",
+      "url": "https://openfront.io/game/w7ZL2Gon"
     }
   ],
   "team_custom": [
