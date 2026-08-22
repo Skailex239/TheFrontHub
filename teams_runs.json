@@ -62241,6 +62241,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T01:29:58.401Z",
       "url": "https://openfront.io/game/ZUvAyjL8"
+    },
+    {
+      "id": "URkaReHb",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Twitch_MehighPlays",
+          "clientID": "7fdRxcTT",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "AnonDuck",
+          "clientID": "pejPnyRM",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "nippon",
+          "clientID": "xPonxgpf",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 377,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T01:36:49.889Z",
+      "url": "https://openfront.io/game/URkaReHb"
     }
   ],
   "quads": [
