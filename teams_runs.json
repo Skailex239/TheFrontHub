@@ -66001,6 +66001,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T09:41:58.286Z",
       "url": "https://openfront.io/game/1yuVTVHh"
+    },
+    {
+      "id": "J8gPDtcZ",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon149",
+          "clientID": "vWnXacnQ",
+          "clanTag": null
+        },
+        {
+          "username": "Mau",
+          "clientID": "TEP6ZkET",
+          "clanTag": null
+        },
+        {
+          "username": "KIARASH",
+          "clientID": "UadUSwon",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T09:43:58.392Z",
+      "url": "https://openfront.io/game/J8gPDtcZ"
     }
   ],
   "quads": [
@@ -100658,6 +100688,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T09:32:26.635Z",
       "url": "https://openfront.io/game/jBzJ2Vde"
+    },
+    {
+      "id": "sEFYbWkX",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "SpaceKats",
+          "clientID": "UP4ySmMW",
+          "clanTag": null
+        },
+        {
+          "username": "chainland",
+          "clientID": "LnoPzpFu",
+          "clanTag": null
+        },
+        {
+          "username": "Alexandrie",
+          "clientID": "Bq4HqLcU",
+          "clanTag": null
+        },
+        {
+          "username": "Hadi",
+          "clientID": "ndUvh5GK",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 842,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T09:42:21.300Z",
+      "url": "https://openfront.io/game/sEFYbWkX"
     }
   ],
   "team_custom": [
@@ -129820,6 +129885,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T09:36:03.851Z",
       "url": "https://openfront.io/game/Ca9VuRqA"
+    },
+    {
+      "id": "orbvwg3R",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "JFZFJCNX",
+          "clanTag": null
+        },
+        {
+          "username": "Napoleon",
+          "clientID": "dNuyGE34",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonLinen7",
+          "clientID": "ZhpMdkVU",
+          "clanTag": null
+        },
+        {
+          "username": "Kiwi Kill You",
+          "clientID": "C2wrWLi2",
+          "clanTag": null
+        },
+        {
+          "username": "Anon638",
+          "clientID": "ya3RTcYQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon304",
+          "clientID": "qLPnpfhe",
+          "clanTag": null
+        },
+        {
+          "username": "Dutch E.India Co.",
+          "clientID": "YzD9mnXe",
+          "clanTag": "NAM"
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 823,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T09:41:19.246Z",
+      "url": "https://openfront.io/game/orbvwg3R"
     }
   ],
   "hvn": [
