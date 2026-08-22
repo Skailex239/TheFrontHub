@@ -30317,6 +30317,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T01:45:09.929Z",
       "url": "https://openfront.io/game/iwNLc9m5"
+    },
+    {
+      "id": "u5LB3L5K",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "beetroot county",
+          "clientID": "RFeQdUGN",
+          "clanTag": "YOINK"
+        },
+        {
+          "username": "skoggydoggy",
+          "clientID": "pNNLS85d",
+          "clanTag": "SKOG"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 628,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:11:58.904Z",
+      "url": "https://openfront.io/game/u5LB3L5K"
     }
   ],
   "trios": [
@@ -62461,6 +62486,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T01:57:24.875Z",
       "url": "https://openfront.io/game/ySHhmbZW"
+    },
+    {
+      "id": "eSuagJob",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Gaking",
+          "clientID": "711NaD5T",
+          "clanTag": "GRE"
+        },
+        {
+          "username": "Foolztoolz",
+          "clientID": "AUdsaMKD",
+          "clanTag": "NRI"
+        },
+        {
+          "username": "kome",
+          "clientID": "qJ8B7uF1",
+          "clanTag": "1919"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 502,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T02:15:12.909Z",
+      "url": "https://openfront.io/game/eSuagJob"
     }
   ],
   "quads": [
@@ -121515,6 +121570,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T01:51:37.868Z",
       "url": "https://openfront.io/game/ppuF6tti"
+    },
+    {
+      "id": "wGZ3ujX4",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "I28",
+          "clientID": "r3TkyBzv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCipher",
+          "clientID": "ocEa8ZwG",
+          "clanTag": "BK"
+        },
+        {
+          "username": "KJSisKing",
+          "clientID": "8r11EuGk",
+          "clanTag": "BK"
+        },
+        {
+          "username": "didden bludden",
+          "clientID": "fE4YLsoj",
+          "clanTag": null
+        },
+        {
+          "username": "AnonYacht7",
+          "clientID": "1ddkfoDo",
+          "clanTag": null
+        },
+        {
+          "username": "JIPANG",
+          "clientID": "doQsjEAN",
+          "clanTag": null
+        },
+        {
+          "username": "SmokeVortex",
+          "clientID": "Y8Xp8Q6j",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 783,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T02:09:53.993Z",
+      "url": "https://openfront.io/game/wGZ3ujX4"
     }
   ],
   "hvn": [
