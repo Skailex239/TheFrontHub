@@ -72711,6 +72711,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T19:19:35.201Z",
       "url": "https://openfront.io/game/F64ddraJ"
+    },
+    {
+      "id": "E9MH8DrF",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Lord_Vader",
+          "clientID": "Lrpv7WCa",
+          "clanTag": null
+        },
+        {
+          "username": "HAT",
+          "clientID": "NooZf8UK",
+          "clanTag": "RED"
+        },
+        {
+          "username": "DoubloV",
+          "clientID": "889pxqkY",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 798,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T19:15:32.840Z",
+      "url": "https://openfront.io/game/E9MH8DrF"
     }
   ],
   "quads": [
@@ -109748,6 +109778,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T18:38:11.259Z",
       "url": "https://openfront.io/game/aHMtCRcF"
+    },
+    {
+      "id": "S8ZTpAdK",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "snr_blnd",
+          "clientID": "Z7VvH8yK",
+          "clanTag": null
+        },
+        {
+          "username": "mack",
+          "clientID": "gSRHpYBS",
+          "clanTag": "OK"
+        },
+        {
+          "username": "Chungus",
+          "clientID": "EoNWmiHf",
+          "clanTag": null
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "vX5o925b",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1411,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T19:04:13.800Z",
+      "url": "https://openfront.io/game/S8ZTpAdK"
     }
   ],
   "team_custom": [
