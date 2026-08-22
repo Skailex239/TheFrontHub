@@ -36742,6 +36742,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:07:07.259Z",
       "url": "https://openfront.io/game/hZquf4Ru"
+    },
+    {
+      "id": "Jf8jQ42z",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Ano Lagone",
+          "clientID": "XZeieFjy",
+          "clanTag": "DEES"
+        },
+        {
+          "username": "Vitello Tonnato",
+          "clientID": "uAgkbNij",
+          "clanTag": "DEES"
+        }
+      ],
+      "map": "World",
+      "duration_s": 935,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T21:12:03.912Z",
+      "url": "https://openfront.io/game/Jf8jQ42z"
+    },
+    {
+      "id": "iZuJm5jy",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Muffin",
+          "clientID": "bUtRa27V",
+          "clanTag": "MILK"
+        },
+        {
+          "username": "TheFinalFlash",
+          "clientID": "ccJ3MZzd",
+          "clanTag": "BDGYM"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 676,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:16:25.477Z",
+      "url": "https://openfront.io/game/iZuJm5jy"
     }
   ],
   "trios": [
