@@ -31892,6 +31892,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T08:41:45.745Z",
       "url": "https://openfront.io/game/E2NRsxqL"
+    },
+    {
+      "id": "8UkSfm4J",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Legan320",
+          "clientID": "bqFvpiat",
+          "clanTag": "OO"
+        },
+        {
+          "username": "jattvadd",
+          "clientID": "mZzRfpnY",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier France",
+      "duration_s": 1149,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T08:37:59.004Z",
+      "url": "https://openfront.io/game/8UkSfm4J"
     }
   ],
   "trios": [
@@ -128400,6 +128425,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T08:34:28.181Z",
       "url": "https://openfront.io/game/kUwh5ewm"
+    },
+    {
+      "id": "KNQrYa3W",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonOcean1",
+          "clientID": "NYWr4kqY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGeyser9",
+          "clientID": "K6xLnFqq",
+          "clanTag": null
+        },
+        {
+          "username": "Asmodeus",
+          "clientID": "pgdGvWFB",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Nicaragua",
+          "clientID": "uxQZeuKm",
+          "clanTag": null
+        },
+        {
+          "username": "UNlzl",
+          "clientID": "ZFPSnUv1",
+          "clanTag": null
+        },
+        {
+          "username": "kuma",
+          "clientID": "k2Cnsz5d",
+          "clanTag": null
+        },
+        {
+          "username": "the alp",
+          "clientID": "aohKKoSS",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1241,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T08:36:39.905Z",
+      "url": "https://openfront.io/game/KNQrYa3W"
     }
   ],
   "hvn": [
