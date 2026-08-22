@@ -61481,6 +61481,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T23:42:08.496Z",
       "url": "https://openfront.io/game/C4siKY9U"
+    },
+    {
+      "id": "wcaB7F1G",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Trollsky in my butski",
+          "clientID": "jgbg9woJ",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Kazakhgaming_",
+          "clientID": "54GgrTo3",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Boo",
+          "clientID": "aigVobFW",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-21T23:50:21.003Z",
+      "url": "https://openfront.io/game/wcaB7F1G"
     }
   ],
   "quads": [
@@ -119025,6 +119055,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T23:40:26.374Z",
       "url": "https://openfront.io/game/CukCDKnE"
+    },
+    {
+      "id": "g4zqwK6r",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TeNa",
+          "clientID": "av5RCfQb",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "vari",
+          "clientID": "vEbnrqqM",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Crescent",
+          "clientID": "fMUe4Q73",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Woda",
+          "clientID": "Tr4KUhLv",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "nen",
+          "clientID": "JmrkyAUH",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Apollo",
+          "clientID": "eRdqsxSM",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "ZuluNation",
+          "clientID": "898375J4",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 645,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 83,
+      "playerTeams": 7,
+      "timestamp": "2026-08-21T23:54:37.270Z",
+      "url": "https://openfront.io/game/g4zqwK6r"
     }
   ],
   "hvn": [
