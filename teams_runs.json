@@ -67631,6 +67631,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T12:15:09.926Z",
       "url": "https://openfront.io/game/33QBQvMH"
+    },
+    {
+      "id": "SFYWzF5A",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Rosswall",
+          "clientID": "z1ihhcun",
+          "clanTag": "8811"
+        },
+        {
+          "username": "Termy",
+          "clientID": "j5zquKSU",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Syn",
+          "clientID": "QPQfAW3z",
+          "clanTag": "TARD"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 466,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T12:24:23.977Z",
+      "url": "https://openfront.io/game/SFYWzF5A"
     }
   ],
   "quads": [
