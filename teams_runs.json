@@ -65366,6 +65366,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T08:21:16.629Z",
       "url": "https://openfront.io/game/pJhMqEhJ"
+    },
+    {
+      "id": "BE276xtA",
+      "mode": "trios",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "Galactic9",
+          "clientID": "k1vr8hZi",
+          "clanTag": null
+        },
+        {
+          "username": "Lilu",
+          "clientID": "DdBQ4jXc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMango9",
+          "clientID": "c5qetoiz",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T08:25:44.390Z",
+      "url": "https://openfront.io/game/BE276xtA"
     }
   ],
   "quads": [
