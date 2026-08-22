@@ -35892,6 +35892,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T18:47:23.635Z",
       "url": "https://openfront.io/game/Z3i5mKDc"
+    },
+    {
+      "id": "RrVSd973",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "USA",
+          "clientID": "bmBdDaS6",
+          "clanTag": null
+        },
+        {
+          "username": "Patootie",
+          "clientID": "Kq53jcHv",
+          "clanTag": "CUTIE"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1748,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T18:27:56.575Z",
+      "url": "https://openfront.io/game/RrVSd973"
     }
   ],
   "trios": [
@@ -72266,6 +72291,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T18:35:37.037Z",
       "url": "https://openfront.io/game/CtyJVrak"
+    },
+    {
+      "id": "nLvBAfgR",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Namnecash",
+          "clientID": "ESgqiDBd",
+          "clanTag": null
+        },
+        {
+          "username": "Pao de Queijo",
+          "clientID": "WUAr9Vrr",
+          "clanTag": "MG"
+        },
+        {
+          "username": "Big Muscles",
+          "clientID": "8PUS27b6",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 909,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:42:00.632Z",
+      "url": "https://openfront.io/game/nLvBAfgR"
     }
   ],
   "quads": [
