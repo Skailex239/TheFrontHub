@@ -30742,6 +30742,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T03:55:52.286Z",
       "url": "https://openfront.io/game/QBiFqP9p"
+    },
+    {
+      "id": "jAscswih",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon301",
+          "clientID": "5QMMA5Di",
+          "clanTag": null
+        },
+        {
+          "username": "JoeBrat",
+          "clientID": "NH7gkQCH",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 388,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T04:06:41.501Z",
+      "url": "https://openfront.io/game/jAscswih"
     }
   ],
   "trios": [
@@ -123545,6 +123570,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T03:56:52.186Z",
       "url": "https://openfront.io/game/HJvdyHqg"
+    },
+    {
+      "id": "dtDShj3D",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "rohos",
+          "clientID": "1yc8E8qA",
+          "clanTag": null
+        },
+        {
+          "username": "Tree",
+          "clientID": "dHwVA8Kt",
+          "clanTag": null
+        },
+        {
+          "username": "shingo0220",
+          "clientID": "WDchT3yq",
+          "clanTag": null
+        },
+        {
+          "username": "peace trade",
+          "clientID": "HG7ksUDu",
+          "clanTag": null
+        },
+        {
+          "username": "777",
+          "clientID": "Tg6DsK57",
+          "clanTag": null
+        },
+        {
+          "username": "aaa",
+          "clientID": "15obYZd8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCrimson",
+          "clientID": "Q9Fk5Sdo",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 687,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T04:00:56.160Z",
+      "url": "https://openfront.io/game/dtDShj3D"
     }
   ],
   "hvn": [
