@@ -31592,6 +31592,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T07:20:37.329Z",
       "url": "https://openfront.io/game/8Wtjehyu"
+    },
+    {
+      "id": "KKrdbhtd",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Gila",
+          "clientID": "4sRjn7bW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonBeetle3",
+          "clientID": "fpjtg1zy",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1546,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T07:11:08.620Z",
+      "url": "https://openfront.io/game/KKrdbhtd"
     }
   ],
   "trios": [
@@ -64786,6 +64811,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T06:56:40.013Z",
       "url": "https://openfront.io/game/RbzLrKpK"
+    },
+    {
+      "id": "DmLE4yuf",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon273",
+          "clientID": "91eWgARN",
+          "clanTag": null
+        },
+        {
+          "username": "KING I WILL WIN",
+          "clientID": "DkiE8tT4",
+          "clanTag": null
+        },
+        {
+          "username": "Akaza Kingdom",
+          "clientID": "6gFKzVQk",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 712,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T07:25:05.756Z",
+      "url": "https://openfront.io/game/DmLE4yuf"
     }
   ],
   "quads": [
@@ -98813,6 +98868,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T07:14:23.314Z",
       "url": "https://openfront.io/game/H6D5D69m"
+    },
+    {
+      "id": "MtRbhNs5",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Seraph",
+          "clientID": "r6yCqKQ3",
+          "clanTag": null
+        },
+        {
+          "username": "Gpt1000",
+          "clientID": "2FXHnte1",
+          "clanTag": null
+        },
+        {
+          "username": "EUROPAPA",
+          "clientID": "bZ4C268W",
+          "clanTag": null
+        },
+        {
+          "username": "Mind Goblin",
+          "clientID": "mFkKg2qw",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 725,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T07:23:56.148Z",
+      "url": "https://openfront.io/game/MtRbhNs5"
+    },
+    {
+      "id": "VZ83BXkW",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Babalu",
+          "clientID": "L18Kdcpk",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "TEAM_UP_OR_LOSE",
+          "clientID": "4JZqCCaB",
+          "clanTag": null
+        },
+        {
+          "username": "dermani",
+          "clientID": "ff2ttUK8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSapphire7",
+          "clientID": "UZgUZGKY",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 842,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T07:23:16.590Z",
+      "url": "https://openfront.io/game/VZ83BXkW"
     }
   ],
   "team_custom": [
