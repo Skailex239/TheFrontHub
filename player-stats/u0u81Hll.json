@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-22T19:18:59.109Z",
-  "lastSyncedAt": "2026-08-22T19:18:56.132Z",
-  "totalGames": 2247,
+  "computedAt": "2026-08-22T19:21:10.111Z",
+  "lastSyncedAt": "2026-08-22T19:21:07.087Z",
+  "totalGames": 2248,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
@@ -21,7 +21,7 @@
       "target": 1000
     },
     "playtime": {
-      "current": 559,
+      "current": 560,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "4 502",
     "totalWins": "854",
-    "totalGames": "2 247",
-    "totalPlaytime": "23j 7h",
-    "totalPlaytimeCompact": "23j 7h",
-    "avgGameDuration": "14m 56s",
+    "totalGames": "2 248",
+    "totalPlaytime": "23j 8h",
+    "totalPlaytimeCompact": "23j 8h",
+    "avgGameDuration": "14m 57s",
     "longestGame": "2h 40m",
     "winrate": "38%",
-    "totalPlaytimeHours": "559h"
+    "totalPlaytimeHours": "560h"
   },
   "playtime": {
-    "totalSec": 2015023,
-    "avgGameSec": 896.7614597240765,
+    "totalSec": 2016556,
+    "avgGameSec": 897.0444839857652,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1402,
-        "playtimeSec": 1621418,
+        "games": 1403,
+        "playtimeSec": 1622951,
         "wins": 384
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 854,
-    "defeat": 1053,
+    "defeat": 1054,
     "incomplete": 340
   },
   "maps": [
@@ -356,6 +356,22 @@
       }
     },
     {
+      "map": "North America",
+      "count": 23,
+      "wins": 5,
+      "losses": 18,
+      "playtimeSec": 33680,
+      "avgDuration": 1464.3478260869565,
+      "winRate": 0.21739130434782608,
+      "lastPlayed": 1787424784493,
+      "formatted": {
+        "playtime": "9h 21m",
+        "avgDuration": "24m",
+        "winRate": "22%",
+        "lastPlayed": "22/08/26"
+      }
+    },
+    {
       "map": "San Francisco",
       "count": 23,
       "wins": 6,
@@ -385,22 +401,6 @@
         "avgDuration": "21m",
         "winRate": "22%",
         "lastPlayed": "26/07/26"
-      }
-    },
-    {
-      "map": "North America",
-      "count": 22,
-      "wins": 5,
-      "losses": 17,
-      "playtimeSec": 32147,
-      "avgDuration": 1461.2272727272727,
-      "winRate": 0.22727272727272727,
-      "lastPlayed": 1785614774254,
-      "formatted": {
-        "playtime": "8h 55m",
-        "avgDuration": "24m",
-        "winRate": "23%",
-        "lastPlayed": "01/08/26"
       }
     },
     {
@@ -1674,7 +1674,7 @@
       213,
       207,
       230,
-      202,
+      203,
       152,
       154,
       154
@@ -1685,7 +1685,7 @@
       300,
       334,
       371,
-      394,
+      395,
       321
     ],
     "byDay": [
@@ -1931,8 +1931,8 @@
       },
       {
         "date": "22/08/2026",
-        "count": 30,
-        "playtimeSec": 8406
+        "count": 31,
+        "playtimeSec": 9939
       },
       {
         "date": "23/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 9,
+    "current": 0,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "HoMD8nxj",
+      "start": "2026-08-22T18:53:04.493Z",
+      "map": "North America",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1533,
+      "totalPlayers": 57,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "yigSEmQV",
       "start": "2026-08-22T17:16:17.371Z",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 307,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "97oC3sbG",
-      "start": "2026-08-21T22:45:29.726Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 285,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
