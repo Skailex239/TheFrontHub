@@ -31742,6 +31742,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T07:59:36.574Z",
       "url": "https://openfront.io/game/BGZPBPQD"
+    },
+    {
+      "id": "yoRrTULn",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Little Saint James",
+          "clientID": "XKZpi6J7",
+          "clanTag": null
+        },
+        {
+          "username": "Anon823",
+          "clientID": "Y5p2o1zL",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 700,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T08:05:19.415Z",
+      "url": "https://openfront.io/game/yoRrTULn"
     }
   ],
   "trios": [
@@ -99308,6 +99333,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T07:35:31.507Z",
       "url": "https://openfront.io/game/vCexgLxY"
+    },
+    {
+      "id": "jzWCmE1N",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Faker",
+          "clientID": "bjyEW1LS",
+          "clanTag": "T1"
+        },
+        {
+          "username": "1557 1602 ker",
+          "clientID": "nNr3zWq7",
+          "clanTag": "T1"
+        },
+        {
+          "username": "Bomb The Hell Out Of Them",
+          "clientID": "GEXZqACM",
+          "clanTag": null
+        },
+        {
+          "username": "Güarlord",
+          "clientID": "tKrb42SD",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 788,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T08:04:18.850Z",
+      "url": "https://openfront.io/game/jzWCmE1N"
+    },
+    {
+      "id": "Rew1xCus",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "dont kill me",
+          "clientID": "dRBeXB6M",
+          "clanTag": "RIP"
+        },
+        {
+          "username": "Anon2110",
+          "clientID": "db96To1B",
+          "clanTag": null
+        },
+        {
+          "username": "Saint Empire",
+          "clientID": "7abgj7Vd",
+          "clanTag": null
+        },
+        {
+          "username": "Anon499",
+          "clientID": "RXFSYRCQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1263,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T07:56:20.372Z",
+      "url": "https://openfront.io/game/Rew1xCus"
     }
   ],
   "team_custom": [
