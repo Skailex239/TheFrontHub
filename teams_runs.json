@@ -29767,6 +29767,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T00:15:53.163Z",
       "url": "https://openfront.io/game/iRnUhWX3"
+    },
+    {
+      "id": "ZRkVFvX3",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PortChop",
+          "clientID": "fLHeF6gx",
+          "clanTag": "LIL"
+        },
+        {
+          "username": "AnonBison7",
+          "clientID": "oiptnRTM",
+          "clanTag": "GIMP"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 838,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T00:18:12.814Z",
+      "url": "https://openfront.io/game/ZRkVFvX3"
+    },
+    {
+      "id": "nPghLdZr",
+      "mode": "duos",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "NukeTheCrown",
+          "clientID": "KAJsYrhM",
+          "clanTag": null
+        },
+        {
+          "username": "A_Z",
+          "clientID": "nNNPToFY",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1775,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 23,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T00:03:06.808Z",
+      "url": "https://openfront.io/game/nPghLdZr"
     }
   ],
   "trios": [
@@ -94063,6 +94113,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T00:12:31.451Z",
       "url": "https://openfront.io/game/DZzxo8gB"
+    },
+    {
+      "id": "H45mHXLz",
+      "mode": "quads",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "ToxicWasteIsFood",
+          "clientID": "LipmuVsi",
+          "clanTag": "TUNG"
+        },
+        {
+          "username": "Shumi",
+          "clientID": "9Lo9ABFD",
+          "clanTag": null
+        },
+        {
+          "username": "lefofuzeIII",
+          "clientID": "iq1HgbmC",
+          "clanTag": null
+        },
+        {
+          "username": "shad",
+          "clientID": "avjRaXNz",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T00:20:10.433Z",
+      "url": "https://openfront.io/game/H45mHXLz"
     }
   ],
   "team_custom": [
