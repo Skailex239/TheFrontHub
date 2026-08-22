@@ -71216,6 +71216,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T17:10:40.338Z",
       "url": "https://openfront.io/game/YZUFrgoH"
+    },
+    {
+      "id": "5UAfKJq4",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ayden",
+          "clientID": "U1nyrycm",
+          "clanTag": "GCC"
+        },
+        {
+          "username": "Cheetah9",
+          "clientID": "FDNLkyz9",
+          "clanTag": null
+        },
+        {
+          "username": "jay",
+          "clientID": "bPt6vcNm",
+          "clanTag": "GCC"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 1054,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:11:32.419Z",
+      "url": "https://openfront.io/game/5UAfKJq4"
+    },
+    {
+      "id": "9eVK2g5x",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "kermol",
+          "clientID": "65wNpLVw",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSlate8",
+          "clientID": "9MJrxeQe",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "uHgoyqkD",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 727,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:18:46.619Z",
+      "url": "https://openfront.io/game/9eVK2g5x"
     }
   ],
   "quads": [
@@ -141650,6 +141710,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T17:03:46.772Z",
       "url": "https://openfront.io/game/3Ts81r8M"
+    },
+    {
+      "id": "ipY7fRnG",
+      "mode": "team_custom",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "billbill47",
+          "clientID": "z1KpJXs7",
+          "clanTag": "BN"
+        },
+        {
+          "username": "Real China",
+          "clientID": "ddC3MY7a",
+          "clanTag": null
+        },
+        {
+          "username": "ur Team u ldlot",
+          "clientID": "WimSc9oU",
+          "clanTag": "HELP"
+        },
+        {
+          "username": "AnonDusk9",
+          "clientID": "LeGNgqru",
+          "clanTag": null
+        },
+        {
+          "username": "destroyer 3003",
+          "clientID": "AtqYkBFf",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Anon505",
+          "clientID": "EE6EWYkq",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSapphire3",
+          "clientID": "SHh3p3Gz",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 914,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T17:16:00.348Z",
+      "url": "https://openfront.io/game/ipY7fRnG"
     }
   ],
   "hvn": [
@@ -169512,6 +169622,51 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T17:12:29.005Z",
       "url": "https://openfront.io/game/w9tkA14z"
+    },
+    {
+      "id": "UGyW7k2R",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonTitan8",
+          "clientID": "3oT767Fi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGlacier5",
+          "clientID": "Mk5eW7qN",
+          "clanTag": null
+        },
+        {
+          "username": "hexanaughty",
+          "clientID": "6grJfeDV",
+          "clanTag": null
+        },
+        {
+          "username": "Natsirt",
+          "clientID": "aiDUB9DN",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Sublime",
+          "clientID": "XN3Zn9L9",
+          "clanTag": null
+        },
+        {
+          "username": "...",
+          "clientID": "yp5TaHfv",
+          "clanTag": null
+        }
+      ],
+      "map": "Mars",
+      "duration_s": 1222,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 26,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T17:09:06.665Z",
+      "url": "https://openfront.io/game/UGyW7k2R"
     }
   ]
 }
