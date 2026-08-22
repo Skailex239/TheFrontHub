@@ -30117,6 +30117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T01:00:57.485Z",
       "url": "https://openfront.io/game/QFirVb8g"
+    },
+    {
+      "id": "hEtsNrhj",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "RichBlub",
+          "clientID": "2PKYu1cZ",
+          "clanTag": "YOSH"
+        },
+        {
+          "username": "BigYOSH",
+          "clientID": "BLW4sd96",
+          "clanTag": "YOSH"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 969,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T01:08:28.461Z",
+      "url": "https://openfront.io/game/hEtsNrhj"
     }
   ],
   "trios": [
@@ -94743,6 +94768,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T00:58:29.322Z",
       "url": "https://openfront.io/game/ejAvjiq4"
+    },
+    {
+      "id": "RZQw6Tkv",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "xMix",
+          "clientID": "67XsBZ2r",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "ereix",
+          "clientID": "V5Wr4uVJ",
+          "clanTag": null
+        },
+        {
+          "username": "nagoyajin",
+          "clientID": "zeMQanfX",
+          "clanTag": null
+        },
+        {
+          "username": "7274",
+          "clientID": "GTWHmSjf",
+          "clanTag": "BT"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 827,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T01:13:04.246Z",
+      "url": "https://openfront.io/game/RZQw6Tkv"
     }
   ],
   "team_custom": [
@@ -120520,6 +120580,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T01:09:43.539Z",
       "url": "https://openfront.io/game/n8xFp6oc"
+    },
+    {
+      "id": "NkCCu1RQ",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "A Wet Sandwich",
+          "clientID": "DHNc1DXG",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Jarques",
+          "clientID": "q5mD56Ln",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "vari",
+          "clientID": "rWLpyBtf",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "TeNa",
+          "clientID": "BCvBgdaM",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Woda",
+          "clientID": "8923RwLY",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "aaaa",
+          "clientID": "GCKc2Juv",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 477,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T01:18:52.634Z",
+      "url": "https://openfront.io/game/NkCCu1RQ"
     }
   ],
   "hvn": [
