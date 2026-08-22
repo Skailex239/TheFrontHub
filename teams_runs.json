@@ -70761,6 +70761,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T16:39:43.821Z",
       "url": "https://openfront.io/game/HKUKX1fQ"
+    },
+    {
+      "id": "kzUoQk1U",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Emperor",
+          "clientID": "nf31iKr3",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "Guardian",
+          "clientID": "SL1PFjJ6",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "Merchant",
+          "clientID": "bKt3SzCz",
+          "clanTag": "WIN"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 997,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T16:41:10.451Z",
+      "url": "https://openfront.io/game/kzUoQk1U"
+    },
+    {
+      "id": "2NkPXo66",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Simhasanam",
+          "clientID": "jfuDFYd3",
+          "clanTag": "TVC"
+        },
+        {
+          "username": "Mat kar Lala mat kar",
+          "clientID": "rw1CYvYV",
+          "clanTag": null
+        },
+        {
+          "username": "KingKong",
+          "clientID": "QCMKqhb6",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1124,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T16:39:13.802Z",
+      "url": "https://openfront.io/game/2NkPXo66"
     }
   ],
   "quads": [
