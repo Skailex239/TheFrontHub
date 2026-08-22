@@ -71756,6 +71756,96 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T17:59:27.537Z",
       "url": "https://openfront.io/game/NzGbyMTP"
+    },
+    {
+      "id": "ZhbY6yTZ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "LIQUOR TAINT",
+          "clientID": "SzP7TKEC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anokani",
+          "clientID": "yAuB6V5U",
+          "clanTag": null
+        },
+        {
+          "username": "Saladin",
+          "clientID": "ZfmFYrxF",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 600,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:02:33.800Z",
+      "url": "https://openfront.io/game/ZhbY6yTZ"
+    },
+    {
+      "id": "aqt7CtaR",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Lady Erie",
+          "clientID": "ysx4M9Aq",
+          "clanTag": null
+        },
+        {
+          "username": "penguin",
+          "clientID": "6R5rEy47",
+          "clanTag": null
+        },
+        {
+          "username": "Rudazur",
+          "clientID": "UojDFBbK",
+          "clanTag": "ZOO"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 923,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:57:51.435Z",
+      "url": "https://openfront.io/game/aqt7CtaR"
+    },
+    {
+      "id": "dPXYsqtP",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "MarkoKovac",
+          "clientID": "CSXt2P9L",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTundra7",
+          "clientID": "haNe4Mtv",
+          "clanTag": null
+        },
+        {
+          "username": "theEU",
+          "clientID": "VJE5VWBQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 626,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:01:22.666Z",
+      "url": "https://openfront.io/game/dPXYsqtP"
     }
   ],
   "quads": [
@@ -142765,6 +142855,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T17:58:21.465Z",
       "url": "https://openfront.io/game/bDHNxJ1h"
+    },
+    {
+      "id": "QSbKxm6o",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "chesiren",
+          "clientID": "Am9xCe83",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonSapphire9",
+          "clientID": "CzZDfJFW",
+          "clanTag": null
+        },
+        {
+          "username": "HereForTheTrains",
+          "clientID": "Xy9KpoP6",
+          "clanTag": "LUGA"
+        },
+        {
+          "username": "Help",
+          "clientID": "fnZLXKk9",
+          "clanTag": null
+        },
+        {
+          "username": "PAD50409",
+          "clientID": "QY1XHbdm",
+          "clanTag": null
+        },
+        {
+          "username": "cortium",
+          "clientID": "5kRueUSc",
+          "clanTag": "COR"
+        },
+        {
+          "username": "korean",
+          "clientID": "xYp2PfRV",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 823,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T17:59:06.510Z",
+      "url": "https://openfront.io/game/QSbKxm6o"
     }
   ],
   "hvn": [
