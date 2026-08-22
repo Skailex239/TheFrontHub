@@ -31392,6 +31392,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T07:06:41.873Z",
       "url": "https://openfront.io/game/s4N6oC2E"
+    },
+    {
+      "id": "u2zC9onf",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonCompass5",
+          "clientID": "kbQQTLQo",
+          "clanTag": null
+        },
+        {
+          "username": "AnonValley5",
+          "clientID": "2ETQwu9Q",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1234,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T06:53:58.341Z",
+      "url": "https://openfront.io/game/u2zC9onf"
     }
   ],
   "trios": [
@@ -64556,6 +64581,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T06:41:41.000Z",
       "url": "https://openfront.io/game/8UczJ7Cu"
+    },
+    {
+      "id": "RbzLrKpK",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Vietnampro",
+          "clientID": "5xPnVp7N",
+          "clanTag": "VIE"
+        },
+        {
+          "username": "Prairie",
+          "clientID": "TRHiGFg9",
+          "clanTag": null
+        },
+        {
+          "username": "jui",
+          "clientID": "74cLuXvT",
+          "clanTag": "MX"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1029,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T06:56:40.013Z",
+      "url": "https://openfront.io/game/RbzLrKpK"
     }
   ],
   "quads": [
