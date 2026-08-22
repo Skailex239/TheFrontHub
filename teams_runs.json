@@ -74336,6 +74336,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T21:32:31.314Z",
       "url": "https://openfront.io/game/Ku4RXqEh"
+    },
+    {
+      "id": "p41jHKXs",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "OOPS",
+          "clientID": "D5i3QVyR",
+          "clanTag": null
+        },
+        {
+          "username": "UN Interim Authority",
+          "clientID": "UbP1aChP",
+          "clanTag": null
+        },
+        {
+          "username": "zoom",
+          "clientID": "XYNwck6H",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 644,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T21:59:42.947Z",
+      "url": "https://openfront.io/game/p41jHKXs"
+    },
+    {
+      "id": "dDRdeCVc",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon616",
+          "clientID": "Qdtr92uD",
+          "clanTag": null
+        },
+        {
+          "username": "Andresgzpl",
+          "clientID": "JK7FA75K",
+          "clanTag": "END"
+        },
+        {
+          "username": "Scaletta",
+          "clientID": "wP7gFjqh",
+          "clanTag": "END"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 880,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T21:55:49.601Z",
+      "url": "https://openfront.io/game/dDRdeCVc"
     }
   ],
   "quads": [
