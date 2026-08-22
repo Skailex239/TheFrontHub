@@ -36392,6 +36392,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T19:31:18.294Z",
       "url": "https://openfront.io/game/4FV4oVuf"
+    },
+    {
+      "id": "bm5Miy5V",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonPulley1",
+          "clientID": "MM5T1PCZ",
+          "clanTag": "LTD"
+        },
+        {
+          "username": "AnonMist8",
+          "clientID": "YoUQgWiT",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 595,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T20:13:56.317Z",
+      "url": "https://openfront.io/game/bm5Miy5V"
     }
   ],
   "trios": [
@@ -146205,6 +146230,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T19:38:41.165Z",
       "url": "https://openfront.io/game/hALDhC46"
+    },
+    {
+      "id": "f4mG6KBW",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "FLiPFLAVA",
+          "clientID": "yfvxS8Wo",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Dragon",
+          "clientID": "Ja53sG6u",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Dalilimonada",
+          "clientID": "USECwc1B",
+          "clanTag": "NU"
+        },
+        {
+          "username": "SlayeR",
+          "clientID": "Hya21dhr",
+          "clanTag": "NU"
+        },
+        {
+          "username": "TREXXED",
+          "clientID": "sBs49xLH",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Iceblock",
+          "clientID": "Z1yv7x1S",
+          "clanTag": "NU"
+        },
+        {
+          "username": "V A L Z",
+          "clientID": "Ed5hoAu1",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1146,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T20:05:58.057Z",
+      "url": "https://openfront.io/game/f4mG6KBW"
     }
   ],
   "hvn": [
