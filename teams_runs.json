@@ -109378,6 +109378,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T18:46:45.077Z",
       "url": "https://openfront.io/game/HN3y4gNQ"
+    },
+    {
+      "id": "aHMtCRcF",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "555",
+          "clientID": "t7ajxFdz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRiddle8",
+          "clientID": "dVngcrz5",
+          "clanTag": null
+        },
+        {
+          "username": "Poulpe",
+          "clientID": "XjwZnB8q",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ForceX",
+          "clientID": "6Ypa9n2N",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1674,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T18:38:11.259Z",
+      "url": "https://openfront.io/game/aHMtCRcF"
     }
   ],
   "team_custom": [
