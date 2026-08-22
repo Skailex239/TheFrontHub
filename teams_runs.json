@@ -142330,6 +142330,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T17:31:38.583Z",
       "url": "https://openfront.io/game/YGFM7gwx"
+    },
+    {
+      "id": "QwtM1BAk",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Troop sender",
+          "clientID": "7TEryroE",
+          "clanTag": "ABC"
+        },
+        {
+          "username": "Yarmalenko44",
+          "clientID": "mpp5BKzH",
+          "clanTag": null
+        },
+        {
+          "username": "Laplace",
+          "clientID": "pSjdYBhw",
+          "clanTag": "1412"
+        },
+        {
+          "username": "CCAA",
+          "clientID": "YkK9hMpN",
+          "clanTag": null
+        },
+        {
+          "username": "SIG_UI",
+          "clientID": "WkWRsdcq",
+          "clanTag": null
+        },
+        {
+          "username": "RUB",
+          "clientID": "8oWVY5PT",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin6",
+          "clientID": "EoJ9dN5k",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 752,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T17:43:16.442Z",
+      "url": "https://openfront.io/game/QwtM1BAk"
+    },
+    {
+      "id": "Q9pxMW4E",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anapirat69",
+          "clientID": "QdwXZzZM",
+          "clanTag": null
+        },
+        {
+          "username": "HereForTheTrains",
+          "clientID": "uuMQ5TBr",
+          "clanTag": "LUGA"
+        },
+        {
+          "username": "Cymru",
+          "clientID": "gTGjLb1B",
+          "clanTag": null
+        },
+        {
+          "username": "robin111",
+          "clientID": "zG5wbUhN",
+          "clanTag": "FIG"
+        },
+        {
+          "username": "ula",
+          "clientID": "xG7DjL47",
+          "clanTag": "FIG"
+        },
+        {
+          "username": "SDMakas",
+          "clientID": "hXE2H3y1",
+          "clanTag": null
+        },
+        {
+          "username": "OoO",
+          "clientID": "Wy3tQSm7",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 588,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T17:47:05.292Z",
+      "url": "https://openfront.io/game/Q9pxMW4E"
     }
   ],
   "hvn": [
