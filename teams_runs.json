@@ -34142,6 +34142,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T14:05:54.267Z",
       "url": "https://openfront.io/game/U5xz2G3g"
+    },
+    {
+      "id": "XoJBzcB2",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "alpha555",
+          "clientID": "Mmx9pQrx",
+          "clanTag": null
+        },
+        {
+          "username": "LVS",
+          "clientID": "CCSRwa2N",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 518,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:18:19.973Z",
+      "url": "https://openfront.io/game/XoJBzcB2"
     }
   ],
   "trios": [
@@ -68866,6 +68891,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T14:12:00.848Z",
       "url": "https://openfront.io/game/v2v9iksk"
+    },
+    {
+      "id": "wgj66hZH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PACREV",
+          "clientID": "nuasvPKS",
+          "clanTag": "PRD"
+        },
+        {
+          "username": "Cenculvriti",
+          "clientID": "6877DcNH",
+          "clanTag": "PRD"
+        },
+        {
+          "username": "PATORIT",
+          "clientID": "G7VPD8Sk",
+          "clanTag": "PRD"
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 754,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T14:14:50.604Z",
+      "url": "https://openfront.io/game/wgj66hZH"
     }
   ],
   "quads": [
@@ -104643,6 +104698,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T14:14:26.564Z",
       "url": "https://openfront.io/game/cnGcFWEr"
+    },
+    {
+      "id": "aJQSS2pg",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon724",
+          "clientID": "yaaUVjdc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGlacier4",
+          "clientID": "YRkgSSZE",
+          "clanTag": null
+        },
+        {
+          "username": "MARS",
+          "clientID": "b49cSK9S",
+          "clanTag": null
+        },
+        {
+          "username": "Xmz",
+          "clientID": "8sYeVMVC",
+          "clanTag": "CHINA"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 786,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T14:15:19.652Z",
+      "url": "https://openfront.io/game/aJQSS2pg"
     }
   ],
   "team_custom": [
