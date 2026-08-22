@@ -37242,6 +37242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T22:25:32.481Z",
       "url": "https://openfront.io/game/jcyvY5pc"
+    },
+    {
+      "id": "zKSJCsYW",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Graw",
+          "clientID": "e8mVAZ7W",
+          "clanTag": null
+        },
+        {
+          "username": "Gorakk",
+          "clientID": "gvk8q7qT",
+          "clanTag": "ESP"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 485,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:29:53.402Z",
+      "url": "https://openfront.io/game/zKSJCsYW"
     }
   ],
   "trios": [
@@ -149725,6 +149750,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T22:23:04.240Z",
       "url": "https://openfront.io/game/hWn4kE8a"
+    },
+    {
+      "id": "nLCTGbBt",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Jope",
+          "clientID": "YPA8Es2k",
+          "clanTag": "SLAP"
+        },
+        {
+          "username": "Jodestar",
+          "clientID": "3S4ou6J6",
+          "clanTag": "SLAP"
+        },
+        {
+          "username": "Denby",
+          "clientID": "3FX4R5G7",
+          "clanTag": "SLAP"
+        },
+        {
+          "username": "Telluur",
+          "clientID": "3byaYcgf",
+          "clanTag": "SLAP"
+        },
+        {
+          "username": "Drarok",
+          "clientID": "noVCgyFY",
+          "clanTag": "SLAP"
+        },
+        {
+          "username": "baconsmoothie",
+          "clientID": "NJUifmai",
+          "clanTag": "SLAP"
+        },
+        {
+          "username": "Keruz",
+          "clientID": "nuUg87o7",
+          "clanTag": "SLAP"
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 866,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T22:24:26.371Z",
+      "url": "https://openfront.io/game/nLCTGbBt"
     }
   ],
   "hvn": [
