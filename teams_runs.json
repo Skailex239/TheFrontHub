@@ -31067,6 +31067,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T05:20:12.615Z",
       "url": "https://openfront.io/game/BwXqyGGJ"
+    },
+    {
+      "id": "TD9tAarP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "meathead",
+          "clientID": "TRkzcmDT",
+          "clanTag": null
+        },
+        {
+          "username": "KING_WINSTON",
+          "clientID": "tmGCYwti",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 556,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T05:34:49.894Z",
+      "url": "https://openfront.io/game/TD9tAarP"
+    },
+    {
+      "id": "D8eXtyT3",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bruhguyski",
+          "clientID": "P9ipz6sf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGoblin1",
+          "clientID": "UvpTn6z3",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 827,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T05:31:06.230Z",
+      "url": "https://openfront.io/game/D8eXtyT3"
     }
   ],
   "trios": [
@@ -125120,6 +125170,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T05:12:57.474Z",
       "url": "https://openfront.io/game/bStvao6i"
+    },
+    {
+      "id": "yAXpUoE1",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GMAN",
+          "clientID": "NVoq4DmK",
+          "clanTag": "CLAVE"
+        },
+        {
+          "username": "AnonViolin6",
+          "clientID": "ztg11UWV",
+          "clanTag": null
+        },
+        {
+          "username": "weak",
+          "clientID": "7HzdUg2Z",
+          "clanTag": null
+        },
+        {
+          "username": "Donut",
+          "clientID": "Wi8NoapE",
+          "clanTag": "TAMU"
+        },
+        {
+          "username": "BunnyKisses67",
+          "clientID": "WwwmN88s",
+          "clanTag": null
+        },
+        {
+          "username": "i hate the stupid bots",
+          "clientID": "CNhZ3jUe",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFalcon1",
+          "clientID": "xPK3D2Ay",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 693,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 55,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T05:32:51.685Z",
+      "url": "https://openfront.io/game/yAXpUoE1"
     }
   ],
   "hvn": [
