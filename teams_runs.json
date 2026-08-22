@@ -35117,6 +35117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T16:08:39.773Z",
       "url": "https://openfront.io/game/95guoeQE"
+    },
+    {
+      "id": "3C6KNgRi",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "klon",
+          "clientID": "RWHzrC8J",
+          "clanTag": "UN"
+        },
+        {
+          "username": "TOMMYMMYMMY",
+          "clientID": "A7kePQ9U",
+          "clanTag": "CYN"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 569,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T16:15:23.673Z",
+      "url": "https://openfront.io/game/3C6KNgRi"
     }
   ],
   "trios": [
@@ -70381,6 +70406,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T16:04:02.835Z",
       "url": "https://openfront.io/game/gd5X4KDt"
+    },
+    {
+      "id": "fre4o1S7",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Pig",
+          "clientID": "xawK5zdX",
+          "clanTag": "PYGO"
+        },
+        {
+          "username": "Lazer be",
+          "clientID": "kn5LRw3h",
+          "clanTag": null
+        },
+        {
+          "username": "JardaSz",
+          "clientID": "a9yKWJr9",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 873,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T16:11:46.437Z",
+      "url": "https://openfront.io/game/fre4o1S7"
     }
   ],
   "quads": [
