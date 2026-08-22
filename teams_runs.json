@@ -35692,6 +35692,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T17:44:19.036Z",
       "url": "https://openfront.io/game/gXQSYdsi"
+    },
+    {
+      "id": "JXXzkBkc",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonLlama6",
+          "clientID": "vcYBfzMm",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVanilla6",
+          "clientID": "iXGCNPuw",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 806,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T17:52:05.079Z",
+      "url": "https://openfront.io/game/JXXzkBkc"
+    },
+    {
+      "id": "yW7GQb17",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "shh",
+          "clientID": "sxoHVcU2",
+          "clanTag": null
+        },
+        {
+          "username": "DuMannetje",
+          "clientID": "2NTyGS8u",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1149,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T17:47:42.320Z",
+      "url": "https://openfront.io/game/yW7GQb17"
     }
   ],
   "trios": [
@@ -108433,6 +108483,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T17:48:13.850Z",
       "url": "https://openfront.io/game/Yorb7rAu"
+    },
+    {
+      "id": "g8FBkmZ2",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Bomber",
+          "clientID": "M2KymBVs",
+          "clanTag": "RU"
+        },
+        {
+          "username": "Anl rapipst",
+          "clientID": "FYcy3Z29",
+          "clanTag": "MX"
+        },
+        {
+          "username": "Realm of Ded Yefremiy",
+          "clientID": "t33qLmyF",
+          "clanTag": null
+        },
+        {
+          "username": "USS Dono Trumpo",
+          "clientID": "H3KKGQ1d",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 723,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T17:55:05.261Z",
+      "url": "https://openfront.io/game/g8FBkmZ2"
     }
   ],
   "team_custom": [
