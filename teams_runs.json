@@ -36017,6 +36017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T18:55:31.133Z",
       "url": "https://openfront.io/game/qaL1bkdf"
+    },
+    {
+      "id": "3NQhAYt3",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "floetus",
+          "clientID": "vaLrGtPE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonYacht7",
+          "clientID": "d2UbjTdd",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1060,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T19:05:22.399Z",
+      "url": "https://openfront.io/game/3NQhAYt3"
     }
   ],
   "trios": [
@@ -72601,6 +72626,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T19:00:52.998Z",
       "url": "https://openfront.io/game/3tMGqqXC"
+    },
+    {
+      "id": "AFckEhwX",
+      "mode": "trios",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Hegel",
+          "clientID": "Cktj1CAU",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Giant Paul",
+          "clientID": "xZu9yJ7j",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Iku",
+          "clientID": "cQtWUTNF",
+          "clanTag": "FDBZ"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 796,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 83,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T19:10:00.844Z",
+      "url": "https://openfront.io/game/AFckEhwX"
     }
   ],
   "quads": [
