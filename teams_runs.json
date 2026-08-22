@@ -103993,6 +103993,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T13:27:56.556Z",
       "url": "https://openfront.io/game/JUry3Jtw"
+    },
+    {
+      "id": "YGWv7Jxu",
+      "mode": "quads",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "just trade",
+          "clientID": "VNJtG2RK",
+          "clanTag": null
+        },
+        {
+          "username": "Anon301",
+          "clientID": "xMBqxZ5s",
+          "clanTag": null
+        },
+        {
+          "username": "10th Crusade",
+          "clientID": "z4wUKjD5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Somaht",
+          "clientID": "wC6WLNAZ",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 2445,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T13:09:23.791Z",
+      "url": "https://openfront.io/game/YGWv7Jxu"
     }
   ],
   "team_custom": [
@@ -161242,6 +161277,61 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T13:29:52.760Z",
       "url": "https://openfront.io/game/NRfzUwZq"
+    },
+    {
+      "id": "HPPMobCH",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "New Jersey",
+          "clientID": "nExMi5qS",
+          "clanTag": null
+        },
+        {
+          "username": "Czech Republic",
+          "clientID": "Jb6c6wXu",
+          "clanTag": null
+        },
+        {
+          "username": "NMNMNMNMN",
+          "clientID": "rjDUkSXg",
+          "clanTag": null
+        },
+        {
+          "username": "Backroom.",
+          "clientID": "cThFPj7c",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLocket9",
+          "clientID": "Qo8acNuN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThunder5",
+          "clientID": "Y9Z2FNYX",
+          "clanTag": null
+        },
+        {
+          "username": "AKJR",
+          "clientID": "nSUpPjZV",
+          "clanTag": null
+        },
+        {
+          "username": "Kalimdor",
+          "clientID": "TmyH2siA",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 705,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 11,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T13:37:52.535Z",
+      "url": "https://openfront.io/game/HPPMobCH"
     }
   ]
 }
