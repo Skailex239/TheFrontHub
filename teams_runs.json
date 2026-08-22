@@ -33267,6 +33267,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T12:18:25.895Z",
       "url": "https://openfront.io/game/CiLjkHjN"
+    },
+    {
+      "id": "vbNYEzgT",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "verycoolgary",
+          "clientID": "qb8RLC8p",
+          "clanTag": "RON"
+        },
+        {
+          "username": "aura67",
+          "clientID": "2GSXFdtj",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 718,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T12:21:33.208Z",
+      "url": "https://openfront.io/game/vbNYEzgT"
+    },
+    {
+      "id": "1TEij9tj",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Fern",
+          "clientID": "ZUaM4LXR",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRhino1",
+          "clientID": "ogazRTjB",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 928,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T12:18:53.930Z",
+      "url": "https://openfront.io/game/1TEij9tj"
     }
   ],
   "trios": [
@@ -67661,6 +67711,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T12:24:23.977Z",
       "url": "https://openfront.io/game/SFYWzF5A"
+    },
+    {
+      "id": "9J4EkQGY",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FUFU",
+          "clientID": "9M85qhiJ",
+          "clanTag": null
+        },
+        {
+          "username": "Jordyn",
+          "clientID": "sB4TiFR2",
+          "clanTag": "AUS"
+        },
+        {
+          "username": "BULIJIUJIU",
+          "clientID": "3Ye376Vg",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T12:20:54.138Z",
+      "url": "https://openfront.io/game/9J4EkQGY"
     }
   ],
   "quads": [
@@ -133775,6 +133855,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T12:01:57.845Z",
       "url": "https://openfront.io/game/8kF2S5QA"
+    },
+    {
+      "id": "nrgHpUFn",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "GüntherGaming",
+          "clientID": "BSEp8pD9",
+          "clanTag": "GG"
+        },
+        {
+          "username": "SleepySnail.2JIy",
+          "clientID": "HRFqPA7t",
+          "clanTag": null
+        },
+        {
+          "username": "Peace",
+          "clientID": "XwUA89RN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFjord9",
+          "clientID": "gEtDPWbN",
+          "clanTag": null
+        },
+        {
+          "username": "AAAAAA",
+          "clientID": "ejWFmwLK",
+          "clanTag": null
+        },
+        {
+          "username": "TradeSpark",
+          "clientID": "hqQXKnCt",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonShadow3",
+          "clientID": "nakgRNBN",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 969,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T12:17:40.822Z",
+      "url": "https://openfront.io/game/nrgHpUFn"
     }
   ],
   "hvn": [
