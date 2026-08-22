@@ -69421,6 +69421,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T14:35:43.676Z",
       "url": "https://openfront.io/game/VPuU5Mjs"
+    },
+    {
+      "id": "ueqVvckc",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonGarnet7",
+          "clientID": "iWU3zYDE",
+          "clanTag": null
+        },
+        {
+          "username": "Eight808",
+          "clientID": "bL1fY7Ab",
+          "clanTag": null
+        },
+        {
+          "username": "SuperStar9389",
+          "clientID": "WCnj2hdL",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 816,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T14:52:18.323Z",
+      "url": "https://openfront.io/game/ueqVvckc"
     }
   ],
   "quads": [
@@ -105408,6 +105438,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T14:48:54.988Z",
       "url": "https://openfront.io/game/pdTPMpwR"
+    },
+    {
+      "id": "tgb6bXnT",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Sturmling",
+          "clientID": "ZxSU7Hec",
+          "clanTag": null
+        },
+        {
+          "username": "test01",
+          "clientID": "ShhGZh1e",
+          "clanTag": null
+        },
+        {
+          "username": "Anon766",
+          "clientID": "e5Ke16Ne",
+          "clanTag": "AIR"
+        },
+        {
+          "username": "AnonRiddle6",
+          "clientID": "uhn3vnuF",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 663,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T14:54:56.563Z",
+      "url": "https://openfront.io/game/tgb6bXnT"
+    },
+    {
+      "id": "2fRcJJQ3",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "thaifrance",
+          "clientID": "EK5QYVPS",
+          "clanTag": null
+        },
+        {
+          "username": "The Dubliners",
+          "clientID": "pWMj8KLh",
+          "clanTag": "BAND"
+        },
+        {
+          "username": "AnonGarnet7",
+          "clientID": "GKv5e933",
+          "clanTag": null
+        },
+        {
+          "username": "nn o kpt",
+          "clientID": "wXNtJW1i",
+          "clanTag": "WLF"
+        }
+      ],
+      "map": "Britannia",
+      "duration_s": 638,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T14:55:47.152Z",
+      "url": "https://openfront.io/game/2fRcJJQ3"
     }
   ],
   "team_custom": [
