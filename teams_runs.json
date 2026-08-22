@@ -33067,6 +33067,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T11:42:58.524Z",
       "url": "https://openfront.io/game/8PBoEJXh"
+    },
+    {
+      "id": "yx8hAR6C",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "MediCato",
+          "clientID": "BVA7kC6b",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Dalilimonada",
+          "clientID": "KRM5SWC2",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1010,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T11:37:50.533Z",
+      "url": "https://openfront.io/game/yx8hAR6C"
     }
   ],
   "trios": [
@@ -67311,6 +67336,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T11:36:24.726Z",
       "url": "https://openfront.io/game/gqJck5dN"
+    },
+    {
+      "id": "3TRkz7Ga",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "ACHAEMENIDS",
+          "clientID": "N9AxjzEC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion5",
+          "clientID": "Avt83RKr",
+          "clanTag": null
+        },
+        {
+          "username": "Gille5",
+          "clientID": "J32DGTCm",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 566,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T11:44:48.058Z",
+      "url": "https://openfront.io/game/3TRkz7Ga"
     }
   ],
   "quads": [
@@ -102528,6 +102583,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T11:36:06.366Z",
       "url": "https://openfront.io/game/bzpXYjHT"
+    },
+    {
+      "id": "G1GGNLgS",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Kamuy",
+          "clientID": "bmocUbq9",
+          "clanTag": "SKY"
+        },
+        {
+          "username": "AnonRuby",
+          "clientID": "q1joJ94t",
+          "clanTag": "SKY"
+        },
+        {
+          "username": "Cloud",
+          "clientID": "1gxexCQi",
+          "clanTag": "SKY"
+        },
+        {
+          "username": "I am from Russia",
+          "clientID": "NDGCLfNT",
+          "clanTag": "SKY"
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 575,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T11:43:40.564Z",
+      "url": "https://openfront.io/game/G1GGNLgS"
     }
   ],
   "team_custom": [
