@@ -1,27 +1,27 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-22T16:13:00.018Z",
-  "lastSyncedAt": "2026-08-22T16:12:57.002Z",
-  "totalGames": 2239,
+  "computedAt": "2026-08-22T16:15:15.408Z",
+  "lastSyncedAt": "2026-08-22T16:15:13.527Z",
+  "totalGames": 2240,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
     "teamCasual": 48,
-    "teamRanked": 87
+    "teamRanked": 88
   },
-  "totalWins": 847,
-  "points": 4495,
+  "totalWins": 848,
+  "points": 4496,
   "level": 44,
-  "levelProgress": 95,
+  "levelProgress": 96,
   "levelNextAt": 4500,
   "nextMilestones": {
     "wins": {
-      "current": 847,
+      "current": 848,
       "target": 1000
     },
     "playtime": {
-      "current": 558,
+      "current": 559,
       "target": 1000
     },
     "maps": {
@@ -39,19 +39,19 @@
     10
   ],
   "formatted": {
-    "points": "4 495",
-    "totalWins": "847",
-    "totalGames": "2 239",
-    "totalPlaytime": "23j 6h",
-    "totalPlaytimeCompact": "23j 6h",
+    "points": "4 496",
+    "totalWins": "848",
+    "totalGames": "2 240",
+    "totalPlaytime": "23j 7h",
+    "totalPlaytimeCompact": "23j 7h",
     "avgGameDuration": "14m 58s",
     "longestGame": "2h 40m",
     "winrate": "38%",
-    "totalPlaytimeHours": "558h"
+    "totalPlaytimeHours": "559h"
   },
   "playtime": {
-    "totalSec": 2012245,
-    "avgGameSec": 898.7248771773113,
+    "totalSec": 2012565,
+    "avgGameSec": 898.4665178571429,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -71,14 +71,14 @@
         "wins": 48
       },
       "teamRanked": {
-        "games": 139,
-        "playtimeSec": 39468,
-        "wins": 87
+        "games": 140,
+        "playtimeSec": 39788,
+        "wins": 88
       }
     }
   },
   "results": {
-    "victory": 847,
+    "victory": 848,
     "defeat": 1053,
     "incomplete": 339
   },
@@ -101,17 +101,17 @@
     },
     {
       "map": "Iceland",
-      "count": 139,
-      "wins": 84,
+      "count": 140,
+      "wins": 85,
       "losses": 55,
-      "playtimeSec": 52951,
-      "avgDuration": 380.9424460431655,
-      "winRate": 0.60431654676259,
-      "lastPlayed": 1787413280877,
+      "playtimeSec": 53271,
+      "avgDuration": 380.50714285714287,
+      "winRate": 0.6071428571428571,
+      "lastPlayed": 1787414883202,
       "formatted": {
-        "playtime": "14h 42m",
+        "playtime": "14h 47m",
         "avgDuration": "6m",
-        "winRate": "60%",
+        "winRate": "61%",
         "lastPlayed": "22/08/26"
       }
     },
@@ -1672,7 +1672,7 @@
       146,
       139,
       213,
-      202,
+      203,
       227,
       202,
       152,
@@ -1685,7 +1685,7 @@
       300,
       334,
       371,
-      386,
+      387,
       321
     ],
     "byDay": [
@@ -1931,8 +1931,8 @@
       },
       {
         "date": "22/08/2026",
-        "count": 22,
-        "playtimeSec": 5628
+        "count": 23,
+        "playtimeSec": 5948
       },
       {
         "date": "23/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 2,
+    "current": 3,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "GhnpVCCD",
+      "start": "2026-08-22T16:08:03.202Z",
+      "map": "Iceland",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 320,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "t1Syr61Y",
       "start": "2026-08-22T15:59:28.877Z",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 386,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "WcRaX3R7",
-      "start": "2026-08-21T20:35:53.863Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 256,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
