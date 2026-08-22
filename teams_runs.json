@@ -62621,6 +62621,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T02:24:06.046Z",
       "url": "https://openfront.io/game/FU5HSdTw"
+    },
+    {
+      "id": "Yo4RqzUE",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Pig Trader",
+          "clientID": "c6nF36ed",
+          "clanTag": "PIG"
+        },
+        {
+          "username": "Peace and Trade",
+          "clientID": "yvgdsQr9",
+          "clanTag": null
+        },
+        {
+          "username": "Pyrohex",
+          "clientID": "mjxTtj6W",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1321,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T02:30:28.621Z",
+      "url": "https://openfront.io/game/Yo4RqzUE"
     }
   ],
   "quads": [
