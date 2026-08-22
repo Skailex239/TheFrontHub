@@ -30767,6 +30767,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T04:06:41.501Z",
       "url": "https://openfront.io/game/jAscswih"
+    },
+    {
+      "id": "8EfSRQqY",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonVelvet3",
+          "clientID": "Q77TkyTd",
+          "clanTag": null
+        },
+        {
+          "username": "DenisHyper5",
+          "clientID": "RNE43nGR",
+          "clanTag": "X3D"
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 719,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T04:02:48.342Z",
+      "url": "https://openfront.io/game/8EfSRQqY"
     }
   ],
   "trios": [
@@ -96568,6 +96593,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T03:45:40.669Z",
       "url": "https://openfront.io/game/vm89xxoe"
+    },
+    {
+      "id": "cViKyY1s",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Corbeau",
+          "clientID": "E32xCCPC",
+          "clanTag": null
+        },
+        {
+          "username": "basalty",
+          "clientID": "cN9LFdpy",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SendTroopsPlease",
+          "clientID": "QN6e4Av1",
+          "clanTag": null
+        },
+        {
+          "username": "IRON",
+          "clientID": "mEjADtmk",
+          "clanTag": "IRON"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1184,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T03:54:26.213Z",
+      "url": "https://openfront.io/game/cViKyY1s"
+    },
+    {
+      "id": "ZxYGcLK4",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonPearl8",
+          "clientID": "4St6z9Ai",
+          "clanTag": null
+        },
+        {
+          "username": "Your Mother",
+          "clientID": "Q8M1vx3C",
+          "clanTag": null
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "MQA5vLHg",
+          "clanTag": null
+        },
+        {
+          "username": "grungo",
+          "clientID": "UkyNNzjX",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1395,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T03:51:43.114Z",
+      "url": "https://openfront.io/game/ZxYGcLK4"
     }
   ],
   "team_custom": [
