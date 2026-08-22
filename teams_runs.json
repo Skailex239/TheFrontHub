@@ -32792,6 +32792,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T11:07:08.093Z",
       "url": "https://openfront.io/game/hzao1qZD"
+    },
+    {
+      "id": "Lfepmbsv",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anonmaisou",
+          "clientID": "rxFG6mnS",
+          "clanTag": null
+        },
+        {
+          "username": "no war Mt FUJI",
+          "clientID": "Yc8Nkese",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 848,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:12:49.294Z",
+      "url": "https://openfront.io/game/Lfepmbsv"
     }
   ],
   "trios": [
@@ -66916,6 +66941,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T11:05:45.988Z",
       "url": "https://openfront.io/game/dKftfjLn"
+    },
+    {
+      "id": "ZDWuqTQQ",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonMonsoon",
+          "clientID": "uTwUyMTF",
+          "clanTag": null
+        },
+        {
+          "username": "USSR",
+          "clientID": "hgDAcRjC",
+          "clanTag": null
+        },
+        {
+          "username": "UrbanXD",
+          "clientID": "YxkjZ1wD",
+          "clanTag": "HUN"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 585,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T11:17:01.024Z",
+      "url": "https://openfront.io/game/ZDWuqTQQ"
     }
   ],
   "quads": [
@@ -131920,6 +131975,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T10:45:46.055Z",
       "url": "https://openfront.io/game/UYtriFEx"
+    },
+    {
+      "id": "pG1jPgua",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "CuddleMonster67",
+          "clientID": "GA9as7qY",
+          "clanTag": null
+        },
+        {
+          "username": "Alukard",
+          "clientID": "a8SswaoG",
+          "clanTag": null
+        },
+        {
+          "username": "Valencia",
+          "clientID": "7E1FJgK9",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScarlet2",
+          "clientID": "24pTQFvr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnchor2",
+          "clientID": "tfV7hSwZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFern1",
+          "clientID": "5cj5HBtE",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1088,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T11:08:09.177Z",
+      "url": "https://openfront.io/game/pG1jPgua"
     }
   ],
   "hvn": [
