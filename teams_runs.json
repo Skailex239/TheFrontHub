@@ -62211,6 +62211,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T01:18:20.113Z",
       "url": "https://openfront.io/game/ekSn49ML"
+    },
+    {
+      "id": "ZUvAyjL8",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "The Saturnian Empire",
+          "clientID": "NskWhjsm",
+          "clanTag": "TSE"
+        },
+        {
+          "username": "AnonQuasar9",
+          "clientID": "BPzF8ihP",
+          "clanTag": null
+        },
+        {
+          "username": "MANGO",
+          "clientID": "NaWN9kNk",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 573,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T01:29:58.401Z",
+      "url": "https://openfront.io/game/ZUvAyjL8"
     }
   ],
   "quads": [
@@ -94943,6 +94973,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T01:12:34.213Z",
       "url": "https://openfront.io/game/bpz2CDSG"
+    },
+    {
+      "id": "ajcqwRSJ",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Gustavph",
+          "clientID": "mssvqXN1",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "bunny19",
+          "clientID": "gKY4iajK",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "ANON",
+          "clientID": "eLWTzoGQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon986",
+          "clientID": "kYRy9ngz",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 31,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T01:27:35.210Z",
+      "url": "https://openfront.io/game/ajcqwRSJ"
     }
   ],
   "team_custom": [
@@ -120810,6 +120875,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T01:16:18.463Z",
       "url": "https://openfront.io/game/LzcWaV1j"
+    },
+    {
+      "id": "WyNjBWqm",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "HAZAN",
+          "clientID": "GHvHgmCK",
+          "clanTag": "BD"
+        },
+        {
+          "username": "Krineels",
+          "clientID": "8upt5EkV",
+          "clanTag": "EBOLA"
+        },
+        {
+          "username": "Anon",
+          "clientID": "9YSX17PM",
+          "clanTag": null
+        },
+        {
+          "username": "CartelDelNoreste",
+          "clientID": "hhbW7vgv",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Gortar",
+          "clientID": "AxKrTkTz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVortex5",
+          "clientID": "g2XCWSgq",
+          "clanTag": null
+        },
+        {
+          "username": "Industries",
+          "clientID": "gbVHMPd8",
+          "clanTag": "TAGRU"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 698,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T01:27:03.169Z",
+      "url": "https://openfront.io/game/WyNjBWqm"
     }
   ],
   "hvn": [
