@@ -37017,6 +37017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:35:13.596Z",
       "url": "https://openfront.io/game/2B4hVmNS"
+    },
+    {
+      "id": "yvTF5Gz2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "22222",
+          "clientID": "SdBagSWv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScarlet9",
+          "clientID": "Xt3QzRuE",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:45:00.562Z",
+      "url": "https://openfront.io/game/yvTF5Gz2"
     }
   ],
   "trios": [
@@ -179092,6 +179117,86 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T21:33:08.875Z",
       "url": "https://openfront.io/game/9CnbctbM"
+    },
+    {
+      "id": "SaiWmpeh",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonSilence7",
+          "clientID": "jALhTsh5",
+          "clanTag": null
+        },
+        {
+          "username": "Crumpets",
+          "clientID": "P4VS2rQH",
+          "clanTag": null
+        },
+        {
+          "username": "KR1234",
+          "clientID": "4pWwVCzQ",
+          "clanTag": null
+        },
+        {
+          "username": "skell",
+          "clientID": "tjga5XbF",
+          "clanTag": null
+        },
+        {
+          "username": "Wong",
+          "clientID": "ZU5U5uBp",
+          "clanTag": null
+        },
+        {
+          "username": "7777",
+          "clientID": "1HPgwhay",
+          "clanTag": null
+        },
+        {
+          "username": "little russ",
+          "clientID": "XwDEKXK2",
+          "clanTag": null
+        },
+        {
+          "username": "I not war I trading",
+          "clientID": "ME3DH1Cd",
+          "clanTag": null
+        },
+        {
+          "username": "swe",
+          "clientID": "pCuM1wxj",
+          "clanTag": null
+        },
+        {
+          "username": "Cipollino",
+          "clientID": "1wWs1dgF",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Pipolanoix",
+          "clientID": "2H9BZzcC",
+          "clanTag": null
+        },
+        {
+          "username": "Anon390",
+          "clientID": "5hbkjswG",
+          "clanTag": null
+        },
+        {
+          "username": "Dill Doe",
+          "clientID": "HStgkjX6",
+          "clanTag": "BIG"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 692,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T21:45:31.628Z",
+      "url": "https://openfront.io/game/SaiWmpeh"
     }
   ]
 }
