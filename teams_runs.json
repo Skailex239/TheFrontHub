@@ -37117,6 +37117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T22:03:38.332Z",
       "url": "https://openfront.io/game/r1nEYCNg"
+    },
+    {
+      "id": "Nz67iQuZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "MITOCHONDRIA",
+          "clientID": "CcyS26zS",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Starland",
+          "clientID": "AugZmreR",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 863,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:04:38.427Z",
+      "url": "https://openfront.io/game/Nz67iQuZ"
     }
   ],
   "trios": [
@@ -179742,6 +179767,71 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T22:02:06.194Z",
       "url": "https://openfront.io/game/pqWGDgii"
+    },
+    {
+      "id": "DtVpreQw",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Eumenes of Cardia",
+          "clientID": "qZ6neAWw",
+          "clanTag": null
+        },
+        {
+          "username": "abgheaven",
+          "clientID": "8Wg5BmT7",
+          "clanTag": null
+        },
+        {
+          "username": "QualitySkreet",
+          "clientID": "ckyaAd5r",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTundra1",
+          "clientID": "4X787BAy",
+          "clanTag": null
+        },
+        {
+          "username": "Biff",
+          "clientID": "zKcMXYyJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSilence7",
+          "clientID": "Azyi2NSu",
+          "clanTag": null
+        },
+        {
+          "username": "Jugoslavia",
+          "clientID": "YWb4wxh3",
+          "clanTag": null
+        },
+        {
+          "username": "III",
+          "clientID": "na4J1tYz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz9",
+          "clientID": "DRR15o18",
+          "clanTag": null
+        },
+        {
+          "username": "Oscalabama",
+          "clientID": "twKQo4X7",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 842,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T22:05:03.470Z",
+      "url": "https://openfront.io/game/DtVpreQw"
     }
   ]
 }
