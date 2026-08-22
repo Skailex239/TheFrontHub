@@ -37492,6 +37492,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T23:06:21.877Z",
       "url": "https://openfront.io/game/uuHE7pAn"
+    },
+    {
+      "id": "d1j3QXN2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Whomville",
+          "clientID": "strmF8qa",
+          "clanTag": null
+        },
+        {
+          "username": "Fih",
+          "clientID": "C1ZUs1s4",
+          "clanTag": "FUGLY"
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 512,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T23:20:45.662Z",
+      "url": "https://openfront.io/game/d1j3QXN2"
     }
   ],
   "trios": [
