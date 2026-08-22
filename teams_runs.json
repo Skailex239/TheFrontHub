@@ -34467,6 +34467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:42:57.390Z",
       "url": "https://openfront.io/game/Qh5y2DUn"
+    },
+    {
+      "id": "fsyHPzCw",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "tabaco police",
+          "clientID": "cz3q6SJ8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZeppelin",
+          "clientID": "7L76AouT",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 467,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 98,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:54:09.486Z",
+      "url": "https://openfront.io/game/fsyHPzCw"
     }
   ],
   "trios": [
@@ -105323,6 +105348,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T14:26:29.279Z",
       "url": "https://openfront.io/game/JYaDMTKu"
+    },
+    {
+      "id": "pdTPMpwR",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonNebula6",
+          "clientID": "BR1JGxcL",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCompass8",
+          "clientID": "1CuBBDVG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPrairie7",
+          "clientID": "V98xCGuh",
+          "clanTag": null
+        },
+        {
+          "username": "Koobee",
+          "clientID": "bXBswAUr",
+          "clanTag": "SF"
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 800,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T14:48:54.988Z",
+      "url": "https://openfront.io/game/pdTPMpwR"
     }
   ],
   "team_custom": [
