@@ -30542,6 +30542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T02:57:00.371Z",
       "url": "https://openfront.io/game/Pya76fnV"
+    },
+    {
+      "id": "Mecak2cz",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "thejuiceislews",
+          "clientID": "1W5YCkbe",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "AGG",
+          "clientID": "RY8PNeGC",
+          "clanTag": "BROWN"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1130,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T03:08:39.019Z",
+      "url": "https://openfront.io/game/Mecak2cz"
     }
   ],
   "trios": [
@@ -122625,6 +122650,101 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T03:00:17.769Z",
       "url": "https://openfront.io/game/qcHdaRkg"
+    },
+    {
+      "id": "u6NNPTL8",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Australia",
+          "clientID": "PRUzY3V1",
+          "clanTag": null
+        },
+        {
+          "username": "friendlytrader",
+          "clientID": "vNM1epC5",
+          "clanTag": null
+        },
+        {
+          "username": "China",
+          "clientID": "trKSdC4F",
+          "clanTag": "111"
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "VMQSfN2V",
+          "clanTag": null
+        },
+        {
+          "username": "Friendly",
+          "clientID": "53KbcTEL",
+          "clanTag": null
+        },
+        {
+          "username": "sanozama",
+          "clientID": "aDeuNGd4",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1290,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T03:06:13.959Z",
+      "url": "https://openfront.io/game/u6NNPTL8"
+    },
+    {
+      "id": "6rLbnA2F",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Seraph",
+          "clientID": "nsX9KVQt",
+          "clanTag": null
+        },
+        {
+          "username": "FinalPhalanx",
+          "clientID": "G4Po3Qda",
+          "clanTag": "SAD"
+        },
+        {
+          "username": "123",
+          "clientID": "mXt3y4Ua",
+          "clanTag": null
+        },
+        {
+          "username": "SndTrps",
+          "clientID": "AQayUrKo",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCobalt2",
+          "clientID": "SUBcn41p",
+          "clanTag": null
+        },
+        {
+          "username": "Galah",
+          "clientID": "oUmf6fQq",
+          "clanTag": "UDS"
+        },
+        {
+          "username": "Dogtown 2",
+          "clientID": "mc3gK587",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1027,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T03:10:56.282Z",
+      "url": "https://openfront.io/game/6rLbnA2F"
     }
   ],
   "hvn": [
