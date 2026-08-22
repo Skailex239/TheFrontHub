@@ -73331,6 +73331,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T20:17:59.370Z",
       "url": "https://openfront.io/game/jC1R4mSF"
+    },
+    {
+      "id": "evYDUqPS",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "DEEZ",
+          "clientID": "L3EpYsEr",
+          "clanTag": null
+        },
+        {
+          "username": "Sophie Cunningham",
+          "clientID": "oy8ybN4k",
+          "clanTag": null
+        },
+        {
+          "username": "TruePOWERZay",
+          "clientID": "BCFRv4Ev",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1173,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 85,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T20:11:32.601Z",
+      "url": "https://openfront.io/game/evYDUqPS"
     }
   ],
   "quads": [
@@ -110823,6 +110853,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T20:02:34.327Z",
       "url": "https://openfront.io/game/VjBhGYRv"
+    },
+    {
+      "id": "DJCTYkmN",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Freeforallistrash",
+          "clientID": "zTzny67N",
+          "clanTag": null
+        },
+        {
+          "username": "FUFU",
+          "clientID": "2pNmzvRv",
+          "clanTag": null
+        },
+        {
+          "username": "GrrrFranzosen",
+          "clientID": "N6CYQnjv",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Will Lucky Trading",
+          "clientID": "SXrhGbjz",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 686,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T20:18:47.373Z",
+      "url": "https://openfront.io/game/DJCTYkmN"
     }
   ],
   "team_custom": [
@@ -146430,6 +146495,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T20:13:32.787Z",
       "url": "https://openfront.io/game/tcAwfRsM"
+    },
+    {
+      "id": "TjgCpuWe",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Timothy",
+          "clientID": "cdxz2KAq",
+          "clanTag": null
+        },
+        {
+          "username": "beluca",
+          "clientID": "gauz9EmY",
+          "clanTag": null
+        },
+        {
+          "username": "Makafaka",
+          "clientID": "VeS4baQe",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "Hold the line",
+          "clientID": "3uc8c9xQ",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "turntablerocker",
+          "clientID": "q9DVSgte",
+          "clanTag": null
+        },
+        {
+          "username": "lil p1sun",
+          "clientID": "giUEUTa5",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "Kuzulka",
+          "clientID": "cJgXK2xS",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1734,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T20:01:56.157Z",
+      "url": "https://openfront.io/game/TjgCpuWe"
     }
   ],
   "hvn": [
