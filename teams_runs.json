@@ -29667,6 +29667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-21T23:07:01.642Z",
       "url": "https://openfront.io/game/kwYTVVDF"
+    },
+    {
+      "id": "5jWezo63",
+      "mode": "duos",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "Feed OoO",
+          "clientID": "yYbb2FQf",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Silver",
+          "clientID": "y5XYZ5S6",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 1047,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-21T23:50:01.981Z",
+      "url": "https://openfront.io/game/5jWezo63"
     }
   ],
   "trios": [
@@ -139287,6 +139312,146 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T23:48:46.400Z",
       "url": "https://openfront.io/game/ofZGBCkK"
+    },
+    {
+      "id": "usunZg2n",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Lemon",
+          "clientID": "MQEF8cVS",
+          "clanTag": "EG"
+        },
+        {
+          "username": "Jdragon",
+          "clientID": "mx948B5L",
+          "clanTag": null
+        },
+        {
+          "username": "high",
+          "clientID": "r6LyhfUT",
+          "clanTag": null
+        },
+        {
+          "username": "Vermont Empire",
+          "clientID": "wYpq6Zfn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Friend",
+          "clientID": "eSphGXCG",
+          "clanTag": null
+        },
+        {
+          "username": "Kubikula",
+          "clientID": "JzW9LEVf",
+          "clanTag": null
+        },
+        {
+          "username": "A Bird",
+          "clientID": "LSnvj6uj",
+          "clanTag": null
+        },
+        {
+          "username": "Nyken",
+          "clientID": "HUxzjYCh",
+          "clanTag": "UWU"
+        },
+        {
+          "username": "MichaHaetteEsGemacht",
+          "clientID": "tTUPX59S",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "mXSwya8C",
+          "clanTag": null
+        },
+        {
+          "username": "UHI",
+          "clientID": "BjPjmm1W",
+          "clanTag": null
+        },
+        {
+          "username": "VIERYKING",
+          "clientID": "WDUMAkBF",
+          "clanTag": null
+        },
+        {
+          "username": "BigT",
+          "clientID": "i4GAbnnh",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTorch2",
+          "clientID": "WKqSC7om",
+          "clanTag": null
+        },
+        {
+          "username": "Anon153",
+          "clientID": "DfmSMYAP",
+          "clanTag": null
+        },
+        {
+          "username": "rainhat23",
+          "clientID": "rJnRZo3P",
+          "clanTag": null
+        },
+        {
+          "username": "Just Some Random Person",
+          "clientID": "hHHC3hMJ",
+          "clanTag": null
+        },
+        {
+          "username": "Sproge",
+          "clientID": "372Acvse",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGong6",
+          "clientID": "jCjZBQ5w",
+          "clanTag": null
+        },
+        {
+          "username": "Long Live Palestine",
+          "clientID": "mJBxWj9u",
+          "clanTag": null
+        },
+        {
+          "username": "RED",
+          "clientID": "2WV31ctY",
+          "clanTag": null
+        },
+        {
+          "username": "Chudy",
+          "clientID": "1RCe27pS",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHelmet9",
+          "clientID": "rD1m1a7Q",
+          "clanTag": null
+        },
+        {
+          "username": "never ending hiccups",
+          "clientID": "GQB2qgTb",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "W2m8baoX",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1152,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T23:48:25.883Z",
+      "url": "https://openfront.io/game/usunZg2n"
     }
   ]
 }
