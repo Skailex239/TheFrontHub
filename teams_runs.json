@@ -67601,6 +67601,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T12:10:03.118Z",
       "url": "https://openfront.io/game/BSmm5pet"
+    },
+    {
+      "id": "33QBQvMH",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Kohout",
+          "clientID": "vYmEkcyA",
+          "clanTag": "TRISO"
+        },
+        {
+          "username": "Arialis",
+          "clientID": "LYpMzU1t",
+          "clanTag": "TRISO"
+        },
+        {
+          "username": "yoy_le_cake_pap_rika",
+          "clientID": "gCiwzAco",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 902,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T12:15:09.926Z",
+      "url": "https://openfront.io/game/33QBQvMH"
     }
   ],
   "quads": [
@@ -133665,6 +133695,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T12:08:07.977Z",
       "url": "https://openfront.io/game/sUuW3FRP"
+    },
+    {
+      "id": "8kF2S5QA",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonMist3",
+          "clientID": "djBopQ5B",
+          "clanTag": null
+        },
+        {
+          "username": "woo",
+          "clientID": "usDdEwu3",
+          "clanTag": null
+        },
+        {
+          "username": "Magic.Android",
+          "clientID": "FabYYohz",
+          "clanTag": "KNK"
+        },
+        {
+          "username": "NeedHugs",
+          "clientID": "PXRfJofm",
+          "clanTag": null
+        },
+        {
+          "username": "StinkySnake.PWJC",
+          "clientID": "rhFyivVE",
+          "clanTag": null
+        },
+        {
+          "username": "Master mind",
+          "clientID": "ypLMt6Lz",
+          "clanTag": "PAK"
+        },
+        {
+          "username": "sakul309sk",
+          "clientID": "rLwJGC1F",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1681,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T12:01:57.845Z",
+      "url": "https://openfront.io/game/8kF2S5QA"
     }
   ],
   "hvn": [
