@@ -32367,6 +32367,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:57:47.716Z",
       "url": "https://openfront.io/game/ShbNdprR"
+    },
+    {
+      "id": "sMbgZqQY",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "pepe",
+          "clientID": "XZ6a9Ugv",
+          "clanTag": null
+        },
+        {
+          "username": "snack",
+          "clientID": "qyPGv4CH",
+          "clanTag": "MOG"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1299,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:49:28.191Z",
+      "url": "https://openfront.io/game/sMbgZqQY"
     }
   ],
   "trios": [
@@ -66131,6 +66156,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T09:43:58.392Z",
       "url": "https://openfront.io/game/J8gPDtcZ"
+    },
+    {
+      "id": "h4AqeFCq",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonLake3",
+          "clientID": "ZkSrhf3v",
+          "clanTag": null
+        },
+        {
+          "username": "PromTec",
+          "clientID": "TvkBNSfL",
+          "clanTag": null
+        },
+        {
+          "username": "WIN",
+          "clientID": "UrJfbYgT",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 580,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T10:00:44.884Z",
+      "url": "https://openfront.io/game/h4AqeFCq"
     }
   ],
   "quads": [
