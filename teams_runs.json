@@ -31267,6 +31267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T06:06:33.535Z",
       "url": "https://openfront.io/game/SuF8S4HP"
+    },
+    {
+      "id": "3WTcBAdB",
+      "mode": "duos",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "PRO PLAYER",
+          "clientID": "o1LeB8bh",
+          "clanTag": null
+        },
+        {
+          "username": "Goober",
+          "clientID": "R4ySma62",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 849,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 26,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T06:01:15.995Z",
+      "url": "https://openfront.io/game/3WTcBAdB"
     }
   ],
   "trios": [
