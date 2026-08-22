@@ -34567,6 +34567,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T14:50:37.175Z",
       "url": "https://openfront.io/game/xwyAhDwo"
+    },
+    {
+      "id": "gk83LtAG",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ziyad",
+          "clientID": "yVLgwQNS",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "SuperEJ111111",
+          "clientID": "fENBSwWY",
+          "clanTag": "ROYS"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 261,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:07:47.825Z",
+      "url": "https://openfront.io/game/gk83LtAG"
+    },
+    {
+      "id": "u2a4U4s2",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonGoblin",
+          "clientID": "iBomxTAK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonYacht3",
+          "clientID": "RhNERmuC",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 2009,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:39:07.269Z",
+      "url": "https://openfront.io/game/u2a4U4s2"
     }
   ],
   "trios": [
@@ -137935,6 +137985,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T14:45:43.172Z",
       "url": "https://openfront.io/game/jVjP2euS"
+    },
+    {
+      "id": "FKut2weY",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Mostly",
+          "clientID": "QPHACESd",
+          "clanTag": null
+        },
+        {
+          "username": "Daywalker",
+          "clientID": "RarPDMW9",
+          "clanTag": "USSR"
+        },
+        {
+          "username": "AnonSwan",
+          "clientID": "hqfTccEN",
+          "clanTag": null
+        },
+        {
+          "username": "MAYBE",
+          "clientID": "WcnzcmFo",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "AnonQuasar3",
+          "clientID": "8F4v3Jqf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRuby6",
+          "clientID": "jPxXAVxP",
+          "clanTag": null
+        },
+        {
+          "username": "Leave me alone",
+          "clientID": "wEzDpsAD",
+          "clanTag": "XYZ"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 842,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T14:58:33.929Z",
+      "url": "https://openfront.io/game/FKut2weY"
     }
   ],
   "hvn": [
