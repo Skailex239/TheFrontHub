@@ -35142,6 +35142,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T16:15:23.673Z",
       "url": "https://openfront.io/game/3C6KNgRi"
+    },
+    {
+      "id": "jxa6jAMt",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "206",
+          "clientID": "pRTn3YvK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTitan4",
+          "clientID": "e9f6zawd",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1058,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T16:09:35.324Z",
+      "url": "https://openfront.io/game/jxa6jAMt"
+    },
+    {
+      "id": "1DUSU2fq",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RagnaR",
+          "clientID": "R9AqWGFq",
+          "clanTag": "TC"
+        },
+        {
+          "username": "Mikini",
+          "clientID": "3TtsDjDr",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 782,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T16:14:29.114Z",
+      "url": "https://openfront.io/game/1DUSU2fq"
+    },
+    {
+      "id": "dBMXRKD6",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kakiru",
+          "clientID": "4L9LkDwj",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Filipeo",
+          "clientID": "RRMkui8j",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 653,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T16:17:15.285Z",
+      "url": "https://openfront.io/game/dBMXRKD6"
     }
   ],
   "trios": [
@@ -106843,6 +106918,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T16:07:27.136Z",
       "url": "https://openfront.io/game/zWHoHgAk"
+    },
+    {
+      "id": "vedxU6AP",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "zytilaAnonPearl7",
+          "clientID": "dnmcRLLX",
+          "clanTag": "HEHE"
+        },
+        {
+          "username": "Anno",
+          "clientID": "kcyzDuGq",
+          "clanTag": null
+        },
+        {
+          "username": "Lucas121_",
+          "clientID": "UtDGqvG6",
+          "clanTag": "KUFAR"
+        },
+        {
+          "username": "manan",
+          "clientID": "RYDKcvev",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 538,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T16:19:18.908Z",
+      "url": "https://openfront.io/game/vedxU6AP"
     }
   ],
   "team_custom": [
