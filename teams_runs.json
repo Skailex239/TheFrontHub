@@ -65011,6 +65011,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T07:38:24.857Z",
       "url": "https://openfront.io/game/Swf3sUfz"
+    },
+    {
+      "id": "tRnC7gnL",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Starland",
+          "clientID": "GGdmfwYb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Free Luigi",
+          "clientID": "PwwxkshG",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Amnese",
+          "clientID": "2Po78pZs",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 998,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T07:41:43.329Z",
+      "url": "https://openfront.io/game/tRnC7gnL"
+    },
+    {
+      "id": "ub4xP1Nb",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Chakravartin Suyam Samrat",
+          "clientID": "rKVTJJjZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "......",
+          "clientID": "ZmukvkC5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon12",
+          "clientID": "D8VfVjrZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T07:45:49.568Z",
+      "url": "https://openfront.io/game/ub4xP1Nb"
     }
   ],
   "quads": [
@@ -150712,6 +150772,86 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T07:42:34.875Z",
       "url": "https://openfront.io/game/ttfx6nBv"
+    },
+    {
+      "id": "AKQypnYa",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "KEN",
+          "clientID": "iFQw3xn2",
+          "clanTag": null
+        },
+        {
+          "username": "Donate to front",
+          "clientID": "qm6giL2A",
+          "clanTag": null
+        },
+        {
+          "username": "Anon991",
+          "clientID": "vjR6FUhv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin2",
+          "clientID": "FxhE6RzQ",
+          "clanTag": null
+        },
+        {
+          "username": "Dom Kingdom",
+          "clientID": "csit4fE4",
+          "clanTag": "LT"
+        },
+        {
+          "username": "AnonCrimson3",
+          "clientID": "1M3u1aU6",
+          "clanTag": null
+        },
+        {
+          "username": "PhamDacLuong",
+          "clientID": "e9iV6x3U",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPumpkin",
+          "clientID": "4xRPkqzY",
+          "clanTag": null
+        },
+        {
+          "username": "maumau35",
+          "clientID": "UGKQTnGw",
+          "clanTag": null
+        },
+        {
+          "username": "gugu8",
+          "clientID": "L8FGkRjA",
+          "clanTag": null
+        },
+        {
+          "username": "unadare",
+          "clientID": "9GyyiVds",
+          "clanTag": null
+        },
+        {
+          "username": "the alp",
+          "clientID": "Geb65SN8",
+          "clanTag": null
+        },
+        {
+          "username": "Australia Hungry",
+          "clientID": "okLmhna4",
+          "clanTag": "AH"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 599,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 25,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T07:47:52.698Z",
+      "url": "https://openfront.io/game/AKQypnYa"
     }
   ]
 }
