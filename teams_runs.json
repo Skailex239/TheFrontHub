@@ -34492,6 +34492,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:54:09.486Z",
       "url": "https://openfront.io/game/fsyHPzCw"
+    },
+    {
+      "id": "xTkLvtoG",
+      "mode": "duos",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Shumi",
+          "clientID": "Q4pUQvAL",
+          "clanTag": null
+        },
+        {
+          "username": "Anon",
+          "clientID": "1s7zBF3B",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 1187,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T14:44:08.019Z",
+      "url": "https://openfront.io/game/xTkLvtoG"
     }
   ],
   "trios": [
