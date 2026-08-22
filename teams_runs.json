@@ -31167,6 +31167,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T05:44:34.861Z",
       "url": "https://openfront.io/game/sPjrAMYf"
+    },
+    {
+      "id": "oZoCBsS3",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "lowiqdogs",
+          "clientID": "PuzWAZL7",
+          "clanTag": "TRUE"
+        },
+        {
+          "username": "John Cheese",
+          "clientID": "tWZAboLC",
+          "clanTag": "BUTTS"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1169,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T05:38:23.245Z",
+      "url": "https://openfront.io/game/oZoCBsS3"
+    },
+    {
+      "id": "MgaNBoLA",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Landicakes",
+          "clientID": "1oSNTQgi",
+          "clanTag": null
+        },
+        {
+          "username": "Kershmeister",
+          "clientID": "6jmwRWrM",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1115,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T05:39:29.572Z",
+      "url": "https://openfront.io/game/MgaNBoLA"
     }
   ],
   "trios": [
@@ -97698,6 +97748,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T05:11:03.464Z",
       "url": "https://openfront.io/game/ZxUu4J8B"
+    },
+    {
+      "id": "B5HRQrJE",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Booyah",
+          "clientID": "LKNSgyKg",
+          "clanTag": "GLHF"
+        },
+        {
+          "username": "Wolfspyder",
+          "clientID": "d2uxQJrg",
+          "clanTag": null
+        },
+        {
+          "username": "Falcon",
+          "clientID": "KYggxmNV",
+          "clanTag": null
+        },
+        {
+          "username": "Praxad",
+          "clientID": "L1Hm2Erg",
+          "clanTag": "IN"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 876,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T05:43:04.730Z",
+      "url": "https://openfront.io/game/B5HRQrJE"
     }
   ],
   "team_custom": [
