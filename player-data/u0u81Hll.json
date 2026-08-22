@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-22T15:32:24.336Z",
+  "lastSyncedAt": "2026-08-22T15:34:25.305Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.8,
-  "totalGames": 2233,
+  "syncDurationSec": 0.7,
+  "totalGames": 2234,
   "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "dwwx95yA",
+      "start": "2026-08-22T15:32:55.256Z",
+      "durationSeconds": 31,
+      "map": "Asia",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "incomplete",
+      "totalPlayers": 2,
+      "username": "Toan",
+      "clanTag": "SERGE"
+    },
     {
       "gameId": "taseJuHy",
       "start": "2026-08-22T15:22:54.294Z",
