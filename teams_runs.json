@@ -35567,6 +35567,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T17:27:22.332Z",
       "url": "https://openfront.io/game/j3Zouasg"
+    },
+    {
+      "id": "kbKxRwfg",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ignace",
+          "clientID": "HzP6bLHB",
+          "clanTag": null
+        },
+        {
+          "username": "CHEVALIER TEXIEN",
+          "clientID": "7uS3Hmue",
+          "clanTag": "TRUMP"
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 416,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T17:39:10.077Z",
+      "url": "https://openfront.io/game/kbKxRwfg"
     }
   ],
   "trios": [
@@ -71461,6 +71486,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T17:14:21.688Z",
       "url": "https://openfront.io/game/mv3mMxiF"
+    },
+    {
+      "id": "aqFkAkvD",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonAnchor7",
+          "clientID": "ku2JwhCx",
+          "clanTag": null
+        },
+        {
+          "username": "NIKO",
+          "clientID": "H5zF6ns1",
+          "clanTag": "AOE"
+        },
+        {
+          "username": "Pimmel",
+          "clientID": "hbqo3Kc6",
+          "clanTag": "KEBAB"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 822,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:33:08.182Z",
+      "url": "https://openfront.io/game/aqFkAkvD"
     }
   ],
   "quads": [
