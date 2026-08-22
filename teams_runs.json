@@ -30792,6 +30792,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T04:02:48.342Z",
       "url": "https://openfront.io/game/8EfSRQqY"
+    },
+    {
+      "id": "GtkSbY76",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ayiayi",
+          "clientID": "kKkG7nEb",
+          "clanTag": "KAPIK"
+        },
+        {
+          "username": "trademaxxx",
+          "clientID": "EkvZcUu7",
+          "clanTag": "YES"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 767,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T04:20:09.568Z",
+      "url": "https://openfront.io/game/GtkSbY76"
+    },
+    {
+      "id": "8o7DC7yo",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Falcon",
+          "clientID": "umFuyPBv",
+          "clanTag": null
+        },
+        {
+          "username": "THANHHOA",
+          "clientID": "LemLGmzy",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1251,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T04:14:06.700Z",
+      "url": "https://openfront.io/game/8o7DC7yo"
     }
   ],
   "trios": [
@@ -63386,6 +63436,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T04:18:08.188Z",
       "url": "https://openfront.io/game/3MmuwHh2"
+    },
+    {
+      "id": "YYuirFwx",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Goy",
+          "clientID": "RR3QeJj9",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Muammar Gadaffi",
+          "clientID": "TxcUytAd",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Profile",
+          "clientID": "9TmKMWmG",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1273,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T04:12:31.613Z",
+      "url": "https://openfront.io/game/YYuirFwx"
     }
   ],
   "quads": [
