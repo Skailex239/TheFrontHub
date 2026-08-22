@@ -112928,6 +112928,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T22:27:49.731Z",
       "url": "https://openfront.io/game/LdSK4FuA"
+    },
+    {
+      "id": "WcdLXWkK",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "tone",
+          "clientID": "q8Lj7Nr5",
+          "clanTag": "ZE"
+        },
+        {
+          "username": "mehh... 245",
+          "clientID": "TFmgrZM6",
+          "clanTag": null
+        },
+        {
+          "username": "das quoves",
+          "clientID": "a5zr47h1",
+          "clanTag": "ZE"
+        },
+        {
+          "username": "dj send da nuke",
+          "clientID": "DQMcF7jv",
+          "clanTag": "ZE"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 1014,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 108,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T22:32:46.168Z",
+      "url": "https://openfront.io/game/WcdLXWkK"
     }
   ],
   "team_custom": [
@@ -149885,6 +149920,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T22:24:26.371Z",
       "url": "https://openfront.io/game/nLCTGbBt"
+    },
+    {
+      "id": "Wn6E5Frx",
+      "mode": "team_custom",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "FACTORYMAX",
+          "clientID": "LNbUfMbo",
+          "clanTag": "POOP"
+        },
+        {
+          "username": "ROMAN EMPIRE",
+          "clientID": "L8j8e4gu",
+          "clanTag": null
+        },
+        {
+          "username": "Hulli",
+          "clientID": "gMY3fXDD",
+          "clanTag": "UA"
+        },
+        {
+          "username": "Churchill",
+          "clientID": "d88AKtYa",
+          "clanTag": null
+        },
+        {
+          "username": "malo",
+          "clientID": "KKVvBags",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "berdya",
+          "clientID": "DEXPsmPz",
+          "clanTag": null
+        },
+        {
+          "username": "ARACHNIDA",
+          "clientID": "Sn1LCw3z",
+          "clanTag": "TR"
+        }
+      ],
+      "map": "China",
+      "duration_s": 907,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T22:33:44.275Z",
+      "url": "https://openfront.io/game/Wn6E5Frx"
     }
   ],
   "hvn": [
