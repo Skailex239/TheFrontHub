@@ -34792,6 +34792,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T15:03:07.384Z",
       "url": "https://openfront.io/game/zQhf5WGE"
+    },
+    {
+      "id": "FapBTFy4",
+      "mode": "duos",
+      "team": "Team 15",
+      "players": [
+        {
+          "username": "AnonLeather7",
+          "clientID": "9BGdegeH",
+          "clanTag": null
+        },
+        {
+          "username": "Train Master",
+          "clientID": "JUEN7fQ4",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1301,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T15:26:00.587Z",
+      "url": "https://openfront.io/game/FapBTFy4"
     }
   ],
   "trios": [
@@ -138745,6 +138770,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T15:21:00.103Z",
       "url": "https://openfront.io/game/71z2Y5k8"
+    },
+    {
+      "id": "GS1oxWus",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mac Orion",
+          "clientID": "rrLwpxYX",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonPulley8",
+          "clientID": "2HcBvGj9",
+          "clanTag": null
+        },
+        {
+          "username": "WHO ART THOU",
+          "clientID": "bSUfGzBR",
+          "clanTag": null
+        },
+        {
+          "username": "Jim",
+          "clientID": "FMKwtSEN",
+          "clanTag": null
+        },
+        {
+          "username": "jeon",
+          "clientID": "hYajKayV",
+          "clanTag": null
+        },
+        {
+          "username": "Termy",
+          "clientID": "tEfVDDPF",
+          "clanTag": "ITA"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 922,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T15:31:26.128Z",
+      "url": "https://openfront.io/game/GS1oxWus"
     }
   ],
   "hvn": [
