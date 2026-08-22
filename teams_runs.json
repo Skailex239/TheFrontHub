@@ -62296,6 +62296,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T01:36:49.889Z",
       "url": "https://openfront.io/game/URkaReHb"
+    },
+    {
+      "id": "2gz4UnLk",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Twitch_MehighPlays",
+          "clientID": "4bwynhhx",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "LegalizeWeedInBulgaria",
+          "clientID": "wpCPshS9",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "pro openfront player",
+          "clientID": "55uUJJsf",
+          "clanTag": "HIGH"
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 396,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T01:47:36.591Z",
+      "url": "https://openfront.io/game/2gz4UnLk"
     }
   ],
   "quads": [
@@ -121065,6 +121095,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T01:35:46.810Z",
       "url": "https://openfront.io/game/P7zk66cV"
+    },
+    {
+      "id": "qpMQvYt2",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Saqdi",
+          "clientID": "uVGPZhEh",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "TEAMWORK",
+          "clientID": "8FNJecX4",
+          "clanTag": null
+        },
+        {
+          "username": "SwampKing",
+          "clientID": "S7W31SaS",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "GVM",
+          "clientID": "qkQ1yf68",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "bunny19",
+          "clientID": "6yXGHTjc",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "Gustavph",
+          "clientID": "pv9gjRPY",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 726,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T01:41:39.201Z",
+      "url": "https://openfront.io/game/qpMQvYt2"
     }
   ],
   "hvn": [
