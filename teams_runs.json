@@ -33117,6 +33117,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T11:50:27.735Z",
       "url": "https://openfront.io/game/1D4xoZ97"
+    },
+    {
+      "id": "nCnxXcif",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Doy",
+          "clientID": "SuXJ6CyF",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Factory Friend",
+          "clientID": "kkXVFzak",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1367,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:46:56.818Z",
+      "url": "https://openfront.io/game/nCnxXcif"
+    },
+    {
+      "id": "GPKqQhn9",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Soulterr",
+          "clientID": "BvsAY71h",
+          "clanTag": "AST"
+        },
+        {
+          "username": "gty",
+          "clientID": "MguUwVRF",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 3222,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:16:14.128Z",
+      "url": "https://openfront.io/game/GPKqQhn9"
     }
   ],
   "trios": [
@@ -67391,6 +67441,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T11:44:48.058Z",
       "url": "https://openfront.io/game/3TRkz7Ga"
+    },
+    {
+      "id": "K1jjr5iM",
+      "mode": "trios",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "Steur59",
+          "clientID": "auKnCWsp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion1",
+          "clientID": "TtCFkrQL",
+          "clanTag": null
+        },
+        {
+          "username": "Luke",
+          "clientID": "UjBEe8DB",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 753,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T11:56:59.479Z",
+      "url": "https://openfront.io/game/K1jjr5iM"
     }
   ],
   "quads": [
@@ -133050,6 +133130,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T11:40:02.255Z",
       "url": "https://openfront.io/game/zX7UXt7g"
+    },
+    {
+      "id": "8kqCbFBA",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Rise of Nations",
+          "clientID": "XfQgUdCb",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMeteor7",
+          "clientID": "pDB4LquQ",
+          "clanTag": null
+        },
+        {
+          "username": "NoAlliances",
+          "clientID": "K1B7v8ea",
+          "clanTag": null
+        },
+        {
+          "username": "Mmmalec",
+          "clientID": "5KPM46KZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTruffle",
+          "clientID": "auzMTLrf",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "VYNuyVJn",
+          "clanTag": null
+        },
+        {
+          "username": "YellowAndroid.F2tQ",
+          "clientID": "PcxfoxrA",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1627,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T11:42:01.788Z",
+      "url": "https://openfront.io/game/8kqCbFBA"
     }
   ],
   "hvn": [
