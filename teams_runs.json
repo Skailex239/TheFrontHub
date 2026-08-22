@@ -34042,6 +34042,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T13:58:42.086Z",
       "url": "https://openfront.io/game/vijAPFGT"
+    },
+    {
+      "id": "o6voVppN",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "0__0",
+          "clientID": "BJaPQFXm",
+          "clanTag": null
+        },
+        {
+          "username": "uRx",
+          "clientID": "Wdda6fqC",
+          "clanTag": "BEAU"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 577,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:59:38.175Z",
+      "url": "https://openfront.io/game/o6voVppN"
     }
   ],
   "trios": [
@@ -68706,6 +68731,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T14:00:42.774Z",
       "url": "https://openfront.io/game/Uu4aAfVH"
+    },
+    {
+      "id": "NYsLMhBJ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon834",
+          "clientID": "acZM6rTx",
+          "clanTag": null
+        },
+        {
+          "username": "MelodyMitrooo",
+          "clientID": "8oZc8m4h",
+          "clanTag": null
+        },
+        {
+          "username": "Magnanimous",
+          "clientID": "sTUaHzvX",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 826,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T13:55:13.691Z",
+      "url": "https://openfront.io/game/NYsLMhBJ"
     }
   ],
   "quads": [
@@ -162087,6 +162142,111 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T13:53:47.552Z",
       "url": "https://openfront.io/game/PDRkLJj8"
+    },
+    {
+      "id": "171N9ai7",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "piku1thecool",
+          "clientID": "yUa6TUNF",
+          "clanTag": null
+        },
+        {
+          "username": "Repurika",
+          "clientID": "b3ydTsu8",
+          "clanTag": null
+        },
+        {
+          "username": "Ninjuz",
+          "clientID": "agAG4wsP",
+          "clanTag": "GEO"
+        },
+        {
+          "username": "tao",
+          "clientID": "q6tazcwW",
+          "clanTag": "VN"
+        },
+        {
+          "username": "stone",
+          "clientID": "Gs4DX8TJ",
+          "clanTag": null
+        },
+        {
+          "username": "Vietnamsoldier",
+          "clientID": "jcWFJa7i",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "7UyG1tCD",
+          "clanTag": null
+        },
+        {
+          "username": "Wong",
+          "clientID": "WjyQ1x2W",
+          "clanTag": null
+        },
+        {
+          "username": "tommywang",
+          "clientID": "PJ9oTv26",
+          "clanTag": null
+        },
+        {
+          "username": "Aga",
+          "clientID": "TxZMRoJH",
+          "clanTag": "TR"
+        },
+        {
+          "username": "AnonSteam9",
+          "clientID": "KqXHzWn7",
+          "clanTag": null
+        },
+        {
+          "username": "JardaSz",
+          "clientID": "KqBb6DE3",
+          "clanTag": null
+        },
+        {
+          "username": "O1o",
+          "clientID": "sYyEyCkV",
+          "clanTag": "OIMPE"
+        },
+        {
+          "username": "Caliecjo",
+          "clientID": "C7oaNARA",
+          "clanTag": null
+        },
+        {
+          "username": "snib",
+          "clientID": "fcsuDpLG",
+          "clanTag": null
+        },
+        {
+          "username": "factory",
+          "clientID": "4nBABTfz",
+          "clanTag": null
+        },
+        {
+          "username": "AmOnMobile",
+          "clientID": "AB5sr9wx",
+          "clanTag": null
+        },
+        {
+          "username": "I like sending troops",
+          "clientID": "CUncLho2",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1708,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 57,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T13:40:44.810Z",
+      "url": "https://openfront.io/game/171N9ai7"
     }
   ]
 }
