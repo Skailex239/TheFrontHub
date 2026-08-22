@@ -33442,6 +33442,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T12:34:13.897Z",
       "url": "https://openfront.io/game/uqNXnaYY"
+    },
+    {
+      "id": "FqtKZNXH",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "GqdMf5Tj",
+          "clanTag": null
+        },
+        {
+          "username": "Maxiyo",
+          "clientID": "NutZoBie",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 769,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:04:12.688Z",
+      "url": "https://openfront.io/game/FqtKZNXH"
+    },
+    {
+      "id": "jBuxZ6Wp",
+      "mode": "duos",
+      "team": "Team 27",
+      "players": [
+        {
+          "username": "Anon980",
+          "clientID": "zqY2aZcd",
+          "clanTag": null
+        },
+        {
+          "username": "Zarox_17",
+          "clientID": "EWEiyB8R",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1186,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T12:55:55.032Z",
+      "url": "https://openfront.io/game/jBuxZ6Wp"
+    },
+    {
+      "id": "jj2QRrh7",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BUYBITCONNECT",
+          "clientID": "Uia7mbFi",
+          "clanTag": "FANTA"
+        },
+        {
+          "username": "Silly",
+          "clientID": "SjEnXpCa",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1764,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T12:47:03.645Z",
+      "url": "https://openfront.io/game/jj2QRrh7"
     }
   ],
   "trios": [
@@ -134670,6 +134745,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T12:49:51.935Z",
       "url": "https://openfront.io/game/LghM3d66"
+    },
+    {
+      "id": "wD7ndT5n",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "PETER THIEL",
+          "clientID": "iyUNDujn",
+          "clanTag": null
+        },
+        {
+          "username": "island nation",
+          "clientID": "HxLG3CUf",
+          "clanTag": null
+        },
+        {
+          "username": "119",
+          "clientID": "95D4ctFU",
+          "clanTag": "HELP"
+        },
+        {
+          "username": "AnonBicycle2",
+          "clientID": "cvW2MSD9",
+          "clanTag": null
+        },
+        {
+          "username": "Pirate",
+          "clientID": "Jjdykfp2",
+          "clanTag": "PIRET"
+        },
+        {
+          "username": "WildPilot.2oLy",
+          "clientID": "cLskC184",
+          "clanTag": null
+        },
+        {
+          "username": "sup2",
+          "clientID": "TygqVMJi",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 47,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T13:00:53.983Z",
+      "url": "https://openfront.io/game/wD7ndT5n"
     }
   ],
   "hvn": [
