@@ -104323,6 +104323,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T13:46:24.349Z",
       "url": "https://openfront.io/game/4D3LZ4VY"
+    },
+    {
+      "id": "CPBjs2Fw",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ggs",
+          "clientID": "nYmiBLYT",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Bubbles",
+          "clientID": "JKyt9R91",
+          "clanTag": "NU"
+        },
+        {
+          "username": "MediCato",
+          "clientID": "en8x5X6P",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Crusader",
+          "clientID": "WEbH9yzt",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 651,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T13:52:06.411Z",
+      "url": "https://openfront.io/game/CPBjs2Fw"
     }
   ],
   "team_custom": [
@@ -136030,6 +136065,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T13:44:25.680Z",
       "url": "https://openfront.io/game/PcT71oyU"
+    },
+    {
+      "id": "uySu9Lxe",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "AnonTuba6",
+          "clientID": "Hr4dkaoq",
+          "clanTag": null
+        },
+        {
+          "username": "Shafticator",
+          "clientID": "K1hdhrbd",
+          "clanTag": null
+        },
+        {
+          "username": "Backroom.",
+          "clientID": "YcvmtvZj",
+          "clanTag": null
+        },
+        {
+          "username": "bob",
+          "clientID": "xNzhriRr",
+          "clanTag": null
+        },
+        {
+          "username": "IIJAAJIJAIJIA",
+          "clientID": "tycMcEQP",
+          "clanTag": null
+        },
+        {
+          "username": "Galatone",
+          "clientID": "QiaJGjQQ",
+          "clanTag": null
+        },
+        {
+          "username": "SleepyViper.7sak",
+          "clientID": "UquAwzUK",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 773,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T13:51:50.888Z",
+      "url": "https://openfront.io/game/uySu9Lxe"
     }
   ],
   "hvn": [
