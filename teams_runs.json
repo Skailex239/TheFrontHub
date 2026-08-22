@@ -113323,6 +113323,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T23:01:13.369Z",
       "url": "https://openfront.io/game/E6dNs6EP"
+    },
+    {
+      "id": "fPvnMgnG",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "GreenPerl",
+          "clientID": "HXMavbj1",
+          "clanTag": null
+        },
+        {
+          "username": "Albion",
+          "clientID": "nS7W3nUH",
+          "clanTag": "UN"
+        },
+        {
+          "username": "a Forest",
+          "clientID": "yetB2Eoc",
+          "clanTag": null
+        },
+        {
+          "username": "Dogtown 2",
+          "clientID": "DM2aYG6K",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 507,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:08:24.079Z",
+      "url": "https://openfront.io/game/fPvnMgnG"
     }
   ],
   "team_custom": [
@@ -150475,6 +150510,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T22:44:29.288Z",
       "url": "https://openfront.io/game/q7XgxNBW"
+    },
+    {
+      "id": "vvyxdZso",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Turkish Empire",
+          "clientID": "ViXAE64g",
+          "clanTag": "TR"
+        },
+        {
+          "username": "TeamWorkDreamWork",
+          "clientID": "HB21YYZs",
+          "clanTag": null
+        },
+        {
+          "username": "Pirata",
+          "clientID": "5VCkBrw6",
+          "clanTag": "PT"
+        },
+        {
+          "username": "rOOt",
+          "clientID": "uQYovhxy",
+          "clanTag": null
+        },
+        {
+          "username": "G13Raven",
+          "clientID": "o5SNNxoY",
+          "clanTag": null
+        },
+        {
+          "username": "Finanzamt",
+          "clientID": "2AwqbgFP",
+          "clanTag": null
+        },
+        {
+          "username": "Tonton S",
+          "clientID": "jeqTyAk3",
+          "clanTag": "URSS"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1015,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T22:59:37.386Z",
+      "url": "https://openfront.io/game/vvyxdZso"
     }
   ],
   "hvn": [
