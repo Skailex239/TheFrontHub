@@ -35267,6 +35267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T16:23:06.190Z",
       "url": "https://openfront.io/game/aSALR1s8"
+    },
+    {
+      "id": "xaNq3xyb",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Gorlock takes alliances",
+          "clientID": "a2woeNCP",
+          "clanTag": "FPL"
+        },
+        {
+          "username": "AnonRelic7",
+          "clientID": "oVKLGcps",
+          "clanTag": "FPL"
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1163,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T16:24:45.359Z",
+      "url": "https://openfront.io/game/xaNq3xyb"
     }
   ],
   "trios": [
@@ -70651,6 +70676,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T16:27:49.610Z",
       "url": "https://openfront.io/game/9F5WjpMV"
+    },
+    {
+      "id": "38NikA5w",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSugar4",
+          "clientID": "ma68WShQ",
+          "clanTag": null
+        },
+        {
+          "username": "What the dawg doin",
+          "clientID": "aLoHYD9Y",
+          "clanTag": null
+        },
+        {
+          "username": "dogbreath",
+          "clientID": "NcTQMTKL",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 842,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T16:30:06.247Z",
+      "url": "https://openfront.io/game/38NikA5w"
     }
   ],
   "quads": [
@@ -140410,6 +140465,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T16:32:03.374Z",
       "url": "https://openfront.io/game/XSfA19jp"
+    },
+    {
+      "id": "SvAJq9Qk",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "DaddysLilTater",
+          "clientID": "vnoQUVED",
+          "clanTag": null
+        },
+        {
+          "username": "Anti",
+          "clientID": "yoiVABF3",
+          "clanTag": null
+        },
+        {
+          "username": "DerDer",
+          "clientID": "8Npbqf9V",
+          "clanTag": "DERDE"
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "LGwETjvj",
+          "clanTag": null
+        },
+        {
+          "username": "manan",
+          "clientID": "A5nJFQ7M",
+          "clanTag": null
+        },
+        {
+          "username": "FLAMINGO",
+          "clientID": "PPJGTmyq",
+          "clanTag": "PEACE"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 857,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T16:29:35.719Z",
+      "url": "https://openfront.io/game/SvAJq9Qk"
     }
   ],
   "hvn": [
