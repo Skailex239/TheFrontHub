@@ -63296,6 +63296,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T04:06:14.111Z",
       "url": "https://openfront.io/game/7DbvjAHM"
+    },
+    {
+      "id": "pTgmu4Ce",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Atomic Crashout",
+          "clientID": "nn93EeGp",
+          "clanTag": null
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "pw2Lx47k",
+          "clanTag": null
+        },
+        {
+          "username": "Troxel",
+          "clientID": "mggL38y4",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 636,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T04:10:08.140Z",
+      "url": "https://openfront.io/game/pTgmu4Ce"
     }
   ],
   "quads": [
