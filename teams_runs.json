@@ -72541,6 +72541,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T18:58:03.316Z",
       "url": "https://openfront.io/game/kTrkQ41d"
+    },
+    {
+      "id": "WuAse7rx",
+      "mode": "trios",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Makafaka",
+          "clientID": "LTRHmM8v",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "lil p1sun",
+          "clientID": "4xNq5rkM",
+          "clanTag": "P1SUN"
+        },
+        {
+          "username": "Hold the line",
+          "clientID": "6UqSAbCx",
+          "clanTag": "P1SUN"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1245,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T18:54:37.083Z",
+      "url": "https://openfront.io/game/WuAse7rx"
+    },
+    {
+      "id": "3tMGqqXC",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Ares",
+          "clientID": "iBpvrZad",
+          "clanTag": "BABA"
+        },
+        {
+          "username": "NachoNeko",
+          "clientID": "VbZ6wRkB",
+          "clanTag": null
+        },
+        {
+          "username": "TwiiCz",
+          "clientID": "uFYDvKKK",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 951,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T19:00:52.998Z",
+      "url": "https://openfront.io/game/3tMGqqXC"
     }
   ],
   "quads": [
@@ -144615,6 +144675,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T18:58:58.888Z",
       "url": "https://openfront.io/game/euVNupDf"
+    },
+    {
+      "id": "EcmhbKZF",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PutrickTheStar",
+          "clientID": "2L7yQrfV",
+          "clanTag": null
+        },
+        {
+          "username": "teamneverhelps",
+          "clientID": "eL3jybJM",
+          "clanTag": "CZ"
+        },
+        {
+          "username": "mahdi",
+          "clientID": "ncyDmBuh",
+          "clanTag": null
+        },
+        {
+          "username": "FASSOULIA",
+          "clientID": "4XisAPqS",
+          "clanTag": "33"
+        },
+        {
+          "username": "ayrbisusu",
+          "clientID": "S9kHioCu",
+          "clanTag": "33"
+        },
+        {
+          "username": "AnonTitan5",
+          "clientID": "u5QqLCmP",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 1025,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T18:59:34.920Z",
+      "url": "https://openfront.io/game/EcmhbKZF"
     }
   ],
   "hvn": [
