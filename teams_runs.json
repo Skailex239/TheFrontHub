@@ -68541,6 +68541,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T13:42:05.450Z",
       "url": "https://openfront.io/game/TjsHwQzh"
+    },
+    {
+      "id": "CPxJ24a2",
+      "mode": "trios",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "The Grandma Gary",
+          "clientID": "mzecjKfA",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "Cloud",
+          "clientID": "CqC6Pahs",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "thecong",
+          "clientID": "6wMjkiFS",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 940,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T13:39:53.724Z",
+      "url": "https://openfront.io/game/CPxJ24a2"
     }
   ],
   "quads": [
@@ -104108,6 +104138,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T13:09:23.791Z",
       "url": "https://openfront.io/game/YGWv7Jxu"
+    },
+    {
+      "id": "JexmmoXW",
+      "mode": "quads",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "SDRome",
+          "clientID": "7jCzXg7d",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "MrGirth",
+          "clientID": "W9inb7sM",
+          "clanTag": null
+        },
+        {
+          "username": "Erteschio",
+          "clientID": "9efgu9Vj",
+          "clanTag": "OPS"
+        },
+        {
+          "username": "missile",
+          "clientID": "FM4rqC6i",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1110,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T13:37:18.992Z",
+      "url": "https://openfront.io/game/JexmmoXW"
     }
   ],
   "team_custom": [
