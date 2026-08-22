@@ -34767,6 +34767,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T15:19:36.966Z",
       "url": "https://openfront.io/game/y5cNfuL2"
+    },
+    {
+      "id": "zQhf5WGE",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Galod",
+          "clientID": "RiaNhgEa",
+          "clanTag": "JK"
+        },
+        {
+          "username": "ASH",
+          "clientID": "cv3HgiSo",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1911,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:03:07.384Z",
+      "url": "https://openfront.io/game/zQhf5WGE"
     }
   ],
   "trios": [
@@ -138510,6 +138535,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T15:19:55.992Z",
       "url": "https://openfront.io/game/siPkn3XA"
+    },
+    {
+      "id": "7xdX4b2e",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Jindra",
+          "clientID": "vcA73y8f",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "SuperEJ111111",
+          "clientID": "SqXvhfLq",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Psychonaute420",
+          "clientID": "AGmGRPVE",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Lonely_Millennial",
+          "clientID": "2g2FNcEW",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "bro",
+          "clientID": "vaSDAmdR",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "arkoos2011",
+          "clientID": "AwLRi3Er",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "CLlMAX_TIME",
+          "clientID": "aE5r5eLv",
+          "clanTag": "ROYS"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 508,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T15:26:36.644Z",
+      "url": "https://openfront.io/game/7xdX4b2e"
     }
   ],
   "hvn": [
