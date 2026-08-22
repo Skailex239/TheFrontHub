@@ -96288,6 +96288,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T03:18:58.975Z",
       "url": "https://openfront.io/game/XiqYNvCt"
+    },
+    {
+      "id": "FPEMJCb6",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mahan",
+          "clientID": "1oFxEHdH",
+          "clanTag": "GNG"
+        },
+        {
+          "username": "mmmmmmmmmmmmmmmmmmmmmmmmmmd",
+          "clientID": "HvkUpqzj",
+          "clanTag": "GNG"
+        },
+        {
+          "username": "gugu8",
+          "clientID": "48rGEbmD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonIndigo6",
+          "clientID": "ppPU4gGT",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 572,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T03:38:40.461Z",
+      "url": "https://openfront.io/game/FPEMJCb6"
     }
   ],
   "team_custom": [
@@ -123020,6 +123055,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T03:21:18.200Z",
       "url": "https://openfront.io/game/kZwrwUiW"
+    },
+    {
+      "id": "bLobBfc6",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Apollopa",
+          "clientID": "TELCWFWS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PERU TU DIOS",
+          "clientID": "gEcYPQ5e",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Jdragon",
+          "clientID": "gpYQKcr6",
+          "clanTag": null
+        },
+        {
+          "username": "Sweet Potato Fries",
+          "clientID": "54MmWcqh",
+          "clanTag": null
+        },
+        {
+          "username": "Djrch550",
+          "clientID": "tctWqLdM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "6GOD",
+          "clientID": "9eV9QudS",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShield8",
+          "clientID": "RFkzVCns",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1043,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T03:30:28.439Z",
+      "url": "https://openfront.io/game/bLobBfc6"
     }
   ],
   "hvn": [
