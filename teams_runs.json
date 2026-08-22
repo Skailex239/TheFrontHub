@@ -37042,6 +37042,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:45:00.562Z",
       "url": "https://openfront.io/game/yvTF5Gz2"
+    },
+    {
+      "id": "Bd7VUZXi",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "RAFA",
+          "clientID": "H4qBPpJW",
+          "clanTag": null
+        },
+        {
+          "username": "Miska",
+          "clientID": "2LyCJc5W",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1027,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:42:48.339Z",
+      "url": "https://openfront.io/game/Bd7VUZXi"
+    },
+    {
+      "id": "Kg6HeweZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "psychedelic",
+          "clientID": "ixmkRDyZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "FAUST",
+          "clientID": "bcJ3u256",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 350,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:53:05.331Z",
+      "url": "https://openfront.io/game/Kg6HeweZ"
     }
   ],
   "trios": [
@@ -74256,6 +74306,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T21:36:08.176Z",
       "url": "https://openfront.io/game/qYZgjo41"
+    },
+    {
+      "id": "Ku4RXqEh",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Bitas Enormitas",
+          "clientID": "2MfDzqrW",
+          "clanTag": "ZIZI"
+        },
+        {
+          "username": "Asterion",
+          "clientID": "4esZYDYZ",
+          "clanTag": "ZIZI"
+        },
+        {
+          "username": "2FEUJ",
+          "clientID": "2bSYAM7Y",
+          "clanTag": "ZIZI"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1622,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T21:32:31.314Z",
+      "url": "https://openfront.io/game/Ku4RXqEh"
     }
   ],
   "quads": [
