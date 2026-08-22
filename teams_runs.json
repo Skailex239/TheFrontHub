@@ -112073,6 +112073,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T21:40:10.074Z",
       "url": "https://openfront.io/game/GzhKkAS3"
+    },
+    {
+      "id": "Mx2ZCktq",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "YNAPC",
+          "clientID": "7wf5gHaM",
+          "clanTag": null
+        },
+        {
+          "username": "Listenbourg",
+          "clientID": "g5XYh1ju",
+          "clanTag": "SPQR"
+        },
+        {
+          "username": "Balkan",
+          "clientID": "t8fX1N3U",
+          "clanTag": null
+        },
+        {
+          "username": "Fortress Europe",
+          "clientID": "zdaoAskT",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 530,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T21:46:19.593Z",
+      "url": "https://openfront.io/game/Mx2ZCktq"
+    },
+    {
+      "id": "1awZJ3jj",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonLinen9",
+          "clientID": "1FAcePpQ",
+          "clanTag": null
+        },
+        {
+          "username": "azisai",
+          "clientID": "kAverF3W",
+          "clanTag": null
+        },
+        {
+          "username": "KarlDerKleine",
+          "clientID": "EeCm9wLz",
+          "clanTag": "PFIST"
+        },
+        {
+          "username": "Jossulus",
+          "clientID": "dWELnA2a",
+          "clanTag": "PFIST"
+        }
+      ],
+      "map": "World",
+      "duration_s": 890,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T21:40:36.121Z",
+      "url": "https://openfront.io/game/1awZJ3jj"
     }
   ],
   "team_custom": [
@@ -148700,6 +148770,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T21:24:43.566Z",
       "url": "https://openfront.io/game/Tu21zMtQ"
+    },
+    {
+      "id": "5iYfynXz",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PeacefulTrader",
+          "clientID": "Gz2RJrYS",
+          "clanTag": null
+        },
+        {
+          "username": "Pahlavi",
+          "clientID": "eKjTkLXf",
+          "clanTag": "IR"
+        },
+        {
+          "username": "BigPIPI",
+          "clientID": "AYPkQis7",
+          "clanTag": null
+        },
+        {
+          "username": "Soulterr",
+          "clientID": "tm3CPXDP",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Hieronymus",
+          "clientID": "Vww4cNzV",
+          "clanTag": null
+        },
+        {
+          "username": "mngr",
+          "clientID": "fvNWhW3a",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1026,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T21:37:31.809Z",
+      "url": "https://openfront.io/game/5iYfynXz"
     }
   ],
   "hvn": [
