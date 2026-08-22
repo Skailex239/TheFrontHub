@@ -101353,6 +101353,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T10:16:05.820Z",
       "url": "https://openfront.io/game/jdV6cdoV"
+    },
+    {
+      "id": "WCyCXcNb",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "MickeyMoney",
+          "clientID": "AnsXbdrZ",
+          "clanTag": null
+        },
+        {
+          "username": "flo",
+          "clientID": "NUCqg2ux",
+          "clanTag": "CAMEL"
+        },
+        {
+          "username": "Glorfindel",
+          "clientID": "pqjbzahT",
+          "clanTag": null
+        },
+        {
+          "username": "Garibaldi",
+          "clientID": "WN3JWQcV",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 904,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T10:35:43.426Z",
+      "url": "https://openfront.io/game/WCyCXcNb"
     }
   ],
   "team_custom": [
@@ -130955,6 +130990,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T10:26:11.389Z",
       "url": "https://openfront.io/game/158arWnj"
+    },
+    {
+      "id": "evJgZyd3",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Korean Empire",
+          "clientID": "Znm4wrkv",
+          "clanTag": null
+        },
+        {
+          "username": "Cymru",
+          "clientID": "xjUCx3ec",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Karibil Watar",
+          "clientID": "Z952BFfJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anapirat69",
+          "clientID": "BVcMzcRJ",
+          "clanTag": null
+        },
+        {
+          "username": "fuh",
+          "clientID": "XxxYhTHa",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonPumpkin8",
+          "clientID": "pqri6UUy",
+          "clanTag": null
+        },
+        {
+          "username": "The Matrix",
+          "clientID": "KBNCa7Jt",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 968,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T10:33:40.308Z",
+      "url": "https://openfront.io/game/evJgZyd3"
     }
   ],
   "hvn": [
