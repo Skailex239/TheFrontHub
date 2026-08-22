@@ -35842,6 +35842,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T18:22:01.194Z",
       "url": "https://openfront.io/game/12mipZ75"
+    },
+    {
+      "id": "4oewbiiP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Psychonaute420",
+          "clientID": "JMwB27cb",
+          "clanTag": "JR"
+        },
+        {
+          "username": "UrDadLeftYou",
+          "clientID": "WMdTys6w",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 471,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T18:39:44.407Z",
+      "url": "https://openfront.io/game/4oewbiiP"
     }
   ],
   "trios": [
@@ -72126,6 +72151,96 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T18:32:40.357Z",
       "url": "https://openfront.io/game/X5vFYRvx"
+    },
+    {
+      "id": "Fx1KUbQ9",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Saint Empire",
+          "clientID": "iWT9LgS7",
+          "clanTag": null
+        },
+        {
+          "username": "Esq",
+          "clientID": "po6jpVs5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Poopina",
+          "clientID": "s1CgoZGe",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 654,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:37:59.753Z",
+      "url": "https://openfront.io/game/Fx1KUbQ9"
+    },
+    {
+      "id": "quw2tdTP",
+      "mode": "trios",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Hegel",
+          "clientID": "X3wJ1P89",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Giant Paul",
+          "clientID": "RWdZtguk",
+          "clanTag": "FDBZ"
+        },
+        {
+          "username": "Troop sender",
+          "clientID": "4Ry4iva4",
+          "clanTag": "FDBZ"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T18:31:36.291Z",
+      "url": "https://openfront.io/game/quw2tdTP"
+    },
+    {
+      "id": "CtyJVrak",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "da1chi",
+          "clientID": "JX6LZc6J",
+          "clanTag": "VOCA"
+        },
+        {
+          "username": "GUMI_SIMP",
+          "clientID": "JLvumuxR",
+          "clanTag": "VOCA"
+        },
+        {
+          "username": "Oozzee",
+          "clientID": "Qg6XJ2aP",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 733,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:35:37.037Z",
+      "url": "https://openfront.io/game/CtyJVrak"
     }
   ],
   "quads": [
