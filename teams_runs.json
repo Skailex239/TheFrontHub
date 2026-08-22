@@ -31017,6 +31017,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T05:01:52.133Z",
       "url": "https://openfront.io/game/mB13pg52"
+    },
+    {
+      "id": "26ww1Hjn",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Houdini",
+          "clientID": "a2QkpPRE",
+          "clanTag": null
+        },
+        {
+          "username": "Wings Of Zion",
+          "clientID": "ocFbRMiW",
+          "clanTag": "BIBI"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 836,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T05:28:31.803Z",
+      "url": "https://openfront.io/game/26ww1Hjn"
+    },
+    {
+      "id": "BwXqyGGJ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "freakjob2",
+          "clientID": "3y6or9t2",
+          "clanTag": null
+        },
+        {
+          "username": "Im Newbie",
+          "clientID": "EtRJfbno",
+          "clanTag": "TI"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1314,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T05:20:12.615Z",
+      "url": "https://openfront.io/game/BwXqyGGJ"
     }
   ],
   "trios": [
@@ -63911,6 +63961,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T05:26:31.343Z",
       "url": "https://openfront.io/game/4vHeXRPQ"
+    },
+    {
+      "id": "EKbXo5Z9",
+      "mode": "trios",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "AnonYacht7",
+          "clientID": "fLodSSCy",
+          "clanTag": null
+        },
+        {
+          "username": "Soviet Antarctica",
+          "clientID": "BuCCp34D",
+          "clanTag": "SOV"
+        },
+        {
+          "username": "BaCkStAbBeR67",
+          "clientID": "63NEdvPx",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 1254,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T05:22:23.647Z",
+      "url": "https://openfront.io/game/EKbXo5Z9"
     }
   ],
   "quads": [
@@ -97448,6 +97528,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T05:03:52.959Z",
       "url": "https://openfront.io/game/sDqvbfqE"
+    },
+    {
+      "id": "ejFQKdsF",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "James_Bond",
+          "clientID": "agvpzw4a",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion4",
+          "clientID": "biagZgFq",
+          "clanTag": null
+        },
+        {
+          "username": "Anon190",
+          "clientID": "FuyyL5tx",
+          "clanTag": null
+        },
+        {
+          "username": ".alopdd",
+          "clientID": "KuMTew6X",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 1066,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T05:24:25.365Z",
+      "url": "https://openfront.io/game/ejFQKdsF"
     }
   ],
   "team_custom": [
