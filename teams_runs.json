@@ -32117,6 +32117,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:23:21.574Z",
       "url": "https://openfront.io/game/1okQamiu"
+    },
+    {
+      "id": "i8wQcp4P",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Omarello",
+          "clientID": "hkGeHaam",
+          "clanTag": null
+        },
+        {
+          "username": "soq",
+          "clientID": "2MAe9fYB",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1168,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:16:15.650Z",
+      "url": "https://openfront.io/game/i8wQcp4P"
+    },
+    {
+      "id": "KbKSY6r4",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PAINT IT BLACK",
+          "clientID": "xU7PvuRH",
+          "clanTag": "EU"
+        },
+        {
+          "username": "loyal_kek",
+          "clientID": "59zksUtH",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 584,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:27:25.351Z",
+      "url": "https://openfront.io/game/KbKSY6r4"
     }
   ],
   "trios": [
@@ -129335,6 +129385,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T09:22:25.522Z",
       "url": "https://openfront.io/game/hvwYXyfu"
+    },
+    {
+      "id": "GqfLkjrb",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PLTR",
+          "clientID": "wetwCWh7",
+          "clanTag": "UN"
+        },
+        {
+          "username": "wgrf",
+          "clientID": "2wwLp8ry",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVelvet3",
+          "clientID": "S4VDpDUG",
+          "clanTag": null
+        },
+        {
+          "username": "Swifty",
+          "clientID": "JHEuPLGz",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Marius Daerus",
+          "clientID": "DMhcCfzd",
+          "clanTag": null
+        },
+        {
+          "username": "chocolatine",
+          "clientID": "xda1LunK",
+          "clanTag": null
+        },
+        {
+          "username": "HappyCaveman.4H3c",
+          "clientID": "ddnahgua",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1031,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 76,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T09:19:38.868Z",
+      "url": "https://openfront.io/game/GqfLkjrb"
     }
   ],
   "hvn": [
