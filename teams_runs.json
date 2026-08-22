@@ -32542,6 +32542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T10:22:12.674Z",
       "url": "https://openfront.io/game/sGAcsg7m"
+    },
+    {
+      "id": "Lu8WFksC",
+      "mode": "duos",
+      "team": "Teal",
+      "players": [
+        {
+          "username": "throat goat",
+          "clientID": "mZQhLVdB",
+          "clanTag": null
+        },
+        {
+          "username": "TheSato",
+          "clientID": "LwtBSezc",
+          "clanTag": null
+        }
+      ],
+      "map": "Faroe Islands",
+      "duration_s": 2706,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T09:48:38.644Z",
+      "url": "https://openfront.io/game/Lu8WFksC"
     }
   ],
   "trios": [
@@ -130700,6 +130725,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T10:07:44.323Z",
       "url": "https://openfront.io/game/FdFy9P7E"
+    },
+    {
+      "id": "nL9KwtU3",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Khatir",
+          "clientID": "C3XxYBTB",
+          "clanTag": null
+        },
+        {
+          "username": "send trops",
+          "clientID": "3eekvdVP",
+          "clanTag": null
+        },
+        {
+          "username": "f4321",
+          "clientID": "vaTctDin",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOwl5",
+          "clientID": "7ArhYHzs",
+          "clanTag": null
+        },
+        {
+          "username": "Trader",
+          "clientID": "tJAkGBF8",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 991,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T10:17:25.393Z",
+      "url": "https://openfront.io/game/nL9KwtU3"
     }
   ],
   "hvn": [
