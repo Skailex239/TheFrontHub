@@ -64951,6 +64951,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T07:36:23.845Z",
       "url": "https://openfront.io/game/1yCA9UD4"
+    },
+    {
+      "id": "9skn97KW",
+      "mode": "trios",
+      "team": "Team 11",
+      "players": [
+        {
+          "username": "Anon301",
+          "clientID": "vGUtwC4E",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUrchin1",
+          "clientID": "VoTmKW6H",
+          "clanTag": null
+        },
+        {
+          "username": "Family Bucket",
+          "clientID": "TLjUyrKM",
+          "clanTag": "KFC"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1273,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T07:28:56.161Z",
+      "url": "https://openfront.io/game/9skn97KW"
+    },
+    {
+      "id": "Swf3sUfz",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "IHeartEco",
+          "clientID": "rYHhCLMp",
+          "clanTag": "UN"
+        },
+        {
+          "username": "trade",
+          "clientID": "hQoEU3ss",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin5",
+          "clientID": "B944jRts",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 779,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T07:38:24.857Z",
+      "url": "https://openfront.io/game/Swf3sUfz"
     }
   ],
   "quads": [
@@ -99048,6 +99108,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T07:23:16.590Z",
       "url": "https://openfront.io/game/VZ83BXkW"
+    },
+    {
+      "id": "vCexgLxY",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SolomenFederation",
+          "clientID": "yZmCWp43",
+          "clanTag": null
+        },
+        {
+          "username": "Microbody",
+          "clientID": "EEebg6H8",
+          "clanTag": "MICRO"
+        },
+        {
+          "username": "JEONGSUN",
+          "clientID": "vkH9bxR8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUnicorn4",
+          "clientID": "fG13Yt4h",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 911,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 67,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T07:35:31.507Z",
+      "url": "https://openfront.io/game/vCexgLxY"
     }
   ],
   "team_custom": [
