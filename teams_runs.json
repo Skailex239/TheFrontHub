@@ -33592,6 +33592,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T13:15:07.245Z",
       "url": "https://openfront.io/game/7EhR9Rmf"
+    },
+    {
+      "id": "1x9yBacS",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SolWars.io",
+          "clientID": "vDEJwAiB",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon658",
+          "clientID": "tDExPyH3",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 533,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:17:51.261Z",
+      "url": "https://openfront.io/game/1x9yBacS"
     }
   ],
   "trios": [
@@ -160047,6 +160072,161 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T12:40:43.028Z",
       "url": "https://openfront.io/game/agQU3QZP"
+    },
+    {
+      "id": "99EQ8Jzo",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonBadger5",
+          "clientID": "4ui3anRM",
+          "clanTag": null
+        },
+        {
+          "username": "Omelya",
+          "clientID": "NGGiPi7d",
+          "clanTag": "EZ"
+        },
+        {
+          "username": "blablou",
+          "clientID": "Vx1SjVCR",
+          "clanTag": "UN"
+        },
+        {
+          "username": "WHO",
+          "clientID": "NSkMWEqz",
+          "clanTag": null
+        },
+        {
+          "username": "kuma",
+          "clientID": "7ykbkheB",
+          "clanTag": null
+        },
+        {
+          "username": "Icelandisgut",
+          "clientID": "CmPyuQTQ",
+          "clanTag": null
+        },
+        {
+          "username": "Backroom.",
+          "clientID": "VPxKyBk2",
+          "clanTag": null
+        },
+        {
+          "username": "Patoche",
+          "clientID": "59Eo2Hdy",
+          "clanTag": null
+        },
+        {
+          "username": "AVEMGRE",
+          "clientID": "Rr3aiSVu",
+          "clanTag": "AVNG"
+        },
+        {
+          "username": "chesstitans",
+          "clientID": "vfZd9rg5",
+          "clanTag": "AHG"
+        },
+        {
+          "username": "ATTERO_DOMINAUTS",
+          "clientID": "97fn2Gzn",
+          "clanTag": null
+        },
+        {
+          "username": "Le japonais",
+          "clientID": "HQboQDoZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThistle",
+          "clientID": "ijru7cUM",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 717,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T13:13:36.672Z",
+      "url": "https://openfront.io/game/99EQ8Jzo"
+    },
+    {
+      "id": "MxiCtHex",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "tonio36",
+          "clientID": "imGZBYoe",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "test",
+          "clientID": "cAbLtjhT",
+          "clanTag": null
+        },
+        {
+          "username": "BOB",
+          "clientID": "FZQBXRUG",
+          "clanTag": "PDD"
+        },
+        {
+          "username": "BARAbara",
+          "clientID": "ovN2KHMc",
+          "clanTag": null
+        },
+        {
+          "username": "The beef",
+          "clientID": "Hd6o7pbo",
+          "clanTag": null
+        },
+        {
+          "username": "Emerita Augusta",
+          "clientID": "8X3FXc8A",
+          "clanTag": null
+        },
+        {
+          "username": "Bernardo999",
+          "clientID": "ukMkibu7",
+          "clanTag": null
+        },
+        {
+          "username": "supp",
+          "clientID": "RksPPATg",
+          "clanTag": null
+        },
+        {
+          "username": "7777",
+          "clientID": "LfeRxZK9",
+          "clanTag": null
+        },
+        {
+          "username": "Unia Polsko Litewska",
+          "clientID": "z9xaB3SA",
+          "clanTag": "GUROM"
+        },
+        {
+          "username": "Spud",
+          "clientID": "Pz34quLr",
+          "clanTag": "AUS"
+        },
+        {
+          "username": "Peace And Love",
+          "clientID": "ZAHoi3GG",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 757,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T13:14:16.242Z",
+      "url": "https://openfront.io/game/MxiCtHex"
     }
   ]
 }
