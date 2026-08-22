@@ -125760,6 +125760,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T06:04:45.032Z",
       "url": "https://openfront.io/game/GoCLTcjs"
+    },
+    {
+      "id": "3Nem1ffj",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Harriblud",
+          "clientID": "ZEBEvGLT",
+          "clanTag": null
+        },
+        {
+          "username": "AnonComet7",
+          "clientID": "uokCBauJ",
+          "clanTag": null
+        },
+        {
+          "username": "FIDES",
+          "clientID": "CLD1DRGx",
+          "clanTag": "OKAY"
+        },
+        {
+          "username": "AnonVortex6",
+          "clientID": "vxoqy8ia",
+          "clanTag": null
+        },
+        {
+          "username": "anon1525",
+          "clientID": "akTXnSMo",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 731,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T06:09:01.733Z",
+      "url": "https://openfront.io/game/3Nem1ffj"
     }
   ],
   "hvn": [
@@ -148327,6 +148367,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T05:18:55.311Z",
       "url": "https://openfront.io/game/zt6MJ84R"
+    },
+    {
+      "id": "3bjFkSoj",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "from Japan",
+          "clientID": "sV1gwkzU",
+          "clanTag": null
+        },
+        {
+          "username": "KIMSANGDO",
+          "clientID": "fRM4vGY7",
+          "clanTag": null
+        },
+        {
+          "username": "blabla",
+          "clientID": "A9YibaDf",
+          "clanTag": null
+        },
+        {
+          "username": "Tegridy",
+          "clientID": "FkGYcW1d",
+          "clanTag": null
+        },
+        {
+          "username": "ConfusedHiveTyrant",
+          "clientID": "RXtei8t8",
+          "clanTag": null
+        },
+        {
+          "username": "Traders Joe",
+          "clientID": "eGsVn77q",
+          "clanTag": null
+        },
+        {
+          "username": "The_Enclave",
+          "clientID": "8mbmmscK",
+          "clanTag": null
+        },
+        {
+          "username": "Weed",
+          "clientID": "3doAbPqH",
+          "clanTag": null
+        },
+        {
+          "username": "Nooby Doo",
+          "clientID": "nrRnGzzK",
+          "clanTag": null
+        },
+        {
+          "username": "Nicomedia",
+          "clientID": "vs27ncZv",
+          "clanTag": null
+        },
+        {
+          "username": "radical",
+          "clientID": "KWqB22xo",
+          "clanTag": "RDCL"
+        },
+        {
+          "username": "Akhate",
+          "clientID": "aUy25WY8",
+          "clanTag": null
+        },
+        {
+          "username": "Flipside",
+          "clientID": "zfoM5ZFx",
+          "clanTag": null
+        },
+        {
+          "username": "Xineria",
+          "clientID": "yRMVVVmv",
+          "clanTag": null
+        }
+      ],
+      "map": "Yenisei",
+      "duration_s": 1122,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T06:02:44.520Z",
+      "url": "https://openfront.io/game/3bjFkSoj"
     }
   ]
 }
