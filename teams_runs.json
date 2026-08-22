@@ -126835,6 +126835,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T07:18:32.118Z",
       "url": "https://openfront.io/game/DTrVNAc6"
+    },
+    {
+      "id": "hq8xkrSR",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "HectorFletcher",
+          "clientID": "j2Ruw482",
+          "clanTag": null
+        },
+        {
+          "username": "CHINA BeiJing",
+          "clientID": "TBzbcpzM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonsoon",
+          "clientID": "MrbejcuM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion4",
+          "clientID": "4nr3mrFv",
+          "clanTag": null
+        },
+        {
+          "username": "AnonValley8",
+          "clientID": "GBXuLsiT",
+          "clanTag": null
+        },
+        {
+          "username": "RESCENE",
+          "clientID": "NwgVtn7t",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "ignore_my_friends",
+          "clientID": "DFKKfwhh",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 898,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T07:19:50.249Z",
+      "url": "https://openfront.io/game/hq8xkrSR"
     }
   ],
   "hvn": [
@@ -150017,6 +150067,51 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T07:15:04.858Z",
       "url": "https://openfront.io/game/sh9Z67qx"
+    },
+    {
+      "id": "X4c4a5A1",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Grumahji",
+          "clientID": "8AHoDPSf",
+          "clanTag": null
+        },
+        {
+          "username": "DEVIL",
+          "clientID": "U8HzJ1Wv",
+          "clanTag": null
+        },
+        {
+          "username": "Anon529",
+          "clientID": "53y63xqK",
+          "clanTag": null
+        },
+        {
+          "username": "JJONG JJOI",
+          "clientID": "Hf1YQrFQ",
+          "clanTag": null
+        },
+        {
+          "username": "Charley Patton",
+          "clientID": "3nAzrmVY",
+          "clanTag": null
+        },
+        {
+          "username": "Netanyahu",
+          "clientID": "N9uuLJAQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 2375,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T06:54:23.081Z",
+      "url": "https://openfront.io/game/X4c4a5A1"
     }
   ]
 }
