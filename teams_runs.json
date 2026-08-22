@@ -132200,6 +132200,101 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T11:11:19.291Z",
       "url": "https://openfront.io/game/bBcUkAyS"
+    },
+    {
+      "id": "yRiFgVCS",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BlackFry",
+          "clientID": "3TyZWgFB",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Duce",
+          "clientID": "7gcS6iRD",
+          "clanTag": "UN"
+        },
+        {
+          "username": "OTTOMAN EMPIRE",
+          "clientID": "qfyiaaWD",
+          "clanTag": "UN"
+        },
+        {
+          "username": "jeon",
+          "clientID": "Jn3ZvMb1",
+          "clanTag": null
+        },
+        {
+          "username": "mehtaab17",
+          "clientID": "QWzQDLSU",
+          "clanTag": null
+        },
+        {
+          "username": "Prairie",
+          "clientID": "a7HYCXL1",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1220,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T11:10:10.028Z",
+      "url": "https://openfront.io/game/yRiFgVCS"
+    },
+    {
+      "id": "y2tt73uV",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "behzad",
+          "clientID": "W96YCSpN",
+          "clanTag": null
+        },
+        {
+          "username": "NINI",
+          "clientID": "9DgQFm3S",
+          "clanTag": "MOO"
+        },
+        {
+          "username": "GreenPerl",
+          "clientID": "74XEco2g",
+          "clanTag": null
+        },
+        {
+          "username": "catherine",
+          "clientID": "DR5NLgcX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonJellyfish9",
+          "clientID": "f1zFfw8H",
+          "clanTag": null
+        },
+        {
+          "username": "Hit LOR",
+          "clientID": "kiD8utvD",
+          "clanTag": "HITLO"
+        },
+        {
+          "username": "AnonBridge1",
+          "clientID": "QrAxERQD",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 647,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T11:20:48.918Z",
+      "url": "https://openfront.io/game/y2tt73uV"
     }
   ],
   "hvn": [
