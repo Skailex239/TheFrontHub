@@ -33542,6 +33542,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T13:07:05.561Z",
       "url": "https://openfront.io/game/mYTiGDFr"
+    },
+    {
+      "id": "UhCV3y7K",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Alright",
+          "clientID": "TagkuW9S",
+          "clanTag": "OKAY"
+        },
+        {
+          "username": "FIDES",
+          "clientID": "Z294X8Bx",
+          "clanTag": "OKAY"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1143,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T13:02:55.189Z",
+      "url": "https://openfront.io/game/UhCV3y7K"
+    },
+    {
+      "id": "7EhR9Rmf",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Akram_Ackerman",
+          "clientID": "nXDpKnRG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThunder4",
+          "clientID": "N4nP19KL",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 489,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:15:07.245Z",
+      "url": "https://openfront.io/game/7EhR9Rmf"
     }
   ],
   "trios": [
