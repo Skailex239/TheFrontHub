@@ -32817,6 +32817,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T11:12:49.294Z",
       "url": "https://openfront.io/game/Lfepmbsv"
+    },
+    {
+      "id": "93FdoPyo",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Laggy af",
+          "clientID": "9iECBGvu",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anon568",
+          "clientID": "5hkfNgVH",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 2210,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:51:33.734Z",
+      "url": "https://openfront.io/game/93FdoPyo"
+    },
+    {
+      "id": "gAUzrYja",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SERBIA",
+          "clientID": "MVa2ZCx5",
+          "clanTag": null
+        },
+        {
+          "username": "Poison",
+          "clientID": "7NqTGa8X",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 424,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:22:15.544Z",
+      "url": "https://openfront.io/game/gAUzrYja"
     }
   ],
   "trios": [
@@ -66971,6 +67021,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T11:17:01.024Z",
       "url": "https://openfront.io/game/ZDWuqTQQ"
+    },
+    {
+      "id": "3bZ5kJt9",
+      "mode": "trios",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "SECRETARY OF DEFENSE",
+          "clientID": "mWQ8mW7W",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MommysLilStinker",
+          "clientID": "hyTqhJTp",
+          "clanTag": null
+        },
+        {
+          "username": "sumaria",
+          "clientID": "LxwkCJuC",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1384,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T11:05:38.085Z",
+      "url": "https://openfront.io/game/3bZ5kJt9"
     }
   ],
   "quads": [
@@ -132020,6 +132100,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T11:08:09.177Z",
       "url": "https://openfront.io/game/pG1jPgua"
+    },
+    {
+      "id": "k55bFm9a",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "superavenger27",
+          "clientID": "59sJYmnm",
+          "clanTag": null
+        },
+        {
+          "username": "AruteNa",
+          "clientID": "7cgjJudk",
+          "clanTag": null
+        },
+        {
+          "username": "Lukasss",
+          "clientID": "kaomChMX",
+          "clanTag": "SPR"
+        },
+        {
+          "username": "Star",
+          "clientID": "w6tKVyjx",
+          "clanTag": null
+        },
+        {
+          "username": "Seoulmysoul",
+          "clientID": "B88REJY6",
+          "clanTag": null
+        },
+        {
+          "username": "Polska Republika Konga",
+          "clientID": "t73xsEmt",
+          "clanTag": "XD"
+        },
+        {
+          "username": "FieryBanshee.e6xH",
+          "clientID": "6AUfTKqu",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 867,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T11:14:41.993Z",
+      "url": "https://openfront.io/game/k55bFm9a"
+    },
+    {
+      "id": "bBcUkAyS",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "aloi",
+          "clientID": "1UsW1fbb",
+          "clanTag": null
+        },
+        {
+          "username": "IluvKorea",
+          "clientID": "icdfmytC",
+          "clanTag": null
+        },
+        {
+          "username": "sakul309sk",
+          "clientID": "d25SAw6C",
+          "clanTag": null
+        },
+        {
+          "username": "Minzzi",
+          "clientID": "NNmNEF7u",
+          "clanTag": "KOREA"
+        },
+        {
+          "username": "anon7888",
+          "clientID": "uUPgQVGZ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEclipse5",
+          "clientID": "E1gW7GqR",
+          "clanTag": null
+        },
+        {
+          "username": "Giants",
+          "clientID": "dbHLeaF3",
+          "clanTag": "LOTTE"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1054,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T11:11:19.291Z",
+      "url": "https://openfront.io/game/bBcUkAyS"
     }
   ],
   "hvn": [
