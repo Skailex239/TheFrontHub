@@ -37192,6 +37192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T22:19:35.387Z",
       "url": "https://openfront.io/game/VevxNWQe"
+    },
+    {
+      "id": "fSN3yPvm",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "xMix",
+          "clientID": "LBy43Jk4",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "Mrpl",
+          "clientID": "tbo8M1oK",
+          "clanTag": "IKMS"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 747,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:17:36.202Z",
+      "url": "https://openfront.io/game/fSN3yPvm"
     }
   ],
   "trios": [
@@ -74616,6 +74641,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T22:12:31.308Z",
       "url": "https://openfront.io/game/BnCqYUNC"
+    },
+    {
+      "id": "Hqipz299",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Tula",
+          "clientID": "Y9vARTfQ",
+          "clanTag": "MIPT"
+        },
+        {
+          "username": "Tyumen",
+          "clientID": "1KQgYnue",
+          "clanTag": "MIPT"
+        },
+        {
+          "username": "NaAmur.com",
+          "clientID": "DN1odaz1",
+          "clanTag": "MIPT"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 985,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T22:13:04.246Z",
+      "url": "https://openfront.io/game/Hqipz299"
     }
   ],
   "quads": [
@@ -112703,6 +112758,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T21:47:18.809Z",
       "url": "https://openfront.io/game/CZGw8gHx"
+    },
+    {
+      "id": "XpR1Qxyt",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon129",
+          "clientID": "jTQrtzrm",
+          "clanTag": null
+        },
+        {
+          "username": "Demi02",
+          "clientID": "1fDwFKjU",
+          "clanTag": null
+        },
+        {
+          "username": "jello",
+          "clientID": "tfanJVux",
+          "clanTag": "ENTS"
+        },
+        {
+          "username": "AnonSad",
+          "clientID": "1mR8XE3x",
+          "clanTag": "ENTS"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 614,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T22:20:21.970Z",
+      "url": "https://openfront.io/game/XpR1Qxyt"
     }
   ],
   "team_custom": [
@@ -149465,6 +149555,106 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T22:09:10.885Z",
       "url": "https://openfront.io/game/v91HhgwE"
+    },
+    {
+      "id": "ghSrzhvB",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "TreBetcha",
+          "clientID": "wFkB1pbs",
+          "clanTag": "BE"
+        },
+        {
+          "username": "ROMAN EMPIRE",
+          "clientID": "se4aPEtp",
+          "clanTag": null
+        },
+        {
+          "username": "breakfast county",
+          "clientID": "8uudVKe3",
+          "clanTag": "YOINK"
+        },
+        {
+          "username": "ONE FRONT",
+          "clientID": "f58wSuZn",
+          "clanTag": null
+        },
+        {
+          "username": "Anapirat69",
+          "clientID": "CWs5FYWf",
+          "clanTag": null
+        },
+        {
+          "username": "Churchill",
+          "clientID": "162aJg1m",
+          "clanTag": null
+        },
+        {
+          "username": "GOGO",
+          "clientID": "vbmh4s2H",
+          "clanTag": "AXIOS"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 672,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T22:19:19.371Z",
+      "url": "https://openfront.io/game/ghSrzhvB"
+    },
+    {
+      "id": "buyMUMgf",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "defforestation",
+          "clientID": "9jApXWAU",
+          "clanTag": null
+        },
+        {
+          "username": "YOUSSEF",
+          "clientID": "3jb9Cjus",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Boop",
+          "clientID": "bDqasmUW",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCitadel4",
+          "clientID": "3gayek5z",
+          "clanTag": null
+        },
+        {
+          "username": "Yaboy",
+          "clientID": "owsvyJrg",
+          "clanTag": null
+        },
+        {
+          "username": "simone_victoria",
+          "clientID": "gTNMbjxL",
+          "clanTag": null
+        },
+        {
+          "username": "usernem",
+          "clientID": "onjqpnmA",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 778,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T22:16:50.126Z",
+      "url": "https://openfront.io/game/buyMUMgf"
     }
   ],
   "hvn": [
