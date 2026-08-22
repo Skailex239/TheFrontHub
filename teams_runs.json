@@ -73581,6 +73581,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T20:33:45.402Z",
       "url": "https://openfront.io/game/Cv9fSTsz"
+    },
+    {
+      "id": "3K45fZt2",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "glidergun",
+          "clientID": "duKQRx4h",
+          "clanTag": "ANT"
+        },
+        {
+          "username": "Paris 1871",
+          "clientID": "mvEFFdhr",
+          "clanTag": null
+        },
+        {
+          "username": "Fatal1ty",
+          "clientID": "Zc35hv8d",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 908,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T20:40:03.958Z",
+      "url": "https://openfront.io/game/3K45fZt2"
     }
   ],
   "quads": [
@@ -147215,6 +147245,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T20:21:51.072Z",
       "url": "https://openfront.io/game/RFEaDpS4"
+    },
+    {
+      "id": "RV7vfndQ",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "SHAH",
+          "clientID": "36dXeQhP",
+          "clanTag": null
+        },
+        {
+          "username": "BB_BOI",
+          "clientID": "dZLTt1zt",
+          "clanTag": "UN"
+        },
+        {
+          "username": "That_Guy",
+          "clientID": "BmYDj8fY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Lazer be",
+          "clientID": "67mtfFn4",
+          "clanTag": null
+        },
+        {
+          "username": "TryingTooHard67",
+          "clientID": "prWtgG5m",
+          "clanTag": null
+        },
+        {
+          "username": "ChubbyTiger",
+          "clientID": "m5eBg9no",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "Netanyahu",
+          "clientID": "NJHZArin",
+          "clanTag": null
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1307,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T20:32:42.396Z",
+      "url": "https://openfront.io/game/RV7vfndQ"
     }
   ],
   "hvn": [
