@@ -37367,6 +37367,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T22:40:16.896Z",
       "url": "https://openfront.io/game/63s42n3i"
+    },
+    {
+      "id": "1J9neXPD",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "hello.com.yahoo",
+          "clientID": "e1rtai4h",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Omnissiah",
+          "clientID": "roDWWzQm",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1167,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:50:15.837Z",
+      "url": "https://openfront.io/game/1J9neXPD"
     }
   ],
   "trios": [
@@ -113208,6 +113233,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T22:51:29.934Z",
       "url": "https://openfront.io/game/K4nQEzXx"
+    },
+    {
+      "id": "E6dNs6EP",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Royal Cookie",
+          "clientID": "RWCJD4aP",
+          "clanTag": "AZE"
+        },
+        {
+          "username": "Krakoa",
+          "clientID": "mpDNTvZB",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "Anon669",
+          "clientID": "KXrn3n3B",
+          "clanTag": null
+        },
+        {
+          "username": "Blarmpfus",
+          "clientID": "svkJJPr1",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 602,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:01:13.369Z",
+      "url": "https://openfront.io/game/E6dNs6EP"
     }
   ],
   "team_custom": [
@@ -150310,6 +150370,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T22:52:19.011Z",
       "url": "https://openfront.io/game/74RMYUCi"
+    },
+    {
+      "id": "q7XgxNBW",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Russia",
+          "clientID": "wPK28WPn",
+          "clanTag": null
+        },
+        {
+          "username": "Globex Corporation",
+          "clientID": "CascsRBs",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBison7",
+          "clientID": "H4Gi2xtF",
+          "clanTag": "GIMP"
+        },
+        {
+          "username": "new_guy_was_taken",
+          "clientID": "oWCDfdW7",
+          "clanTag": null
+        },
+        {
+          "username": "Shakar",
+          "clientID": "2axAa6VZ",
+          "clanTag": null
+        },
+        {
+          "username": "ONI2000",
+          "clientID": "gzB55qAX",
+          "clanTag": "RPS"
+        },
+        {
+          "username": "BigYOSH",
+          "clientID": "ruT7MXMG",
+          "clanTag": "YOSH"
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1483,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 86,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T22:44:29.288Z",
+      "url": "https://openfront.io/game/q7XgxNBW"
     }
   ],
   "hvn": [
