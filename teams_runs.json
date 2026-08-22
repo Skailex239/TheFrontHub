@@ -32217,6 +32217,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:29:01.441Z",
       "url": "https://openfront.io/game/UZCe7eVK"
+    },
+    {
+      "id": "wcR9HBZJ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonLotus2",
+          "clientID": "wtCKvW9p",
+          "clanTag": null
+        },
+        {
+          "username": "Roma Invicta",
+          "clientID": "5iXfx9jb",
+          "clanTag": null
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 760,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:36:56.909Z",
+      "url": "https://openfront.io/game/wcR9HBZJ"
     }
   ],
   "trios": [
@@ -65891,6 +65916,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T09:01:37.767Z",
       "url": "https://openfront.io/game/DCFyH4sr"
+    },
+    {
+      "id": "5wbkEZur",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "NoAlliances",
+          "clientID": "ieCGVA1Q",
+          "clanTag": null
+        },
+        {
+          "username": "Wingchun",
+          "clientID": "uWs5PJEi",
+          "clanTag": "KONFO"
+        },
+        {
+          "username": "baor",
+          "clientID": "Jx3Mt66G",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 533,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T09:40:04.659Z",
+      "url": "https://openfront.io/game/5wbkEZur"
     }
   ],
   "quads": [
@@ -100478,6 +100533,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T08:55:36.286Z",
       "url": "https://openfront.io/game/34rAqFHM"
+    },
+    {
+      "id": "8FqB92KL",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonCheetah8",
+          "clientID": "5Taw3Y5i",
+          "clanTag": null
+        },
+        {
+          "username": "Otto von Bismarck",
+          "clientID": "UWhsQ5xo",
+          "clanTag": "RVL"
+        },
+        {
+          "username": "The Darkest Realm",
+          "clientID": "bm4nAkwv",
+          "clanTag": null
+        },
+        {
+          "username": "hunter",
+          "clientID": "fKSDBQhU",
+          "clanTag": "AT"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 1074,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T09:30:26.525Z",
+      "url": "https://openfront.io/game/8FqB92KL"
+    },
+    {
+      "id": "jBzJ2Vde",
+      "mode": "quads",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "PowerButterfly.hPjX",
+          "clientID": "Q3iagbtF",
+          "clanTag": null
+        },
+        {
+          "username": "Shumi",
+          "clientID": "eFBgB4LB",
+          "clanTag": null
+        },
+        {
+          "username": "Kimote",
+          "clientID": "yucdRpH5",
+          "clanTag": "GEO"
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "fnebsQWT",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1003,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T09:32:26.635Z",
+      "url": "https://openfront.io/game/jBzJ2Vde"
     }
   ],
   "team_custom": [
