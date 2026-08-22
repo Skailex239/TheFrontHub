@@ -106073,6 +106073,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T15:05:22.585Z",
       "url": "https://openfront.io/game/orytfep6"
+    },
+    {
+      "id": "EFhTfHDn",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "tradeonly",
+          "clientID": "7SGh2eiM",
+          "clanTag": "BAG"
+        },
+        {
+          "username": "for sure",
+          "clientID": "JTanoB8h",
+          "clanTag": null
+        },
+        {
+          "username": "linkmin",
+          "clientID": "A6ENuiUS",
+          "clanTag": null
+        },
+        {
+          "username": "Stick",
+          "clientID": "B32Zr3BN",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1006,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T15:22:38.270Z",
+      "url": "https://openfront.io/game/EFhTfHDn"
     }
   ],
   "team_custom": [
@@ -138585,6 +138620,101 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T15:26:36.644Z",
       "url": "https://openfront.io/game/7xdX4b2e"
+    },
+    {
+      "id": "vPVdriX4",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Support Front",
+          "clientID": "FxbTMa4n",
+          "clanTag": null
+        },
+        {
+          "username": "Seaworld",
+          "clientID": "CJZaneMH",
+          "clanTag": "SEA"
+        },
+        {
+          "username": "KarlitoKarlos",
+          "clientID": "GFK2xEtu",
+          "clanTag": null
+        },
+        {
+          "username": "Geschrei",
+          "clientID": "faEDVUhS",
+          "clanTag": null
+        },
+        {
+          "username": "Exigoo",
+          "clientID": "S9Kh42pF",
+          "clanTag": null
+        },
+        {
+          "username": "Gogoli",
+          "clientID": "SufkRELb",
+          "clanTag": "IZAD"
+        },
+        {
+          "username": "AnonWhisper2",
+          "clientID": "pwMzStMr",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1012,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T15:23:43.385Z",
+      "url": "https://openfront.io/game/vPVdriX4"
+    },
+    {
+      "id": "71z2Y5k8",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "qwert",
+          "clientID": "uztrDwmZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "JosephBallin",
+          "clientID": "nxE2Vgta",
+          "clanTag": null
+        },
+        {
+          "username": "Toast",
+          "clientID": "G486L75D",
+          "clanTag": "UN"
+        },
+        {
+          "username": "PAK",
+          "clientID": "N2ATHsdJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MOHD93",
+          "clientID": "NSY14vca",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Friendly revenger",
+          "clientID": "x9aTayE8",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 1137,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T15:21:00.103Z",
+      "url": "https://openfront.io/game/71z2Y5k8"
     }
   ],
   "hvn": [
@@ -165297,6 +165427,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T14:58:59.960Z",
       "url": "https://openfront.io/game/fJ7aJC6E"
+    },
+    {
+      "id": "s8yX9fwm",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Latveria",
+          "clientID": "sYuRxkKF",
+          "clanTag": null
+        },
+        {
+          "username": "SkinnyBot.1k6b",
+          "clientID": "CFvaL5vM",
+          "clanTag": null
+        },
+        {
+          "username": "Trade Only",
+          "clientID": "SYuMPqxn",
+          "clanTag": "DI"
+        },
+        {
+          "username": "Agent82011",
+          "clientID": "N7Qn7Gjj",
+          "clanTag": null
+        },
+        {
+          "username": "sone1001",
+          "clientID": "WiEvrP9U",
+          "clanTag": "QQQ"
+        },
+        {
+          "username": "looloo",
+          "clientID": "jkNhJu8p",
+          "clanTag": "MUK"
+        },
+        {
+          "username": "Zone 2",
+          "clientID": "CTBPCtbC",
+          "clanTag": "MUK"
+        },
+        {
+          "username": "BriB",
+          "clientID": "9qjrSwt5",
+          "clanTag": null
+        },
+        {
+          "username": "John Openfront",
+          "clientID": "v1gNS8Um",
+          "clanTag": null
+        },
+        {
+          "username": "Florian",
+          "clientID": "UTaWSfhi",
+          "clanTag": null
+        },
+        {
+          "username": "Zone 1",
+          "clientID": "ygCp4xFH",
+          "clanTag": "MUK"
+        },
+        {
+          "username": "Sed mamad",
+          "clientID": "XNj85EjD",
+          "clanTag": null
+        },
+        {
+          "username": "Viltrum Empire",
+          "clientID": "roHt6g2z",
+          "clanTag": null
+        },
+        {
+          "username": "Queensland",
+          "clientID": "5gPugedo",
+          "clanTag": "AUS"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1023,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T15:23:03.311Z",
+      "url": "https://openfront.io/game/s8yX9fwm"
     }
   ]
 }
