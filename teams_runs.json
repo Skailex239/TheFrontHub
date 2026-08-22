@@ -107498,6 +107498,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T16:34:26.000Z",
       "url": "https://openfront.io/game/bTSbxTdi"
+    },
+    {
+      "id": "YKYWJSB6",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Swiss Republic",
+          "clientID": "gk3gPQti",
+          "clanTag": null
+        },
+        {
+          "username": "AxCromos",
+          "clientID": "jcRi5gvT",
+          "clanTag": null
+        },
+        {
+          "username": "Docterr",
+          "clientID": "bqecV24y",
+          "clanTag": "TART"
+        },
+        {
+          "username": "Doomsday",
+          "clientID": "VNFC28k4",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 968,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T16:52:12.540Z",
+      "url": "https://openfront.io/game/YKYWJSB6"
     }
   ],
   "team_custom": [
@@ -140965,6 +141000,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T16:42:12.048Z",
       "url": "https://openfront.io/game/gbWmgU8B"
+    },
+    {
+      "id": "k7qtK6fN",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Shafticator",
+          "clientID": "6bT8HBSe",
+          "clanTag": null
+        },
+        {
+          "username": "Made in Germany",
+          "clientID": "aH4aqJeX",
+          "clanTag": "GER"
+        },
+        {
+          "username": "test01",
+          "clientID": "LyjDNxUc",
+          "clanTag": null
+        },
+        {
+          "username": "Peace And Love",
+          "clientID": "Y8Bk8fEc",
+          "clanTag": null
+        },
+        {
+          "username": "RICKY",
+          "clientID": "srjVrUMS",
+          "clanTag": null
+        },
+        {
+          "username": "Dynasty of Greger XVI",
+          "clientID": "QM8Lp8GV",
+          "clanTag": "AX"
+        },
+        {
+          "username": "Emilien",
+          "clientID": "87bSCocd",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1114,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T16:49:53.314Z",
+      "url": "https://openfront.io/game/k7qtK6fN"
     }
   ],
   "hvn": [
