@@ -34017,6 +34017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T13:53:12.995Z",
       "url": "https://openfront.io/game/LNTcnGoW"
+    },
+    {
+      "id": "vijAPFGT",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "GrumpyPumpkin.QuwS",
+          "clientID": "GfMmKLAW",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRainbow5",
+          "clientID": "VRMZqBWQ",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 518,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T13:58:42.086Z",
+      "url": "https://openfront.io/game/vijAPFGT"
     }
   ],
   "trios": [
@@ -68651,6 +68676,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T13:44:41.198Z",
       "url": "https://openfront.io/game/H12ZpBfo"
+    },
+    {
+      "id": "Uu4aAfVH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Persia",
+          "clientID": "avWbtW2K",
+          "clanTag": null
+        },
+        {
+          "username": "The Swedish Trading Co.",
+          "clientID": "mof3Pw2m",
+          "clanTag": "SWE"
+        },
+        {
+          "username": "The Russian empire",
+          "clientID": "7yJemqpQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 426,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T14:00:42.774Z",
+      "url": "https://openfront.io/game/Uu4aAfVH"
     }
   ],
   "quads": [
@@ -136115,6 +136170,136 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T13:51:50.888Z",
       "url": "https://openfront.io/game/uySu9Lxe"
+    },
+    {
+      "id": "DREXVj9q",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon913",
+          "clientID": "VAc9vYnt",
+          "clanTag": null
+        },
+        {
+          "username": "Thales",
+          "clientID": "5YWaTSKY",
+          "clanTag": "NERV"
+        },
+        {
+          "username": "Ragnaroc",
+          "clientID": "wvYuC77m",
+          "clanTag": "NERV"
+        },
+        {
+          "username": "randomGerman26",
+          "clientID": "ZvHNsXb7",
+          "clanTag": null
+        },
+        {
+          "username": "Anti",
+          "clientID": "8x1WAR1C",
+          "clanTag": null
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 728,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T13:54:40.638Z",
+      "url": "https://openfront.io/game/DREXVj9q"
+    },
+    {
+      "id": "w6P7JQib",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Guardian",
+          "clientID": "5SASzJTf",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "Merchant",
+          "clientID": "BnB8w56o",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "Rzeczpospolita Polska",
+          "clientID": "Z7sayze8",
+          "clanTag": null
+        },
+        {
+          "username": "Emperor",
+          "clientID": "FzMtxLNv",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "BnonAnvil7",
+          "clientID": "n8GQ1ksN",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait Of Malacca",
+      "duration_s": 571,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T13:58:25.565Z",
+      "url": "https://openfront.io/game/w6P7JQib"
+    },
+    {
+      "id": "UNAh9iTA",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonBonfire5",
+          "clientID": "X2WYvoPk",
+          "clanTag": null
+        },
+        {
+          "username": "AnonObelisk4",
+          "clientID": "ufD2UW9c",
+          "clanTag": null
+        },
+        {
+          "username": "JUST TRADE",
+          "clientID": "UtQ6VAwC",
+          "clanTag": "AST"
+        },
+        {
+          "username": "kamisama",
+          "clientID": "ksp5tXXv",
+          "clanTag": null
+        },
+        {
+          "username": "feEEda",
+          "clientID": "vmy3xBC6",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AnonSphinx3",
+          "clientID": "7nuhyfY2",
+          "clanTag": null
+        },
+        {
+          "username": "Anon190",
+          "clientID": "5LsJzWkD",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 504,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T13:59:13.142Z",
+      "url": "https://openfront.io/game/UNAh9iTA"
     }
   ],
   "hvn": [
