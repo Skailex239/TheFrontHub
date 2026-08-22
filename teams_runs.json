@@ -67871,6 +67871,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T12:26:46.713Z",
       "url": "https://openfront.io/game/z3HLXkHw"
+    },
+    {
+      "id": "bLY95ijn",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "natoune",
+          "clientID": "VfyazYX6",
+          "clanTag": "NTM"
+        },
+        {
+          "username": "galax",
+          "clientID": "m3NhXTrg",
+          "clanTag": "NTM"
+        },
+        {
+          "username": "Choo Choo",
+          "clientID": "5Cdqa77M",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1221,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T12:44:34.408Z",
+      "url": "https://openfront.io/game/bLY95ijn"
     }
   ],
   "quads": [
