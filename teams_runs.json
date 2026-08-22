@@ -64141,6 +64141,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T05:22:23.647Z",
       "url": "https://openfront.io/game/EKbXo5Z9"
+    },
+    {
+      "id": "XL9dWjAD",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Petrov",
+          "clientID": "pfS9FcoF",
+          "clanTag": null
+        },
+        {
+          "username": "GraalConqueror",
+          "clientID": "eAtjbdsi",
+          "clanTag": "KISS"
+        },
+        {
+          "username": "MaskedMagnate",
+          "clientID": "ZQwxFh6E",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 544,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T05:51:01.997Z",
+      "url": "https://openfront.io/game/XL9dWjAD"
     }
   ],
   "quads": [
