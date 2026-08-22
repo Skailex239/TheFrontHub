@@ -64306,6 +64306,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T05:54:59.597Z",
       "url": "https://openfront.io/game/HGecWLVH"
+    },
+    {
+      "id": "i5qcVJVF",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Fleckure",
+          "clientID": "2K39EA5v",
+          "clanTag": "WHITE"
+        },
+        {
+          "username": "Harriblud",
+          "clientID": "PVjDykbR",
+          "clanTag": null
+        },
+        {
+          "username": "PragueForever",
+          "clientID": "dZzM1pMw",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 598,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T06:22:00.467Z",
+      "url": "https://openfront.io/game/i5qcVJVF"
     }
   ],
   "quads": [
