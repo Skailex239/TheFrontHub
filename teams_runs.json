@@ -148955,6 +148955,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T21:37:31.809Z",
       "url": "https://openfront.io/game/5iYfynXz"
+    },
+    {
+      "id": "cmhA6T6i",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AMER",
+          "clientID": "U6eg8ZbZ",
+          "clanTag": "7LBY"
+        },
+        {
+          "username": "Colonist1922",
+          "clientID": "DQE3Yyvq",
+          "clanTag": null
+        },
+        {
+          "username": "pablo",
+          "clientID": "AmrCd9Fy",
+          "clanTag": "7LBY"
+        },
+        {
+          "username": "Bravonia",
+          "clientID": "NVHE2eks",
+          "clanTag": null
+        },
+        {
+          "username": "2nd Place",
+          "clientID": "3qtdY9xa",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 850,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T21:51:28.678Z",
+      "url": "https://openfront.io/game/cmhA6T6i"
     }
   ],
   "hvn": [
@@ -179312,6 +179352,131 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T21:45:31.628Z",
       "url": "https://openfront.io/game/SaiWmpeh"
+    },
+    {
+      "id": "KPxraDDk",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Foid",
+          "clientID": "P5BaxKTB",
+          "clanTag": "BLKDR"
+        },
+        {
+          "username": "AnonSilence7",
+          "clientID": "m4jUZeqU",
+          "clanTag": null
+        },
+        {
+          "username": "Cipollino",
+          "clientID": "r8UaCkY1",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "Aul Dwarov",
+          "clientID": "xZYemFwa",
+          "clanTag": null
+        },
+        {
+          "username": "Kubikula",
+          "clientID": "LVbHt3gK",
+          "clanTag": null
+        },
+        {
+          "username": "Betoniarz",
+          "clientID": "khLpycFw",
+          "clanTag": null
+        },
+        {
+          "username": "sajad",
+          "clientID": "A79E3HN1",
+          "clanTag": null
+        },
+        {
+          "username": "AnonDerinEren",
+          "clientID": "7iv66Ggs",
+          "clanTag": "42"
+        },
+        {
+          "username": "7777",
+          "clientID": "BtCTDW8P",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTruffle9",
+          "clientID": "LyMAXPek",
+          "clanTag": null
+        },
+        {
+          "username": "Bleizharchoad",
+          "clientID": "Jdi2R2Gu",
+          "clanTag": null
+        },
+        {
+          "username": "Picklebutt",
+          "clientID": "z9AqGUXK",
+          "clanTag": null
+        },
+        {
+          "username": "CanCanCanCan",
+          "clientID": "LsHaq9sr",
+          "clanTag": "42"
+        },
+        {
+          "username": "Don",
+          "clientID": "vKF6VT4d",
+          "clanTag": null
+        },
+        {
+          "username": "Snaky",
+          "clientID": "R4QnExNg",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "Rossco",
+          "clientID": "zbisM6wg",
+          "clanTag": "SCO"
+        },
+        {
+          "username": "Euskal Herria",
+          "clientID": "iSyX9wge",
+          "clanTag": "CIA"
+        },
+        {
+          "username": "Tozy",
+          "clientID": "qE86bE4V",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOcean4",
+          "clientID": "pkkgdu97",
+          "clanTag": null
+        },
+        {
+          "username": "MangoJuice2",
+          "clientID": "gZJBJi52",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Dill Doe",
+          "clientID": "1QsTLZLQ",
+          "clanTag": "BIG"
+        },
+        {
+          "username": "Anon415",
+          "clientID": "SoCmLFoS",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 375,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 25,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T21:58:30.335Z",
+      "url": "https://openfront.io/game/KPxraDDk"
     }
   ]
 }
