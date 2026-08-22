@@ -34742,6 +34742,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T15:18:54.401Z",
       "url": "https://openfront.io/game/2h47HGm1"
+    },
+    {
+      "id": "y5cNfuL2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonScepter2",
+          "clientID": "SPSJ3s6j",
+          "clanTag": null
+        },
+        {
+          "username": "Meowww",
+          "clientID": "FBcPekX8",
+          "clanTag": "SP2L"
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 744,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:19:36.966Z",
+      "url": "https://openfront.io/game/y5cNfuL2"
     }
   ],
   "trios": [
@@ -69766,6 +69791,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T15:15:25.068Z",
       "url": "https://openfront.io/game/UeMWB5Wn"
+    },
+    {
+      "id": "ZAVM49oQ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Reza m 88",
+          "clientID": "TNVdkTzF",
+          "clanTag": null
+        },
+        {
+          "username": "Bickcog",
+          "clientID": "KJEh9Uco",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGoblin2",
+          "clientID": "PKGYLTG4",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1185,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 97,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T15:11:42.226Z",
+      "url": "https://openfront.io/game/ZAVM49oQ"
     }
   ],
   "quads": [
