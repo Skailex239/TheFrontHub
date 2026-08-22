@@ -62726,6 +62726,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T02:30:28.621Z",
       "url": "https://openfront.io/game/Yo4RqzUE"
+    },
+    {
+      "id": "jepdYcKm",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Tronchamulas",
+          "clientID": "18VJWqvd",
+          "clanTag": null
+        },
+        {
+          "username": "object Object",
+          "clientID": "MrDNQuPB",
+          "clanTag": null
+        },
+        {
+          "username": "Tominator",
+          "clientID": "RWHF6tAq",
+          "clanTag": "KING"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 917,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T02:50:10.094Z",
+      "url": "https://openfront.io/game/jepdYcKm"
     }
   ],
   "quads": [
@@ -95773,6 +95803,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T02:03:48.689Z",
       "url": "https://openfront.io/game/HRB3HXbK"
+    },
+    {
+      "id": "tWm2DSfn",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ooku815",
+          "clientID": "MRgL61Co",
+          "clanTag": null
+        },
+        {
+          "username": "Dayol",
+          "clientID": "hEdhhSSu",
+          "clanTag": null
+        },
+        {
+          "username": "GO Empire",
+          "clientID": "EWTmTwkp",
+          "clanTag": null
+        },
+        {
+          "username": "Oliondort",
+          "clientID": "Cptz1Zt8",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 789,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T02:52:11.599Z",
+      "url": "https://openfront.io/game/tWm2DSfn"
     }
   ],
   "team_custom": [
