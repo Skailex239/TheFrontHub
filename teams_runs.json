@@ -32717,6 +32717,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T10:24:13.279Z",
       "url": "https://openfront.io/game/YgCFxtds"
+    },
+    {
+      "id": "EYGbDcjr",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "MJBIR",
+          "clientID": "qoZzFYWK",
+          "clanTag": null
+        },
+        {
+          "username": "RysingTV",
+          "clientID": "Xes1Jip6",
+          "clanTag": "RYTV"
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 705,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T10:55:06.752Z",
+      "url": "https://openfront.io/game/EYGbDcjr"
     }
   ],
   "trios": [
@@ -66721,6 +66746,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T10:56:01.780Z",
       "url": "https://openfront.io/game/caWiUg5P"
+    },
+    {
+      "id": "m9TkfQZJ",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "URUGUAY",
+          "clientID": "LovEbz3C",
+          "clanTag": "AKE"
+        },
+        {
+          "username": "Te Rae o Papamoa",
+          "clientID": "GN8cjxUm",
+          "clanTag": "AKE"
+        },
+        {
+          "username": "Argentina",
+          "clientID": "58QX7EH3",
+          "clanTag": "AKE"
+        }
+      ],
+      "map": "Amazon River",
+      "duration_s": 1152,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T10:47:18.678Z",
+      "url": "https://openfront.io/game/m9TkfQZJ"
     }
   ],
   "quads": [
