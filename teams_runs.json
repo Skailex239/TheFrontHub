@@ -34167,6 +34167,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:18:19.973Z",
       "url": "https://openfront.io/game/XoJBzcB2"
+    },
+    {
+      "id": "EQFjZcbg",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kaiser Franz",
+          "clientID": "633fZLYL",
+          "clanTag": "RVL"
+        },
+        {
+          "username": "AnonVelvet4",
+          "clientID": "ByAYLFvc",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1561,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:08:14.461Z",
+      "url": "https://openfront.io/game/EQFjZcbg"
+    },
+    {
+      "id": "hpd29tdF",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Soulzz",
+          "clientID": "qFsQEcUo",
+          "clanTag": null
+        },
+        {
+          "username": "Vlados_ina",
+          "clientID": "tQSXe5Bd",
+          "clanTag": "PS"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:18:54.529Z",
+      "url": "https://openfront.io/game/hpd29tdF"
     }
   ],
   "trios": [
@@ -68951,6 +69001,66 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T14:11:30.813Z",
       "url": "https://openfront.io/game/MAogvCxY"
+    },
+    {
+      "id": "FwnEVa7K",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "SpaceUs",
+          "clientID": "WrpYhqYz",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "ASH",
+          "clientID": "47NxoYDV",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Kakiru",
+          "clientID": "b5r2HeCm",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 452,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T14:27:54.413Z",
+      "url": "https://openfront.io/game/FwnEVa7K"
+    },
+    {
+      "id": "4oAe2G1c",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Zone 2",
+          "clientID": "doENTPcE",
+          "clanTag": "MUK"
+        },
+        {
+          "username": "Zone 1",
+          "clientID": "G8MVaQNz",
+          "clanTag": "MUK"
+        },
+        {
+          "username": "looloo",
+          "clientID": "2oaB3tUq",
+          "clanTag": "MUK"
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 930,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T14:19:22.564Z",
+      "url": "https://openfront.io/game/4oAe2G1c"
     }
   ],
   "quads": [
@@ -136955,6 +137065,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T14:17:46.421Z",
       "url": "https://openfront.io/game/zffiNdkx"
+    },
+    {
+      "id": "RyuunBS9",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon089",
+          "clientID": "bhVLrwPu",
+          "clanTag": null
+        },
+        {
+          "username": "lekvjs",
+          "clientID": "zsW6168d",
+          "clanTag": null
+        },
+        {
+          "username": "Shafticator",
+          "clientID": "pmNf2Vdd",
+          "clanTag": null
+        },
+        {
+          "username": "Colors too similar so bad",
+          "clientID": "op4nYG8G",
+          "clanTag": null
+        },
+        {
+          "username": "Gigi",
+          "clientID": "RE23ay54",
+          "clanTag": null
+        },
+        {
+          "username": "_1_",
+          "clientID": "Jw2gWvsb",
+          "clanTag": null
+        },
+        {
+          "username": "Bbbbbbbbb",
+          "clientID": "KJqdtAab",
+          "clanTag": null
+        }
+      ],
+      "map": "Mississippi River",
+      "duration_s": 769,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T14:22:30.387Z",
+      "url": "https://openfront.io/game/RyuunBS9"
     }
   ],
   "hvn": [
