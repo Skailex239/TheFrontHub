@@ -36667,6 +36667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T20:54:42.666Z",
       "url": "https://openfront.io/game/wzP2YmZE"
+    },
+    {
+      "id": "rL8RRLBP",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "HereForTheTrains",
+          "clientID": "RSX1taSq",
+          "clanTag": "LUGA"
+        },
+        {
+          "username": "Truck kun",
+          "clientID": "8ScEz7TS",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 755,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:11:31.910Z",
+      "url": "https://openfront.io/game/rL8RRLBP"
     }
   ],
   "trios": [
@@ -177857,6 +177882,81 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T21:00:52.248Z",
       "url": "https://openfront.io/game/tZymwAT1"
+    },
+    {
+      "id": "ASSVht3B",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Dont build dumb rails",
+          "clientID": "b4LCqevx",
+          "clanTag": null
+        },
+        {
+          "username": "AnonNebula3",
+          "clientID": "NCaMvDvz",
+          "clanTag": null
+        },
+        {
+          "username": "Asmodai",
+          "clientID": "J3rHRQYQ",
+          "clanTag": null
+        },
+        {
+          "username": "azisai",
+          "clientID": "L3w1p6XW",
+          "clanTag": null
+        },
+        {
+          "username": "Mordimer",
+          "clientID": "8dEw3vqr",
+          "clanTag": null
+        },
+        {
+          "username": "Trollet Paper",
+          "clientID": "PpSDmSrY",
+          "clanTag": null
+        },
+        {
+          "username": "Tegridy",
+          "clientID": "Ft695R1G",
+          "clanTag": null
+        },
+        {
+          "username": "Loderic",
+          "clientID": "Z19u7Hg6",
+          "clanTag": null
+        },
+        {
+          "username": "Rated",
+          "clientID": "mBz6iHw8",
+          "clanTag": null
+        },
+        {
+          "username": "Your Friend",
+          "clientID": "6sZehqpH",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFlame1",
+          "clientID": "ZPUDwTgD",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLighthouse",
+          "clientID": "aPKuWYZB",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 746,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T21:10:43.907Z",
+      "url": "https://openfront.io/game/ASSVht3B"
     }
   ]
 }
