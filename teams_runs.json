@@ -33017,6 +33017,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T11:25:24.723Z",
       "url": "https://openfront.io/game/MjqdTMKT"
+    },
+    {
+      "id": "FcKdLRZt",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "bibigo",
+          "clientID": "a4ZhfQwf",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "AnonPulley6",
+          "clientID": "AY3KLFVv",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 699,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:38:04.916Z",
+      "url": "https://openfront.io/game/FcKdLRZt"
     }
   ],
   "trios": [
@@ -67231,6 +67256,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T11:21:37.486Z",
       "url": "https://openfront.io/game/NhExm1Ng"
+    },
+    {
+      "id": "gqJck5dN",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonPulley6",
+          "clientID": "hX822XPo",
+          "clanTag": null
+        },
+        {
+          "username": "napoli_nils",
+          "clientID": "ESHTW2ZU",
+          "clanTag": null
+        },
+        {
+          "username": "Why",
+          "clientID": "Pv55cxeT",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 790,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T11:36:24.726Z",
+      "url": "https://openfront.io/game/gqJck5dN"
     }
   ],
   "quads": [
@@ -102378,6 +102433,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T11:05:58.983Z",
       "url": "https://openfront.io/game/xom2GdKz"
+    },
+    {
+      "id": "7kkLVaZt",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Aga",
+          "clientID": "gqTEoR6k",
+          "clanTag": "TR"
+        },
+        {
+          "username": "Bukavak",
+          "clientID": "RJnXe2o9",
+          "clanTag": null
+        },
+        {
+          "username": "AnonComet8",
+          "clientID": "PCbSzRs8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage4",
+          "clientID": "zcRDEkbD",
+          "clanTag": null
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 616,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 79,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T11:39:19.922Z",
+      "url": "https://openfront.io/game/7kkLVaZt"
     }
   ],
   "team_custom": [
@@ -132745,6 +132835,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T11:29:34.688Z",
       "url": "https://openfront.io/game/UsWVTnGs"
+    },
+    {
+      "id": "zX7UXt7g",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Tulipe",
+          "clientID": "5pGDiVJZ",
+          "clanTag": "VAL"
+        },
+        {
+          "username": "i revenge every attack",
+          "clientID": "eCdGz37n",
+          "clanTag": null
+        },
+        {
+          "username": "JardaSz",
+          "clientID": "QHvUDfb3",
+          "clanTag": null
+        },
+        {
+          "username": "Jahanna",
+          "clientID": "xNRxCzGx",
+          "clanTag": null
+        },
+        {
+          "username": "Anon999",
+          "clientID": "Vp7S3GHj",
+          "clanTag": "999"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 582,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T11:40:02.255Z",
+      "url": "https://openfront.io/game/zX7UXt7g"
     }
   ],
   "hvn": [
