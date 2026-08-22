@@ -62946,6 +62946,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T03:17:47.891Z",
       "url": "https://openfront.io/game/C6gXAHo8"
+    },
+    {
+      "id": "4gTsZjV4",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon909",
+          "clientID": "hjdwbr59",
+          "clanTag": null
+        },
+        {
+          "username": "Someone",
+          "clientID": "R58yznyy",
+          "clanTag": "CHINA"
+        },
+        {
+          "username": "CCC",
+          "clientID": "uSyKFnFQ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 715,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T03:28:37.631Z",
+      "url": "https://openfront.io/game/4gTsZjV4"
     }
   ],
   "quads": [
@@ -96168,6 +96198,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T03:06:33.799Z",
       "url": "https://openfront.io/game/QSHwDxk1"
+    },
+    {
+      "id": "XiqYNvCt",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Goose",
+          "clientID": "itk7JFz4",
+          "clanTag": "NU"
+        },
+        {
+          "username": "DAR",
+          "clientID": "nouh3NeR",
+          "clanTag": "NU"
+        },
+        {
+          "username": "DieNasty",
+          "clientID": "cGJuC8kA",
+          "clanTag": "NU"
+        },
+        {
+          "username": "K1M J0NG B00M",
+          "clientID": "Morv6ieN",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1280,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T03:18:58.975Z",
+      "url": "https://openfront.io/game/XiqYNvCt"
     }
   ],
   "team_custom": [
