@@ -33392,6 +33392,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T12:38:52.533Z",
       "url": "https://openfront.io/game/6icQ9Pq8"
+    },
+    {
+      "id": "a4JeGCgB",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "shinplest",
+          "clientID": "Coh6JU9j",
+          "clanTag": "BIG"
+        },
+        {
+          "username": "ayowtf",
+          "clientID": "2mFam98c",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1049,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T12:42:51.759Z",
+      "url": "https://openfront.io/game/a4JeGCgB"
     }
   ],
   "trios": [
