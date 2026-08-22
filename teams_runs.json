@@ -37092,6 +37092,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:53:05.331Z",
       "url": "https://openfront.io/game/Kg6HeweZ"
+    },
+    {
+      "id": "r1nEYCNg",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "CCCPSS",
+          "clientID": "5x5hQhcw",
+          "clanTag": null
+        },
+        {
+          "username": "Ork Deluge",
+          "clientID": "VrLb9byP",
+          "clanTag": "HETO"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 570,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:03:38.332Z",
+      "url": "https://openfront.io/game/r1nEYCNg"
     }
   ],
   "trios": [
@@ -74396,6 +74421,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T21:55:49.601Z",
       "url": "https://openfront.io/game/dDRdeCVc"
+    },
+    {
+      "id": "qEJd5TWX",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "itsCreeenoz",
+          "clientID": "yex1u56d",
+          "clanTag": "AUT"
+        },
+        {
+          "username": "Boy",
+          "clientID": "xUoTLiXX",
+          "clanTag": null
+        },
+        {
+          "username": "Pra",
+          "clientID": "UB63oSeG",
+          "clanTag": null
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 692,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T22:01:38.654Z",
+      "url": "https://openfront.io/game/qEJd5TWX"
     }
   ],
   "quads": [
@@ -112343,6 +112398,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T21:50:56.138Z",
       "url": "https://openfront.io/game/TX2Bdovs"
+    },
+    {
+      "id": "6ajgEQJC",
+      "mode": "quads",
+      "team": "Team 8",
+      "players": [
+        {
+          "username": "MAKEDONAS THE DADDY",
+          "clientID": "PWfp15Dw",
+          "clanTag": null
+        },
+        {
+          "username": "Imperio austrohungaro",
+          "clientID": "PrFAqjDg",
+          "clanTag": "IAU"
+        },
+        {
+          "username": "godot",
+          "clientID": "QbVqMRkE",
+          "clanTag": null
+        },
+        {
+          "username": "Yalocin",
+          "clientID": "hTiazPMf",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1408,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T21:49:49.549Z",
+      "url": "https://openfront.io/game/6ajgEQJC"
     }
   ],
   "team_custom": [
@@ -179537,6 +179627,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T21:58:30.335Z",
       "url": "https://openfront.io/game/KPxraDDk"
+    },
+    {
+      "id": "pqWGDgii",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "The Texas Empire",
+          "clientID": "diaLmn6b",
+          "clanTag": "BALD"
+        },
+        {
+          "username": "JardaSz",
+          "clientID": "BfoyWQ6Q",
+          "clanTag": null
+        },
+        {
+          "username": "FAUST",
+          "clientID": "GbLqcjH8",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonTornado1",
+          "clientID": "KPeELNtj",
+          "clanTag": null
+        },
+        {
+          "username": "psychedelic",
+          "clientID": "jJ7BUkBj",
+          "clanTag": "UN"
+        },
+        {
+          "username": "cherry",
+          "clientID": "qX6DdpF3",
+          "clanTag": null
+        },
+        {
+          "username": "wonderful987",
+          "clientID": "cw9t1RDD",
+          "clanTag": null
+        },
+        {
+          "username": "teamgames",
+          "clientID": "WTsQgqSj",
+          "clanTag": null
+        },
+        {
+          "username": "Brutus",
+          "clientID": "UYaUpqcR",
+          "clanTag": null
+        },
+        {
+          "username": "Sang",
+          "clientID": "LYm81mau",
+          "clanTag": null
+        },
+        {
+          "username": "Abes Marina and Dock Supply",
+          "clientID": "BjdQK4TD",
+          "clanTag": null
+        },
+        {
+          "username": "Karl Donuts",
+          "clientID": "VXbqnCan",
+          "clanTag": null
+        },
+        {
+          "username": "Soulretrieval",
+          "clientID": "R3hFC5Q1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon503",
+          "clientID": "e91UnEeL",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 674,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T22:02:06.194Z",
+      "url": "https://openfront.io/game/pqWGDgii"
     }
   ]
 }
