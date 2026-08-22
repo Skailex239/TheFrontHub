@@ -34542,6 +34542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:56:24.714Z",
       "url": "https://openfront.io/game/NH3RbT11"
+    },
+    {
+      "id": "xwyAhDwo",
+      "mode": "duos",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "The Great Confederation",
+          "clientID": "rbS1bQas",
+          "clanTag": null
+        },
+        {
+          "username": "037",
+          "clientID": "D3Ppcx3s",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1220,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T14:50:37.175Z",
+      "url": "https://openfront.io/game/xwyAhDwo"
     }
   ],
   "trios": [
@@ -69476,6 +69501,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T14:52:18.323Z",
       "url": "https://openfront.io/game/ueqVvckc"
+    },
+    {
+      "id": "R3LcjMn2",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonDusk5",
+          "clientID": "xm81NjJM",
+          "clanTag": null
+        },
+        {
+          "username": "ibratv",
+          "clientID": "D6EceiAJ",
+          "clanTag": null
+        },
+        {
+          "username": "KitAram",
+          "clientID": "XfxSkK1Q",
+          "clanTag": "FOID"
+        }
+      ],
+      "map": "North America",
+      "duration_s": 623,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T15:00:26.098Z",
+      "url": "https://openfront.io/game/R3LcjMn2"
     }
   ],
   "quads": [
