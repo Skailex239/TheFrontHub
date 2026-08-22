@@ -32242,6 +32242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:36:56.909Z",
       "url": "https://openfront.io/game/wcR9HBZJ"
+    },
+    {
+      "id": "5woUCJFP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "That_Guy",
+          "clientID": "yWZu4v9z",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon442",
+          "clientID": "Ve7ygNce",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1881,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:21:23.969Z",
+      "url": "https://openfront.io/game/5woUCJFP"
     }
   ],
   "trios": [
@@ -129745,6 +129770,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T09:19:38.868Z",
       "url": "https://openfront.io/game/GqfLkjrb"
+    },
+    {
+      "id": "Ca9VuRqA",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Prebzi",
+          "clientID": "6qrKTvrr",
+          "clanTag": null
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "co1AUJyp",
+          "clanTag": null
+        },
+        {
+          "username": "RUB",
+          "clientID": "njTipko7",
+          "clanTag": null
+        },
+        {
+          "username": "trading",
+          "clientID": "cYNCzJz2",
+          "clanTag": null
+        },
+        {
+          "username": "Tuth",
+          "clientID": "6pR7cDd6",
+          "clanTag": null
+        },
+        {
+          "username": "Anon076",
+          "clientID": "NU3jjaKj",
+          "clanTag": null
+        },
+        {
+          "username": "C E X",
+          "clientID": "9Aqn5LFM",
+          "clanTag": "KR"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 1046,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T09:36:03.851Z",
+      "url": "https://openfront.io/game/Ca9VuRqA"
     }
   ],
   "hvn": [
