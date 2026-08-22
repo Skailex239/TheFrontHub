@@ -36267,6 +36267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T19:48:48.447Z",
       "url": "https://openfront.io/game/pqnTpqFe"
+    },
+    {
+      "id": "UnXsnpXE",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "kronos",
+          "clientID": "hYCKYNV1",
+          "clanTag": null
+        },
+        {
+          "username": "flowberry",
+          "clientID": "EedPEhEc",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 855,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T19:48:20.409Z",
+      "url": "https://openfront.io/game/UnXsnpXE"
     }
   ],
   "trios": [
@@ -73031,6 +73056,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T19:36:46.324Z",
       "url": "https://openfront.io/game/73ySjBae"
+    },
+    {
+      "id": "Lny2RNpy",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon744",
+          "clientID": "MzpVwhm7",
+          "clanTag": null
+        },
+        {
+          "username": "brongus",
+          "clientID": "ZuqGiKch",
+          "clanTag": null
+        },
+        {
+          "username": "Plan R",
+          "clientID": "r3PyWWdC",
+          "clanTag": null
+        }
+      ],
+      "map": "Northwest Passage",
+      "duration_s": 656,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T19:51:56.744Z",
+      "url": "https://openfront.io/game/Lny2RNpy"
     }
   ],
   "quads": [
