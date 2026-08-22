@@ -74451,6 +74451,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T22:01:38.654Z",
       "url": "https://openfront.io/game/qEJd5TWX"
+    },
+    {
+      "id": "wiGmYZ7U",
+      "mode": "trios",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Vitello Tonnato",
+          "clientID": "KJAwfCFi",
+          "clanTag": "DEES"
+        },
+        {
+          "username": "Ano Lagone",
+          "clientID": "DJp4Kmt4",
+          "clanTag": "DEES"
+        },
+        {
+          "username": "AnonThunder5",
+          "clientID": "o22R1f1o",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1081,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T21:57:51.280Z",
+      "url": "https://openfront.io/game/wiGmYZ7U"
     }
   ],
   "quads": [
