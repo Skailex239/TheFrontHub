@@ -31542,6 +31542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T07:09:07.508Z",
       "url": "https://openfront.io/game/mHe8aaNv"
+    },
+    {
+      "id": "QuWHv3uc",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "LOSRAYT",
+          "clientID": "hMkr741w",
+          "clanTag": "JORK"
+        },
+        {
+          "username": "Serrated Tussock",
+          "clientID": "d4RTbpvZ",
+          "clanTag": "JORK"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2052,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T06:51:32.064Z",
+      "url": "https://openfront.io/game/QuWHv3uc"
     }
   ],
   "trios": [
@@ -98728,6 +98753,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T06:47:57.986Z",
       "url": "https://openfront.io/game/AfFQ5r1A"
+    },
+    {
+      "id": "H6D5D69m",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Weco",
+          "clientID": "mbxCoBox",
+          "clanTag": null
+        },
+        {
+          "username": "Abhiroop",
+          "clientID": "DH7AHtLo",
+          "clanTag": "MR"
+        },
+        {
+          "username": "samudragupta",
+          "clientID": "3RDrJYa3",
+          "clanTag": "MR"
+        },
+        {
+          "username": "Ingalius",
+          "clientID": "1Ut9gXYA",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 729,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 71,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T07:14:23.314Z",
+      "url": "https://openfront.io/game/H6D5D69m"
     }
   ],
   "team_custom": [
@@ -126655,6 +126715,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T06:44:54.806Z",
       "url": "https://openfront.io/game/rb7RuBQi"
+    },
+    {
+      "id": "RYd6V6Ti",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "The lost ten tribes",
+          "clientID": "dTDiji6D",
+          "clanTag": null
+        },
+        {
+          "username": "chunjeebanran",
+          "clientID": "poq5NtHE",
+          "clanTag": null
+        },
+        {
+          "username": "adoniia",
+          "clientID": "LmksyqTw",
+          "clanTag": "CON"
+        },
+        {
+          "username": "abcdefg",
+          "clientID": "UmPmEqnG",
+          "clanTag": null
+        },
+        {
+          "username": "Chaussette",
+          "clientID": "Ve3ZBvRb",
+          "clanTag": "CON"
+        },
+        {
+          "username": "Balochistan",
+          "clientID": "uFLcp9jb",
+          "clanTag": null
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 597,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T07:15:47.399Z",
+      "url": "https://openfront.io/game/RYd6V6Ti"
     }
   ],
   "hvn": [
@@ -149782,6 +149887,61 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T07:06:26.859Z",
       "url": "https://openfront.io/game/2Sj5bZex"
+    },
+    {
+      "id": "sh9Z67qx",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Pakistan",
+          "clientID": "2xzNPztJ",
+          "clanTag": null
+        },
+        {
+          "username": "GrumpyRaccoon.fFpp",
+          "clientID": "rQuqJe3L",
+          "clanTag": null
+        },
+        {
+          "username": "NoFarts",
+          "clientID": "fV17BfV2",
+          "clanTag": null
+        },
+        {
+          "username": "Messi",
+          "clientID": "5WTQpgp7",
+          "clanTag": "UN"
+        },
+        {
+          "username": "leo0908p",
+          "clientID": "jd1jNgso",
+          "clanTag": null
+        },
+        {
+          "username": "zazintime",
+          "clientID": "gG1Khb3s",
+          "clanTag": null
+        },
+        {
+          "username": "kashipan",
+          "clientID": "xZy4xDeK",
+          "clanTag": null
+        },
+        {
+          "username": "ExportChampagne",
+          "clientID": "V7PSiotw",
+          "clanTag": "GUI"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 633,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 10,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T07:15:04.858Z",
+      "url": "https://openfront.io/game/sh9Z67qx"
     }
   ]
 }
