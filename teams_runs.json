@@ -30867,6 +30867,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T04:24:41.860Z",
       "url": "https://openfront.io/game/1wpLy1Gq"
+    },
+    {
+      "id": "hCBosmg1",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Xeo",
+          "clientID": "17a7ZcRy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPumpkin4",
+          "clientID": "7cLbPaWW",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 747,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T04:37:10.611Z",
+      "url": "https://openfront.io/game/hCBosmg1"
     }
   ],
   "trios": [
@@ -63551,6 +63576,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T04:30:17.999Z",
       "url": "https://openfront.io/game/2eufbe3i"
+    },
+    {
+      "id": "iAEF27UH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Peace And Love",
+          "clientID": "5AGTpJ3d",
+          "clanTag": null
+        },
+        {
+          "username": "fuh",
+          "clientID": "A1xiWT6S",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Nut",
+          "clientID": "agAQ4D7q",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1248,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T04:28:38.837Z",
+      "url": "https://openfront.io/game/iAEF27UH"
     }
   ],
   "quads": [
