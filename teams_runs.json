@@ -95233,6 +95233,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T01:34:29.733Z",
       "url": "https://openfront.io/game/VmgtK3s9"
+    },
+    {
+      "id": "f4VZfjYB",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cycodude",
+          "clientID": "DPPcXqqB",
+          "clanTag": null
+        },
+        {
+          "username": "KILLA",
+          "clientID": "M79KMgty",
+          "clanTag": "JEET"
+        },
+        {
+          "username": "PrettyIndianFlower",
+          "clientID": "1ZDmBi6V",
+          "clanTag": "JEET"
+        },
+        {
+          "username": "AnonTulip9",
+          "clientID": "8U1ETwd3",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1516,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T01:40:27.114Z",
+      "url": "https://openfront.io/game/f4VZfjYB"
     }
   ],
   "team_custom": [
@@ -121295,6 +121330,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T01:52:49.825Z",
       "url": "https://openfront.io/game/RtjbFK4K"
+    },
+    {
+      "id": "ppuF6tti",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "ImJustTryinToTrade",
+          "clientID": "mK7otQT1",
+          "clanTag": null
+        },
+        {
+          "username": "Trader Sam",
+          "clientID": "ZsFmCCnZ",
+          "clanTag": null
+        },
+        {
+          "username": "whispeR",
+          "clientID": "2eo5uTJv",
+          "clanTag": null
+        },
+        {
+          "username": "Anon Anon Anon Anon Anon",
+          "clientID": "DfiUyUb1",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Pls Help",
+          "clientID": "2ewm4exZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonIvory5",
+          "clientID": "uc72CMJo",
+          "clanTag": null
+        },
+        {
+          "username": "Boshuria",
+          "clientID": "wLueQqjW",
+          "clanTag": null
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 790,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T01:51:37.868Z",
+      "url": "https://openfront.io/game/ppuF6tti"
     }
   ],
   "hvn": [
