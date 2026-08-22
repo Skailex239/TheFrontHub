@@ -31917,6 +31917,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T08:37:59.004Z",
       "url": "https://openfront.io/game/8UkSfm4J"
+    },
+    {
+      "id": "Epv26nLa",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": ".                        .",
+          "clientID": "PKXJAr5B",
+          "clanTag": null
+        },
+        {
+          "username": "LoudFish.Fv3c",
+          "clientID": "M3VuPsmj",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 387,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T08:58:40.578Z",
+      "url": "https://openfront.io/game/Epv26nLa"
     }
   ],
   "trios": [
@@ -128745,6 +128770,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T08:42:46.295Z",
       "url": "https://openfront.io/game/5jmHL9aR"
+    },
+    {
+      "id": "ssr675W5",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Vienny ahh dih",
+          "clientID": "2F85GXyi",
+          "clanTag": null
+        },
+        {
+          "username": "Ork Deluge",
+          "clientID": "LQyEwddC",
+          "clanTag": "HETO"
+        },
+        {
+          "username": "AnonPrairie9",
+          "clientID": "gaRdDNzD",
+          "clanTag": null
+        },
+        {
+          "username": "Jonas",
+          "clientID": "nC6ozpiN",
+          "clanTag": null
+        },
+        {
+          "username": "Javad Bahonar",
+          "clientID": "2poX9247",
+          "clanTag": null
+        },
+        {
+          "username": "8i8",
+          "clientID": "7Z7JYKgy",
+          "clanTag": "ARTT"
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 1201,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T08:45:37.455Z",
+      "url": "https://openfront.io/game/ssr675W5"
     }
   ],
   "hvn": [
