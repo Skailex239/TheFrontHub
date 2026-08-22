@@ -36292,6 +36292,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T19:48:20.409Z",
       "url": "https://openfront.io/game/UnXsnpXE"
+    },
+    {
+      "id": "xX6NGbx4",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Bulgaria",
+          "clientID": "gAjaLah2",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Luxray",
+          "clientID": "akDxsw8N",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 2064,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T19:34:46.396Z",
+      "url": "https://openfront.io/game/xX6NGbx4"
     }
   ],
   "trios": [
@@ -110468,6 +110493,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T20:01:20.107Z",
       "url": "https://openfront.io/game/cLdDKjrP"
+    },
+    {
+      "id": "s61FvjxF",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "sadam",
+          "clientID": "qgtHi1N3",
+          "clanTag": "UN"
+        },
+        {
+          "username": "wawa",
+          "clientID": "m3KfmcPR",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Rawr",
+          "clientID": "ndqmqNMm",
+          "clanTag": "UN"
+        },
+        {
+          "username": "nabu",
+          "clientID": "1E7L1qiM",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 706,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T19:57:26.786Z",
+      "url": "https://openfront.io/game/s61FvjxF"
     }
   ],
   "team_custom": [
