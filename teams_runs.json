@@ -65121,6 +65121,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T07:45:49.568Z",
       "url": "https://openfront.io/game/ub4xP1Nb"
+    },
+    {
+      "id": "eNPUcUCS",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "ibumopa jp",
+          "clientID": "cEbzEBPW",
+          "clanTag": null
+        },
+        {
+          "username": "Anon957",
+          "clientID": "XtwksD6n",
+          "clanTag": null
+        },
+        {
+          "username": "AnonDusk9",
+          "clientID": "J5qVnigp",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 786,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T07:57:12.937Z",
+      "url": "https://openfront.io/game/eNPUcUCS"
     }
   ],
   "quads": [
@@ -127525,6 +127555,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T07:51:32.411Z",
       "url": "https://openfront.io/game/ZhsJTCXc"
+    },
+    {
+      "id": "F1ERns5z",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonBlizzard8",
+          "clientID": "W43DbctS",
+          "clanTag": null
+        },
+        {
+          "username": "Hi DUD",
+          "clientID": "KkVwEAAL",
+          "clanTag": null
+        },
+        {
+          "username": "Donguza",
+          "clientID": "iL6KzWMV",
+          "clanTag": "BACON"
+        },
+        {
+          "username": "DDuDDa",
+          "clientID": "JMmiQwvH",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRelic5",
+          "clientID": "bQc75e2P",
+          "clanTag": null
+        },
+        {
+          "username": "Omnissiah",
+          "clientID": "THjZ6q9y",
+          "clanTag": null
+        },
+        {
+          "username": "KING",
+          "clientID": "AfBXT8hu",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1078,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T07:54:08.665Z",
+      "url": "https://openfront.io/game/F1ERns5z"
     }
   ],
   "hvn": [
