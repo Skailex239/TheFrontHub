@@ -31817,6 +31817,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T08:17:08.383Z",
       "url": "https://openfront.io/game/zJ7ruted"
+    },
+    {
+      "id": "wxUYaXZ2",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ork Deluge",
+          "clientID": "4bnehNyp",
+          "clanTag": "HETO"
+        },
+        {
+          "username": "dae o jook",
+          "clientID": "XoEKYun5",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T08:06:50.511Z",
+      "url": "https://openfront.io/game/wxUYaXZ2"
     }
   ],
   "trios": [
@@ -65311,6 +65336,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T08:14:02.163Z",
       "url": "https://openfront.io/game/AEbTACVz"
+    },
+    {
+      "id": "pJhMqEhJ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonCastle6",
+          "clientID": "7yu9s7iB",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToucan3",
+          "clientID": "1faW5oR5",
+          "clanTag": null
+        },
+        {
+          "username": "trajano",
+          "clientID": "h4AcjKtS",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 933,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T08:21:16.629Z",
+      "url": "https://openfront.io/game/pJhMqEhJ"
     }
   ],
   "quads": [
