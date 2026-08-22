@@ -65531,6 +65531,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T08:24:13.808Z",
       "url": "https://openfront.io/game/YiuHkMRc"
+    },
+    {
+      "id": "csyK5QXi",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonPlow2",
+          "clientID": "KJm8xRJ2",
+          "clanTag": null
+        },
+        {
+          "username": "3stars",
+          "clientID": "sGmdnLfr",
+          "clanTag": "STARS"
+        },
+        {
+          "username": "SendTroopsToFront",
+          "clientID": "Gz7aMK8E",
+          "clanTag": "EST"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 563,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T08:54:11.158Z",
+      "url": "https://openfront.io/game/csyK5QXi"
     }
   ],
   "quads": [
@@ -99943,6 +99973,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T08:39:57.129Z",
       "url": "https://openfront.io/game/3rkQwzr4"
+    },
+    {
+      "id": "LHiCtGP5",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Aas",
+          "clientID": "Ewtz77YN",
+          "clanTag": null
+        },
+        {
+          "username": "MMT_1905",
+          "clientID": "qynJJ4Xw",
+          "clanTag": null
+        },
+        {
+          "username": "Podgyman",
+          "clientID": "V8f3E7Ep",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRainbow",
+          "clientID": "n6WZp9Lg",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 552,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T08:53:41.066Z",
+      "url": "https://openfront.io/game/LHiCtGP5"
     }
   ],
   "team_custom": [
