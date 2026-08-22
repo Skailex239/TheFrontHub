@@ -31767,6 +31767,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T08:05:19.415Z",
       "url": "https://openfront.io/game/yoRrTULn"
+    },
+    {
+      "id": "gHXEqxQN",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "anonon",
+          "clientID": "i9gF3pTz",
+          "clanTag": "AST"
+        },
+        {
+          "username": "EIEI",
+          "clientID": "Z1Hdv66b",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 690,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T08:07:56.583Z",
+      "url": "https://openfront.io/game/gHXEqxQN"
     }
   ],
   "trios": [
@@ -65201,6 +65226,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T07:57:12.937Z",
       "url": "https://openfront.io/game/eNPUcUCS"
+    },
+    {
+      "id": "Mxr3b9eV",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Morgen",
+          "clientID": "zFP6X2Mf",
+          "clanTag": null
+        },
+        {
+          "username": "LDK",
+          "clientID": "RrvhpFwu",
+          "clanTag": null
+        },
+        {
+          "username": "AAA",
+          "clientID": "EJsse5Xu",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1728,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T07:50:08.329Z",
+      "url": "https://openfront.io/game/Mxr3b9eV"
     }
   ],
   "quads": [
@@ -127725,6 +127780,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T07:54:08.665Z",
       "url": "https://openfront.io/game/F1ERns5z"
+    },
+    {
+      "id": "aULt7LYV",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": ". .",
+          "clientID": "1MHKttRy",
+          "clanTag": null
+        },
+        {
+          "username": "worschtershire",
+          "clientID": "shd1tTDD",
+          "clanTag": null
+        },
+        {
+          "username": "Lexico",
+          "clientID": "GLNkuWhk",
+          "clanTag": null
+        },
+        {
+          "username": "Kingdom of Persia",
+          "clientID": "4EKecidZ",
+          "clanTag": "IRN"
+        },
+        {
+          "username": "AnonSnail",
+          "clientID": "rTzVeiAP",
+          "clanTag": null
+        },
+        {
+          "username": "mehdi",
+          "clientID": "aKB1cNHU",
+          "clanTag": "MANGA"
+        },
+        {
+          "username": "patate",
+          "clientID": "yxMYfCyd",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 1436,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T07:55:53.835Z",
+      "url": "https://openfront.io/game/aULt7LYV"
     }
   ],
   "hvn": [
