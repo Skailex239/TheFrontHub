@@ -35667,6 +35667,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T17:37:00.932Z",
       "url": "https://openfront.io/game/p4mFvGnL"
+    },
+    {
+      "id": "gXQSYdsi",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "au ramxela maq ra",
+          "clientID": "fUCueJN2",
+          "clanTag": "DIDI"
+        },
+        {
+          "username": "Nokia",
+          "clientID": "Nw7rxizs",
+          "clanTag": "DIDI"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 936,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T17:44:19.036Z",
+      "url": "https://openfront.io/game/gXQSYdsi"
     }
   ],
   "trios": [
@@ -71621,6 +71646,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T17:33:54.730Z",
       "url": "https://openfront.io/game/mkztHbQv"
+    },
+    {
+      "id": "BKvRu3AG",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BECH",
+          "clientID": "MYbZT925",
+          "clanTag": null
+        },
+        {
+          "username": "Jim",
+          "clientID": "vdvXDdtF",
+          "clanTag": null
+        },
+        {
+          "username": "Mr Wiggles",
+          "clientID": "e4MZUTNp",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 655,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:48:38.883Z",
+      "url": "https://openfront.io/game/BKvRu3AG"
     }
   ],
   "quads": [
@@ -170482,6 +170537,101 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T17:35:06.807Z",
       "url": "https://openfront.io/game/Bjj3JCBc"
+    },
+    {
+      "id": "byJncXiX",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "LVS",
+          "clientID": "XpX4Z4ND",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Skeels",
+          "clientID": "5ezTexDL",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonBronze",
+          "clientID": "wB4Dd2PA",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPlow6",
+          "clientID": "VtcivvCu",
+          "clanTag": null
+        },
+        {
+          "username": "ODD",
+          "clientID": "ydZ1DGiG",
+          "clanTag": null
+        },
+        {
+          "username": "imran",
+          "clientID": "KHSzDE7h",
+          "clanTag": null
+        },
+        {
+          "username": "Sublime",
+          "clientID": "vsKJiazc",
+          "clanTag": null
+        },
+        {
+          "username": "Wappie",
+          "clientID": "pprE3bjq",
+          "clanTag": null
+        },
+        {
+          "username": "Blois",
+          "clientID": "ekKcbGMu",
+          "clanTag": null
+        },
+        {
+          "username": "zaku123",
+          "clientID": "RfXLTh1c",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "6C912QVt",
+          "clanTag": null
+        },
+        {
+          "username": "NOPI",
+          "clientID": "X48BnUtH",
+          "clanTag": null
+        },
+        {
+          "username": "roro",
+          "clientID": "Y1Rp11Wj",
+          "clanTag": "BG"
+        },
+        {
+          "username": "im bad",
+          "clientID": "1EDJnZPF",
+          "clanTag": null
+        },
+        {
+          "username": "1.87M",
+          "clientID": "JPcnwMs4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCrimson8",
+          "clientID": "7cPro86x",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1163,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T17:40:44.205Z",
+      "url": "https://openfront.io/game/byJncXiX"
     }
   ]
 }
