@@ -35067,6 +35067,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T16:12:45.499Z",
       "url": "https://openfront.io/game/RK9489R3"
+    },
+    {
+      "id": "W4w8rMdD",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Automaton Legion",
+          "clientID": "a3UPyHoN",
+          "clanTag": "BOT"
+        },
+        {
+          "username": "Tierra del fluego",
+          "clientID": "a2AZ9Mfe",
+          "clanTag": "BOT"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 998,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T16:07:18.125Z",
+      "url": "https://openfront.io/game/W4w8rMdD"
+    },
+    {
+      "id": "95guoeQE",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "alexTheGreat",
+          "clientID": "9vdeVxZq",
+          "clanTag": null
+        },
+        {
+          "username": "Cute and Funny",
+          "clientID": "tp2rHpcQ",
+          "clanTag": "LXLI"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T16:08:39.773Z",
+      "url": "https://openfront.io/game/95guoeQE"
     }
   ],
   "trios": [
