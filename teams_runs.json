@@ -35317,6 +35317,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T16:44:01.741Z",
       "url": "https://openfront.io/game/xnCoQ8Ds"
+    },
+    {
+      "id": "tcAW153R",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "danthekitty",
+          "clientID": "UrgYHCwR",
+          "clanTag": "DCREW"
+        },
+        {
+          "username": "_0_Firedan",
+          "clientID": "VDNDG1o5",
+          "clanTag": "DCREW"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1467,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T16:36:26.131Z",
+      "url": "https://openfront.io/game/tcAW153R"
     }
   ],
   "trios": [
@@ -70821,6 +70846,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T16:39:13.802Z",
       "url": "https://openfront.io/game/2NkPXo66"
+    },
+    {
+      "id": "WgU7RENL",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FENERBAHCE",
+          "clientID": "U2555kPr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCitadel6",
+          "clientID": "oDEgD2GN",
+          "clanTag": null
+        },
+        {
+          "username": "cccp",
+          "clientID": "TXtKh1Zd",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 827,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T16:45:00.833Z",
+      "url": "https://openfront.io/game/WgU7RENL"
     }
   ],
   "quads": [
