@@ -31842,6 +31842,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T08:06:50.511Z",
       "url": "https://openfront.io/game/wxUYaXZ2"
+    },
+    {
+      "id": "SMMLLJpt",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon447",
+          "clientID": "1YgVYMN1",
+          "clanTag": "DE"
+        },
+        {
+          "username": "AnonCamel8",
+          "clientID": "dACQPj2E",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1025,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T08:31:44.902Z",
+      "url": "https://openfront.io/game/SMMLLJpt"
     }
   ],
   "trios": [
@@ -65426,6 +65451,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T08:29:17.661Z",
       "url": "https://openfront.io/game/6VtwiDiw"
+    },
+    {
+      "id": "YiuHkMRc",
+      "mode": "trios",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Lud0o_Callisthenics",
+          "clientID": "4AVsdAad",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "gaspard Le Boss",
+          "clientID": "1ABDuAaJ",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Jeb",
+          "clientID": "HTPei1Ek",
+          "clanTag": null
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1427,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T08:24:13.808Z",
+      "url": "https://openfront.io/game/YiuHkMRc"
     }
   ],
   "quads": [
