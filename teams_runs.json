@@ -94228,6 +94228,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T00:20:10.433Z",
       "url": "https://openfront.io/game/H45mHXLz"
+    },
+    {
+      "id": "btJzYbaQ",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "RonRaygun",
+          "clientID": "De5nU5u8",
+          "clanTag": null
+        },
+        {
+          "username": "Ismq",
+          "clientID": "QM36mnRm",
+          "clanTag": "NU"
+        },
+        {
+          "username": "cherry",
+          "clientID": "XLwd8PTT",
+          "clanTag": null
+        },
+        {
+          "username": "SyFyNerd",
+          "clientID": "p3y8ympM",
+          "clanTag": "COTCB"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1295,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T00:18:42.844Z",
+      "url": "https://openfront.io/game/btJzYbaQ"
     }
   ],
   "team_custom": [
@@ -119665,6 +119700,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T00:17:11.240Z",
       "url": "https://openfront.io/game/B9fuMzue"
+    },
+    {
+      "id": "F7YhjBgF",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Twi",
+          "clientID": "t6YPJZ9F",
+          "clanTag": null
+        },
+        {
+          "username": "GRS",
+          "clientID": "payhVdQf",
+          "clanTag": null
+        },
+        {
+          "username": "Squid",
+          "clientID": "Gn5ABXkV",
+          "clanTag": null
+        },
+        {
+          "username": "BAROLBIST",
+          "clientID": "VKqMV5bN",
+          "clanTag": null
+        },
+        {
+          "username": "Jickyleprince",
+          "clientID": "uBwQXfq8",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "Troy",
+          "clientID": "RjbBxffp",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "Succrates",
+          "clientID": "qQDFRPZb",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 933,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T00:24:37.211Z",
+      "url": "https://openfront.io/game/F7YhjBgF"
     }
   ],
   "hvn": [
