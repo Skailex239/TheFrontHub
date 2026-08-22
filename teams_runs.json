@@ -34342,6 +34342,81 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T14:09:50.129Z",
       "url": "https://openfront.io/game/hAz8xGZj"
+    },
+    {
+      "id": "zaGiedRD",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonBicycle",
+          "clientID": "hxBxNySg",
+          "clanTag": null
+        },
+        {
+          "username": "DeGritty",
+          "clientID": "c42uWKLc",
+          "clanTag": "DGG"
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 553,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:41:50.271Z",
+      "url": "https://openfront.io/game/zaGiedRD"
+    },
+    {
+      "id": "ibDV6via",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon498",
+          "clientID": "bpAUAXAD",
+          "clanTag": null
+        },
+        {
+          "username": "uRx",
+          "clientID": "eHUQKs9B",
+          "clanTag": "BEAU"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 574,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:40:39.152Z",
+      "url": "https://openfront.io/game/ibDV6via"
+    },
+    {
+      "id": "EeRp5AJ8",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kakiru",
+          "clientID": "kfF2JxYA",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "SpaceUs",
+          "clientID": "nbndUpgZ",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 847,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:38:21.941Z",
+      "url": "https://openfront.io/game/EeRp5AJ8"
     }
   ],
   "trios": [
