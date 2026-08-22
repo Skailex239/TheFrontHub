@@ -34242,6 +34242,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T14:14:06.028Z",
       "url": "https://openfront.io/game/kXd1XnZf"
+    },
+    {
+      "id": "jzGgMnuB",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "XYZ",
+          "clientID": "6bErP6Kv",
+          "clanTag": null
+        },
+        {
+          "username": "OBEY",
+          "clientID": "WTNqEiX2",
+          "clanTag": "OTAN"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 498,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:30:27.696Z",
+      "url": "https://openfront.io/game/jzGgMnuB"
+    },
+    {
+      "id": "zo6bVnMe",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "CCCP",
+          "clientID": "F5RWzfes",
+          "clanTag": null
+        },
+        {
+          "username": "YOROBO",
+          "clientID": "hm4JWbrF",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 672,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:28:37.994Z",
+      "url": "https://openfront.io/game/zo6bVnMe"
     }
   ],
   "trios": [
