@@ -70121,6 +70121,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T15:38:56.729Z",
       "url": "https://openfront.io/game/REKfSPKC"
+    },
+    {
+      "id": "QVXt5U85",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BadShah",
+          "clientID": "Cgudkd2N",
+          "clanTag": null
+        },
+        {
+          "username": "ColdSword",
+          "clientID": "Qrd4rRb2",
+          "clanTag": "DK"
+        },
+        {
+          "username": "Rat Beats Duk Always",
+          "clientID": "Shtssz7g",
+          "clanTag": "BDN"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1017,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T15:55:54.028Z",
+      "url": "https://openfront.io/game/QVXt5U85"
     }
   ],
   "quads": [
@@ -139545,6 +139575,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T15:53:17.770Z",
       "url": "https://openfront.io/game/gmU2a6tB"
+    },
+    {
+      "id": "rPaeGiSs",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Docterr",
+          "clientID": "EsBB2ooW",
+          "clanTag": "TART"
+        },
+        {
+          "username": "Chungus",
+          "clientID": "57BgjgPW",
+          "clanTag": null
+        },
+        {
+          "username": "Haski",
+          "clientID": "29crGxEg",
+          "clanTag": null
+        },
+        {
+          "username": "Natsirt",
+          "clientID": "4qmE7Uf7",
+          "clanTag": null
+        },
+        {
+          "username": "Termy",
+          "clientID": "DxkfPRSq",
+          "clanTag": "ITA"
+        },
+        {
+          "username": "jarbaby",
+          "clientID": "gkMXtP74",
+          "clanTag": null
+        },
+        {
+          "username": "nekozeeeeeee",
+          "clientID": "8m5dWp9y",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1482,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T15:48:29.343Z",
+      "url": "https://openfront.io/game/rPaeGiSs"
     }
   ],
   "hvn": [
