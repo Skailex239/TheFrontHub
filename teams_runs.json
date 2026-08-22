@@ -64451,6 +64451,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T06:42:54.122Z",
       "url": "https://openfront.io/game/247ZY5uB"
+    },
+    {
+      "id": "8UczJ7Cu",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Hello",
+          "clientID": "8eFhrTs3",
+          "clanTag": null
+        },
+        {
+          "username": "New Britannia",
+          "clientID": "phZ9bsej",
+          "clanTag": null
+        },
+        {
+          "username": "PRO PLAYER",
+          "clientID": "1NgsAnia",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 807,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 83,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T06:41:41.000Z",
+      "url": "https://openfront.io/game/8UczJ7Cu"
     }
   ],
   "quads": [
@@ -126205,6 +126235,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T06:08:12.199Z",
       "url": "https://openfront.io/game/n5i9wy6D"
+    },
+    {
+      "id": "Q3FJz8BQ",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "superavenger27",
+          "clientID": "Wd3k8bGC",
+          "clanTag": null
+        },
+        {
+          "username": "Runix",
+          "clientID": "NK6PUKFN",
+          "clanTag": null
+        },
+        {
+          "username": "Anon",
+          "clientID": "WHrViNNW",
+          "clanTag": null
+        },
+        {
+          "username": "Confeoderatio Helvetica",
+          "clientID": "F1h3Uxdt",
+          "clanTag": null
+        },
+        {
+          "username": "Macgyver",
+          "clientID": "k6MA6iLQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anonhunter",
+          "clientID": "A223cHsF",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 1188,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T06:36:38.580Z",
+      "url": "https://openfront.io/game/Q3FJz8BQ"
     }
   ],
   "hvn": [
