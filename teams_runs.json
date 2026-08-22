@@ -30842,6 +30842,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T04:14:06.700Z",
       "url": "https://openfront.io/game/8o7DC7yo"
+    },
+    {
+      "id": "1wpLy1Gq",
+      "mode": "duos",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "Econotic",
+          "clientID": "girVrT9g",
+          "clanTag": null
+        },
+        {
+          "username": "B0nsman",
+          "clientID": "2AJBKBhw",
+          "clanTag": null
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 1061,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 17,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T04:24:41.860Z",
+      "url": "https://openfront.io/game/1wpLy1Gq"
     }
   ],
   "trios": [
