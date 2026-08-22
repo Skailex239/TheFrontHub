@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-22T18:36:37.746Z",
-  "lastSyncedAt": "2026-08-22T18:36:34.972Z",
-  "totalGames": 3812,
+  "computedAt": "2026-08-22T18:38:30.059Z",
+  "lastSyncedAt": "2026-08-22T18:38:27.824Z",
+  "totalGames": 3813,
   "careerWins": {
-    "ffaCasual": 274,
+    "ffaCasual": 275,
     "ffaRanked": 1420,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1982,
-  "points": 5052,
+  "totalWins": 1983,
+  "points": 5062,
   "level": 50,
-  "levelProgress": 52,
+  "levelProgress": 62,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1982,
+      "current": 1983,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "5 052",
-    "totalWins": "1 982",
-    "totalGames": "3 812",
+    "points": "5 062",
+    "totalWins": "1 983",
+    "totalGames": "3 813",
     "totalPlaytime": "31j 5h",
     "totalPlaytimeCompact": "31j 5h",
     "avgGameDuration": "11m 47s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "749h"
   },
   "playtime": {
-    "totalSec": 2698094,
-    "avgGameSec": 707.789611752361,
+    "totalSec": 2699353,
+    "avgGameSec": 707.9341725675321,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1096,
-        "playtimeSec": 1327957,
-        "wins": 274
+        "games": 1097,
+        "playtimeSec": 1329216,
+        "wins": 275
       },
       "ffaRanked": {
         "games": 1914,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1982,
+    "victory": 1983,
     "defeat": 1498,
     "incomplete": 332
   },
@@ -724,6 +724,22 @@
       }
     },
     {
+      "map": "Balkans",
+      "count": 11,
+      "wins": 2,
+      "losses": 9,
+      "playtimeSec": 16030,
+      "avgDuration": 1457.2727272727273,
+      "winRate": 0.18181818181818182,
+      "lastPlayed": 1787422557651,
+      "formatted": {
+        "playtime": "4h 27m",
+        "avgDuration": "24m",
+        "winRate": "18%",
+        "lastPlayed": "22/08/26"
+      }
+    },
+    {
       "map": "Giant World Map",
       "count": 11,
       "wins": 4,
@@ -817,22 +833,6 @@
         "avgDuration": "14m",
         "winRate": "36%",
         "lastPlayed": "26/07/26"
-      }
-    },
-    {
-      "map": "Balkans",
-      "count": 10,
-      "wins": 1,
-      "losses": 9,
-      "playtimeSec": 14771,
-      "avgDuration": 1477.1,
-      "winRate": 0.1,
-      "lastPlayed": 1787132917372,
-      "formatted": {
-        "playtime": "4h 6m",
-        "avgDuration": "24m",
-        "winRate": "10%",
-        "lastPlayed": "19/08/26"
       }
     },
     {
@@ -1610,7 +1610,7 @@
       324,
       351,
       346,
-      322,
+      323,
       304,
       244,
       230
@@ -1621,7 +1621,7 @@
       493,
       556,
       489,
-      578,
+      579,
       560
     ],
     "byDay": [
@@ -1642,8 +1642,8 @@
       },
       {
         "date": "22/08/2026",
-        "count": 2,
-        "playtimeSec": 4092
+        "count": 3,
+        "playtimeSec": 5351
       },
       {
         "date": "22/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "J7tfCvqW",
+      "start": "2026-08-22T18:15:57.651Z",
+      "map": "Balkans",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1259,
+      "totalPlayers": 51,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "ZP5ZYRn2",
       "start": "2026-08-22T09:06:35.050Z",
@@ -2362,17 +2373,6 @@
       "mode": "Team",
       "result": "defeat",
       "durationSeconds": 396,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "kD4bp4q5",
-      "start": "2026-08-19T18:16:20.912Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 129,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
