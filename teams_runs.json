@@ -108793,6 +108793,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T18:06:31.543Z",
       "url": "https://openfront.io/game/afnCsThm"
+    },
+    {
+      "id": "MW6AS9Qd",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BunnyKisses67",
+          "clientID": "Nhv3h1xq",
+          "clanTag": null
+        },
+        {
+          "username": "Balkan",
+          "clientID": "u1jZj3xK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonsoon5",
+          "clientID": "vmFuD5rE",
+          "clanTag": null
+        },
+        {
+          "username": "JATD",
+          "clientID": "ebjHdPCQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T18:16:12.179Z",
+      "url": "https://openfront.io/game/MW6AS9Qd"
     }
   ],
   "team_custom": [
@@ -171697,6 +171732,111 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T17:56:05.828Z",
       "url": "https://openfront.io/game/RZFR6jPP"
+    },
+    {
+      "id": "uhpMG94e",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Newcaliforniarepublic",
+          "clientID": "YVX1YJT9",
+          "clanTag": "NCR"
+        },
+        {
+          "username": "FischEye",
+          "clientID": "gCxPdezK",
+          "clanTag": "EUW"
+        },
+        {
+          "username": "Ithaka",
+          "clientID": "pj3RVSQ7",
+          "clanTag": null
+        },
+        {
+          "username": "Aartnation",
+          "clientID": "fP58X4KB",
+          "clanTag": null
+        },
+        {
+          "username": "PleaseHelpMe",
+          "clientID": "XYqGvijD",
+          "clanTag": "PHM"
+        },
+        {
+          "username": "PeePeePooPoo",
+          "clientID": "yE1pffEF",
+          "clanTag": null
+        },
+        {
+          "username": "Prouvenco",
+          "clientID": "Nk7APkWK",
+          "clanTag": null
+        },
+        {
+          "username": "Xenon",
+          "clientID": "QVXpLS4y",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "EsTQmD3v",
+          "clanTag": null
+        },
+        {
+          "username": "Qing Dynasti",
+          "clientID": "gbhSAtof",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMagenta8",
+          "clientID": "SLwTYELc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScepter9",
+          "clientID": "hQpJx6mf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonQuartz5",
+          "clientID": "qCyP677Z",
+          "clanTag": null
+        },
+        {
+          "username": "Daegu",
+          "clientID": "VXDtaVVR",
+          "clanTag": null
+        },
+        {
+          "username": "bad at game",
+          "clientID": "m5u7yHK6",
+          "clanTag": null
+        },
+        {
+          "username": "Peace",
+          "clientID": "BJX25mhe",
+          "clanTag": "OTAN"
+        },
+        {
+          "username": "Buggy",
+          "clientID": "uaLN53fb",
+          "clanTag": null
+        },
+        {
+          "username": "1.87M",
+          "clientID": "SB11ujXz",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 513,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T18:19:32.985Z",
+      "url": "https://openfront.io/game/uhpMG94e"
     }
   ]
 }
