@@ -35442,6 +35442,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T17:15:10.256Z",
       "url": "https://openfront.io/game/CoTuH667"
+    },
+    {
+      "id": "2SPBu65p",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PerttuM",
+          "clientID": "24WT3CbN",
+          "clanTag": "LAKE"
+        },
+        {
+          "username": "Dununo",
+          "clientID": "fccA3TF8",
+          "clanTag": "LAKE"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 269,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T17:29:41.470Z",
+      "url": "https://openfront.io/game/2SPBu65p"
     }
   ],
   "trios": [
@@ -71276,6 +71301,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T17:18:46.619Z",
       "url": "https://openfront.io/game/9eVK2g5x"
+    },
+    {
+      "id": "1NpZd4EL",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "MARIO PARTY",
+          "clientID": "CftLQdiX",
+          "clanTag": null
+        },
+        {
+          "username": "ZoomerBloomer",
+          "clientID": "b9JZ6jkh",
+          "clanTag": null
+        },
+        {
+          "username": "Denstone",
+          "clientID": "V7bC9m8a",
+          "clanTag": "CU"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 599,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 99,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T17:22:27.948Z",
+      "url": "https://openfront.io/game/1NpZd4EL"
     }
   ],
   "quads": [
