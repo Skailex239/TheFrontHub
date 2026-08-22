@@ -30367,6 +30367,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T02:23:12.992Z",
       "url": "https://openfront.io/game/g9UzfQgL"
+    },
+    {
+      "id": "na2htJQZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "zartirlao",
+          "clientID": "pE35GL6u",
+          "clanTag": null
+        },
+        {
+          "username": "Anon420",
+          "clientID": "TAVbxQMP",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 774,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:30:07.191Z",
+      "url": "https://openfront.io/game/na2htJQZ"
     }
   ],
   "trios": [
@@ -95548,6 +95573,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T02:25:32.093Z",
       "url": "https://openfront.io/game/fHNrAokh"
+    },
+    {
+      "id": "MGz3jsoS",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Gortar",
+          "clientID": "zJkeMpfz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonButterfly",
+          "clientID": "on3ZZMtD",
+          "clanTag": null
+        },
+        {
+          "username": "TheCutieMewMewPonies",
+          "clientID": "QnMEoJ56",
+          "clanTag": "FREE"
+        },
+        {
+          "username": "powder",
+          "clientID": "gsKjVFv1",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2899,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T01:55:23.840Z",
+      "url": "https://openfront.io/game/MGz3jsoS"
     }
   ],
   "team_custom": [
