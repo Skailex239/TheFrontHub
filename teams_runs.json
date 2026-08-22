@@ -34117,6 +34117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:13:05.440Z",
       "url": "https://openfront.io/game/kStgLYbW"
+    },
+    {
+      "id": "U5xz2G3g",
+      "mode": "duos",
+      "team": "Team 10",
+      "players": [
+        {
+          "username": "000",
+          "clientID": "JpsVHwf2",
+          "clanTag": null
+        },
+        {
+          "username": "gibbos",
+          "clientID": "WP2VFmNT",
+          "clanTag": "GIB"
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 1166,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T14:05:54.267Z",
+      "url": "https://openfront.io/game/U5xz2G3g"
     }
   ],
   "trios": [
@@ -104583,6 +104608,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T14:03:50.558Z",
       "url": "https://openfront.io/game/DZvGumtt"
+    },
+    {
+      "id": "cnGcFWEr",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonPyramid7",
+          "clientID": "uYpJ7e8J",
+          "clanTag": null
+        },
+        {
+          "username": "mered",
+          "clientID": "imtNntNg",
+          "clanTag": null
+        },
+        {
+          "username": "Bussi",
+          "clientID": "7pVqHEcq",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCompass3",
+          "clientID": "DEeG4T9t",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 674,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T14:14:26.564Z",
+      "url": "https://openfront.io/game/cnGcFWEr"
     }
   ],
   "team_custom": [
