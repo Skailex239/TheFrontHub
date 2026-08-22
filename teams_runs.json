@@ -29867,6 +29867,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T00:29:21.484Z",
       "url": "https://openfront.io/game/fpGK6UcE"
+    },
+    {
+      "id": "nEoiEUUN",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PieRat",
+          "clientID": "wPPz3uHv",
+          "clanTag": "NU"
+        },
+        {
+          "username": "ANON",
+          "clientID": "222hEYjs",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1199,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T00:22:36.078Z",
+      "url": "https://openfront.io/game/nEoiEUUN"
     }
   ],
   "trios": [
@@ -119750,6 +119775,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T00:24:37.211Z",
       "url": "https://openfront.io/game/F7YhjBgF"
+    },
+    {
+      "id": "V8GeuWvK",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Crescent",
+          "clientID": "czJ2zSP3",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "TeNa",
+          "clientID": "HbkYyudk",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "vari",
+          "clientID": "51A93kyH",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "TheCopperBard",
+          "clientID": "jeV7shMJ",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Jarques",
+          "clientID": "HD4CPTGz",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "A Wet Sandwich",
+          "clientID": "etg9muZk",
+          "clanTag": "LUX"
+        },
+        {
+          "username": "Apollo",
+          "clientID": "7PmKwBEM",
+          "clanTag": "LUX"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 581,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T00:32:25.690Z",
+      "url": "https://openfront.io/game/V8GeuWvK"
     }
   ],
   "hvn": [
