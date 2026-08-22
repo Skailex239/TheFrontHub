@@ -31617,6 +31617,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T07:11:08.620Z",
       "url": "https://openfront.io/game/KKrdbhtd"
+    },
+    {
+      "id": "PeMCTwx2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "I am new watched enzo",
+          "clientID": "LnQzN2An",
+          "clanTag": "NOHAT"
+        },
+        {
+          "username": "LarpLarpLarpXM",
+          "clientID": "CHSBANXq",
+          "clanTag": null
+        }
+      ],
+      "map": "Caribbean",
+      "duration_s": 706,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T07:27:19.990Z",
+      "url": "https://openfront.io/game/PeMCTwx2"
+    },
+    {
+      "id": "JUTVHZZA",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DaemeonX",
+          "clientID": "SoP1Z5JA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "The Cross Guild",
+          "clientID": "A28LmKN5",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 680,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T07:26:45.927Z",
+      "url": "https://openfront.io/game/JUTVHZZA"
     }
   ],
   "trios": [
@@ -64841,6 +64891,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T07:25:05.756Z",
       "url": "https://openfront.io/game/DmLE4yuf"
+    },
+    {
+      "id": "Ewej9ivL",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Potato",
+          "clientID": "BSKBgrkv",
+          "clanTag": null
+        },
+        {
+          "username": "JUST TRADE",
+          "clientID": "bSyk1fGN",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Groningen",
+          "clientID": "8MwhV77n",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 952,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T07:22:38.037Z",
+      "url": "https://openfront.io/game/Ewej9ivL"
     }
   ],
   "quads": [
