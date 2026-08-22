@@ -32742,6 +32742,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T10:55:06.752Z",
       "url": "https://openfront.io/game/EYGbDcjr"
+    },
+    {
+      "id": "pgZp4RHR",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "iran",
+          "clientID": "LoGAdMcw",
+          "clanTag": null
+        },
+        {
+          "username": "Anon910",
+          "clientID": "1eX4dj5j",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 531,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 113,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:03:27.917Z",
+      "url": "https://openfront.io/game/pgZp4RHR"
     }
   ],
   "trios": [
@@ -66806,6 +66831,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T11:01:57.082Z",
       "url": "https://openfront.io/game/g8viqM8F"
+    },
+    {
+      "id": "uGW4MJBq",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "The real mascalzone romano",
+          "clientID": "xDci9yVy",
+          "clanTag": null
+        },
+        {
+          "username": "Ascaric",
+          "clientID": "xo8SsP3s",
+          "clanTag": null
+        },
+        {
+          "username": "Lukasss",
+          "clientID": "t5ETuLFB",
+          "clanTag": "SPR"
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T10:59:35.909Z",
+      "url": "https://openfront.io/game/uGW4MJBq"
+    },
+    {
+      "id": "dKftfjLn",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ANONYMUS",
+          "clientID": "9qCh5x6a",
+          "clanTag": "777"
+        },
+        {
+          "username": "TTT",
+          "clientID": "ujgAhaAv",
+          "clanTag": null
+        },
+        {
+          "username": "Aas",
+          "clientID": "QQeffzSt",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 361,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 21,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T11:05:45.988Z",
+      "url": "https://openfront.io/game/dKftfjLn"
     }
   ],
   "quads": [
@@ -101708,6 +101793,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T10:21:25.144Z",
       "url": "https://openfront.io/game/5ULJ6o4y"
+    },
+    {
+      "id": "b8u3XLXS",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "holly",
+          "clientID": "mnkiZ8fV",
+          "clanTag": "UDS"
+        },
+        {
+          "username": "Aaaaaaaa",
+          "clientID": "uGhiQAwT",
+          "clanTag": "UDS"
+        },
+        {
+          "username": "Noob",
+          "clientID": "XFVZNTer",
+          "clanTag": null
+        },
+        {
+          "username": "Galah",
+          "clientID": "GdS1b9w9",
+          "clanTag": "UDS"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 2605,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T10:29:14.061Z",
+      "url": "https://openfront.io/game/b8u3XLXS"
     }
   ],
   "team_custom": [
@@ -131650,6 +131770,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T10:34:24.347Z",
       "url": "https://openfront.io/game/geUg1eDe"
+    },
+    {
+      "id": "jzYdXg2e",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "AnonVelvet9",
+          "clientID": "QptxP1rm",
+          "clanTag": null
+        },
+        {
+          "username": "Kim Jong un",
+          "clientID": "3droE3DG",
+          "clanTag": null
+        },
+        {
+          "username": "_Filipos_",
+          "clientID": "SqgLDbdh",
+          "clanTag": "CZSK"
+        },
+        {
+          "username": "Peopleeatpeople",
+          "clientID": "HYDppfFp",
+          "clanTag": null
+        },
+        {
+          "username": "RohMooHyun Foundation",
+          "clientID": "bAmHgZ8r",
+          "clanTag": null
+        },
+        {
+          "username": "Inkonu",
+          "clientID": "DUwz1JgD",
+          "clanTag": null
+        },
+        {
+          "username": "herwego",
+          "clientID": "6fKvKtoF",
+          "clanTag": "BVB"
+        }
+      ],
+      "map": "Manicouagan",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 66,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T10:58:30.843Z",
+      "url": "https://openfront.io/game/jzYdXg2e"
     }
   ],
   "hvn": [
