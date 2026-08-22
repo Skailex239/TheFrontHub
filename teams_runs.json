@@ -30517,6 +30517,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T02:36:52.306Z",
       "url": "https://openfront.io/game/NQZ7yZrU"
+    },
+    {
+      "id": "Pya76fnV",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnoAnon",
+          "clientID": "5S87zdFo",
+          "clanTag": null
+        },
+        {
+          "username": "PaintLifter",
+          "clientID": "tzkfQ6po",
+          "clanTag": null
+        }
+      ],
+      "map": "Antarctica",
+      "duration_s": 823,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:57:00.371Z",
+      "url": "https://openfront.io/game/Pya76fnV"
     }
   ],
   "trios": [
@@ -95898,6 +95923,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T02:54:36.619Z",
       "url": "https://openfront.io/game/3kBc7c2i"
+    },
+    {
+      "id": "Dk4UVD5Z",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "mibomborastaclart",
+          "clientID": "CYifzNMw",
+          "clanTag": "SUG"
+        },
+        {
+          "username": "aussie on ice",
+          "clientID": "orPyZ9ap",
+          "clanTag": "SUG"
+        },
+        {
+          "username": "AnonOmen6",
+          "clientID": "fqitMCdp",
+          "clanTag": null
+        },
+        {
+          "username": "GunsNRoses",
+          "clientID": "x5FNnLuX",
+          "clanTag": null
+        }
+      ],
+      "map": "North America",
+      "duration_s": 1412,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T02:47:33.355Z",
+      "url": "https://openfront.io/game/Dk4UVD5Z"
     }
   ],
   "team_custom": [
