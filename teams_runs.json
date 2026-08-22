@@ -73271,6 +73271,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T20:06:20.195Z",
       "url": "https://openfront.io/game/pFYYXN8D"
+    },
+    {
+      "id": "oNaHtyQZ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Highter",
+          "clientID": "eYceGkcW",
+          "clanTag": null
+        },
+        {
+          "username": "Maine.iac",
+          "clientID": "s7wTfjkS",
+          "clanTag": "CAN"
+        },
+        {
+          "username": "UnluckyYet",
+          "clientID": "ge7rW97r",
+          "clanTag": "282"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 562,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T20:17:34.348Z",
+      "url": "https://openfront.io/game/oNaHtyQZ"
     }
   ],
   "quads": [
@@ -146280,6 +146310,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T20:05:58.057Z",
       "url": "https://openfront.io/game/f4mG6KBW"
+    },
+    {
+      "id": "tpSfHamh",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Strider",
+          "clientID": "DMXssaL8",
+          "clanTag": null
+        },
+        {
+          "username": "Napo",
+          "clientID": "brQ3jQtQ",
+          "clanTag": "FFF"
+        },
+        {
+          "username": "Archie",
+          "clientID": "Uq3DtSdN",
+          "clanTag": "FFF"
+        },
+        {
+          "username": "jesuisnul",
+          "clientID": "z3VjTGV3",
+          "clanTag": null
+        },
+        {
+          "username": "SOLO",
+          "clientID": "2Vakyaag",
+          "clanTag": null
+        },
+        {
+          "username": "KICKFLOWERS",
+          "clientID": "FdrEbzCq",
+          "clanTag": "FR"
+        },
+        {
+          "username": "AnonBadger5",
+          "clientID": "sJT1GqgW",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1847,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T19:55:53.606Z",
+      "url": "https://openfront.io/game/tpSfHamh"
     }
   ],
   "hvn": [
