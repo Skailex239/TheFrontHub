@@ -33317,6 +33317,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T12:18:53.930Z",
       "url": "https://openfront.io/game/1TEij9tj"
+    },
+    {
+      "id": "7eoFmgGX",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Only trading",
+          "clientID": "HcUwguTK",
+          "clanTag": null
+        },
+        {
+          "username": "Sublime",
+          "clientID": "MjRZxs3f",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 930,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T12:30:54.112Z",
+      "url": "https://openfront.io/game/7eoFmgGX"
     }
   ],
   "trios": [
@@ -67741,6 +67766,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T12:20:54.138Z",
       "url": "https://openfront.io/game/9J4EkQGY"
+    },
+    {
+      "id": "z3HLXkHw",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "hoyo prieto",
+          "clientID": "A62SB9qG",
+          "clanTag": null
+        },
+        {
+          "username": "Zoral",
+          "clientID": "dMBbHTHE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "mitochondria",
+          "clientID": "oVCURyvW",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1198,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T12:26:46.713Z",
+      "url": "https://openfront.io/game/z3HLXkHw"
     }
   ],
   "quads": [
