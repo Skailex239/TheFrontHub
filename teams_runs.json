@@ -36792,6 +36792,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T21:16:25.477Z",
       "url": "https://openfront.io/game/iZuJm5jy"
+    },
+    {
+      "id": "ReodG9SK",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Mehdi",
+          "clientID": "7iXQgmNw",
+          "clanTag": "MM"
+        },
+        {
+          "username": "Borat_The_Kazakh",
+          "clientID": "Na2m5UYC",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 351,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T21:25:18.618Z",
+      "url": "https://openfront.io/game/ReodG9SK"
+    },
+    {
+      "id": "Q6X2TLKv",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "EchoingsEcho",
+          "clientID": "dkMoEaNB",
+          "clanTag": null
+        },
+        {
+          "username": "Microbody",
+          "clientID": "PMKqnHic",
+          "clanTag": "MICRO"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1891,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T20:58:03.968Z",
+      "url": "https://openfront.io/game/Q6X2TLKv"
     }
   ],
   "trios": [
@@ -111718,6 +111768,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T21:00:05.163Z",
       "url": "https://openfront.io/game/KqB5zdqy"
+    },
+    {
+      "id": "18KkDjua",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Haiiiiii",
+          "clientID": "2NtZCTaB",
+          "clanTag": null
+        },
+        {
+          "username": "Okie5150",
+          "clientID": "WY2cS1Ld",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSnail3",
+          "clientID": "ETqnxF79",
+          "clanTag": null
+        },
+        {
+          "username": "delta",
+          "clientID": "fPwKMPGa",
+          "clanTag": "GAMMA"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 772,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T21:18:27.526Z",
+      "url": "https://openfront.io/game/18KkDjua"
     }
   ],
   "team_custom": [
