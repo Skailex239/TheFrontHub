@@ -35917,6 +35917,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T18:27:56.575Z",
       "url": "https://openfront.io/game/RrVSd973"
+    },
+    {
+      "id": "1d6R8UTo",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SuperViper999",
+          "clientID": "uDqKNKMD",
+          "clanTag": "OE"
+        },
+        {
+          "username": "FREE WORLD",
+          "clientID": "GJ3d4V4B",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1401,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T18:39:12.865Z",
+      "url": "https://openfront.io/game/1d6R8UTo"
     }
   ],
   "trios": [
@@ -72321,6 +72346,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T18:42:00.632Z",
       "url": "https://openfront.io/game/nLvBAfgR"
+    },
+    {
+      "id": "mW89BT1r",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Daikin_Indonesia",
+          "clientID": "mxFzw7SU",
+          "clanTag": null
+        },
+        {
+          "username": "RagnaR",
+          "clientID": "Zuk73J2R",
+          "clanTag": "TC"
+        },
+        {
+          "username": "nibbletz",
+          "clientID": "bQsaGbhX",
+          "clanTag": "HORT"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 1136,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T18:44:00.841Z",
+      "url": "https://openfront.io/game/mW89BT1r"
     }
   ],
   "quads": [
