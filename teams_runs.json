@@ -34642,6 +34642,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T15:05:47.627Z",
       "url": "https://openfront.io/game/Xb5QfHFQ"
+    },
+    {
+      "id": "yKaM8UFz",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon905",
+          "clientID": "a2R5L2mX",
+          "clanTag": null
+        },
+        {
+          "username": "Tec Corp",
+          "clientID": "AeLgzBUN",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 577,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:12:15.263Z",
+      "url": "https://openfront.io/game/yKaM8UFz"
+    },
+    {
+      "id": "2Fejg2Lv",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Psychonaute420",
+          "clientID": "6dRrgZoL",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Lonely_Millennial",
+          "clientID": "EPD4B8Qh",
+          "clanTag": "ROYS"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 383,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:16:15.644Z",
+      "url": "https://openfront.io/game/2Fejg2Lv"
     }
   ],
   "trios": [
@@ -69606,6 +69656,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T15:00:26.098Z",
       "url": "https://openfront.io/game/R3LcjMn2"
+    },
+    {
+      "id": "v1m1L2k1",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "UnhuggedToday",
+          "clientID": "MtW5K2KB",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCompass4",
+          "clientID": "oYmbWVxw",
+          "clanTag": null
+        },
+        {
+          "username": "DontTouchMe",
+          "clientID": "GnK366rD",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 917,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 123,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T15:07:36.299Z",
+      "url": "https://openfront.io/game/v1m1L2k1"
     }
   ],
   "quads": [
