@@ -64421,6 +64421,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T06:34:37.964Z",
       "url": "https://openfront.io/game/1DLnzCie"
+    },
+    {
+      "id": "247ZY5uB",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Panda",
+          "clientID": "sCRQqrEg",
+          "clanTag": "420"
+        },
+        {
+          "username": "Anon874",
+          "clientID": "FZ8vU2nB",
+          "clanTag": null
+        },
+        {
+          "username": "CornerHugger",
+          "clientID": "sQtxt95k",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 435,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T06:42:54.122Z",
+      "url": "https://openfront.io/game/247ZY5uB"
     }
   ],
   "quads": [
