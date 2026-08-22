@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-22T19:49:09.256Z",
-  "lastSyncedAt": "2026-08-22T19:49:06.830Z",
-  "totalGames": 2248,
+  "computedAt": "2026-08-22T19:50:32.578Z",
+  "lastSyncedAt": "2026-08-22T19:50:29.586Z",
+  "totalGames": 2249,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 502",
     "totalWins": "854",
-    "totalGames": "2 248",
+    "totalGames": "2 249",
     "totalPlaytime": "23j 8h",
     "totalPlaytimeCompact": "23j 8h",
     "avgGameDuration": "14m 57s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "560h"
   },
   "playtime": {
-    "totalSec": 2016556,
-    "avgGameSec": 897.0444839857652,
+    "totalSec": 2018089,
+    "avgGameSec": 897.3272565584705,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1403,
-        "playtimeSec": 1622951,
+        "games": 1404,
+        "playtimeSec": 1624484,
         "wins": 384
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 854,
-    "defeat": 1054,
+    "defeat": 1055,
     "incomplete": 340
   },
   "maps": [
@@ -149,18 +149,18 @@
     },
     {
       "map": "Africa",
-      "count": 70,
+      "count": 71,
       "wins": 22,
-      "losses": 48,
-      "playtimeSec": 98555,
-      "avgDuration": 1407.9285714285713,
-      "winRate": 0.3142857142857143,
-      "lastPlayed": 1786123580064,
+      "losses": 49,
+      "playtimeSec": 100088,
+      "avgDuration": 1409.6901408450703,
+      "winRate": 0.30985915492957744,
+      "lastPlayed": 1787426642082,
       "formatted": {
         "playtime": "1j 3h",
         "avgDuration": "23m",
         "winRate": "31%",
-        "lastPlayed": "07/08/26"
+        "lastPlayed": "22/08/26"
       }
     },
     {
@@ -1675,7 +1675,7 @@
       207,
       230,
       203,
-      152,
+      153,
       154,
       154
     ],
@@ -1685,7 +1685,7 @@
       300,
       334,
       371,
-      395,
+      396,
       321
     ],
     "byDay": [
@@ -1931,8 +1931,8 @@
       },
       {
         "date": "22/08/2026",
-        "count": 31,
-        "playtimeSec": 9939
+        "count": 32,
+        "playtimeSec": 11472
       },
       {
         "date": "23/01/2026",
@@ -2222,6 +2222,17 @@
   },
   "recentGames": [
     {
+      "gameId": "Ga5JXqTG",
+      "start": "2026-08-22T19:24:02.082Z",
+      "map": "Africa",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1533,
+      "totalPlayers": 29,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "HoMD8nxj",
       "start": "2026-08-22T18:53:04.493Z",
       "map": "North America",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 288,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "47rUeqo1",
-      "start": "2026-08-22T11:27:34.226Z",
-      "map": "Australia",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 307,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
