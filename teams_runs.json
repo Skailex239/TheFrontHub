@@ -34292,6 +34292,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T14:28:37.994Z",
       "url": "https://openfront.io/game/zo6bVnMe"
+    },
+    {
+      "id": "FxLhY7ww",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "trade",
+          "clientID": "n4oUWN1j",
+          "clanTag": "PLS"
+        },
+        {
+          "username": "AnonSloth9",
+          "clientID": "WeS5XkP4",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 375,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T14:34:30.550Z",
+      "url": "https://openfront.io/game/FxLhY7ww"
+    },
+    {
+      "id": "hAz8xGZj",
+      "mode": "duos",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "WanderFront",
+          "clientID": "84McpZ3k",
+          "clanTag": "GG"
+        },
+        {
+          "username": "General Claws",
+          "clientID": "M6ECuY88",
+          "clanTag": "GG"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 1909,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T14:09:50.129Z",
+      "url": "https://openfront.io/game/hAz8xGZj"
     }
   ],
   "trios": [
@@ -69136,6 +69186,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T14:19:22.564Z",
       "url": "https://openfront.io/game/4oAe2G1c"
+    },
+    {
+      "id": "X7dXt333",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bubbles",
+          "clientID": "GrAHGj91",
+          "clanTag": "NU"
+        },
+        {
+          "username": "MediCato",
+          "clientID": "5cm4CUZV",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Crusader",
+          "clientID": "BYv3bh7M",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 895,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T14:26:11.246Z",
+      "url": "https://openfront.io/game/X7dXt333"
     }
   ],
   "quads": [
@@ -137225,6 +137305,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T14:22:30.387Z",
       "url": "https://openfront.io/game/RyuunBS9"
+    },
+    {
+      "id": "rNspwnBo",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Banki",
+          "clientID": "EMRjHVeC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonBridge7",
+          "clientID": "ReRzJgUj",
+          "clanTag": null
+        },
+        {
+          "username": "xeqhon",
+          "clientID": "4iZxrA9u",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon036",
+          "clientID": "rZSLo552",
+          "clanTag": null
+        },
+        {
+          "username": "Nonagon Infinit",
+          "clientID": "W4EMN5dG",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 837,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T14:27:27.372Z",
+      "url": "https://openfront.io/game/rNspwnBo"
     }
   ],
   "hvn": [
