@@ -33217,6 +33217,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T12:07:00.321Z",
       "url": "https://openfront.io/game/cAW74UpX"
+    },
+    {
+      "id": "1YwYoS7r",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Alright",
+          "clientID": "KNqAyYuQ",
+          "clanTag": "OKAY"
+        },
+        {
+          "username": "FIDES",
+          "clientID": "F4Hgycig",
+          "clanTag": "OKAY"
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 1055,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T12:03:59.519Z",
+      "url": "https://openfront.io/game/1YwYoS7r"
     }
   ],
   "trios": [
@@ -67521,6 +67546,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T11:56:59.479Z",
       "url": "https://openfront.io/game/K1jjr5iM"
+    },
+    {
+      "id": "BSmm5pet",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Dimixx",
+          "clientID": "HHbHC74Y",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSnail2",
+          "clientID": "XvhmRVPW",
+          "clanTag": null
+        },
+        {
+          "username": "Rekrut",
+          "clientID": "8hFpAmKw",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 670,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T12:10:03.118Z",
+      "url": "https://openfront.io/game/BSmm5pet"
     }
   ],
   "quads": [
@@ -102773,6 +102828,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T11:43:40.564Z",
       "url": "https://openfront.io/game/G1GGNLgS"
+    },
+    {
+      "id": "oVLcYYdC",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Doy",
+          "clientID": "79t4Df7V",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonZenith4",
+          "clientID": "rRWm19qH",
+          "clanTag": null
+        },
+        {
+          "username": "danger",
+          "clientID": "kRukzWQM",
+          "clanTag": null
+        },
+        {
+          "username": "SgtTwix",
+          "clientID": "SDEzaoU6",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 605,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T12:11:54.788Z",
+      "url": "https://openfront.io/game/oVLcYYdC"
     }
   ],
   "team_custom": [
@@ -133415,6 +133505,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T12:06:18.244Z",
       "url": "https://openfront.io/game/JWuggGoa"
+    },
+    {
+      "id": "6QdeE6CJ",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Jeewjeewjeew",
+          "clientID": "Snw8VgcJ",
+          "clanTag": null
+        },
+        {
+          "username": "Ania",
+          "clientID": "vGLSQZ7U",
+          "clanTag": null
+        },
+        {
+          "username": "bibigo",
+          "clientID": "puUt7jsY",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "Antiac",
+          "clientID": "g6ReC5xE",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "AnonRiver3",
+          "clientID": "22nJiVbH",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVortex3",
+          "clientID": "JEk783MD",
+          "clanTag": null
+        },
+        {
+          "username": "KarlFlow",
+          "clientID": "SJ5pfhwZ",
+          "clanTag": "MOL"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 738,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T12:09:41.088Z",
+      "url": "https://openfront.io/game/6QdeE6CJ"
     }
   ],
   "hvn": [
