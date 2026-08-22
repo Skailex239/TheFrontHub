@@ -37167,6 +37167,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T22:15:18.987Z",
       "url": "https://openfront.io/game/xWULXNkd"
+    },
+    {
+      "id": "VevxNWQe",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Imperio austrohungaro",
+          "clientID": "thwABfUm",
+          "clanTag": "IAU"
+        },
+        {
+          "username": "AAA",
+          "clientID": "seqWo4xN",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 530,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:19:35.387Z",
+      "url": "https://openfront.io/game/VevxNWQe"
     }
   ],
   "trios": [
@@ -112608,6 +112633,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T21:58:04.795Z",
       "url": "https://openfront.io/game/EK3wVCPe"
+    },
+    {
+      "id": "cqoJPTJp",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Temple9",
+          "clientID": "qtPPfx86",
+          "clanTag": null
+        },
+        {
+          "username": "BetrayMeAndIDie",
+          "clientID": "YzLzMTvu",
+          "clanTag": null
+        },
+        {
+          "username": "...",
+          "clientID": "bEphHN7o",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMirage1",
+          "clientID": "tLnaCotY",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1032,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T22:11:34.312Z",
+      "url": "https://openfront.io/game/cqoJPTJp"
+    },
+    {
+      "id": "CZGw8gHx",
+      "mode": "quads",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "PinkLemon.GVud",
+          "clientID": "wKDtgyLj",
+          "clanTag": null
+        },
+        {
+          "username": "Cebu",
+          "clientID": "yQ5EAWev",
+          "clanTag": null
+        },
+        {
+          "username": "lululemerlu",
+          "clientID": "ZYSLgiDi",
+          "clanTag": "FSC"
+        },
+        {
+          "username": "shh",
+          "clientID": "JphW3R1g",
+          "clanTag": null
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 2417,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T21:47:18.809Z",
+      "url": "https://openfront.io/game/CZGw8gHx"
     }
   ],
   "team_custom": [
