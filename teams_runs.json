@@ -61451,6 +61451,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-21T23:24:50.337Z",
       "url": "https://openfront.io/game/quLp4Nqv"
+    },
+    {
+      "id": "C4siKY9U",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BricoMalo",
+          "clientID": "bU5s6WQA",
+          "clanTag": "QDT"
+        },
+        {
+          "username": "LEBON",
+          "clientID": "ZtmuF9AF",
+          "clanTag": "QDT"
+        },
+        {
+          "username": "SIMSIM labime",
+          "clientID": "GiQLtYSh",
+          "clanTag": "QDT"
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 1071,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-21T23:42:08.496Z",
+      "url": "https://openfront.io/game/C4siKY9U"
     }
   ],
   "quads": [
@@ -139132,6 +139162,51 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-21T23:15:21.178Z",
       "url": "https://openfront.io/game/PyWNivPY"
+    },
+    {
+      "id": "ofZGBCkK",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "VOC",
+          "clientID": "C6DKA3EJ",
+          "clanTag": null
+        },
+        {
+          "username": "Biff",
+          "clientID": "dfUmKe5x",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonCrimson3",
+          "clientID": "BeFFNM8s",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGong3",
+          "clientID": "4YcXJBrU",
+          "clanTag": null
+        },
+        {
+          "username": "Chevi",
+          "clientID": "B3AqS2q7",
+          "clanTag": null
+        },
+        {
+          "username": ". .",
+          "clientID": "sUYfXKLf",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 639,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 10,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-21T23:48:46.400Z",
+      "url": "https://openfront.io/game/ofZGBCkK"
     }
   ]
 }
