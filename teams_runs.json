@@ -96433,6 +96433,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T03:38:40.461Z",
       "url": "https://openfront.io/game/FPEMJCb6"
+    },
+    {
+      "id": "vm89xxoe",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "forthe",
+          "clientID": "j7Wc1X8r",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Romper",
+          "clientID": "EHUzjd9J",
+          "clanTag": null
+        },
+        {
+          "username": "LastNameEon",
+          "clientID": "FRtFbExD",
+          "clanTag": null
+        },
+        {
+          "username": "Amnese",
+          "clientID": "PjnAp3di",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 811,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T03:45:40.669Z",
+      "url": "https://openfront.io/game/vm89xxoe"
     }
   ],
   "team_custom": [
@@ -123255,6 +123290,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T03:38:23.476Z",
       "url": "https://openfront.io/game/EZAAktCs"
+    },
+    {
+      "id": "rBxS4spt",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Penguin",
+          "clientID": "7YLvUjEG",
+          "clanTag": null
+        },
+        {
+          "username": "Tabartouffe",
+          "clientID": "5tWgxoYz",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "moltenmath",
+          "clientID": "Kqz1UqoE",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "Kariptos",
+          "clientID": "b6EVzVav",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "Azzoland",
+          "clientID": "Nz8hjpeh",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "MoquaR4f",
+          "clanTag": null
+        },
+        {
+          "username": "Third Rome",
+          "clientID": "RPvMzZbx",
+          "clanTag": null
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 1100,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T03:42:13.650Z",
+      "url": "https://openfront.io/game/rBxS4spt"
     }
   ],
   "hvn": [
