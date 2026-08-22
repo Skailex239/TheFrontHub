@@ -29817,6 +29817,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T00:03:06.808Z",
       "url": "https://openfront.io/game/nPghLdZr"
+    },
+    {
+      "id": "HTtjxSQC",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "supp",
+          "clientID": "9dwZbKbd",
+          "clanTag": null
+        },
+        {
+          "username": "JP_Ogikubo",
+          "clientID": "MM1eLK6d",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 435,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T00:28:44.449Z",
+      "url": "https://openfront.io/game/HTtjxSQC"
     }
   ],
   "trios": [
@@ -61661,6 +61686,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-21T23:50:21.003Z",
       "url": "https://openfront.io/game/wcaB7F1G"
+    },
+    {
+      "id": "MN7fXQv3",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "hzballa",
+          "clientID": "ureM4mSP",
+          "clanTag": "HH"
+        },
+        {
+          "username": "ScrewTheTrees",
+          "clientID": "7tqrxxaS",
+          "clanTag": null
+        },
+        {
+          "username": "Blank",
+          "clientID": "qYvk5sKY",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1721,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T00:08:20.675Z",
+      "url": "https://openfront.io/game/MN7fXQv3"
     }
   ],
   "quads": [
