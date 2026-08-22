@@ -32967,6 +32967,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T11:28:24.642Z",
       "url": "https://openfront.io/game/C9RHuQLb"
+    },
+    {
+      "id": "ZiELDDLJ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mito Mito",
+          "clientID": "r3ychnxJ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Cinamon",
+          "clientID": "pspa2nKB",
+          "clanTag": "EY"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1107,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T11:25:00.789Z",
+      "url": "https://openfront.io/game/ZiELDDLJ"
     }
   ],
   "trios": [
@@ -102153,6 +102178,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T11:11:49.491Z",
       "url": "https://openfront.io/game/LBEqx9QT"
+    },
+    {
+      "id": "FQo14pyD",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonGoblin2",
+          "clientID": "9LetJP68",
+          "clanTag": "TRUST"
+        },
+        {
+          "username": "mokamokamoka",
+          "clientID": "r5DtUHwE",
+          "clanTag": null
+        },
+        {
+          "username": "liddawally",
+          "clientID": "qPuE4s2i",
+          "clanTag": "GBP"
+        },
+        {
+          "username": "Anon533",
+          "clientID": "5qcwpu7h",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 768,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T11:31:10.706Z",
+      "url": "https://openfront.io/game/FQo14pyD"
     }
   ],
   "team_custom": [
@@ -132425,6 +132485,51 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T11:20:48.918Z",
       "url": "https://openfront.io/game/y2tt73uV"
+    },
+    {
+      "id": "vQ1j9YqK",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Omarello",
+          "clientID": "MVv71DsY",
+          "clanTag": "URSS"
+        },
+        {
+          "username": "takuwan",
+          "clientID": "b94FQtV1",
+          "clanTag": null
+        },
+        {
+          "username": "Anon170",
+          "clientID": "L7qfVFA5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnchor8",
+          "clientID": "ABJc5QCA",
+          "clanTag": null
+        },
+        {
+          "username": "Call in air support",
+          "clientID": "WQGVCXn3",
+          "clanTag": "CIS"
+        },
+        {
+          "username": "IBO",
+          "clientID": "7fAAhTp3",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 943,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T11:28:07.732Z",
+      "url": "https://openfront.io/game/vQ1j9YqK"
     }
   ],
   "hvn": [
