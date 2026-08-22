@@ -62806,6 +62806,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T02:50:10.094Z",
       "url": "https://openfront.io/game/jepdYcKm"
+    },
+    {
+      "id": "DAkqZ8wY",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "China_COM",
+          "clientID": "VstdpLmJ",
+          "clanTag": null
+        },
+        {
+          "username": "7777",
+          "clientID": "hR3Z6boz",
+          "clanTag": null
+        },
+        {
+          "username": "null",
+          "clientID": "g94LNPe1",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 560,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 33,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T03:11:32.033Z",
+      "url": "https://openfront.io/game/DAkqZ8wY"
+    },
+    {
+      "id": "daYo2KK4",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "NEVER BETRAY",
+          "clientID": "zNtsnoax",
+          "clanTag": "AST"
+        },
+        {
+          "username": "imjap",
+          "clientID": "bvRmZn3P",
+          "clanTag": null
+        },
+        {
+          "username": "velez",
+          "clientID": "ffUvUyfJ",
+          "clanTag": null
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 559,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T03:11:59.052Z",
+      "url": "https://openfront.io/game/daYo2KK4"
     }
   ],
   "quads": [
@@ -95993,6 +96053,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T03:04:27.059Z",
       "url": "https://openfront.io/game/JbFpRAvm"
+    },
+    {
+      "id": "QSHwDxk1",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "yur",
+          "clientID": "1pjU8P8j",
+          "clanTag": null
+        },
+        {
+          "username": "Scrubbicus",
+          "clientID": "zVSsVXMZ",
+          "clanTag": "SCRUB"
+        },
+        {
+          "username": "Hydro",
+          "clientID": "gLU5XCJw",
+          "clanTag": "SCRUB"
+        },
+        {
+          "username": "mumumu",
+          "clientID": "WweFB3e2",
+          "clanTag": null
+        }
+      ],
+      "map": "Hawaii",
+      "duration_s": 788,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T03:06:33.799Z",
+      "url": "https://openfront.io/game/QSHwDxk1"
     }
   ],
   "team_custom": [
