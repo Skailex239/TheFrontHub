@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-22T22:37:10.126Z",
-  "lastSyncedAt": "2026-08-22T22:37:08.408Z",
-  "totalGames": 3814,
+  "computedAt": "2026-08-22T22:39:31.416Z",
+  "lastSyncedAt": "2026-08-22T22:39:29.401Z",
+  "totalGames": 3815,
   "careerWins": {
-    "ffaCasual": 275,
+    "ffaCasual": 276,
     "ffaRanked": 1420,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1983,
-  "points": 5062,
+  "totalWins": 1984,
+  "points": 5072,
   "level": 50,
-  "levelProgress": 62,
+  "levelProgress": 72,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1983,
+      "current": 1984,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "5 062",
-    "totalWins": "1 983",
-    "totalGames": "3 814",
+    "points": "5 072",
+    "totalWins": "1 984",
+    "totalGames": "3 815",
     "totalPlaytime": "31j 6h",
     "totalPlaytimeCompact": "31j 6h",
     "avgGameDuration": "11m 48s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "750h"
   },
   "playtime": {
-    "totalSec": 2700886,
-    "avgGameSec": 708.1504981646565,
+    "totalSec": 2701841,
+    "avgGameSec": 708.2152031454784,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1098,
-        "playtimeSec": 1330749,
-        "wins": 275
+        "games": 1099,
+        "playtimeSec": 1331704,
+        "wins": 276
       },
       "ffaRanked": {
         "games": 1914,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1983,
+    "victory": 1984,
     "defeat": 1499,
     "incomplete": 332
   },
@@ -165,18 +165,18 @@
     },
     {
       "map": "Europe",
-      "count": 63,
-      "wins": 7,
+      "count": 64,
+      "wins": 8,
       "losses": 56,
-      "playtimeSec": 96222,
-      "avgDuration": 1527.3333333333333,
-      "winRate": 0.1111111111111111,
-      "lastPlayed": 1787161738551,
+      "playtimeSec": 97177,
+      "avgDuration": 1518.390625,
+      "winRate": 0.125,
+      "lastPlayed": 1787437350186,
       "formatted": {
         "playtime": "1j 2h",
         "avgDuration": "25m",
-        "winRate": "11%",
-        "lastPlayed": "19/08/26"
+        "winRate": "13%",
+        "lastPlayed": "22/08/26"
       }
     },
     {
@@ -1590,7 +1590,7 @@
   ],
   "activity": {
     "byHour": [
-      202,
+      203,
       180,
       109,
       89,
@@ -1622,14 +1622,9 @@
       556,
       489,
       580,
-      560
+      561
     ],
     "byDay": [
-      {
-        "date": "22/05/2026",
-        "count": 10,
-        "playtimeSec": 6234
-      },
       {
         "date": "22/06/2026",
         "count": 21,
@@ -1694,6 +1689,11 @@
         "date": "23/07/2026",
         "count": 14,
         "playtimeSec": 10236
+      },
+      {
+        "date": "23/08/2026",
+        "count": 1,
+        "playtimeSec": 955
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "KER4id4A",
+      "start": "2026-08-22T22:22:30.186Z",
+      "map": "Europe",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 955,
+      "totalPlayers": 57,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "HoMD8nxj",
       "start": "2026-08-22T18:53:04.493Z",
@@ -2363,17 +2374,6 @@
       "result": "defeat",
       "durationSeconds": 810,
       "totalPlayers": 77,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "mz51VxJJ",
-      "start": "2026-08-20T06:37:36.485Z",
-      "map": "Dyslexdria",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 2685,
-      "totalPlayers": 98,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }

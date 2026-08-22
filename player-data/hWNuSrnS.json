@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-22T22:37:08.408Z",
+  "lastSyncedAt": "2026-08-22T22:39:29.401Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.3,
-  "totalGames": 3814,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.7,
+  "totalGames": 3815,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "KER4id4A",
+      "start": "2026-08-22T22:22:30.186Z",
+      "durationSeconds": 955,
+      "map": "Europe",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 57,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "HoMD8nxj",
       "start": "2026-08-22T18:53:04.493Z",
