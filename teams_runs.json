@@ -74151,6 +74151,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T21:22:42.374Z",
       "url": "https://openfront.io/game/xMjLzXBD"
+    },
+    {
+      "id": "qYZgjo41",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Replicator",
+          "clientID": "1ZGfyF1m",
+          "clanTag": null
+        },
+        {
+          "username": "Ace",
+          "clientID": "PW19jWZL",
+          "clanTag": "SCP"
+        },
+        {
+          "username": "elpapi_69",
+          "clientID": "dggoULeC",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 596,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T21:36:08.176Z",
+      "url": "https://openfront.io/game/qYZgjo41"
     }
   ],
   "quads": [
@@ -178762,6 +178792,106 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T21:29:47.045Z",
       "url": "https://openfront.io/game/Wte7KYhP"
+    },
+    {
+      "id": "9CnbctbM",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "sixtyseven",
+          "clientID": "3hCEkc94",
+          "clanTag": null
+        },
+        {
+          "username": "beadyempire",
+          "clientID": "mKXc8YAg",
+          "clanTag": "1233"
+        },
+        {
+          "username": "My boss thinks Im working",
+          "clientID": "xN9cMbzu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "NATO",
+          "clientID": "o3hCC2nv",
+          "clanTag": null
+        },
+        {
+          "username": "Deez",
+          "clientID": "feEJ5vFu",
+          "clanTag": null
+        },
+        {
+          "username": "kalm",
+          "clientID": "Zcf2KP2G",
+          "clanTag": null
+        },
+        {
+          "username": "sakura",
+          "clientID": "Wq4jexfa",
+          "clanTag": null
+        },
+        {
+          "username": "maten46",
+          "clientID": "6wdj3yPp",
+          "clanTag": "RIP"
+        },
+        {
+          "username": "Casual Antarctica",
+          "clientID": "LydQgVDW",
+          "clanTag": null
+        },
+        {
+          "username": "BEEF_filet",
+          "clientID": "wbswk2RE",
+          "clanTag": "RAW"
+        },
+        {
+          "username": "AnonIvory7",
+          "clientID": "S1oPqQCK",
+          "clanTag": null
+        },
+        {
+          "username": "10 Billion Factories",
+          "clientID": "uHsoQs2P",
+          "clanTag": null
+        },
+        {
+          "username": "hiihii",
+          "clientID": "d2KjuCn9",
+          "clanTag": "YEP"
+        },
+        {
+          "username": "AnonHelmet4",
+          "clientID": "PFgyj436",
+          "clanTag": null
+        },
+        {
+          "username": "Anon009",
+          "clientID": "8whqA2nK",
+          "clanTag": null
+        },
+        {
+          "username": "taraoasului",
+          "clientID": "m6LMNfJQ",
+          "clanTag": null
+        },
+        {
+          "username": "Svea",
+          "clientID": "rQrhKUkz",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 803,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 25,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T21:33:08.875Z",
+      "url": "https://openfront.io/game/9CnbctbM"
     }
   ]
 }
