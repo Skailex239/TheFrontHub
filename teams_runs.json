@@ -36092,6 +36092,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T19:21:20.064Z",
       "url": "https://openfront.io/game/c6zPN9aT"
+    },
+    {
+      "id": "JRpJnofd",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Luwia",
+          "clientID": "684AxZkA",
+          "clanTag": null
+        },
+        {
+          "username": "FREE WORLD",
+          "clientID": "MNHCw72y",
+          "clanTag": "FRA"
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 541,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T19:31:24.112Z",
+      "url": "https://openfront.io/game/JRpJnofd"
+    },
+    {
+      "id": "cjzZmARK",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "anonon",
+          "clientID": "Ujcn2BtR",
+          "clanTag": null
+        },
+        {
+          "username": "GreenKid.dzUW",
+          "clientID": "VgTccnsr",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 587,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T19:29:17.203Z",
+      "url": "https://openfront.io/game/cjzZmARK"
     }
   ],
   "trios": [
@@ -145185,6 +145235,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T19:26:41.083Z",
       "url": "https://openfront.io/game/YAANohHk"
+    },
+    {
+      "id": "6YNH75jB",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Pour Kidnapping",
+          "clientID": "BLuqtd5B",
+          "clanTag": null
+        },
+        {
+          "username": "Bridge",
+          "clientID": "x4wThHUJ",
+          "clanTag": null
+        },
+        {
+          "username": "Wall Drug",
+          "clientID": "jZrGpUis",
+          "clanTag": "YAY"
+        },
+        {
+          "username": "What is it now",
+          "clientID": "fqsDUJyJ",
+          "clanTag": null
+        },
+        {
+          "username": "Expansionist",
+          "clientID": "TWhtbW5x",
+          "clanTag": null
+        },
+        {
+          "username": "Imperium Manus",
+          "clientID": "3MVMhc2c",
+          "clanTag": "BOS"
+        },
+        {
+          "username": "IR Iran",
+          "clientID": "FEnzZWM8",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 690,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T19:27:37.130Z",
+      "url": "https://openfront.io/game/6YNH75jB"
     }
   ],
   "hvn": [
