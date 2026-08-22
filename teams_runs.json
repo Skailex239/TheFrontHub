@@ -66211,6 +66211,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T10:00:44.884Z",
       "url": "https://openfront.io/game/h4AqeFCq"
+    },
+    {
+      "id": "CQo2iDyh",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Bzh56",
+          "clientID": "Ztj9M4WQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon991",
+          "clientID": "bi2UE3HU",
+          "clanTag": null
+        },
+        {
+          "username": "pitchoune",
+          "clientID": "PrwF9rsA",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 717,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T10:02:45.522Z",
+      "url": "https://openfront.io/game/CQo2iDyh"
     }
   ],
   "quads": [
@@ -100903,6 +100933,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T09:42:21.300Z",
       "url": "https://openfront.io/game/sEFYbWkX"
+    },
+    {
+      "id": "sLiPAjEm",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "LTU",
+          "clientID": "GuKDU1MP",
+          "clanTag": "LTU"
+        },
+        {
+          "username": "SilverViper.cvk7",
+          "clientID": "zZTBuJaM",
+          "clanTag": null
+        },
+        {
+          "username": "Orange",
+          "clientID": "3sVuhNdx",
+          "clanTag": null
+        },
+        {
+          "username": "You are next",
+          "clientID": "KWDzvVFC",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 907,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T09:59:52.339Z",
+      "url": "https://openfront.io/game/sLiPAjEm"
+    },
+    {
+      "id": "ivA1en69",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "67 Cringelord",
+          "clientID": "4Upc4Xjx",
+          "clanTag": null
+        },
+        {
+          "username": "Greedland",
+          "clientID": "AFN1x2hi",
+          "clanTag": null
+        },
+        {
+          "username": "o_0",
+          "clientID": "mi7GiyjP",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "vNCcQmme",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1120,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T09:56:33.148Z",
+      "url": "https://openfront.io/game/ivA1en69"
     }
   ],
   "team_custom": [
