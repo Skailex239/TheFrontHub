@@ -112843,6 +112843,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T22:20:21.970Z",
       "url": "https://openfront.io/game/XpR1Qxyt"
+    },
+    {
+      "id": "LdSK4FuA",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Ikaros la folle",
+          "clientID": "DhsNDirc",
+          "clanTag": "RPS"
+        },
+        {
+          "username": "IMF",
+          "clientID": "EuiU9Fho",
+          "clanTag": null
+        },
+        {
+          "username": "Ikaros",
+          "clientID": "bBqARNk9",
+          "clanTag": "RPS"
+        },
+        {
+          "username": "ONI2000",
+          "clientID": "W6e71k2m",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 884,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T22:27:49.731Z",
+      "url": "https://openfront.io/game/LdSK4FuA"
     }
   ],
   "team_custom": [
