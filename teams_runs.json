@@ -32017,6 +32017,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T08:51:51.922Z",
       "url": "https://openfront.io/game/PqPCCzDn"
+    },
+    {
+      "id": "5yNKu6qH",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Latome",
+          "clientID": "vtdoLjBk",
+          "clanTag": "PGM"
+        },
+        {
+          "username": "Hold the line",
+          "clientID": "HtANAwNh",
+          "clanTag": "P1SUN"
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1228,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:01:01.735Z",
+      "url": "https://openfront.io/game/5yNKu6qH"
     }
   ],
   "trios": [
@@ -128970,6 +128995,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T08:55:17.758Z",
       "url": "https://openfront.io/game/JWMHo3rn"
+    },
+    {
+      "id": "DPnfjNer",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonLake4",
+          "clientID": "uz8UAKNL",
+          "clanTag": null
+        },
+        {
+          "username": ".                        .",
+          "clientID": "e4vEfF1h",
+          "clanTag": null
+        },
+        {
+          "username": "Cooper",
+          "clientID": "YrGF2WCo",
+          "clanTag": "CAD"
+        },
+        {
+          "username": "shima shara",
+          "clientID": "ZHuwNo92",
+          "clanTag": "SRB"
+        },
+        {
+          "username": "AnonTuba2",
+          "clientID": "rD3z58Jq",
+          "clanTag": null
+        },
+        {
+          "username": "roboday",
+          "clientID": "jL5ycjeo",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 795,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T09:09:10.191Z",
+      "url": "https://openfront.io/game/DPnfjNer"
     }
   ],
   "hvn": [
