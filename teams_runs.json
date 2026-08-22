@@ -35542,6 +35542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T17:24:10.629Z",
       "url": "https://openfront.io/game/rXBnV5v1"
+    },
+    {
+      "id": "j3Zouasg",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Kukarkins",
+          "clientID": "XxK5j1aM",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonEmber6",
+          "clientID": "5UURnWaA",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 745,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T17:27:22.332Z",
+      "url": "https://openfront.io/game/j3Zouasg"
     }
   ],
   "trios": [
@@ -141920,6 +141945,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T17:16:00.348Z",
       "url": "https://openfront.io/game/ipY7fRnG"
+    },
+    {
+      "id": "iuxPNAzi",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "penguin",
+          "clientID": "KBoMRGVh",
+          "clanTag": null
+        },
+        {
+          "username": "Who",
+          "clientID": "MjG4Q1PE",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSilence2",
+          "clientID": "Unq2K4o7",
+          "clanTag": null
+        },
+        {
+          "username": "Slovakistan",
+          "clientID": "SuSoeNha",
+          "clanTag": null
+        },
+        {
+          "username": "poilu",
+          "clientID": "356khgcC",
+          "clanTag": "BIT"
+        },
+        {
+          "username": "My boss thinks Im working",
+          "clientID": "q6Vb28cA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Trader",
+          "clientID": "8n9q4Cdr",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 947,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T17:25:03.193Z",
+      "url": "https://openfront.io/game/iuxPNAzi"
+    },
+    {
+      "id": "xpg64Xdj",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Send troops you idiots",
+          "clientID": "x8dYZDUq",
+          "clanTag": null
+        },
+        {
+          "username": "Hatsune Miku",
+          "clientID": "mHoJ2apu",
+          "clanTag": null
+        },
+        {
+          "username": "Send troops",
+          "clientID": "3ukUgyBs",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Kurdistan",
+          "clientID": "uuoAdRkn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "hadiz",
+          "clientID": "mbiDd5u3",
+          "clanTag": "UN"
+        },
+        {
+          "username": "RICKY",
+          "clientID": "zBs2r1q6",
+          "clanTag": null
+        },
+        {
+          "username": "EU Inc",
+          "clientID": "yfk3Cx77",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 1178,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T17:20:26.748Z",
+      "url": "https://openfront.io/game/xpg64Xdj"
     }
   ],
   "hvn": [
