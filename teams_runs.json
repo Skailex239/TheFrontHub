@@ -93908,6 +93908,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-21T23:38:43.256Z",
       "url": "https://openfront.io/game/i9JeJXJc"
+    },
+    {
+      "id": "gmv3jLQn",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BirKar",
+          "clientID": "qnSD4Xmf",
+          "clanTag": "001"
+        },
+        {
+          "username": "pedi",
+          "clientID": "nk3bPUyR",
+          "clanTag": "001"
+        },
+        {
+          "username": "Lagman",
+          "clientID": "sAJ96Ebr",
+          "clanTag": null
+        },
+        {
+          "username": "Da Warboss",
+          "clientID": "gnC8XnWH",
+          "clanTag": "POOB"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 832,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T00:06:56.575Z",
+      "url": "https://openfront.io/game/gmv3jLQn"
+    },
+    {
+      "id": "iykuagqW",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "NULL",
+          "clientID": "JndhDeA8",
+          "clanTag": "NULL"
+        },
+        {
+          "username": "AnonWindmill4",
+          "clientID": "Viaxvfm1",
+          "clanTag": "AIO"
+        },
+        {
+          "username": "I Love you",
+          "clientID": "fcsJ5wZM",
+          "clanTag": null
+        },
+        {
+          "username": "AnonNebula7",
+          "clientID": "5LrijCXm",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 630,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T00:10:20.808Z",
+      "url": "https://openfront.io/game/iykuagqW"
     }
   ],
   "team_custom": [
@@ -119195,6 +119265,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-21T23:56:08.370Z",
       "url": "https://openfront.io/game/UEBvgwX1"
+    },
+    {
+      "id": "Ys4muCRU",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Jickyleprince",
+          "clientID": "MEKmjwBC",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "Pahlavi",
+          "clientID": "eD9K2TMK",
+          "clanTag": "IR"
+        },
+        {
+          "username": "Troy",
+          "clientID": "oQhU6woq",
+          "clanTag": "SCH"
+        },
+        {
+          "username": "goryachenky",
+          "clientID": "z7J9iQLX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBridge2",
+          "clientID": "ErtXE2Ww",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEmber5",
+          "clientID": "EsrMTZvV",
+          "clanTag": null
+        },
+        {
+          "username": "Pirates of Appalachia",
+          "clientID": "aecGCavP",
+          "clanTag": "DIE"
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 891,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T00:06:17.031Z",
+      "url": "https://openfront.io/game/Ys4muCRU"
     }
   ],
   "hvn": [
