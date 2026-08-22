@@ -36467,6 +36467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T20:31:39.394Z",
       "url": "https://openfront.io/game/hqXuyG34"
+    },
+    {
+      "id": "7dz8pwvd",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonShield7",
+          "clientID": "vcKDZ8R6",
+          "clanTag": null
+        },
+        {
+          "username": "AnonFrost2",
+          "clientID": "sdTtnvS6",
+          "clanTag": null
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 447,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T20:40:34.326Z",
+      "url": "https://openfront.io/game/7dz8pwvd"
     }
   ],
   "trios": [
@@ -73471,6 +73496,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T20:35:22.821Z",
       "url": "https://openfront.io/game/5kSMnfuJ"
+    },
+    {
+      "id": "uhwetY2u",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "IWillBetrayU",
+          "clientID": "qG47qj8V",
+          "clanTag": null
+        },
+        {
+          "username": "Airworthy",
+          "clientID": "qZpATwAJ",
+          "clanTag": "HI"
+        },
+        {
+          "username": "Sovied",
+          "clientID": "dZUNT2jV",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 783,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T20:34:06.900Z",
+      "url": "https://openfront.io/game/uhwetY2u"
     }
   ],
   "quads": [
@@ -111033,6 +111088,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T19:52:08.365Z",
       "url": "https://openfront.io/game/Mtoif9FC"
+    },
+    {
+      "id": "Yp4ZDXfg",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "ur Team u ldlot",
+          "clientID": "xtn7PAnM",
+          "clanTag": "HELP"
+        },
+        {
+          "username": "Pandemonium",
+          "clientID": "ARirRZQ4",
+          "clanTag": null
+        },
+        {
+          "username": "New Britannia",
+          "clientID": "V8BY5dbr",
+          "clanTag": null
+        },
+        {
+          "username": "Astroska",
+          "clientID": "BmhrecSA",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 643,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T20:37:41.049Z",
+      "url": "https://openfront.io/game/Yp4ZDXfg"
     }
   ],
   "team_custom": [
