@@ -37467,6 +37467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T23:11:48.682Z",
       "url": "https://openfront.io/game/FVWLHHc8"
+    },
+    {
+      "id": "uuHE7pAn",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonGlacier8",
+          "clientID": "ZbTEuWxf",
+          "clanTag": null
+        },
+        {
+          "username": "Volaryus",
+          "clientID": "jQFMwmWB",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 1160,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T23:06:21.877Z",
+      "url": "https://openfront.io/game/uuHE7pAn"
     }
   ],
   "trios": [
@@ -113408,6 +113433,111 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T23:08:24.079Z",
       "url": "https://openfront.io/game/fPvnMgnG"
+    },
+    {
+      "id": "51JQfuCA",
+      "mode": "quads",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "AnonOctopus4",
+          "clientID": "z3iiYqvh",
+          "clanTag": null
+        },
+        {
+          "username": "jello",
+          "clientID": "q9TrzMfG",
+          "clanTag": "ENTS"
+        },
+        {
+          "username": "AnonSad",
+          "clientID": "vPcs6pn9",
+          "clanTag": "ENTS"
+        },
+        {
+          "username": "Draxxnor Empire",
+          "clientID": "TsckAMDJ",
+          "clanTag": "ENTS"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 864,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T23:09:24.700Z",
+      "url": "https://openfront.io/game/51JQfuCA"
+    },
+    {
+      "id": "4RDPbEYC",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "V A L Z",
+          "clientID": "BSKSx4MZ",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "ZazZ",
+          "clientID": "iWJ4QY66",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "The Grandma Gary",
+          "clientID": "jJ2g9CtK",
+          "clanTag": "BRAVE"
+        },
+        {
+          "username": "AnonMeteor6",
+          "clientID": "fSv2jCTt",
+          "clanTag": null
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 12,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-22T23:12:07.921Z",
+      "url": "https://openfront.io/game/4RDPbEYC"
+    },
+    {
+      "id": "qKJyyBp4",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "darthmaul",
+          "clientID": "zdUaFy35",
+          "clanTag": null
+        },
+        {
+          "username": "Apothicaire",
+          "clientID": "E2h4tKJD",
+          "clanTag": null
+        },
+        {
+          "username": "redpike",
+          "clientID": "khhfE7tK",
+          "clanTag": "GER"
+        },
+        {
+          "username": "xeqhon",
+          "clientID": "Jme8f3Ge",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 752,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:12:44.975Z",
+      "url": "https://openfront.io/game/qKJyyBp4"
     }
   ],
   "team_custom": [
