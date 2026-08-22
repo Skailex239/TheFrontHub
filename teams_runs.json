@@ -64921,6 +64921,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T07:22:38.037Z",
       "url": "https://openfront.io/game/Ewej9ivL"
+    },
+    {
+      "id": "1yCA9UD4",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Train1 man",
+          "clientID": "Y83gQVLZ",
+          "clanTag": null
+        },
+        {
+          "username": "shadowpulse_08",
+          "clientID": "pJ2UJTFK",
+          "clanTag": null
+        },
+        {
+          "username": "yxllololol",
+          "clientID": "PapyYQmd",
+          "clanTag": null
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 486,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T07:36:23.845Z",
+      "url": "https://openfront.io/game/1yCA9UD4"
     }
   ],
   "quads": [
@@ -127090,6 +127120,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T07:19:50.249Z",
       "url": "https://openfront.io/game/hq8xkrSR"
+    },
+    {
+      "id": "puo6PKoe",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Dawn",
+          "clientID": "vM27yKN8",
+          "clanTag": null
+        },
+        {
+          "username": "Snaky",
+          "clientID": "vhgFdbRa",
+          "clanTag": "BZH"
+        },
+        {
+          "username": "Noob",
+          "clientID": "F2JsGwNK",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToucan7",
+          "clientID": "zYHHLnHP",
+          "clanTag": null
+        },
+        {
+          "username": "Meow",
+          "clientID": "mxoW1TnX",
+          "clanTag": "GLORY"
+        },
+        {
+          "username": "AnonOcean6",
+          "clientID": "xoj3XLpy",
+          "clanTag": null
+        },
+        {
+          "username": "Auraxxor",
+          "clientID": "3cu4S9id",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 801,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T07:30:56.574Z",
+      "url": "https://openfront.io/game/puo6PKoe"
     }
   ],
   "hvn": [
