@@ -35292,6 +35292,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T16:24:45.359Z",
       "url": "https://openfront.io/game/xaNq3xyb"
+    },
+    {
+      "id": "xnCoQ8Ds",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Kakiru",
+          "clientID": "3STGYuzo",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "aerokorb",
+          "clientID": "f9wBKFAt",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Africa",
+      "duration_s": 668,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T16:44:01.741Z",
+      "url": "https://openfront.io/game/xnCoQ8Ds"
     }
   ],
   "trios": [
@@ -140625,6 +140650,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T16:38:20.244Z",
       "url": "https://openfront.io/game/Pj7x8Y8s"
+    },
+    {
+      "id": "cquJnsM3",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonShark3",
+          "clientID": "BEYFbq4J",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnchor5",
+          "clientID": "daW7SiBu",
+          "clanTag": null
+        },
+        {
+          "username": "Ftv4",
+          "clientID": "m9remeyG",
+          "clanTag": null
+        },
+        {
+          "username": "BZH",
+          "clientID": "vfMHadzG",
+          "clanTag": null
+        },
+        {
+          "username": "Mus_oleeny03",
+          "clientID": "SR5a7wR9",
+          "clanTag": null
+        },
+        {
+          "username": "STALIN",
+          "clientID": "3RuLnN9L",
+          "clanTag": "USSR"
+        }
+      ],
+      "map": "Danish Straits",
+      "duration_s": 746,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T16:42:56.621Z",
+      "url": "https://openfront.io/game/cquJnsM3"
     }
   ],
   "hvn": [
