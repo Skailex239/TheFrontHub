@@ -34867,6 +34867,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T15:32:14.197Z",
       "url": "https://openfront.io/game/rAJ7dPun"
+    },
+    {
+      "id": "My3E1JBm",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "WhoWho",
+          "clientID": "218MJQcH",
+          "clanTag": "TAG"
+        },
+        {
+          "username": "diva",
+          "clientID": "N2xU3mTh",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 711,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:50:58.572Z",
+      "url": "https://openfront.io/game/My3E1JBm"
+    },
+    {
+      "id": "Q6h13xRQ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Your Name Here",
+          "clientID": "svsHE3TZ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon701",
+          "clientID": "KEyE9BAz",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 612,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T15:54:12.864Z",
+      "url": "https://openfront.io/game/Q6h13xRQ"
     }
   ],
   "trios": [
@@ -139395,6 +139445,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T15:43:17.008Z",
       "url": "https://openfront.io/game/KRBPn5Fb"
+    },
+    {
+      "id": "g9GYAJ1W",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "ZazZ",
+          "clientID": "1DWcQmt1",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Ziyad",
+          "clientID": "boc9WKGj",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Psychonaute420",
+          "clientID": "4SgEtSrA",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Lonely_Millennial",
+          "clientID": "aWMT2HRe",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "Jindra",
+          "clientID": "LWFZ7UKn",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "bro",
+          "clientID": "3ZDuzaCn",
+          "clanTag": "ROYS"
+        },
+        {
+          "username": "SuperEJ111111",
+          "clientID": "puX4GwBX",
+          "clanTag": "ROYS"
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 800,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 118,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T15:50:01.493Z",
+      "url": "https://openfront.io/game/g9GYAJ1W"
     }
   ],
   "hvn": [
