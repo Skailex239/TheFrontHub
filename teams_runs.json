@@ -35592,6 +35592,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T17:39:10.077Z",
       "url": "https://openfront.io/game/kbKxRwfg"
+    },
+    {
+      "id": "YmpdpC8U",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "jUDGE",
+          "clientID": "rb9iPqAv",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Dodo",
+          "clientID": "CTkQD4eA",
+          "clanTag": "AMW"
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 552,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T17:38:11.015Z",
+      "url": "https://openfront.io/game/YmpdpC8U"
+    },
+    {
+      "id": "G4Kkg5t8",
+      "mode": "duos",
+      "team": "Team 30",
+      "players": [
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "6tayp3da",
+          "clanTag": null
+        },
+        {
+          "username": "Kakashka",
+          "clientID": "xwSiDoj5",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1166,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T17:29:22.438Z",
+      "url": "https://openfront.io/game/G4Kkg5t8"
     }
   ],
   "trios": [
@@ -142100,6 +142150,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T17:20:26.748Z",
       "url": "https://openfront.io/game/xpg64Xdj"
+    },
+    {
+      "id": "3CWcsy6b",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kirch1nator",
+          "clientID": "BXJzs7ZB",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Kataclysm",
+          "clientID": "MDW8qan1",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Zyro",
+          "clientID": "T4M1VXwK",
+          "clanTag": "JR"
+        },
+        {
+          "username": "The German Navy",
+          "clientID": "bY4zP5MJ",
+          "clanTag": "JR"
+        },
+        {
+          "username": "Blossom",
+          "clientID": "HcAnMHm5",
+          "clanTag": "JR"
+        },
+        {
+          "username": "DougyJr",
+          "clientID": "xnzyV2KK",
+          "clanTag": "JR"
+        },
+        {
+          "username": "pizza margherita",
+          "clientID": "W9CZg4bk",
+          "clanTag": "JR"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 437,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T17:39:53.128Z",
+      "url": "https://openfront.io/game/3CWcsy6b"
     }
   ],
   "hvn": [
