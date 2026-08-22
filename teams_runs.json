@@ -111303,6 +111303,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-22T20:37:22.952Z",
       "url": "https://openfront.io/game/XnyfbucH"
+    },
+    {
+      "id": "mSbCcyZb",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Bakkra",
+          "clientID": "LLJ6XLim",
+          "clanTag": "1337"
+        },
+        {
+          "username": "AnonViolin2",
+          "clientID": "2qqDDKL1",
+          "clanTag": null
+        },
+        {
+          "username": "RiAz",
+          "clientID": "JCQ9xR7Q",
+          "clanTag": "AR"
+        },
+        {
+          "username": "AnonRiddle6",
+          "clientID": "9emB55pa",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 823,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T20:49:43.347Z",
+      "url": "https://openfront.io/game/mSbCcyZb"
     }
   ],
   "team_custom": [
@@ -147455,6 +147490,101 @@
       "playerTeams": 6,
       "timestamp": "2026-08-22T20:48:41.095Z",
       "url": "https://openfront.io/game/7Fss9sGV"
+    },
+    {
+      "id": "xh6xCHEt",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "swe",
+          "clientID": "TB1NXEak",
+          "clanTag": null
+        },
+        {
+          "username": "RedBlack",
+          "clientID": "T72Q5QN6",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "WOLF",
+          "clientID": "zHvwsoRx",
+          "clanTag": "FSM"
+        },
+        {
+          "username": "Woop",
+          "clientID": "jWG3GZ5z",
+          "clanTag": null
+        },
+        {
+          "username": "Duke Nuke",
+          "clientID": "wzTMnBT1",
+          "clanTag": "666"
+        },
+        {
+          "username": "Swiss Banker",
+          "clientID": "XptrFxo1",
+          "clanTag": null
+        }
+      ],
+      "map": "East Asia",
+      "duration_s": 592,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T20:53:23.045Z",
+      "url": "https://openfront.io/game/xh6xCHEt"
+    },
+    {
+      "id": "2XiWVLnS",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Kim Jong Uns dream",
+          "clientID": "Fjpc5xRA",
+          "clanTag": "YAHU"
+        },
+        {
+          "username": "hetero",
+          "clientID": "PKj58gwz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRuby4",
+          "clientID": "rkSFqkpf",
+          "clanTag": null
+        },
+        {
+          "username": "Amazon",
+          "clientID": "rzjUz5fX",
+          "clanTag": null
+        },
+        {
+          "username": "Banned",
+          "clientID": "Spn4Rmf1",
+          "clanTag": "222"
+        },
+        {
+          "username": "Broc_Liath",
+          "clientID": "kZtJtWTz",
+          "clanTag": null
+        },
+        {
+          "username": "Chud",
+          "clientID": "rnzzWdiV",
+          "clanTag": "HH"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1174,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T20:43:10.069Z",
+      "url": "https://openfront.io/game/2XiWVLnS"
     }
   ],
   "hvn": [
