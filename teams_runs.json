@@ -65281,6 +65281,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T07:50:08.329Z",
       "url": "https://openfront.io/game/Mxr3b9eV"
+    },
+    {
+      "id": "AEbTACVz",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Santamarr",
+          "clientID": "if5RghQX",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCheetah8",
+          "clientID": "uWxam2qb",
+          "clanTag": null
+        },
+        {
+          "username": "conker",
+          "clientID": "foVTpcMb",
+          "clanTag": "CATX"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1020,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T08:14:02.163Z",
+      "url": "https://openfront.io/game/AEbTACVz"
     }
   ],
   "quads": [
@@ -127940,6 +127970,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T08:15:27.775Z",
       "url": "https://openfront.io/game/fjEhBHsN"
+    },
+    {
+      "id": "Qi82szkW",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Visca",
+          "clientID": "dANAEbfZ",
+          "clanTag": "AP"
+        },
+        {
+          "username": "hayashi",
+          "clientID": "p667C4Ss",
+          "clanTag": null
+        },
+        {
+          "username": "SATSUMA",
+          "clientID": "c6gU1exP",
+          "clanTag": null
+        },
+        {
+          "username": "RatiGeo",
+          "clientID": "4JRESU8U",
+          "clanTag": null
+        },
+        {
+          "username": "A.M",
+          "clientID": "R54zU8gy",
+          "clanTag": "SEA"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 696,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-22T08:20:53.109Z",
+      "url": "https://openfront.io/game/Qi82szkW"
     }
   ],
   "hvn": [
