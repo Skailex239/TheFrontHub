@@ -110218,6 +110218,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T19:35:11.160Z",
       "url": "https://openfront.io/game/Ga7DDX9b"
+    },
+    {
+      "id": "wsva9nh7",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Uncle Ben",
+          "clientID": "tnmqsefG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOnyx5",
+          "clientID": "RovVcfQ2",
+          "clanTag": null
+        },
+        {
+          "username": "Ksazz",
+          "clientID": "VW4Z2mtW",
+          "clanTag": "UA"
+        },
+        {
+          "username": "AnonScorpion2",
+          "clientID": "QsLVaN9m",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 811,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T19:37:38.252Z",
+      "url": "https://openfront.io/game/wsva9nh7"
     }
   ],
   "team_custom": [
@@ -145635,6 +145670,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T19:32:46.227Z",
       "url": "https://openfront.io/game/UAcvkSKS"
+    },
+    {
+      "id": "hALDhC46",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "trade",
+          "clientID": "DDQQDNbe",
+          "clanTag": "TRA"
+        },
+        {
+          "username": "Mau",
+          "clientID": "bP9u7ULh",
+          "clanTag": null
+        },
+        {
+          "username": "Germany",
+          "clientID": "51xA5jdM",
+          "clanTag": null
+        },
+        {
+          "username": "General Jonny Law",
+          "clientID": "uDhQzaZx",
+          "clanTag": "NU"
+        },
+        {
+          "username": "DKarte",
+          "clientID": "mpRmgrUm",
+          "clanTag": null
+        },
+        {
+          "username": "llukys",
+          "clientID": "Kvnnb9Ss",
+          "clanTag": null
+        },
+        {
+          "username": "OPENSCAM",
+          "clientID": "Vh3azjU1",
+          "clanTag": "HAHA"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 805,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T19:38:41.165Z",
+      "url": "https://openfront.io/game/hALDhC46"
     }
   ],
   "hvn": [
