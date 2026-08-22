@@ -37267,6 +37267,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T22:29:53.402Z",
       "url": "https://openfront.io/game/zKSJCsYW"
+    },
+    {
+      "id": "kPzLJaAi",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Argent",
+          "clientID": "inePLTDG",
+          "clanTag": null
+        },
+        {
+          "username": "Deez",
+          "clientID": "yuFA1gJt",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 333,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:39:47.844Z",
+      "url": "https://openfront.io/game/kPzLJaAi"
+    },
+    {
+      "id": "Li63UVzJ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PieRat",
+          "clientID": "MWq4CoVA",
+          "clanTag": "NU"
+        },
+        {
+          "username": "Geest",
+          "clientID": "YWSBNw7d",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 2158,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T22:09:40.291Z",
+      "url": "https://openfront.io/game/Li63UVzJ"
     }
   ],
   "trios": [
@@ -180552,6 +180602,116 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-22T22:13:40.314Z",
       "url": "https://openfront.io/game/sq8eeW5J"
+    },
+    {
+      "id": "rcLFr4mu",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Blossom",
+          "clientID": "P2GP7sbF",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScarlet3",
+          "clientID": "rPYn7Hi8",
+          "clanTag": null
+        },
+        {
+          "username": "BATIMENT",
+          "clientID": "7TWaKn7E",
+          "clanTag": "CBAN"
+        },
+        {
+          "username": "AnonSugar4",
+          "clientID": "aEeZXJt8",
+          "clanTag": null
+        },
+        {
+          "username": "Faustino",
+          "clientID": "NMNmXgEY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Reader",
+          "clientID": "p2mLcXCB",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCastle7",
+          "clientID": "gtVLUa3F",
+          "clanTag": null
+        },
+        {
+          "username": "Volcano",
+          "clientID": "eYVFUSM4",
+          "clanTag": null
+        },
+        {
+          "username": "Rato",
+          "clientID": "2aU72g1a",
+          "clanTag": null
+        },
+        {
+          "username": "MITD",
+          "clientID": "cm4iXhJ4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSugar1",
+          "clientID": "xqfqiGHy",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSilence7",
+          "clientID": "GLhwa7ah",
+          "clanTag": null
+        },
+        {
+          "username": "Friendly Mito",
+          "clientID": "fVphqVSR",
+          "clanTag": "UN"
+        },
+        {
+          "username": "arsham",
+          "clientID": "js3DwBZc",
+          "clanTag": "HESHY"
+        },
+        {
+          "username": "LJIEH",
+          "clientID": "er13dDth",
+          "clanTag": "BR"
+        },
+        {
+          "username": "AnonMonkey",
+          "clientID": "61QcxybG",
+          "clanTag": null
+        },
+        {
+          "username": "Dju",
+          "clientID": "bnztX3hc",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anon300",
+          "clientID": "Ht8gY2JP",
+          "clanTag": "A3"
+        },
+        {
+          "username": "Umayyad",
+          "clientID": "ma413Yj9",
+          "clanTag": null
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 622,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-22T22:34:48.397Z",
+      "url": "https://openfront.io/game/rcLFr4mu"
     }
   ]
 }
