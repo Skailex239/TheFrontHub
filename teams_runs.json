@@ -37517,6 +37517,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T23:20:45.662Z",
       "url": "https://openfront.io/game/d1j3QXN2"
+    },
+    {
+      "id": "6bZkYakF",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Richterspruch",
+          "clientID": "pXPGJou5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZeppelin4",
+          "clientID": "7tk3tdji",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 673,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T23:20:05.368Z",
+      "url": "https://openfront.io/game/6bZkYakF"
     }
   ],
   "trios": [
@@ -75091,6 +75116,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-22T23:01:39.910Z",
       "url": "https://openfront.io/game/fFo6RdA6"
+    },
+    {
+      "id": "ves8H7Qw",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "free tibet",
+          "clientID": "J96pSHkt",
+          "clanTag": null
+        },
+        {
+          "username": "delta",
+          "clientID": "dTrLm2mi",
+          "clanTag": "GAMMA"
+        },
+        {
+          "username": "Hehbs",
+          "clientID": "vsMZ6nu1",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 579,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T23:22:24.974Z",
+      "url": "https://openfront.io/game/ves8H7Qw"
     }
   ],
   "quads": [
