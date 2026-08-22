@@ -62026,6 +62026,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T00:35:37.386Z",
       "url": "https://openfront.io/game/vsXwVb79"
+    },
+    {
+      "id": "7qBzif7v",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Rattack",
+          "clientID": "PxfiAafj",
+          "clanTag": null
+        },
+        {
+          "username": "THIS GAME IS A SCAM",
+          "clientID": "7Qup575i",
+          "clanTag": null
+        },
+        {
+          "username": "123",
+          "clientID": "k2TGA4yS",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 592,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T01:01:51.040Z",
+      "url": "https://openfront.io/game/7qBzif7v"
     }
   ],
   "quads": [
@@ -94618,6 +94648,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T00:43:21.401Z",
       "url": "https://openfront.io/game/SWWtoMdZ"
+    },
+    {
+      "id": "qTB5M2CN",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kataclysm",
+          "clientID": "HZY4t2nr",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "Twitch_MehighPlays",
+          "clientID": "5Gmyrdhr",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "Carakyla",
+          "clientID": "fmpsAwAA",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "France",
+          "clientID": "p65F3RfQ",
+          "clanTag": "HIGH"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 575,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T01:03:44.160Z",
+      "url": "https://openfront.io/game/qTB5M2CN"
     }
   ],
   "team_custom": [
