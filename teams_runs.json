@@ -30342,6 +30342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T02:11:58.904Z",
       "url": "https://openfront.io/game/u5LB3L5K"
+    },
+    {
+      "id": "g9UzfQgL",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "APG",
+          "clientID": "KXSBe4f5",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Aragorn5",
+          "clientID": "jE2qNtTr",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T02:23:12.992Z",
+      "url": "https://openfront.io/game/g9UzfQgL"
     }
   ],
   "trios": [
@@ -62516,6 +62541,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T02:15:12.909Z",
       "url": "https://openfront.io/game/eSuagJob"
+    },
+    {
+      "id": "FU5HSdTw",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Apothicaire",
+          "clientID": "PmfFW9E9",
+          "clanTag": null
+        },
+        {
+          "username": "DreamyJoker.UINx",
+          "clientID": "3h6KYzyw",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPufferfish8",
+          "clientID": "RXN1x1gR",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 755,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T02:24:06.046Z",
+      "url": "https://openfront.io/game/FU5HSdTw"
     }
   ],
   "quads": [
