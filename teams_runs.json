@@ -30942,6 +30942,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T04:40:26.634Z",
       "url": "https://openfront.io/game/iMCKAAz7"
+    },
+    {
+      "id": "VcuWqie4",
+      "mode": "duos",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Mozambique Here",
+          "clientID": "m7rUXTrQ",
+          "clanTag": "LMAO"
+        },
+        {
+          "username": "SCREEEEEEEEEEEE",
+          "clientID": "76o79e2K",
+          "clanTag": "LMAO"
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1832,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T04:32:18.878Z",
+      "url": "https://openfront.io/game/VcuWqie4"
     }
   ],
   "trios": [
@@ -63716,6 +63741,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T04:43:58.406Z",
       "url": "https://openfront.io/game/dGSukWjC"
+    },
+    {
+      "id": "QSAmWGsC",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "TITO",
+          "clientID": "9AckXVTx",
+          "clanTag": "DIDY"
+        },
+        {
+          "username": "Plowshare",
+          "clientID": "w1pL2VxJ",
+          "clanTag": null
+        },
+        {
+          "username": "Stu",
+          "clientID": "a9dBGewW",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "World",
+      "duration_s": 860,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T04:47:57.765Z",
+      "url": "https://openfront.io/game/QSAmWGsC"
     }
   ],
   "quads": [
