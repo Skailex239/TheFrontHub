@@ -32067,6 +32067,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T09:14:28.544Z",
       "url": "https://openfront.io/game/YsMhcmFs"
+    },
+    {
+      "id": "fL3gezgL",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Alberto",
+          "clientID": "dhmaBzBD",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Smile",
+          "clientID": "GVYSJ1nZ",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1098,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:10:51.302Z",
+      "url": "https://openfront.io/game/fL3gezgL"
+    },
+    {
+      "id": "1okQamiu",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mycenae",
+          "clientID": "hudTBAmi",
+          "clanTag": "AST"
+        },
+        {
+          "username": "BOB",
+          "clientID": "8hVzJU69",
+          "clanTag": "002"
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 350,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T09:23:21.574Z",
+      "url": "https://openfront.io/game/1okQamiu"
     }
   ],
   "trios": [
@@ -65711,6 +65761,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T08:54:11.158Z",
       "url": "https://openfront.io/game/csyK5QXi"
+    },
+    {
+      "id": "DCFyH4sr",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "MOMO",
+          "clientID": "SesjNKsY",
+          "clanTag": null
+        },
+        {
+          "username": "AMIN",
+          "clientID": "FGLk1g1j",
+          "clanTag": "IR"
+        },
+        {
+          "username": "Liberte Egalite Fraternite",
+          "clientID": "B4QMrvhm",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 1731,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T09:01:37.767Z",
+      "url": "https://openfront.io/game/DCFyH4sr"
     }
   ],
   "quads": [
@@ -129165,6 +129245,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T09:13:19.476Z",
       "url": "https://openfront.io/game/zXcGKEHx"
+    },
+    {
+      "id": "9eSEemKA",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Kenpachi",
+          "clientID": "NEnbZjnj",
+          "clanTag": null
+        },
+        {
+          "username": "Howard",
+          "clientID": "iAL5Nbpu",
+          "clanTag": null
+        },
+        {
+          "username": "Swiss Republic",
+          "clientID": "phWZFqd3",
+          "clanTag": null
+        },
+        {
+          "username": "Kyle",
+          "clientID": "FtRrKyVt",
+          "clanTag": "UN"
+        },
+        {
+          "username": "MungeFundler",
+          "clientID": "YAsH3yCN",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 1071,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T09:11:58.884Z",
+      "url": "https://openfront.io/game/9eSEemKA"
     }
   ],
   "hvn": [
