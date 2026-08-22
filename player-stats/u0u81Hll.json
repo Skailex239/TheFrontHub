@@ -1,9 +1,9 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-22T23:06:31.716Z",
-  "lastSyncedAt": "2026-08-22T23:06:30.094Z",
-  "totalGames": 2252,
+  "computedAt": "2026-08-22T23:08:50.475Z",
+  "lastSyncedAt": "2026-08-22T23:08:47.508Z",
+  "totalGames": 2253,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "4 503",
     "totalWins": "855",
-    "totalGames": "2 252",
+    "totalGames": "2 253",
     "totalPlaytime": "23j 9h",
     "totalPlaytimeCompact": "23j 9h",
     "avgGameDuration": "14m 57s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "561h"
   },
   "playtime": {
-    "totalSec": 2020251,
-    "avgGameSec": 897.091918294849,
+    "totalSec": 2022085,
+    "avgGameSec": 897.5077674212162,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1405,
-        "playtimeSec": 1626303,
+        "games": 1406,
+        "playtimeSec": 1628137,
         "wins": 384
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 855,
-    "defeat": 1056,
+    "defeat": 1057,
     "incomplete": 341
   },
   "maps": [
@@ -1124,6 +1124,22 @@
       }
     },
     {
+      "map": "Titan",
+      "count": 4,
+      "wins": 0,
+      "losses": 4,
+      "playtimeSec": 5696,
+      "avgDuration": 1424,
+      "winRate": 0,
+      "lastPlayed": 1787438268650,
+      "formatted": {
+        "playtime": "1h 34m",
+        "avgDuration": "23m",
+        "winRate": "0%",
+        "lastPlayed": "22/08/26"
+      }
+    },
+    {
       "map": "United States",
       "count": 4,
       "wins": 2,
@@ -1265,22 +1281,6 @@
         "avgDuration": "18m",
         "winRate": "33%",
         "lastPlayed": "23/06/26"
-      }
-    },
-    {
-      "map": "Titan",
-      "count": 3,
-      "wins": 0,
-      "losses": 3,
-      "playtimeSec": 3862,
-      "avgDuration": 1287.3333333333333,
-      "winRate": 0,
-      "lastPlayed": 1782061947257,
-      "formatted": {
-        "playtime": "1h 4m",
-        "avgDuration": "21m",
-        "winRate": "0%",
-        "lastPlayed": "21/06/26"
       }
     },
     {
@@ -1654,7 +1654,7 @@
   ],
   "activity": {
     "byHour": [
-      64,
+      65,
       60,
       32,
       14,
@@ -1686,14 +1686,9 @@
       334,
       371,
       399,
-      321
+      322
     ],
     "byDay": [
-      {
-        "date": "14/05/2026",
-        "count": 7,
-        "playtimeSec": 8855
-      },
       {
         "date": "14/06/2026",
         "count": 21,
@@ -1948,6 +1943,11 @@
         "date": "23/06/2026",
         "count": 5,
         "playtimeSec": 3510
+      },
+      {
+        "date": "23/08/2026",
+        "count": 1,
+        "playtimeSec": 1834
       },
       {
         "date": "24/01/2026",
@@ -2222,6 +2222,17 @@
   },
   "recentGames": [
     {
+      "gameId": "efDKxS5n",
+      "start": "2026-08-22T22:37:48.650Z",
+      "map": "Titan",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1834,
+      "totalPlayers": 34,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "nwMZPxe3",
       "start": "2026-08-22T21:51:03.645Z",
       "map": "Europe",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 314,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "EdpabkdL",
-      "start": "2026-08-22T14:55:47.648Z",
-      "map": "Europe Classic",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 310,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"

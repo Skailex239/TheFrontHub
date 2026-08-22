@@ -1,12 +1,26 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "lastSyncedAt": "2026-08-22T23:06:30.094Z",
+  "lastSyncedAt": "2026-08-22T23:08:47.508Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 2252,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 2253,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "efDKxS5n",
+      "start": "2026-08-22T22:37:48.650Z",
+      "durationSeconds": 1834,
+      "map": "Titan",
+      "mode": "Free For All",
+      "type": "Private",
+      "playerTeams": "2",
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 34,
+      "username": "Anto",
+      "clanTag": null
+    },
     {
       "gameId": "nwMZPxe3",
       "start": "2026-08-22T21:51:03.645Z",
