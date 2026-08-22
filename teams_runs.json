@@ -29942,6 +29942,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T00:40:44.740Z",
       "url": "https://openfront.io/game/YUFYfBcn"
+    },
+    {
+      "id": "i12UJiUX",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon823",
+          "clientID": "VNxswWyq",
+          "clanTag": null
+        },
+        {
+          "username": "ZappyMan",
+          "clientID": "7kuJtqfo",
+          "clanTag": "HELP"
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1500,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T00:26:07.311Z",
+      "url": "https://openfront.io/game/i12UJiUX"
     }
   ],
   "trios": [
@@ -61846,6 +61871,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T00:30:25.558Z",
       "url": "https://openfront.io/game/ScceZYYh"
+    },
+    {
+      "id": "vsXwVb79",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "FFFAAA",
+          "clientID": "m6bLvEi2",
+          "clanTag": null
+        },
+        {
+          "username": ".Z.",
+          "clientID": "QTaSkXTh",
+          "clanTag": "EU"
+        },
+        {
+          "username": "chasfire",
+          "clientID": "5eMfjEwX",
+          "clanTag": "EU"
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 808,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T00:35:37.386Z",
+      "url": "https://openfront.io/game/vsXwVb79"
     }
   ],
   "quads": [
