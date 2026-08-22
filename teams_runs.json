@@ -68181,6 +68181,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T13:20:02.292Z",
       "url": "https://openfront.io/game/V87BDS1Z"
+    },
+    {
+      "id": "vVLtUGFg",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Seoul",
+          "clientID": "KKvTPxLq",
+          "clanTag": null
+        },
+        {
+          "username": "jetaimealex",
+          "clientID": "JbYb7JMw",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOnyx6",
+          "clientID": "wS6qXFTH",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1437,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 3,
+      "timestamp": "2026-08-22T13:06:29.513Z",
+      "url": "https://openfront.io/game/vVLtUGFg"
     }
   ],
   "quads": [
@@ -135060,6 +135090,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-22T13:16:29.971Z",
       "url": "https://openfront.io/game/hxUYCvoG"
+    },
+    {
+      "id": "qBEGEJEk",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Walhalla0815",
+          "clientID": "xrq6vggR",
+          "clanTag": "SOD4"
+        },
+        {
+          "username": "AnonJaguar6",
+          "clientID": "bzqP2Fkm",
+          "clanTag": null
+        },
+        {
+          "username": "HotTruck.GjHx",
+          "clientID": "VuKtkPmF",
+          "clanTag": null
+        },
+        {
+          "username": "Dont play solo",
+          "clientID": "qqhyJHXe",
+          "clanTag": null
+        },
+        {
+          "username": "Tadokoro Kouzi",
+          "clientID": "UVVZuZvv",
+          "clanTag": "810"
+        }
+      ],
+      "map": "World",
+      "duration_s": 1106,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T13:13:15.146Z",
+      "url": "https://openfront.io/game/qBEGEJEk"
     }
   ],
   "hvn": [
