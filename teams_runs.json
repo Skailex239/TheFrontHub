@@ -31242,6 +31242,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T05:58:56.261Z",
       "url": "https://openfront.io/game/7CFbpwuZ"
+    },
+    {
+      "id": "SuF8S4HP",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cell",
+          "clientID": "MeWM2VvD",
+          "clanTag": null
+        },
+        {
+          "username": "Hello",
+          "clientID": "zt8E5S1D",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Hormuz",
+      "duration_s": 315,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T06:06:33.535Z",
+      "url": "https://openfront.io/game/SuF8S4HP"
     }
   ],
   "trios": [
@@ -64226,6 +64251,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-22T06:01:35.511Z",
       "url": "https://openfront.io/game/P8L2HCGH"
+    },
+    {
+      "id": "HGecWLVH",
+      "mode": "trios",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "Spain",
+          "clientID": "JTzPBtNT",
+          "clanTag": null
+        },
+        {
+          "username": "A Trading MacLennan",
+          "clientID": "APN61CJB",
+          "clanTag": "JON"
+        },
+        {
+          "username": "SPAM",
+          "clientID": "hVYwsSas",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1043,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-22T05:54:59.597Z",
+      "url": "https://openfront.io/game/HGecWLVH"
     }
   ],
   "quads": [
@@ -125585,6 +125640,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T05:40:40.976Z",
       "url": "https://openfront.io/game/i3kwU4ku"
+    },
+    {
+      "id": "NMEBaGD6",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "funnythings",
+          "clientID": "UTHqdBQE",
+          "clanTag": null
+        },
+        {
+          "username": "Abc",
+          "clientID": "vXatVxrJ",
+          "clanTag": "AB"
+        },
+        {
+          "username": "King",
+          "clientID": "D4rn8vfa",
+          "clanTag": null
+        },
+        {
+          "username": "Argon",
+          "clientID": "nKHXJ1ds",
+          "clanTag": "BEER"
+        },
+        {
+          "username": "korijun",
+          "clientID": "eKfwRU5C",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSlate8",
+          "clientID": "fqEZS6at",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 910,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T05:58:27.218Z",
+      "url": "https://openfront.io/game/NMEBaGD6"
     }
   ],
   "hvn": [
