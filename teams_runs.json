@@ -39142,6 +39142,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T06:38:28.094Z",
       "url": "https://openfront.io/game/e4dMJZuG"
+    },
+    {
+      "id": "5NLxmMSf",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonSled5",
+          "clientID": "gR47PNe8",
+          "clanTag": null
+        },
+        {
+          "username": "Bibol",
+          "clientID": "DLzyDpno",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 465,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T06:49:27.125Z",
+      "url": "https://openfront.io/game/5NLxmMSf"
     }
   ],
   "trios": [
@@ -77706,6 +77731,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T06:41:55.500Z",
       "url": "https://openfront.io/game/JJhX79Zy"
+    },
+    {
+      "id": "QyqozwVT",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "slave",
+          "clientID": "V1TppZPB",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "slave",
+          "clientID": "6goB8Q8F",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "Emperor",
+          "clientID": "4b7tXBvV",
+          "clanTag": "WIN"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1624,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T06:28:15.114Z",
+      "url": "https://openfront.io/game/QyqozwVT"
     }
   ],
   "quads": [
