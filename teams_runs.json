@@ -41092,6 +41092,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T12:53:55.243Z",
       "url": "https://openfront.io/game/tgYFqHxa"
+    },
+    {
+      "id": "8XfmkZL5",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon009",
+          "clientID": "Zp4G3K6n",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSpider",
+          "clientID": "BU8hBqps",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 815,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:07:53.636Z",
+      "url": "https://openfront.io/game/8XfmkZL5"
+    },
+    {
+      "id": "uJ93nr9Y",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TryingTooHard67",
+          "clientID": "Fiumfgpy",
+          "clanTag": null
+        },
+        {
+          "username": "Mmh",
+          "clientID": "kReMXmXT",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 943,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:06:49.075Z",
+      "url": "https://openfront.io/game/uJ93nr9Y"
+    },
+    {
+      "id": "N94LXSip",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Sancta Marta",
+          "clientID": "HkYZ7hF7",
+          "clanTag": "NL"
+        },
+        {
+          "username": "barga",
+          "clientID": "fLktYRwj",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1284,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:00:01.145Z",
+      "url": "https://openfront.io/game/N94LXSip"
     }
   ],
   "trios": [
