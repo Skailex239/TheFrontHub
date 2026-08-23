@@ -79716,6 +79716,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T10:12:40.569Z",
       "url": "https://openfront.io/game/RdGH3mKj"
+    },
+    {
+      "id": "UbjQMLwu",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "mito baby",
+          "clientID": "JLaVvHZH",
+          "clanTag": "BB"
+        },
+        {
+          "username": "Nosilec",
+          "clientID": "xp3nj3Bk",
+          "clanTag": "BB"
+        },
+        {
+          "username": "Betonskoarmirana Plosca",
+          "clientID": "z4PxA7aH",
+          "clanTag": "BB"
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1174,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T10:18:45.035Z",
+      "url": "https://openfront.io/game/UbjQMLwu"
     }
   ],
   "quads": [
@@ -162565,6 +162595,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T10:10:04.590Z",
       "url": "https://openfront.io/game/XwBSL7pz"
+    },
+    {
+      "id": "BXzfKUPy",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonSteel7",
+          "clientID": "Jjpy5aQU",
+          "clanTag": null
+        },
+        {
+          "username": "Dirt",
+          "clientID": "Fbh7Efa2",
+          "clanTag": "TAJ"
+        },
+        {
+          "username": "zazza12",
+          "clientID": "i41Wkt3n",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin",
+          "clientID": "jM3q6wpe",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "KfWwCfTE",
+          "clanTag": null
+        },
+        {
+          "username": "IRI",
+          "clientID": "DaKyDref",
+          "clanTag": "AAA"
+        },
+        {
+          "username": "AnonRainbow6",
+          "clientID": "xRA5G64L",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 855,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 42,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T10:24:10.888Z",
+      "url": "https://openfront.io/game/BXzfKUPy"
     }
   ],
   "hvn": [
