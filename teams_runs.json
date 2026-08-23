@@ -37667,6 +37667,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-22T23:45:44.893Z",
       "url": "https://openfront.io/game/qqiTcnRZ"
+    },
+    {
+      "id": "stVmZfhQ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Doomer",
+          "clientID": "Hyw88zYf",
+          "clanTag": null
+        },
+        {
+          "username": "aaa",
+          "clientID": "TyUTdF3g",
+          "clanTag": "320"
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 843,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-22T23:53:11.410Z",
+      "url": "https://openfront.io/game/stVmZfhQ"
     }
   ],
   "trios": [
@@ -113978,6 +114003,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T23:43:44.032Z",
       "url": "https://openfront.io/game/rHxGvFgn"
+    },
+    {
+      "id": "pKXij2xP",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "xMix",
+          "clientID": "Gfp7iVdn",
+          "clanTag": "ESP"
+        },
+        {
+          "username": "AnonUnicorn1",
+          "clientID": "xsn1mQme",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMist",
+          "clientID": "fVkbjMGf",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMonsoon",
+          "clientID": "taZMfesU",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 1018,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:52:10.320Z",
+      "url": "https://openfront.io/game/pKXij2xP"
     }
   ],
   "team_custom": [
