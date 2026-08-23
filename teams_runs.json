@@ -38667,6 +38667,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T04:52:38.459Z",
       "url": "https://openfront.io/game/8KHheYLw"
+    },
+    {
+      "id": "6oNXvKq5",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Carakyla",
+          "clientID": "uJh7x92a",
+          "clanTag": null
+        },
+        {
+          "username": "Imperium of Mankind",
+          "clientID": "e2g1VXoc",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 412,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T04:58:51.341Z",
+      "url": "https://openfront.io/game/6oNXvKq5"
     }
   ],
   "trios": [
@@ -76931,6 +76956,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T04:37:24.542Z",
       "url": "https://openfront.io/game/FdoMzNRs"
+    },
+    {
+      "id": "6Zdpo4XQ",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Pacific Motion",
+          "clientID": "eoQ5DHe6",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Indian ingame",
+          "clientID": "oie4XgrG",
+          "clanTag": "WTR"
+        },
+        {
+          "username": "Otankonasu88",
+          "clientID": "CaWrUeKR",
+          "clanTag": null
+        }
+      ],
+      "map": "Svalmel",
+      "duration_s": 1463,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T04:43:14.896Z",
+      "url": "https://openfront.io/game/6Zdpo4XQ"
     }
   ],
   "quads": [
