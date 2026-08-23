@@ -76611,6 +76611,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T03:10:02.152Z",
       "url": "https://openfront.io/game/KKk4NTXs"
+    },
+    {
+      "id": "tCwysZLS",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Rome",
+          "clientID": "6nuKaWrK",
+          "clanTag": "SUC"
+        },
+        {
+          "username": "Help",
+          "clientID": "bsqqHaPp",
+          "clanTag": "SUC"
+        },
+        {
+          "username": "pppelekiban",
+          "clientID": "xK6ZyEef",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 1002,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T03:50:10.587Z",
+      "url": "https://openfront.io/game/tCwysZLS"
     }
   ],
   "quads": [
@@ -188737,6 +188767,116 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T03:20:29.279Z",
       "url": "https://openfront.io/game/qRTaBaQX"
+    },
+    {
+      "id": "DzfHxQoD",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "WWWWWWWWWWWWWWWWWWWWWWWWWW",
+          "clientID": "x7KNwFM7",
+          "clanTag": "WWWWW"
+        },
+        {
+          "username": "Utb",
+          "clientID": "AzrhZCB5",
+          "clanTag": null
+        },
+        {
+          "username": "AnonJungle5",
+          "clientID": "oawZ2dM7",
+          "clanTag": null
+        },
+        {
+          "username": "JINDOdog",
+          "clientID": "LtLhVChU",
+          "clanTag": null
+        },
+        {
+          "username": "Dododo",
+          "clientID": "jsQWGVzK",
+          "clanTag": null
+        },
+        {
+          "username": "Canadia",
+          "clientID": "Zswfzyck",
+          "clanTag": null
+        },
+        {
+          "username": "Torfin",
+          "clientID": "5GwMZJkj",
+          "clanTag": null
+        },
+        {
+          "username": "oisumi",
+          "clientID": "yQP6eTta",
+          "clanTag": null
+        },
+        {
+          "username": "nukes are bad",
+          "clientID": "JbXp8Mj5",
+          "clanTag": null
+        },
+        {
+          "username": "FrostPunk",
+          "clientID": "SEqgkEcD",
+          "clanTag": null
+        },
+        {
+          "username": "NihilS",
+          "clientID": "qdBRadn7",
+          "clanTag": null
+        },
+        {
+          "username": "invade5",
+          "clientID": "9idVnRNE",
+          "clanTag": "GOY"
+        },
+        {
+          "username": "coffee_cake",
+          "clientID": "xtFrj6WZ",
+          "clanTag": "MEOW"
+        },
+        {
+          "username": "Silo",
+          "clientID": "C4qLT7cJ",
+          "clanTag": "EGY"
+        },
+        {
+          "username": "peace",
+          "clientID": "m3X8NBub",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilChamp",
+          "clientID": "FbjrgsCh",
+          "clanTag": null
+        },
+        {
+          "username": "MangoDissi",
+          "clientID": "ur7bAsxe",
+          "clanTag": "KAI"
+        },
+        {
+          "username": "Atomic Crashout",
+          "clientID": "n66u5kFV",
+          "clanTag": null
+        },
+        {
+          "username": "123",
+          "clientID": "sKoJxu3b",
+          "clanTag": null
+        }
+      ],
+      "map": "France",
+      "duration_s": 815,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T03:54:18.843Z",
+      "url": "https://openfront.io/game/DzfHxQoD"
     }
   ]
 }
