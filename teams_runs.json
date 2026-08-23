@@ -39717,6 +39717,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T08:51:53.447Z",
       "url": "https://openfront.io/game/LHMNbiqn"
+    },
+    {
+      "id": "JSDVVsKa",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "RAM",
+          "clientID": "TcnKxkA5",
+          "clanTag": null
+        },
+        {
+          "username": "dont kill me",
+          "clientID": "VADDB724",
+          "clanTag": "RIP"
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1411,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T08:56:00.340Z",
+      "url": "https://openfront.io/game/JSDVVsKa"
     }
   ],
   "trios": [
@@ -160685,6 +160710,96 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T08:52:55.040Z",
       "url": "https://openfront.io/game/r3j36bik"
+    },
+    {
+      "id": "vZw83Tpc",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonShark2",
+          "clientID": "Dm1crRAS",
+          "clanTag": null
+        },
+        {
+          "username": "island",
+          "clientID": "61YRpfKC",
+          "clanTag": "UN"
+        },
+        {
+          "username": "xeqhon",
+          "clientID": "YyJvzc6f",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonViolin9",
+          "clientID": "CkkTnSvG",
+          "clanTag": null
+        },
+        {
+          "username": "Daegu",
+          "clientID": "o9Mn6CLn",
+          "clanTag": null
+        },
+        {
+          "username": "Ehsan",
+          "clientID": "vBB82AVL",
+          "clanTag": "AST"
+        },
+        {
+          "username": "trade",
+          "clientID": "Nu8VfYe4",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 914,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 102,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T09:04:02.148Z",
+      "url": "https://openfront.io/game/vZw83Tpc"
+    },
+    {
+      "id": "YRSHHQgp",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonShovel",
+          "clientID": "amEpmAhQ",
+          "clanTag": null
+        },
+        {
+          "username": "FriendlyPerson",
+          "clientID": "MknUD9uA",
+          "clanTag": "VERY"
+        },
+        {
+          "username": "Mo0l",
+          "clientID": "DW4wZqsQ",
+          "clanTag": null
+        },
+        {
+          "username": "Snirchalon",
+          "clientID": "LZTr7N1R",
+          "clanTag": null
+        },
+        {
+          "username": "leopoldum",
+          "clientID": "QManrXAB",
+          "clanTag": null
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 1260,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T08:58:25.076Z",
+      "url": "https://openfront.io/game/YRSHHQgp"
     }
   ],
   "hvn": [
