@@ -116668,6 +116668,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T04:53:49.032Z",
       "url": "https://openfront.io/game/SGhpQfv5"
+    },
+    {
+      "id": "6FASSNZf",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "NorthernPoint",
+          "clientID": "P1mgdYr9",
+          "clanTag": null
+        },
+        {
+          "username": "Quality Learing Center",
+          "clientID": "ioRsp1vb",
+          "clanTag": "UN"
+        },
+        {
+          "username": "ColWhisker",
+          "clientID": "4kShgBec",
+          "clanTag": null
+        },
+        {
+          "username": "WindArcher",
+          "clientID": "9mT623dQ",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1712,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T04:56:01.154Z",
+      "url": "https://openfront.io/game/6FASSNZf"
     }
   ],
   "team_custom": [
@@ -156340,6 +156375,106 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T04:36:29.990Z",
       "url": "https://openfront.io/game/qhj5vnf8"
+    },
+    {
+      "id": "XXenyHox",
+      "mode": "team_custom",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "AnonBear5",
+          "clientID": "EHGqq68G",
+          "clanTag": null
+        },
+        {
+          "username": "Pivotalflounder",
+          "clientID": "eUdpym5j",
+          "clanTag": "BRTHR"
+        },
+        {
+          "username": "AnonMoss8",
+          "clientID": "rnC4fJ3S",
+          "clanTag": null
+        },
+        {
+          "username": "AnonToucan6",
+          "clientID": "BWMx6Jww",
+          "clanTag": null
+        },
+        {
+          "username": "Angst Potter",
+          "clientID": "hHezJwzn",
+          "clanTag": null
+        },
+        {
+          "username": "Germany",
+          "clientID": "GqPwdU24",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLocket5",
+          "clientID": "fRf8DfnM",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 1260,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 114,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T05:02:41.081Z",
+      "url": "https://openfront.io/game/XXenyHox"
+    },
+    {
+      "id": "8mbnz8yQ",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "LarpLarpLarpXM",
+          "clientID": "FfQVeHpa",
+          "clanTag": null
+        },
+        {
+          "username": "FEAR GOD",
+          "clientID": "zWoaRmc9",
+          "clanTag": null
+        },
+        {
+          "username": "Sherlock",
+          "clientID": "aA1ppzFW",
+          "clanTag": "RLB"
+        },
+        {
+          "username": "Mitochondria",
+          "clientID": "s4t5pTFY",
+          "clanTag": null
+        },
+        {
+          "username": "Zogar89",
+          "clientID": "YHgGEvUB",
+          "clanTag": "ARG"
+        },
+        {
+          "username": "Newbie",
+          "clientID": "QL5vSstW",
+          "clanTag": null
+        },
+        {
+          "username": "K __ K",
+          "clientID": "Zc8L1HMW",
+          "clanTag": "SOS"
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1003,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T05:07:27.950Z",
+      "url": "https://openfront.io/game/8mbnz8yQ"
     }
   ],
   "hvn": [
