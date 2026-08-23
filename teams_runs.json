@@ -120963,6 +120963,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T10:36:14.317Z",
       "url": "https://openfront.io/game/wHyd49Hq"
+    },
+    {
+      "id": "agJADgGU",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "leon9850",
+          "clientID": "LEZnWcnr",
+          "clanTag": null
+        },
+        {
+          "username": "RTLR WAS RIGHT",
+          "clientID": "pqfUn2u4",
+          "clanTag": "AST"
+        },
+        {
+          "username": "AZCwegermee",
+          "clientID": "Dwxohto1",
+          "clanTag": null
+        },
+        {
+          "username": "AceDroo",
+          "clientID": "NRhB1hSq",
+          "clanTag": "CHERT"
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 1303,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T10:34:13.135Z",
+      "url": "https://openfront.io/game/agJADgGU"
     }
   ],
   "team_custom": [
@@ -163005,6 +163040,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T10:37:01.405Z",
       "url": "https://openfront.io/game/NhXtmyap"
+    },
+    {
+      "id": "1fyvQDWx",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "the player",
+          "clientID": "eJqTRVhd",
+          "clanTag": null
+        },
+        {
+          "username": "Pow",
+          "clientID": "avU5irqZ",
+          "clanTag": null
+        },
+        {
+          "username": "Federal Republic of Larps",
+          "clientID": "VJAFZhy5",
+          "clanTag": null
+        },
+        {
+          "username": "British Expeditionary Force",
+          "clientID": "n1L4gdaq",
+          "clanTag": null
+        },
+        {
+          "username": "pig",
+          "clientID": "8KDMYdhY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "REEEE",
+          "clientID": "GNKAGLz3",
+          "clanTag": null
+        },
+        {
+          "username": "frun",
+          "clientID": "uqkn4Wvd",
+          "clanTag": "GG"
+        }
+      ],
+      "map": "Clearwater Lakes",
+      "duration_s": 748,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T10:43:29.870Z",
+      "url": "https://openfront.io/game/1fyvQDWx"
     }
   ],
   "hvn": [
