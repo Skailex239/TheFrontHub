@@ -41317,6 +41317,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T13:15:07.610Z",
       "url": "https://openfront.io/game/qFAon6PU"
+    },
+    {
+      "id": "A4EsqAX3",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "WamboNr5",
+          "clientID": "RvkUxX14",
+          "clanTag": null
+        },
+        {
+          "username": "AnonOcean6",
+          "clientID": "zCXkVKeU",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 613,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:28:20.428Z",
+      "url": "https://openfront.io/game/A4EsqAX3"
     }
   ],
   "trios": [
@@ -166965,6 +166990,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T12:51:41.027Z",
       "url": "https://openfront.io/game/B5wsWeeB"
+    },
+    {
+      "id": "NoRMW6As",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Domnonia",
+          "clientID": "2pYegj8i",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPearl7",
+          "clientID": "5vUU4hES",
+          "clanTag": null
+        },
+        {
+          "username": "SEND TROOPS",
+          "clientID": "NAVfnSYo",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Think bevor you Attack",
+          "clientID": "eEtPU4fu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SOLO",
+          "clientID": "JKEmBoVf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "RTP95",
+          "clientID": "VzyqTfTx",
+          "clanTag": null
+        },
+        {
+          "username": "Devs just be adding sh",
+          "clientID": "W8CVRe47",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1270,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 119,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T13:17:22.245Z",
+      "url": "https://openfront.io/game/NoRMW6As"
     }
   ],
   "hvn": [
