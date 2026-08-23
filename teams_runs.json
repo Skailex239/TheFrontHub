@@ -80271,6 +80271,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T11:06:48.364Z",
       "url": "https://openfront.io/game/w2dqoStr"
+    },
+    {
+      "id": "vvVXuTKs",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "BabyMonki",
+          "clientID": "FNnwoN7S",
+          "clanTag": "POOR"
+        },
+        {
+          "username": "hambertger",
+          "clientID": "7ow4psGj",
+          "clanTag": "POOR"
+        },
+        {
+          "username": "Betrayal equals nukes",
+          "clientID": "DTyndtYW",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 1377,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T11:03:44.169Z",
+      "url": "https://openfront.io/game/vvVXuTKs"
     }
   ],
   "quads": [
