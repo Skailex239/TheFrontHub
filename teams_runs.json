@@ -76796,6 +76796,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T04:08:54.743Z",
       "url": "https://openfront.io/game/g8neJLfQ"
+    },
+    {
+      "id": "8jCBQoAZ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "CuddleMonster67",
+          "clientID": "UZV1LEC7",
+          "clanTag": null
+        },
+        {
+          "username": "johnlee",
+          "clientID": "PmztRW74",
+          "clanTag": "CARD"
+        },
+        {
+          "username": "7oYo7",
+          "clientID": "7hPWMHyL",
+          "clanTag": "7O7"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 759,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T04:20:10.997Z",
+      "url": "https://openfront.io/game/8jCBQoAZ"
     }
   ],
   "quads": [
@@ -155680,6 +155710,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T04:14:34.647Z",
       "url": "https://openfront.io/game/aaQDFJzK"
+    },
+    {
+      "id": "djFVXXg7",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "breezy",
+          "clientID": "xmnh22P8",
+          "clanTag": null
+        },
+        {
+          "username": "im a really nice guy",
+          "clientID": "H9aUTzvo",
+          "clanTag": "HII"
+        },
+        {
+          "username": "hellofriendly",
+          "clientID": "gg4YV6tz",
+          "clanTag": "HII"
+        },
+        {
+          "username": "Bushwick Grim Reaper",
+          "clientID": "Pwze92Co",
+          "clanTag": "HII"
+        },
+        {
+          "username": "Keddy_is_prettyboyglo",
+          "clientID": "9oJWBNcK",
+          "clanTag": "HII"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 664,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T04:22:24.624Z",
+      "url": "https://openfront.io/game/djFVXXg7"
     }
   ],
   "hvn": [
