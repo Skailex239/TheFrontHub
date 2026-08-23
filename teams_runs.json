@@ -164405,6 +164405,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T11:33:16.176Z",
       "url": "https://openfront.io/game/qWqtJR31"
+    },
+    {
+      "id": "koGcZHUo",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Warspit3",
+          "clientID": "PvsVN2k6",
+          "clanTag": null
+        },
+        {
+          "username": "ww3incoming",
+          "clientID": "Pr66B7up",
+          "clanTag": null
+        },
+        {
+          "username": "DigitalGold",
+          "clientID": "UvweDhus",
+          "clanTag": "BTC"
+        },
+        {
+          "username": "BunnyKisses67",
+          "clientID": "29Kvkjsi",
+          "clanTag": null
+        },
+        {
+          "username": "Niorault",
+          "clientID": "2etV868B",
+          "clanTag": "EMP"
+        },
+        {
+          "username": "SEND ME MORE THAN HALF",
+          "clientID": "vkJusk5d",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLighthouse3",
+          "clientID": "qeF3Zzdv",
+          "clanTag": null
+        }
+      ],
+      "map": "China",
+      "duration_s": 1026,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 91,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T11:35:28.827Z",
+      "url": "https://openfront.io/game/koGcZHUo"
     }
   ],
   "hvn": [
@@ -200282,6 +200332,121 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T11:25:42.633Z",
       "url": "https://openfront.io/game/twug1nuM"
+    },
+    {
+      "id": "bjV3kt4k",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Bobite",
+          "clientID": "WmX1rWbx",
+          "clanTag": null
+        },
+        {
+          "username": "ZNZ",
+          "clientID": "LCD9sUsx",
+          "clanTag": null
+        },
+        {
+          "username": "bono",
+          "clientID": "jS9BypHB",
+          "clanTag": null
+        },
+        {
+          "username": "I am the winner not you",
+          "clientID": "DdCDbvTr",
+          "clanTag": "GE"
+        },
+        {
+          "username": "SAM Launcher",
+          "clientID": "wJT1Ntge",
+          "clanTag": null
+        },
+        {
+          "username": "Romper",
+          "clientID": "yv9dMSRD",
+          "clanTag": null
+        },
+        {
+          "username": "EXACTIS",
+          "clientID": "8wZ8s917",
+          "clanTag": "BE"
+        },
+        {
+          "username": "2137WarzeHUA",
+          "clientID": "vLd4wqhE",
+          "clanTag": null
+        },
+        {
+          "username": "ROMA INVICTA",
+          "clientID": "bH73TAMf",
+          "clanTag": null
+        },
+        {
+          "username": "draconia",
+          "clientID": "9xe7NCJT",
+          "clanTag": "TARG"
+        },
+        {
+          "username": "9999999999",
+          "clientID": "ZMetEEfD",
+          "clanTag": null
+        },
+        {
+          "username": "korniiii",
+          "clientID": "SdNAGRML",
+          "clanTag": null
+        },
+        {
+          "username": "Castella",
+          "clientID": "S22M2q2q",
+          "clanTag": null
+        },
+        {
+          "username": "Floridian Republic",
+          "clientID": "ng5MkiVd",
+          "clanTag": null
+        },
+        {
+          "username": "Betoniarz",
+          "clientID": "hHiApgyZ",
+          "clanTag": null
+        },
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "VWZQSoxz",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPeghxvbfcxhgfdxmnbvc",
+          "clientID": "X25wNtQF",
+          "clanTag": null
+        },
+        {
+          "username": "ILL TAKE YOU DOWN WITH ME",
+          "clientID": "uKW21Cn7",
+          "clanTag": null
+        },
+        {
+          "username": "Dwight Shrute",
+          "clientID": "9NjAnBdg",
+          "clanTag": null
+        },
+        {
+          "username": "Stein",
+          "clientID": "1dwj7Lme",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 560,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 27,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T11:42:06.754Z",
+      "url": "https://openfront.io/game/bjV3kt4k"
     }
   ]
 }
