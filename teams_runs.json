@@ -39167,6 +39167,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T06:49:27.125Z",
       "url": "https://openfront.io/game/5NLxmMSf"
+    },
+    {
+      "id": "Lr3pYyYB",
+      "mode": "duos",
+      "team": "Team 17",
+      "players": [
+        {
+          "username": "AnonLizard1",
+          "clientID": "ob49HN32",
+          "clanTag": null
+        },
+        {
+          "username": "hello.",
+          "clientID": "qpbuYJ58",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 1173,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T06:39:28.808Z",
+      "url": "https://openfront.io/game/Lr3pYyYB"
     }
   ],
   "trios": [
@@ -158035,6 +158060,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T06:24:38.233Z",
       "url": "https://openfront.io/game/bWhSTAy5"
+    },
+    {
+      "id": "7pE3dBd9",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Lil St. James",
+          "clientID": "563je1np",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "juice",
+          "clientID": "aB56ynfL",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "BigYahu",
+          "clientID": "We9ZcKvf",
+          "clanTag": "BBC"
+        },
+        {
+          "username": "Doge",
+          "clientID": "34ENAgjG",
+          "clanTag": null
+        },
+        {
+          "username": "CODM",
+          "clientID": "AUS1uTgG",
+          "clanTag": null
+        },
+        {
+          "username": "Stock",
+          "clientID": "6qPmYZHM",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 899,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T06:43:56.100Z",
+      "url": "https://openfront.io/game/7pE3dBd9"
     }
   ],
   "hvn": [
