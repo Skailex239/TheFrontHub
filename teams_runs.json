@@ -41367,6 +41367,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-23T13:25:10.247Z",
       "url": "https://openfront.io/game/1GiFGSWe"
+    },
+    {
+      "id": "vMKnriMJ",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BIBBLE",
+          "clientID": "czsufSDM",
+          "clanTag": null
+        },
+        {
+          "username": "don",
+          "clientID": "MTDRzHUR",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 577,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:35:15.843Z",
+      "url": "https://openfront.io/game/vMKnriMJ"
     }
   ],
   "trios": [
@@ -123218,6 +123243,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T13:21:54.024Z",
       "url": "https://openfront.io/game/Q7xb9Kyb"
+    },
+    {
+      "id": "SPkFpFxo",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DaddysLilTater",
+          "clientID": "eYTU4iZf",
+          "clanTag": null
+        },
+        {
+          "username": "376.4K",
+          "clientID": "2XLhKXEh",
+          "clanTag": "SB"
+        },
+        {
+          "username": "Wololo",
+          "clientID": "1gAd5Kdf",
+          "clanTag": null
+        },
+        {
+          "username": "SnuggleMuffin",
+          "clientID": "SAybcKyB",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 874,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T13:29:51.007Z",
+      "url": "https://openfront.io/game/SPkFpFxo"
     }
   ],
   "team_custom": [
@@ -167065,6 +167125,91 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T13:17:22.245Z",
       "url": "https://openfront.io/game/NoRMW6As"
+    },
+    {
+      "id": "71gvK1C2",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "henroikol",
+          "clientID": "HKwfBtUW",
+          "clanTag": "UN"
+        },
+        {
+          "username": "casmen90",
+          "clientID": "JaAxwZjS",
+          "clanTag": "UN"
+        },
+        {
+          "username": "jeritoutke",
+          "clientID": "jDsrLnNe",
+          "clanTag": "UN"
+        },
+        {
+          "username": "loripal",
+          "clientID": "bUq4NbNP",
+          "clanTag": null
+        },
+        {
+          "username": "UnsaltedCashew",
+          "clientID": "P4FfyKbn",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonUrchin9",
+          "clientID": "kXFDzS74",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 889,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T13:28:43.450Z",
+      "url": "https://openfront.io/game/71gvK1C2"
+    },
+    {
+      "id": "qRCgZG8a",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "loyal trader",
+          "clientID": "BVdV3K2Q",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSquid6",
+          "clientID": "TfPJXULz",
+          "clanTag": null
+        },
+        {
+          "username": "Pirate Republic",
+          "clientID": "PKfKSQuA",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Sunrakulom",
+          "clientID": "YxAbFujm",
+          "clanTag": "GAL"
+        },
+        {
+          "username": "Alberto",
+          "clientID": "ZNrwAtin",
+          "clanTag": "GAL"
+        }
+      ],
+      "map": "World",
+      "duration_s": 816,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T13:31:17.082Z",
+      "url": "https://openfront.io/game/qRCgZG8a"
     }
   ],
   "hvn": [
