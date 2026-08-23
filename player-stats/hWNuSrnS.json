@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T11:43:03.915Z",
-  "lastSyncedAt": "2026-08-23T11:43:01.897Z",
-  "totalGames": 3818,
+  "computedAt": "2026-08-23T11:44:59.948Z",
+  "lastSyncedAt": "2026-08-23T11:44:58.046Z",
+  "totalGames": 3819,
   "careerWins": {
     "ffaCasual": 278,
     "ffaRanked": 1420,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 751,
+      "current": 752,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "5 092",
     "totalWins": "1 986",
-    "totalGames": "3 818",
-    "totalPlaytime": "31j 7h",
-    "totalPlaytimeCompact": "31j 7h",
+    "totalGames": "3 819",
+    "totalPlaytime": "31j 8h",
+    "totalPlaytimeCompact": "31j 8h",
     "avgGameDuration": "11m 48s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "751h"
+    "totalPlaytimeHours": "752h"
   },
   "playtime": {
-    "totalSec": 2705736,
-    "avgGameSec": 708.6788894709272,
+    "totalSec": 2707241,
+    "avgGameSec": 708.8874050798638,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1102,
-        "playtimeSec": 1335599,
+        "games": 1103,
+        "playtimeSec": 1337104,
         "wins": 278
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1986,
-    "defeat": 1500,
+    "defeat": 1501,
     "incomplete": 332
   },
   "maps": [
@@ -292,6 +292,22 @@
       }
     },
     {
+      "map": "Montreal",
+      "count": 36,
+      "wins": 14,
+      "losses": 22,
+      "playtimeSec": 40903,
+      "avgDuration": 1136.1944444444443,
+      "winRate": 0.3888888888888889,
+      "lastPlayed": 1787483896614,
+      "formatted": {
+        "playtime": "11h 21m",
+        "avgDuration": "18m",
+        "winRate": "39%",
+        "lastPlayed": "23/08/26"
+      }
+    },
+    {
       "map": "Two Lakes",
       "count": 36,
       "wins": 6,
@@ -305,22 +321,6 @@
         "avgDuration": "21m",
         "winRate": "17%",
         "lastPlayed": "13/08/26"
-      }
-    },
-    {
-      "map": "Montreal",
-      "count": 35,
-      "wins": 14,
-      "losses": 21,
-      "playtimeSec": 39398,
-      "avgDuration": 1125.6571428571428,
-      "winRate": 0.4,
-      "lastPlayed": 1787295236365,
-      "formatted": {
-        "playtime": "10h 56m",
-        "avgDuration": "18m",
-        "winRate": "40%",
-        "lastPlayed": "21/08/26"
       }
     },
     {
@@ -1603,7 +1603,7 @@
       90,
       81,
       98,
-      101,
+      102,
       91,
       143,
       227,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      564
+      565
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 4,
-        "playtimeSec": 4850
+        "count": 5,
+        "playtimeSec": 6355
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 2,
+    "current": 0,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "NoCmXK6T",
+      "start": "2026-08-23T11:18:16.614Z",
+      "map": "Montreal",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1505,
+      "totalPlayers": 72,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "vKx84WfY",
       "start": "2026-08-23T11:02:14.068Z",
@@ -2363,17 +2374,6 @@
       "result": "victory",
       "durationSeconds": 1624,
       "totalPlayers": 98,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "xvUHfuDJ",
-      "start": "2026-08-20T07:38:19.439Z",
-      "map": "France",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 2909,
-      "totalPlayers": 95,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
