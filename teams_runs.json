@@ -38542,6 +38542,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T04:07:35.662Z",
       "url": "https://openfront.io/game/svaGfsjh"
+    },
+    {
+      "id": "81d2fs6w",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Holy Crag Alliance",
+          "clientID": "YLTWGbos",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ur mom",
+          "clientID": "9pSZptRq",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1371,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T04:04:30.446Z",
+      "url": "https://openfront.io/game/81d2fs6w"
     }
   ],
   "trios": [
@@ -155580,6 +155605,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T04:10:54.879Z",
       "url": "https://openfront.io/game/2EQbqH4R"
+    },
+    {
+      "id": "aaQDFJzK",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "Torfin",
+          "clientID": "j78Wx3is",
+          "clanTag": null
+        },
+        {
+          "username": "wolverine",
+          "clientID": "GYTiyDdJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonViolin3",
+          "clientID": "eJsYkurn",
+          "clanTag": null
+        },
+        {
+          "username": "Stock",
+          "clientID": "zMehBQ39",
+          "clanTag": null
+        },
+        {
+          "username": "TITUMM",
+          "clientID": "YJCPbYs8",
+          "clanTag": "URU"
+        },
+        {
+          "username": "AnonZebra9",
+          "clientID": "BoobMBRX",
+          "clanTag": null
+        },
+        {
+          "username": "Ulyssess",
+          "clientID": "fwC9D87A",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 821,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T04:14:34.647Z",
+      "url": "https://openfront.io/game/aaQDFJzK"
     }
   ],
   "hvn": [
