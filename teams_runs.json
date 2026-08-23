@@ -38067,6 +38067,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T01:58:17.713Z",
       "url": "https://openfront.io/game/rqTPksAk"
+    },
+    {
+      "id": "HmkL4Bkq",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "boomington",
+          "clientID": "XEhwJkAi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUnicorn7",
+          "clientID": "GvLrhxEc",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 503,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T02:03:13.014Z",
+      "url": "https://openfront.io/game/HmkL4Bkq"
     }
   ],
   "trios": [
@@ -76031,6 +76056,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T00:14:28.968Z",
       "url": "https://openfront.io/game/HFp6wQLd"
+    },
+    {
+      "id": "CEcaEcBq",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Charge",
+          "clientID": "sWD2wC2W",
+          "clanTag": "KING"
+        },
+        {
+          "username": "Lt Saint Jupstein R2laine",
+          "clientID": "mE7xwoKB",
+          "clanTag": "KING"
+        },
+        {
+          "username": "spectre27wr",
+          "clientID": "ELogMEE1",
+          "clanTag": "KING"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 776,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T01:59:00.775Z",
+      "url": "https://openfront.io/game/CEcaEcBq"
     }
   ],
   "quads": [
