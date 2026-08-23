@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T12:55:06.026Z",
-  "lastSyncedAt": "2026-08-23T12:55:04.005Z",
-  "totalGames": 3822,
+  "computedAt": "2026-08-23T12:57:21.932Z",
+  "lastSyncedAt": "2026-08-23T12:57:19.146Z",
+  "totalGames": 3823,
   "careerWins": {
     "ffaCasual": 278,
     "ffaRanked": 1420,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "5 092",
     "totalWins": "1 986",
-    "totalGames": "3 822",
+    "totalGames": "3 823",
     "totalPlaytime": "31j 8h",
     "totalPlaytimeCompact": "31j 8h",
     "avgGameDuration": "11m 48s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "752h"
   },
   "playtime": {
-    "totalSec": 2709673,
-    "avgGameSec": 708.9672946101517,
+    "totalSec": 2710113,
+    "avgGameSec": 708.896939576249,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -71,32 +71,32 @@
         "wins": 151
       },
       "teamRanked": {
-        "games": 215,
-        "playtimeSec": 58027,
+        "games": 216,
+        "playtimeSec": 58467,
         "wins": 137
       }
     }
   },
   "results": {
     "victory": 1986,
-    "defeat": 1504,
+    "defeat": 1505,
     "incomplete": 332
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 965,
+      "count": 966,
       "wins": 689,
-      "losses": 276,
-      "playtimeSec": 407667,
-      "avgDuration": 422.45284974093266,
-      "winRate": 0.7139896373056995,
-      "lastPlayed": 1787163590148,
+      "losses": 277,
+      "playtimeSec": 408107,
+      "avgDuration": 422.4710144927536,
+      "winRate": 0.7132505175983437,
+      "lastPlayed": 1787489365829,
       "formatted": {
         "playtime": "4j 17h",
         "avgDuration": "7m",
         "winRate": "71%",
-        "lastPlayed": "19/08/26"
+        "lastPlayed": "23/08/26"
       }
     },
     {
@@ -1604,7 +1604,7 @@
       81,
       98,
       103,
-      93,
+      94,
       143,
       227,
       324,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      568
+      569
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 8,
-        "playtimeSec": 8787
+        "count": 9,
+        "playtimeSec": 9227
       },
       {
         "date": "23/09/2025",
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "Em1nReGF",
+      "start": "2026-08-23T12:49:25.829Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 440,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
       "gameId": "QucYeZhj",
       "start": "2026-08-23T12:41:20.231Z",
       "map": "Europe Classic",
@@ -2363,17 +2374,6 @@
       "result": "victory",
       "durationSeconds": 2526,
       "totalPlayers": 93,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "cGVsUG5i",
-      "start": "2026-08-21T07:18:16.790Z",
-      "map": "Giant World Map",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1079,
-      "totalPlayers": 55,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
