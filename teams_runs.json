@@ -80641,6 +80641,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T11:55:43.825Z",
       "url": "https://openfront.io/game/M2AtfjWx"
+    },
+    {
+      "id": "e4UfwtCw",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "dux",
+          "clientID": "ErwKZbQn",
+          "clanTag": null
+        },
+        {
+          "username": "FROGwww",
+          "clientID": "oCVtv7r3",
+          "clanTag": null
+        },
+        {
+          "username": "USS Anderson",
+          "clientID": "uKDy5c28",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 430,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T11:59:29.067Z",
+      "url": "https://openfront.io/game/e4UfwtCw"
+    },
+    {
+      "id": "VwwHJYB5",
+      "mode": "trios",
+      "team": "Team 3",
+      "players": [
+        {
+          "username": "Toast",
+          "clientID": "vpEoLh2x",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon391",
+          "clientID": "LLSvbiQV",
+          "clanTag": null
+        },
+        {
+          "username": "Anon766",
+          "clientID": "uu2h4AKy",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1022,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T11:48:17.825Z",
+      "url": "https://openfront.io/game/VwwHJYB5"
     }
   ],
   "quads": [
