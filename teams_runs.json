@@ -41517,6 +41517,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T13:27:26.378Z",
       "url": "https://openfront.io/game/ptYG3QzT"
+    },
+    {
+      "id": "xT3xV8Fy",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LoveRafitsa",
+          "clientID": "qyedttZm",
+          "clanTag": null
+        },
+        {
+          "username": "Gruul",
+          "clientID": "PH2CGW21",
+          "clanTag": null
+        }
+      ],
+      "map": "Europe",
+      "duration_s": 622,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:46:46.502Z",
+      "url": "https://openfront.io/game/xT3xV8Fy"
+    },
+    {
+      "id": "8vTNF2R5",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BABA",
+          "clientID": "UvRT8ahs",
+          "clanTag": null
+        },
+        {
+          "username": "TARAKO222319",
+          "clientID": "Bbbt3Dgk",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 898,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:42:15.256Z",
+      "url": "https://openfront.io/game/8vTNF2R5"
     }
   ],
   "trios": [
@@ -167500,6 +167550,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T13:34:05.255Z",
       "url": "https://openfront.io/game/rfmADnTR"
+    },
+    {
+      "id": "L8J1kAsu",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Apo",
+          "clientID": "ioB7ePGX",
+          "clanTag": null
+        },
+        {
+          "username": "119",
+          "clientID": "JrN8Yn8p",
+          "clanTag": "HELP"
+        },
+        {
+          "username": "Soch",
+          "clientID": "VX3qE7Um",
+          "clanTag": null
+        },
+        {
+          "username": "Anon496",
+          "clientID": "fFcoAYNc",
+          "clanTag": null
+        },
+        {
+          "username": "Alaska",
+          "clientID": "1VjPFYqy",
+          "clanTag": null
+        },
+        {
+          "username": "DeadOgre.sZjL",
+          "clientID": "hJZwQWiv",
+          "clanTag": null
+        },
+        {
+          "username": "Brokker",
+          "clientID": "KTiV3b2R",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 926,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T13:42:53.283Z",
+      "url": "https://openfront.io/game/L8J1kAsu"
     }
   ],
   "hvn": [
