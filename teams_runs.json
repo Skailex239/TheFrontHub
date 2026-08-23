@@ -116313,6 +116313,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T03:47:17.405Z",
       "url": "https://openfront.io/game/kXgPDZhQ"
+    },
+    {
+      "id": "wbpSL38M",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Anon123",
+          "clientID": "ZagRUobu",
+          "clanTag": null
+        },
+        {
+          "username": "Econotic",
+          "clientID": "pMKMTGVF",
+          "clanTag": "ECO"
+        },
+        {
+          "username": "Cat",
+          "clientID": "sENsxXt8",
+          "clanTag": null
+        },
+        {
+          "username": "godot",
+          "clientID": "bX8TMe6w",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 599,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T04:32:51.762Z",
+      "url": "https://openfront.io/game/wbpSL38M"
     }
   ],
   "team_custom": [
@@ -155850,6 +155885,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-23T04:12:55.537Z",
       "url": "https://openfront.io/game/mBDAWryH"
+    },
+    {
+      "id": "KibQxx5W",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JINDOdog",
+          "clientID": "6iymxnvK",
+          "clanTag": null
+        },
+        {
+          "username": "rohos",
+          "clientID": "wRec9nN7",
+          "clanTag": null
+        },
+        {
+          "username": "tungtung67",
+          "clientID": "912KjMXf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Trade Aid",
+          "clientID": "LvrrcW2h",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMedallion8",
+          "clientID": "LEuXj4yR",
+          "clanTag": null
+        },
+        {
+          "username": "sakul309sk",
+          "clientID": "FjdzFXX8",
+          "clanTag": null
+        },
+        {
+          "username": "AnonMeteor9",
+          "clientID": "Pi7QazWs",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 1060,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T04:26:50.881Z",
+      "url": "https://openfront.io/game/KibQxx5W"
     }
   ],
   "hvn": [
