@@ -79746,6 +79746,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T10:18:45.035Z",
       "url": "https://openfront.io/game/UbjQMLwu"
+    },
+    {
+      "id": "shwzNVcY",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "NAPOLEON",
+          "clientID": "KsrD59GH",
+          "clanTag": null
+        },
+        {
+          "username": "mjs",
+          "clientID": "F7YX7CjD",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Quality Learing Center",
+          "clientID": "R4jn11Lw",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "China",
+      "duration_s": 845,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 93,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T10:26:13.501Z",
+      "url": "https://openfront.io/game/shwzNVcY"
     }
   ],
   "quads": [
