@@ -40617,6 +40617,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T11:45:31.050Z",
       "url": "https://openfront.io/game/H73Rcikf"
+    },
+    {
+      "id": "PmiwQCTW",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FreeTroop",
+          "clientID": "ebYjgp2F",
+          "clanTag": null
+        },
+        {
+          "username": "Empire",
+          "clientID": "TA5WzxBh",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 740,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T11:44:50.494Z",
+      "url": "https://openfront.io/game/PmiwQCTW"
     }
   ],
   "trios": [
@@ -164515,6 +164540,101 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T11:35:28.827Z",
       "url": "https://openfront.io/game/koGcZHUo"
+    },
+    {
+      "id": "SYk2anm4",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "BorisYakov",
+          "clientID": "hDtJpGQV",
+          "clanTag": null
+        },
+        {
+          "username": "witchcraft",
+          "clientID": "VW1xas4E",
+          "clanTag": null
+        },
+        {
+          "username": "WonderfulPilot.9dRC",
+          "clientID": "uxFu9jbY",
+          "clanTag": null
+        },
+        {
+          "username": "Jeppo",
+          "clientID": "ytU3tgpM",
+          "clanTag": null
+        },
+        {
+          "username": "Trader",
+          "clientID": "GFgVsNZS",
+          "clanTag": "CUSTO"
+        },
+        {
+          "username": "IWillBetrayU",
+          "clientID": "J8EXfErQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Crimea",
+      "duration_s": 706,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T11:44:09.927Z",
+      "url": "https://openfront.io/game/SYk2anm4"
+    },
+    {
+      "id": "5Q2VGJ45",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "PlanetWalker",
+          "clientID": "RNgWFFoS",
+          "clanTag": null
+        },
+        {
+          "username": "SpeedOfLint",
+          "clientID": "AYH7bQUM",
+          "clanTag": null
+        },
+        {
+          "username": "FIDES",
+          "clientID": "2y2RX3jx",
+          "clanTag": "OKAY"
+        },
+        {
+          "username": "Alright",
+          "clientID": "oMq68epa",
+          "clanTag": "OKAY"
+        },
+        {
+          "username": "AnonRelic6",
+          "clientID": "eQ4jkr8i",
+          "clanTag": null
+        },
+        {
+          "username": "KarlFlow",
+          "clientID": "v29w3KQK",
+          "clanTag": "MOL"
+        },
+        {
+          "username": "AnonJellyfish4",
+          "clientID": "uH6Fw4vd",
+          "clanTag": null
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1041,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T11:39:46.104Z",
+      "url": "https://openfront.io/game/5Q2VGJ45"
     }
   ],
   "hvn": [
