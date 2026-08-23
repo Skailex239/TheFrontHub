@@ -117478,6 +117478,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T06:19:01.567Z",
       "url": "https://openfront.io/game/ccW2AFnX"
+    },
+    {
+      "id": "f5Kq33ru",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "A Humble Trader",
+          "clientID": "EJFTpZay",
+          "clanTag": null
+        },
+        {
+          "username": "Gensokyo",
+          "clientID": "WUgufCom",
+          "clanTag": null
+        },
+        {
+          "username": "Mitochondria",
+          "clientID": "TkNWYi3Z",
+          "clanTag": null
+        },
+        {
+          "username": "PAHLAVI",
+          "clientID": "SfsGt7MS",
+          "clanTag": "KING"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 725,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T06:26:38.285Z",
+      "url": "https://openfront.io/game/f5Kq33ru"
     }
   ],
   "team_custom": [
@@ -157655,6 +157690,56 @@
       "playerTeams": 6,
       "timestamp": "2026-08-23T06:21:37.545Z",
       "url": "https://openfront.io/game/KRLNo7o1"
+    },
+    {
+      "id": "bWhSTAy5",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "KFC",
+          "clientID": "upKe6gNF",
+          "clanTag": null
+        },
+        {
+          "username": "nifty",
+          "clientID": "x3BLkepx",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench1",
+          "clientID": "MvpZ48vj",
+          "clanTag": null
+        },
+        {
+          "username": "Lucas",
+          "clientID": "rFj58dds",
+          "clanTag": "OM"
+        },
+        {
+          "username": "Prebzi",
+          "clientID": "93igbikm",
+          "clanTag": null
+        },
+        {
+          "username": "Suwon",
+          "clientID": "1wF1fRqY",
+          "clanTag": null
+        },
+        {
+          "username": "WasNotEnough",
+          "clientID": "Hb1GyX4d",
+          "clanTag": null
+        }
+      ],
+      "map": "South America",
+      "duration_s": 864,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T06:24:38.233Z",
+      "url": "https://openfront.io/game/bWhSTAy5"
     }
   ],
   "hvn": [
