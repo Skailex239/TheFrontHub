@@ -38917,6 +38917,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T05:48:58.416Z",
       "url": "https://openfront.io/game/AA8cH1vR"
+    },
+    {
+      "id": "NmA5kHK2",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Mmmmmmmz",
+          "clientID": "qyqRGQHi",
+          "clanTag": "USS"
+        },
+        {
+          "username": "FactoryMan",
+          "clientID": "sGxz9HSQ",
+          "clanTag": "SITH"
+        }
+      ],
+      "map": "Great Lakes",
+      "duration_s": 1146,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 94,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:46:57.256Z",
+      "url": "https://openfront.io/game/NmA5kHK2"
     }
   ],
   "trios": [
@@ -117098,6 +117123,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T05:43:30.109Z",
       "url": "https://openfront.io/game/KhbueQLX"
+    },
+    {
+      "id": "1ZgFqqfv",
+      "mode": "quads",
+      "team": "Team 12",
+      "players": [
+        {
+          "username": "PoorlyEducated",
+          "clientID": "aF7qtG8M",
+          "clanTag": null
+        },
+        {
+          "username": "Harps",
+          "clientID": "XnbqKMRw",
+          "clanTag": null
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "BEvK8R3u",
+          "clanTag": null
+        },
+        {
+          "username": "Attack Number 1",
+          "clientID": "1tgcsgZ7",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1492,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T05:42:40.989Z",
+      "url": "https://openfront.io/game/1ZgFqqfv"
     }
   ],
   "team_custom": [
@@ -157000,6 +157060,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T05:38:22.946Z",
       "url": "https://openfront.io/game/8AwJpYSm"
+    },
+    {
+      "id": "hPSTnZFZ",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Groot",
+          "clientID": "Sdfg16i9",
+          "clanTag": null
+        },
+        {
+          "username": "The lost ten tribes",
+          "clientID": "SzarV8mm",
+          "clanTag": "N5DAP"
+        },
+        {
+          "username": "AnonSkunk1",
+          "clientID": "kfUoCBob",
+          "clanTag": null
+        },
+        {
+          "username": "Eight",
+          "clientID": "HVes3bjT",
+          "clanTag": null
+        },
+        {
+          "username": "Ziel",
+          "clientID": "AtDkVius",
+          "clanTag": null
+        },
+        {
+          "username": "null",
+          "clientID": "BMp3rMTM",
+          "clanTag": null
+        },
+        {
+          "username": "Super Earth Federation",
+          "clientID": "ehEUwvtm",
+          "clanTag": "SEAF"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 966,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T05:51:11.370Z",
+      "url": "https://openfront.io/game/hPSTnZFZ"
     }
   ],
   "hvn": [
