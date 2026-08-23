@@ -120613,6 +120613,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T10:07:03.009Z",
       "url": "https://openfront.io/game/AC7JtHor"
+    },
+    {
+      "id": "6GYjorHv",
+      "mode": "quads",
+      "team": "Team 6",
+      "players": [
+        {
+          "username": "kim jong un",
+          "clientID": "ovQP2riv",
+          "clanTag": null
+        },
+        {
+          "username": "NicoCcino",
+          "clientID": "Pb3VjzUQ",
+          "clanTag": "LMM"
+        },
+        {
+          "username": "ioon",
+          "clientID": "DEJRU9EL",
+          "clanTag": null
+        },
+        {
+          "username": "pizza margherita",
+          "clientID": "agTq6vF6",
+          "clanTag": null
+        }
+      ],
+      "map": "Germany",
+      "duration_s": 646,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T10:21:30.187Z",
+      "url": "https://openfront.io/game/6GYjorHv"
     }
   ],
   "team_custom": [
