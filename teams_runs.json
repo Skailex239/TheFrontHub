@@ -38767,6 +38767,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T05:35:02.238Z",
       "url": "https://openfront.io/game/r7iShtgS"
+    },
+    {
+      "id": "7BRmWa5M",
+      "mode": "duos",
+      "team": "Team 14",
+      "players": [
+        {
+          "username": "Ismael",
+          "clientID": "7X6arMrX",
+          "clanTag": null
+        },
+        {
+          "username": "msi",
+          "clientID": "nsjHe83A",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 1229,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T05:22:14.099Z",
+      "url": "https://openfront.io/game/7BRmWa5M"
     }
   ],
   "trios": [
