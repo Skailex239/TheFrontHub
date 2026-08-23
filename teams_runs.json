@@ -114968,6 +114968,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T00:47:01.404Z",
       "url": "https://openfront.io/game/JWmhZyXa"
+    },
+    {
+      "id": "bxGAC9UN",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Wonko",
+          "clientID": "zbTpXsrn",
+          "clanTag": null
+        },
+        {
+          "username": "feEEda",
+          "clientID": "YN9jRGr8",
+          "clanTag": "AST"
+        },
+        {
+          "username": "CharlieKirkDeservedItLmao",
+          "clientID": "QGH83Erg",
+          "clanTag": null
+        },
+        {
+          "username": "Moskva",
+          "clientID": "pv6i8tcR",
+          "clanTag": null
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 625,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 96,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T01:45:44.159Z",
+      "url": "https://openfront.io/game/bxGAC9UN"
+    },
+    {
+      "id": "XCJQTecY",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Digestive",
+          "clientID": "7qRgPnfv",
+          "clanTag": null
+        },
+        {
+          "username": "wilfredo",
+          "clientID": "3r8DDsqE",
+          "clanTag": "PN"
+        },
+        {
+          "username": "Oliondort",
+          "clientID": "UKpVjsWZ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "hey",
+          "clientID": "WsomM9mG",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 745,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T01:43:41.290Z",
+      "url": "https://openfront.io/game/XCJQTecY"
     }
   ],
   "team_custom": [
