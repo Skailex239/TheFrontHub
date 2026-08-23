@@ -119278,6 +119278,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T08:48:35.635Z",
       "url": "https://openfront.io/game/Ptk3vShm"
+    },
+    {
+      "id": "W7jiMgC1",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonSteam3",
+          "clientID": "6MEhau4P",
+          "clanTag": null
+        },
+        {
+          "username": "OxO",
+          "clientID": "DtVcdNgt",
+          "clanTag": null
+        },
+        {
+          "username": "FBK",
+          "clientID": "zh9X8foX",
+          "clanTag": null
+        },
+        {
+          "username": "i love you.....",
+          "clientID": "BLJzXvoc",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 740,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T08:53:52.654Z",
+      "url": "https://openfront.io/game/W7jiMgC1"
     }
   ],
   "team_custom": [
@@ -160510,6 +160545,46 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T08:38:52.453Z",
       "url": "https://openfront.io/game/Rx1c1Jcc"
+    },
+    {
+      "id": "r3j36bik",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bosna",
+          "clientID": "rYNYJ41Q",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Empire of Floptropica",
+          "clientID": "mRoYhc8F",
+          "clanTag": "UN"
+        },
+        {
+          "username": "___",
+          "clientID": "j4SqP7R6",
+          "clanTag": null
+        },
+        {
+          "username": "wsp",
+          "clientID": "7aUYrDbA",
+          "clanTag": null
+        },
+        {
+          "username": "Marras",
+          "clientID": "cqJjhw68",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 901,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T08:52:55.040Z",
+      "url": "https://openfront.io/game/r3j36bik"
     }
   ],
   "hvn": [
