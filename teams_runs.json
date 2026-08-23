@@ -77411,6 +77411,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T06:03:25.713Z",
       "url": "https://openfront.io/game/KG6njD4D"
+    },
+    {
+      "id": "GuJj3ynm",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "USSR",
+          "clientID": "P1DUuexT",
+          "clanTag": null
+        },
+        {
+          "username": "Lewwy",
+          "clientID": "2vkvi12r",
+          "clanTag": "804"
+        },
+        {
+          "username": "wave",
+          "clientID": "wVYuN2dV",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 645,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T06:08:30.297Z",
+      "url": "https://openfront.io/game/GuJj3ynm"
     }
   ],
   "quads": [
