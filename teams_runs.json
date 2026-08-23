@@ -116063,6 +116063,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T03:40:46.022Z",
       "url": "https://openfront.io/game/wGHCNi4h"
+    },
+    {
+      "id": "kXgPDZhQ",
+      "mode": "quads",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "_AI_",
+          "clientID": "jvMSVJLR",
+          "clanTag": "AI"
+        },
+        {
+          "username": "AnonVanilla4",
+          "clientID": "6oP4QcVY",
+          "clanTag": null
+        },
+        {
+          "username": "baraabe",
+          "clientID": "fgazRnQf",
+          "clanTag": null
+        },
+        {
+          "username": "DontHugMeImScared",
+          "clientID": "TwM7GhRd",
+          "clanTag": "MARS"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 1145,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T03:47:17.405Z",
+      "url": "https://openfront.io/game/kXgPDZhQ"
     }
   ],
   "team_custom": [
