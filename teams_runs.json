@@ -39867,6 +39867,31 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-23T09:01:27.893Z",
       "url": "https://openfront.io/game/cNKogtEP"
+    },
+    {
+      "id": "PK5Xwteo",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "LoudFish.Fv3c",
+          "clientID": "NCP2ckYA",
+          "clanTag": null
+        },
+        {
+          "username": "Anon675",
+          "clientID": "TuBSKhPa",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 497,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T09:22:09.793Z",
+      "url": "https://openfront.io/game/PK5Xwteo"
     }
   ],
   "trios": [
@@ -79121,6 +79146,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T09:07:16.987Z",
       "url": "https://openfront.io/game/cxiXF5sA"
+    },
+    {
+      "id": "vaMX8zzc",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Friend",
+          "clientID": "BoM95Zzo",
+          "clanTag": "BST"
+        },
+        {
+          "username": "EndlessCarrot.vEr2",
+          "clientID": "zXeJgnNL",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScarlet2",
+          "clientID": "UxVSdQa7",
+          "clanTag": null
+        }
+      ],
+      "map": "Halkidiki",
+      "duration_s": 723,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T09:18:23.062Z",
+      "url": "https://openfront.io/game/vaMX8zzc"
     }
   ],
   "quads": [
@@ -119658,6 +119713,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T09:08:16.572Z",
       "url": "https://openfront.io/game/FwJWvLic"
+    },
+    {
+      "id": "wiWWWdpM",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "thomas",
+          "clientID": "1fjrrpr3",
+          "clanTag": null
+        },
+        {
+          "username": "ext drippy",
+          "clientID": "SRpZyyME",
+          "clanTag": "DIDDY"
+        },
+        {
+          "username": "PreciousBubbles",
+          "clientID": "a5h8q6zg",
+          "clanTag": null
+        },
+        {
+          "username": "BennySedrak",
+          "clientID": "gGXBX4u9",
+          "clanTag": "DIDDY"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T09:16:29.380Z",
+      "url": "https://openfront.io/game/wiWWWdpM"
     }
   ],
   "team_custom": [
