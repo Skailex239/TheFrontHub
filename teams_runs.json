@@ -39767,6 +39767,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T09:08:49.624Z",
       "url": "https://openfront.io/game/mb9PTWsD"
+    },
+    {
+      "id": "FBStTPHC",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Commonwealth",
+          "clientID": "CR8xRzrg",
+          "clanTag": null
+        },
+        {
+          "username": "BENITO",
+          "clientID": "xhFK9zfK",
+          "clanTag": null
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 683,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T09:13:01.570Z",
+      "url": "https://openfront.io/game/FBStTPHC"
+    },
+    {
+      "id": "pRYXhA8f",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "DDONG",
+          "clientID": "z46j5GM6",
+          "clanTag": "MEGA"
+        },
+        {
+          "username": "tizi",
+          "clientID": "ruDrv2qB",
+          "clanTag": "WEG"
+        }
+      ],
+      "map": "Passage",
+      "duration_s": 928,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T09:09:37.196Z",
+      "url": "https://openfront.io/game/pRYXhA8f"
+    },
+    {
+      "id": "gC12MSGq",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon754",
+          "clientID": "SzHdrKaG",
+          "clanTag": null
+        },
+        {
+          "username": "Zechstein",
+          "clientID": "VXmocpFS",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 602,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 69,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T09:15:46.312Z",
+      "url": "https://openfront.io/game/gC12MSGq"
     }
   ],
   "trios": [
@@ -195862,6 +195937,81 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T08:44:05.792Z",
       "url": "https://openfront.io/game/TCq6ifXH"
+    },
+    {
+      "id": "JnPQxgjd",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "theETH1",
+          "clientID": "EQ7jR9ra",
+          "clanTag": null
+        },
+        {
+          "username": "Crustacean Nation",
+          "clientID": "KEqVP5Xt",
+          "clanTag": null
+        },
+        {
+          "username": "Anon075",
+          "clientID": "bwWcxdpT",
+          "clanTag": null
+        },
+        {
+          "username": "mazurko",
+          "clientID": "zwoYnmFj",
+          "clanTag": null
+        },
+        {
+          "username": "slippland",
+          "clientID": "Jt7hNdwY",
+          "clanTag": "IRS"
+        },
+        {
+          "username": "tenekekafa",
+          "clientID": "GDh6zcb7",
+          "clanTag": null
+        },
+        {
+          "username": "PBJACK14",
+          "clientID": "v5kscCXR",
+          "clanTag": null
+        },
+        {
+          "username": "JunMkt",
+          "clientID": "meZLRuCz",
+          "clanTag": null
+        },
+        {
+          "username": "Jobless",
+          "clientID": "bUf3v3kH",
+          "clanTag": "KOREA"
+        },
+        {
+          "username": "qwertyqwerty1",
+          "clientID": "mA5skZSo",
+          "clanTag": null
+        },
+        {
+          "username": "Anon375",
+          "clientID": "jAinhNpG",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPlow7",
+          "clientID": "4VNZ7xbo",
+          "clanTag": null
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 735,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T09:13:45.130Z",
+      "url": "https://openfront.io/game/JnPQxgjd"
     }
   ]
 }
