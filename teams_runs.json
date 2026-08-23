@@ -38942,6 +38942,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T05:46:57.256Z",
       "url": "https://openfront.io/game/NmA5kHK2"
+    },
+    {
+      "id": "WSoiRSuD",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "NoAlliances",
+          "clientID": "ogydHNVz",
+          "clanTag": null
+        },
+        {
+          "username": "Bigbob",
+          "clientID": "TczfgfMm",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 857,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T06:00:26.211Z",
+      "url": "https://openfront.io/game/WSoiRSuD"
     }
   ],
   "trios": [
@@ -117193,6 +117218,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T05:58:44.159Z",
       "url": "https://openfront.io/game/kR9peRjA"
+    },
+    {
+      "id": "pvbj5R9e",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "f12",
+          "clientID": "2RV2LVHS",
+          "clanTag": null
+        },
+        {
+          "username": "Chester",
+          "clientID": "GKubCwY3",
+          "clanTag": "OSO"
+        },
+        {
+          "username": "modern",
+          "clientID": "rQUDjDkL",
+          "clanTag": "OSO"
+        },
+        {
+          "username": "GenericName",
+          "clientID": "nYfTiN3r",
+          "clanTag": "OSO"
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 1736,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T05:45:26.031Z",
+      "url": "https://openfront.io/game/pvbj5R9e"
     }
   ],
   "team_custom": [
