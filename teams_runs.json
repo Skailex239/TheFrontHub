@@ -41192,6 +41192,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T13:12:21.439Z",
       "url": "https://openfront.io/game/nMLgLnCH"
+    },
+    {
+      "id": "zgLav43Q",
+      "mode": "duos",
+      "team": "Team 23",
+      "players": [
+        {
+          "username": "NEXRSA",
+          "clientID": "KqJbPZzF",
+          "clanTag": null
+        },
+        {
+          "username": "AnonZenith9",
+          "clientID": "EArykd4Y",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 1707,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T13:02:12.788Z",
+      "url": "https://openfront.io/game/zgLav43Q"
+    },
+    {
+      "id": "YgustVV2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "BunnyKisses67",
+          "clientID": "ooi17mvD",
+          "clanTag": null
+        },
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "J2Cgn8cc",
+          "clanTag": null
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 539,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:21:45.022Z",
+      "url": "https://openfront.io/game/YgustVV2"
+    },
+    {
+      "id": "pcWeNYdp",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "__qwq__",
+          "clientID": "cfsxmnLu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTiger8",
+          "clientID": "ppgTCMqz",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 709,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T13:18:58.851Z",
+      "url": "https://openfront.io/game/pcWeNYdp"
     }
   ],
   "trios": [
@@ -81436,6 +81511,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T12:33:42.276Z",
       "url": "https://openfront.io/game/m16N1u2Z"
+    },
+    {
+      "id": "22hjUUx7",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonMonsoon9",
+          "clientID": "1oebB6tT",
+          "clanTag": null
+        },
+        {
+          "username": "DumbPlayer",
+          "clientID": "tB6eoy77",
+          "clanTag": null
+        },
+        {
+          "username": "Marismo",
+          "clientID": "pXrZc9dx",
+          "clanTag": null
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 551,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T13:22:27.094Z",
+      "url": "https://openfront.io/game/22hjUUx7"
     }
   ],
   "quads": [
