@@ -38317,6 +38317,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T03:16:01.518Z",
       "url": "https://openfront.io/game/67kUCqhW"
+    },
+    {
+      "id": "MjYRQwcJ",
+      "mode": "duos",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "zzzz",
+          "clientID": "eLVVEVXa",
+          "clanTag": "QQ"
+        },
+        {
+          "username": "mushi",
+          "clientID": "QSPCBR1J",
+          "clanTag": "QQ"
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 1103,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 46,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T03:13:36.370Z",
+      "url": "https://openfront.io/game/MjYRQwcJ"
     }
   ],
   "trios": [
@@ -154560,6 +154585,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T03:07:02.454Z",
       "url": "https://openfront.io/game/vGGM9ySf"
+    },
+    {
+      "id": "n5BqXVW7",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Parsa221",
+          "clientID": "h3c8AJjC",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "toast",
+          "clientID": "juNqgsby",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "TiggerNoun",
+          "clientID": "myQPpBEq",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "Griffer310",
+          "clientID": "yzjyLaRx",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "goblandia",
+          "clientID": "VR35cxeA",
+          "clanTag": "GOB"
+        },
+        {
+          "username": "Samoa",
+          "clientID": "KKPT6tmk",
+          "clanTag": null
+        },
+        {
+          "username": "Britain",
+          "clientID": "b2xkpWLs",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 734,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T03:19:49.237Z",
+      "url": "https://openfront.io/game/n5BqXVW7"
     }
   ],
   "hvn": [
