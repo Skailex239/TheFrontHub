@@ -38617,6 +38617,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T04:38:59.131Z",
       "url": "https://openfront.io/game/FNyr5SSc"
+    },
+    {
+      "id": "DBK8PKdk",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon746",
+          "clientID": "Vuwdb8M4",
+          "clanTag": null
+        },
+        {
+          "username": "hhh",
+          "clientID": "F6ndR7bQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 981,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T04:46:14.090Z",
+      "url": "https://openfront.io/game/DBK8PKdk"
     }
   ],
   "trios": [
@@ -116403,6 +116428,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T04:32:51.762Z",
       "url": "https://openfront.io/game/wbpSL38M"
+    },
+    {
+      "id": "tXu9BB3s",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "123",
+          "clientID": "iXyDfi1J",
+          "clanTag": null
+        },
+        {
+          "username": "LarpLarpLarpXM",
+          "clientID": "xycQ96Ej",
+          "clanTag": null
+        },
+        {
+          "username": "SCREEEEEEEEEEEE",
+          "clientID": "PLvW8nKF",
+          "clanTag": "LMAO"
+        },
+        {
+          "username": "money boost",
+          "clientID": "sDb4WUNc",
+          "clanTag": null
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 689,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T04:51:16.383Z",
+      "url": "https://openfront.io/game/tXu9BB3s"
     }
   ],
   "team_custom": [
