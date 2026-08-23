@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T13:45:28.288Z",
-  "lastSyncedAt": "2026-08-23T13:45:25.806Z",
-  "totalGames": 3830,
+  "computedAt": "2026-08-23T13:47:43.316Z",
+  "lastSyncedAt": "2026-08-23T13:47:40.593Z",
+  "totalGames": 3831,
   "careerWins": {
     "ffaCasual": 278,
     "ffaRanked": 1421,
     "teamCasual": 151,
-    "teamRanked": 139
+    "teamRanked": 140
   },
-  "totalWins": 1989,
-  "points": 5095,
+  "totalWins": 1990,
+  "points": 5096,
   "level": 50,
-  "levelProgress": 95,
+  "levelProgress": 96,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1989,
+      "current": 1990,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "5 095",
-    "totalWins": "1 989",
-    "totalGames": "3 830",
+    "points": "5 096",
+    "totalWins": "1 990",
+    "totalGames": "3 831",
     "totalPlaytime": "31j 10h",
     "totalPlaytimeCompact": "31j 10h",
     "avgGameDuration": "11m 49s",
@@ -50,8 +50,8 @@
     "totalPlaytimeHours": "754h"
   },
   "playtime": {
-    "totalSec": 2716291,
-    "avgGameSec": 709.214360313316,
+    "totalSec": 2716787,
+    "avgGameSec": 709.1587052988775,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -71,14 +71,14 @@
         "wins": 151
       },
       "teamRanked": {
-        "games": 221,
-        "playtimeSec": 59893,
-        "wins": 139
+        "games": 222,
+        "playtimeSec": 60389,
+        "wins": 140
       }
     }
   },
   "results": {
-    "victory": 1989,
+    "victory": 1990,
     "defeat": 1508,
     "incomplete": 333
   },
@@ -101,13 +101,13 @@
     },
     {
       "map": "Iceland",
-      "count": 428,
-      "wins": 302,
+      "count": 429,
+      "wins": 303,
       "losses": 126,
-      "playtimeSec": 181998,
-      "avgDuration": 425.2289719626168,
-      "winRate": 0.705607476635514,
-      "lastPlayed": 1787491556798,
+      "playtimeSec": 182494,
+      "avgDuration": 425.3939393939394,
+      "winRate": 0.7062937062937062,
+      "lastPlayed": 1787492278501,
       "formatted": {
         "playtime": "2j 2h",
         "avgDuration": "7m",
@@ -1605,7 +1605,7 @@
       98,
       104,
       94,
-      149,
+      150,
       227,
       324,
       351,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      576
+      577
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 16,
-        "playtimeSec": 15405
+        "count": 17,
+        "playtimeSec": 15901
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 2,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "VJqz7hK4",
+      "start": "2026-08-23T13:37:58.501Z",
+      "map": "Iceland",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 496,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "aG9VW9P6",
       "start": "2026-08-23T13:30:38.048Z",
@@ -2365,17 +2376,6 @@
       "totalPlayers": 50,
       "rankedType": "unranked",
       "category": "teamCasual"
-    },
-    {
-      "gameId": "42u4S6ju",
-      "start": "2026-08-21T10:42:56.022Z",
-      "map": "Dyslexdria",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 1493,
-      "totalPlayers": 101,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }
