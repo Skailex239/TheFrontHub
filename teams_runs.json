@@ -78261,6 +78261,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T07:32:13.163Z",
       "url": "https://openfront.io/game/7Aj9y8yN"
+    },
+    {
+      "id": "QViBLAtx",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ulm",
+          "clientID": "iaoej9g6",
+          "clanTag": null
+        },
+        {
+          "username": "wgrf",
+          "clientID": "3mQKsMYT",
+          "clanTag": null
+        },
+        {
+          "username": "Anon111",
+          "clientID": "ogLYusac",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Gulf of St. Lawrence",
+      "duration_s": 566,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:42:19.830Z",
+      "url": "https://openfront.io/game/QViBLAtx"
     }
   ],
   "quads": [
@@ -118518,6 +118548,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T07:02:58.370Z",
       "url": "https://openfront.io/game/LC92Ri4b"
+    },
+    {
+      "id": "qCEbtKzs",
+      "mode": "quads",
+      "team": "Orange",
+      "players": [
+        {
+          "username": "Sillytopia",
+          "clientID": "QcvHTDzU",
+          "clanTag": null
+        },
+        {
+          "username": "Migu",
+          "clientID": "m9zn8qFT",
+          "clanTag": "UN"
+        },
+        {
+          "username": "nahogen",
+          "clientID": "4TqwnJsk",
+          "clanTag": null
+        },
+        {
+          "username": "Mr Wiggles",
+          "clientID": "GKsQDS5A",
+          "clanTag": null
+        }
+      ],
+      "map": "Venice",
+      "duration_s": 788,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T07:39:02.827Z",
+      "url": "https://openfront.io/game/qCEbtKzs"
     }
   ],
   "team_custom": [
@@ -159080,6 +159145,46 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T07:37:34.679Z",
       "url": "https://openfront.io/game/NqNm9DqM"
+    },
+    {
+      "id": "rZQdtgJH",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "BabyMonki",
+          "clientID": "3f3bTn1W",
+          "clanTag": "POOR"
+        },
+        {
+          "username": "hambertger",
+          "clientID": "iGifhvYD",
+          "clanTag": "POOR"
+        },
+        {
+          "username": "pongo",
+          "clientID": "uTeCHj1j",
+          "clanTag": null
+        },
+        {
+          "username": "AOblisk",
+          "clientID": "TQUARe69",
+          "clanTag": null
+        },
+        {
+          "username": "Rondeh",
+          "clientID": "bxVzn1Fz",
+          "clanTag": null
+        }
+      ],
+      "map": "Caucasus",
+      "duration_s": 548,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T07:43:34.731Z",
+      "url": "https://openfront.io/game/rZQdtgJH"
     }
   ],
   "hvn": [
