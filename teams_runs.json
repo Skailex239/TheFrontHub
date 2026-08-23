@@ -38367,6 +38367,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T03:23:22.948Z",
       "url": "https://openfront.io/game/5uHW5WLR"
+    },
+    {
+      "id": "RKuTBuKA",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DictatorKylianMbappe",
+          "clientID": "caacLvEH",
+          "clanTag": null
+        },
+        {
+          "username": "mitochondria",
+          "clientID": "cMf7bh3F",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 479,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T03:29:28.818Z",
+      "url": "https://openfront.io/game/RKuTBuKA"
     }
   ],
   "trios": [
@@ -115788,6 +115813,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T03:14:00.395Z",
       "url": "https://openfront.io/game/gX7okW2b"
+    },
+    {
+      "id": "9pvcuczp",
+      "mode": "quads",
+      "team": "Team 7",
+      "players": [
+        {
+          "username": "nekozeeeeeee",
+          "clientID": "mye5dE8U",
+          "clanTag": null
+        },
+        {
+          "username": "Germany",
+          "clientID": "a3w7i7SF",
+          "clanTag": "HACHI"
+        },
+        {
+          "username": "AnonRhino9",
+          "clientID": "NiXxLwTA",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLighthouse4",
+          "clientID": "4SwnMGZx",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 1159,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T03:18:10.140Z",
+      "url": "https://openfront.io/game/9pvcuczp"
     }
   ],
   "team_custom": [
