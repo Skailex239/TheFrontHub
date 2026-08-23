@@ -39342,6 +39342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T07:35:21.733Z",
       "url": "https://openfront.io/game/c6br52LY"
+    },
+    {
+      "id": "3nDiQibG",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "The Minecraft  Empire",
+          "clientID": "5AdgqCPM",
+          "clanTag": null
+        },
+        {
+          "username": "power_house of the cell",
+          "clientID": "JdoCZeAJ",
+          "clanTag": "BOO"
+        }
+      ],
+      "map": "Baltics",
+      "duration_s": 552,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T07:39:29.865Z",
+      "url": "https://openfront.io/game/3nDiQibG"
     }
   ],
   "trios": [
@@ -78206,6 +78231,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T07:26:13.582Z",
       "url": "https://openfront.io/game/Qa72EYcM"
+    },
+    {
+      "id": "7Aj9y8yN",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "coffee_cake",
+          "clientID": "oicxzQWg",
+          "clanTag": "MEOW"
+        },
+        {
+          "username": "pikmin",
+          "clientID": "331MUwz3",
+          "clanTag": "TFD"
+        },
+        {
+          "username": "yoon again",
+          "clientID": "FHKNf5ec",
+          "clanTag": null
+        }
+      ],
+      "map": "Sierpinski",
+      "duration_s": 903,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:32:13.163Z",
+      "url": "https://openfront.io/game/7Aj9y8yN"
     }
   ],
   "quads": [
