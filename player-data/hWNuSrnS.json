@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-23T10:19:21.001Z",
+  "lastSyncedAt": "2026-08-23T10:21:32.736Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.1,
-  "totalGames": 3815,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 3816,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "Xmw47H34",
+      "start": "2026-08-23T09:53:24.081Z",
+      "durationSeconds": 1590,
+      "map": "Great Lakes",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "defeat",
+      "totalPlayers": 90,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "KER4id4A",
       "start": "2026-08-22T22:22:30.186Z",

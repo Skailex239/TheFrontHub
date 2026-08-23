@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T10:19:23.186Z",
-  "lastSyncedAt": "2026-08-23T10:19:21.001Z",
-  "totalGames": 3815,
+  "computedAt": "2026-08-23T10:21:35.599Z",
+  "lastSyncedAt": "2026-08-23T10:21:32.736Z",
+  "totalGames": 3816,
   "careerWins": {
     "ffaCasual": 276,
     "ffaRanked": 1420,
@@ -41,7 +41,7 @@
   "formatted": {
     "points": "5 072",
     "totalWins": "1 984",
-    "totalGames": "3 815",
+    "totalGames": "3 816",
     "totalPlaytime": "31j 6h",
     "totalPlaytimeCompact": "31j 6h",
     "avgGameDuration": "11m 48s",
@@ -50,14 +50,14 @@
     "totalPlaytimeHours": "750h"
   },
   "playtime": {
-    "totalSec": 2701841,
-    "avgGameSec": 708.2152031454784,
+    "totalSec": 2703431,
+    "avgGameSec": 708.4462788259958,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1099,
-        "playtimeSec": 1331704,
+        "games": 1100,
+        "playtimeSec": 1333294,
         "wins": 276
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1984,
-    "defeat": 1499,
+    "defeat": 1500,
     "incomplete": 332
   },
   "maps": [
@@ -692,6 +692,22 @@
       }
     },
     {
+      "map": "Great Lakes",
+      "count": 12,
+      "wins": 2,
+      "losses": 10,
+      "playtimeSec": 16314,
+      "avgDuration": 1359.5,
+      "winRate": 0.16666666666666666,
+      "lastPlayed": 1787478804081,
+      "formatted": {
+        "playtime": "4h 31m",
+        "avgDuration": "22m",
+        "winRate": "17%",
+        "lastPlayed": "23/08/26"
+      }
+    },
+    {
       "map": "Yenisei",
       "count": 12,
       "wins": 5,
@@ -769,22 +785,6 @@
         "avgDuration": "22m",
         "winRate": "18%",
         "lastPlayed": "21/08/26"
-      }
-    },
-    {
-      "map": "Great Lakes",
-      "count": 11,
-      "wins": 2,
-      "losses": 9,
-      "playtimeSec": 14724,
-      "avgDuration": 1338.5454545454545,
-      "winRate": 0.18181818181818182,
-      "lastPlayed": 1786868910726,
-      "formatted": {
-        "playtime": "4h 5m",
-        "avgDuration": "22m",
-        "winRate": "18%",
-        "lastPlayed": "16/08/26"
       }
     },
     {
@@ -1601,7 +1601,7 @@
       39,
       59,
       90,
-      80,
+      81,
       97,
       100,
       91,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      561
+      562
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 1,
-        "playtimeSec": 955
+        "count": 2,
+        "playtimeSec": 2545
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 0,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "Xmw47H34",
+      "start": "2026-08-23T09:53:24.081Z",
+      "map": "Great Lakes",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1590,
+      "totalPlayers": 90,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "KER4id4A",
       "start": "2026-08-22T22:22:30.186Z",
@@ -2363,17 +2374,6 @@
       "result": "victory",
       "durationSeconds": 835,
       "totalPlayers": 53,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "UNUBBYh9",
-      "start": "2026-08-20T06:49:51.770Z",
-      "map": "Bering Sea",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 810,
-      "totalPlayers": 77,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
