@@ -77676,6 +77676,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T06:37:14.506Z",
       "url": "https://openfront.io/game/xDKM1rjg"
+    },
+    {
+      "id": "JJhX79Zy",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonTitan4",
+          "clientID": "iqFP9PUW",
+          "clanTag": null
+        },
+        {
+          "username": "TOWER OF THE SUN",
+          "clientID": "21oiocYk",
+          "clanTag": null
+        },
+        {
+          "username": "Blizzard2",
+          "clientID": "zfe7Ed2S",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 584,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T06:41:55.500Z",
+      "url": "https://openfront.io/game/JJhX79Zy"
     }
   ],
   "quads": [
@@ -191967,6 +191997,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T05:25:22.862Z",
       "url": "https://openfront.io/game/HGENBanF"
+    },
+    {
+      "id": "qPd7YRob",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Crab People",
+          "clientID": "iT3p3dxX",
+          "clanTag": null
+        },
+        {
+          "username": "Sadra",
+          "clientID": "XDLR1HdJ",
+          "clanTag": null
+        },
+        {
+          "username": "Send Feet Plz",
+          "clientID": "c7s6bkHA",
+          "clanTag": null
+        },
+        {
+          "username": "Anon1",
+          "clientID": "jCwPZLkU",
+          "clanTag": null
+        },
+        {
+          "username": "Hshoter",
+          "clientID": "VLMWff67",
+          "clanTag": null
+        },
+        {
+          "username": "Anon753",
+          "clientID": "t2YWuPsw",
+          "clanTag": null
+        },
+        {
+          "username": "Serdar",
+          "clientID": "PGcUjU1Y",
+          "clanTag": "GY"
+        },
+        {
+          "username": "Drow",
+          "clientID": "7GEjnkB3",
+          "clanTag": "WOW"
+        },
+        {
+          "username": "Mr.Kamona",
+          "clientID": "XASHkoeQ",
+          "clanTag": "EGY"
+        },
+        {
+          "username": "AnonGoose7",
+          "clientID": "H7x8PSX5",
+          "clanTag": null
+        },
+        {
+          "username": "NanasLilMan",
+          "clientID": "tRHVYTdc",
+          "clanTag": null
+        },
+        {
+          "username": "Codex5.6Sol_high",
+          "clientID": "3K6jUmff",
+          "clanTag": null
+        },
+        {
+          "username": "teamneverhelps",
+          "clientID": "fVKJJ3z4",
+          "clanTag": "CZ"
+        },
+        {
+          "username": "III",
+          "clientID": "6nR7kH8r",
+          "clanTag": null
+        }
+      ],
+      "map": "New York City",
+      "duration_s": 971,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T06:35:09.365Z",
+      "url": "https://openfront.io/game/qPd7YRob"
     }
   ]
 }
