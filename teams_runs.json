@@ -40192,6 +40192,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T10:26:30.014Z",
       "url": "https://openfront.io/game/4L6qLodD"
+    },
+    {
+      "id": "oy2wxMQZ",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Zhirwan",
+          "clientID": "8yfadrVx",
+          "clanTag": "UN"
+        },
+        {
+          "username": "zazza12",
+          "clientID": "HxaSGZu5",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 625,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T10:40:09.662Z",
+      "url": "https://openfront.io/game/oy2wxMQZ"
+    },
+    {
+      "id": "ZL7nK8EG",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonZebra9",
+          "clientID": "TUgS3UQe",
+          "clanTag": null
+        },
+        {
+          "username": "EIBIEL",
+          "clientID": "NTTKkx8S",
+          "clanTag": "PER"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 582,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T10:42:19.806Z",
+      "url": "https://openfront.io/game/ZL7nK8EG"
+    },
+    {
+      "id": "HGzmHENC",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Fox2",
+          "clientID": "99EyjmmX",
+          "clanTag": null
+        },
+        {
+          "username": "Qwerty_DC",
+          "clientID": "d2rW7ViH",
+          "clanTag": null
+        }
+      ],
+      "map": "Luna",
+      "duration_s": 1150,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T10:32:18.450Z",
+      "url": "https://openfront.io/game/HGzmHENC"
     }
   ],
   "trios": [
