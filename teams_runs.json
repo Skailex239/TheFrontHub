@@ -76086,6 +76086,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T01:59:00.775Z",
       "url": "https://openfront.io/game/CEcaEcBq"
+    },
+    {
+      "id": "vJhkg5eH",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonCastle2",
+          "clientID": "XqK3jHLB",
+          "clanTag": null
+        },
+        {
+          "username": "Openfrontmaster",
+          "clientID": "pX5WFqvs",
+          "clanTag": "OO"
+        },
+        {
+          "username": "AnonShark2",
+          "clientID": "wpJxggVr",
+          "clanTag": null
+        }
+      ],
+      "map": "Italia",
+      "duration_s": 567,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 39,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T02:02:53.506Z",
+      "url": "https://openfront.io/game/vJhkg5eH"
     }
   ],
   "quads": [
@@ -153355,6 +153385,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T01:52:32.149Z",
       "url": "https://openfront.io/game/4xF5ntGt"
+    },
+    {
+      "id": "R7tPo76a",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "BenjaminF78",
+          "clientID": "TT9dh6Zs",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "PoilDeLama",
+          "clientID": "BjDgZsxS",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "Tabartouffe",
+          "clientID": "7raGwL5Q",
+          "clanTag": "SECTE"
+        },
+        {
+          "username": "AnonPyramid4",
+          "clientID": "ANonwPVb",
+          "clanTag": null
+        },
+        {
+          "username": "Barakuda69",
+          "clientID": "pQ4Jttdv",
+          "clanTag": null
+        },
+        {
+          "username": "Truus",
+          "clientID": "Q2dnciaW",
+          "clanTag": null
+        },
+        {
+          "username": "kir mikham",
+          "clientID": "fBGMSnCk",
+          "clanTag": "GOON"
+        }
+      ],
+      "map": "France",
+      "duration_s": 691,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 88,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T02:01:01.893Z",
+      "url": "https://openfront.io/game/R7tPo76a"
     }
   ],
   "hvn": [
