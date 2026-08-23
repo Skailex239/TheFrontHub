@@ -39892,6 +39892,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T09:22:09.793Z",
       "url": "https://openfront.io/game/PK5Xwteo"
+    },
+    {
+      "id": "ZCS69MnS",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TOKYO101",
+          "clientID": "mmG7gwja",
+          "clanTag": null
+        },
+        {
+          "username": "ANURAG",
+          "clientID": "PB1L5Ttf",
+          "clanTag": "APG"
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 580,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T09:23:07.342Z",
+      "url": "https://openfront.io/game/ZCS69MnS"
     }
   ],
   "trios": [
@@ -119748,6 +119773,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T09:16:29.380Z",
       "url": "https://openfront.io/game/wiWWWdpM"
+    },
+    {
+      "id": "2Hev6Qu1",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Nuke Party",
+          "clientID": "j6HG1iG6",
+          "clanTag": "NU"
+        },
+        {
+          "username": "I Help Anytime",
+          "clientID": "Yfi7yeXR",
+          "clanTag": null
+        },
+        {
+          "username": "Abracadabra",
+          "clientID": "pZ9umATD",
+          "clanTag": null
+        },
+        {
+          "username": "Gedeon",
+          "clientID": "7vjf5FXK",
+          "clanTag": "GOD"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 2850,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T08:47:01.496Z",
+      "url": "https://openfront.io/game/2Hev6Qu1"
     }
   ],
   "team_custom": [
