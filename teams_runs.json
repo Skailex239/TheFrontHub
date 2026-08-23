@@ -166210,6 +166210,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T12:48:26.752Z",
       "url": "https://openfront.io/game/yhe3c1Vy"
+    },
+    {
+      "id": "B5wsWeeB",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon685",
+          "clientID": "E8bW9qi2",
+          "clanTag": null
+        },
+        {
+          "username": "LaFrance",
+          "clientID": "19Ji8g3q",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Anon",
+          "clientID": "4mpwtRaC",
+          "clanTag": null
+        },
+        {
+          "username": "Zero",
+          "clientID": "hfQtH8aJ",
+          "clanTag": null
+        },
+        {
+          "username": "Anon903",
+          "clientID": "exg6i18p",
+          "clanTag": null
+        },
+        {
+          "username": "Eldian Empire",
+          "clientID": "Ey7B8Ygo",
+          "clanTag": null
+        },
+        {
+          "username": "Babalu",
+          "clientID": "2ZH1st1N",
+          "clanTag": "CAT"
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 700,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T12:51:41.027Z",
+      "url": "https://openfront.io/game/B5wsWeeB"
     }
   ],
   "hvn": [
@@ -202877,6 +202927,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T12:47:28.135Z",
       "url": "https://openfront.io/game/XgaFsKzv"
+    },
+    {
+      "id": "TULb6PVa",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonRelic8",
+          "clientID": "RFbaYowX",
+          "clanTag": null
+        },
+        {
+          "username": "DoNuT",
+          "clientID": "AyfZQYmF",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThistle7",
+          "clientID": "4ybUWnXd",
+          "clanTag": null
+        },
+        {
+          "username": "chesstitans",
+          "clientID": "ycQN9umJ",
+          "clanTag": "AHG"
+        },
+        {
+          "username": "pupseenj",
+          "clientID": "HwxzkivE",
+          "clanTag": null
+        },
+        {
+          "username": "vvv",
+          "clientID": "7FGaRFJa",
+          "clanTag": null
+        },
+        {
+          "username": "Eragon",
+          "clientID": "pSHuRMWZ",
+          "clanTag": "SLOP"
+        },
+        {
+          "username": "AnonTuba6",
+          "clientID": "QassRnQT",
+          "clanTag": null
+        },
+        {
+          "username": "AnonPearl9",
+          "clientID": "s4jSkZw4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEclipse1",
+          "clientID": "q53AS5ci",
+          "clanTag": null
+        },
+        {
+          "username": "Qweppy",
+          "clientID": "EGJEtEwT",
+          "clanTag": null
+        },
+        {
+          "username": "Lucid",
+          "clientID": "HHQNw2VQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "YopFraise",
+          "clientID": "ytJ2g3dU",
+          "clanTag": null
+        },
+        {
+          "username": "ivo",
+          "clientID": "FWdm9THJ",
+          "clanTag": null
+        },
+        {
+          "username": "AnonRuby",
+          "clientID": "a1FSfvjT",
+          "clanTag": null
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 881,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T12:49:18.310Z",
+      "url": "https://openfront.io/game/TULb6PVa"
     }
   ]
 }
