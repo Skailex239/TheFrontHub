@@ -40417,6 +40417,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T11:12:52.310Z",
       "url": "https://openfront.io/game/PtoUshsc"
+    },
+    {
+      "id": "Wdr82XRy",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "oncenot",
+          "clientID": "V2CuTAcu",
+          "clanTag": "NU"
+        },
+        {
+          "username": "jerry_berlin",
+          "clientID": "4WNkZkKz",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 768,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T11:15:37.954Z",
+      "url": "https://openfront.io/game/Wdr82XRy"
     }
   ],
   "trios": [
@@ -163835,6 +163860,106 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T11:09:16.053Z",
       "url": "https://openfront.io/game/qa2CRagv"
+    },
+    {
+      "id": "G2BP9mYV",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "DHELu",
+          "clientID": "1xgtW35B",
+          "clanTag": null
+        },
+        {
+          "username": "the last of us",
+          "clientID": "q4KUVory",
+          "clanTag": "MM"
+        },
+        {
+          "username": "Vizhh",
+          "clientID": "s6ereEHJ",
+          "clanTag": "MM"
+        },
+        {
+          "username": "Strx",
+          "clientID": "yUDB8BHc",
+          "clanTag": null
+        },
+        {
+          "username": "Liechtenstein Republic",
+          "clientID": "nq4uUEQj",
+          "clanTag": null
+        },
+        {
+          "username": "Yoon",
+          "clientID": "A3H3B3Th",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCrimson1",
+          "clientID": "WfTSEtSc",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 873,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T11:13:44.858Z",
+      "url": "https://openfront.io/game/G2BP9mYV"
+    },
+    {
+      "id": "V8d98jcf",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonViolin9",
+          "clientID": "o1eQiz28",
+          "clanTag": null
+        },
+        {
+          "username": "Microbody",
+          "clientID": "DR2zkiTt",
+          "clanTag": "MICRO"
+        },
+        {
+          "username": "Marten",
+          "clientID": "6JhJu1xj",
+          "clanTag": "MICRO"
+        },
+        {
+          "username": "Ycirnei",
+          "clientID": "cuPbABvi",
+          "clanTag": null
+        },
+        {
+          "username": "money",
+          "clientID": "nC3CVkBS",
+          "clanTag": null
+        },
+        {
+          "username": "RedAly",
+          "clientID": "P6TRstDu",
+          "clanTag": null
+        },
+        {
+          "username": "Romper",
+          "clientID": "mrnPxCBD",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 727,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T11:16:38.535Z",
+      "url": "https://openfront.io/game/V8d98jcf"
     }
   ],
   "hvn": [
