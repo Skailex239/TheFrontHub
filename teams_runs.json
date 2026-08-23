@@ -79941,6 +79941,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T10:28:36.166Z",
       "url": "https://openfront.io/game/XBXV4aHG"
+    },
+    {
+      "id": "PNjXx8Hh",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Summer",
+          "clientID": "wusWXVNE",
+          "clanTag": null
+        },
+        {
+          "username": "Armapci",
+          "clientID": "BPoB7qfe",
+          "clanTag": null
+        },
+        {
+          "username": "Bon",
+          "clientID": "rhBaLB8e",
+          "clanTag": "CAT"
+        }
+      ],
+      "map": "Iceland",
+      "duration_s": 697,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T10:41:18.741Z",
+      "url": "https://openfront.io/game/PNjXx8Hh"
     }
   ],
   "quads": [
@@ -120898,6 +120928,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T10:21:30.187Z",
       "url": "https://openfront.io/game/6GYjorHv"
+    },
+    {
+      "id": "wHyd49Hq",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "ioo",
+          "clientID": "nHh5N9Ku",
+          "clanTag": null
+        },
+        {
+          "username": "MAD",
+          "clientID": "dKrDsN5K",
+          "clanTag": "UN"
+        },
+        {
+          "username": "FRANCE",
+          "clientID": "XqKHcjtm",
+          "clanTag": "UN"
+        },
+        {
+          "username": "WiseonWisseTR",
+          "clientID": "4i5nuBWd",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 1060,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T10:36:14.317Z",
+      "url": "https://openfront.io/game/wHyd49Hq"
     }
   ],
   "team_custom": [
