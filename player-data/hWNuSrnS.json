@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-23T12:40:16.914Z",
+  "lastSyncedAt": "2026-08-23T12:42:21.119Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.5,
-  "totalGames": 3820,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 3821,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "aBcevrJy",
+      "start": "2026-08-23T12:32:47.198Z",
+      "durationSeconds": 470,
+      "map": "Europe Classic",
+      "mode": "Team",
+      "type": "Public",
+      "playerTeams": "2",
+      "rankedType": "2v2",
+      "result": "defeat",
+      "totalPlayers": 4,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "sHPWYccS",
       "start": "2026-08-23T11:28:58.912Z",
