@@ -40367,6 +40367,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T10:59:56.934Z",
       "url": "https://openfront.io/game/EVe8ZPet"
+    },
+    {
+      "id": "uz65wrhd",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "YAHYA KEMAL BEYATLI",
+          "clientID": "DeJ8GYd4",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonMonsoon9",
+          "clientID": "XcVWJbQB",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 884,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T11:07:15.887Z",
+      "url": "https://openfront.io/game/uz65wrhd"
     }
   ],
   "trios": [
@@ -163675,6 +163700,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T11:09:58.119Z",
       "url": "https://openfront.io/game/CbojgGCe"
+    },
+    {
+      "id": "qa2CRagv",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "polotoche",
+          "clientID": "NCcnwahd",
+          "clanTag": "FR"
+        },
+        {
+          "username": "smackdaddy",
+          "clientID": "Q4ZE17zH",
+          "clanTag": null
+        },
+        {
+          "username": "AnonJellyfish4",
+          "clientID": "M3uUo8oE",
+          "clanTag": null
+        },
+        {
+          "username": "GrigriSENDTROOP2WIN",
+          "clientID": "Ccbigzbg",
+          "clanTag": null
+        },
+        {
+          "username": "Head",
+          "clientID": "Pff8FdHn",
+          "clanTag": "PIN"
+        },
+        {
+          "username": "AnonUnicorn1",
+          "clientID": "3xPRorbP",
+          "clanTag": null
+        },
+        {
+          "username": "Anon746",
+          "clientID": "wgGrUn7Y",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 732,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T11:09:16.053Z",
+      "url": "https://openfront.io/game/qa2CRagv"
     }
   ],
   "hvn": [
