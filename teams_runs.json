@@ -40117,6 +40117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T10:08:16.266Z",
       "url": "https://openfront.io/game/W1hWxuoq"
+    },
+    {
+      "id": "rVMK4XzA",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "shuo de dao li",
+          "clientID": "RNjBZByq",
+          "clanTag": "CCB"
+        },
+        {
+          "username": "AnonLinen9",
+          "clientID": "Pn3WErn8",
+          "clanTag": null
+        }
+      ],
+      "map": "Pluto",
+      "duration_s": 920,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T10:12:00.576Z",
+      "url": "https://openfront.io/game/rVMK4XzA"
     }
   ],
   "trios": [
@@ -79581,6 +79606,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T10:14:07.191Z",
       "url": "https://openfront.io/game/MCELxeE7"
+    },
+    {
+      "id": "dG4MtcPg",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon271",
+          "clientID": "HQUe7STS",
+          "clanTag": null
+        },
+        {
+          "username": "Vinfast",
+          "clientID": "uEU8jqtJ",
+          "clanTag": null
+        },
+        {
+          "username": "yokohama Empire",
+          "clientID": "BthwWPQi",
+          "clanTag": "IRORU"
+        }
+      ],
+      "map": "Japan",
+      "duration_s": 612,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T10:16:43.911Z",
+      "url": "https://openfront.io/game/dG4MtcPg"
     }
   ],
   "quads": [
@@ -120433,6 +120488,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T09:55:18.193Z",
       "url": "https://openfront.io/game/1vJXj2jg"
+    },
+    {
+      "id": "ebzheeUg",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "xWallbangx",
+          "clientID": "NyGFk29d",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLizard1",
+          "clientID": "sd5BZTSj",
+          "clanTag": null
+        },
+        {
+          "username": "101100100111001010100101101",
+          "clientID": "SP6UoXHP",
+          "clanTag": "JESUS"
+        },
+        {
+          "username": "Microbody",
+          "clientID": "6YJynRPB",
+          "clanTag": "MICRO"
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1501,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T10:01:24.211Z",
+      "url": "https://openfront.io/game/ebzheeUg"
+    },
+    {
+      "id": "AC7JtHor",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "defforestation",
+          "clientID": "RB8MBVPa",
+          "clanTag": null
+        },
+        {
+          "username": "Somalia",
+          "clientID": "pVTtmc1u",
+          "clanTag": null
+        },
+        {
+          "username": "Prairie",
+          "clientID": "6PKNZW91",
+          "clanTag": null
+        },
+        {
+          "username": "noob",
+          "clientID": "kejgAR3k",
+          "clanTag": null
+        }
+      ],
+      "map": "Middle East",
+      "duration_s": 1241,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T10:07:03.009Z",
+      "url": "https://openfront.io/game/AC7JtHor"
     }
   ],
   "team_custom": [
