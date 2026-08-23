@@ -122428,6 +122428,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T12:40:11.163Z",
       "url": "https://openfront.io/game/awS3Ez3K"
+    },
+    {
+      "id": "L7qzD2xb",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "USSR",
+          "clientID": "Ymrnqkao",
+          "clanTag": null
+        },
+        {
+          "username": "Anon188",
+          "clientID": "zmSzS2Ab",
+          "clanTag": null
+        },
+        {
+          "username": "MarcoFoscarini",
+          "clientID": "LpyVGyZz",
+          "clanTag": "EU"
+        },
+        {
+          "username": "Papichulo",
+          "clientID": "8PZCTEqb",
+          "clanTag": "AST"
+        }
+      ],
+      "map": "Los Angeles",
+      "duration_s": 793,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 104,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T12:46:52.098Z",
+      "url": "https://openfront.io/game/L7qzD2xb"
     }
   ],
   "team_custom": [
@@ -166125,6 +166160,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T12:42:48.335Z",
       "url": "https://openfront.io/game/ndHfceM9"
+    },
+    {
+      "id": "yhe3c1Vy",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "LE TAZON",
+          "clientID": "bfHoqtXC",
+          "clanTag": null
+        },
+        {
+          "username": "AnonEagle5",
+          "clientID": "uNLzMy7P",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "concu",
+          "clientID": "pZo8Jih3",
+          "clanTag": "VIE"
+        },
+        {
+          "username": "Forest",
+          "clientID": "DgGLqvxJ",
+          "clanTag": null
+        },
+        {
+          "username": "ChatVaBien",
+          "clientID": "KJ64B5J6",
+          "clanTag": "TRUE"
+        },
+        {
+          "username": "Flash",
+          "clientID": "6MwieM5a",
+          "clanTag": "FR"
+        },
+        {
+          "username": "AnonSteam3",
+          "clientID": "BxwffonU",
+          "clanTag": null
+        }
+      ],
+      "map": "Australia",
+      "duration_s": 697,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 65,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T12:48:26.752Z",
+      "url": "https://openfront.io/game/yhe3c1Vy"
     }
   ],
   "hvn": [
@@ -202707,6 +202792,91 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T12:41:27.239Z",
       "url": "https://openfront.io/game/iZYiRx81"
+    },
+    {
+      "id": "XgaFsKzv",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Kingdom of France",
+          "clientID": "EQ3Qh6vE",
+          "clanTag": null
+        },
+        {
+          "username": "RAPH FR",
+          "clientID": "xvnn3myQ",
+          "clanTag": null
+        },
+        {
+          "username": "Anonia",
+          "clientID": "4V3ZLgCS",
+          "clanTag": "ANO"
+        },
+        {
+          "username": "BeepingBoop",
+          "clientID": "KpTKymCm",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAmethyst1",
+          "clientID": "jr8u3XC1",
+          "clanTag": null
+        },
+        {
+          "username": "Factory",
+          "clientID": "U1TVQsT1",
+          "clanTag": null
+        },
+        {
+          "username": "Lapinoutor",
+          "clientID": "qymHiNEB",
+          "clanTag": null
+        },
+        {
+          "username": "Jakub",
+          "clientID": "nBePaFir",
+          "clanTag": null
+        },
+        {
+          "username": "Ravfly",
+          "clientID": "45e7y5fS",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCamel9",
+          "clientID": "56ghJx1k",
+          "clanTag": null
+        },
+        {
+          "username": "Pixie",
+          "clientID": "NBsgFXpc",
+          "clanTag": null
+        },
+        {
+          "username": "The Holy Nation",
+          "clientID": "ejPRHX4x",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGong",
+          "clientID": "WXZiF15k",
+          "clanTag": null
+        },
+        {
+          "username": "AnonHelmet8",
+          "clientID": "JfDFANUh",
+          "clanTag": null
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 821,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 19,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T12:47:28.135Z",
+      "url": "https://openfront.io/game/XgaFsKzv"
     }
   ]
 }
