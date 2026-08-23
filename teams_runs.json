@@ -38792,6 +38792,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-23T05:22:14.099Z",
       "url": "https://openfront.io/game/7BRmWa5M"
+    },
+    {
+      "id": "AbQjaEqp",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon412",
+          "clientID": "FBaWerLh",
+          "clanTag": null
+        },
+        {
+          "username": "makotoni moushiwakearimasen",
+          "clientID": "w6CRz17y",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1527,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 73,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:20:27.029Z",
+      "url": "https://openfront.io/game/AbQjaEqp"
+    },
+    {
+      "id": "J6UZwshk",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Maxiyo",
+          "clientID": "UuwEsP7z",
+          "clanTag": null
+        },
+        {
+          "username": "Noot",
+          "clientID": "ejDtimKp",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1909,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 59,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:13:24.894Z",
+      "url": "https://openfront.io/game/J6UZwshk"
     }
   ],
   "trios": [
@@ -116838,6 +116888,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T05:15:32.089Z",
       "url": "https://openfront.io/game/15Ah4Vsb"
+    },
+    {
+      "id": "a3ratbuG",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "conker",
+          "clientID": "QTBD93Sq",
+          "clanTag": "CATX"
+        },
+        {
+          "username": "CARG",
+          "clientID": "X8LfQ5JE",
+          "clanTag": null
+        },
+        {
+          "username": "Santamarr",
+          "clientID": "YmLpxuPc",
+          "clanTag": null
+        },
+        {
+          "username": "Carthago",
+          "clientID": "2S29nwW6",
+          "clanTag": "ESP"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 876,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T05:30:29.913Z",
+      "url": "https://openfront.io/game/a3ratbuG"
     }
   ],
   "team_custom": [
