@@ -39467,6 +39467,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T08:04:10.091Z",
       "url": "https://openfront.io/game/98TfADu3"
+    },
+    {
+      "id": "v3rwMyub",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "NAPOLEON",
+          "clientID": "VQhYFgrV",
+          "clanTag": "FRA"
+        },
+        {
+          "username": "UnhuggedToday",
+          "clientID": "ywtL3JVo",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 506,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 34,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T08:04:42.620Z",
+      "url": "https://openfront.io/game/v3rwMyub"
     }
   ],
   "trios": [
@@ -78451,6 +78476,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T07:51:54.090Z",
       "url": "https://openfront.io/game/5FqMivEY"
+    },
+    {
+      "id": "piDj9AfC",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TOPKEK",
+          "clientID": "HFiSAtPY",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Ultimus Flex",
+          "clientID": "to4AT79M",
+          "clanTag": "UN"
+        },
+        {
+          "username": "LegionHuu",
+          "clientID": "X23iDtvX",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1064,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 18,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T07:55:35.917Z",
+      "url": "https://openfront.io/game/piDj9AfC"
     }
   ],
   "quads": [
