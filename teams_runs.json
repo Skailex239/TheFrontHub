@@ -39317,6 +39317,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T07:33:20.790Z",
       "url": "https://openfront.io/game/CmCcdcKV"
+    },
+    {
+      "id": "c6br52LY",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon106",
+          "clientID": "SJ3QwQhP",
+          "clanTag": null
+        },
+        {
+          "username": "Sadra",
+          "clientID": "Z6Y18oYp",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 646,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T07:35:21.733Z",
+      "url": "https://openfront.io/game/c6br52LY"
     }
   ],
   "trios": [
@@ -78151,6 +78176,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T07:22:42.223Z",
       "url": "https://openfront.io/game/P1vA4Zfi"
+    },
+    {
+      "id": "Qa72EYcM",
+      "mode": "trios",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Money",
+          "clientID": "q4C4NPZN",
+          "clanTag": "UN"
+        },
+        {
+          "username": "SEND ME TROOPS",
+          "clientID": "xAWe4oUt",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Aldebaran",
+          "clientID": "VCt5xPqY",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 1160,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 53,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T07:26:13.582Z",
+      "url": "https://openfront.io/game/Qa72EYcM"
     }
   ],
   "quads": [
