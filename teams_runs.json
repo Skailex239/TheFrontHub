@@ -115848,6 +115848,76 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T03:18:10.140Z",
       "url": "https://openfront.io/game/9pvcuczp"
+    },
+    {
+      "id": "n1ENGQkB",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Booyah",
+          "clientID": "MTaqcTfS",
+          "clanTag": "GLHF"
+        },
+        {
+          "username": "AnonLighthouse3",
+          "clientID": "jMzvSYwH",
+          "clanTag": null
+        },
+        {
+          "username": "Xeo",
+          "clientID": "HNhBgnDW",
+          "clanTag": null
+        },
+        {
+          "username": "Mind Goblin",
+          "clientID": "3Qv4qqHe",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 1340,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T03:17:08.577Z",
+      "url": "https://openfront.io/game/n1ENGQkB"
+    },
+    {
+      "id": "VvvP2mAe",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "_0_Gan",
+          "clientID": "MSKFGAZD",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "Ober",
+          "clientID": "6ArGrpjd",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "The Final Boss",
+          "clientID": "Wmrn3r99",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "The First Boss",
+          "clientID": "wLJ2sF62",
+          "clanTag": "FTJ"
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 841,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T03:27:02.164Z",
+      "url": "https://openfront.io/game/VvvP2mAe"
     }
   ],
   "team_custom": [
