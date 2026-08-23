@@ -38192,6 +38192,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T02:37:26.026Z",
       "url": "https://openfront.io/game/MYNVwK3f"
+    },
+    {
+      "id": "JkKPj4Wz",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon675",
+          "clientID": "DfiacDHQ",
+          "clanTag": null
+        },
+        {
+          "username": "Shield",
+          "clientID": "dnGwWa3P",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 905,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 100,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T02:44:20.594Z",
+      "url": "https://openfront.io/game/JkKPj4Wz"
     }
   ],
   "trios": [
@@ -153950,6 +153975,101 @@
       "playerTeams": 6,
       "timestamp": "2026-08-23T02:19:41.282Z",
       "url": "https://openfront.io/game/CX2ELFJW"
+    },
+    {
+      "id": "FvjpVjc7",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "NanasLilMan",
+          "clientID": "33sZn846",
+          "clanTag": null
+        },
+        {
+          "username": "Barakuda69",
+          "clientID": "SxUtafSv",
+          "clanTag": null
+        },
+        {
+          "username": "YoYo",
+          "clientID": "udLxvYcH",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Mo0l",
+          "clientID": "BaJDStSE",
+          "clanTag": null
+        },
+        {
+          "username": "d Anonymous b",
+          "clientID": "Q8fRzs37",
+          "clanTag": "AST"
+        },
+        {
+          "username": "mngr",
+          "clientID": "p3JB5PKi",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anon907",
+          "clientID": "4zpebN71",
+          "clanTag": null
+        }
+      ],
+      "map": "Black Sea",
+      "duration_s": 697,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 56,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T02:47:30.772Z",
+      "url": "https://openfront.io/game/FvjpVjc7"
+    },
+    {
+      "id": "R7GCTKy4",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "ddong",
+          "clientID": "BdGiakzt",
+          "clanTag": null
+        },
+        {
+          "username": "Air Koryo",
+          "clientID": "YcB4pEsi",
+          "clanTag": null
+        },
+        {
+          "username": "gOUse",
+          "clientID": "G536z1vJ",
+          "clanTag": null
+        },
+        {
+          "username": "Nobu",
+          "clientID": "PQndpYHC",
+          "clanTag": null
+        },
+        {
+          "username": "Powerhouse of the cell",
+          "clientID": "b1z1a9e1",
+          "clanTag": "OG"
+        },
+        {
+          "username": "AnonRiddle6",
+          "clientID": "8LvARt6g",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 932,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 32,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T02:42:10.460Z",
+      "url": "https://openfront.io/game/R7GCTKy4"
     }
   ],
   "hvn": [
