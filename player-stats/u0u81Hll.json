@@ -1,27 +1,27 @@
 {
   "publicId": "u0u81Hll",
   "username": "Anto.6010",
-  "computedAt": "2026-08-23T12:19:29.049Z",
-  "lastSyncedAt": "2026-08-23T12:19:26.029Z",
-  "totalGames": 2257,
+  "computedAt": "2026-08-23T12:21:47.133Z",
+  "lastSyncedAt": "2026-08-23T12:21:44.662Z",
+  "totalGames": 2258,
   "careerWins": {
     "ffaCasual": 384,
     "ffaRanked": 328,
     "teamCasual": 48,
-    "teamRanked": 97
+    "teamRanked": 98
   },
-  "totalWins": 857,
-  "points": 4505,
+  "totalWins": 858,
+  "points": 4506,
   "level": 45,
-  "levelProgress": 5,
+  "levelProgress": 6,
   "levelNextAt": 4600,
   "nextMilestones": {
     "wins": {
-      "current": 857,
+      "current": 858,
       "target": 1000
     },
     "playtime": {
-      "current": 561,
+      "current": 562,
       "target": 1000
     },
     "maps": {
@@ -39,19 +39,19 @@
     10
   ],
   "formatted": {
-    "points": "4 505",
-    "totalWins": "857",
-    "totalGames": "2 257",
-    "totalPlaytime": "23j 9h",
-    "totalPlaytimeCompact": "23j 9h",
+    "points": "4 506",
+    "totalWins": "858",
+    "totalGames": "2 258",
+    "totalPlaytime": "23j 10h",
+    "totalPlaytimeCompact": "23j 10h",
     "avgGameDuration": "14m 56s",
     "longestGame": "2h 40m",
     "winrate": "38%",
-    "totalPlaytimeHours": "561h"
+    "totalPlaytimeHours": "562h"
   },
   "playtime": {
-    "totalSec": 2023005,
-    "avgGameSec": 896.3247673903412,
+    "totalSec": 2023280,
+    "avgGameSec": 896.0496014171833,
     "longestSec": 9640,
     "shortestSec": 1,
     "byCategory": {
@@ -71,27 +71,27 @@
         "wins": 48
       },
       "teamRanked": {
-        "games": 153,
-        "playtimeSec": 43509,
-        "wins": 97
+        "games": 154,
+        "playtimeSec": 43784,
+        "wins": 98
       }
     }
   },
   "results": {
-    "victory": 857,
+    "victory": 858,
     "defeat": 1057,
     "incomplete": 343
   },
   "maps": [
     {
       "map": "Australia",
-      "count": 340,
-      "wins": 211,
+      "count": 341,
+      "wins": 212,
       "losses": 129,
-      "playtimeSec": 162170,
-      "avgDuration": 476.97058823529414,
-      "winRate": 0.6205882352941177,
-      "lastPlayed": 1787484331117,
+      "playtimeSec": 162445,
+      "avgDuration": 476.3782991202346,
+      "winRate": 0.6217008797653959,
+      "lastPlayed": 1787487334491,
       "formatted": {
         "playtime": "1j 21h",
         "avgDuration": "7m",
@@ -1668,7 +1668,7 @@
       70,
       76,
       131,
-      131,
+      132,
       146,
       139,
       213,
@@ -1686,7 +1686,7 @@
       334,
       371,
       399,
-      326
+      327
     ],
     "byDay": [
       {
@@ -1946,8 +1946,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 5,
-        "playtimeSec": 2754
+        "count": 6,
+        "playtimeSec": 3029
       },
       {
         "date": "24/01/2026",
@@ -2145,7 +2145,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 2,
+    "current": 3,
     "best": 15
   },
   "achievements": {
@@ -2221,6 +2221,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "MrLkW7cA",
+      "start": "2026-08-23T12:15:34.491Z",
+      "map": "Australia",
+      "mode": "Team",
+      "result": "victory",
+      "durationSeconds": 275,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
     {
       "gameId": "ueLefDKr",
       "start": "2026-08-23T11:52:34.649Z",
@@ -2426,17 +2437,6 @@
       "mode": "Team",
       "result": "victory",
       "durationSeconds": 531,
-      "totalPlayers": 4,
-      "rankedType": "2v2",
-      "category": "teamRanked"
-    },
-    {
-      "gameId": "Y6cUF6iN",
-      "start": "2026-08-22T15:17:52.811Z",
-      "map": "Iceland",
-      "mode": "Team",
-      "result": "victory",
-      "durationSeconds": 281,
       "totalPlayers": 4,
       "rankedType": "2v2",
       "category": "teamRanked"
