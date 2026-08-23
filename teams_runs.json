@@ -38392,6 +38392,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T03:29:28.818Z",
       "url": "https://openfront.io/game/RKuTBuKA"
+    },
+    {
+      "id": "zuUjZcve",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Repurika",
+          "clientID": "qJjB48D3",
+          "clanTag": null
+        },
+        {
+          "username": "AnonShark6",
+          "clientID": "XxFDcpmk",
+          "clanTag": null
+        }
+      ],
+      "map": "Deglaciated Antarctica",
+      "duration_s": 466,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T03:52:20.224Z",
+      "url": "https://openfront.io/game/zuUjZcve"
+    },
+    {
+      "id": "CGAa37es",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "toot toodaloot toot",
+          "clientID": "JtnGkN6R",
+          "clanTag": null
+        },
+        {
+          "username": "teamgames",
+          "clientID": "5C7MG2jv",
+          "clanTag": null
+        }
+      ],
+      "map": "Taiwan Strait",
+      "duration_s": 1956,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T03:28:19.246Z",
+      "url": "https://openfront.io/game/CGAa37es"
     }
   ],
   "trios": [
@@ -155095,6 +155145,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-23T03:36:24.264Z",
       "url": "https://openfront.io/game/mdSyrdJK"
+    },
+    {
+      "id": "spcqzAye",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Ninjaboy196",
+          "clientID": "Btiq9SeV",
+          "clanTag": null
+        },
+        {
+          "username": "Anon301",
+          "clientID": "2LnTpT7E",
+          "clanTag": null
+        },
+        {
+          "username": "Im Japanese though",
+          "clientID": "U5fnEyMx",
+          "clanTag": "JAPAN"
+        },
+        {
+          "username": "Anh",
+          "clientID": "74JRCCqn",
+          "clanTag": null
+        },
+        {
+          "username": "AnonThistle5",
+          "clientID": "h8y6HZ4h",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 813,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T03:48:09.456Z",
+      "url": "https://openfront.io/game/spcqzAye"
     }
   ],
   "hvn": [
