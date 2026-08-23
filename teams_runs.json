@@ -76376,6 +76376,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T02:34:58.794Z",
       "url": "https://openfront.io/game/g5vWeVpR"
+    },
+    {
+      "id": "9gsTJKTg",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "aerokorb",
+          "clientID": "vqaoiu9y",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "USSR",
+          "clientID": "37Hjiz2Q",
+          "clanTag": null
+        },
+        {
+          "username": "Operation True Promise IV",
+          "clientID": "xFP13dQU",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 1174,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T03:02:48.681Z",
+      "url": "https://openfront.io/game/9gsTJKTg"
     }
   ],
   "quads": [
