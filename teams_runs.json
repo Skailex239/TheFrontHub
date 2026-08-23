@@ -38842,6 +38842,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T05:13:24.894Z",
       "url": "https://openfront.io/game/J6UZwshk"
+    },
+    {
+      "id": "tMuS7HuN",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Anon718",
+          "clientID": "SCk9otbY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBeetle3",
+          "clientID": "UrfcYTQv",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 1005,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:34:09.283Z",
+      "url": "https://openfront.io/game/tMuS7HuN"
     }
   ],
   "trios": [
@@ -77226,6 +77251,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T05:09:28.879Z",
       "url": "https://openfront.io/game/aEeAVSeE"
+    },
+    {
+      "id": "PPWh6Cn9",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Codex5.6Sol_high",
+          "clientID": "2BtuXHeH",
+          "clanTag": null
+        },
+        {
+          "username": "So4246la",
+          "clientID": "bqocWwJA",
+          "clanTag": null
+        },
+        {
+          "username": "UNITED NATIONS",
+          "clientID": "PrTKfTBz",
+          "clanTag": "FLUIX"
+        }
+      ],
+      "map": "France",
+      "duration_s": 708,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T05:40:24.288Z",
+      "url": "https://openfront.io/game/PPWh6Cn9"
     }
   ],
   "quads": [
