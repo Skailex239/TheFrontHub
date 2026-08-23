@@ -78316,6 +78316,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T07:42:19.830Z",
       "url": "https://openfront.io/game/QViBLAtx"
+    },
+    {
+      "id": "4EAG6ZF1",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SUPERSONIC",
+          "clientID": "gH4fKA2h",
+          "clanTag": "ROKS"
+        },
+        {
+          "username": "Empire",
+          "clientID": "sramw3aJ",
+          "clanTag": null
+        },
+        {
+          "username": "WhenIGrowUpFtWhizKhalifa",
+          "clientID": "6yULg6Gp",
+          "clanTag": null
+        }
+      ],
+      "map": "Asia",
+      "duration_s": 1077,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 54,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:47:40.662Z",
+      "url": "https://openfront.io/game/4EAG6ZF1"
+    },
+    {
+      "id": "5FqMivEY",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "cccp",
+          "clientID": "Zk8x3xkT",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUnicorn8",
+          "clientID": "bpr9Btct",
+          "clanTag": null
+        },
+        {
+          "username": "Moon",
+          "clientID": "vsFMXrtj",
+          "clanTag": null
+        }
+      ],
+      "map": "Indian Subcontinent",
+      "duration_s": 756,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:51:54.090Z",
+      "url": "https://openfront.io/game/5FqMivEY"
     }
   ],
   "quads": [
