@@ -41342,6 +41342,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T13:28:20.428Z",
       "url": "https://openfront.io/game/A4EsqAX3"
+    },
+    {
+      "id": "1GiFGSWe",
+      "mode": "duos",
+      "team": "Team 35",
+      "players": [
+        {
+          "username": "gei",
+          "clientID": "Fb8BtUCJ",
+          "clanTag": null
+        },
+        {
+          "username": "defforestation",
+          "clientID": "U7u4sh9d",
+          "clanTag": null
+        }
+      ],
+      "map": "Levant",
+      "duration_s": 1061,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T13:25:10.247Z",
+      "url": "https://openfront.io/game/1GiFGSWe"
     }
   ],
   "trios": [
