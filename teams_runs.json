@@ -113943,6 +113943,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T23:47:50.908Z",
       "url": "https://openfront.io/game/66Gt8itC"
+    },
+    {
+      "id": "rHxGvFgn",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Chamoy",
+          "clientID": "bBR4HY2e",
+          "clanTag": null
+        },
+        {
+          "username": "SundogPrime",
+          "clientID": "Hw2X2GRc",
+          "clanTag": null
+        },
+        {
+          "username": "Naragansett",
+          "clientID": "duR3yg3o",
+          "clanTag": null
+        },
+        {
+          "username": "AnonTimber8",
+          "clientID": "mUzPqANv",
+          "clanTag": null
+        }
+      ],
+      "map": "Las Vegas Strip",
+      "duration_s": 976,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 49,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:43:44.032Z",
+      "url": "https://openfront.io/game/rHxGvFgn"
     }
   ],
   "team_custom": [
@@ -151330,6 +151365,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T23:33:59.080Z",
       "url": "https://openfront.io/game/eMnmwJoz"
+    },
+    {
+      "id": "2NvxSJLe",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "AnonPlow8",
+          "clientID": "BTDXMVtF",
+          "clanTag": null
+        },
+        {
+          "username": "PeePee PooPoo",
+          "clientID": "24q2Uace",
+          "clanTag": null
+        },
+        {
+          "username": "Finanzamt",
+          "clientID": "FxbiMefm",
+          "clanTag": null
+        },
+        {
+          "username": "Imperium",
+          "clientID": "9yXNDhRD",
+          "clanTag": null
+        },
+        {
+          "username": "liminal",
+          "clientID": "2F2Binsf",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Doctor",
+          "clientID": "GvxDvrCq",
+          "clanTag": "UN"
+        },
+        {
+          "username": "AnonSteam",
+          "clientID": "G7dLpSKo",
+          "clanTag": null
+        }
+      ],
+      "map": "Gulf Of Guinea",
+      "duration_s": 718,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 5,
+      "timestamp": "2026-08-22T23:49:43.609Z",
+      "url": "https://openfront.io/game/2NvxSJLe"
     }
   ],
   "hvn": [
