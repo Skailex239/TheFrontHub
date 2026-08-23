@@ -37642,6 +37642,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-22T23:34:46.154Z",
       "url": "https://openfront.io/game/iMzuy5nP"
+    },
+    {
+      "id": "qqiTcnRZ",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "_0_Train Me",
+          "clientID": "EakyXbf1",
+          "clanTag": "NUB"
+        },
+        {
+          "username": "LeVi",
+          "clientID": "9z1aLSyF",
+          "clanTag": "NUB"
+        }
+      ],
+      "map": "United States",
+      "duration_s": 735,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 57,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-22T23:45:44.893Z",
+      "url": "https://openfront.io/game/qqiTcnRZ"
     }
   ],
   "trios": [
@@ -113883,6 +113908,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-22T23:39:26.088Z",
       "url": "https://openfront.io/game/ucYTrttp"
+    },
+    {
+      "id": "66Gt8itC",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "G13Raven",
+          "clientID": "PvtFJi9Y",
+          "clanTag": null
+        },
+        {
+          "username": "The FactoryTM",
+          "clientID": "e4X7L6k7",
+          "clanTag": "VOAT"
+        },
+        {
+          "username": "Wargaming",
+          "clientID": "rJwhho9e",
+          "clanTag": null
+        },
+        {
+          "username": "Statyr",
+          "clientID": "GUcnh92Y",
+          "clanTag": null
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 699,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-22T23:47:50.908Z",
+      "url": "https://openfront.io/game/66Gt8itC"
     }
   ],
   "team_custom": [
@@ -151225,6 +151285,51 @@
       "playerTeams": 7,
       "timestamp": "2026-08-22T23:41:13.305Z",
       "url": "https://openfront.io/game/Ctuehjte"
+    },
+    {
+      "id": "eMnmwJoz",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "busterfoo",
+          "clientID": "5rit5LSo",
+          "clanTag": "SHDS"
+        },
+        {
+          "username": "bibas",
+          "clientID": "grN3SFYj",
+          "clanTag": null
+        },
+        {
+          "username": "Funnee",
+          "clientID": "fE98WFLi",
+          "clanTag": "SHDS"
+        },
+        {
+          "username": "Jakubko",
+          "clientID": "T65yunDR",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilTater",
+          "clientID": "Qkyzy8e8",
+          "clanTag": null
+        },
+        {
+          "username": "Igarashi",
+          "clientID": "dSAgYTYU",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1521,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 51,
+      "playerTeams": 7,
+      "timestamp": "2026-08-22T23:33:59.080Z",
+      "url": "https://openfront.io/game/eMnmwJoz"
     }
   ],
   "hvn": [
