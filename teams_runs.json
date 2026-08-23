@@ -40267,6 +40267,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T10:32:18.450Z",
       "url": "https://openfront.io/game/HGzmHENC"
+    },
+    {
+      "id": "ogteV3Un",
+      "mode": "duos",
+      "team": "Green",
+      "players": [
+        {
+          "username": "AnonTundra1",
+          "clientID": "Whj1Xnk7",
+          "clanTag": null
+        },
+        {
+          "username": "Gedeon",
+          "clientID": "HyjZHtRM",
+          "clanTag": "GOD"
+        }
+      ],
+      "map": "MilkyWay",
+      "duration_s": 850,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T10:42:48.834Z",
+      "url": "https://openfront.io/game/ogteV3Un"
     }
   ],
   "trios": [
@@ -120998,6 +121023,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T10:34:13.135Z",
       "url": "https://openfront.io/game/agJADgGU"
+    },
+    {
+      "id": "DbxC3n6j",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Cornish Trader",
+          "clientID": "dEBPtTwu",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon190",
+          "clientID": "ExS8h2Bi",
+          "clanTag": null
+        },
+        {
+          "username": "Rrrrr",
+          "clientID": "ZBT4Znn7",
+          "clanTag": null
+        },
+        {
+          "username": "Quality Learing Center",
+          "clientID": "uYZoAoSc",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Scandinavia",
+      "duration_s": 774,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 124,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T10:45:30.498Z",
+      "url": "https://openfront.io/game/DbxC3n6j"
     }
   ],
   "team_custom": [
@@ -163090,6 +163150,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T10:43:29.870Z",
       "url": "https://openfront.io/game/1fyvQDWx"
+    },
+    {
+      "id": "8kWPbXUx",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Ziyad",
+          "clientID": "WVxbmBvb",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "France",
+          "clientID": "7K48CYCf",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "Sylvan",
+          "clientID": "NYhmCHHe",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "ashfalllive",
+          "clientID": "SRAGvb35",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "Kcad",
+          "clientID": "CaFueYWd",
+          "clanTag": "CYN"
+        },
+        {
+          "username": "CIA WHITE OPS",
+          "clientID": "moXzAUcp",
+          "clanTag": "CYN"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 523,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 41,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T10:49:56.237Z",
+      "url": "https://openfront.io/game/8kWPbXUx"
     }
   ],
   "hvn": [
