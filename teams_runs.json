@@ -77931,6 +77931,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T07:02:00.366Z",
       "url": "https://openfront.io/game/Yszej7dQ"
+    },
+    {
+      "id": "7UwJ9tYr",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Kakiru",
+          "clientID": "uVTbguUQ",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "KIMCHIPOWER",
+          "clientID": "xoAZ4opH",
+          "clanTag": "ROKA"
+        },
+        {
+          "username": "SpaceUs",
+          "clientID": "9zRmoyfx",
+          "clanTag": "ROKA"
+        }
+      ],
+      "map": "Lemnos",
+      "duration_s": 438,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:12:02.342Z",
+      "url": "https://openfront.io/game/7UwJ9tYr"
     }
   ],
   "quads": [
@@ -158500,6 +158530,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T06:58:26.847Z",
       "url": "https://openfront.io/game/zJS12a16"
+    },
+    {
+      "id": "L1o4H9im",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "JooStar",
+          "clientID": "PwgMwXnM",
+          "clanTag": "QWER"
+        },
+        {
+          "username": "Jennie",
+          "clientID": "2uWLipMD",
+          "clanTag": "QWER"
+        },
+        {
+          "username": "lilferiwx",
+          "clientID": "qNBU9xM9",
+          "clanTag": null
+        },
+        {
+          "username": "PingSol",
+          "clientID": "SxrGAhvD",
+          "clanTag": "QWER"
+        },
+        {
+          "username": "Drumtong",
+          "clientID": "EopfsiFC",
+          "clanTag": "QWER"
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "5yMAhXCo",
+          "clanTag": null
+        },
+        {
+          "username": "DelusiveNebula.QyU3",
+          "clientID": "qN5JJQjo",
+          "clanTag": null
+        }
+      ],
+      "map": "Between Two Seas",
+      "duration_s": 823,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 7,
+      "timestamp": "2026-08-23T07:06:47.937Z",
+      "url": "https://openfront.io/game/L1o4H9im"
     }
   ],
   "hvn": [
