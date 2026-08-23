@@ -39692,6 +39692,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T08:40:37.061Z",
       "url": "https://openfront.io/game/GvTzRJv1"
+    },
+    {
+      "id": "LHMNbiqn",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "oncenot",
+          "clientID": "M6wd4YhK",
+          "clanTag": "NU"
+        },
+        {
+          "username": "ggs",
+          "clientID": "xPoNcTeQ",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Caspian Sea",
+      "duration_s": 636,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T08:51:53.447Z",
+      "url": "https://openfront.io/game/LHMNbiqn"
     }
   ],
   "trios": [
@@ -78826,6 +78851,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T08:46:46.972Z",
       "url": "https://openfront.io/game/EHxd4DWF"
+    },
+    {
+      "id": "EtsrNTod",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Alex2t",
+          "clientID": "9qBaonRj",
+          "clanTag": null
+        },
+        {
+          "username": "ConfusedHiveTyrant",
+          "clientID": "Sdt6fGyn",
+          "clanTag": null
+        },
+        {
+          "username": "RUSHANFEDERASHEN",
+          "clientID": "iyt8eH3f",
+          "clanTag": null
+        }
+      ],
+      "map": "Achiran",
+      "duration_s": 724,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T08:51:04.363Z",
+      "url": "https://openfront.io/game/EtsrNTod"
     }
   ],
   "quads": [
