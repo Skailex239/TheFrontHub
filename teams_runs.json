@@ -38492,6 +38492,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T04:03:35.389Z",
       "url": "https://openfront.io/game/U7Zf57gv"
+    },
+    {
+      "id": "mw3mcW59",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "YouCloudsRain",
+          "clientID": "ZxYmrEU1",
+          "clanTag": null
+        },
+        {
+          "username": "Supercalifragilisticanistan",
+          "clientID": "JCSJJnG4",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 2206,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T03:42:35.633Z",
+      "url": "https://openfront.io/game/mw3mcW59"
     }
   ],
   "trios": [
@@ -76666,6 +76691,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T03:50:10.587Z",
       "url": "https://openfront.io/game/tCwysZLS"
+    },
+    {
+      "id": "g8neJLfQ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "daffy101",
+          "clientID": "DyF7vDb7",
+          "clanTag": null
+        },
+        {
+          "username": "AnonSteam2",
+          "clientID": "z5VopBgE",
+          "clanTag": null
+        },
+        {
+          "username": "Kingdom Of Bushi",
+          "clientID": "qxMmMu7w",
+          "clanTag": null
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 640,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T04:08:54.743Z",
+      "url": "https://openfront.io/game/g8neJLfQ"
     }
   ],
   "quads": [
