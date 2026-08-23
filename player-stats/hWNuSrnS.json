@@ -1,27 +1,27 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T10:31:59.872Z",
-  "lastSyncedAt": "2026-08-23T10:31:58.512Z",
-  "totalGames": 3816,
+  "computedAt": "2026-08-23T10:34:22.071Z",
+  "lastSyncedAt": "2026-08-23T10:34:20.161Z",
+  "totalGames": 3817,
   "careerWins": {
-    "ffaCasual": 276,
+    "ffaCasual": 277,
     "ffaRanked": 1420,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1984,
-  "points": 5072,
+  "totalWins": 1985,
+  "points": 5082,
   "level": 50,
-  "levelProgress": 72,
+  "levelProgress": 82,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1984,
+      "current": 1985,
       "target": 2000
     },
     "playtime": {
-      "current": 750,
+      "current": 751,
       "target": 1000
     },
     "maps": {
@@ -39,26 +39,26 @@
     6
   ],
   "formatted": {
-    "points": "5 072",
-    "totalWins": "1 984",
-    "totalGames": "3 816",
-    "totalPlaytime": "31j 6h",
-    "totalPlaytimeCompact": "31j 6h",
+    "points": "5 082",
+    "totalWins": "1 985",
+    "totalGames": "3 817",
+    "totalPlaytime": "31j 7h",
+    "totalPlaytimeCompact": "31j 7h",
     "avgGameDuration": "11m 48s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "750h"
+    "totalPlaytimeHours": "751h"
   },
   "playtime": {
-    "totalSec": 2703431,
-    "avgGameSec": 708.4462788259958,
+    "totalSec": 2704814,
+    "avgGameSec": 708.6230023578727,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1100,
-        "playtimeSec": 1333294,
-        "wins": 276
+        "games": 1101,
+        "playtimeSec": 1334677,
+        "wins": 277
       },
       "ffaRanked": {
         "games": 1914,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1984,
+    "victory": 1985,
     "defeat": 1500,
     "incomplete": 332
   },
@@ -644,6 +644,22 @@
       }
     },
     {
+      "map": "Dyslexdria",
+      "count": 16,
+      "wins": 9,
+      "losses": 7,
+      "playtimeSec": 34253,
+      "avgDuration": 2140.8125,
+      "winRate": 0.5625,
+      "lastPlayed": 1787479791872,
+      "formatted": {
+        "playtime": "9h 30m",
+        "avgDuration": "35m",
+        "winRate": "56%",
+        "lastPlayed": "23/08/26"
+      }
+    },
+    {
       "map": "Bering Sea",
       "count": 16,
       "wins": 7,
@@ -657,22 +673,6 @@
         "avgDuration": "20m",
         "winRate": "44%",
         "lastPlayed": "20/08/26"
-      }
-    },
-    {
-      "map": "Dyslexdria",
-      "count": 15,
-      "wins": 8,
-      "losses": 7,
-      "playtimeSec": 32870,
-      "avgDuration": 2191.3333333333335,
-      "winRate": 0.5333333333333333,
-      "lastPlayed": 1787308976022,
-      "formatted": {
-        "playtime": "9h 7m",
-        "avgDuration": "36m",
-        "winRate": "53%",
-        "lastPlayed": "21/08/26"
       }
     },
     {
@@ -1602,7 +1602,7 @@
       59,
       90,
       81,
-      97,
+      98,
       100,
       91,
       143,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      562
+      563
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 2,
-        "playtimeSec": 2545
+        "count": 3,
+        "playtimeSec": 3928
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "2CEPC1si",
+      "start": "2026-08-23T10:09:51.872Z",
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 1383,
+      "totalPlayers": 77,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "Xmw47H34",
       "start": "2026-08-23T09:53:24.081Z",
@@ -2363,17 +2374,6 @@
       "result": "defeat",
       "durationSeconds": 832,
       "totalPlayers": 51,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "eR2hCV9c",
-      "start": "2026-08-20T07:05:04.816Z",
-      "map": "Deglaciated Antarctica",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 835,
-      "totalPlayers": 53,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }

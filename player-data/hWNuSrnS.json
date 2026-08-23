@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-23T10:31:58.512Z",
+  "lastSyncedAt": "2026-08-23T10:34:20.161Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.2,
-  "totalGames": 3816,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.6,
+  "totalGames": 3817,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "2CEPC1si",
+      "start": "2026-08-23T10:09:51.872Z",
+      "durationSeconds": 1383,
+      "map": "Dyslexdria",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 77,
+      "username": "Nvr_Kn",
+      "clanTag": "EXL"
+    },
     {
       "gameId": "Xmw47H34",
       "start": "2026-08-23T09:53:24.081Z",
