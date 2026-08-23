@@ -38142,6 +38142,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T01:48:11.732Z",
       "url": "https://openfront.io/game/Ems1RSh2"
+    },
+    {
+      "id": "fE1aFarg",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "088",
+          "clientID": "qhoAi3Ry",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLadder6",
+          "clientID": "AmcrJ9H2",
+          "clanTag": null
+        }
+      ],
+      "map": "Aegean",
+      "duration_s": 657,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T02:27:36.047Z",
+      "url": "https://openfront.io/game/fE1aFarg"
     }
   ],
   "trios": [
@@ -153720,6 +153745,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T02:11:18.012Z",
       "url": "https://openfront.io/game/F98vGCzp"
+    },
+    {
+      "id": "CX2ELFJW",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonTopaz2",
+          "clientID": "4kQkEmZU",
+          "clanTag": null
+        },
+        {
+          "username": "Hmmm",
+          "clientID": "y8veMC3V",
+          "clanTag": null
+        },
+        {
+          "username": "Give me your soldiers",
+          "clientID": "3ecmZ4eN",
+          "clanTag": null
+        },
+        {
+          "username": "AnonScepter6",
+          "clientID": "VgeMvWk9",
+          "clanTag": null
+        },
+        {
+          "username": "meowmeowm",
+          "clientID": "i3MuSoFJ",
+          "clanTag": "SKOG"
+        },
+        {
+          "username": "Ridox",
+          "clientID": "2JQqx3Ug",
+          "clanTag": "SKOG"
+        },
+        {
+          "username": "i3z",
+          "clientID": "sbVrjFoT",
+          "clanTag": "SKOG"
+        }
+      ],
+      "map": "Balkans",
+      "duration_s": 1086,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 63,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T02:19:41.282Z",
+      "url": "https://openfront.io/game/CX2ELFJW"
     }
   ],
   "hvn": [
@@ -186727,6 +186802,71 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T02:21:06.427Z",
       "url": "https://openfront.io/game/6aQUvhMo"
+    },
+    {
+      "id": "Nw3Nb3z9",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Deviants",
+          "clientID": "j6Cqjok5",
+          "clanTag": "DEVIA"
+        },
+        {
+          "username": "Rusty",
+          "clientID": "fMq3EjgL",
+          "clanTag": null
+        },
+        {
+          "username": "bono",
+          "clientID": "vjA518VB",
+          "clanTag": null
+        },
+        {
+          "username": "SXMIN",
+          "clientID": "CaB45QE1",
+          "clanTag": null
+        },
+        {
+          "username": "AnonldSchwarzenegger",
+          "clientID": "5FY93wU5",
+          "clanTag": null
+        },
+        {
+          "username": "GSPOTE",
+          "clientID": "eUcYd9xi",
+          "clanTag": "MARS"
+        },
+        {
+          "username": "hankook",
+          "clientID": "vyoZumD9",
+          "clanTag": "KOREA"
+        },
+        {
+          "username": "Gandalf the Swole",
+          "clientID": "xxeKc5Cp",
+          "clanTag": null
+        },
+        {
+          "username": "Anon136",
+          "clientID": "8GpXurvc",
+          "clanTag": null
+        },
+        {
+          "username": "Messi_Of_Openfront",
+          "clientID": "BsRJdNYy",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 649,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 17,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T02:26:12.410Z",
+      "url": "https://openfront.io/game/Nw3Nb3z9"
     }
   ]
 }
