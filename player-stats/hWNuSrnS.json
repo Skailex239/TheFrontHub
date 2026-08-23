@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T12:46:29.897Z",
-  "lastSyncedAt": "2026-08-23T12:46:28.481Z",
-  "totalGames": 3821,
+  "computedAt": "2026-08-23T12:48:35.649Z",
+  "lastSyncedAt": "2026-08-23T12:48:33.553Z",
+  "totalGames": 3822,
   "careerWins": {
     "ffaCasual": 278,
     "ffaRanked": 1420,
@@ -41,17 +41,17 @@
   "formatted": {
     "points": "5 092",
     "totalWins": "1 986",
-    "totalGames": "3 821",
+    "totalGames": "3 822",
     "totalPlaytime": "31j 8h",
     "totalPlaytimeCompact": "31j 8h",
-    "avgGameDuration": "11m 49s",
+    "avgGameDuration": "11m 48s",
     "longestGame": "2h 53m",
     "winrate": "52%",
     "totalPlaytimeHours": "752h"
   },
   "playtime": {
-    "totalSec": 2709332,
-    "avgGameSec": 709.0635959172992,
+    "totalSec": 2709673,
+    "avgGameSec": 708.9672946101517,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -71,15 +71,15 @@
         "wins": 151
       },
       "teamRanked": {
-        "games": 214,
-        "playtimeSec": 57686,
+        "games": 215,
+        "playtimeSec": 58027,
         "wins": 137
       }
     }
   },
   "results": {
     "victory": 1986,
-    "defeat": 1503,
+    "defeat": 1504,
     "incomplete": 332
   },
   "maps": [
@@ -117,13 +117,13 @@
     },
     {
       "map": "Europe Classic",
-      "count": 384,
+      "count": 385,
       "wins": 278,
-      "losses": 106,
-      "playtimeSec": 151238,
-      "avgDuration": 393.8489583333333,
-      "winRate": 0.7239583333333334,
-      "lastPlayed": 1787488367198,
+      "losses": 107,
+      "playtimeSec": 151579,
+      "avgDuration": 393.7116883116883,
+      "winRate": 0.7220779220779221,
+      "lastPlayed": 1787488880231,
       "formatted": {
         "playtime": "1j 18h",
         "avgDuration": "6m",
@@ -1604,7 +1604,7 @@
       81,
       98,
       103,
-      92,
+      93,
       143,
       227,
       324,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      567
+      568
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 7,
-        "playtimeSec": 8446
+        "count": 8,
+        "playtimeSec": 8787
       },
       {
         "date": "23/09/2025",
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "QucYeZhj",
+      "start": "2026-08-23T12:41:20.231Z",
+      "map": "Europe Classic",
+      "mode": "Team",
+      "result": "defeat",
+      "durationSeconds": 341,
+      "totalPlayers": 4,
+      "rankedType": "2v2",
+      "category": "teamRanked"
+    },
+    {
       "gameId": "aBcevrJy",
       "start": "2026-08-23T12:32:47.198Z",
       "map": "Europe Classic",
@@ -2363,17 +2374,6 @@
       "result": "defeat",
       "durationSeconds": 1079,
       "totalPlayers": 55,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "2yq4WrVT",
-      "start": "2026-08-21T06:53:56.365Z",
-      "map": "Montreal",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 1042,
-      "totalPlayers": 93,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
