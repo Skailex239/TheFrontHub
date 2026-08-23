@@ -39117,6 +39117,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T06:06:29.757Z",
       "url": "https://openfront.io/game/GhYqMcEc"
+    },
+    {
+      "id": "e4dMJZuG",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Super Earth",
+          "clientID": "1C25bEFw",
+          "clanTag": null
+        },
+        {
+          "username": "AngryLollipop.zT7C",
+          "clientID": "MRkfv6YM",
+          "clanTag": null
+        }
+      ],
+      "map": "United States",
+      "duration_s": 557,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T06:38:28.094Z",
+      "url": "https://openfront.io/game/e4dMJZuG"
     }
   ],
   "trios": [
@@ -77621,6 +77646,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T06:11:45.462Z",
       "url": "https://openfront.io/game/RPGRbXBS"
+    },
+    {
+      "id": "xDKM1rjg",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Caesar",
+          "clientID": "vqj4u8cP",
+          "clanTag": null
+        },
+        {
+          "username": "TAS",
+          "clientID": "PiRnd86t",
+          "clanTag": "NEKO"
+        },
+        {
+          "username": "Alex",
+          "clientID": "vvrvb4SD",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 615,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 81,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T06:37:14.506Z",
+      "url": "https://openfront.io/game/xDKM1rjg"
     }
   ],
   "quads": [
@@ -117598,6 +117653,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T06:30:27.628Z",
       "url": "https://openfront.io/game/VL3bxabt"
+    },
+    {
+      "id": "fmhh4An9",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "...",
+          "clientID": "q66o16Bn",
+          "clanTag": null
+        },
+        {
+          "username": "PreciousBubbles",
+          "clientID": "XUNPCy4C",
+          "clanTag": null
+        },
+        {
+          "username": "KANEKI",
+          "clientID": "WwBvNSsf",
+          "clanTag": "KEN"
+        },
+        {
+          "username": "Anon903",
+          "clientID": "6MVE23t8",
+          "clanTag": null
+        }
+      ],
+      "map": "Warship Warship",
+      "duration_s": 481,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 52,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T06:40:50.648Z",
+      "url": "https://openfront.io/game/fmhh4An9"
     }
   ],
   "team_custom": [
