@@ -40592,6 +40592,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T11:31:24.559Z",
       "url": "https://openfront.io/game/rybBVkWc"
+    },
+    {
+      "id": "H73Rcikf",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "mimo",
+          "clientID": "QYkXpyUV",
+          "clanTag": null
+        },
+        {
+          "username": "Ben Dover",
+          "clientID": "UMTovxRN",
+          "clanTag": null
+        }
+      ],
+      "map": "Bosphorus Straits",
+      "duration_s": 553,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 14,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T11:45:31.050Z",
+      "url": "https://openfront.io/game/H73Rcikf"
     }
   ],
   "trios": [
@@ -121633,6 +121658,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T11:19:01.151Z",
       "url": "https://openfront.io/game/VhpddYXD"
+    },
+    {
+      "id": "WN264WuS",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "MommysLilPeanut",
+          "clientID": "3gSc1XQj",
+          "clanTag": null
+        },
+        {
+          "username": "Anon6969",
+          "clientID": "UrxxKeE8",
+          "clanTag": "98"
+        },
+        {
+          "username": "res",
+          "clientID": "Tej8mkug",
+          "clanTag": null
+        },
+        {
+          "username": "yourfriendlyneighbor",
+          "clientID": "xzA4rNM8",
+          "clanTag": null
+        }
+      ],
+      "map": "Four Islands",
+      "duration_s": 1979,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T11:22:32.362Z",
+      "url": "https://openfront.io/game/WN264WuS"
     }
   ],
   "team_custom": [
