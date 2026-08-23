@@ -115288,6 +115288,76 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T02:23:47.680Z",
       "url": "https://openfront.io/game/VusdhK1A"
+    },
+    {
+      "id": "eBY2zUiF",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "TheCraftCave",
+          "clientID": "Mot2FjAJ",
+          "clanTag": "YTBE"
+        },
+        {
+          "username": "AnonSlate7",
+          "clientID": "1UPkRsEp",
+          "clanTag": null
+        },
+        {
+          "username": "AnonUnicorn2",
+          "clientID": "aCrGzatd",
+          "clanTag": null
+        },
+        {
+          "username": "AHAHA",
+          "clientID": "S2zNXgwb",
+          "clanTag": null
+        }
+      ],
+      "map": "World",
+      "duration_s": 826,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 28,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T02:32:57.104Z",
+      "url": "https://openfront.io/game/eBY2zUiF"
+    },
+    {
+      "id": "47gUmTjS",
+      "mode": "quads",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Ober",
+          "clientID": "8wDW8Xgd",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "The First Boss",
+          "clientID": "aKCMbiwz",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "Festive",
+          "clientID": "qEKx3ZnU",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "Gan",
+          "clientID": "PvewFyQN",
+          "clanTag": "FTJ"
+        }
+      ],
+      "map": "Mare Nostrum",
+      "duration_s": 845,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 50,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T02:32:05.485Z",
+      "url": "https://openfront.io/game/47gUmTjS"
     }
   ],
   "team_custom": [
