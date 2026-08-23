@@ -39492,6 +39492,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T08:04:42.620Z",
       "url": "https://openfront.io/game/v3rwMyub"
+    },
+    {
+      "id": "ceE1XSvz",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "saxonia",
+          "clientID": "srCx8CKa",
+          "clanTag": null
+        },
+        {
+          "username": "Moi",
+          "clientID": "DQX8Ztp7",
+          "clanTag": null
+        }
+      ],
+      "map": "Gateway to the Atlantic",
+      "duration_s": 933,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T08:08:14.345Z",
+      "url": "https://openfront.io/game/ceE1XSvz"
     }
   ],
   "trios": [
@@ -78506,6 +78531,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T07:55:35.917Z",
       "url": "https://openfront.io/game/piDj9AfC"
+    },
+    {
+      "id": "srLLSa5c",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon675",
+          "clientID": "BCYTcU2E",
+          "clanTag": null
+        },
+        {
+          "username": "kuma",
+          "clientID": "dFWk3atY",
+          "clanTag": null
+        },
+        {
+          "username": "AnonNebula5",
+          "clientID": "e5fgH4vo",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 675,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T08:12:03.593Z",
+      "url": "https://openfront.io/game/srLLSa5c"
     }
   ],
   "quads": [
