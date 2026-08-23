@@ -79806,6 +79806,66 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T10:30:38.787Z",
       "url": "https://openfront.io/game/aGwvAhoP"
+    },
+    {
+      "id": "jnzu3GDf",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "qrx",
+          "clientID": "wdRNoK1Y",
+          "clanTag": "CWEL"
+        },
+        {
+          "username": "A43",
+          "clientID": "fHNxq3zr",
+          "clanTag": null
+        },
+        {
+          "username": "AnonJungle7",
+          "clientID": "VZmdJ3yA",
+          "clanTag": null
+        }
+      ],
+      "map": "SoutheastAsia",
+      "duration_s": 535,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T10:33:26.573Z",
+      "url": "https://openfront.io/game/jnzu3GDf"
+    },
+    {
+      "id": "XBXV4aHG",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Bra1ndeath",
+          "clientID": "iUzi1fas",
+          "clanTag": null
+        },
+        {
+          "username": "disaster",
+          "clientID": "tJ9SHeTV",
+          "clanTag": "UN"
+        },
+        {
+          "username": "OnFire",
+          "clientID": "C2KwxBVj",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 849,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 105,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T10:28:36.166Z",
+      "url": "https://openfront.io/game/XBXV4aHG"
     }
   ],
   "quads": [
@@ -198212,6 +198272,61 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T10:15:23.304Z",
       "url": "https://openfront.io/game/BYp459Bc"
+    },
+    {
+      "id": "g46Fwv8k",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "mizuarare",
+          "clientID": "NXtrz8Ks",
+          "clanTag": null
+        },
+        {
+          "username": "AmirHoseain0188",
+          "clientID": "55R9de2k",
+          "clanTag": "UN"
+        },
+        {
+          "username": "xWallbangx",
+          "clientID": "SgtH4BNg",
+          "clanTag": null
+        },
+        {
+          "username": "amsoa",
+          "clientID": "MqGWBXXx",
+          "clanTag": null
+        },
+        {
+          "username": "Deus Vult",
+          "clientID": "5qSAQu2y",
+          "clanTag": null
+        },
+        {
+          "username": "RV14",
+          "clientID": "fLC2GAHc",
+          "clanTag": null
+        },
+        {
+          "username": "AnonCobalt9",
+          "clientID": "Ne352NbF",
+          "clanTag": null
+        },
+        {
+          "username": "ALPHA",
+          "clientID": "tYU1YujP",
+          "clanTag": "A2"
+        }
+      ],
+      "map": "Surrounded",
+      "duration_s": 902,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 15,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T10:28:49.674Z",
+      "url": "https://openfront.io/game/g46Fwv8k"
     }
   ]
 }
