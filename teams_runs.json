@@ -77871,6 +77871,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T06:56:46.533Z",
       "url": "https://openfront.io/game/A31Hj4YH"
+    },
+    {
+      "id": "wbjWWaMY",
+      "mode": "trios",
+      "team": "Team 5",
+      "players": [
+        {
+          "username": "NanasLilMan",
+          "clientID": "p1iiYeYx",
+          "clanTag": null
+        },
+        {
+          "username": "Klijin",
+          "clientID": "qdyGAnGB",
+          "clanTag": "H10"
+        },
+        {
+          "username": "So4246la",
+          "clientID": "jeRNPGiy",
+          "clanTag": null
+        }
+      ],
+      "map": "Dyslexdria",
+      "duration_s": 1493,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 29,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T06:47:24.628Z",
+      "url": "https://openfront.io/game/wbjWWaMY"
     }
   ],
   "quads": [
