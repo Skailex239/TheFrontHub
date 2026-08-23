@@ -77901,6 +77901,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T06:47:24.628Z",
       "url": "https://openfront.io/game/wbjWWaMY"
+    },
+    {
+      "id": "Yszej7dQ",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Pakistan",
+          "clientID": "8YdKhem7",
+          "clanTag": null
+        },
+        {
+          "username": "Real China",
+          "clientID": "qupaKHG4",
+          "clanTag": null
+        },
+        {
+          "username": "Lucifer3471",
+          "clientID": "goqs2jM5",
+          "clanTag": "NU"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 920,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:02:00.366Z",
+      "url": "https://openfront.io/game/Yszej7dQ"
     }
   ],
   "quads": [
@@ -118018,6 +118048,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T06:48:22.882Z",
       "url": "https://openfront.io/game/RF5txDQ6"
+    },
+    {
+      "id": "195f5z42",
+      "mode": "quads",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "AnonDusk3",
+          "clientID": "R9ReeyRo",
+          "clanTag": null
+        },
+        {
+          "username": "LordBodhi",
+          "clientID": "2fm2MReu",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBronze4",
+          "clientID": "1bnzV4W4",
+          "clanTag": null
+        },
+        {
+          "username": "AnonDuck8",
+          "clientID": "FyeLP7qp",
+          "clanTag": null
+        }
+      ],
+      "map": "Baja California",
+      "duration_s": 723,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 64,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T07:04:56.909Z",
+      "url": "https://openfront.io/game/195f5z42"
     }
   ],
   "team_custom": [
