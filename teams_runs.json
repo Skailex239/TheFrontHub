@@ -39642,6 +39642,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-23T08:26:18.951Z",
       "url": "https://openfront.io/game/2tNf9hmi"
+    },
+    {
+      "id": "ZpxWC3QW",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "hambertger",
+          "clientID": "smWZj2Rm",
+          "clanTag": "POOR"
+        },
+        {
+          "username": "BabyMonki",
+          "clientID": "Vi7k7aUY",
+          "clanTag": "POOR"
+        }
+      ],
+      "map": "Sol",
+      "duration_s": 1800,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 38,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T08:30:52.895Z",
+      "url": "https://openfront.io/game/ZpxWC3QW"
+    },
+    {
+      "id": "GvTzRJv1",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "GBoys",
+          "clientID": "DQYhX1Ex",
+          "clanTag": null
+        },
+        {
+          "username": "Demon29",
+          "clientID": "mqFcacgv",
+          "clanTag": null
+        }
+      ],
+      "map": "Vietnam",
+      "duration_s": 1145,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T08:40:37.061Z",
+      "url": "https://openfront.io/game/GvTzRJv1"
     }
   ],
   "trios": [
@@ -78746,6 +78796,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T08:09:01.899Z",
       "url": "https://openfront.io/game/HuC9LQ13"
+    },
+    {
+      "id": "EHxd4DWF",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "AnonCobra5",
+          "clientID": "KwNcQtgh",
+          "clanTag": null
+        },
+        {
+          "username": "Grumahji",
+          "clientID": "xh7AJ3Nt",
+          "clanTag": null
+        },
+        {
+          "username": "Babalu",
+          "clientID": "mr3p2ANw",
+          "clanTag": "CAT"
+        }
+      ],
+      "map": "Juan De Fuca Strait",
+      "duration_s": 854,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T08:46:46.972Z",
+      "url": "https://openfront.io/game/EHxd4DWF"
     }
   ],
   "quads": [
@@ -119108,6 +119188,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T08:44:35.318Z",
       "url": "https://openfront.io/game/GpLoMRgu"
+    },
+    {
+      "id": "Ptk3vShm",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "PleaseFullSendMe",
+          "clientID": "RdhDNkNR",
+          "clanTag": null
+        },
+        {
+          "username": "zxc",
+          "clientID": "q75NkDDa",
+          "clanTag": null
+        },
+        {
+          "username": "Repubblica socialista",
+          "clientID": "LyWnqK8g",
+          "clanTag": null
+        },
+        {
+          "username": "Anonsky",
+          "clientID": "kXMjiUho",
+          "clanTag": null
+        }
+      ],
+      "map": "Titan",
+      "duration_s": 765,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T08:48:35.635Z",
+      "url": "https://openfront.io/game/Ptk3vShm"
     }
   ],
   "team_custom": [
