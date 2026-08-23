@@ -38092,6 +38092,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T02:03:13.014Z",
       "url": "https://openfront.io/game/HmkL4Bkq"
+    },
+    {
+      "id": "m2cd2aYG",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Colmy",
+          "clientID": "SfGaBBrs",
+          "clanTag": "RARI"
+        },
+        {
+          "username": "Heywood Jablome",
+          "clientID": "hUJN1uUX",
+          "clanTag": "RARI"
+        }
+      ],
+      "map": "Two Lakes",
+      "duration_s": 746,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 26,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T02:06:09.192Z",
+      "url": "https://openfront.io/game/m2cd2aYG"
+    },
+    {
+      "id": "Ems1RSh2",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Amigo",
+          "clientID": "iHdSgnm5",
+          "clanTag": null
+        },
+        {
+          "username": "The Mapajahit",
+          "clientID": "yHGHRC6d",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 1771,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 82,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T01:48:11.732Z",
+      "url": "https://openfront.io/game/Ems1RSh2"
     }
   ],
   "trios": [
