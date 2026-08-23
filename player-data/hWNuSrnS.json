@@ -1,12 +1,26 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "lastSyncedAt": "2026-08-23T11:16:43.411Z",
+  "lastSyncedAt": "2026-08-23T11:18:53.906Z",
   "syncMode": "incremental",
-  "syncDurationSec": 0.4,
-  "totalGames": 3817,
-  "newGamesThisSync": 0,
+  "syncDurationSec": 0.3,
+  "totalGames": 3818,
+  "newGamesThisSync": 1,
   "games": [
+    {
+      "gameId": "vKx84WfY",
+      "start": "2026-08-23T11:02:14.068Z",
+      "durationSeconds": 922,
+      "map": "Scandinavia",
+      "mode": "Free For All",
+      "type": "Public",
+      "playerTeams": null,
+      "rankedType": "unranked",
+      "result": "victory",
+      "totalPlayers": 62,
+      "username": "Nvr_Kn",
+      "clanTag": "BOB"
+    },
     {
       "gameId": "2CEPC1si",
       "start": "2026-08-23T10:09:51.872Z",

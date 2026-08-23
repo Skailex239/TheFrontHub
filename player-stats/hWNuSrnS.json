@@ -1,23 +1,23 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T11:16:46.122Z",
-  "lastSyncedAt": "2026-08-23T11:16:43.411Z",
-  "totalGames": 3817,
+  "computedAt": "2026-08-23T11:18:55.887Z",
+  "lastSyncedAt": "2026-08-23T11:18:53.906Z",
+  "totalGames": 3818,
   "careerWins": {
-    "ffaCasual": 277,
+    "ffaCasual": 278,
     "ffaRanked": 1420,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1985,
-  "points": 5082,
+  "totalWins": 1986,
+  "points": 5092,
   "level": 50,
-  "levelProgress": 82,
+  "levelProgress": 92,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1985,
+      "current": 1986,
       "target": 2000
     },
     "playtime": {
@@ -39,9 +39,9 @@
     6
   ],
   "formatted": {
-    "points": "5 082",
-    "totalWins": "1 985",
-    "totalGames": "3 817",
+    "points": "5 092",
+    "totalWins": "1 986",
+    "totalGames": "3 818",
     "totalPlaytime": "31j 7h",
     "totalPlaytimeCompact": "31j 7h",
     "avgGameDuration": "11m 48s",
@@ -50,15 +50,15 @@
     "totalPlaytimeHours": "751h"
   },
   "playtime": {
-    "totalSec": 2704814,
-    "avgGameSec": 708.6230023578727,
+    "totalSec": 2705736,
+    "avgGameSec": 708.6788894709272,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1101,
-        "playtimeSec": 1334677,
-        "wins": 277
+        "games": 1102,
+        "playtimeSec": 1335599,
+        "wins": 278
       },
       "ffaRanked": {
         "games": 1914,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1985,
+    "victory": 1986,
     "defeat": 1500,
     "incomplete": 332
   },
@@ -1012,6 +1012,22 @@
       }
     },
     {
+      "map": "Scandinavia",
+      "count": 5,
+      "wins": 2,
+      "losses": 3,
+      "playtimeSec": 8689,
+      "avgDuration": 1737.8,
+      "winRate": 0.4,
+      "lastPlayed": 1787482934068,
+      "formatted": {
+        "playtime": "2h 24m",
+        "avgDuration": "28m",
+        "winRate": "40%",
+        "lastPlayed": "23/08/26"
+      }
+    },
+    {
       "map": "France",
       "count": 5,
       "wins": 1,
@@ -1025,22 +1041,6 @@
         "avgDuration": "29m",
         "winRate": "20%",
         "lastPlayed": "20/08/26"
-      }
-    },
-    {
-      "map": "Scandinavia",
-      "count": 4,
-      "wins": 1,
-      "losses": 3,
-      "playtimeSec": 7767,
-      "avgDuration": 1941.75,
-      "winRate": 0.25,
-      "lastPlayed": 1786779297069,
-      "formatted": {
-        "playtime": "2h 9m",
-        "avgDuration": "32m",
-        "winRate": "25%",
-        "lastPlayed": "15/08/26"
       }
     },
     {
@@ -1603,7 +1603,7 @@
       90,
       81,
       98,
-      100,
+      101,
       91,
       143,
       227,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      563
+      564
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 3,
-        "playtimeSec": 3928
+        "count": 4,
+        "playtimeSec": 4850
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 1,
+    "current": 2,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "vKx84WfY",
+      "start": "2026-08-23T11:02:14.068Z",
+      "map": "Scandinavia",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 922,
+      "totalPlayers": 62,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
     {
       "gameId": "2CEPC1si",
       "start": "2026-08-23T10:09:51.872Z",
@@ -2363,17 +2374,6 @@
       "result": "defeat",
       "durationSeconds": 2909,
       "totalPlayers": 95,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "NDn1Bs8m",
-      "start": "2026-08-20T07:21:44.915Z",
-      "map": "Iceland",
-      "mode": "Free For All",
-      "result": "defeat",
-      "durationSeconds": 832,
-      "totalPlayers": 51,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
