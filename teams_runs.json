@@ -40392,6 +40392,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T11:07:15.887Z",
       "url": "https://openfront.io/game/uz65wrhd"
+    },
+    {
+      "id": "PtoUshsc",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "FreeTroop",
+          "clientID": "PhRDWQ6H",
+          "clanTag": null
+        },
+        {
+          "username": "SUPPORT YOU",
+          "clientID": "gy7GpsM4",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Arctic",
+      "duration_s": 752,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T11:12:52.310Z",
+      "url": "https://openfront.io/game/PtoUshsc"
     }
   ],
   "trios": [
@@ -80216,6 +80241,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T10:54:02.544Z",
       "url": "https://openfront.io/game/7hmcUmoq"
+    },
+    {
+      "id": "w2dqoStr",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Anon190",
+          "clientID": "krCDiBLB",
+          "clanTag": null
+        },
+        {
+          "username": "ismyfirsttimeplaying",
+          "clientID": "6JEshZ1d",
+          "clanTag": "THIS"
+        },
+        {
+          "username": "Dimitrig",
+          "clientID": "MVJD42Uy",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1009,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T11:06:48.364Z",
+      "url": "https://openfront.io/game/w2dqoStr"
     }
   ],
   "quads": [
