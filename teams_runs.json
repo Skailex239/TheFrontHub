@@ -80611,6 +80611,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T11:37:58.488Z",
       "url": "https://openfront.io/game/3btTiscU"
+    },
+    {
+      "id": "M2AtfjWx",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FULLSEND",
+          "clientID": "Fp5Va7be",
+          "clanTag": null
+        },
+        {
+          "username": "Bud",
+          "clientID": "h7dPh1hC",
+          "clanTag": null
+        },
+        {
+          "username": "camsterdam99",
+          "clientID": "1GjtEk3q",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 565,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 75,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T11:55:43.825Z",
+      "url": "https://openfront.io/game/M2AtfjWx"
     }
   ],
   "quads": [
@@ -121743,6 +121773,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T11:22:32.362Z",
       "url": "https://openfront.io/game/WN264WuS"
+    },
+    {
+      "id": "HMXtQFJT",
+      "mode": "quads",
+      "team": "Team 2",
+      "players": [
+        {
+          "username": "Emperor",
+          "clientID": "bG4Ts3oW",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "nobles",
+          "clientID": "fmpQQGxK",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "nobles",
+          "clientID": "sS2TriKh",
+          "clanTag": "WIN"
+        },
+        {
+          "username": "Cymru",
+          "clientID": "p2FSovmd",
+          "clanTag": null
+        }
+      ],
+      "map": "San Francisco",
+      "duration_s": 1019,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": "Quads",
+      "timestamp": "2026-08-23T11:47:04.195Z",
+      "url": "https://openfront.io/game/HMXtQFJT"
     }
   ],
   "team_custom": [
