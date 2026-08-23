@@ -40767,6 +40767,81 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T12:31:23.609Z",
       "url": "https://openfront.io/game/okTEijWm"
+    },
+    {
+      "id": "PxtPX489",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "123",
+          "clientID": "6vufRQ9J",
+          "clanTag": null
+        },
+        {
+          "username": "Juliodubendo",
+          "clientID": "FvyL8rxS",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 781,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 43,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T12:31:00.086Z",
+      "url": "https://openfront.io/game/PxtPX489"
+    },
+    {
+      "id": "EAVXnDPf",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anonia",
+          "clientID": "xe5hJzZb",
+          "clanTag": "ANO"
+        },
+        {
+          "username": "Nodje",
+          "clientID": "VqRcaHu9",
+          "clanTag": "FR"
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 318,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T12:38:59.084Z",
+      "url": "https://openfront.io/game/EAVXnDPf"
+    },
+    {
+      "id": "LjhRLZ1h",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Dutch E.India Co.",
+          "clientID": "WyLyJFQ1",
+          "clanTag": "NAM"
+        },
+        {
+          "username": "LisaRulit",
+          "clientID": "PamAaFqj",
+          "clanTag": null
+        }
+      ],
+      "map": "Baikal",
+      "duration_s": 2282,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 110,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T12:06:34.613Z",
+      "url": "https://openfront.io/game/LjhRLZ1h"
     }
   ],
   "trios": [
@@ -122128,6 +122203,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T12:14:28.373Z",
       "url": "https://openfront.io/game/sKxziXxE"
+    },
+    {
+      "id": "kuFWFitm",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Babalu",
+          "clientID": "ENAkSQxD",
+          "clanTag": "CAT"
+        },
+        {
+          "username": "Anon903",
+          "clientID": "cfzJxWsu",
+          "clanTag": null
+        },
+        {
+          "username": "sigma",
+          "clientID": "CeT6zwJ4",
+          "clanTag": "SRB"
+        },
+        {
+          "username": "FRAFRAFRA",
+          "clientID": "m2tCG8yu",
+          "clanTag": null
+        }
+      ],
+      "map": "Balkhash",
+      "duration_s": 737,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 120,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T12:30:23.046Z",
+      "url": "https://openfront.io/game/kuFWFitm"
     }
   ],
   "team_custom": [
