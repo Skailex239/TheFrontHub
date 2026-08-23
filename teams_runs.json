@@ -38867,6 +38867,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T05:34:09.283Z",
       "url": "https://openfront.io/game/tMuS7HuN"
+    },
+    {
+      "id": "FpkG95FW",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Economic Center",
+          "clientID": "vovucYks",
+          "clanTag": "PAN"
+        },
+        {
+          "username": "Castella",
+          "clientID": "pfZCAF8u",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Sea",
+      "duration_s": 1182,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 60,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:35:58.306Z",
+      "url": "https://openfront.io/game/FpkG95FW"
     }
   ],
   "trios": [
@@ -117013,6 +117038,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T05:28:29.036Z",
       "url": "https://openfront.io/game/xjQeiWhu"
+    },
+    {
+      "id": "KhbueQLX",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Twitch_MehighPlays",
+          "clientID": "cNWHMAnp",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "TON618",
+          "clientID": "cjtTgsbo",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "NUKER",
+          "clientID": "zBMPtejS",
+          "clanTag": "HIGH"
+        },
+        {
+          "username": "vwgli",
+          "clientID": "z6smgyP8",
+          "clanTag": "HIGH"
+        }
+      ],
+      "map": "Didier",
+      "duration_s": 773,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 44,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T05:43:30.109Z",
+      "url": "https://openfront.io/game/KhbueQLX"
     }
   ],
   "team_custom": [
