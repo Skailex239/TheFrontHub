@@ -81621,6 +81621,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T13:16:00.661Z",
       "url": "https://openfront.io/game/79J9RBH9"
+    },
+    {
+      "id": "xiaCHAMu",
+      "mode": "trios",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "f4321",
+          "clientID": "5xQU89aj",
+          "clanTag": null
+        },
+        {
+          "username": "Rondeh",
+          "clientID": "WyBihsA8",
+          "clanTag": null
+        },
+        {
+          "username": "Bitcoin",
+          "clientID": "7zdmiobc",
+          "clanTag": "AUT"
+        }
+      ],
+      "map": "Mena",
+      "duration_s": 415,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 78,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T13:31:04.080Z",
+      "url": "https://openfront.io/game/xiaCHAMu"
     }
   ],
   "quads": [
