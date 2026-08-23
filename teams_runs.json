@@ -38167,6 +38167,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T02:27:36.047Z",
       "url": "https://openfront.io/game/fE1aFarg"
+    },
+    {
+      "id": "MYNVwK3f",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "FuzzyWuzzy",
+          "clientID": "WbywZtvp",
+          "clanTag": "FW"
+        },
+        {
+          "username": "Worst player ever",
+          "clientID": "AXAMhq3d",
+          "clanTag": null
+        }
+      ],
+      "map": "The Box",
+      "duration_s": 633,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 90,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T02:37:26.026Z",
+      "url": "https://openfront.io/game/MYNVwK3f"
     }
   ],
   "trios": [
@@ -76221,6 +76246,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T02:25:12.801Z",
       "url": "https://openfront.io/game/CxKq9Epj"
+    },
+    {
+      "id": "g5vWeVpR",
+      "mode": "trios",
+      "team": "Team 4",
+      "players": [
+        {
+          "username": "zen",
+          "clientID": "11Gb4UHN",
+          "clanTag": null
+        },
+        {
+          "username": "Meatgrinder",
+          "clientID": "NPY5U6tT",
+          "clanTag": null
+        },
+        {
+          "username": "Donations is the key",
+          "clientID": "zM2egSsp",
+          "clanTag": "11"
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 870,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 24,
+      "playerTeams": "Trios",
+      "timestamp": "2026-08-23T02:34:58.794Z",
+      "url": "https://openfront.io/game/g5vWeVpR"
     }
   ],
   "quads": [
