@@ -77841,6 +77841,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T06:53:05.326Z",
       "url": "https://openfront.io/game/xLmBWJeY"
+    },
+    {
+      "id": "A31Hj4YH",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Drow",
+          "clientID": "6ccnHBh2",
+          "clanTag": "WOW"
+        },
+        {
+          "username": "DictatorKylianMbappe",
+          "clientID": "YNUe9GoL",
+          "clanTag": null
+        },
+        {
+          "username": "Anon097",
+          "clientID": "Wot5fnEu",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 788,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 45,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T06:56:46.533Z",
+      "url": "https://openfront.io/game/A31Hj4YH"
     }
   ],
   "quads": [
@@ -158325,6 +158355,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T06:54:24.608Z",
       "url": "https://openfront.io/game/1HDsopAp"
+    },
+    {
+      "id": "zJS12a16",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "yes",
+          "clientID": "g5BtVT3y",
+          "clanTag": null
+        },
+        {
+          "username": "YoYo",
+          "clientID": "tor3NAUA",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Exigoo",
+          "clientID": "aT3rh26P",
+          "clanTag": null
+        },
+        {
+          "username": "AnonAnvil",
+          "clientID": "J2mBcg5W",
+          "clanTag": null
+        },
+        {
+          "username": "Ehsan",
+          "clientID": "zYPMmryk",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Russia",
+          "clientID": "KkUcDbRp",
+          "clanTag": null
+        },
+        {
+          "username": "entelechos",
+          "clientID": "3x547tqc",
+          "clanTag": "THE"
+        }
+      ],
+      "map": "South America",
+      "duration_s": 599,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T06:58:26.847Z",
+      "url": "https://openfront.io/game/zJS12a16"
     }
   ],
   "hvn": [
@@ -192427,6 +192507,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T06:35:09.365Z",
       "url": "https://openfront.io/game/qPd7YRob"
+    },
+    {
+      "id": "DTJCyxHH",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Lehistan",
+          "clientID": "t9NEPQTP",
+          "clanTag": null
+        },
+        {
+          "username": "o_0",
+          "clientID": "gcnkaqPX",
+          "clanTag": null
+        },
+        {
+          "username": "Omelya",
+          "clientID": "9K9eYRyQ",
+          "clanTag": "EZ"
+        },
+        {
+          "username": "Capital city of the team",
+          "clientID": "yFFrzHM7",
+          "clanTag": "NU"
+        },
+        {
+          "username": "DaDaBig",
+          "clientID": "vPEHg9nu",
+          "clanTag": null
+        },
+        {
+          "username": "123",
+          "clientID": "jiDBwhdb",
+          "clanTag": null
+        },
+        {
+          "username": "AnonClay",
+          "clientID": "k7BCcFTy",
+          "clanTag": null
+        },
+        {
+          "username": "NOOB",
+          "clientID": "4maKTXea",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVolcano7",
+          "clientID": "H5hcxaJo",
+          "clanTag": null
+        },
+        {
+          "username": "Tucloper",
+          "clientID": "VM1dxupP",
+          "clanTag": null
+        },
+        {
+          "username": "MagaUSA",
+          "clientID": "AXfpndLx",
+          "clanTag": null
+        },
+        {
+          "username": "Sublime",
+          "clientID": "WA7eiv3X",
+          "clanTag": null
+        },
+        {
+          "username": "SAM",
+          "clientID": "zbYyPx1A",
+          "clanTag": null
+        },
+        {
+          "username": "Blueair",
+          "clientID": "NUigBosQ",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Anon3401",
+          "clientID": "wjFRtBrq",
+          "clanTag": null
+        }
+      ],
+      "map": "Conakry",
+      "duration_s": 584,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 27,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T07:00:16.572Z",
+      "url": "https://openfront.io/game/DTJCyxHH"
     }
   ]
 }
