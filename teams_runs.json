@@ -153130,6 +153130,51 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T00:01:55.766Z",
       "url": "https://openfront.io/game/wnFHNHJb"
+    },
+    {
+      "id": "svstDzRv",
+      "mode": "team_custom",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Gan",
+          "clientID": "waVe2nF7",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "The First Boss",
+          "clientID": "phLdt3Nq",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "Festive",
+          "clientID": "SWGtsE6r",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "Ober",
+          "clientID": "sTWHWuSA",
+          "clanTag": "FTJ"
+        },
+        {
+          "username": "USSR",
+          "clientID": "c4SUU7Jc",
+          "clanTag": null
+        },
+        {
+          "username": "Cooties",
+          "clientID": "eiTYss86",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 824,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T01:46:36.652Z",
+      "url": "https://openfront.io/game/svstDzRv"
     }
   ],
   "hvn": [
@@ -185792,6 +185837,136 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T00:27:32.407Z",
       "url": "https://openfront.io/game/xD5KfMxK"
+    },
+    {
+      "id": "Bt5GJQKu",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "Blossom",
+          "clientID": "rDDE5BXa",
+          "clanTag": null
+        },
+        {
+          "username": "Nao Sei Jogar",
+          "clientID": "HHFpBzRf",
+          "clanTag": "BRA"
+        },
+        {
+          "username": "MUR",
+          "clientID": "dCqxvVGQ",
+          "clanTag": null
+        },
+        {
+          "username": "KIMSANGDO",
+          "clientID": "uRS59GWv",
+          "clanTag": null
+        },
+        {
+          "username": "WWWWWWWWWWWWWWWWWWWWWWWWWW",
+          "clientID": "rsVnVrg8",
+          "clanTag": "WWWWW"
+        },
+        {
+          "username": "AnonGecko5",
+          "clientID": "dbRUGesJ",
+          "clanTag": null
+        },
+        {
+          "username": "Adonis",
+          "clientID": "vWGL5n4U",
+          "clanTag": "FR"
+        },
+        {
+          "username": "AnonOcean8",
+          "clientID": "FmhRgCaf",
+          "clanTag": null
+        },
+        {
+          "username": "aspara",
+          "clientID": "xSz4wsZY",
+          "clanTag": "JPN"
+        },
+        {
+          "username": "FreshTuborg",
+          "clientID": "rrTPRCXn",
+          "clanTag": "DK"
+        },
+        {
+          "username": "Land Down Unda",
+          "clientID": "R4KSBwck",
+          "clanTag": null
+        },
+        {
+          "username": "AnonWrench",
+          "clientID": "udzTyQas",
+          "clanTag": null
+        },
+        {
+          "username": "AnonGong8",
+          "clientID": "RrVppjwC",
+          "clanTag": null
+        },
+        {
+          "username": "OkiePokeyMeSellHat",
+          "clientID": "H5xmA5Ut",
+          "clanTag": null
+        },
+        {
+          "username": "himazin",
+          "clientID": "bqhZFDMF",
+          "clanTag": null
+        },
+        {
+          "username": "SPAMBOT",
+          "clientID": "RS6eWeuB",
+          "clanTag": "FR"
+        },
+        {
+          "username": "Gregnor",
+          "clientID": "7wvUCewF",
+          "clanTag": null
+        },
+        {
+          "username": "Leek",
+          "clientID": "DAHTcGWu",
+          "clanTag": "VI"
+        },
+        {
+          "username": "brongus",
+          "clientID": "cAs1TUpp",
+          "clanTag": null
+        },
+        {
+          "username": "Anon328",
+          "clientID": "xkR1V9H9",
+          "clanTag": null
+        },
+        {
+          "username": "how do I play this game",
+          "clientID": "4a9WZu6r",
+          "clanTag": null
+        },
+        {
+          "username": "NMNMNMNMN",
+          "clientID": "9PDpxrKH",
+          "clanTag": null
+        },
+        {
+          "username": "SweetHomeAlabama",
+          "clientID": "SXnb1v9n",
+          "clanTag": null
+        }
+      ],
+      "map": "Lisbon",
+      "duration_s": 596,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T01:49:53.899Z",
+      "url": "https://openfront.io/game/Bt5GJQKu"
     }
   ]
 }
