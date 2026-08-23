@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T13:07:08.408Z",
-  "lastSyncedAt": "2026-08-23T13:07:05.648Z",
-  "totalGames": 3823,
+  "computedAt": "2026-08-23T13:10:06.754Z",
+  "lastSyncedAt": "2026-08-23T13:10:04.447Z",
+  "totalGames": 3824,
   "careerWins": {
     "ffaCasual": 278,
     "ffaRanked": 1420,
@@ -21,7 +21,7 @@
       "target": 2000
     },
     "playtime": {
-      "current": 752,
+      "current": 753,
       "target": 1000
     },
     "maps": {
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "5 092",
     "totalWins": "1 986",
-    "totalGames": "3 823",
-    "totalPlaytime": "31j 8h",
-    "totalPlaytimeCompact": "31j 8h",
-    "avgGameDuration": "11m 48s",
+    "totalGames": "3 824",
+    "totalPlaytime": "31j 9h",
+    "totalPlaytimeCompact": "31j 9h",
+    "avgGameDuration": "11m 49s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "752h"
+    "totalPlaytimeHours": "753h"
   },
   "playtime": {
-    "totalSec": 2710113,
-    "avgGameSec": 708.896939576249,
+    "totalSec": 2714348,
+    "avgGameSec": 709.8190376569038,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1104,
-        "playtimeSec": 1338725,
+        "games": 1105,
+        "playtimeSec": 1342960,
         "wins": 278
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1986,
-    "defeat": 1505,
+    "defeat": 1506,
     "incomplete": 332
   },
   "maps": [
@@ -836,6 +836,22 @@
       }
     },
     {
+      "map": "World Inverted",
+      "count": 10,
+      "wins": 7,
+      "losses": 3,
+      "playtimeSec": 16089,
+      "avgDuration": 1608.9,
+      "winRate": 0.7,
+      "lastPlayed": 1787486225910,
+      "formatted": {
+        "playtime": "4h 28m",
+        "avgDuration": "26m",
+        "winRate": "70%",
+        "lastPlayed": "23/08/26"
+      }
+    },
+    {
       "map": "Hong Kong",
       "count": 9,
       "wins": 4,
@@ -849,22 +865,6 @@
         "avgDuration": "20m",
         "winRate": "44%",
         "lastPlayed": "13/08/26"
-      }
-    },
-    {
-      "map": "World Inverted",
-      "count": 9,
-      "wins": 7,
-      "losses": 2,
-      "playtimeSec": 11854,
-      "avgDuration": 1317.111111111111,
-      "winRate": 0.7777777777777778,
-      "lastPlayed": 1786515836846,
-      "formatted": {
-        "playtime": "3h 17m",
-        "avgDuration": "21m",
-        "winRate": "78%",
-        "lastPlayed": "12/08/26"
       }
     },
     {
@@ -1603,7 +1603,7 @@
       90,
       81,
       98,
-      103,
+      104,
       94,
       143,
       227,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      569
+      570
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 9,
-        "playtimeSec": 9227
+        "count": 10,
+        "playtimeSec": 13462
       },
       {
         "date": "23/09/2025",
@@ -2191,6 +2191,17 @@
       "category": "teamRanked"
     },
     {
+      "gameId": "tBGA3RHi",
+      "start": "2026-08-23T11:57:05.910Z",
+      "map": "World Inverted",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 4235,
+      "totalPlayers": 71,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "sHPWYccS",
       "start": "2026-08-23T11:28:58.912Z",
       "map": "Africa",
@@ -2365,17 +2376,6 @@
       "totalPlayers": 2,
       "rankedType": "1v1",
       "category": "ffaRanked"
-    },
-    {
-      "gameId": "J2uKpk6q",
-      "start": "2026-08-21T07:32:01.619Z",
-      "map": "Mare Nostrum",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 2526,
-      "totalPlayers": 93,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
     }
   ]
 }
