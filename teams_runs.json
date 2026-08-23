@@ -115523,6 +115523,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T02:49:31.881Z",
       "url": "https://openfront.io/game/ZrHDdxtB"
+    },
+    {
+      "id": "2WR53pmr",
+      "mode": "quads",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Absolute_Unit",
+          "clientID": "RqChKsge",
+          "clanTag": "UN"
+        },
+        {
+          "username": "GOD LUX",
+          "clientID": "XTfwmpMi",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Obsolete_Unit",
+          "clientID": "2L9a6U79",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Mamdani",
+          "clientID": "M9Qprz6m",
+          "clanTag": "UN"
+        }
+      ],
+      "map": "Russia",
+      "duration_s": 796,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T02:58:42.428Z",
+      "url": "https://openfront.io/game/2WR53pmr"
     }
   ],
   "team_custom": [
@@ -154200,6 +154235,56 @@
       "playerTeams": 5,
       "timestamp": "2026-08-23T02:51:45.020Z",
       "url": "https://openfront.io/game/rnAmnYkj"
+    },
+    {
+      "id": "BJMCcB9w",
+      "mode": "team_custom",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Black Beam Labs",
+          "clientID": "n56vLab2",
+          "clanTag": "NUKE"
+        },
+        {
+          "username": "acidisfun",
+          "clientID": "XGfPYyP9",
+          "clanTag": null
+        },
+        {
+          "username": "Balkan",
+          "clientID": "yiyXfxQr",
+          "clanTag": null
+        },
+        {
+          "username": "Hans von Hansenburger",
+          "clientID": "uNoj7Mju",
+          "clanTag": "BURG"
+        },
+        {
+          "username": "Messi_Of_Openfront",
+          "clientID": "uhTFaeqU",
+          "clanTag": null
+        },
+        {
+          "username": "Leek",
+          "clientID": "MEXVFRyB",
+          "clanTag": "VI"
+        },
+        {
+          "username": "daffy101",
+          "clientID": "wdWSFAep",
+          "clanTag": null
+        }
+      ],
+      "map": "Giant World Map",
+      "duration_s": 1937,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 84,
+      "playerTeams": 6,
+      "timestamp": "2026-08-23T02:39:26.217Z",
+      "url": "https://openfront.io/game/BJMCcB9w"
     }
   ],
   "hvn": [
