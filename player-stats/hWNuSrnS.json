@@ -1,9 +1,9 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T11:54:57.976Z",
-  "lastSyncedAt": "2026-08-23T11:54:56.083Z",
-  "totalGames": 3819,
+  "computedAt": "2026-08-23T11:56:57.002Z",
+  "lastSyncedAt": "2026-08-23T11:56:54.549Z",
+  "totalGames": 3820,
   "careerWins": {
     "ffaCasual": 278,
     "ffaRanked": 1420,
@@ -41,23 +41,23 @@
   "formatted": {
     "points": "5 092",
     "totalWins": "1 986",
-    "totalGames": "3 819",
+    "totalGames": "3 820",
     "totalPlaytime": "31j 8h",
     "totalPlaytimeCompact": "31j 8h",
-    "avgGameDuration": "11m 48s",
+    "avgGameDuration": "11m 49s",
     "longestGame": "2h 53m",
     "winrate": "52%",
     "totalPlaytimeHours": "752h"
   },
   "playtime": {
-    "totalSec": 2707241,
-    "avgGameSec": 708.8874050798638,
+    "totalSec": 2708862,
+    "avgGameSec": 709.1261780104712,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
       "ffaCasual": {
-        "games": 1103,
-        "playtimeSec": 1337104,
+        "games": 1104,
+        "playtimeSec": 1338725,
         "wins": 278
       },
       "ffaRanked": {
@@ -79,7 +79,7 @@
   },
   "results": {
     "victory": 1986,
-    "defeat": 1501,
+    "defeat": 1502,
     "incomplete": 332
   },
   "maps": [
@@ -149,18 +149,18 @@
     },
     {
       "map": "Africa",
-      "count": 68,
+      "count": 69,
       "wins": 16,
-      "losses": 52,
-      "playtimeSec": 106643,
-      "avgDuration": 1568.2794117647059,
-      "winRate": 0.23529411764705882,
-      "lastPlayed": 1787305677767,
+      "losses": 53,
+      "playtimeSec": 108264,
+      "avgDuration": 1569.0434782608695,
+      "winRate": 0.2318840579710145,
+      "lastPlayed": 1787484538912,
       "formatted": {
-        "playtime": "1j 5h",
+        "playtime": "1j 6h",
         "avgDuration": "26m",
-        "winRate": "24%",
-        "lastPlayed": "21/08/26"
+        "winRate": "23%",
+        "lastPlayed": "23/08/26"
       }
     },
     {
@@ -1603,7 +1603,7 @@
       90,
       81,
       98,
-      102,
+      103,
       91,
       143,
       227,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      565
+      566
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 5,
-        "playtimeSec": 6355
+        "count": 6,
+        "playtimeSec": 7976
       },
       {
         "date": "23/09/2025",
@@ -2158,6 +2158,17 @@
   },
   "recentGames": [
     {
+      "gameId": "sHPWYccS",
+      "start": "2026-08-23T11:28:58.912Z",
+      "map": "Africa",
+      "mode": "Free For All",
+      "result": "defeat",
+      "durationSeconds": 1621,
+      "totalPlayers": 79,
+      "rankedType": "unranked",
+      "category": "ffaCasual"
+    },
+    {
       "gameId": "NoCmXK6T",
       "start": "2026-08-23T11:18:16.614Z",
       "map": "Montreal",
@@ -2363,17 +2374,6 @@
       "result": "victory",
       "durationSeconds": 1956,
       "totalPlayers": 76,
-      "rankedType": "unranked",
-      "category": "ffaCasual"
-    },
-    {
-      "gameId": "Lm48tu7x",
-      "start": "2026-08-20T08:03:13.451Z",
-      "map": "Dyslexdria",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 1624,
-      "totalPlayers": 98,
       "rankedType": "unranked",
       "category": "ffaCasual"
     }
