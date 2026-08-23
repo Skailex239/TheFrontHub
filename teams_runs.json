@@ -39217,6 +39217,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T06:51:04.096Z",
       "url": "https://openfront.io/game/scK1XirX"
+    },
+    {
+      "id": "LBmBLuep",
+      "mode": "duos",
+      "team": "Team 9",
+      "players": [
+        {
+          "username": "AnonSnake1",
+          "clientID": "Qq3tEX2F",
+          "clanTag": null
+        },
+        {
+          "username": "LapinG0D",
+          "clientID": "6w4MDxRU",
+          "clanTag": null
+        }
+      ],
+      "map": "Alps",
+      "duration_s": 851,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T07:10:29.248Z",
+      "url": "https://openfront.io/game/LBmBLuep"
     }
   ],
   "trios": [
@@ -77961,6 +77986,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T07:12:02.342Z",
       "url": "https://openfront.io/game/7UwJ9tYr"
+    },
+    {
+      "id": "TsDbAr5S",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Fih",
+          "clientID": "NVk7YCXw",
+          "clanTag": null
+        },
+        {
+          "username": "UNlzl",
+          "clientID": "JC2RGicA",
+          "clanTag": null
+        },
+        {
+          "username": "Saizeriya3401",
+          "clientID": "4JTwoyka",
+          "clanTag": null
+        }
+      ],
+      "map": "Hecate Strait",
+      "duration_s": 606,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 77,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:14:43.998Z",
+      "url": "https://openfront.io/game/TsDbAr5S"
     }
   ],
   "quads": [
@@ -118113,6 +118168,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T07:04:56.909Z",
       "url": "https://openfront.io/game/195f5z42"
+    },
+    {
+      "id": "B1pMxfWb",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "hhhi",
+          "clientID": "2SMCM1kb",
+          "clanTag": null
+        },
+        {
+          "username": "shuo de dao li",
+          "clientID": "MtbW3zx3",
+          "clanTag": "CCB"
+        },
+        {
+          "username": "AnonScepter",
+          "clientID": "rb1v8rBa",
+          "clanTag": null
+        },
+        {
+          "username": "lin",
+          "clientID": "GcVbR72E",
+          "clanTag": null
+        }
+      ],
+      "map": "Montreal",
+      "duration_s": 989,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 72,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T07:08:28.129Z",
+      "url": "https://openfront.io/game/B1pMxfWb"
     }
   ],
   "team_custom": [
