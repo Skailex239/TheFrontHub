@@ -40942,6 +40942,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T12:49:00.282Z",
       "url": "https://openfront.io/game/uTQ9ARZk"
+    },
+    {
+      "id": "ajuiTAdW",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "Nosilec",
+          "clientID": "2ciBXq1Q",
+          "clanTag": "BB"
+        },
+        {
+          "username": "mito baby",
+          "clientID": "VcAdWSqe",
+          "clanTag": "BB"
+        }
+      ],
+      "map": "Pangaea",
+      "duration_s": 523,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 20,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T12:49:36.337Z",
+      "url": "https://openfront.io/game/ajuiTAdW"
     }
   ],
   "trios": [
@@ -122368,6 +122393,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T12:30:23.046Z",
       "url": "https://openfront.io/game/kuFWFitm"
+    },
+    {
+      "id": "awS3Ez3K",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Anon368",
+          "clientID": "nfEwvn1a",
+          "clanTag": null
+        },
+        {
+          "username": "xyzdy2",
+          "clientID": "9KLLfcqj",
+          "clanTag": null
+        },
+        {
+          "username": "BigPIPI",
+          "clientID": "1Pwq17NT",
+          "clanTag": null
+        },
+        {
+          "username": "Babylon",
+          "clientID": "pEdkZTgK",
+          "clanTag": null
+        }
+      ],
+      "map": "World Inverted",
+      "duration_s": 1155,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 80,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T12:40:11.163Z",
+      "url": "https://openfront.io/game/awS3Ez3K"
     }
   ],
   "team_custom": [
