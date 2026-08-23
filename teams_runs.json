@@ -123433,6 +123433,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T13:29:51.007Z",
       "url": "https://openfront.io/game/SPkFpFxo"
+    },
+    {
+      "id": "D3fSfJwY",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "vinland",
+          "clientID": "rmF7BvG8",
+          "clanTag": null
+        },
+        {
+          "username": "CoffeeCult",
+          "clientID": "oLZ4nCV1",
+          "clanTag": "DELTA"
+        },
+        {
+          "username": "AnonOcean9",
+          "clientID": "4V4P3JWf",
+          "clanTag": null
+        },
+        {
+          "username": "Agartha",
+          "clientID": "tjpw9e6x",
+          "clanTag": "HUGO"
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 716,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 112,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T13:41:09.207Z",
+      "url": "https://openfront.io/game/D3fSfJwY"
     }
   ],
   "team_custom": [
@@ -167415,6 +167450,56 @@
       "playerTeams": 7,
       "timestamp": "2026-08-23T13:39:20.591Z",
       "url": "https://openfront.io/game/beG8kuXM"
+    },
+    {
+      "id": "rfmADnTR",
+      "mode": "team_custom",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Church of the West",
+          "clientID": "SQwGfa76",
+          "clanTag": null
+        },
+        {
+          "username": "NightButterfly.G2DQ",
+          "clientID": "DYGHsWNk",
+          "clanTag": null
+        },
+        {
+          "username": "Anon253",
+          "clientID": "HNLxwdZJ",
+          "clanTag": null
+        },
+        {
+          "username": "Morty",
+          "clientID": "WiJp8Zdp",
+          "clanTag": null
+        },
+        {
+          "username": "Lovat",
+          "clientID": "yUQe2GTf",
+          "clanTag": "EU"
+        },
+        {
+          "username": "R_mu_nu",
+          "clientID": "XbaYTKFs",
+          "clanTag": null
+        },
+        {
+          "username": "rohos",
+          "clientID": "YgNcT63a",
+          "clanTag": null
+        }
+      ],
+      "map": "Labyrinth",
+      "duration_s": 1148,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 68,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T13:34:05.255Z",
+      "url": "https://openfront.io/game/rfmADnTR"
     }
   ],
   "hvn": [
