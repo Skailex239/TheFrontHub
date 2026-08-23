@@ -115488,6 +115488,41 @@
       "playerTeams": "Quads",
       "timestamp": "2026-08-23T02:32:05.485Z",
       "url": "https://openfront.io/game/47gUmTjS"
+    },
+    {
+      "id": "ZrHDdxtB",
+      "mode": "quads",
+      "team": "Green",
+      "players": [
+        {
+          "username": "EZLN Enjoyer",
+          "clientID": "e47Xagfc",
+          "clanTag": null
+        },
+        {
+          "username": "FreeTroop",
+          "clientID": "P7zLJNF2",
+          "clanTag": null
+        },
+        {
+          "username": "Spyyke",
+          "clientID": "iyycnkuB",
+          "clanTag": null
+        },
+        {
+          "username": "MikeMikeyMike",
+          "clientID": "rYgHfhLk",
+          "clanTag": "KISS"
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 1015,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T02:49:31.881Z",
+      "url": "https://openfront.io/game/ZrHDdxtB"
     }
   ],
   "team_custom": [
