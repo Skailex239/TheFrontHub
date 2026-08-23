@@ -78096,6 +78096,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T07:18:46.053Z",
       "url": "https://openfront.io/game/4Sy5GpTy"
+    },
+    {
+      "id": "P1vA4Zfi",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "World government",
+          "clientID": "WDxnGPaT",
+          "clanTag": null
+        },
+        {
+          "username": "laotie1",
+          "clientID": "BCc6SzvC",
+          "clanTag": null
+        },
+        {
+          "username": "servme",
+          "clientID": "7gvHwhcG",
+          "clanTag": null
+        }
+      ],
+      "map": "Hong Kong",
+      "duration_s": 1028,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 70,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T07:22:42.223Z",
+      "url": "https://openfront.io/game/P1vA4Zfi"
     }
   ],
   "quads": [
