@@ -1,27 +1,27 @@
 {
   "publicId": "hWNuSrnS",
   "username": "Nvr_Kn.6967",
-  "computedAt": "2026-08-23T13:10:06.754Z",
-  "lastSyncedAt": "2026-08-23T13:10:04.447Z",
-  "totalGames": 3824,
+  "computedAt": "2026-08-23T13:12:24.891Z",
+  "lastSyncedAt": "2026-08-23T13:12:22.200Z",
+  "totalGames": 3825,
   "careerWins": {
     "ffaCasual": 278,
-    "ffaRanked": 1420,
+    "ffaRanked": 1421,
     "teamCasual": 151,
     "teamRanked": 137
   },
-  "totalWins": 1986,
-  "points": 5092,
+  "totalWins": 1987,
+  "points": 5093,
   "level": 50,
-  "levelProgress": 92,
+  "levelProgress": 93,
   "levelNextAt": 5100,
   "nextMilestones": {
     "wins": {
-      "current": 1986,
+      "current": 1987,
       "target": 2000
     },
     "playtime": {
-      "current": 753,
+      "current": 754,
       "target": 1000
     },
     "maps": {
@@ -39,19 +39,19 @@
     6
   ],
   "formatted": {
-    "points": "5 092",
-    "totalWins": "1 986",
-    "totalGames": "3 824",
-    "totalPlaytime": "31j 9h",
-    "totalPlaytimeCompact": "31j 9h",
+    "points": "5 093",
+    "totalWins": "1 987",
+    "totalGames": "3 825",
+    "totalPlaytime": "31j 10h",
+    "totalPlaytimeCompact": "31j 10h",
     "avgGameDuration": "11m 49s",
     "longestGame": "2h 53m",
     "winrate": "52%",
-    "totalPlaytimeHours": "753h"
+    "totalPlaytimeHours": "754h"
   },
   "playtime": {
-    "totalSec": 2714348,
-    "avgGameSec": 709.8190376569038,
+    "totalSec": 2714865,
+    "avgGameSec": 709.7686274509804,
     "longestSec": 10434,
     "shortestSec": 1,
     "byCategory": {
@@ -61,9 +61,9 @@
         "wins": 278
       },
       "ffaRanked": {
-        "games": 1914,
-        "playtimeSec": 728065,
-        "wins": 1420
+        "games": 1915,
+        "playtimeSec": 728582,
+        "wins": 1421
       },
       "teamCasual": {
         "games": 589,
@@ -78,7 +78,7 @@
     }
   },
   "results": {
-    "victory": 1986,
+    "victory": 1987,
     "defeat": 1506,
     "incomplete": 332
   },
@@ -101,18 +101,18 @@
     },
     {
       "map": "Iceland",
-      "count": 426,
-      "wins": 301,
+      "count": 427,
+      "wins": 302,
       "losses": 125,
-      "playtimeSec": 181244,
-      "avgDuration": 425.45539906103284,
-      "winRate": 0.7065727699530516,
-      "lastPlayed": 1787210504915,
+      "playtimeSec": 181761,
+      "avgDuration": 425.6697892271663,
+      "winRate": 0.7072599531615925,
+      "lastPlayed": 1787490108754,
       "formatted": {
         "playtime": "2j 2h",
         "avgDuration": "7m",
         "winRate": "71%",
-        "lastPlayed": "20/08/26"
+        "lastPlayed": "23/08/26"
       }
     },
     {
@@ -1605,7 +1605,7 @@
       98,
       104,
       94,
-      143,
+      144,
       227,
       324,
       351,
@@ -1622,7 +1622,7 @@
       556,
       489,
       580,
-      570
+      571
     ],
     "byDay": [
       {
@@ -1692,8 +1692,8 @@
       },
       {
         "date": "23/08/2026",
-        "count": 10,
-        "playtimeSec": 13462
+        "count": 11,
+        "playtimeSec": 13979
       },
       {
         "date": "23/09/2025",
@@ -2081,7 +2081,7 @@
     "activeDays": 90
   },
   "streaks": {
-    "current": 0,
+    "current": 1,
     "best": 25
   },
   "achievements": {
@@ -2157,6 +2157,17 @@
     "unlockedCount": 10
   },
   "recentGames": [
+    {
+      "gameId": "bvU2XsZN",
+      "start": "2026-08-23T13:01:48.754Z",
+      "map": "Iceland",
+      "mode": "Free For All",
+      "result": "victory",
+      "durationSeconds": 517,
+      "totalPlayers": 2,
+      "rankedType": "1v1",
+      "category": "ffaRanked"
+    },
     {
       "gameId": "Em1nReGF",
       "start": "2026-08-23T12:49:25.829Z",
@@ -2365,17 +2376,6 @@
       "totalPlayers": 97,
       "rankedType": "unranked",
       "category": "ffaCasual"
-    },
-    {
-      "gameId": "pmopMysm",
-      "start": "2026-08-21T08:19:15.852Z",
-      "map": "Europe Classic",
-      "mode": "Free For All",
-      "result": "victory",
-      "durationSeconds": 592,
-      "totalPlayers": 2,
-      "rankedType": "1v1",
-      "category": "ffaRanked"
     }
   ]
 }
