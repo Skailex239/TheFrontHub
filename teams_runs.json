@@ -40142,6 +40142,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T10:12:00.576Z",
       "url": "https://openfront.io/game/rVMK4XzA"
+    },
+    {
+      "id": "8zK79XuR",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "SnugglePuppy",
+          "clientID": "GNtiMD6Z",
+          "clanTag": null
+        },
+        {
+          "username": "Peach",
+          "clientID": "weCuPpiU",
+          "clanTag": "MANGO"
+        }
+      ],
+      "map": "Falkland Islands",
+      "duration_s": 406,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T10:22:39.257Z",
+      "url": "https://openfront.io/game/8zK79XuR"
     }
   ],
   "trios": [
@@ -79636,6 +79661,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T10:16:43.911Z",
       "url": "https://openfront.io/game/dG4MtcPg"
+    },
+    {
+      "id": "RdGH3mKj",
+      "mode": "trios",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Shal",
+          "clientID": "8a7BtJDp",
+          "clanTag": null
+        },
+        {
+          "username": "KarlFlow",
+          "clientID": "sRf4KCkF",
+          "clanTag": "MOL"
+        },
+        {
+          "username": "viva la biga",
+          "clientID": "L7uQCdxQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Yellow Sea",
+      "duration_s": 1053,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 36,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T10:12:40.569Z",
+      "url": "https://openfront.io/game/RdGH3mKj"
     }
   ],
   "quads": [
@@ -162410,6 +162465,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-23T09:54:50.664Z",
       "url": "https://openfront.io/game/8hNd7bFk"
+    },
+    {
+      "id": "XwBSL7pz",
+      "mode": "team_custom",
+      "team": "Purple",
+      "players": [
+        {
+          "username": "AnonGoose",
+          "clientID": "4Tg2wLsf",
+          "clanTag": null
+        },
+        {
+          "username": "Felixkonge",
+          "clientID": "yWEozojN",
+          "clanTag": "KFWF"
+        },
+        {
+          "username": "anon",
+          "clientID": "CcKHoaRu",
+          "clanTag": null
+        },
+        {
+          "username": "riptide",
+          "clientID": "D4kDm9uU",
+          "clanTag": "PT"
+        },
+        {
+          "username": "AnonThistle6",
+          "clientID": "FEMhzU1i",
+          "clanTag": null
+        }
+      ],
+      "map": "Traders Dream",
+      "duration_s": 1183,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T10:10:04.590Z",
+      "url": "https://openfront.io/game/XwBSL7pz"
     }
   ],
   "hvn": [
