@@ -79386,6 +79386,36 @@
       "playerTeams": "Trios",
       "timestamp": "2026-08-23T09:42:50.920Z",
       "url": "https://openfront.io/game/y1BQUTNA"
+    },
+    {
+      "id": "muRfw5pJ",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Quality Learing Center",
+          "clientID": "xTTgZWX6",
+          "clanTag": "UN"
+        },
+        {
+          "username": "Arbeit",
+          "clientID": "EPhyfG3s",
+          "clanTag": null
+        },
+        {
+          "username": "thecrisp",
+          "clientID": "P2oXKRjN",
+          "clanTag": "OPEN"
+        }
+      ],
+      "map": "Irish Sea",
+      "duration_s": 1306,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 48,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T09:38:04.253Z",
+      "url": "https://openfront.io/game/muRfw5pJ"
     }
   ],
   "quads": [
