@@ -38717,6 +38717,56 @@
       "playerTeams": "Duos",
       "timestamp": "2026-08-23T05:17:31.927Z",
       "url": "https://openfront.io/game/DLWsNoCz"
+    },
+    {
+      "id": "G2vCK7iT",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Anon182",
+          "clientID": "rAW17Tgi",
+          "clanTag": null
+        },
+        {
+          "username": "AnonLighthouse2",
+          "clientID": "GGSwTeXH",
+          "clanTag": null
+        }
+      ],
+      "map": "Bering Strait",
+      "duration_s": 1018,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 22,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:23:23.807Z",
+      "url": "https://openfront.io/game/G2vCK7iT"
+    },
+    {
+      "id": "r7iShtgS",
+      "mode": "duos",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Hehbs",
+          "clientID": "GvczvxPF",
+          "clanTag": null
+        },
+        {
+          "username": "CuddleMonster67",
+          "clientID": "oUCXgCD4",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 337,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 40,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T05:35:02.238Z",
+      "url": "https://openfront.io/game/r7iShtgS"
     }
   ],
   "trios": [
@@ -190502,6 +190552,96 @@
       "playerTeams": "Humans Vs Nations",
       "timestamp": "2026-08-23T04:50:52.863Z",
       "url": "https://openfront.io/game/tqDjZDfe"
+    },
+    {
+      "id": "HGENBanF",
+      "mode": "hvn",
+      "team": "Humans",
+      "players": [
+        {
+          "username": "AnonHarbor6",
+          "clientID": "QtJgwSvn",
+          "clanTag": null
+        },
+        {
+          "username": "AnonComet4",
+          "clientID": "W41eiAZJ",
+          "clanTag": null
+        },
+        {
+          "username": "DEEZ",
+          "clientID": "vz5nZnak",
+          "clanTag": null
+        },
+        {
+          "username": "AnonNebula",
+          "clientID": "oHdCReSy",
+          "clanTag": null
+        },
+        {
+          "username": "THE AMAZON",
+          "clientID": "zUueFsDd",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBison7",
+          "clientID": "NYWNaW1h",
+          "clanTag": null
+        },
+        {
+          "username": "SingingBlade.WZ9Q",
+          "clientID": "t2Fs7cvY",
+          "clanTag": null
+        },
+        {
+          "username": "PoorlyEducated",
+          "clientID": "v5D4brUw",
+          "clanTag": null
+        },
+        {
+          "username": "PeesALittle",
+          "clientID": "QxKTJjsr",
+          "clanTag": null
+        },
+        {
+          "username": "Newbie",
+          "clientID": "feD5HDDB",
+          "clanTag": null
+        },
+        {
+          "username": "Anon",
+          "clientID": "uwxL8ypT",
+          "clanTag": null
+        },
+        {
+          "username": "7777",
+          "clientID": "ExRxouVY",
+          "clanTag": null
+        },
+        {
+          "username": "Pivotalflounder",
+          "clientID": "5XytLDLE",
+          "clanTag": "BRTHR"
+        },
+        {
+          "username": "Alpha111",
+          "clientID": "wgyaeMU2",
+          "clanTag": null
+        },
+        {
+          "username": "AnonBanner8",
+          "clientID": "ikxiKEHf",
+          "clanTag": null
+        }
+      ],
+      "map": "Nile Delta",
+      "duration_s": 880,
+      "difficulty": "Hard",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": "Humans Vs Nations",
+      "timestamp": "2026-08-23T05:25:22.862Z",
+      "url": "https://openfront.io/game/HGENBanF"
     }
   ]
 }
