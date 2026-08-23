@@ -40842,6 +40842,56 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T12:06:34.613Z",
       "url": "https://openfront.io/game/LjhRLZ1h"
+    },
+    {
+      "id": "pT6Xd6Sj",
+      "mode": "duos",
+      "team": "Team 1",
+      "players": [
+        {
+          "username": "lap",
+          "clientID": "83ZrqRBy",
+          "clanTag": "YO"
+        },
+        {
+          "username": "pal",
+          "clientID": "km7Z6K6M",
+          "clanTag": "YO"
+        }
+      ],
+      "map": "Tierra Del Fuego",
+      "duration_s": 909,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": "Duos",
+      "timestamp": "2026-08-23T12:35:38.382Z",
+      "url": "https://openfront.io/game/pT6Xd6Sj"
+    },
+    {
+      "id": "xYVBXpHu",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Clandestine factory",
+          "clientID": "VppXpCff",
+          "clanTag": null
+        },
+        {
+          "username": "DaddysLilStar",
+          "clientID": "eRzGroJ2",
+          "clanTag": null
+        }
+      ],
+      "map": "Strait of Gibraltar",
+      "duration_s": 882,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 74,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T12:36:14.924Z",
+      "url": "https://openfront.io/game/xYVBXpHu"
     }
   ],
   "trios": [
