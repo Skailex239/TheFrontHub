@@ -38992,6 +38992,31 @@
       "playerTeams": 2,
       "timestamp": "2026-08-23T06:14:36.642Z",
       "url": "https://openfront.io/game/wpC8xpvW"
+    },
+    {
+      "id": "GWbbhRbF",
+      "mode": "duos",
+      "team": "Blue",
+      "players": [
+        {
+          "username": "Rigmillath",
+          "clientID": "c3Ze5TqR",
+          "clanTag": null
+        },
+        {
+          "username": "Hassle",
+          "clientID": "98etx7z7",
+          "clanTag": null
+        }
+      ],
+      "map": "Korea",
+      "duration_s": 709,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 30,
+      "playerTeams": 2,
+      "timestamp": "2026-08-23T06:15:22.671Z",
+      "url": "https://openfront.io/game/GWbbhRbF"
     }
   ],
   "trios": [
@@ -157410,6 +157435,46 @@
       "playerTeams": 6,
       "timestamp": "2026-08-23T05:57:23.537Z",
       "url": "https://openfront.io/game/KNH8boMQ"
+    },
+    {
+      "id": "b1jDENvm",
+      "mode": "team_custom",
+      "team": "Green",
+      "players": [
+        {
+          "username": "Lehistan",
+          "clientID": "cj8JY7p4",
+          "clanTag": null
+        },
+        {
+          "username": "OriginalMonarch",
+          "clientID": "VA9MiLrh",
+          "clanTag": "AST"
+        },
+        {
+          "username": "...",
+          "clientID": "EpCobruE",
+          "clanTag": null
+        },
+        {
+          "username": "_0_TRADE",
+          "clientID": "jfT1KbYg",
+          "clanTag": "AST"
+        },
+        {
+          "username": "Anon",
+          "clientID": "8bDjATCN",
+          "clanTag": null
+        }
+      ],
+      "map": "More Than Luck",
+      "duration_s": 608,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 35,
+      "playerTeams": 5,
+      "timestamp": "2026-08-23T06:16:35.631Z",
+      "url": "https://openfront.io/game/b1jDENvm"
     }
   ],
   "hvn": [
