@@ -79301,6 +79301,36 @@
       "playerTeams": 3,
       "timestamp": "2026-08-23T09:18:23.062Z",
       "url": "https://openfront.io/game/vaMX8zzc"
+    },
+    {
+      "id": "SMSLYj1A",
+      "mode": "trios",
+      "team": "Red",
+      "players": [
+        {
+          "username": "Profile",
+          "clientID": "CuaTmCLH",
+          "clanTag": "UN"
+        },
+        {
+          "username": "kkkkkkkkkkkkkkuuuuuuuuu",
+          "clientID": "NoY8MkL3",
+          "clanTag": null
+        },
+        {
+          "username": "ConfusedHiveTyrant",
+          "clientID": "taZBayZw",
+          "clanTag": null
+        }
+      ],
+      "map": "Branching Paths",
+      "duration_s": 925,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 92,
+      "playerTeams": 3,
+      "timestamp": "2026-08-23T09:33:38.093Z",
+      "url": "https://openfront.io/game/SMSLYj1A"
     }
   ],
   "quads": [
@@ -119943,6 +119973,41 @@
       "playerTeams": 4,
       "timestamp": "2026-08-23T09:20:34.199Z",
       "url": "https://openfront.io/game/iXFttp9q"
+    },
+    {
+      "id": "yyUVcHam",
+      "mode": "quads",
+      "team": "Yellow",
+      "players": [
+        {
+          "username": "Rondeh",
+          "clientID": "oWV2yp7K",
+          "clanTag": null
+        },
+        {
+          "username": "AnonVortex5",
+          "clientID": "detCymUE",
+          "clanTag": null
+        },
+        {
+          "username": "Casual player",
+          "clientID": "vVhTxxRe",
+          "clanTag": "GNG"
+        },
+        {
+          "username": "st nuc",
+          "clientID": "ha3i8UsQ",
+          "clanTag": null
+        }
+      ],
+      "map": "Finger Lakes",
+      "duration_s": 836,
+      "difficulty": "Medium",
+      "bots": 400,
+      "numPlayers": 58,
+      "playerTeams": 4,
+      "timestamp": "2026-08-23T09:35:38.753Z",
+      "url": "https://openfront.io/game/yyUVcHam"
     }
   ],
   "team_custom": [
